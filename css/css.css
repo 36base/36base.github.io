@@ -13,6 +13,7 @@
   }
 
   #page-content-wrapper {
+    margin-top: 55px;
     width: 100%;
     padding: 20px;
   }
@@ -43,18 +44,4 @@
   .sidebar-nav > .sidebar-brand {
     font-size: 1.3em;
     line-height: 3em;
-  }
-
-  .4star {
-    color: #AACC33;
-  }
-
-  .doll_list {
-    display: block;
-    width: 128px;
-    height: 256px;
-    background-repeat: no-repeat;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 5px;
   }
