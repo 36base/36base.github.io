@@ -45,3 +45,53 @@
     font-size: 1.3em;
     line-height: 3em;
   }
+
+  .doll-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .doll-card {
+    width: 150px;
+    height: 200px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 1px solid black;
+    border-radius: 5px;
+    margin: 2px;
+  }
+
+.star {
+    color: #FFB400;
+    text-align: right;
+    background-color: gray;
+  }
+
+  .doll-link {
+    width: 148px;
+    height: 148px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: 200%;
+    text-indent: -9999px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-right: 1px solid black;
+    background-color: transparent;
+    background-origin: padding-box;
+  }
+
+  .doll-link-text {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    text-align: right;
+  }
+
+  .doll-card-bottom {
+    display: flex;
+    justify-content: space-between;
+    background-color: gray;
+  }
