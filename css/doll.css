@@ -18,7 +18,7 @@
 
 .doll-link a#number3 {
   background-image: url(../images/dolls/3.png);
-  background-position: 48% 1%
+  background-position: 48% 7%
 }
 
 .doll-link a#number3:hover {
@@ -72,7 +72,7 @@
 
 .doll-link a#number10 {
   background-image: url(../images/dolls/10.png);
-  background-position: 55% 3%;
+  background-position: 54% 3%;
 }
 
 .doll-link a#number10:hover {
@@ -122,4 +122,49 @@
 
 .doll-link a#number15:hover {
   background-image: url(..//images/dolls/15_1.png);
+}
+
+.doll-link a#number16 {
+  background-image: url(../images/dolls/16.png);
+  background-position: 50% 3%;
+}
+
+.doll-link a#number16:hover {
+  background-image: url(..//images/dolls/16_1.png);
+}
+
+.doll-link a#number17 {
+  background-image: url(../images/dolls/17.png);
+  background-position: 50% 10%;
+}
+
+.doll-link a#number17:hover {
+  background-image: url(..//images/dolls/17_1.png);
+}
+
+.doll-link a#number18 {
+  background-image: url(../images/dolls/18.png);
+  background-position: 46% 10%;
+}
+
+.doll-link a#number18:hover {
+  background-image: url(..//images/dolls/18_1.png);
+}
+
+.doll-link a#number19 {
+  background-image: url(../images/dolls/19.png);
+  background-position: 58% 10%;
+}
+
+.doll-link a#number19:hover {
+  background-image: url(..//images/dolls/19_1.png);
+}
+
+.doll-link a#number20 {
+  background-image: url(../images/dolls/20.png);
+  background-position: 42% 1%;
+}
+
+.doll-link a#number20:hover {
+  background-image: url(..//images/dolls/20_1.png);
 }

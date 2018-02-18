@@ -119,32 +119,51 @@ body {
   }
 
   .doll-card {
-    width: 150px;
-    height: 200px;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    border-left: 2px solid black;
-    border-right: 1px solid black;
-    border-radius: 5px;
+    width: 180px;
+    height: 320px;
     margin: 2px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .typeicon {
+    background-color: #000000;
+    padding-bottom: 1px;
+  }
+
+  .star2 {
+    border: 5px solid #000000;
+    border-radius: 5px;
+  }
+
+  .star3 {
+    border: 5px solid #6BDFCE;
+    border-radius: 5px;
+  }
+
+  .star4 {
+    border: 5px solid #D6E35A;
+    border-radius: 5px;
+
+  }
+
+  .star5 {
+    border: 5px solid #FFB600;
+    border-radius: 5px;
   }
 
 .star {
     color: #FFB400;
-    text-align: right;
-    background-color: gray;
+    background-color: black;
   }
 
   .doll-link a{
-    width: 148px;
-    height: 148px;
+    width: 170px;
+    height: 258px;
     display: block;
     background-repeat: no-repeat;
     background-size: 200%;
     text-indent: -9999px;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    border-right: 1px solid black;
     background-color: transparent;
     background-origin: padding-box;
   }
@@ -158,6 +177,6 @@ body {
 
   .doll-card-bottom {
     display: flex;
+    background-color: #606060;
     justify-content: space-between;
-    background-color: gray;
   }
