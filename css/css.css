@@ -132,7 +132,7 @@ body {
   }
 
   .star2 {
-    border: 5px solid #000000;
+    border: 5px solid gray;
     border-radius: 5px;
   }
 
@@ -177,6 +177,6 @@ body {
 
   .doll-card-bottom {
     display: flex;
-    background-color: #606060;
+    background-color: powderblue;
     justify-content: space-between;
   }
