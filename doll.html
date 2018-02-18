@@ -4,21 +4,16 @@
 	<title>소녀전선 데이터베이스 - 36베이스</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/css.css">
 	<link rel="stylesheet" type="text/css" href="css/doll.css">
 </head>
 <body>
-	<nav class="navbar fixed-top navbar-expand-sm bg-dark navbar-dark">
-		<ul class="navbar-nav">
-			<li class="nav-item">
-				<a class="nav-link" href="index.html">36베이스</a>
-			</li>
-		</ul>
-		</nav>
-	<div id="page-wrapper">
+	<div  class="toggled" id="wrapper">
 		<div id="sidebar-wrapper">
 			<ul class="sidebar-nav">
+				<li class="sidebar-brand"><a href="index.html">36베이스</a></li>
 				<li><a href="doll.html">전술 인형 도감</a></li>
 				<li><a href="">인형 장비 도감</a></li>
 				<li><a href="">About</a></li>
@@ -26,6 +21,7 @@
 		</div>
 		<div id="page-content-wrapper">
 			<div class="container-fluid">
+				<a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">메뉴 접기/펼치기</a>
 				<div class="doll-list">
 					<div class="doll-card">
 						<div class="star">★★★★</div>
@@ -171,5 +167,11 @@
 			</div>
 		</div>
 	</div>
+	<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+	</script>
 </body>
 </html>
