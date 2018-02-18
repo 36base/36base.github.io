@@ -69,7 +69,7 @@
     background-color: gray;
   }
 
-  .doll-link {
+  .doll-link a{
     width: 148px;
     height: 148px;
     display: block;
@@ -87,7 +87,7 @@
     text-decoration: none;
     color: black;
     font-weight: bold;
-    text-align: right;
+    flex-grow: 2;
   }
 
   .doll-card-bottom {
