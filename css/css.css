@@ -35,6 +35,7 @@ body {
 
 #page-content-wrapper {
   width: 100%;
+  height: 100%;
   position: absolute;
   padding: 15px;
   background: url(../images/bg.jpg) no-repeat left top fixed;
@@ -190,4 +191,11 @@ body {
 
   .nameNo {
     color: white;
+  }
+
+  .body-content {
+    background-color: white;
+    border: 2px solid gray;
+    border-radius: 2px;
+    padding: 10px;
   }
