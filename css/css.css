@@ -133,6 +133,11 @@ body {
     padding-bottom: 1px;
   }
 
+  .star1 {
+    border: 5px solid #DFB6FF;
+    border-radius: 5px;
+  }
+
   .star2 {
     border: 5px solid hsl(0, 0%, 86%);
     border-radius: 5px;
