@@ -249,3 +249,48 @@
 .doll-link a#number29:hover {
   background-image: url(..//images/dolls/29_1.png);
 }
+
+.doll-link a#number31 {
+  background-image: url(../images/dolls/31.png);
+  background-position: 48% 8%;
+}
+
+.doll-link a#number31:hover {
+  background-image: url(..//images/dolls/31_1.png);
+}
+
+.doll-link a#number32 {
+  background-image: url(../images/dolls/32.png);
+  background-position: 51% 8%;
+}
+
+.doll-link a#number32:hover {
+  background-image: url(..//images/dolls/32_1.png);
+}
+
+.doll-link a#number33 {
+  background-image: url(../images/dolls/33.png);
+  background-position: 46% 3%;
+}
+
+.doll-link a#number33:hover {
+  background-image: url(..//images/dolls/33_1.png);
+}
+
+.doll-link a#number34 {
+  background-image: url(../images/dolls/34.png);
+  background-position: 40% 4%;
+}
+
+.doll-link a#number34:hover {
+  background-image: url(..//images/dolls/34_1.png);
+}
+
+.doll-link a#number35 {
+  background-image: url(../images/dolls/35.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number35:hover {
+  background-image: url(..//images/dolls/35_1.png);
+}
