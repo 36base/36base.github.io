@@ -1,20 +1,14 @@
-function loadDoc() {
-	var xhr = new XMLHttpRequest();
-	xhr.open('GET', 'dolldata.xml', true);
-
-	xhr.timeout = 2000;
-
-	xhr.onload = function () {
-		var xmlDoc = this.responseXML;
-		x=xmlDoc.documentElement.childNodes;
-		for (i=0; i<x.length; i++) {
-			console.log(x[i].nodeName + ": " + x[i].childNodes[0]);
-		}
-	};
-
-	xhr.ontimeout = function (e) {
-		console.log(e);
-	};
-
-	xhr.send(null)
-};
+$(document).ready(function(){
+  $.ajax({
+    type:"GET",
+    url:"dolldb.json",
+    success:function(json){
+      var listLen = json.length;
+      var contentStr = "";
+      for(var i=0; i<listLen; i++){
+        console.log(json[i].name);
+        console.log(json[i].skilldetail);
+      }
+    }
+  })
+});
