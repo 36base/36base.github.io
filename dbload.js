@@ -8,7 +8,7 @@ function loadDoc() {
 		var xmlDoc = this.responseXML;
 		x=xmlDoc.documentElement.childNodes;
 		for (i=0; i<x.length; i++) {
-			console.log(x[i].nodeName + ": " + x[i].childNodes[0].nodeValue);
+			console.log(x[i].nodeName + ": " + x[i].childNodes[0]);
 		}
 	};
 
