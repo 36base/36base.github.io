@@ -13,4 +13,5 @@ function loadDoc() {
 	};
 
 	xhr.send(null)
+	console.log(xmlDoc)
 };
