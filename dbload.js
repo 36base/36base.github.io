@@ -6,6 +6,7 @@ function loadDoc() {
 
 	xhr.onload = function () {
 		var xmlDoc = this.responseXML;
+		console.log(xmlDoc)
 	};
 
 	xhr.ontimeout = function (e) {
@@ -13,5 +14,4 @@ function loadDoc() {
 	};
 
 	xhr.send(null)
-	console.log(xmlDoc)
 };
