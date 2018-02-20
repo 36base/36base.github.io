@@ -127,6 +127,7 @@ body {
     margin: 2px;
     display: flex;
     flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.5);
   }
 
   .typeicon {
@@ -172,7 +173,6 @@ body {
     background-repeat: no-repeat;
     background-size: 200%;
     text-indent: -9999px;
-    background-color: white;
     background-origin: padding-box;
   }
 
