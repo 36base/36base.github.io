@@ -6,7 +6,10 @@ function loadDoc() {
 
 	xhr.onload = function () {
 		var xmlDoc = this.responseXML;
-		console.log(xmlDoc)
+		x=xmlDoc.documentElement.childNodes;
+		for (i=0; i<x.length; i++) {
+			console.log(x[i].nodeName + ": " + x[i].childNodes[0].nodeValue);
+		}
 	};
 
 	xhr.ontimeout = function (e) {
