@@ -1,7 +1,14 @@
+html {
+  height: 100%;
+}
+
 body {
   overflow-x: hidden;
-  background: url(../images/50.png) no-repeat left top fixed;
-  background-size: cover;
+  height: 100%;
+}
+
+.container-fluid {
+  height: 100%;
 }
 
 #wrapper {
@@ -10,6 +17,7 @@ body {
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  height: 100%;
 }
 
 #wrapper.toggled {
@@ -39,7 +47,7 @@ body {
   width: 100%;
   height: 100%;
   position: absolute;
-  padding: 15px;
+  padding: 5px;
 }
 
 #wrapper.toggled #page-content-wrapper {
@@ -106,13 +114,17 @@ body {
     width: 250px;
   }
   #page-content-wrapper {
-    padding: 20px;
+    padding: 10px;
     position: relative;
   }
   #wrapper.toggled #page-content-wrapper {
     position: relative;
     margin-right: 0;
   }
+}
+
+#dollsearchbar {
+  margin-top: 4px;
 }
 
   .doll-list {
