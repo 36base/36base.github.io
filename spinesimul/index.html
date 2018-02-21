@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/css.css">
+
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>소녀전선 SD 시뮬레이터</h1>
+    </header>
+    <nav class="controlUi clearfix">
+      <div class="preCanvas Canvas left"></div>
+      <div class="preUI left">
+        <div class="form-group preSelectCharacter">
+          <label>인형</label>
+          <select class="form-control"></select>
+        </div>
+        <div class="form-group preSelectSkin">
+          <label>스킨<small class="text-muted">(R : 숙소 모델링)</small></label>
+          <select class="form-control"></select>
+        </div>
+        <div class="form-group preSelectAnimation">
+          <label>모션</label>
+          <select class="form-control"></select>
+        </div>
+        <button type="button" class="btn btn-primary preAddRole">투입</button>
+        <button type="button" class="btn btn-primary preStopRole">정지</button>
+      </div>
+      <div class="gameview left">
+        <div class="form-inline">
+          <div class="gameSelectCharacter form-group">
+            <label>인형선택</label>
+            <select class="form-control"></select>
+          </div>
+        </div>
+
+        <div class="charOptions">
+          <div class="gameSelectAnimation form-group conRange clearfix">
+            <span style="margin-top:6px;">모션</span>
+            <select class="form-control input-sm"></select>
+          </div>
+          <div class="gameSelectposX form-group conRange clearfix">
+            <span>X축</span>
+            <input type="range" min="0" max="800" />
+          </div>
+          <div class="gameSelectposY form-group conRange clearfix">
+            <span>Y축</span>
+            <input type="range" min="0" max="800" />
+          </div>
+          <div class="gameSelectscale form-group conRange clearfix">
+            <span>인형크기</span>
+            <input type="range" min="200" max="3000" />
+          </div>
+          <div class="text-center">
+            <button type="button" class="btn btn-primary btn-sm gameTurnRole">좌우반전</button>
+            <button type="button" class="btn btn-primary btn-sm gameRemoveRole">인형제거</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="gameShowFPS canvasFps">
+      <input type="checkbox" checked="checked" /> FPS 수치 출력
+    </div>
+    <div class="gameCanvas Canvas"></div>
+
+    <nav class="convasControl form-inline">
+      <div class="gameSelectBackground form-group">
+        <span>배경화면</span>
+        <select class="form-control input-sm"></select>
+      </div>
+      <button type="button" class="btn btn-primary btn-sm gameSavePng pull-right" style="margin-left:10px;">이미지 저장하기</button>
+      <button type="button" class="btn btn-primary btn-sm gameSaveStage pull-right" style="margin-left:10px;">이 상태로 웹에 저장</button>
+      <button type="button" class="btn btn-primary btn-sm gameStopRole pull-right">인형 모션정지</button>
+    </nav>
+
+    <img id="saveImage" width="100%">
+
+    <footer>
+      <p class="text-muted">
+        <small>이 어플리케이션은 단순한 소녀전선 SD 시뮬레이터 이며, 실제 게임과는 다를 수 있습니다.</small>
+      </p>
+      <p class="text-muted">모든 이미지 파일에 대한 저작권은 게임 개발사인 <a href="http://gf.txwy.tw/" target="_blank">天下網遊</a> 에 있습니다.</p>
+      <p class="text-muted">
+          초기 소녀전선 시뮬레이터 제작 : <a href="https://github.com/cullus" target="_blank">cullus</a>
+          <a href="https://github.com/cullus/gfSpinePiXi" target="_blank">gfSpinePiXi</a>
+      </p>
+      <p class="text-muted">Original GitHub : <a href="https://github.com/wsmwason/gf-spine-simulator" target="_blank">wsmwason/gf-spine-simulator [업데이트 오리지널]</a></p>
+	  <p class="text-muted">Korean translate GitHub: <a href="https://github.com/kjm1922/gf-spine-simulator" target="_blank">kjm1922/gf-spine-simulator [한글화 적용]</a></p>
+    </footer>
+  </div>
+
+  <script src="js/pixi/pixi.js"></script>
+  <script src="js/pixi/pixi-spine.js"></script>
+  <script src="js/girlsData.js"></script>
+  <script src="js/girlsData-plus.js"></script>
+  <script src="js/spine-data.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/game-plus.js"></script>
+</body>
+</html>
