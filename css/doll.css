@@ -1,0 +1,1845 @@
+.doll-link a#number1 {
+  background-image: url(../images/dolls/1.png);
+  background-position: 45% 3%
+}
+
+.doll-link a#number1:hover {
+  background-image: url(../images/dolls/1_1.png);
+}
+
+.doll-link a#number2 {
+  background-image: url(../images/dolls/2.png);
+  background-position: 35% 7%
+}
+
+.doll-link a#number2:hover {
+  background-image: url(../images/dolls/2_1.png);
+}
+
+.doll-link a#number3 {
+  background-image: url(../images/dolls/3.png);
+  background-position: 48% 7%
+}
+
+.doll-link a#number3:hover {
+  background-image: url(../images/dolls/3_1.png)
+}
+
+.doll-link a#number5 {
+  background-image: url(../images/dolls/5.png);
+  background-position: 50% 7%;
+}
+
+.doll-link a#number5:hover {
+  background-image: url(..//images/dolls/5_1.png);
+}
+
+.doll-link a#number6 {
+  background-image: url(../images/dolls/6.png);
+  background-position: 70% 7%;
+}
+
+.doll-link a#number6:hover {
+  background-image: url(..//images/dolls/6_1.png);
+}
+
+.doll-link a#number7 {
+  background-image: url(../images/dolls/7.png);
+  background-position: 43% 7%;
+}
+
+.doll-link a#number7:hover {
+  background-image: url(..//images/dolls/7_1.png);
+}
+
+.doll-link a#number8 {
+  background-image: url(../images/dolls/8.png);
+  background-position: 40% 0%;
+}
+
+.doll-link a#number8:hover {
+  background-image: url(..//images/dolls/8_1.png);
+}
+
+.doll-link a#number9 {
+  background-image: url(../images/dolls/9.png);
+  background-position: 56% 5%;
+}
+
+.doll-link a#number9:hover {
+  background-image: url(..//images/dolls/9_1.png);
+}
+
+.doll-link a#number10 {
+  background-image: url(../images/dolls/10.png);
+  background-position: 54% 3%;
+}
+
+.doll-link a#number10:hover {
+  background-image: url(..//images/dolls/10_1.png);
+}
+
+.doll-link a#number11 {
+  background-image: url(../images/dolls/11.png);
+  background-position: 45% 3%;
+}
+
+.doll-link a#number11:hover {
+  background-image: url(..//images/dolls/11_1.png);
+}
+
+.doll-link a#number12 {
+  background-image: url(../images/dolls/12.png);
+  background-position: 45% 3%;
+}
+
+.doll-link a#number12:hover {
+  background-image: url(..//images/dolls/12_1.png);
+}
+
+.doll-link a#number13 {
+  background-image: url(../images/dolls/13.png);
+  background-position: 49% -4%;
+}
+
+.doll-link a#number13:hover {
+  background-image: url(..//images/dolls/13_1.png);
+}
+
+.doll-link a#number14 {
+  background-image: url(../images/dolls/14.png);
+  background-position: 47% -2%;
+}
+
+.doll-link a#number14:hover {
+  background-image: url(..//images/dolls/14_1.png);
+}
+
+.doll-link a#number15 {
+  background-image: url(../images/dolls/15.png);
+  background-position: 37% 3%;
+}
+
+.doll-link a#number15:hover {
+  background-image: url(..//images/dolls/15_1.png);
+}
+
+.doll-link a#number16 {
+  background-image: url(../images/dolls/16.png);
+  background-position: 50% 3%;
+}
+
+.doll-link a#number16:hover {
+  background-image: url(..//images/dolls/16_1.png);
+}
+
+.doll-link a#number17 {
+  background-image: url(../images/dolls/17.png);
+  background-position: 50% 10%;
+}
+
+.doll-link a#number17:hover {
+  background-image: url(..//images/dolls/17_1.png);
+}
+
+.doll-link a#number18 {
+  background-image: url(../images/dolls/18.png);
+  background-position: 46% 10%;
+}
+
+.doll-link a#number18:hover {
+  background-image: url(..//images/dolls/18_1.png);
+}
+
+.doll-link a#number19 {
+  background-image: url(../images/dolls/19.png);
+  background-position: 58% 10%;
+}
+
+.doll-link a#number19:hover {
+  background-image: url(..//images/dolls/19_1.png);
+}
+
+.doll-link a#number20 {
+  background-image: url(../images/dolls/20.png);
+  background-position: 42% 1%;
+}
+
+.doll-link a#number20:hover {
+  background-image: url(..//images/dolls/20_1.png);
+}
+
+.doll-link a#number21 {
+  background-image: url(../images/dolls/21.png);
+  background-position: 48% 8%;
+}
+
+.doll-link a#number21:hover {
+  background-image: url(..//images/dolls/21_1.png);
+}
+
+.doll-link a#number22 {
+  background-image: url(../images/dolls/22.png);
+  background-position: 51% 10%;
+}
+
+.doll-link a#number22:hover {
+  background-image: url(..//images/dolls/22_1.png);
+}
+
+.doll-link a#number23 {
+  background-image: url(../images/dolls/23.png);
+  background-position: 47% 1%;
+}
+
+.doll-link a#number23:hover {
+  background-image: url(..//images/dolls/23_1.png);
+}
+
+.doll-link a#number24 {
+  background-image: url(../images/dolls/24.png);
+  background-position: 42% 1%;
+}
+
+.doll-link a#number24:hover {
+  background-image: url(..//images/dolls/24_1.png);
+}
+
+.doll-link a#number25 {
+  background-image: url(../images/dolls/25.png);
+  background-position: 47% 1%;
+}
+
+.doll-link a#number25:hover {
+  background-image: url(..//images/dolls/25_1.png);
+}
+
+.doll-link a#number26 {
+  background-image: url(../images/dolls/26.png);
+  background-position: 47% 12%;
+}
+
+.doll-link a#number26:hover {
+  background-image: url(..//images/dolls/26_1.png);
+}
+
+.doll-link a#number27 {
+  background-image: url(../images/dolls/27.png);
+  background-position: 47% 7%;
+}
+
+.doll-link a#number27:hover {
+  background-image: url(..//images/dolls/27_1.png);
+}
+
+.doll-link a#number28 {
+  background-image: url(../images/dolls/28.png);
+  background-position: 50% 23%;
+}
+
+.doll-link a#number28:hover {
+  background-image: url(..//images/dolls/28_1.png);
+}
+
+.doll-link a#number29 {
+  background-image: url(../images/dolls/29.png);
+  background-position: 44% 8%;
+}
+
+.doll-link a#number29:hover {
+  background-image: url(..//images/dolls/29_1.png);
+}
+
+.doll-link a#number31 {
+  background-image: url(../images/dolls/31.png);
+  background-position: 48% 8%;
+}
+
+.doll-link a#number31:hover {
+  background-image: url(..//images/dolls/31_1.png);
+}
+
+.doll-link a#number32 {
+  background-image: url(../images/dolls/32.png);
+  background-position: 51% 8%;
+}
+
+.doll-link a#number32:hover {
+  background-image: url(..//images/dolls/32_1.png);
+}
+
+.doll-link a#number33 {
+  background-image: url(../images/dolls/33.png);
+  background-position: 46% 3%;
+}
+
+.doll-link a#number33:hover {
+  background-image: url(..//images/dolls/33_1.png);
+}
+
+.doll-link a#number34 {
+  background-image: url(../images/dolls/34.png);
+  background-position: 40% 4%;
+}
+
+.doll-link a#number34:hover {
+  background-image: url(..//images/dolls/34_1.png);
+}
+
+.doll-link a#number35 {
+  background-image: url(../images/dolls/35.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number35:hover {
+  background-image: url(..//images/dolls/35_1.png);
+}
+
+.doll-link a#number36 {
+  background-image: url(../images/dolls/36.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number36:hover {
+  background-image: url(..//images/dolls/36_1.png);
+}
+
+.doll-link a#number37 {
+ background-image: url(../images/dolls/37.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number37:hover {
+  background-image: url(..//images/dolls/37_1.png);
+}
+
+.doll-link a#number38 {
+ background-image: url(../images/dolls/38.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number38:hover {
+  background-image: url(..//images/dolls/38_1.png);
+}
+
+.doll-link a#number39 {
+ background-image: url(../images/dolls/39.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number39:hover {
+  background-image: url(..//images/dolls/39_1.png);
+}
+
+.doll-link a#number40 {
+ background-image: url(../images/dolls/40.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number40:hover {
+  background-image: url(..//images/dolls/40_1.png);
+}
+
+.doll-link a#number41 {
+ background-image: url(../images/dolls/41.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number41:hover {
+  background-image: url(..//images/dolls/41_1.png);
+}
+
+.doll-link a#number42 {
+ background-image: url(../images/dolls/42.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number42:hover {
+  background-image: url(..//images/dolls/42_1.png);
+}
+
+.doll-link a#number43 {
+ background-image: url(../images/dolls/43.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number43:hover {
+  background-image: url(..//images/dolls/43_1.png);
+}
+
+.doll-link a#number44 {
+ background-image: url(../images/dolls/44.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number44:hover {
+  background-image: url(..//images/dolls/44_1.png);
+}
+
+.doll-link a#number46 {
+ background-image: url(../images/dolls/46.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number46:hover {
+  background-image: url(..//images/dolls/46_1.png);
+}
+
+.doll-link a#number47 {
+ background-image: url(../images/dolls/47.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number47:hover {
+  background-image: url(..//images/dolls/47_1.png);
+}
+
+.doll-link a#number48 {
+ background-image: url(../images/dolls/48.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number48:hover {
+  background-image: url(..//images/dolls/48_1.png);
+}
+
+.doll-link a#number49 {
+ background-image: url(../images/dolls/49.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number49:hover {
+  background-image: url(..//images/dolls/49_1.png);
+}
+
+.doll-link a#number50 {
+ background-image: url(../images/dolls/50.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number50:hover {
+  background-image: url(..//images/dolls/50_1.png);
+}
+
+.doll-link a#number51 {
+ background-image: url(../images/dolls/51.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number51:hover {
+  background-image: url(..//images/dolls/51_1.png);
+}
+
+.doll-link a#number52 {
+ background-image: url(../images/dolls/52.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number52:hover {
+  background-image: url(..//images/dolls/52_1.png);
+}
+
+.doll-link a#number53 {
+ background-image: url(../images/dolls/53.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number53:hover {
+  background-image: url(..//images/dolls/53_1.png);
+}
+
+.doll-link a#number54 {
+ background-image: url(../images/dolls/54.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number54:hover {
+  background-image: url(..//images/dolls/54_1.png);
+}
+
+.doll-link a#number55 {
+ background-image: url(../images/dolls/55.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number55:hover {
+  background-image: url(..//images/dolls/55_1.png);
+}
+
+.doll-link a#number56 {
+ background-image: url(../images/dolls/56.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number56:hover {
+  background-image: url(..//images/dolls/56_1.png);
+}
+
+.doll-link a#number57 {
+ background-image: url(../images/dolls/57.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number57:hover {
+  background-image: url(..//images/dolls/57_1.png);
+}
+
+.doll-link a#number58 {
+ background-image: url(../images/dolls/58.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number58:hover {
+  background-image: url(..//images/dolls/58_1.png);
+}
+
+.doll-link a#number60 {
+ background-image: url(../images/dolls/60.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number60:hover {
+  background-image: url(..//images/dolls/60_1.png);
+}
+
+.doll-link a#number61 {
+ background-image: url(../images/dolls/61.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number61:hover {
+  background-image: url(..//images/dolls/61_1.png);
+}
+
+.doll-link a#number62 {
+ background-image: url(../images/dolls/62.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number62:hover {
+  background-image: url(..//images/dolls/62_1.png);
+}
+
+.doll-link a#number63 {
+ background-image: url(../images/dolls/63.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number63:hover {
+  background-image: url(..//images/dolls/63_1.png);
+}
+
+.doll-link a#number64 {
+ background-image: url(../images/dolls/64.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number64:hover {
+  background-image: url(..//images/dolls/64_1.png);
+}
+
+.doll-link a#number65 {
+ background-image: url(../images/dolls/65.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number65:hover {
+  background-image: url(..//images/dolls/65_1.png);
+}
+
+.doll-link a#number66 {
+ background-image: url(../images/dolls/66.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number66:hover {
+  background-image: url(..//images/dolls/66_1.png);
+}
+
+.doll-link a#number68 {
+ background-image: url(../images/dolls/68.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number68:hover {
+  background-image: url(..//images/dolls/68_1.png);
+}
+
+.doll-link a#number69 {
+ background-image: url(../images/dolls/69.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number69:hover {
+  background-image: url(..//images/dolls/69_1.png);
+}
+
+.doll-link a#number70 {
+ background-image: url(../images/dolls/70.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number70:hover {
+  background-image: url(..//images/dolls/70_1.png);
+}
+
+.doll-link a#number71 {
+ background-image: url(../images/dolls/71.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number71:hover {
+  background-image: url(..//images/dolls/71_1.png);
+}
+
+.doll-link a#number72 {
+ background-image: url(../images/dolls/72.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number72:hover {
+  background-image: url(..//images/dolls/72_1.png);
+}
+
+.doll-link a#number74 {
+ background-image: url(../images/dolls/74.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number74:hover {
+  background-image: url(..//images/dolls/74_1.png);
+}
+
+.doll-link a#number75 {
+ background-image: url(../images/dolls/75.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number75:hover {
+  background-image: url(..//images/dolls/75_1.png);
+}
+
+.doll-link a#number77 {
+ background-image: url(../images/dolls/77.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number77:hover {
+  background-image: url(..//images/dolls/77_1.png);
+}
+
+.doll-link a#number78 {
+ background-image: url(../images/dolls/78.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number78:hover {
+  background-image: url(..//images/dolls/78_1.png);
+}
+
+.doll-link a#number79 {
+ background-image: url(../images/dolls/79.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number79:hover {
+  background-image: url(..//images/dolls/79_1.png);
+}
+
+.doll-link a#number80 {
+ background-image: url(../images/dolls/80.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number80:hover {
+  background-image: url(..//images/dolls/80_1.png);
+}
+
+.doll-link a#number81 {
+ background-image: url(../images/dolls/81.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number81:hover {
+  background-image: url(..//images/dolls/81_1.png);
+}
+
+.doll-link a#number82 {
+ background-image: url(../images/dolls/82.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number82:hover {
+  background-image: url(..//images/dolls/82_1.png);
+}
+
+.doll-link a#number84 {
+ background-image: url(../images/dolls/84.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number84:hover {
+  background-image: url(..//images/dolls/84_1.png);
+}
+
+.doll-link a#number85 {
+ background-image: url(../images/dolls/85.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number85:hover {
+  background-image: url(..//images/dolls/85_1.png);
+}
+
+.doll-link a#number86 {
+ background-image: url(../images/dolls/86.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number86:hover {
+  background-image: url(..//images/dolls/86_1.png);
+}
+
+.doll-link a#number87 {
+ background-image: url(../images/dolls/87.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number87:hover {
+  background-image: url(..//images/dolls/87_1.png);
+}
+
+.doll-link a#number88 {
+ background-image: url(../images/dolls/88.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number88:hover {
+  background-image: url(..//images/dolls/88_1.png);
+}
+
+.doll-link a#number89 {
+ background-image: url(../images/dolls/89.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number89:hover {
+  background-image: url(..//images/dolls/89_1.png);
+}
+
+.doll-link a#number90 {
+ background-image: url(../images/dolls/90.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number90:hover {
+  background-image: url(..//images/dolls/90_1.png);
+}
+
+.doll-link a#number91 {
+ background-image: url(../images/dolls/91.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number91:hover {
+  background-image: url(..//images/dolls/91_1.png);
+}
+
+.doll-link a#number92 {
+ background-image: url(../images/dolls/92.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number92:hover {
+  background-image: url(..//images/dolls/92_1.png);
+}
+
+.doll-link a#number93 {
+ background-image: url(../images/dolls/93.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number93:hover {
+  background-image: url(..//images/dolls/93_1.png);
+}
+
+.doll-link a#number94 {
+ background-image: url(../images/dolls/94.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number94:hover {
+  background-image: url(..//images/dolls/94_1.png);
+}
+
+.doll-link a#number95 {
+ background-image: url(../images/dolls/95.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number95:hover {
+  background-image: url(..//images/dolls/95_1.png);
+}
+
+.doll-link a#number96 {
+ background-image: url(../images/dolls/96.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number96:hover {
+  background-image: url(..//images/dolls/96_1.png);
+}
+
+.doll-link a#number97 {
+ background-image: url(../images/dolls/97.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number97:hover {
+  background-image: url(..//images/dolls/97_1.png);
+}
+
+.doll-link a#number98 {
+ background-image: url(../images/dolls/98.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number98:hover {
+  background-image: url(..//images/dolls/98_1.png);
+}
+
+.doll-link a#number99 {
+ background-image: url(../images/dolls/99.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number99:hover {
+  background-image: url(..//images/dolls/99_1.png);
+}
+
+.doll-link a#number100 {
+ background-image: url(../images/dolls/100.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number100:hover {
+  background-image: url(..//images/dolls/100_1.png);
+}
+
+.doll-link a#number101 {
+ background-image: url(../images/dolls/101.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number101:hover {
+  background-image: url(..//images/dolls/101_1.png);
+}
+
+.doll-link a#number102 {
+ background-image: url(../images/dolls/102.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number102:hover {
+  background-image: url(..//images/dolls/102_1.png);
+}
+
+.doll-link a#number103 {
+ background-image: url(../images/dolls/103.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number103:hover {
+  background-image: url(..//images/dolls/103_1.png);
+}
+
+.doll-link a#number104 {
+ background-image: url(../images/dolls/104.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number104:hover {
+  background-image: url(..//images/dolls/104_1.png);
+}
+
+.doll-link a#number105 {
+ background-image: url(../images/dolls/105.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number105:hover {
+  background-image: url(..//images/dolls/105_1.png);
+}
+
+.doll-link a#number106 {
+ background-image: url(../images/dolls/106.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number106:hover {
+  background-image: url(..//images/dolls/106_1.png);
+}
+
+.doll-link a#number107 {
+ background-image: url(../images/dolls/107.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number107:hover {
+  background-image: url(..//images/dolls/107_1.png);
+}
+
+.doll-link a#number108 {
+ background-image: url(../images/dolls/108.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number108:hover {
+  background-image: url(..//images/dolls/108_1.png);
+}
+
+.doll-link a#number109 {
+ background-image: url(../images/dolls/109.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number109:hover {
+  background-image: url(..//images/dolls/109_1.png);
+}
+
+.doll-link a#number110 {
+ background-image: url(../images/dolls/110.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number110:hover {
+  background-image: url(..//images/dolls/110_1.png);
+}
+
+.doll-link a#number111 {
+ background-image: url(../images/dolls/111.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number111:hover {
+  background-image: url(..//images/dolls/111_1.png);
+}
+
+.doll-link a#number112 {
+ background-image: url(../images/dolls/112.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number112:hover {
+  background-image: url(..//images/dolls/112_1.png);
+}
+
+.doll-link a#number113 {
+ background-image: url(../images/dolls/113.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number113:hover {
+  background-image: url(..//images/dolls/113_1.png);
+}
+
+.doll-link a#number114 {
+ background-image: url(../images/dolls/114.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number114:hover {
+  background-image: url(..//images/dolls/114_1.png);
+}
+
+.doll-link a#number115 {
+ background-image: url(../images/dolls/115.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number115:hover {
+  background-image: url(..//images/dolls/115_1.png);
+}
+
+.doll-link a#number116 {
+ background-image: url(../images/dolls/116.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number116:hover {
+  background-image: url(..//images/dolls/116_1.png);
+}
+
+.doll-link a#number117 {
+ background-image: url(../images/dolls/117.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number117:hover {
+  background-image: url(..//images/dolls/117_1.png);
+}
+
+.doll-link a#number118 {
+ background-image: url(../images/dolls/118.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number118:hover {
+  background-image: url(..//images/dolls/118_1.png);
+}
+
+.doll-link a#number119 {
+ background-image: url(../images/dolls/119.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number119:hover {
+  background-image: url(..//images/dolls/119_1.png);
+}
+
+.doll-link a#number120 {
+ background-image: url(../images/dolls/120.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number120:hover {
+  background-image: url(..//images/dolls/120_1.png);
+}
+
+.doll-link a#number121 {
+ background-image: url(../images/dolls/121.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number121:hover {
+  background-image: url(..//images/dolls/121_1.png);
+}
+
+.doll-link a#number122 {
+ background-image: url(../images/dolls/122.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number122:hover {
+  background-image: url(..//images/dolls/122_1.png);
+}
+
+.doll-link a#number123 {
+ background-image: url(../images/dolls/123.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number123:hover {
+  background-image: url(..//images/dolls/123_1.png);
+}
+
+.doll-link a#number124 {
+ background-image: url(../images/dolls/124.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number124:hover {
+  background-image: url(..//images/dolls/124_1.png);
+}
+
+.doll-link a#number125 {
+ background-image: url(../images/dolls/125.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number125:hover {
+  background-image: url(..//images/dolls/125_1.png);
+}
+
+.doll-link a#number126 {
+ background-image: url(../images/dolls/126.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number126:hover {
+  background-image: url(..//images/dolls/126_1.png);
+}
+
+.doll-link a#number127 {
+ background-image: url(../images/dolls/127.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number127:hover {
+  background-image: url(..//images/dolls/127_1.png);
+}
+
+.doll-link a#number128 {
+ background-image: url(../images/dolls/128.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number128:hover {
+  background-image: url(..//images/dolls/128_1.png);
+}
+
+.doll-link a#number129 {
+ background-image: url(../images/dolls/129.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number129:hover {
+  background-image: url(..//images/dolls/129_1.png);
+}
+
+.doll-link a#number130 {
+ background-image: url(../images/dolls/130.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number130:hover {
+  background-image: url(..//images/dolls/130_1.png);
+}
+
+.doll-link a#number131 {
+ background-image: url(../images/dolls/131.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number131:hover {
+  background-image: url(..//images/dolls/131_1.png);
+}
+
+.doll-link a#number132 {
+ background-image: url(../images/dolls/132.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number132:hover {
+  background-image: url(..//images/dolls/132_1.png);
+}
+
+.doll-link a#number133 {
+ background-image: url(../images/dolls/133.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number133:hover {
+  background-image: url(..//images/dolls/133_1.png);
+}
+
+.doll-link a#number134 {
+ background-image: url(../images/dolls/134.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number134:hover {
+  background-image: url(..//images/dolls/134_1.png);
+}
+
+.doll-link a#number135 {
+ background-image: url(../images/dolls/135.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number135:hover {
+  background-image: url(..//images/dolls/135_1.png);
+}
+
+.doll-link a#number136 {
+ background-image: url(../images/dolls/136.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number136:hover {
+  background-image: url(..//images/dolls/136_1.png);
+}
+
+.doll-link a#number137 {
+ background-image: url(../images/dolls/137.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number137:hover {
+  background-image: url(..//images/dolls/137_1.png);
+}
+
+.doll-link a#number138 {
+ background-image: url(../images/dolls/138.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number138:hover {
+  background-image: url(..//images/dolls/138_1.png);
+}
+
+.doll-link a#number139 {
+ background-image: url(../images/dolls/139.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number139:hover {
+  background-image: url(..//images/dolls/139_1.png);
+}
+
+.doll-link a#number140 {
+ background-image: url(../images/dolls/140.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number140:hover {
+  background-image: url(..//images/dolls/140_1.png);
+}
+
+.doll-link a#number141 {
+ background-image: url(../images/dolls/141.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number141:hover {
+  background-image: url(..//images/dolls/141_1.png);
+}
+
+.doll-link a#number142 {
+ background-image: url(../images/dolls/142.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number142:hover {
+  background-image: url(..//images/dolls/142_1.png);
+}
+
+.doll-link a#number143 {
+ background-image: url(../images/dolls/143.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number143:hover {
+  background-image: url(..//images/dolls/143_1.png);
+}
+
+.doll-link a#number144 {
+ background-image: url(../images/dolls/144.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number144:hover {
+  background-image: url(..//images/dolls/144_1.png);
+}
+
+.doll-link a#number145 {
+ background-image: url(../images/dolls/145.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number145:hover {
+  background-image: url(..//images/dolls/145_1.png);
+}
+
+.doll-link a#number146 {
+ background-image: url(../images/dolls/146.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number146:hover {
+  background-image: url(..//images/dolls/146_1.png);
+}
+
+.doll-link a#number147 {
+ background-image: url(../images/dolls/147.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number147:hover {
+  background-image: url(..//images/dolls/147_1.png);
+}
+
+.doll-link a#number148 {
+ background-image: url(../images/dolls/148.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number148:hover {
+  background-image: url(..//images/dolls/148_1.png);
+}
+
+.doll-link a#number149 {
+ background-image: url(../images/dolls/149.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number149:hover {
+  background-image: url(..//images/dolls/149_1.png);
+}
+
+.doll-link a#number150 {
+ background-image: url(../images/dolls/150.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number150:hover {
+  background-image: url(..//images/dolls/150_1.png);
+}
+
+.doll-link a#number151 {
+ background-image: url(../images/dolls/151.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number151:hover {
+  background-image: url(..//images/dolls/151_1.png);
+}
+
+.doll-link a#number152 {
+ background-image: url(../images/dolls/152.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number152:hover {
+  background-image: url(..//images/dolls/152_1.png);
+}
+
+.doll-link a#number153 {
+ background-image: url(../images/dolls/153.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number153:hover {
+  background-image: url(..//images/dolls/153_1.png);
+}
+
+.doll-link a#number154 {
+ background-image: url(../images/dolls/154.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number154:hover {
+  background-image: url(..//images/dolls/154_1.png);
+}
+
+.doll-link a#number155 {
+ background-image: url(../images/dolls/155.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number155:hover {
+  background-image: url(..//images/dolls/155_1.png);
+}
+
+.doll-link a#number156 {
+ background-image: url(../images/dolls/156.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number156:hover {
+  background-image: url(..//images/dolls/156_1.png);
+}
+
+.doll-link a#number157 {
+ background-image: url(../images/dolls/157.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number157:hover {
+  background-image: url(..//images/dolls/157_1.png);
+}
+
+.doll-link a#number158 {
+ background-image: url(../images/dolls/158.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number158:hover {
+  background-image: url(..//images/dolls/158_1.png);
+}
+
+.doll-link a#number159 {
+ background-image: url(../images/dolls/159.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number159:hover {
+  background-image: url(..//images/dolls/159_1.png);
+}
+
+.doll-link a#number160 {
+ background-image: url(../images/dolls/160.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number160:hover {
+  background-image: url(..//images/dolls/160_1.png);
+}
+
+.doll-link a#number161 {
+ background-image: url(../images/dolls/161.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number161:hover {
+  background-image: url(..//images/dolls/161_1.png);
+}
+
+.doll-link a#number162 {
+ background-image: url(../images/dolls/162.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number162:hover {
+  background-image: url(..//images/dolls/162_1.png);
+}
+
+.doll-link a#number166 {
+ background-image: url(../images/dolls/166.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number166:hover {
+  background-image: url(..//images/dolls/166_1.png);
+}
+
+.doll-link a#number167 {
+ background-image: url(../images/dolls/167.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number167:hover {
+  background-image: url(..//images/dolls/167_1.png);
+}
+
+.doll-link a#number168 {
+ background-image: url(../images/dolls/168.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number168:hover {
+  background-image: url(..//images/dolls/168_1.png);
+}
+
+.doll-link a#number169 {
+ background-image: url(../images/dolls/169.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number169:hover {
+  background-image: url(..//images/dolls/169_1.png);
+}
+
+.doll-link a#number170 {
+ background-image: url(../images/dolls/170.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number170:hover {
+  background-image: url(..//images/dolls/170_1.png);
+}
+
+.doll-link a#number171 {
+ background-image: url(../images/dolls/171.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number171:hover {
+  background-image: url(..//images/dolls/171_1.png);
+}
+
+.doll-link a#number172 {
+ background-image: url(../images/dolls/172.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number172:hover {
+  background-image: url(..//images/dolls/172_1.png);
+}
+
+.doll-link a#number173 {
+ background-image: url(../images/dolls/173.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number173:hover {
+  background-image: url(..//images/dolls/173_1.png);
+}
+
+.doll-link a#number174 {
+ background-image: url(../images/dolls/174.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number174:hover {
+  background-image: url(..//images/dolls/174_1.png);
+}
+
+.doll-link a#number175 {
+ background-image: url(../images/dolls/175.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number175:hover {
+  background-image: url(..//images/dolls/175_1.png);
+}
+
+.doll-link a#number176 {
+ background-image: url(../images/dolls/176.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number176:hover {
+  background-image: url(..//images/dolls/176_1.png);
+}
+
+.doll-link a#number177 {
+ background-image: url(../images/dolls/177.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number177:hover {
+  background-image: url(..//images/dolls/177_1.png);
+}
+
+.doll-link a#number178 {
+ background-image: url(../images/dolls/178.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number178:hover {
+  background-image: url(..//images/dolls/178_1.png);
+}
+
+.doll-link a#number179 {
+ background-image: url(../images/dolls/179.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number179:hover {
+  background-image: url(..//images/dolls/179_1.png);
+}
+
+.doll-link a#number180 {
+ background-image: url(../images/dolls/180.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number180:hover {
+  background-image: url(..//images/dolls/180_1.png);
+}
+
+.doll-link a#number181 {
+ background-image: url(../images/dolls/181.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number181:hover {
+  background-image: url(..//images/dolls/181_1.png);
+}
+
+.doll-link a#number182 {
+ background-image: url(../images/dolls/182.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number182:hover {
+  background-image: url(..//images/dolls/182_1.png);
+}
+
+.doll-link a#number183 {
+ background-image: url(../images/dolls/183.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number183:hover {
+  background-image: url(..//images/dolls/183_1.png);
+}
+
+.doll-link a#number184 {
+ background-image: url(../images/dolls/184.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number184:hover {
+  background-image: url(..//images/dolls/184_1.png);
+}
+
+.doll-link a#number185 {
+ background-image: url(../images/dolls/185.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number185:hover {
+  background-image: url(..//images/dolls/185_1.png);
+}
+
+.doll-link a#number186 {
+ background-image: url(../images/dolls/186.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number186:hover {
+  background-image: url(..//images/dolls/186_1.png);
+}
+
+.doll-link a#number187 {
+ background-image: url(../images/dolls/187.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number187:hover {
+  background-image: url(..//images/dolls/187_1.png);
+}
+
+.doll-link a#number188 {
+ background-image: url(../images/dolls/188.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number188:hover {
+  background-image: url(..//images/dolls/188_1.png);
+}
+
+.doll-link a#number189 {
+ background-image: url(../images/dolls/189.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number189:hover {
+  background-image: url(..//images/dolls/189_1.png);
+}
+
+.doll-link a#number190 {
+ background-image: url(../images/dolls/190.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number190:hover {
+  background-image: url(..//images/dolls/190_1.png);
+}
+
+.doll-link a#number191 {
+ background-image: url(../images/dolls/191.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number191:hover {
+  background-image: url(..//images/dolls/191_1.png);
+}
+
+.doll-link a#number192 {
+ background-image: url(../images/dolls/192.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number192:hover {
+  background-image: url(..//images/dolls/192_1.png);
+}
+
+.doll-link a#number193 {
+ background-image: url(../images/dolls/193.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number193:hover {
+  background-image: url(..//images/dolls/193_1.png);
+}
+
+.doll-link a#number194 {
+ background-image: url(../images/dolls/194.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number194:hover {
+  background-image: url(..//images/dolls/194_1.png);
+}
+
+.doll-link a#number195 {
+ background-image: url(../images/dolls/195.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number195:hover {
+  background-image: url(..//images/dolls/195_1.png);
+}
+
+.doll-link a#number196 {
+ background-image: url(../images/dolls/196.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number196:hover {
+  background-image: url(..//images/dolls/196_1.png);
+}
+
+.doll-link a#number197 {
+ background-image: url(../images/dolls/197.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number197:hover {
+  background-image: url(..//images/dolls/197_1.png);
+}
+
+.doll-link a#number198 {
+ background-image: url(../images/dolls/198.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number198:hover {
+  background-image: url(..//images/dolls/198_1.png);
+}
+
+.doll-link a#number199 {
+ background-image: url(../images/dolls/199.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number199:hover {
+  background-image: url(..//images/dolls/199_1.png);
+}
+
+.doll-link a#number200 {
+ background-image: url(../images/dolls/200.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number200:hover {
+  background-image: url(..//images/dolls/200_1.png);
+}
+
+.doll-link a#number201 {
+ background-image: url(../images/dolls/201.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number201:hover {
+  background-image: url(..//images/dolls/201_1.png);
+}
+
+.doll-link a#number202 {
+ background-image: url(../images/dolls/202.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number202:hover {
+  background-image: url(..//images/dolls/202_1.png);
+}
+
+.doll-link a#number203 {
+ background-image: url(../images/dolls/203.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number203:hover {
+  background-image: url(..//images/dolls/203_1.png);
+}
+
+.doll-link a#number204 {
+ background-image: url(../images/dolls/204.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number204:hover {
+  background-image: url(..//images/dolls/204_1.png);
+}
+
+.doll-link a#number205 {
+ background-image: url(../images/dolls/205.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number205:hover {
+  background-image: url(..//images/dolls/205_1.png);
+}
+
+.doll-link a#number206 {
+ background-image: url(../images/dolls/206.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number206:hover {
+  background-image: url(..//images/dolls/206_1.png);
+}
+
+.doll-link a#number207 {
+ background-image: url(../images/dolls/207.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number207:hover {
+  background-image: url(..//images/dolls/207_1.png);
+}
+
+.doll-link a#number208 {
+ background-image: url(../images/dolls/208.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number208:hover {
+  background-image: url(..//images/dolls/208_1.png);
+}
+
+.doll-link a#number1001 {
+ background-image: url(../images/dolls/1001.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number1001:hover {
+  background-image: url(..//images/dolls/1001_1.png);
+}
+
+.doll-link a#number1002 {
+ background-image: url(../images/dolls/1002.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number1002:hover {
+  background-image: url(..//images/dolls/1002_1.png);
+}
+
+.doll-link a#number1003 {
+ background-image: url(../images/dolls/1003.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number1003:hover {
+  background-image: url(..//images/dolls/1003_1.png);
+}
+
+.doll-link a#number1004 {
+ background-image: url(../images/dolls/1004.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number1004:hover {
+  background-image: url(..//images/dolls/1004_1.png);
+}
+
+.doll-link a#number1005 {
+ background-image: url(../images/dolls/1005.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number1005:hover {
+  background-image: url(..//images/dolls/1005_1.png);
+}
+
+.doll-link a#number1006 {
+ background-image: url(../images/dolls/1006.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number1006:hover {
+  background-image: url(..//images/dolls/1006_1.png);
+}
+
+.doll-link a#number1007 {
+ background-image: url(../images/dolls/1007.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number1007:hover {
+  background-image: url(..//images/dolls/1007_1.png);
+}
+
+.doll-link a#number1008 {
+ background-image: url(../images/dolls/1008.png);
+  background-position: 54% 4%;
+}
+
+.doll-link a#number1008:hover {
+  background-image: url(..//images/dolls/1008_1.png);
+}
+

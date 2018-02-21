@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>36베이스 - 소녀전선 데이터베이스</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+</head>
+<body>
+	<div  class="toggled" id="wrapper">
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand"><a href="index.html">36베이스</a></li>
+				<li><a href="doll.html">전술 인형 도감</a></li>
+				<li><a href="">인형 장비 도감</a></li>
+				<li><a href="">전술 요정 도감</a></li>
+				<li><a href="">기타 편의 기능</a></li>
+				<li><a href="">About / Contact</a></li>
+			</ul>
+		</div>
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<a href="#menu-toggle" style="margin-bottom: 10px;" class="btn btn-secondary" id="menu-toggle">메뉴 접기/펼치기</a>
+				<div class="body-content">
+					<h2>36베이스</h1>
+					<p>Development Status.......35%</p>
+					<p>고3 수능준비 안하고 만들고있음</p>
+					<p>엄청난 성원은 고마워 다들</p>
+					<p>빵갤럼들이 원하는 기능 많이많이 만들어줄께</p>
+					<img style="width: 300px" src="images/dolls/64_2.png">
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+	</script>
+
+</body>
+</html>

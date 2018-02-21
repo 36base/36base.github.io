@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dolldata>
+	<doll>
+		<number>1</number>
+		<name>콜트 리볼버</name>
+		<type>HG</type>
+		<rarity>4</rarity>
+		<health>80</health>
+		<damage>36</damage>
+		<evasion>76</evasion>
+		<accuracy>49</accuracy>
+		<firerate>47</firerate>
+		<movespeed>15</movespeed>
+		<armor>0</armor>
+		<critrate>20%</critrate>
+		<bufflocation>5/2/4/6/8</bufflocation>
+		<buffdetail>버프칸의 모든 총기에게, 화력 24% / 명중 50% 상승</buffdetail>
+		<skillname>일제사격</skillname>
+		<skilltime>선 쿨타임 6초 / 쿨타임 12초</skilltime>
+		<skilldetail>아군 전체 화력을 22% 상승시킨다.</skilldetail>
+		<buildtime>00:50:00</buildtime>
+		<drop>0-1, 4-1, 5-1, 6-5, 7-1, 8-2, 1-4E, 3-1E, 3-4E, 4-1E, 5-1E, 6-1E, 8-1E</drop>
+		<illustrator>Saru</illustrator>
+		<voiceactor>타나카 아이미</voiceactor>
+		<skinexistence>True</skinexistence>
+		<skinnumber>1</skinnumber>
+		<skinnames>별똥별의 소원</skinnames>
+	</doll>
+	<doll>
+		<number>1</number>
+		<name>M1911</name>
+		<type>HG</type>
+		<rarity>4</rarity>
+		<health>80</health>
+		<damage>36</damage>
+		<evasion>76</evasion>
+		<accuracy>49</accuracy>
+		<firerate>47</firerate>
+		<movespeed>15</movespeed>
+		<armor>0</armor>
+		<critrate>20%</critrate>
+		<bufflocation>5/2/4/6/8</bufflocation>
+		<buffdetail>버프칸의 모든 총기에게, 화력 24% / 명중 50% 상승</buffdetail>
+		<skillname>일제사격</skillname>
+		<skilltime>선 쿨타임 6초 / 쿨타임 12초</skilltime>
+		<skilldetail>아군 전체 화력을 22% 상승시킨다.</skilldetail>
+		<buildtime>00:50:00</buildtime>
+		<drop>0-1, 4-1, 5-1, 6-5, 7-1, 8-2, 1-4E, 3-1E, 3-4E, 4-1E, 5-1E, 6-1E, 8-1E</drop>
+		<illustrator>Saru</illustrator>
+		<voiceactor>타나카 아이미</voiceactor>
+		<skinexistence>True</skinexistence>
+		<skinnumber>1</skinnumber>
+		<skinnames>별똥별의 소원</skinnames>
+	</doll>
+</dolldata>
