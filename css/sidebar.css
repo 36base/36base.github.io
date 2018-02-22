@@ -27,7 +27,7 @@
   margin: 0px;
   line-height: 35px;
   cursor: pointer;
-  /*    
+  /*
     .collapsed{
        .arrow:before{
                  font-family: FontAwesome;
@@ -76,8 +76,8 @@
 .nav-side-menu li .sub-menu li:hover {
   background-color: #020203;
 }
-.nav-side-menu ul .sub-menu li:before,
-.nav-side-menu li .sub-menu li:before {
+.nav-side-menu ul .sub-menu li a:before,
+.nav-side-menu li .sub-menu li a:before {
   font-family: FontAwesome;
   content: "\f105";
   display: inline-block;
@@ -147,4 +147,9 @@
 body {
   margin: 0px;
   padding: 0px;
+}
+
+.sidebar-menuitem{
+  display: block;
+  height: 100%;
 }
