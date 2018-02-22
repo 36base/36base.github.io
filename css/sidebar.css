@@ -136,6 +136,8 @@
 @media (min-width: 767px) {
   .nav-side-menu .menu-list .menu-content {
     display: block;
+  }
+  .nav-side-menu {
     height: 100%;
   }
   #main {
