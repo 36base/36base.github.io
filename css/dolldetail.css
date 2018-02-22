@@ -1,0 +1,52 @@
+.dollname {
+	width: 100%;
+	padding-top: 25px;
+	border-bottom: 3px solid black;
+}
+
+.skintoggle {
+	padding-top: 15px;
+}
+
+.middlearea {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.imageholder {
+	flex-grow: 1;
+}
+
+.middleholder {
+	flex-grow: 1;
+	margin-right: 20px;
+}
+
+.rightholder {
+	flex-grow: 1;
+}
+
+.dollimage {
+	width: 400px;
+}
+
+.holdertitle {
+	font-size: 16px;
+	font-weight: bold;
+	border-bottom: 3px solid gray;
+}
+
+.statlabelholder {
+	display:flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.statrow {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	border-bottom: 2px solid gray;
+}
