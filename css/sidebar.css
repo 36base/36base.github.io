@@ -7,7 +7,6 @@
   position: fixed;
   top: 0px;
   width: 300px;
-  height: 100%;
   color: #e1ffff;
 }
 .nav-side-menu .brand {
@@ -137,6 +136,7 @@
 @media (min-width: 767px) {
   .nav-side-menu .menu-list .menu-content {
     display: block;
+    height: 100%;
   }
   #main {
   	width:calc(100% - 300px);
