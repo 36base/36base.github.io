@@ -44,7 +44,7 @@
 	justify-content: space-around;
 }
 
-.statrow {
+.statrow, .illustratorrow, .voicerow {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
