@@ -1,5 +1,5 @@
 [
-	{ "number":"1",
+	{ "number":1,
 	"name":"콜트 리볼버",
 	"type":"HG",
 	"rarity":"4",
@@ -23,7 +23,7 @@
 	"skinexistence":true,
 	"skinnumber":1,
 	"skinnames":["별똥별의 소원"]},
-	{ "number":"2",
+	{ "number":2,
 	"name":"M1911",
 	"type":"HG",
 	"rarity":"2",
