@@ -1,14 +1,25 @@
-$(document).ready(function(){
+if(window.location.hash) {
+  var hash = window.location.hash.substring(1);
+  loadData(hash);
+} else {
+  var warn = '잘못된 접근입니다.'
+  alert(warn);
+}
+
+function loadData(number){
   $.ajax({
     type:"GET",
-    url:"dolldb.json",
+    url:"../dolldb.json",
     success:function(json){
       var listLen = json.length;
-      var contentStr = "";
       for(var i=0; i<listLen; i++){
-        console.log(json[i].name);
-        console.log(json[i].skilldetail);
+        if (json[i].number == number) {
+          document.getElementById("dollname").innerHTML = json[i].name;
+        }
+        else{
+          console.log("Error?")
+        }
       }
     }
   })
-});
+};
