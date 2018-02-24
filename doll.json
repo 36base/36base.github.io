@@ -486,7 +486,7 @@
   "type": 1,
   "illust": "Rain Lan",
   "voice": "Sora Tokui",
-  "buildTime": 0,
+  "buildTime": 2700,
   "stats": {
     "armor": 0,
     "dodge": 87,
@@ -631,7 +631,7 @@
   "type": 2,
   "illust": "NorthAbyssor",
   "voice": "Serizawa Yuu",
-  "buildTime": 0,
+  "buildTime": 7800,
   "stats": {
     "armor": 0,
     "dodge": 90,
@@ -952,43 +952,6 @@
     }]
   }
 }, {
-  "id": 28,
-  "name": "MP7",
-  "rank": 5,
-  "type": 2,
-  "illust": "戏言咸咸",
-  "voice": "",
-  "buildTime": 0,
-  "stats": {
-    "armor": 0,
-    "dodge": 69,
-    "hit": 13,
-    "hp": 198,
-    "pow": 30,
-    "range": 0,
-    "rate": 91,
-    "shield": 0,
-    "speed": 12,
-    "crit": 5,
-    "critDmg": 0,
-    "armorPiercing": 10,
-    "nightView": 0,
-    "coolDown": 0,
-    "bullet": 0
-  },
-  "effect": {
-    "effectType": 4,
-    "effectCenter": 5,
-    "effectPos": [1, 4, 7],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 15
-    }, {
-      "type": "hit",
-      "value": 25
-    }]
-  }
-}, {
   "id": 29,
   "name": "Sten Mk Ⅱ",
   "rank": 3,
@@ -1174,7 +1137,7 @@
   "type": 3,
   "illust": "哈路卡",
   "voice": "Suzuko Mimori",
-  "buildTime": 0,
+  "buildTime": 13200,
   "stats": {
     "armor": 0,
     "dodge": 42,
@@ -1276,7 +1239,7 @@
   "type": 3,
   "illust": "卑しい人间",
   "voice": "Eri Kitamura",
-  "buildTime": 0,
+  "buildTime": 13800,
   "stats": {
     "armor": 0,
     "dodge": 27,
@@ -1616,7 +1579,7 @@
   "type": 3,
   "illust": "KAN",
   "voice": "Rui Kariya",
-  "buildTime": 0,
+  "buildTime": 13800,
   "stats": {
     "armor": 0,
     "dodge": 36,
@@ -1786,7 +1749,7 @@
   "type": 4,
   "illust": "海猫络合物",
   "voice": "Yamane Nozomi",
-  "buildTime": 0,
+  "buildTime": 12900,
   "stats": {
     "armor": 0,
     "dodge": 44,
@@ -1823,7 +1786,7 @@
   "type": 4,
   "illust": "海猫络合物",
   "voice": "Haruka Tomatsu",
-  "buildTime": 0,
+  "buildTime": 12900,
   "stats": {
     "armor": 0,
     "dodge": 48,
@@ -1860,7 +1823,7 @@
   "type": 4,
   "illust": "海猫络合物",
   "voice": "Yukari Tamura",
-  "buildTime": 0,
+  "buildTime": 12900,
   "stats": {
     "armor": 0,
     "dodge": 44,
@@ -1897,7 +1860,7 @@
   "type": 4,
   "illust": "LIN+",
   "voice": "Emiri Katou",
-  "buildTime": 0,
+  "buildTime": 12900,
   "stats": {
     "armor": 0,
     "dodge": 50,
@@ -2551,7 +2514,7 @@
   "type": 5,
   "illust": "雪樱樱",
   "voice": "Yoshino Nanjo",
-  "buildTime": 0,
+  "buildTime": 19800,
   "stats": {
     "armor": 0,
     "dodge": 36,
@@ -2696,7 +2659,7 @@
   "type": 5,
   "illust": "Sam_Ashton",
   "voice": "Iori Nomizu",
-  "buildTime": 0,
+  "buildTime": 19800,
   "stats": {
     "armor": 0,
     "dodge": 34,
@@ -3187,7 +3150,7 @@
   "type": 1,
   "illust": "麻将",
   "voice": "Yuka Ootsubo",
-  "buildTime": 0,
+  "buildTime": 3300,
   "stats": {
     "armor": 0,
     "dodge": 75,
@@ -3332,7 +3295,7 @@
   "type": 2,
   "illust": "Renatus.Z",
   "voice": "Emi Uema",
-  "buildTime": 0,
+  "buildTime": 8100,
   "stats": {
     "armor": 0,
     "dodge": 75,
@@ -3548,7 +3511,7 @@
   "type": 4,
   "illust": "木子翔",
   "voice": "Maaya Uchida",
-  "buildTime": 0,
+  "buildTime": 11400,
   "stats": {
     "armor": 0,
     "dodge": 41,
@@ -3724,7 +3687,7 @@
   "type": 1,
   "illust": "能登ツグミ",
   "voice": "Minami Tanaka",
-  "buildTime": 0,
+  "buildTime": 2100,
   "stats": {
     "armor": 0,
     "dodge": 68,
@@ -3943,7 +3906,7 @@
   "type": 4,
   "illust": "ASK",
   "voice": "Marina Inoue",
-  "buildTime": 0,
+  "buildTime": 14520,
   "stats": {
     "armor": 0,
     "dodge": 54,
@@ -4125,7 +4088,7 @@
   "type": 3,
   "illust": "受菟",
   "voice": "Ricca Tachibana",
-  "buildTime": 0,
+  "buildTime": 14400,
   "stats": {
     "armor": 0,
     "dodge": 27,
@@ -4375,7 +4338,7 @@
   "type": 2,
   "illust": "钉田西瓜",
   "voice": "Nozomi Yamamoto",
-  "buildTime": 0,
+  "buildTime": 6600,
   "stats": {
     "armor": 0,
     "dodge": 68,
@@ -4409,7 +4372,7 @@
   "type": 1,
   "illust": "麻将",
   "voice": "Emiri Katou",
-  "buildTime": 0,
+  "buildTime": 2700,
   "stats": {
     "armor": 0,
     "dodge": 96,
@@ -4483,7 +4446,7 @@
   "type": 4,
   "illust": "NoriZC",
   "voice": "Nozomi Yamamoto",
-  "buildTime": 0,
+  "buildTime": 11400,
   "stats": {
     "armor": 0,
     "dodge": 41,
@@ -4557,7 +4520,7 @@
   "type": 2,
   "illust": "八才",
   "voice": "Serizawa Yuu",
-  "buildTime": 0,
+  "buildTime": 8400,
   "stats": {
     "armor": 0,
     "dodge": 74,
@@ -4628,7 +4591,7 @@
   "type": 4,
   "illust": "羽中",
   "voice": "Marina Inoue",
-  "buildTime": 0,
+  "buildTime": 12000,
   "stats": {
     "armor": 0,
     "dodge": 33,
@@ -4699,7 +4662,7 @@
   "type": 1,
   "illust": "sola7764",
   "voice": "Naomi Mukaiyama",
-  "buildTime": 0,
+  "buildTime": 2100,
   "stats": {
     "armor": 0,
     "dodge": 112,
@@ -4770,7 +4733,7 @@
   "type": 1,
   "illust": "水乌龟",
   "voice": "Akane Fujita",
-  "buildTime": 0,
+  "buildTime": 3420,
   "stats": {
     "armor": 0,
     "dodge": 97,
@@ -4807,7 +4770,7 @@
   "type": 2,
   "illust": "海猫络合物",
   "voice": "Ayaka Fukuhara",
-  "buildTime": 0,
+  "buildTime": 9300,
   "stats": {
     "armor": 0,
     "dodge": 71,
@@ -4844,7 +4807,7 @@
   "type": 2,
   "illust": "麻将",
   "voice": "Rui Kariya",
-  "buildTime": 0,
+  "buildTime": 7500,
   "stats": {
     "armor": 0,
     "dodge": 60,
@@ -4949,7 +4912,7 @@
   "type": 3,
   "illust": "拿铁",
   "voice": "",
-  "buildTime": 0,
+  "buildTime": 13800,
   "stats": {
     "armor": 0,
     "dodge": 39,
@@ -5091,7 +5054,7 @@
   "type": 6,
   "illust": "REALMBW",
   "voice": "Hitomi Nabatame",
-  "buildTime": 0,
+  "buildTime": 29100,
   "stats": {
     "armor": 22,
     "dodge": 12,
@@ -5443,7 +5406,7 @@
   "type": 6,
   "illust": "河马",
   "voice": "Yuka Ootsubo",
-  "buildTime": 0,
+  "buildTime": 27000,
   "stats": {
     "armor": 20,
     "dodge": 13,
@@ -5511,7 +5474,7 @@
   "type": 1,
   "illust": "音符",
   "voice": "",
-  "buildTime": 0,
+  "buildTime": 3900,
   "stats": {
     "armor": 0,
     "dodge": 74,
@@ -5548,7 +5511,7 @@
   "type": 1,
   "illust": "雪樱樱",
   "voice": "",
-  "buildTime": 0,
+  "buildTime": 2400,
   "stats": {
     "armor": 0,
     "dodge": 80,
@@ -5619,7 +5582,7 @@
   "type": 2,
   "illust": "幻象黑兔",
   "voice": "",
-  "buildTime": 0,
+  "buildTime": 7200,
   "stats": {
     "armor": 0,
     "dodge": 68,
@@ -5656,7 +5619,7 @@
   "type": 4,
   "illust": "仙女V",
   "voice": "",
-  "buildTime": 0,
+  "buildTime": 12000,
   "stats": {
     "armor": 0,
     "dodge": 36,
@@ -5798,7 +5761,7 @@
   "type": 3,
   "illust": "八才",
   "voice": "",
-  "buildTime": 0,
+  "buildTime": 13800,
   "stats": {
     "armor": 0,
     "dodge": 41,
@@ -5832,7 +5795,7 @@
   "type": 4,
   "illust": "Saru",
   "voice": "",
-  "buildTime": 0,
+  "buildTime": 14100,
   "stats": {
     "armor": 0,
     "dodge": 49,
@@ -5869,7 +5832,7 @@
   "type": 2,
   "illust": "废人",
   "voice": "",
-  "buildTime": 0,
+  "buildTime": 7800,
   "stats": {
     "armor": 0,
     "dodge": 77,
@@ -5906,7 +5869,7 @@
   "type": 2,
   "illust": "水熊",
   "voice": "",
-  "buildTime": 0,
+  "buildTime": 8400,
   "stats": {
     "armor": 0,
     "dodge": 74,
@@ -5977,7 +5940,7 @@
   "type": 3,
   "illust": "liduke",
   "voice": "",
-  "buildTime": 0,
+  "buildTime": 17100,
   "stats": {
     "armor": 0,
     "dodge": 33,
@@ -6082,7 +6045,7 @@
   "type": 3,
   "illust": "zui",
   "voice": "",
-  "buildTime": 0,
+  "buildTime": 13800,
   "stats": {
     "armor": 0,
     "dodge": 33,
@@ -6224,7 +6187,7 @@
   "type": 1,
   "illust": "PHI",
   "voice": "",
-  "buildTime": 0,
+  "buildTime": 2100,
   "stats": {
     "armor": 0,
     "dodge": 63,
@@ -6261,7 +6224,7 @@
   "type": 4,
   "illust": "百足",
   "voice": "",
-  "buildTime": 0,
+  "buildTime": 13200,
   "stats": {
     "armor": 0,
     "dodge": 38,
@@ -6406,7 +6369,7 @@
   "type": 2,
   "illust": "猫头神",
   "voice": "Akane Hanazawa",
-  "buildTime": 0,
+  "buildTime": 6900,
   "stats": {
     "armor": 0,
     "dodge": 64,
@@ -6443,7 +6406,7 @@
   "type": 3,
   "illust": "音符",
   "voice": "",
-  "buildTime": 0,
+  "buildTime": 17340,
   "stats": {
     "armor": 0,
     "dodge": 32,
@@ -6477,7 +6440,7 @@
   "type": 4,
   "illust": "PHI",
   "voice": "",
-  "buildTime": 0,
+  "buildTime": 11100,
   "stats": {
     "armor": 0,
     "dodge": 40,
@@ -6551,7 +6514,7 @@
   "type": 5,
   "illust": "Rain Lan",
   "voice": "",
-  "buildTime": 0,
+  "buildTime": 19500,
   "stats": {
     "armor": 0,
     "dodge": 34,
@@ -6730,7 +6693,7 @@
   "type": 3,
   "illust": "时辰",
   "voice": "",
-  "buildTime": 0,
+  "buildTime": 15600,
   "stats": {
     "armor": 0,
     "dodge": 32,
@@ -6764,7 +6727,7 @@
   "type": 3,
   "illust": "荒境TS",
   "voice": "",
-  "buildTime": 0,
+  "buildTime": 15600,
   "stats": {
     "armor": 0,
     "dodge": 28,
@@ -6792,60 +6755,245 @@
     }]
   }
 }, {
-  "id": 202,
-  "name": "Thunder50",
+  "id": 203,
+  "name": "PDW",
   "rank": 4,
-  "type": 1,
-  "illust": "NIN",
-  "voice": "",
+  "type": 2,
+  "illust": "HJL",
+  "voice": "/",
   "buildTime": 0,
   "stats": {
     "armor": 0,
     "dodge": 60,
-    "hit": 57,
-    "hp": 86,
+    "hit": 13,
+    "hp": 990,
     "pow": 33,
     "range": 0,
-    "rate": 37,
+    "rate": 82,
     "shield": 0,
     "speed": 12,
-    "crit": 20,
+    "crit": 5,
     "critDmg": 0,
-    "armorPiercing": 10,
+    "armorPiercing": 0,
     "nightView": 0,
     "coolDown": 0,
     "bullet": 0
   },
   "effect": {
-    "effectType": 0,
-    "effectCenter": 5,
-    "effectPos": [1, 6, 7],
+    "effectType": 4,
+    "effectCenter": 8,
+    "effectPos": [1, 7],
     "gridEffect": [{
       "type": "pow",
+      "value": 20
+    }, {
+      "type": "crit",
+      "value": 20
+    }]
+  }
+}, {
+  "id": 204,
+  "name": "Ballista",
+  "rank": 5,
+  "type": 3,
+  "illust": "水乌龟",
+  "voice": "/",
+  "buildTime": 0,
+  "stats": {
+    "armor": 0,
+    "dodge": 35,
+    "hit": 92,
+    "hp": 410,
+    "pow": 139,
+    "range": 0,
+    "rate": 36,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 0,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [3, 9],
+    "gridEffect": [{
+      "type": "coolDown",
       "value": 18
     }]
   }
 }, {
-  "id": 210,
-  "name": "MP-443",
-  "rank": 3,
-  "type": 1,
-  "illust": "N",
+  "id": 205,
+  "name": "AN94",
+  "rank": 5,
+  "type": 4,
+  "illust": "多元菌",
   "voice": "/",
-  "buildTime": 2700,
+  "buildTime": 14940,
   "stats": {
     "armor": 0,
-    "dodge": 71,
-    "hit": 53,
-    "hp": 70,
+    "dodge": 48,
+    "hit": 67,
+    "hp": 580,
+    "pow": 55,
+    "range": 0,
+    "rate": 76,
+    "shield": 0,
+    "speed": 12,
+    "crit": 0,
+    "critDmg": 0,
+    "armorPiercing": 0,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 8,
+    "effectPos": [3, 6, 9],
+    "gridEffect": [{
+      "type": "hit",
+      "value": 55
+    }, {
+      "type": "dodge",
+      "value": 16
+    }]
+  }
+}, {
+  "id": 206,
+  "name": "AK12",
+  "rank": 5,
+  "type": 4,
+  "illust": "多元菌",
+  "voice": "/",
+  "buildTime": 15120,
+  "stats": {
+    "armor": 0,
+    "dodge": 52,
+    "hit": 62,
+    "hp": 550,
+    "pow": 56,
+    "range": 0,
+    "rate": 78,
+    "shield": 0,
+    "speed": 10,
+    "crit": 0,
+    "critDmg": 0,
+    "armorPiercing": 0,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 2,
+    "effectPos": [3, 6, 9],
+    "gridEffect": [{
+      "type": "hit",
+      "value": 25
+    }, {
+      "type": "rate",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 207,
+  "name": "CZ2000",
+  "rank": 4,
+  "type": 4,
+  "illust": "NoriZC",
+  "voice": "/",
+  "buildTime": 0,
+  "stats": {
+    "armor": 0,
+    "dodge": 46,
+    "hit": 44,
+    "hp": 550,
+    "pow": 48,
+    "range": 0,
+    "rate": 78,
+    "shield": 0,
+    "speed": 7,
+    "crit": 0,
+    "critDmg": 0,
+    "armorPiercing": 0,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 2,
+    "effectPos": [6],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 10
+    }, {
+      "type": "dodge",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 208,
+  "name": "HK21",
+  "rank": 5,
+  "type": 5,
+  "illust": "小吃",
+  "voice": "/",
+  "buildTime": 0,
+  "stats": {
+    "armor": 0,
+    "dodge": 33,
+    "hit": 29,
+    "hp": 845,
+    "pow": 92,
+    "range": 0,
+    "rate": 135,
+    "shield": 0,
+    "speed": 4,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 0,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 6,
+    "effectCenter": 4,
+    "effectPos": [3,6],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 15
+    }, {
+      "type": "armor",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 210,
+  "name": "CZ52",
+  "rank": 3,
+  "type": 1,
+  "illust": "小吃",
+  "voice": "/",
+  "buildTime": 0,
+  "stats": {
+    "armor": 0,
+    "dodge": 68,
+    "hit": 50,
+    "hp": 380,
     "pow": 33,
     "range": 0,
-    "rate": 59,
+    "rate": 53,
     "shield": 0,
     "speed": 15,
-    "crit": 20,
+    "crit": 0,
     "critDmg": 0,
-    "armorPiercing": 10,
+    "armorPiercing": 0,
     "nightView": 0,
     "coolDown": 0,
     "bullet": 0
@@ -6853,7 +7001,7 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [2, 8, 1, 4, 7],
+    "effectPos": [2, 3, 8, 9],
     "gridEffect": [{
       "type": "pow",
       "value": 10
