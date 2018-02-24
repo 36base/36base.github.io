@@ -1,72 +1,32 @@
 .doll-link a#number1001 {
- background-image: url(../images/dolls/1001.png);
-  background-position: 54% 4%;
-}
-
-.doll-link a#number1001:hover {
-  background-image: url(..//images/dolls/1001_1.png);
+ background-image: url(../images/portrait/1001.png);
 }
 
 .doll-link a#number1002 {
- background-image: url(../images/dolls/1002.png);
-  background-position: 54% 4%;
-}
-
-.doll-link a#number1002:hover {
-  background-image: url(..//images/dolls/1002_1.png);
+ background-image: url(../images/portrait/1002.png);
 }
 
 .doll-link a#number1003 {
- background-image: url(../images/dolls/1003.png);
-  background-position: 54% 4%;
-}
-
-.doll-link a#number1003:hover {
-  background-image: url(..//images/dolls/1003_1.png);
+ background-image: url(../images/portrait/1003.png);
 }
 
 .doll-link a#number1004 {
- background-image: url(../images/dolls/1004.png);
-  background-position: 54% 4%;
-}
-
-.doll-link a#number1004:hover {
-  background-image: url(..//images/dolls/1004_1.png);
+ background-image: url(../images/portrait/1004.png);
 }
 
 .doll-link a#number1005 {
- background-image: url(../images/dolls/1005.png);
-  background-position: 54% 4%;
-}
-
-.doll-link a#number1005:hover {
-  background-image: url(..//images/dolls/1005_1.png);
+ background-image: url(../images/portrait/1005.png);
 }
 
 .doll-link a#number1006 {
- background-image: url(../images/dolls/1006.png);
-  background-position: 54% 4%;
-}
-
-.doll-link a#number1006:hover {
-  background-image: url(..//images/dolls/1006_1.png);
+ background-image: url(../images/portrait/1006.png);
 }
 
 .doll-link a#number1007 {
- background-image: url(../images/dolls/1007.png);
-  background-position: 54% 4%;
-}
-
-.doll-link a#number1007:hover {
-  background-image: url(..//images/dolls/1007_1.png);
+ background-image: url(../images/portrait/1007.png);
 }
 
 .doll-link a#number1008 {
- background-image: url(../images/dolls/1008.png);
-  background-position: 54% 4%;
-}
-
-.doll-link a#number1008:hover {
-  background-image: url(..//images/dolls/1008_1.png);
+ background-image: url(../images/portrait/1008.png);
 }
 

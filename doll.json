@@ -1,0 +1,7303 @@
+[{
+  "id": 1,
+  "name": "M1873",
+  "rank": 4,
+  "type": 1,
+  "illust": "Saru",
+  "voice": "Aimi Tanaka",
+  "buildTime": 3000,
+  "stats": {
+    "armor": 0,
+    "dodge": 76,
+    "hit": 49,
+    "hp": 80,
+    "pow": 36,
+    "range": 0,
+    "rate": 47,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [6, 2, 8, 4],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 12
+    }, {
+      "type": "hit",
+      "value": 25
+    }]
+  }
+}, {
+  "id": 2,
+  "name": "M1911",
+  "rank": 2,
+  "type": 1,
+  "illust": "spirtie",
+  "voice": "Eriko Matsui",
+  "buildTime": 1200,
+  "stats": {
+    "armor": 0,
+    "dodge": 74,
+    "hit": 50,
+    "hp": 73,
+    "pow": 27,
+    "range": 0,
+    "rate": 57,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [6, 2, 8, 4],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 10
+    }, {
+      "type": "hit",
+      "value": 25
+    }]
+  }
+}, {
+  "id": 3,
+  "name": "M9",
+  "rank": 3,
+  "type": 1,
+  "illust": "M.vv",
+  "voice": "Aya Suzaki",
+  "buildTime": 2400,
+  "stats": {
+    "armor": 0,
+    "dodge": 66,
+    "hit": 56,
+    "hp": 76,
+    "pow": 29,
+    "range": 0,
+    "rate": 61,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [2, 8, 1, 7],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 10
+    }, {
+      "type": "dodge",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 5,
+  "name": "M1895",
+  "rank": 2,
+  "type": 1,
+  "illust": "X布",
+  "voice": "Narumi Sinohara",
+  "buildTime": 1200,
+  "stats": {
+    "armor": 0,
+    "dodge": 92,
+    "hit": 46,
+    "hp": 70,
+    "pow": 32,
+    "range": 0,
+    "rate": 44,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [6, 2, 8],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 16
+    }, {
+      "type": "crit",
+      "value": 8
+    }]
+  }
+}, {
+  "id": 6,
+  "name": "TT33",
+  "rank": 3,
+  "type": 1,
+  "illust": "废人",
+  "voice": "Hiromi Sakuma",
+  "buildTime": 2700,
+  "stats": {
+    "armor": 0,
+    "dodge": 66,
+    "hit": 47,
+    "hp": 86,
+    "pow": 31,
+    "range": 0,
+    "rate": 52,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [2, 8, 1, 7],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 10
+    }, {
+      "type": "hit",
+      "value": 25
+    }]
+  }
+}, {
+  "id": 7,
+  "name": "APS",
+  "rank": 4,
+  "type": 1,
+  "illust": "鳗鱼子",
+  "voice": "Eri Kitamura",
+  "buildTime": 3300,
+  "stats": {
+    "armor": 0,
+    "dodge": 66,
+    "hit": 44,
+    "hp": 83,
+    "pow": 28,
+    "range": 0,
+    "rate": 65,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [2, 8, 1, 7],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 6
+    }, {
+      "type": "rate",
+      "value": 12
+    }]
+  }
+}, {
+  "id": 8,
+  "name": "PM",
+  "rank": 3,
+  "type": 1,
+  "illust": "河马",
+  "voice": "Uesaka Sumire",
+  "buildTime": 2400,
+  "stats": {
+    "armor": 0,
+    "dodge": 96,
+    "hit": 61,
+    "hp": 63,
+    "pow": 26,
+    "range": 0,
+    "rate": 61,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [3, 6, 9, 4],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 10
+    }, {
+      "type": "rate",
+      "value": 6
+    }]
+  }
+}, {
+  "id": 9,
+  "name": "P38",
+  "rank": 2,
+  "type": 1,
+  "illust": "とり",
+  "voice": "Tooru Kanae",
+  "buildTime": 1200,
+  "stats": {
+    "armor": 0,
+    "dodge": 81,
+    "hit": 49,
+    "hp": 66,
+    "pow": 28,
+    "range": 0,
+    "rate": 57,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [2, 8, 1, 7],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 7
+    }, {
+      "type": "hit",
+      "value": 28
+    }]
+  }
+}, {
+  "id": 10,
+  "name": "PPK",
+  "rank": 2,
+  "type": 1,
+  "illust": "堀森",
+  "voice": "Asuka Ito",
+  "buildTime": 1320,
+  "stats": {
+    "armor": 0,
+    "dodge": 100,
+    "hit": 59,
+    "hp": 57,
+    "pow": 25,
+    "range": 0,
+    "rate": 63,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [3, 6, 9, 4],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 16
+    }, {
+      "type": "crit",
+      "value": 8
+    }]
+  }
+}, {
+  "id": 11,
+  "name": "P08",
+  "rank": 3,
+  "type": 1,
+  "illust": "防弹乳牛",
+  "voice": "Takao Koizumi",
+  "buildTime": 1800,
+  "stats": {
+    "armor": 0,
+    "dodge": 80,
+    "hit": 46,
+    "hp": 70,
+    "pow": 31,
+    "range": 0,
+    "rate": 55,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [2, 8, 4],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 7
+    }, {
+      "type": "hit",
+      "value": 35
+    }]
+  }
+}, {
+  "id": 12,
+  "name": "C96",
+  "rank": 3,
+  "type": 1,
+  "illust": "林檎愛す",
+  "voice": "Ayaka Itatani",
+  "buildTime": 1800,
+  "stats": {
+    "armor": 0,
+    "dodge": 61,
+    "hit": 41,
+    "hp": 83,
+    "pow": 29,
+    "range": 0,
+    "rate": 62,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [3, 9, 4],
+    "gridEffect": [{
+      "type": "hit",
+      "value": 32
+    }, {
+      "type": "dodge",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 13,
+  "name": "Type 92",
+  "rank": 3,
+  "type": 1,
+  "illust": "莲子",
+  "voice": "Suzuko Mimori",
+  "buildTime": 2100,
+  "stats": {
+    "armor": 0,
+    "dodge": 80,
+    "hit": 46,
+    "hp": 63,
+    "pow": 31,
+    "range": 0,
+    "rate": 61,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [3, 6, 9, 2, 8, 1, 4, 7],
+    "gridEffect": [{
+      "type": "hit",
+      "value": 25
+    }, {
+      "type": "dodge",
+      "value": 20
+    }]
+  }
+}, {
+  "id": 14,
+  "name": "357",
+  "rank": 3,
+  "type": 1,
+  "illust": "spirtie",
+  "voice": "Sora Amamiya",
+  "buildTime": 2400,
+  "stats": {
+    "armor": 0,
+    "dodge": 68,
+    "hit": 45,
+    "hp": 80,
+    "pow": 33,
+    "range": 0,
+    "rate": 52,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [3, 9, 1, 7],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 10
+    }, {
+      "type": "dodge",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 15,
+  "name": "Glock 17",
+  "rank": 3,
+  "type": 1,
+  "illust": "Rain Lan",
+  "voice": "Sora Tokui",
+  "buildTime": 2700,
+  "stats": {
+    "armor": 0,
+    "dodge": 87,
+    "hit": 58,
+    "hp": 63,
+    "pow": 29,
+    "range": 0,
+    "rate": 61,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [3, 9, 1, 4, 7],
+    "gridEffect": [{
+      "type": "hit",
+      "value": 32
+    }, {
+      "type": "dodge",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 16,
+  "name": "M1928A1",
+  "rank": 5,
+  "type": 2,
+  "illust": "NS",
+  "voice": "Risa Taneda",
+  "buildTime": 9000,
+  "stats": {
+    "armor": 0,
+    "dodge": 56,
+    "hit": 12,
+    "hp": 238,
+    "pow": 31,
+    "range": 0,
+    "rate": 82,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [3, 9],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 12
+    }, {
+      "type": "dodge",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 17,
+  "name": "M3",
+  "rank": 2,
+  "type": 2,
+  "illust": "november",
+  "voice": "Nozomi Amane",
+  "buildTime": 5400,
+  "stats": {
+    "armor": 0,
+    "dodge": 67,
+    "hit": 13,
+    "hp": 185,
+    "pow": 30,
+    "range": 0,
+    "rate": 68,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [6],
+    "gridEffect": [{
+      "type": "hit",
+      "value": 40
+    }, {
+      "type": "dodge",
+      "value": 30
+    }]
+  }
+}, {
+  "id": 18,
+  "name": "MAC-10",
+  "rank": 3,
+  "type": 2,
+  "illust": "SA",
+  "voice": "Ogura Yui",
+  "buildTime": 7200,
+  "stats": {
+    "armor": 0,
+    "dodge": 68,
+    "hit": 11,
+    "hp": 176,
+    "pow": 28,
+    "range": 0,
+    "rate": 91,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [3, 6, 9],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 12
+    }]
+  }
+}, {
+  "id": 19,
+  "name": "FMG-9",
+  "rank": 3,
+  "type": 2,
+  "illust": "NorthAbyssor",
+  "voice": "Serizawa Yuu",
+  "buildTime": 7800,
+  "stats": {
+    "armor": 0,
+    "dodge": 90,
+    "hit": 13,
+    "hp": 141,
+    "pow": 26,
+    "range": 0,
+    "rate": 92,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [3, 9],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 10
+    }, {
+      "type": "dodge",
+      "value": 12
+    }]
+  }
+}, {
+  "id": 20,
+  "name": "Vector",
+  "rank": 5,
+  "type": 2,
+  "illust": "SA",
+  "voice": "Saori Hayami",
+  "buildTime": 9300,
+  "stats": {
+    "armor": 0,
+    "dodge": 71,
+    "hit": 11,
+    "hp": 185,
+    "pow": 30,
+    "range": 0,
+    "rate": 101,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [6],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 25
+    }]
+  }
+}, {
+  "id": 21,
+  "name": "PPSh-41",
+  "rank": 2,
+  "type": 2,
+  "illust": "和茶",
+  "voice": "Uesaka Sumire",
+  "buildTime": 6600,
+  "stats": {
+    "armor": 0,
+    "dodge": 56,
+    "hit": 11,
+    "hp": 194,
+    "pow": 26,
+    "range": 0,
+    "rate": 93,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [2, 8],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 10
+    }, {
+      "type": "rate",
+      "value": 5
+    }]
+  }
+}, {
+  "id": 22,
+  "name": "PPS-43",
+  "rank": 3,
+  "type": 2,
+  "illust": "两卡车",
+  "voice": "Uesaka Sumire",
+  "buildTime": 7800,
+  "stats": {
+    "armor": 0,
+    "dodge": 65,
+    "hit": 13,
+    "hp": 176,
+    "pow": 33,
+    "range": 0,
+    "rate": 74,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [3, 6, 9],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 12
+    }]
+  }
+}, {
+  "id": 23,
+  "name": "PP-90",
+  "rank": 4,
+  "type": 2,
+  "illust": "NIXOO",
+  "voice": "Shiki Aoki",
+  "buildTime": 8400,
+  "stats": {
+    "armor": 0,
+    "dodge": 86,
+    "hit": 13,
+    "hp": 159,
+    "pow": 25,
+    "range": 0,
+    "rate": 96,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [3, 9],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 8
+    }, {
+      "type": "dodge",
+      "value": 20
+    }]
+  }
+}, {
+  "id": 24,
+  "name": "PP-2000",
+  "rank": 2,
+  "type": 2,
+  "illust": "NoriZC",
+  "voice": "Tamari Hinata",
+  "buildTime": 4200,
+  "stats": {
+    "armor": 0,
+    "dodge": 74,
+    "hit": 11,
+    "hp": 159,
+    "pow": 30,
+    "range": 0,
+    "rate": 80,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [3, 9],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 10
+    }, {
+      "type": "hit",
+      "value": 25
+    }]
+  }
+}, {
+  "id": 25,
+  "name": "MP40",
+  "rank": 2,
+  "type": 2,
+  "illust": "废人",
+  "voice": "Eriko Matsui",
+  "buildTime": 5400,
+  "stats": {
+    "armor": 0,
+    "dodge": 58,
+    "hit": 13,
+    "hp": 185,
+    "pow": 29,
+    "range": 0,
+    "rate": 76,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [3, 9],
+    "gridEffect": [{
+      "type": "hit",
+      "value": 25
+    }, {
+      "type": "dodge",
+      "value": 20
+    }]
+  }
+}, {
+  "id": 26,
+  "name": "MP5",
+  "rank": 4,
+  "type": 2,
+  "illust": "Saru",
+  "voice": "Naomi Mukaiyama",
+  "buildTime": 8400,
+  "stats": {
+    "armor": 0,
+    "dodge": 68,
+    "hit": 13,
+    "hp": 168,
+    "pow": 30,
+    "range": 0,
+    "rate": 89,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [3, 9],
+    "gridEffect": [{
+      "type": "hit",
+      "value": 40
+    }, {
+      "type": "crit",
+      "value": 20
+    }]
+  }
+}, {
+  "id": 27,
+  "name": "Vz. 61",
+  "rank": 3,
+  "type": 2,
+  "illust": "SA",
+  "voice": "Eriko Matsui",
+  "buildTime": 7200,
+  "stats": {
+    "armor": 0,
+    "dodge": 83,
+    "hit": 13,
+    "hp": 159,
+    "pow": 24,
+    "range": 0,
+    "rate": 95,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [6],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 15
+    }, {
+      "type": "hit",
+      "value": 50
+    }]
+  }
+}, {
+  "id": 29,
+  "name": "Sten Mk Ⅱ",
+  "rank": 3,
+  "type": 2,
+  "illust": "真名",
+  "voice": "Kami Daimon",
+  "buildTime": 6000,
+  "stats": {
+    "armor": 0,
+    "dodge": 75,
+    "hit": 15,
+    "hp": 185,
+    "pow": 26,
+    "range": 0,
+    "rate": 78,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [3, 6, 9],
+    "gridEffect": [{
+      "type": "hit",
+      "value": 10
+    }, {
+      "type": "dodge",
+      "value": 30
+    }]
+  }
+}, {
+  "id": 31,
+  "name": "MAB 38",
+  "rank": 2,
+  "type": 2,
+  "illust": "ALLENES",
+  "voice": "Haruka Takahashi",
+  "buildTime": 5400,
+  "stats": {
+    "armor": 0,
+    "dodge": 52,
+    "hit": 12,
+    "hp": 203,
+    "pow": 32,
+    "range": 0,
+    "rate": 75,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [3, 9],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 5
+    }, {
+      "type": "rate",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 32,
+  "name": "Micro Uzi",
+  "rank": 3,
+  "type": 2,
+  "illust": "死盖",
+  "voice": "Saori Onishi",
+  "buildTime": 6000,
+  "stats": {
+    "armor": 0,
+    "dodge": 79,
+    "hit": 11,
+    "hp": 159,
+    "pow": 24,
+    "range": 0,
+    "rate": 104,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [2, 8],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 18
+    }]
+  }
+}, {
+  "id": 33,
+  "name": "m45",
+  "rank": 2,
+  "type": 2,
+  "illust": "TAMAXI",
+  "voice": "Mikako Takahashi",
+  "buildTime": 4800,
+  "stats": {
+    "armor": 0,
+    "dodge": 62,
+    "hit": 12,
+    "hp": 185,
+    "pow": 30,
+    "range": 0,
+    "rate": 74,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [3, 9],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 10
+    }, {
+      "type": "dodge",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 34,
+  "name": "M1",
+  "rank": 3,
+  "type": 3,
+  "illust": "哈路卡",
+  "voice": "Risa Taneda",
+  "buildTime": 14400,
+  "stats": {
+    "armor": 0,
+    "dodge": 28,
+    "hit": 62,
+    "hp": 88,
+    "pow": 120,
+    "range": 0,
+    "rate": 37,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [4],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 12
+    }]
+  }
+}, {
+  "id": 35,
+  "name": "M1A1",
+  "rank": 3,
+  "type": 3,
+  "illust": "哈路卡",
+  "voice": "Suzuko Mimori",
+  "buildTime": 13200,
+  "stats": {
+    "armor": 0,
+    "dodge": 42,
+    "hit": 77,
+    "hp": 84,
+    "pow": 95,
+    "range": 0,
+    "rate": 38,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [2, 8],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 12
+    }]
+  }
+}, {
+  "id": 36,
+  "name": "M1903",
+  "rank": 4,
+  "type": 3,
+  "illust": "多元菌",
+  "voice": "Yui Horie",
+  "buildTime": 15900,
+  "stats": {
+    "armor": 0,
+    "dodge": 40,
+    "hit": 72,
+    "hp": 84,
+    "pow": 128,
+    "range": 0,
+    "rate": 32,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [7],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 37,
+  "name": "M14",
+  "rank": 3,
+  "type": 3,
+  "illust": "Rain Lan",
+  "voice": "Saori Onishi ",
+  "buildTime": 13200,
+  "stats": {
+    "armor": 0,
+    "dodge": 27,
+    "hit": 71,
+    "hp": 84,
+    "pow": 108,
+    "range": 0,
+    "rate": 43,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [1, 7],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 12
+    }]
+  }
+}, {
+  "id": 38,
+  "name": "M21",
+  "rank": 3,
+  "type": 3,
+  "illust": "卑しい人间",
+  "voice": "Eri Kitamura",
+  "buildTime": 13800,
+  "stats": {
+    "armor": 0,
+    "dodge": 27,
+    "hit": 74,
+    "hp": 93,
+    "pow": 118,
+    "range": 0,
+    "rate": 35,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [2, 8],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 12
+    }]
+  }
+}, {
+  "id": 39,
+  "name": "M1891",
+  "rank": 4,
+  "type": 3,
+  "illust": "防弹乳牛",
+  "voice": "Uesaka Sumire",
+  "buildTime": 15000,
+  "stats": {
+    "armor": 0,
+    "dodge": 38,
+    "hit": 85,
+    "hp": 88,
+    "pow": 131,
+    "range": 0,
+    "rate": 30,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [2],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 40,
+  "name": "SVT-38",
+  "rank": 2,
+  "type": 3,
+  "illust": "sola7764",
+  "voice": "Kaori Ide",
+  "buildTime": 12600,
+  "stats": {
+    "armor": 0,
+    "dodge": 34,
+    "hit": 59,
+    "hp": 84,
+    "pow": 110,
+    "range": 0,
+    "rate": 34,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [4],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 41,
+  "name": "SKS",
+  "rank": 2,
+  "type": 3,
+  "illust": "phantania",
+  "voice": "Aya Suzaki",
+  "buildTime": 12600,
+  "stats": {
+    "armor": 0,
+    "dodge": 34,
+    "hit": 59,
+    "hp": 93,
+    "pow": 100,
+    "range": 0,
+    "rate": 34,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [2, 8],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 42,
+  "name": "PTRD",
+  "rank": 4,
+  "type": 3,
+  "illust": "Evan揚",
+  "voice": "Ai Shimizu ",
+  "buildTime": 16200,
+  "stats": {
+    "armor": 0,
+    "dodge": 29,
+    "hit": 75,
+    "hp": 93,
+    "pow": 159,
+    "range": 0,
+    "rate": 28,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [8],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 43,
+  "name": "SVD",
+  "rank": 4,
+  "type": 3,
+  "illust": "幻象黑兔",
+  "voice": "Minami Tanaka",
+  "buildTime": 15300,
+  "stats": {
+    "armor": 0,
+    "dodge": 33,
+    "hit": 80,
+    "hp": 80,
+    "pow": 130,
+    "range": 0,
+    "rate": 37,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [1, 7],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 44,
+  "name": "SV-98",
+  "rank": 3,
+  "type": 3,
+  "illust": "幻象黑兔",
+  "voice": "Mamiko Hanada",
+  "buildTime": 13200,
+  "stats": {
+    "armor": 0,
+    "dodge": 28,
+    "hit": 74,
+    "hp": 84,
+    "pow": 122,
+    "range": 0,
+    "rate": 37,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [1],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 12
+    }]
+  }
+}, {
+  "id": 46,
+  "name": "Kar98k",
+  "rank": 5,
+  "type": 3,
+  "illust": "芙芙酱",
+  "voice": "Ai Kayano ",
+  "buildTime": 16800,
+  "stats": {
+    "armor": 0,
+    "dodge": 41,
+    "hit": 78,
+    "hp": 84,
+    "pow": 135,
+    "range": 0,
+    "rate": 34,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [1, 7],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 18
+    }]
+  }
+}, {
+  "id": 47,
+  "name": "G43",
+  "rank": 2,
+  "type": 3,
+  "illust": "河马",
+  "voice": "Nozomi Amane",
+  "buildTime": 11400,
+  "stats": {
+    "armor": 0,
+    "dodge": 28,
+    "hit": 58,
+    "hp": 80,
+    "pow": 111,
+    "range": 0,
+    "rate": 40,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [1, 7],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 48,
+  "name": "WA2000",
+  "rank": 5,
+  "type": 3,
+  "illust": "多元菌",
+  "voice": "Haruka Tomatsu",
+  "buildTime": 17400,
+  "stats": {
+    "armor": 0,
+    "dodge": 30,
+    "hit": 82,
+    "hp": 88,
+    "pow": 130,
+    "range": 0,
+    "rate": 39,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [4],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 18
+    }]
+  }
+}, {
+  "id": 49,
+  "name": "Type 56 R",
+  "rank": 3,
+  "type": 3,
+  "illust": "KAN",
+  "voice": "Rui Kariya",
+  "buildTime": 13800,
+  "stats": {
+    "armor": 0,
+    "dodge": 36,
+    "hit": 65,
+    "hp": 93,
+    "pow": 103,
+    "range": 0,
+    "rate": 36,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [2, 8],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 12
+    }]
+  }
+}, {
+  "id": 50,
+  "name": "MLE Mk I",
+  "rank": 5,
+  "type": 3,
+  "illust": "rei",
+  "voice": "Haruka Tomatsu",
+  "buildTime": 18000,
+  "stats": {
+    "armor": 0,
+    "dodge": 40,
+    "hit": 78,
+    "hp": 80,
+    "pow": 135,
+    "range": 0,
+    "rate": 36,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [2, 8],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 18
+    }]
+  }
+}, {
+  "id": 51,
+  "name": "FN-49",
+  "rank": 2,
+  "type": 3,
+  "illust": "Bison仓鼠",
+  "voice": "Mami Misaki",
+  "buildTime": 11400,
+  "stats": {
+    "armor": 0,
+    "dodge": 32,
+    "hit": 61,
+    "hp": 93,
+    "pow": 111,
+    "range": 0,
+    "rate": 32,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [1, 7],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 52,
+  "name": "BM59",
+  "rank": 2,
+  "type": 3,
+  "illust": "原子Dan",
+  "voice": "Tomoyo Chuujou",
+  "buildTime": 12000,
+  "stats": {
+    "armor": 0,
+    "dodge": 25,
+    "hit": 52,
+    "hp": 97,
+    "pow": 104,
+    "range": 0,
+    "rate": 38,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [4],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 53,
+  "name": "NTW-20",
+  "rank": 5,
+  "type": 3,
+  "illust": "RAN",
+  "voice": "Ai Kayano ",
+  "buildTime": 17100,
+  "stats": {
+    "armor": 0,
+    "dodge": 29,
+    "hit": 75,
+    "hp": 93,
+    "pow": 165,
+    "range": 0,
+    "rate": 30,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [4],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 18
+    }]
+  }
+}, {
+  "id": 54,
+  "name": "M16A1",
+  "rank": 4,
+  "type": 4,
+  "illust": "海猫络合物",
+  "voice": "Yamane Nozomi",
+  "buildTime": 12900,
+  "stats": {
+    "armor": 0,
+    "dodge": 44,
+    "hit": 46,
+    "hp": 121,
+    "pow": 47,
+    "range": 0,
+    "rate": 75,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [2, 8, 1, 7],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 10
+    }, {
+      "type": "dodge",
+      "value": 12
+    }]
+  }
+}, {
+  "id": 55,
+  "name": "M4A1",
+  "rank": 4,
+  "type": 4,
+  "illust": "海猫络合物",
+  "voice": "Haruka Tomatsu",
+  "buildTime": 12900,
+  "stats": {
+    "armor": 0,
+    "dodge": 48,
+    "hit": 48,
+    "hp": 110,
+    "pow": 46,
+    "range": 0,
+    "rate": 79,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [2, 8, 1, 4, 7],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 18
+    }, {
+      "type": "crit",
+      "value": 30
+    }]
+  }
+}, {
+  "id": 56,
+  "name": "M4 SOPMOD II",
+  "rank": 4,
+  "type": 4,
+  "illust": "海猫络合物",
+  "voice": "Yukari Tamura",
+  "buildTime": 12900,
+  "stats": {
+    "armor": 0,
+    "dodge": 44,
+    "hit": 49,
+    "hp": 110,
+    "pow": 50,
+    "range": 0,
+    "rate": 78,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [1, 4, 7],
+    "gridEffect": [{
+      "type": "hit",
+      "value": 50
+    }, {
+      "type": "dodge",
+      "value": 12
+    }]
+  }
+}, {
+  "id": 57,
+  "name": "ST AR-15",
+  "rank": 4,
+  "type": 4,
+  "illust": "LIN+",
+  "voice": "Emiri Katou",
+  "buildTime": 12900,
+  "stats": {
+    "armor": 0,
+    "dodge": 50,
+    "hit": 50,
+    "hp": 105,
+    "pow": 48,
+    "range": 0,
+    "rate": 77,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [1, 4, 7],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 10
+    }, {
+      "type": "dodge",
+      "value": 12
+    }]
+  }
+}, {
+  "id": 58,
+  "name": "AK-47",
+  "rank": 3,
+  "type": 4,
+  "illust": "厕所董事长",
+  "voice": "Rina Sato",
+  "buildTime": 12000,
+  "stats": {
+    "armor": 0,
+    "dodge": 34,
+    "hit": 35,
+    "hp": 132,
+    "pow": 53,
+    "range": 0,
+    "rate": 65,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [2],
+    "gridEffect": [{
+      "type": "dodge",
+      "value": 18
+    }]
+  }
+}, {
+  "id": 60,
+  "name": "AS Val",
+  "rank": 4,
+  "type": 4,
+  "illust": "防弹乳牛",
+  "voice": "Uesaka Sumire",
+  "buildTime": 12600,
+  "stats": {
+    "armor": 0,
+    "dodge": 49,
+    "hit": 46,
+    "hp": 132,
+    "pow": 39,
+    "range": 0,
+    "rate": 75,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [8],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 25
+    }, {
+      "type": "rate",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 61,
+  "name": "StG44",
+  "rank": 3,
+  "type": 4,
+  "illust": "八才",
+  "voice": "Ai Kayano ",
+  "buildTime": 10800,
+  "stats": {
+    "armor": 0,
+    "dodge": 36,
+    "hit": 46,
+    "hp": 127,
+    "pow": 53,
+    "range": 0,
+    "rate": 61,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [4],
+    "gridEffect": [{
+      "type": "dodge",
+      "value": 20
+    }, {
+      "type": "hit",
+      "value": 60
+    }]
+  }
+}, {
+  "id": 62,
+  "name": "G41",
+  "rank": 5,
+  "type": 4,
+  "illust": "NS",
+  "voice": "Rie Kugimiya",
+  "buildTime": 14700,
+  "stats": {
+    "armor": 0,
+    "dodge": 40,
+    "hit": 48,
+    "hp": 127,
+    "pow": 50,
+    "range": 0,
+    "rate": 77,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [1, 7],
+    "gridEffect": [{
+      "type": "hit",
+      "value": 50
+    }, {
+      "type": "dodge",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 63,
+  "name": "G3",
+  "rank": 2,
+  "type": 4,
+  "illust": "PHI",
+  "voice": "Kaori Yoshioka",
+  "buildTime": 10200,
+  "stats": {
+    "armor": 0,
+    "dodge": 38,
+    "hit": 46,
+    "hp": 110,
+    "pow": 55,
+    "range": 0,
+    "rate": 61,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [8],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 20
+    }, {
+      "type": "hit",
+      "value": 50
+    }]
+  }
+}, {
+  "id": 64,
+  "name": "G36",
+  "rank": 4,
+  "type": 4,
+  "illust": "薯子Imoko",
+  "voice": "Koshimizu Ami",
+  "buildTime": 13200,
+  "stats": {
+    "armor": 0,
+    "dodge": 41,
+    "hit": 44,
+    "hp": 127,
+    "pow": 47,
+    "range": 0,
+    "rate": 72,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [1, 4],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 30
+    }, {
+      "type": "rate",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 65,
+  "name": "HK416",
+  "rank": 5,
+  "type": 4,
+  "illust": "NIXOO",
+  "voice": "Ai Nonaka",
+  "buildTime": 14100,
+  "stats": {
+    "armor": 0,
+    "dodge": 44,
+    "hit": 46,
+    "hp": 121,
+    "pow": 51,
+    "range": 0,
+    "rate": 76,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [4],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 40
+    }]
+  }
+}, {
+  "id": 66,
+  "name": "Type 56-1 A",
+  "rank": 4,
+  "type": 4,
+  "illust": "CanceR",
+  "voice": "Sora Amamiya",
+  "buildTime": 12300,
+  "stats": {
+    "armor": 0,
+    "dodge": 35,
+    "hit": 35,
+    "hp": 138,
+    "pow": 53,
+    "range": 0,
+    "rate": 69,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [4],
+    "gridEffect": [{
+      "type": "dodge",
+      "value": 15
+    }, {
+      "type": "crit",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 68,
+  "name": "L85A1",
+  "rank": 2,
+  "type": 4,
+  "illust": "MKiiiiii",
+  "voice": "Yukiko Ayamiya",
+  "buildTime": 10200,
+  "stats": {
+    "armor": 0,
+    "dodge": 43,
+    "hit": 43,
+    "hp": 94,
+    "pow": 46,
+    "range": 0,
+    "rate": 78,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [8],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 20
+    }, {
+      "type": "hit",
+      "value": 50
+    }]
+  }
+}, {
+  "id": 69,
+  "name": "FAMAS",
+  "rank": 4,
+  "type": 4,
+  "illust": "KY",
+  "voice": "Eriko Matsui",
+  "buildTime": 12600,
+  "stats": {
+    "armor": 0,
+    "dodge": 40,
+    "hit": 48,
+    "hp": 121,
+    "pow": 44,
+    "range": 0,
+    "rate": 81,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [1],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 25
+    }, {
+      "type": "hit",
+      "value": 60
+    }]
+  }
+}, {
+  "id": 70,
+  "name": "FNC",
+  "rank": 3,
+  "type": 4,
+  "illust": "麻将",
+  "voice": "Sumire Yatsurugi",
+  "buildTime": 12000,
+  "stats": {
+    "armor": 0,
+    "dodge": 37,
+    "hit": 46,
+    "hp": 110,
+    "pow": 51,
+    "range": 0,
+    "rate": 73,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [7],
+    "gridEffect": [{
+      "type": "hit",
+      "value": 50
+    }, {
+      "type": "dodge",
+      "value": 12
+    }]
+  }
+}, {
+  "id": 71,
+  "name": "AR",
+  "rank": 2,
+  "type": 4,
+  "illust": "lyo",
+  "voice": "Karin Mitarai",
+  "buildTime": 9600,
+  "stats": {
+    "armor": 0,
+    "dodge": 43,
+    "hit": 44,
+    "hp": 105,
+    "pow": 50,
+    "range": 0,
+    "rate": 66,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [4],
+    "gridEffect": [{
+      "type": "hit",
+      "value": 50
+    }, {
+      "type": "dodge",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 72,
+  "name": "TAR-21",
+  "rank": 4,
+  "type": 4,
+  "illust": "木shiyo",
+  "voice": "Yume Maihara",
+  "buildTime": 12600,
+  "stats": {
+    "armor": 0,
+    "dodge": 44,
+    "hit": 48,
+    "hp": 105,
+    "pow": 49,
+    "range": 0,
+    "rate": 79,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [1, 7],
+    "gridEffect": [{
+      "type": "dodge",
+      "value": 18
+    }]
+  }
+}, {
+  "id": 74,
+  "name": "SIG-510",
+  "rank": 2,
+  "type": 4,
+  "illust": "spirtie",
+  "voice": "Miki Amano",
+  "buildTime": 9600,
+  "stats": {
+    "armor": 0,
+    "dodge": 37,
+    "hit": 41,
+    "hp": 116,
+    "pow": 56,
+    "range": 0,
+    "rate": 59,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [1, 7],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 20
+    }, {
+      "type": "rate",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 75,
+  "name": "M1918",
+  "rank": 4,
+  "type": 5,
+  "illust": "水乌龟",
+  "voice": "Yuuki Aoi",
+  "buildTime": 23100,
+  "stats": {
+    "armor": 0,
+    "dodge": 33,
+    "hit": 31,
+    "hp": 157,
+    "pow": 96,
+    "range": 0,
+    "rate": 114,
+    "shield": 0,
+    "speed": 4,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 8
+  },
+  "effect": {
+    "effectType": 6,
+    "effectCenter": 4,
+    "effectPos": [0],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 15
+    }, {
+      "type": "armor",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 77,
+  "name": "M2HB ",
+  "rank": 3,
+  "type": 5,
+  "illust": "15K",
+  "voice": "Izumi Iwamatsu",
+  "buildTime": 22200,
+  "stats": {
+    "armor": 0,
+    "dodge": 16,
+    "hit": 18,
+    "hp": 215,
+    "pow": 102,
+    "range": 0,
+    "rate": 100,
+    "shield": 0,
+    "speed": 4,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 10
+  },
+  "effect": {
+    "effectType": 6,
+    "effectCenter": 4,
+    "effectPos": [0],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 22
+    }]
+  }
+}, {
+  "id": 78,
+  "name": "M60",
+  "rank": 4,
+  "type": 5,
+  "illust": "ミカピカゾ",
+  "voice": "Asuka Ito",
+  "buildTime": 22200,
+  "stats": {
+    "armor": 0,
+    "dodge": 26,
+    "hit": 26,
+    "hp": 182,
+    "pow": 92,
+    "range": 0,
+    "rate": 111,
+    "shield": 0,
+    "speed": 4,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 9
+  },
+  "effect": {
+    "effectType": 6,
+    "effectCenter": 1,
+    "effectPos": [0, 0],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 10
+    }, {
+      "type": "rate",
+      "value": 8
+    }]
+  }
+}, {
+  "id": 79,
+  "name": "M249 SAW",
+  "rank": 3,
+  "type": 5,
+  "illust": "雪樱樱",
+  "voice": "Yoshino Nanjo",
+  "buildTime": 19800,
+  "stats": {
+    "armor": 0,
+    "dodge": 36,
+    "hit": 35,
+    "hp": 157,
+    "pow": 79,
+    "range": 0,
+    "rate": 139,
+    "shield": 0,
+    "speed": 4,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 8
+  },
+  "effect": {
+    "effectType": 6,
+    "effectCenter": 4,
+    "effectPos": [0, 0],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 12
+    }, {
+      "type": "hit",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 80,
+  "name": "M1919A4",
+  "rank": 3,
+  "type": 5,
+  "illust": "AS109",
+  "voice": "Sachiyo Yoshida",
+  "buildTime": 20400,
+  "stats": {
+    "armor": 0,
+    "dodge": 22,
+    "hit": 26,
+    "hp": 182,
+    "pow": 96,
+    "range": 0,
+    "rate": 99,
+    "shield": 0,
+    "speed": 4,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 9
+  },
+  "effect": {
+    "effectType": 6,
+    "effectCenter": 7,
+    "effectPos": [0],
+    "gridEffect": [{
+      "type": "hit",
+      "value": 25
+    }, {
+      "type": "armor",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 81,
+  "name": "LWMMG",
+  "rank": 2,
+  "type": 5,
+  "illust": "RFF",
+  "voice": "Hiyori Nitta",
+  "buildTime": 18600,
+  "stats": {
+    "armor": 0,
+    "dodge": 22,
+    "hit": 24,
+    "hp": 174,
+    "pow": 95,
+    "range": 0,
+    "rate": 90,
+    "shield": 0,
+    "speed": 4,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 9
+  },
+  "effect": {
+    "effectType": 6,
+    "effectCenter": 4,
+    "effectPos": [0],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 10
+    }, {
+      "type": "rate",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 82,
+  "name": "DP28",
+  "rank": 2,
+  "type": 5,
+  "illust": "BIBIA",
+  "voice": "Kanae Ikadai",
+  "buildTime": 18000,
+  "stats": {
+    "armor": 0,
+    "dodge": 31,
+    "hit": 28,
+    "hp": 141,
+    "pow": 88,
+    "range": 0,
+    "rate": 114,
+    "shield": 0,
+    "speed": 4,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 9
+  },
+  "effect": {
+    "effectType": 6,
+    "effectCenter": 7,
+    "effectPos": [0, 0],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 84,
+  "name": "RPD",
+  "rank": 3,
+  "type": 5,
+  "illust": "Sam_Ashton",
+  "voice": "Iori Nomizu",
+  "buildTime": 19800,
+  "stats": {
+    "armor": 0,
+    "dodge": 34,
+    "hit": 34,
+    "hp": 165,
+    "pow": 82,
+    "range": 0,
+    "rate": 121,
+    "shield": 0,
+    "speed": 4,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 8
+  },
+  "effect": {
+    "effectType": 6,
+    "effectCenter": 4,
+    "effectPos": [0, 0],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 16
+    }]
+  }
+}, {
+  "id": 85,
+  "name": "PK",
+  "rank": 4,
+  "type": 5,
+  "illust": "木shiyo",
+  "voice": "Kaori Nazuka",
+  "buildTime": 23400,
+  "stats": {
+    "armor": 0,
+    "dodge": 23,
+    "hit": 21,
+    "hp": 190,
+    "pow": 96,
+    "range": 0,
+    "rate": 84,
+    "shield": 0,
+    "speed": 4,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 11
+  },
+  "effect": {
+    "effectType": 6,
+    "effectCenter": 4,
+    "effectPos": [0, 0],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 18
+    }]
+  }
+}, {
+  "id": 86,
+  "name": "MG42",
+  "rank": 3,
+  "type": 5,
+  "illust": "spirtie",
+  "voice": "Sayaka Yokoya",
+  "buildTime": 21000,
+  "stats": {
+    "armor": 0,
+    "dodge": 26,
+    "hit": 23,
+    "hp": 165,
+    "pow": 92,
+    "range": 0,
+    "rate": 132,
+    "shield": 0,
+    "speed": 4,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 10
+  },
+  "effect": {
+    "effectType": 6,
+    "effectCenter": 1,
+    "effectPos": [0],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 22
+    }]
+  }
+}, {
+  "id": 87,
+  "name": "MG34",
+  "rank": 2,
+  "type": 5,
+  "illust": "spirtie",
+  "voice": "Tomoyo Chuujou",
+  "buildTime": 18000,
+  "stats": {
+    "armor": 0,
+    "dodge": 25,
+    "hit": 22,
+    "hp": 165,
+    "pow": 85,
+    "range": 0,
+    "rate": 120,
+    "shield": 0,
+    "speed": 4,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 10
+  },
+  "effect": {
+    "effectType": 6,
+    "effectCenter": 7,
+    "effectPos": [0],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 20
+    }]
+  }
+}, {
+  "id": 88,
+  "name": "MG3",
+  "rank": 4,
+  "type": 5,
+  "illust": "猫头神",
+  "voice": "Risa Taneda",
+  "buildTime": 23400,
+  "stats": {
+    "armor": 0,
+    "dodge": 21,
+    "hit": 26,
+    "hp": 198,
+    "pow": 85,
+    "range": 0,
+    "rate": 130,
+    "shield": 0,
+    "speed": 4,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 10
+  },
+  "effect": {
+    "effectType": 6,
+    "effectCenter": 4,
+    "effectPos": [0, 0],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 10
+    }, {
+      "type": "hit",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 89,
+  "name": "Bren MK I",
+  "rank": 3,
+  "type": 5,
+  "illust": "废人",
+  "voice": "Sora Amamiya",
+  "buildTime": 19200,
+  "stats": {
+    "armor": 0,
+    "dodge": 28,
+    "hit": 31,
+    "hp": 174,
+    "pow": 89,
+    "range": 0,
+    "rate": 102,
+    "shield": 0,
+    "speed": 4,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 8
+  },
+  "effect": {
+    "effectType": 6,
+    "effectCenter": 1,
+    "effectPos": [0, 0],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 10
+    }, {
+      "type": "hit",
+      "value": 12
+    }]
+  }
+}, {
+  "id": 90,
+  "name": "FNP-9",
+  "rank": 2,
+  "type": 1,
+  "illust": "Bison仓鼠",
+  "voice": "Aoi Koga",
+  "buildTime": 1500,
+  "stats": {
+    "armor": 0,
+    "dodge": 83,
+    "hit": 53,
+    "hp": 60,
+    "pow": 28,
+    "range": 0,
+    "rate": 61,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [2, 8, 1, 4, 7],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 10
+    }, {
+      "type": "hit",
+      "value": 20
+    }]
+  }
+}, {
+  "id": 91,
+  "name": "MP-446",
+  "rank": 2,
+  "type": 1,
+  "illust": "XQ",
+  "voice": "Iori Nomizu",
+  "buildTime": 1500,
+  "stats": {
+    "armor": 0,
+    "dodge": 74,
+    "hit": 53,
+    "hp": 66,
+    "pow": 30,
+    "range": 0,
+    "rate": 59,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [3, 6, 9, 2, 8],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 14
+    }]
+  }
+}, {
+  "id": 92,
+  "name": "Spectre M4",
+  "rank": 2,
+  "type": 2,
+  "illust": "MKiiiiii",
+  "voice": "Emi Uema",
+  "buildTime": 4800,
+  "stats": {
+    "armor": 0,
+    "dodge": 66,
+    "hit": 12,
+    "hp": 176,
+    "pow": 25,
+    "range": 0,
+    "rate": 88,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [6],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 20
+    }]
+  }
+}, {
+  "id": 93,
+  "name": "IDW",
+  "rank": 2,
+  "type": 2,
+  "illust": "Ki桑",
+  "voice": "Ito Asuka",
+  "buildTime": 4200,
+  "stats": {
+    "armor": 0,
+    "dodge": 85,
+    "hit": 15,
+    "hp": 150,
+    "pow": 26,
+    "range": 0,
+    "rate": 75,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [3, 6, 9],
+    "gridEffect": [{
+      "type": "dodge",
+      "value": 20
+    }]
+  }
+}, {
+  "id": 94,
+  "name": "Type 64",
+  "rank": 2,
+  "type": 2,
+  "illust": "小迪",
+  "voice": "Saya Horigom",
+  "buildTime": 5100,
+  "stats": {
+    "armor": 0,
+    "dodge": 65,
+    "hit": 11,
+    "hp": 176,
+    "pow": 27,
+    "range": 0,
+    "rate": 93,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [6],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 20
+    }]
+  }
+}, {
+  "id": 95,
+  "name": "Type 88",
+  "rank": 3,
+  "type": 3,
+  "illust": "团子",
+  "voice": "Yuuka Aisaka",
+  "buildTime": 13800,
+  "stats": {
+    "armor": 0,
+    "dodge": 37,
+    "hit": 60,
+    "hp": 102,
+    "pow": 108,
+    "range": 0,
+    "rate": 31,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [4],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 12
+    }]
+  }
+}, {
+  "id": 96,
+  "name": "Grizzly",
+  "rank": 5,
+  "type": 1,
+  "illust": "REALMBW",
+  "voice": "Ayaka Itatani",
+  "buildTime": 4200,
+  "stats": {
+    "armor": 0,
+    "dodge": 66,
+    "hit": 51,
+    "hp": 86,
+    "pow": 38,
+    "range": 0,
+    "rate": 54,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [3, 9, 2, 8, 4],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 15
+    }, {
+      "type": "dodge",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 97,
+  "name": "M950A",
+  "rank": 5,
+  "type": 1,
+  "illust": "音符",
+  "voice": "Aoi Koga",
+  "buildTime": 3900,
+  "stats": {
+    "armor": 0,
+    "dodge": 68,
+    "hit": 55,
+    "hp": 76,
+    "pow": 30,
+    "range": 0,
+    "rate": 72,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [3, 9, 1, 7],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 15
+    }, {
+      "type": "hit",
+      "value": 25
+    }]
+  }
+}, {
+  "id": 98,
+  "name": "SPP-1",
+  "rank": 4,
+  "type": 1,
+  "illust": "麻将",
+  "voice": "Yuka Ootsubo",
+  "buildTime": 3300,
+  "stats": {
+    "armor": 0,
+    "dodge": 75,
+    "hit": 61,
+    "hp": 76,
+    "pow": 35,
+    "range": 0,
+    "rate": 48,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [3, 9, 2, 8],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 6
+    }, {
+      "type": "hit",
+      "value": 45
+    }]
+  }
+}, {
+  "id": 99,
+  "name": "Mk23",
+  "rank": 4,
+  "type": 1,
+  "illust": "雪樱樱",
+  "voice": "Hikaru Akao",
+  "buildTime": 3000,
+  "stats": {
+    "armor": 0,
+    "dodge": 66,
+    "hit": 53,
+    "hp": 80,
+    "pow": 29,
+    "range": 0,
+    "rate": 63,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [3, 6, 9, 4],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 18
+    }]
+  }
+}, {
+  "id": 100,
+  "name": "P7",
+  "rank": 4,
+  "type": 1,
+  "illust": "Saru",
+  "voice": "Tomoyo Kurosawa",
+  "buildTime": 3300,
+  "stats": {
+    "armor": 0,
+    "dodge": 83,
+    "hit": 62,
+    "hp": 63,
+    "pow": 32,
+    "range": 0,
+    "rate": 61,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [3, 9, 2, 8, 1, 7],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 10
+    }, {
+      "type": "dodge",
+      "value": 12
+    }]
+  }
+}, {
+  "id": 101,
+  "name": "UMP9",
+  "rank": 4,
+  "type": 2,
+  "illust": "ZAGALA",
+  "voice": "Mamiko Noto",
+  "buildTime": 8100,
+  "stats": {
+    "armor": 0,
+    "dodge": 76,
+    "hit": 14,
+    "hp": 176,
+    "pow": 26,
+    "range": 0,
+    "rate": 87,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [3, 6, 9],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 12
+    }, {
+      "type": "hit",
+      "value": 30
+    }]
+  }
+}, {
+  "id": 102,
+  "name": "UMP40",
+  "rank": 4,
+  "type": 2,
+  "illust": "Renatus.Z",
+  "voice": "Emi Uema",
+  "buildTime": 8100,
+  "stats": {
+    "armor": 0,
+    "dodge": 75,
+    "hit": 14,
+    "hp": 180,
+    "pow": 27,
+    "range": 0,
+    "rate": 85,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [2, 8, 1, 7],
+    "gridEffect": [{
+      "type": "crit",
+      "value": 500
+    }]
+  }
+}, {
+  "id": 103,
+  "name": "UMP45",
+  "rank": 4,
+  "type": 2,
+  "illust": "ZAGALA",
+  "voice": "Tomomi Mineuchi",
+  "buildTime": 8100,
+  "stats": {
+    "armor": 0,
+    "dodge": 74,
+    "hit": 13,
+    "hp": 185,
+    "pow": 28,
+    "range": 0,
+    "rate": 82,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [3, 6, 9],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 18
+    }, {
+      "type": "crit",
+      "value": 30
+    }]
+  }
+}, {
+  "id": 104,
+  "name": "G36C",
+  "rank": 5,
+  "type": 2,
+  "illust": "Parsley",
+  "voice": "Akane Fujita",
+  "buildTime": 9000,
+  "stats": {
+    "armor": 0,
+    "dodge": 65,
+    "hit": 13,
+    "hp": 203,
+    "pow": 32,
+    "range": 0,
+    "rate": 83,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [3, 6, 9],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 10
+    }, {
+      "type": "rate",
+      "value": 8
+    }]
+  }
+}, {
+  "id": 105,
+  "name": "OTs-12",
+  "rank": 3,
+  "type": 4,
+  "illust": "林檎愛す",
+  "voice": "Yumi Uchiyama",
+  "buildTime": 11400,
+  "stats": {
+    "armor": 0,
+    "dodge": 54,
+    "hit": 54,
+    "hp": 105,
+    "pow": 42,
+    "range": 0,
+    "rate": 72,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [4, 7],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 15
+    }, {
+      "type": "rate",
+      "value": 20
+    }]
+  }
+}, {
+  "id": 106,
+  "name": "FAL",
+  "rank": 5,
+  "type": 4,
+  "illust": "水乌龟",
+  "voice": "Haruka Yoshimura",
+  "buildTime": 13500,
+  "stats": {
+    "armor": 0,
+    "dodge": 38,
+    "hit": 43,
+    "hp": 132,
+    "pow": 57,
+    "range": 0,
+    "rate": 72,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [1, 4, 7],
+    "gridEffect": [{
+      "type": "dodge",
+      "value": 20
+    }]
+  }
+}, {
+  "id": 107,
+  "name": "F2000",
+  "rank": 2,
+  "type": 4,
+  "illust": "hanasa",
+  "voice": "Sora Tokui",
+  "buildTime": 9900,
+  "stats": {
+    "armor": 0,
+    "dodge": 40,
+    "hit": 44,
+    "hp": 105,
+    "pow": 42,
+    "range": 0,
+    "rate": 81,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [4],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 20
+    }, {
+      "type": "dodge",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 108,
+  "name": "CZ-805",
+  "rank": 3,
+  "type": 4,
+  "illust": "木子翔",
+  "voice": "Maaya Uchida",
+  "buildTime": 11400,
+  "stats": {
+    "armor": 0,
+    "dodge": 41,
+    "hit": 49,
+    "hp": 116,
+    "pow": 43,
+    "range": 0,
+    "rate": 75,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [1, 7],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 25
+    }, {
+      "type": "hit",
+      "value": 50
+    }]
+  }
+}, {
+  "id": 109,
+  "name": "MG5",
+  "rank": 5,
+  "type": 5,
+  "illust": "音符",
+  "voice": "Koshimizu Ami",
+  "buildTime": 24300,
+  "stats": {
+    "armor": 0,
+    "dodge": 27,
+    "hit": 27,
+    "hp": 198,
+    "pow": 85,
+    "range": 0,
+    "rate": 120,
+    "shield": 0,
+    "speed": 4,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 11
+  },
+  "effect": {
+    "effectType": 6,
+    "effectCenter": 4,
+    "effectPos": [0, 0],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 10
+    }, {
+      "type": "armor",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 110,
+  "name": "FG42",
+  "rank": 2,
+  "type": 5,
+  "illust": "叽困",
+  "voice": "Asuka Ito",
+  "buildTime": 17400,
+  "stats": {
+    "armor": 0,
+    "dodge": 33,
+    "hit": 28,
+    "hp": 149,
+    "pow": 87,
+    "range": 0,
+    "rate": 121,
+    "shield": 0,
+    "speed": 4,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 8
+  },
+  "effect": {
+    "effectType": 6,
+    "effectCenter": 4,
+    "effectPos": [0, 0],
+    "gridEffect": [{
+      "type": "hit",
+      "value": 30
+    }]
+  }
+}, {
+  "id": 111,
+  "name": "AAT-52",
+  "rank": 2,
+  "type": 5,
+  "illust": "Lino",
+  "voice": "Yumi Uchiyama",
+  "buildTime": 17400,
+  "stats": {
+    "armor": 0,
+    "dodge": 22,
+    "hit": 24,
+    "hp": 182,
+    "pow": 79,
+    "range": 0,
+    "rate": 118,
+    "shield": 0,
+    "speed": 4,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 10
+  },
+  "effect": {
+    "effectType": 6,
+    "effectCenter": 1,
+    "effectPos": [0],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 20
+    }]
+  }
+}, {
+  "id": 112,
+  "name": "NEGEV",
+  "rank": 5,
+  "type": 5,
+  "illust": "十月十日奏",
+  "voice": "Ayaka Suwa",
+  "buildTime": 23700,
+  "stats": {
+    "armor": 0,
+    "dodge": 36,
+    "hit": 35,
+    "hp": 174,
+    "pow": 84,
+    "range": 0,
+    "rate": 139,
+    "shield": 0,
+    "speed": 4,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 9
+  },
+  "effect": {
+    "effectType": 6,
+    "effectCenter": 4,
+    "effectPos": [0, 0, 0],
+    "gridEffect": [{
+      "type": "armor",
+      "value": 20
+    }]
+  }
+}, {
+  "id": 113,
+  "name": "SPS",
+  "rank": 3,
+  "type": 1,
+  "illust": "能登ツグミ",
+  "voice": "Minami Tanaka",
+  "buildTime": 2100,
+  "stats": {
+    "armor": 0,
+    "dodge": 68,
+    "hit": 58,
+    "hp": 70,
+    "pow": 33,
+    "range": 0,
+    "rate": 59,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [6, 2, 8],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 12
+    }, {
+      "type": "hit",
+      "value": 20
+    }]
+  }
+}, {
+  "id": 114,
+  "name": "Welrod Mk Ⅱ",
+  "rank": 5,
+  "type": 1,
+  "illust": "工口牛",
+  "voice": "Asami Imai",
+  "buildTime": 3600,
+  "stats": {
+    "armor": 0,
+    "dodge": 90,
+    "hit": 71,
+    "hp": 80,
+    "pow": 28,
+    "range": 0,
+    "rate": 52,
+    "shield": 0,
+    "speed": 15,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [3, 6, 9, 2, 8],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 10
+    }, {
+      "type": "rate",
+      "value": 8
+    }]
+  }
+}, {
+  "id": 115,
+  "name": "KP/-31 ",
+  "rank": 5,
+  "type": 2,
+  "illust": "Anmi",
+  "voice": "Aki Toyosaki",
+  "buildTime": 8700,
+  "stats": {
+    "armor": 0,
+    "dodge": 56,
+    "hit": 15,
+    "hp": 220,
+    "pow": 28,
+    "range": 0,
+    "rate": 93,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [3, 9],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 15
+    }, {
+      "type": "hit",
+      "value": 30
+    }]
+  }
+}, {
+  "id": 116,
+  "name": "Z-62",
+  "rank": 3,
+  "type": 2,
+  "illust": "ALLENES",
+  "voice": "Iori Nomizu",
+  "buildTime": 7500,
+  "stats": {
+    "armor": 0,
+    "dodge": 77,
+    "hit": 15,
+    "hp": 168,
+    "pow": 28,
+    "range": 0,
+    "rate": 77,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [3, 6],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 12
+    }, {
+      "type": "dodge",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 117,
+  "name": "PSG-1",
+  "rank": 4,
+  "type": 3,
+  "illust": "CanceR",
+  "voice": "Asami Imai",
+  "buildTime": 15600,
+  "stats": {
+    "armor": 0,
+    "dodge": 26,
+    "hit": 73,
+    "hp": 93,
+    "pow": 120,
+    "range": 0,
+    "rate": 39,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [2, 8],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 118,
+  "name": "9A-91",
+  "rank": 4,
+  "type": 4,
+  "illust": "防弹乳牛",
+  "voice": "Mai Nakahara",
+  "buildTime": 12900,
+  "stats": {
+    "armor": 0,
+    "dodge": 50,
+    "hit": 49,
+    "hp": 116,
+    "pow": 42,
+    "range": 0,
+    "rate": 78,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [1, 7],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 10
+    }, {
+      "type": "dodge",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 119,
+  "name": "OTs-14",
+  "rank": 5,
+  "type": 4,
+  "illust": "ASK",
+  "voice": "Marina Inoue",
+  "buildTime": 14520,
+  "stats": {
+    "armor": 0,
+    "dodge": 54,
+    "hit": 54,
+    "hp": 110,
+    "pow": 49,
+    "range": 0,
+    "rate": 75,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [1, 4, 7],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 25
+    }, {
+      "type": "hit",
+      "value": 65
+    }]
+  }
+}, {
+  "id": 120,
+  "name": "ARX-160",
+  "rank": 3,
+  "type": 4,
+  "illust": "死盖",
+  "voice": "Ami Hagihara",
+  "buildTime": 11700,
+  "stats": {
+    "armor": 0,
+    "dodge": 48,
+    "hit": 48,
+    "hp": 99,
+    "pow": 49,
+    "range": 0,
+    "rate": 73,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [1],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 25
+    }, {
+      "type": "hit",
+      "value": 50
+    }]
+  }
+}, {
+  "id": 121,
+  "name": "Mk48",
+  "rank": 4,
+  "type": 5,
+  "illust": "SA",
+  "voice": "Ricca Tachibana",
+  "buildTime": 22800,
+  "stats": {
+    "armor": 0,
+    "dodge": 26,
+    "hit": 25,
+    "hp": 174,
+    "pow": 90,
+    "range": 0,
+    "rate": 112,
+    "shield": 0,
+    "speed": 4,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 10
+  },
+  "effect": {
+    "effectType": 6,
+    "effectCenter": 7,
+    "effectPos": [0, 0],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 18
+    }]
+  }
+}, {
+  "id": 122,
+  "name": "G11",
+  "rank": 5,
+  "type": 4,
+  "illust": "音符",
+  "voice": "Ayaka Fukuhara",
+  "buildTime": 14640,
+  "stats": {
+    "armor": 0,
+    "dodge": 41,
+    "hit": 44,
+    "hp": 121,
+    "pow": 43,
+    "range": 0,
+    "rate": 95,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [4],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 30
+    }, {
+      "type": "dodge",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 123,
+  "name": "P99",
+  "rank": 3,
+  "type": 1,
+  "illust": "真名",
+  "voice": "Ayako Kawasumi",
+  "buildTime": 2100,
+  "stats": {
+    "armor": 0,
+    "dodge": 87,
+    "hit": 56,
+    "hp": 60,
+    "pow": 31,
+    "range": 0,
+    "rate": 61,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [2, 8, 4],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 6
+    }, {
+      "type": "dodge",
+      "value": 18
+    }]
+  }
+}, {
+  "id": 124,
+  "name": "Super SASS",
+  "rank": 3,
+  "type": 3,
+  "illust": "受菟",
+  "voice": "Ricca Tachibana",
+  "buildTime": 14400,
+  "stats": {
+    "armor": 0,
+    "dodge": 27,
+    "hit": 65,
+    "hp": 88,
+    "pow": 115,
+    "range": 0,
+    "rate": 39,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [7],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 12
+    }]
+  }
+}, {
+  "id": 125,
+  "name": "MG4",
+  "rank": 5,
+  "type": 5,
+  "illust": "neco",
+  "voice": "Haruka Yoshimura",
+  "buildTime": 24000,
+  "stats": {
+    "armor": 0,
+    "dodge": 34,
+    "hit": 34,
+    "hp": 182,
+    "pow": 84,
+    "range": 0,
+    "rate": 139,
+    "shield": 0,
+    "speed": 4,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 9
+  },
+  "effect": {
+    "effectType": 6,
+    "effectCenter": 4,
+    "effectPos": [0, 0],
+    "gridEffect": [{
+      "type": "hit",
+      "value": 12
+    }, {
+      "type": "armor",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 126,
+  "name": "NZ75",
+  "rank": 5,
+  "type": 1,
+  "illust": "音符",
+  "voice": "Shiki Aoki",
+  "buildTime": 3900,
+  "stats": {
+    "armor": 0,
+    "dodge": 74,
+    "hit": 62,
+    "hp": 73,
+    "pow": 33,
+    "range": 0,
+    "rate": 63,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [6, 2, 8, 1, 4, 7],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 10
+    }, {
+      "type": "dodge",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 127,
+  "name": "Type 79",
+  "rank": 5,
+  "type": 2,
+  "illust": "防弹乳牛",
+  "voice": "Minami Tanaka",
+  "buildTime": 9300,
+  "stats": {
+    "armor": 0,
+    "dodge": 70,
+    "hit": 12,
+    "hp": 194,
+    "pow": 32,
+    "range": 0,
+    "rate": 88,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [3, 9],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 20
+    }]
+  }
+}, {
+  "id": 128,
+  "name": "M99",
+  "rank": 5,
+  "type": 3,
+  "illust": "Saru",
+  "voice": "Rumi Okubo",
+  "buildTime": 17700,
+  "stats": {
+    "armor": 0,
+    "dodge": 32,
+    "hit": 81,
+    "hp": 88,
+    "pow": 157,
+    "range": 0,
+    "rate": 32,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [4],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 18
+    }]
+  }
+}, {
+  "id": 129,
+  "name": "Type 95",
+  "rank": 5,
+  "type": 4,
+  "illust": "木shiyo",
+  "voice": "Kami Daimon",
+  "buildTime": 13800,
+  "stats": {
+    "armor": 0,
+    "dodge": 46,
+    "hit": 52,
+    "hp": 116,
+    "pow": 55,
+    "range": 0,
+    "rate": 71,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [1],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 10
+    }, {
+      "type": "dodge",
+      "value": 18
+    }]
+  }
+}, {
+  "id": 130,
+  "name": "Type 97",
+  "rank": 5,
+  "type": 4,
+  "illust": "木shiyo",
+  "voice": "Ayane Sakura",
+  "buildTime": 13800,
+  "stats": {
+    "armor": 0,
+    "dodge": 46,
+    "hit": 51,
+    "hp": 116,
+    "pow": 54,
+    "range": 0,
+    "rate": 72,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [7],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 10
+    }, {
+      "type": "dodge",
+      "value": 18
+    }]
+  }
+}, {
+  "id": 131,
+  "name": "EVO 3",
+  "rank": 3,
+  "type": 2,
+  "illust": "钉田西瓜",
+  "voice": "Nozomi Yamamoto",
+  "buildTime": 6600,
+  "stats": {
+    "armor": 0,
+    "dodge": 68,
+    "hit": 13,
+    "hp": 194,
+    "pow": 23,
+    "range": 0,
+    "rate": 93,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [6],
+    "gridEffect": [{
+      "type": "hit",
+      "value": 55
+    }]
+  }
+}, {
+  "id": 132,
+  "name": "Type 59",
+  "rank": 3,
+  "type": 1,
+  "illust": "麻将",
+  "voice": "Emiri Katou",
+  "buildTime": 2700,
+  "stats": {
+    "armor": 0,
+    "dodge": 96,
+    "hit": 61,
+    "hp": 60,
+    "pow": 28,
+    "range": 0,
+    "rate": 61,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [2, 8, 1, 4, 7],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 10
+    }, {
+      "type": "hit",
+      "value": 25
+    }]
+  }
+}, {
+  "id": 133,
+  "name": "Type 63",
+  "rank": 2,
+  "type": 4,
+  "illust": "TOMATO",
+  "voice": "Saya Horigom",
+  "buildTime": 9900,
+  "stats": {
+    "armor": 0,
+    "dodge": 40,
+    "hit": 40,
+    "hp": 99,
+    "pow": 51,
+    "range": 0,
+    "rate": 73,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [4],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 10
+    }, {
+      "type": "rate",
+      "value": 20
+    }]
+  }
+}, {
+  "id": 134,
+  "name": "AR70",
+  "rank": 3,
+  "type": 4,
+  "illust": "NoriZC",
+  "voice": "Nozomi Yamamoto",
+  "buildTime": 11400,
+  "stats": {
+    "armor": 0,
+    "dodge": 41,
+    "hit": 44,
+    "hp": 110,
+    "pow": 50,
+    "range": 0,
+    "rate": 71,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [7],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 16
+    }, {
+      "type": "hit",
+      "value": 75
+    }]
+  }
+}, {
+  "id": 135,
+  "name": "SR-3MP",
+  "rank": 5,
+  "type": 2,
+  "illust": "熊猫印象",
+  "voice": "Takada Yuuki",
+  "buildTime": 9180,
+  "stats": {
+    "armor": 0,
+    "dodge": 67,
+    "hit": 12,
+    "hp": 194,
+    "pow": 31,
+    "range": 0,
+    "rate": 90,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [3, 6, 9],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 18
+    }, {
+      "type": "crit",
+      "value": 30
+    }]
+  }
+}, {
+  "id": 136,
+  "name": "PP-19",
+  "rank": 4,
+  "type": 2,
+  "illust": "八才",
+  "voice": "Serizawa Yuu",
+  "buildTime": 8400,
+  "stats": {
+    "armor": 0,
+    "dodge": 74,
+    "hit": 14,
+    "hp": 176,
+    "pow": 26,
+    "range": 0,
+    "rate": 91,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [6],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 24
+    }]
+  }
+}, {
+  "id": 137,
+  "name": "PP1901",
+  "rank": 4,
+  "type": 2,
+  "illust": "熊猫印象",
+  "voice": "",
+  "buildTime": 8280,
+  "stats": {
+    "armor": 0,
+    "dodge": 68,
+    "hit": 13,
+    "hp": 194,
+    "pow": 27,
+    "range": 0,
+    "rate": 85,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [3, 9],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 12
+    }, {
+      "type": "hit",
+      "value": 30
+    }]
+  }
+}, {
+  "id": 138,
+  "name": "6P62",
+  "rank": 3,
+  "type": 4,
+  "illust": "羽中",
+  "voice": "Marina Inoue",
+  "buildTime": 12000,
+  "stats": {
+    "armor": 0,
+    "dodge": 33,
+    "hit": 37,
+    "hp": 121,
+    "pow": 69,
+    "range": 0,
+    "rate": 54,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [4],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 35
+    }]
+  }
+}, {
+  "id": 139,
+  "name": "Bren Ten",
+  "rank": 2,
+  "type": 1,
+  "illust": "林大B",
+  "voice": "Arise Sato",
+  "buildTime": 1680,
+  "stats": {
+    "armor": 0,
+    "dodge": 63,
+    "hit": 51,
+    "hp": 70,
+    "pow": 31,
+    "range": 0,
+    "rate": 58,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [6, 2, 8, 4],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 8
+    }, {
+      "type": "rate",
+      "value": 5
+    }]
+  }
+}, {
+  "id": 140,
+  "name": "PSM",
+  "rank": 3,
+  "type": 1,
+  "illust": "sola7764",
+  "voice": "Naomi Mukaiyama",
+  "buildTime": 2100,
+  "stats": {
+    "armor": 0,
+    "dodge": 112,
+    "hit": 67,
+    "hp": 57,
+    "pow": 24,
+    "range": 0,
+    "rate": 65,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [6, 1, 4, 7],
+    "gridEffect": [{
+      "type": "hit",
+      "value": 28
+    }, {
+      "type": "dodge",
+      "value": 18
+    }]
+  }
+}, {
+  "id": 141,
+  "name": "USP Compact",
+  "rank": 2,
+  "type": 1,
+  "illust": "哈路卡",
+  "voice": "Arise Sato",
+  "buildTime": 1680,
+  "stats": {
+    "armor": 0,
+    "dodge": 86,
+    "hit": 60,
+    "hp": 66,
+    "pow": 24,
+    "range": 0,
+    "rate": 64,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [3, 9, 4],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 14
+    }]
+  }
+}, {
+  "id": 142,
+  "name": "Five-seveN",
+  "rank": 5,
+  "type": 1,
+  "illust": "水乌龟",
+  "voice": "Akane Fujita",
+  "buildTime": 3420,
+  "stats": {
+    "armor": 0,
+    "dodge": 97,
+    "hit": 57,
+    "hp": 63,
+    "pow": 31,
+    "range": 0,
+    "rate": 66,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [2, 8, 1, 7],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 15
+    }, {
+      "type": "crit",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 143,
+  "name": "RO635",
+  "rank": 5,
+  "type": 2,
+  "illust": "海猫络合物",
+  "voice": "Ayaka Fukuhara",
+  "buildTime": 9300,
+  "stats": {
+    "armor": 0,
+    "dodge": 71,
+    "hit": 14,
+    "hp": 194,
+    "pow": 27,
+    "range": 0,
+    "rate": 97,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [3, 6, 9, 2, 8],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 10
+    }, {
+      "type": "hit",
+      "value": 35
+    }]
+  }
+}, {
+  "id": 144,
+  "name": "MT-9",
+  "rank": 3,
+  "type": 2,
+  "illust": "麻将",
+  "voice": "Rui Kariya",
+  "buildTime": 7500,
+  "stats": {
+    "armor": 0,
+    "dodge": 60,
+    "hit": 13,
+    "hp": 203,
+    "pow": 25,
+    "range": 0,
+    "rate": 88,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [3, 9],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 10
+    }, {
+      "type": "dodge",
+      "value": 12
+    }]
+  }
+}, {
+  "id": 145,
+  "name": "OTs-44",
+  "rank": 3,
+  "type": 3,
+  "illust": "rosele",
+  "voice": "Rie Takahashi",
+  "buildTime": 13800,
+  "stats": {
+    "armor": 0,
+    "dodge": 32,
+    "hit": 67,
+    "hp": 80,
+    "pow": 157,
+    "range": 0,
+    "rate": 32,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [1, 7],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 12
+    }]
+  }
+}, {
+  "id": 146,
+  "name": "G28",
+  "rank": 4,
+  "type": 3,
+  "illust": "工口牛",
+  "voice": "Nozomi Yamamoto",
+  "buildTime": 15600,
+  "stats": {
+    "armor": 0,
+    "dodge": 29,
+    "hit": 80,
+    "hp": 88,
+    "pow": 119,
+    "range": 0,
+    "rate": 39,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [2, 8],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 147,
+  "name": "SSG 69",
+  "rank": 3,
+  "type": 3,
+  "illust": "拿铁",
+  "voice": "",
+  "buildTime": 13800,
+  "stats": {
+    "armor": 0,
+    "dodge": 39,
+    "hit": 82,
+    "hp": 80,
+    "pow": 130,
+    "range": 0,
+    "rate": 30,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [4],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 12
+    }]
+  }
+}, {
+  "id": 148,
+  "name": "IWS 2000",
+  "rank": 5,
+  "type": 3,
+  "illust": "十月十日奏",
+  "voice": "",
+  "buildTime": 17520,
+  "stats": {
+    "armor": 0,
+    "dodge": 29,
+    "hit": 78,
+    "hp": 88,
+    "pow": 162,
+    "range": 0,
+    "rate": 32,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [2, 8],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 18
+    }]
+  }
+}, {
+  "id": 149,
+  "name": "AEK-999",
+  "rank": 4,
+  "type": 5,
+  "illust": "RAN",
+  "voice": "",
+  "buildTime": 22800,
+  "stats": {
+    "armor": 0,
+    "dodge": 28,
+    "hit": 29,
+    "hp": 165,
+    "pow": 89,
+    "range": 0,
+    "rate": 120,
+    "shield": 0,
+    "speed": 4,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 10
+  },
+  "effect": {
+    "effectType": 6,
+    "effectCenter": 4,
+    "effectPos": [0, 0],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 15
+    }, {
+      "type": "armor",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 150,
+  "name": "Shipka",
+  "rank": 4,
+  "type": 2,
+  "illust": "八云玖",
+  "voice": "",
+  "buildTime": 8280,
+  "stats": {
+    "armor": 0,
+    "dodge": 79,
+    "hit": 14,
+    "hp": 168,
+    "pow": 24,
+    "range": 0,
+    "rate": 95,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [3, 9],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 15
+    }, {
+      "type": "dodge",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 151,
+  "name": "M1887",
+  "rank": 5,
+  "type": 6,
+  "illust": "REALMBW",
+  "voice": "Hitomi Nabatame",
+  "buildTime": 29100,
+  "stats": {
+    "armor": 22,
+    "dodge": 12,
+    "hit": 12,
+    "hp": 275,
+    "pow": 39,
+    "range": 0,
+    "rate": 22,
+    "shield": 0,
+    "speed": 6,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 4
+  },
+  "effect": {
+    "effectType": 5,
+    "effectCenter": 6,
+    "effectPos": [0],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 20
+    }, {
+      "type": "hit",
+      "value": 20
+    }]
+  }
+}, {
+  "id": 152,
+  "name": "M1897",
+  "rank": 3,
+  "type": 6,
+  "illust": "小迪",
+  "voice": "",
+  "buildTime": 27000,
+  "stats": {
+    "armor": 21,
+    "dodge": 11,
+    "hit": 11,
+    "hp": 253,
+    "pow": 35,
+    "range": 0,
+    "rate": 26,
+    "shield": 0,
+    "speed": 6,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 4
+  },
+  "effect": {
+    "effectType": 5,
+    "effectCenter": 6,
+    "effectPos": [0, 0],
+    "gridEffect": [{
+      "type": "hit",
+      "value": 50
+    }]
+  }
+}, {
+  "id": 153,
+  "name": "M37",
+  "rank": 4,
+  "type": 6,
+  "illust": "Rain Lan",
+  "voice": "Emiri Katou",
+  "buildTime": 27900,
+  "stats": {
+    "armor": 22,
+    "dodge": 12,
+    "hit": 12,
+    "hp": 253,
+    "pow": 33,
+    "range": 0,
+    "rate": 26,
+    "shield": 0,
+    "speed": 6,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 4
+  },
+  "effect": {
+    "effectType": 5,
+    "effectCenter": 6,
+    "effectPos": [0, 0],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 18
+    }]
+  }
+}, {
+  "id": 154,
+  "name": "M500",
+  "rank": 3,
+  "type": 6,
+  "illust": "Ki桑",
+  "voice": "Ruriko Aoki",
+  "buildTime": 26400,
+  "stats": {
+    "armor": 21,
+    "dodge": 10,
+    "hit": 11,
+    "hp": 264,
+    "pow": 31,
+    "range": 0,
+    "rate": 29,
+    "shield": 0,
+    "speed": 6,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 4
+  },
+  "effect": {
+    "effectType": 5,
+    "effectCenter": 3,
+    "effectPos": [0, 0],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 18
+    }]
+  }
+}, {
+  "id": 155,
+  "name": "M590",
+  "rank": 4,
+  "type": 6,
+  "illust": "防弹乳牛",
+  "voice": "Ruriko Aoki",
+  "buildTime": 27600,
+  "stats": {
+    "armor": 22,
+    "dodge": 10,
+    "hit": 11,
+    "hp": 264,
+    "pow": 32,
+    "range": 0,
+    "rate": 31,
+    "shield": 0,
+    "speed": 6,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 4
+  },
+  "effect": {
+    "effectType": 5,
+    "effectCenter": 9,
+    "effectPos": [0, 0],
+    "gridEffect": [{
+      "type": "hit",
+      "value": 55
+    }]
+  }
+}, {
+  "id": 156,
+  "name": "Super-Shorty",
+  "rank": 4,
+  "type": 6,
+  "illust": "废人",
+  "voice": "",
+  "buildTime": 28200,
+  "stats": {
+    "armor": 20,
+    "dodge": 19,
+    "hit": 14,
+    "hp": 242,
+    "pow": 28,
+    "range": 0,
+    "rate": 30,
+    "shield": 0,
+    "speed": 6,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 3
+  },
+  "effect": {
+    "effectType": 5,
+    "effectCenter": 6,
+    "effectPos": [0],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 15
+    }, {
+      "type": "hit",
+      "value": 20
+    }]
+  }
+}, {
+  "id": 157,
+  "name": "KSG",
+  "rank": 5,
+  "type": 6,
+  "illust": "neco",
+  "voice": "Shizuka Ito",
+  "buildTime": 28800,
+  "stats": {
+    "armor": 24,
+    "dodge": 12,
+    "hit": 13,
+    "hp": 253,
+    "pow": 29,
+    "range": 0,
+    "rate": 30,
+    "shield": 0,
+    "speed": 6,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 5
+  },
+  "effect": {
+    "effectType": 5,
+    "effectCenter": 6,
+    "effectPos": [0, 0],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 20
+    }]
+  }
+}, {
+  "id": 158,
+  "name": "KS-23",
+  "rank": 3,
+  "type": 6,
+  "illust": "死盖",
+  "voice": "Hiromi Igarashi",
+  "buildTime": 26700,
+  "stats": {
+    "armor": 21,
+    "dodge": 10,
+    "hit": 9,
+    "hp": 275,
+    "pow": 40,
+    "range": 0,
+    "rate": 25,
+    "shield": 0,
+    "speed": 6,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 3
+  },
+  "effect": {
+    "effectType": 5,
+    "effectCenter": 3,
+    "effectPos": [0],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 12
+    }, {
+      "type": "hit",
+      "value": 30
+    }]
+  }
+}, {
+  "id": 159,
+  "name": "RMB-93",
+  "rank": 3,
+  "type": 6,
+  "illust": "Bison仓鼠",
+  "voice": "Rui Kariya",
+  "buildTime": 27000,
+  "stats": {
+    "armor": 22,
+    "dodge": 13,
+    "hit": 11,
+    "hp": 242,
+    "pow": 30,
+    "range": 0,
+    "rate": 28,
+    "shield": 0,
+    "speed": 6,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 4
+  },
+  "effect": {
+    "effectType": 5,
+    "effectCenter": 9,
+    "effectPos": [0],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 12
+    }, {
+      "type": "hit",
+      "value": 30
+    }]
+  }
+}, {
+  "id": 160,
+  "name": "Saiga-12",
+  "rank": 5,
+  "type": 6,
+  "illust": "防弹乳牛",
+  "voice": "",
+  "buildTime": 29100,
+  "stats": {
+    "armor": 23,
+    "dodge": 11,
+    "hit": 12,
+    "hp": 264,
+    "pow": 29,
+    "range": 0,
+    "rate": 35,
+    "shield": 0,
+    "speed": 6,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 5
+  },
+  "effect": {
+    "effectType": 5,
+    "effectCenter": 6,
+    "effectPos": [0, 0, 0],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 161,
+  "name": "Type 97 S",
+  "rank": 4,
+  "type": 6,
+  "illust": "河马",
+  "voice": "Yuka Ootsubo",
+  "buildTime": 27000,
+  "stats": {
+    "armor": 20,
+    "dodge": 13,
+    "hit": 12,
+    "hp": 264,
+    "pow": 33,
+    "range": 0,
+    "rate": 27,
+    "shield": 0,
+    "speed": 6,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 3
+  },
+  "effect": {
+    "effectType": 5,
+    "effectCenter": 6,
+    "effectPos": [0, 0, 0],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 12
+    }]
+  }
+}, {
+  "id": 162,
+  "name": "SPAS-12",
+  "rank": 4,
+  "type": 6,
+  "illust": "陆生の洲川",
+  "voice": "",
+  "buildTime": 27600,
+  "stats": {
+    "armor": 21,
+    "dodge": 9,
+    "hit": 11,
+    "hp": 275,
+    "pow": 33,
+    "range": 0,
+    "rate": 32,
+    "shield": 0,
+    "speed": 6,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 4
+  },
+  "effect": {
+    "effectType": 5,
+    "effectCenter": 6,
+    "effectPos": [0, 0],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 20
+    }]
+  }
+}, {
+  "id": 166,
+  "name": "CZ75",
+  "rank": 5,
+  "type": 1,
+  "illust": "音符",
+  "voice": "",
+  "buildTime": 3900,
+  "stats": {
+    "armor": 0,
+    "dodge": 74,
+    "hit": 62,
+    "hp": 66,
+    "pow": 34,
+    "range": 0,
+    "rate": 66,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [3, 9, 2, 8],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 8
+    }, {
+      "type": "rate",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 167,
+  "name": "HK45",
+  "rank": 3,
+  "type": 1,
+  "illust": "雪樱樱",
+  "voice": "",
+  "buildTime": 2400,
+  "stats": {
+    "armor": 0,
+    "dodge": 80,
+    "hit": 58,
+    "hp": 66,
+    "pow": 34,
+    "range": 0,
+    "rate": 55,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [3, 9, 1, 7],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 16
+    }]
+  }
+}, {
+  "id": 168,
+  "name": "Spitfire",
+  "rank": 4,
+  "type": 1,
+  "illust": "Skade",
+  "voice": "",
+  "buildTime": 3120,
+  "stats": {
+    "armor": 0,
+    "dodge": 71,
+    "hit": 60,
+    "hp": 70,
+    "pow": 33,
+    "range": 0,
+    "rate": 59,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 4,
+    "effectPos": [2, 8, 0, 0],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 15
+    }, {
+      "type": "hit",
+      "value": 20
+    }]
+  }
+}, {
+  "id": 169,
+  "name": "Colt SCW",
+  "rank": 3,
+  "type": 2,
+  "illust": "幻象黑兔",
+  "voice": "",
+  "buildTime": 7200,
+  "stats": {
+    "armor": 0,
+    "dodge": 68,
+    "hit": 12,
+    "hp": 168,
+    "pow": 30,
+    "range": 0,
+    "rate": 91,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [6],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 6
+    }, {
+      "type": "rate",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 170,
+  "name": "ASh-12.7",
+  "rank": 3,
+  "type": 4,
+  "illust": "仙女V",
+  "voice": "",
+  "buildTime": 12000,
+  "stats": {
+    "armor": 0,
+    "dodge": 36,
+    "hit": 41,
+    "hp": 110,
+    "pow": 65,
+    "range": 0,
+    "rate": 59,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [1, 7],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 30
+    }]
+  }
+}, {
+  "id": 171,
+  "name": "Ribeyrolles1918",
+  "rank": 4,
+  "type": 4,
+  "illust": "rei",
+  "voice": "",
+  "buildTime": 13200,
+  "stats": {
+    "armor": 0,
+    "dodge": 40,
+    "hit": 44,
+    "hp": 110,
+    "pow": 64,
+    "range": 0,
+    "rate": 63,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [2, 8],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 20
+    }]
+  }
+}, {
+  "id": 172,
+  "name": "RFB",
+  "rank": 5,
+  "type": 4,
+  "illust": "Anmi",
+  "voice": "",
+  "buildTime": 14280,
+  "stats": {
+    "armor": 0,
+    "dodge": 49,
+    "hit": 68,
+    "hp": 105,
+    "pow": 69,
+    "range": 0,
+    "rate": 54,
+    "shield": 0,
+    "speed": 10,
+    "crit": 30,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [1, 4, 7],
+    "gridEffect": [{
+      "type": "hit",
+      "value": 30
+    }, {
+      "type": "dodge",
+      "value": 18
+    }]
+  }
+}, {
+  "id": 173,
+  "name": "Pecheneg",
+  "rank": 5,
+  "type": 5,
+  "illust": "虎三",
+  "voice": "",
+  "buildTime": 24600,
+  "stats": {
+    "armor": 0,
+    "dodge": 29,
+    "hit": 31,
+    "hp": 165,
+    "pow": 95,
+    "range": 0,
+    "rate": 127,
+    "shield": 0,
+    "speed": 4,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 10
+  },
+  "effect": {
+    "effectType": 6,
+    "effectCenter": 1,
+    "effectPos": [0, 0, 0],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 15
+    }, {
+      "type": "hit",
+      "value": 12
+    }]
+  }
+}, {
+  "id": 174,
+  "name": "type 81 R",
+  "rank": 3,
+  "type": 3,
+  "illust": "八才",
+  "voice": "",
+  "buildTime": 13800,
+  "stats": {
+    "armor": 0,
+    "dodge": 41,
+    "hit": 79,
+    "hp": 75,
+    "pow": 123,
+    "range": 0,
+    "rate": 32,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [7],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 12
+    }]
+  }
+}, {
+  "id": 175,
+  "name": "ART556",
+  "rank": 5,
+  "type": 4,
+  "illust": "Saru",
+  "voice": "",
+  "buildTime": 14100,
+  "stats": {
+    "armor": 0,
+    "dodge": 49,
+    "hit": 53,
+    "hp": 116,
+    "pow": 53,
+    "range": 0,
+    "rate": 69,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [1, 7],
+    "gridEffect": [{
+      "type": "hit",
+      "value": 50
+    }, {
+      "type": "dodge",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 176,
+  "name": "TMP",
+  "rank": 3,
+  "type": 2,
+  "illust": "废人",
+  "voice": "",
+  "buildTime": 7800,
+  "stats": {
+    "armor": 0,
+    "dodge": 77,
+    "hit": 14,
+    "hp": 150,
+    "pow": 28,
+    "range": 0,
+    "rate": 93,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 2,
+    "effectPos": [0, 6],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 15
+    }, {
+      "type": "hit",
+      "value": 20
+    }]
+  }
+}, {
+  "id": 177,
+  "name": "KLIN",
+  "rank": 4,
+  "type": 2,
+  "illust": "水熊",
+  "voice": "",
+  "buildTime": 8400,
+  "stats": {
+    "armor": 0,
+    "dodge": 74,
+    "hit": 11,
+    "hp": 190,
+    "pow": 25,
+    "range": 0,
+    "rate": 95,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [6],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 25
+    }]
+  }
+}, {
+  "id": 178,
+  "name": "F1",
+  "rank": 3,
+  "type": 2,
+  "illust": "Ki桑",
+  "voice": "",
+  "buildTime": 6600,
+  "stats": {
+    "armor": 0,
+    "dodge": 60,
+    "hit": 14,
+    "hp": 212,
+    "pow": 26,
+    "range": 0,
+    "rate": 79,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [3, 9],
+    "gridEffect": [{
+      "type": "hit",
+      "value": 40
+    }, {
+      "type": "dodge",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 179,
+  "name": "DSR-50",
+  "rank": 5,
+  "type": 3,
+  "illust": "liduke",
+  "voice": "",
+  "buildTime": 17100,
+  "stats": {
+    "armor": 0,
+    "dodge": 33,
+    "hit": 87,
+    "hp": 82,
+    "pow": 163,
+    "range": 0,
+    "rate": 31,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 4,
+    "effectPos": [4, 0],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 18
+    }]
+  }
+}, {
+  "id": 180,
+  "name": "PzB39",
+  "rank": 4,
+  "type": 3,
+  "illust": "nineo",
+  "voice": "",
+  "buildTime": 16200,
+  "stats": {
+    "armor": 0,
+    "dodge": 31,
+    "hit": 71,
+    "hp": 84,
+    "pow": 148,
+    "range": 0,
+    "rate": 32,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [2, 8],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 181,
+  "name": "T91",
+  "rank": 5,
+  "type": 4,
+  "illust": "Krenz",
+  "voice": "",
+  "buildTime": 13680,
+  "stats": {
+    "armor": 0,
+    "dodge": 46,
+    "hit": 44,
+    "hp": 124,
+    "pow": 51,
+    "range": 0,
+    "rate": 76,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 2,
+    "effectPos": [0, 4],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 20
+    }, {
+      "type": "dodge",
+      "value": 12
+    }]
+  }
+}, {
+  "id": 182,
+  "name": "wz.29",
+  "rank": 3,
+  "type": 3,
+  "illust": "zui",
+  "voice": "",
+  "buildTime": 13800,
+  "stats": {
+    "armor": 0,
+    "dodge": 33,
+    "hit": 65,
+    "hp": 97,
+    "pow": 113,
+    "range": 0,
+    "rate": 32,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [1],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 12
+    }]
+  }
+}, {
+  "id": 183,
+  "name": "Contender",
+  "rank": 5,
+  "type": 1,
+  "illust": "細重ソウジ",
+  "voice": "",
+  "buildTime": 3720,
+  "stats": {
+    "armor": 0,
+    "dodge": 82,
+    "hit": 85,
+    "hp": 66,
+    "pow": 46,
+    "range": 0,
+    "rate": 44,
+    "shield": 0,
+    "speed": 15,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [3, 6, 9, 2, 8, 1, 4, 7],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 15
+    }, {
+      "type": "crit",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 184,
+  "name": "T-5000",
+  "rank": 4,
+  "type": 3,
+  "illust": "92M",
+  "voice": "",
+  "buildTime": 15000,
+  "stats": {
+    "armor": 0,
+    "dodge": 28,
+    "hit": 85,
+    "hp": 90,
+    "pow": 126,
+    "range": 0,
+    "rate": 36,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [2, 1],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 185,
+  "name": "Ameli",
+  "rank": 4,
+  "type": 5,
+  "illust": "水熊",
+  "voice": "",
+  "buildTime": 23100,
+  "stats": {
+    "armor": 0,
+    "dodge": 42,
+    "hit": 38,
+    "hp": 141,
+    "pow": 83,
+    "range": 0,
+    "rate": 149,
+    "shield": 0,
+    "speed": 4,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 8
+  },
+  "effect": {
+    "effectType": 6,
+    "effectCenter": 4,
+    "effectPos": [0, 0, 0],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 10
+    }, {
+      "type": "armor",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 186,
+  "name": "P226",
+  "rank": 3,
+  "type": 1,
+  "illust": "PHI",
+  "voice": "",
+  "buildTime": 2100,
+  "stats": {
+    "armor": 0,
+    "dodge": 63,
+    "hit": 58,
+    "hp": 73,
+    "pow": 29,
+    "range": 0,
+    "rate": 61,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [2, 8, 4],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 10
+    }, {
+      "type": "hit",
+      "value": 25
+    }]
+  }
+}, {
+  "id": 187,
+  "name": "Ak5",
+  "rank": 4,
+  "type": 4,
+  "illust": "百足",
+  "voice": "",
+  "buildTime": 13200,
+  "stats": {
+    "armor": 0,
+    "dodge": 38,
+    "hit": 48,
+    "hp": 116,
+    "pow": 51,
+    "range": 0,
+    "rate": 75,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [1, 7],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 15
+    }, {
+      "type": "hit",
+      "value": 30
+    }]
+  }
+}, {
+  "id": 188,
+  "name": "SAT8",
+  "rank": 5,
+  "type": 6,
+  "illust": "NIN",
+  "voice": "",
+  "buildTime": 29400,
+  "stats": {
+    "armor": 22,
+    "dodge": 12,
+    "hit": 13,
+    "hp": 282,
+    "pow": 29,
+    "range": 0,
+    "rate": 33,
+    "shield": 0,
+    "speed": 6,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 4
+  },
+  "effect": {
+    "effectType": 5,
+    "effectCenter": 6,
+    "effectPos": [0, 0, 0],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 10
+    }, {
+      "type": "hit",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 189,
+  "name": "USAS12",
+  "rank": 4,
+  "type": 6,
+  "illust": "麻将",
+  "voice": "",
+  "buildTime": 28500,
+  "stats": {
+    "armor": 22,
+    "dodge": 10,
+    "hit": 11,
+    "hp": 260,
+    "pow": 29,
+    "range": 0,
+    "rate": 37,
+    "shield": 0,
+    "speed": 6,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 5
+  },
+  "effect": {
+    "effectType": 5,
+    "effectCenter": 6,
+    "effectPos": [0],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 15
+    }, {
+      "type": "hit",
+      "value": 20
+    }]
+  }
+}, {
+  "id": 190,
+  "name": "NS2000",
+  "rank": 3,
+  "type": 6,
+  "illust": "HIKARI",
+  "voice": "",
+  "buildTime": 26100,
+  "stats": {
+    "armor": 20,
+    "dodge": 11,
+    "hit": 12,
+    "hp": 253,
+    "pow": 33,
+    "range": 0,
+    "rate": 27,
+    "shield": 0,
+    "speed": 6,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 5
+  },
+  "effect": {
+    "effectType": 5,
+    "effectCenter": 3,
+    "effectPos": [0, 0],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 191,
+  "name": "M12",
+  "rank": 3,
+  "type": 2,
+  "illust": "猫头神",
+  "voice": "Akane Hanazawa",
+  "buildTime": 6900,
+  "stats": {
+    "armor": 0,
+    "dodge": 64,
+    "hit": 15,
+    "hp": 203,
+    "pow": 26,
+    "range": 0,
+    "rate": 76,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [3, 6, 9],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 8
+    }, {
+      "type": "dodge",
+      "value": 8
+    }]
+  }
+}, {
+  "id": 192,
+  "name": "JS05",
+  "rank": 5,
+  "type": 3,
+  "illust": "音符",
+  "voice": "",
+  "buildTime": 17340,
+  "stats": {
+    "armor": 0,
+    "dodge": 32,
+    "hit": 88,
+    "hp": 90,
+    "pow": 158,
+    "range": 0,
+    "rate": 31,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [1, 7],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 18
+    }]
+  }
+}, {
+  "id": 193,
+  "name": "T65",
+  "rank": 3,
+  "type": 4,
+  "illust": "PHI",
+  "voice": "",
+  "buildTime": 11100,
+  "stats": {
+    "armor": 0,
+    "dodge": 40,
+    "hit": 44,
+    "hp": 124,
+    "pow": 54,
+    "range": 0,
+    "rate": 76,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [4, 7],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 15
+    }, {
+      "type": "hit",
+      "value": 25
+    }]
+  }
+}, {
+  "id": 194,
+  "name": "K2",
+  "rank": 5,
+  "type": 4,
+  "illust": "Anmi",
+  "voice": "",
+  "buildTime": 13920,
+  "stats": {
+    "armor": 0,
+    "dodge": 42,
+    "hit": 51,
+    "hp": 127,
+    "pow": 50,
+    "range": 0,
+    "rate": 78,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [1, 7],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 25
+    }, {
+      "type": "hit",
+      "value": 50
+    }]
+  }
+}, {
+  "id": 195,
+  "name": "HK23",
+  "rank": 3,
+  "type": 5,
+  "illust": "Rain Lan",
+  "voice": "",
+  "buildTime": 19500,
+  "stats": {
+    "armor": 0,
+    "dodge": 34,
+    "hit": 34,
+    "hp": 149,
+    "pow": 80,
+    "range": 0,
+    "rate": 135,
+    "shield": 0,
+    "speed": 4,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 9
+  },
+  "effect": {
+    "effectType": 6,
+    "effectCenter": 4,
+    "effectPos": [0, 0],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 8
+    }, {
+      "type": "armor",
+      "value": 12
+    }]
+  }
+}, {
+  "id": 196,
+  "name": "Zastava M21",
+  "rank": 5,
+  "type": 4,
+  "illust": "nineo",
+  "voice": "",
+  "buildTime": 14700,
+  "stats": {
+    "armor": 0,
+    "dodge": 41,
+    "hit": 48,
+    "hp": 121,
+    "pow": 55,
+    "range": 0,
+    "rate": 74,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [1, 7],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 12
+    }, {
+      "type": "dodge",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 197,
+  "name": "Carcano M1891",
+  "rank": 5,
+  "type": 3,
+  "illust": "細重ソウジ",
+  "voice": "",
+  "buildTime": 16680,
+  "stats": {
+    "armor": 0,
+    "dodge": 42,
+    "hit": 85,
+    "hp": 80,
+    "pow": 138,
+    "range": 0,
+    "rate": 34,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 3,
+    "effectCenter": 1,
+    "effectPos": [0, 2],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 198,
+  "name": "Carcano M91/38",
+  "rank": 5,
+  "type": 3,
+  "illust": "細重ソウジ",
+  "voice": "",
+  "buildTime": 16920,
+  "stats": {
+    "armor": 0,
+    "dodge": 44,
+    "hit": 90,
+    "hp": 73,
+    "pow": 146,
+    "range": 0,
+    "rate": 34,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 3,
+    "effectCenter": 7,
+    "effectPos": [8, 0],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 199,
+  "name": "80type",
+  "rank": 4,
+  "type": 5,
+  "illust": "兔爷",
+  "voice": "",
+  "buildTime": 22500,
+  "stats": {
+    "armor": 0,
+    "dodge": 24,
+    "hit": 26,
+    "hp": 174,
+    "pow": 93,
+    "range": 0,
+    "rate": 118,
+    "shield": 0,
+    "speed": 4,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 10
+  },
+  "effect": {
+    "effectType": 6,
+    "effectCenter": 7,
+    "effectPos": [0, 0],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 10
+    }, {
+      "type": "hit",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 200,
+  "name": "XM3",
+  "rank": 4,
+  "type": 3,
+  "illust": "时辰",
+  "voice": "",
+  "buildTime": 15600,
+  "stats": {
+    "armor": 0,
+    "dodge": 32,
+    "hit": 90,
+    "hp": 82,
+    "pow": 130,
+    "range": 0,
+    "rate": 35,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [4, 7],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 201,
+  "name": "Gepard M1",
+  "rank": 3,
+  "type": 3,
+  "illust": "荒境TS",
+  "voice": "",
+  "buildTime": 15600,
+  "stats": {
+    "armor": 0,
+    "dodge": 28,
+    "hit": 77,
+    "hp": 88,
+    "pow": 143,
+    "range": 0,
+    "rate": 30,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [1, 4],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 12
+    }]
+  }
+}, {
+  "id": 203,
+  "name": "PDW",
+  "rank": 4,
+  "type": 2,
+  "illust": "HJL",
+  "voice": "/",
+  "buildTime": 0,
+  "stats": {
+    "armor": 0,
+    "dodge": 60,
+    "hit": 13,
+    "hp": 990,
+    "pow": 33,
+    "range": 0,
+    "rate": 82,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 0,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 8,
+    "effectPos": [1, 7],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 20
+    }, {
+      "type": "crit",
+      "value": 20
+    }]
+  }
+}, {
+  "id": 204,
+  "name": "Ballista",
+  "rank": 5,
+  "type": 3,
+  "illust": "水乌龟",
+  "voice": "/",
+  "buildTime": 0,
+  "stats": {
+    "armor": 0,
+    "dodge": 35,
+    "hit": 92,
+    "hp": 410,
+    "pow": 139,
+    "range": 0,
+    "rate": 36,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 0,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [3, 9],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 18
+    }]
+  }
+}, {
+  "id": 205,
+  "name": "AN94",
+  "rank": 5,
+  "type": 4,
+  "illust": "多元菌",
+  "voice": "/",
+  "buildTime": 14940,
+  "stats": {
+    "armor": 0,
+    "dodge": 48,
+    "hit": 67,
+    "hp": 580,
+    "pow": 55,
+    "range": 0,
+    "rate": 76,
+    "shield": 0,
+    "speed": 12,
+    "crit": 0,
+    "critDmg": 0,
+    "armorPiercing": 0,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 8,
+    "effectPos": [3, 6, 9],
+    "gridEffect": [{
+      "type": "hit",
+      "value": 55
+    }, {
+      "type": "dodge",
+      "value": 16
+    }]
+  }
+}, {
+  "id": 206,
+  "name": "AK12",
+  "rank": 5,
+  "type": 4,
+  "illust": "多元菌",
+  "voice": "/",
+  "buildTime": 15120,
+  "stats": {
+    "armor": 0,
+    "dodge": 52,
+    "hit": 62,
+    "hp": 550,
+    "pow": 56,
+    "range": 0,
+    "rate": 78,
+    "shield": 0,
+    "speed": 10,
+    "crit": 0,
+    "critDmg": 0,
+    "armorPiercing": 0,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 2,
+    "effectPos": [3, 6, 9],
+    "gridEffect": [{
+      "type": "hit",
+      "value": 25
+    }, {
+      "type": "rate",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 207,
+  "name": "CZ2000",
+  "rank": 4,
+  "type": 4,
+  "illust": "NoriZC",
+  "voice": "/",
+  "buildTime": 0,
+  "stats": {
+    "armor": 0,
+    "dodge": 46,
+    "hit": 44,
+    "hp": 550,
+    "pow": 48,
+    "range": 0,
+    "rate": 78,
+    "shield": 0,
+    "speed": 7,
+    "crit": 0,
+    "critDmg": 0,
+    "armorPiercing": 0,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 2,
+    "effectPos": [6],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 10
+    }, {
+      "type": "dodge",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 208,
+  "name": "HK21",
+  "rank": 5,
+  "type": 5,
+  "illust": "小吃",
+  "voice": "/",
+  "buildTime": 0,
+  "stats": {
+    "armor": 0,
+    "dodge": 33,
+    "hit": 29,
+    "hp": 845,
+    "pow": 92,
+    "range": 0,
+    "rate": 135,
+    "shield": 0,
+    "speed": 4,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 0,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 6,
+    "effectCenter": 4,
+    "effectPos": [3,6],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 15
+    }, {
+      "type": "armor",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 210,
+  "name": "CZ52",
+  "rank": 3,
+  "type": 1,
+  "illust": "小吃",
+  "voice": "/",
+  "buildTime": 0,
+  "stats": {
+    "armor": 0,
+    "dodge": 68,
+    "hit": 50,
+    "hp": 380,
+    "pow": 33,
+    "range": 0,
+    "rate": 53,
+    "shield": 0,
+    "speed": 15,
+    "crit": 0,
+    "critDmg": 0,
+    "armorPiercing": 0,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [2, 3, 8, 9],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 10
+    }, {
+      "type": "dodge",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 1001,
+  "name": "Noel",
+  "rank": 5,
+  "type": 1,
+  "illust": "水熊",
+  "voice": "Kanako Kondo",
+  "buildTime": 3600,
+  "stats": {
+    "armor": 0,
+    "dodge": 82,
+    "hit": 60,
+    "hp": 60,
+    "pow": 39,
+    "range": 0,
+    "rate": 65,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [3, 9, 2, 8, 1, 7],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 15
+    }, {
+      "type": "dodge",
+      "value": 10
+    }]
+  }
+}, {
+  "id": 1002,
+  "name": "Elphelt",
+  "rank": 5,
+  "type": 6,
+  "illust": "ZAGALA",
+  "voice": "Aya Suzaki",
+  "buildTime": 30600,
+  "stats": {
+    "armor": 23,
+    "dodge": 9,
+    "hit": 13,
+    "hp": 275,
+    "pow": 36,
+    "range": 0,
+    "rate": 28,
+    "shield": 0,
+    "speed": 6,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 5
+  },
+  "effect": {
+    "effectType": 5,
+    "effectCenter": 6,
+    "effectPos": [0, 0],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 15
+    }, {
+      "type": "hit",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 1003,
+  "name": "Kiana",
+  "rank": 5,
+  "type": 1,
+  "illust": "水乌龟",
+  "voice": "",
+  "buildTime": 3600,
+  "stats": {
+    "armor": 0,
+    "dodge": 76,
+    "hit": 53,
+    "hp": 70,
+    "pow": 31,
+    "range": 0,
+    "rate": 64,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [2, 8, 1, 7],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 10
+    }, {
+      "type": "dodge",
+      "value": 15
+    }]
+  }
+}, {
+  "id": 1004,
+  "name": "Mei",
+  "rank": 5,
+  "type": 3,
+  "illust": "NIN",
+  "voice": "",
+  "buildTime": 17400,
+  "stats": {
+    "armor": 0,
+    "dodge": 32,
+    "hit": 70,
+    "hp": 84,
+    "pow": 146,
+    "range": 0,
+    "rate": 34,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [8, 7],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 18
+    }]
+  }
+}, {
+  "id": 1005,
+  "name": "Bronya",
+  "rank": 5,
+  "type": 3,
+  "illust": "水熊",
+  "voice": "",
+  "buildTime": 17400,
+  "stats": {
+    "armor": 0,
+    "dodge": 33,
+    "hit": 77,
+    "hp": 81,
+    "pow": 132,
+    "range": 0,
+    "rate": 37,
+    "shield": 0,
+    "speed": 7,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 1,
+    "effectCenter": 5,
+    "effectPos": [2, 1],
+    "gridEffect": [{
+      "type": "coolDown",
+      "value": 18
+    }]
+  }
+}, {
+  "id": 1006,
+  "name": "Theresa",
+  "rank": 5,
+  "type": 1,
+  "illust": "咩爆",
+  "voice": "",
+  "buildTime": 3600,
+  "stats": {
+    "armor": 0,
+    "dodge": 79,
+    "hit": 47,
+    "hp": 83,
+    "pow": 30,
+    "range": 0,
+    "rate": 54,
+    "shield": 0,
+    "speed": 15,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [3, 9, 2, 8],
+    "gridEffect": [{
+      "type": "rate",
+      "value": 15
+    }, {
+      "type": "hit",
+      "value": 25
+    }]
+  }
+}, {
+  "id": 1007,
+  "name": "Himeko",
+  "rank": 5,
+  "type": 4,
+  "illust": "DOGALA",
+  "voice": "",
+  "buildTime": 14100,
+  "stats": {
+    "armor": 0,
+    "dodge": 42,
+    "hit": 45,
+    "hp": 121,
+    "pow": 58,
+    "range": 0,
+    "rate": 64,
+    "shield": 0,
+    "speed": 10,
+    "crit": 20,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 2,
+    "effectCenter": 5,
+    "effectPos": [4],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 20
+    }, {
+      "type": "rate",
+      "value": 20
+    }]
+  }
+}, {
+  "id": 1008,
+  "name": "Seele",
+  "rank": 5,
+  "type": 6,
+  "illust": "DOGALA",
+  "voice": "",
+  "buildTime": 28800,
+  "stats": {
+    "armor": 22,
+    "dodge": 13,
+    "hit": 11,
+    "hp": 247,
+    "pow": 35,
+    "range": 0,
+    "rate": 27,
+    "shield": 0,
+    "speed": 6,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 5
+  },
+  "effect": {
+    "effectType": 5,
+    "effectCenter": 6,
+    "effectPos": [1, 7],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 20
+    }, {
+      "type": "hit",
+      "value": 10
+    }]
+  }
+}]

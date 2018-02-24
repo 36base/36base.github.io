@@ -1,33 +1,52 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-	<title>36베이스 - 소녀전선 데이터베이스</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/css.css">
-</head>
-<body style="background: url(../images/50.png) no-repeat left top fixed; background-size: cover;">
-	<div class="toggled" id="wrapper">
-		<div id="sidebar-wrapper">
-			<ul class="sidebar-nav">
-				<li class="sidebar-brand"><a href="index.html">36베이스</a></li>
-				<li><a href="doll.html" target="body">전술 인형 도감</a></li>
-				<li><a href="">인형 장비 도감</a></li>
-				<li><a href="">전술 요정 도감</a></li>
-				<li><a href="functions.html" target="body">기타 편의 기능</a></li>
-				<li><a href="">About / Contact</a></li>
-			</ul>
-		</div>
-			<a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">메뉴 접기/펼치기</a>
-			<iframe name="body" src="main.html" style="display:block; border:0;" height="95%" width="100%"></iframe>
-		</div>
-	<script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-	</script>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>36베이스 - 소녀전선 데이터베이스</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-7792494935461977",
+    enable_page_level_ads: true
+  });
+</script>
+  </head>
+  <body style="background: url(../images/50.png) no-repeat left top fixed; background-size: cover;">
+    <div class="nav-side-menu">
+    <div class="brand"><a href="index.html">36베이스</a></div>
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+    <div class="menu-list">
+        <ul id="menu-content" class="menu-content collapse out">
+            <li data-toggle="collapse" data-target="#book" class="collapsed">
+                <a href="#"><i class="fa fa-book fa-lg"></i> 소녀전선 도감 <span class="arrow"></span></a>
+            </li>
+            <ul class="sub-menu collapse" id="book">
+                <li><a href="doll.html" target="body" class="sidebar-menuitem">전술 인형 도감</a></li>
+                <li><a href="#" onclick="alert('준비중입니다.');" class="sidebar-menuitem">전술 요정 도감</a></li>
+                <li><a href="#" onclick="alert('준비중입니다.');" class="sidebar-menuitem">인형 장비 도감</a></li>
+            </ul>
+            <li data-toggle="collapse" data-target="#tools" class="collapsed">
+                <a href="#"><i class="fa fa-archive fa-lg"></i> 기타 편의 기능 <span class="arrow"></span></a>
+            </li>
+            <ul class="sub-menu collapse" id="tools">
+                <li><a href="javascript:void(window.open('discCalc.html','작전보고서 계산기','width=420,height=320,status=no,toolbar=no,scrollbars=no'))" class="sidebar-menuitem">작전보고서 계산기</a></li>
+                <li><a href="spinesimul/index.html" target="_blank" class="sidebar-menuitem">SD 시뮬레이터</a></li>
+            </ul>
+            <li>
+                <a class="sidebar-menuitem" href="https://discord.gg/qrG9gf9"><i class="fa fa-question-circle fa-lg"></i> About / Contact </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="container" style="height: 100%; padding: 0px;" id="main">
+    <iframe name="body" src="main.html" style="border:0;" height="99%" width="100%"></iframe>
+</div>
+  </body>
 </html>

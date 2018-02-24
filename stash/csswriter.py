@@ -1,16 +1,11 @@
 import os
 
-data = open('result1.txt', 'w')
+data = open('result.txt', 'w')
 css=''
 
-for i in range(1001, 1009):
+for i in range(1, 211):
 	css = '.doll-link a#number' + str(i) + """ {
- background-image: url(../images/dolls/""" + str(i) + """.png);
-  background-position: 54% 4%;
-}
-
-.doll-link a#number""" + str(i) + """:hover {
-  background-image: url(..//images/dolls/""" + str(i) + """_1.png);
+ background-image: url(../images/portrait/""" + str(i) + """.png);
 }
 
 """

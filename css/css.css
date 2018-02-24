@@ -144,7 +144,7 @@ body {
 
   .typeicon {
     background-color: #000000;
-    padding-bottom: 1px;
+    height: 30px;
   }
 
   .star1 {
@@ -210,4 +210,8 @@ body {
     border: 2px solid gray;
     border-radius: 2px;
     padding: 10px;
+  }
+
+  .nick {
+    display: none;
   }
