@@ -14,9 +14,9 @@ function searchFunction() {
 			div[i].style.display="none";
 		}
 	}
-	for (i=0; i<div.length; i++) {
-		if (c[i].innerHTML.toUpperCase().indexOf(filter)>-1){
-			div[i].style.display="";
+	for (i = 0; i< div.length; i++) {
+		if (c[i].innerHTML.toUpperCase().indexOf(filter)>-1) {
+			div[i].style.display ="";
 		}
 		else {
 			div[i].style.display="none";
