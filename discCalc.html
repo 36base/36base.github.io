@@ -5,38 +5,256 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script type="text/javascript" src="js/expdisc.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/calc.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style>
+body {
+	padding-top: 70px;
+}
+img {
+	max-width: 100%;
+}
+
+.navbar-inverse .navbar-brand {
+	color: #eee;
+}
+.navbar-inverse .navbar-nav>li>a {
+	color: #eee;
+}
+.page-header {
+	margin: 10px 0 20px;
+}
+.input-group {
+	margin-bottom: 4px;
+}
+.input-group > .input-group-addon {
+	width: 100px;
+}
+.pull-right > input[type=checkbox], input[type=radio] {
+	margin: 0;
+}
+
+.rmb {
+	color: red;
+}
+.usd {
+	color: orange;
+}
+.twd {
+	color: green;
+}
+.hkd {
+	color: #00f;
+}
+
+@media (max-width: 320px) and (orientation: portrait) {
+	body, .btn {
+		font-size: 11px;
+	}
+}
+@media (min-width: 321px) and (max-width: 360px) and (orientation: portrait) {
+	body, .btn {
+		font-size: 12px;
+	}
+}
+@media (min-width: 361px) and (max-width: 400px) and (orientation: portrait) {
+	body, .btn {
+		font-size: 13px;
+	}
+}
+@media (min-width: 320px) and (max-width: 479px) and (orientation: portrait) {
+	.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+		padding: 4px;
+	}
+}
+</style>
 </head>
 <body style="padding: 15px;">
-	<h2 style="margin-left: 10px;">보고서 계산기</h2>
-	<form id="expForm" style="margin-left: 55px; margin-top: 35px;">
-		<div class="inputLine">
-			<label>
-				<span class="textLabel">현재 레벨</span>
-				<span class="inputWrap"><input type="number" name="currentLevel" onfocus="this.value='';" /></span>
-			</label>
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">전술인형<span class="pull-right" style="font-size: 14px"><input type="checkbox" id="oath"> 서약</span></h3>
+				</div>
+				<div class="panel-body">
+					<form>
+						<div class="input-group">
+							<span class="input-group-addon">현재 레벨</span>
+								<input type="text" class="form-control" id="nowLv" pattern="[0-9]*" inputmode="numeric" aria-describedby="addon1">
+						</div>
+						<div class="input-group">
+							<span class="input-group-addon">현재 경험치</span>
+							<input type="text" class="form-control" id="nowExp" pattern="[0-9]*" inputmode="numeric" aria-describedby="addon2">
+						</div>
+						<div class="input-group">
+							<span class="input-group-addon">목표 레벨</span>
+							<input type="text" class="form-control" id="targetLv" pattern="[0-9]*" inputmode="numeric" aria-describedby="addon3">
+						</div>
+					</form>
+					<hr>작전보고서 : <span id="result">0</span>개
+				</div>
+			</div>
 		</div>
-		<div class="inputLine">
-			<label>
-				<span class="textLabel">현재 경험치량</span>
-				<span class="inputWrap"><input type="number" name="currentExp" onfocus="this.value='';" /></span>
-			</label>
-		</div>
-		<div class="inputLine">
-			<label>
-				<span class="textLabel">목표 레벨</span>
-				<span class="inputWrap"><input type="number" name="targetLevel" onfocus="this.value='';" /></span>
-			</label>
-		</div>
-		<div class="inputLine">
-			<input type="submit" class="submit" value="계산">
-		</div>
-		</form>
-		<div class="resultArea" style="margin-left: 55px; margin-top: 10px;">
+	</div>
+<script>
+	var dollAccExp = new Array();
+dollAccExp[0] = 0;
+dollAccExp[1] = 0;
+dollAccExp[2] = 100;
+dollAccExp[3] = 300;
+dollAccExp[4] = 600;
+dollAccExp[5] = 1000;
+dollAccExp[6] = 1500;
+dollAccExp[7] = 2100;
+dollAccExp[8] = 2800;
+dollAccExp[9] = 3600;
+dollAccExp[10] = 4500;
+dollAccExp[11] = 5500;
+dollAccExp[12] = 6600;
+dollAccExp[13] = 7800;
+dollAccExp[14] = 9100;
+dollAccExp[15] = 10500;
+dollAccExp[16] = 12000;
+dollAccExp[17] = 13600;
+dollAccExp[18] = 15300;
+dollAccExp[19] = 17100;
+dollAccExp[20] = 19000;
+dollAccExp[21] = 21000;
+dollAccExp[22] = 23100;
+dollAccExp[23] = 25300;
+dollAccExp[24] = 27600;
+dollAccExp[25] = 30000;
+dollAccExp[26] = 32500;
+dollAccExp[27] = 35100;
+dollAccExp[28] = 37900;
+dollAccExp[29] = 41000;
+dollAccExp[30] = 44400;
+dollAccExp[31] = 48600;
+dollAccExp[32] = 53200;
+dollAccExp[33] = 58200;
+dollAccExp[34] = 63600;
+dollAccExp[35] = 69400;
+dollAccExp[36] = 75700;
+dollAccExp[37] = 82400;
+dollAccExp[38] = 89600;
+dollAccExp[39] = 97300;
+dollAccExp[40] = 105500;
+dollAccExp[41] = 114300;
+dollAccExp[42] = 123600;
+dollAccExp[43] = 133500;
+dollAccExp[44] = 144000;
+dollAccExp[45] = 155100;
+dollAccExp[46] = 166900;
+dollAccExp[47] = 179400;
+dollAccExp[48] = 192500;
+dollAccExp[49] = 206400;
+dollAccExp[50] = 221000;
+dollAccExp[51] = 236400;
+dollAccExp[52] = 252500;
+dollAccExp[53] = 269400;
+dollAccExp[54] = 287100;
+dollAccExp[55] = 305700;
+dollAccExp[56] = 325200;
+dollAccExp[57] = 345600;
+dollAccExp[58] = 366900;
+dollAccExp[59] = 389200;
+dollAccExp[60] = 412500;
+dollAccExp[61] = 436800;
+dollAccExp[62] = 462100;
+dollAccExp[63] = 488400;
+dollAccExp[64] = 515800;
+dollAccExp[65] = 544300;
+dollAccExp[66] = 573900;
+dollAccExp[67] = 604700;
+dollAccExp[68] = 636700;
+dollAccExp[69] = 669900;
+dollAccExp[70] = 704300;
+dollAccExp[71] = 749400;
+dollAccExp[72] = 796200;
+dollAccExp[73] = 844800;
+dollAccExp[74] = 895200;
+dollAccExp[75] = 947400;
+dollAccExp[76] = 1001400;
+dollAccExp[77] = 1057300;
+dollAccExp[78] = 1115200;
+dollAccExp[79] = 1175000;
+dollAccExp[80] = 1236800;
+dollAccExp[81] = 1300700;
+dollAccExp[82] = 1366700;
+dollAccExp[83] = 1434800;
+dollAccExp[84] = 1505100;
+dollAccExp[85] = 1577700;
+dollAccExp[86] = 1652500;
+dollAccExp[87] = 1729600;
+dollAccExp[88] = 1809100;
+dollAccExp[89] = 1891000;
+dollAccExp[90] = 1975300;
+dollAccExp[91] = 2087900;
+dollAccExp[92] = 2204000;
+dollAccExp[93] = 2323500;
+dollAccExp[94] = 2446600;
+dollAccExp[95] = 2573300;
+dollAccExp[96] = 2703700;
+dollAccExp[97] = 2837800;
+dollAccExp[98] = 2975700;
+dollAccExp[99] = 3117500;
+dollAccExp[100] = 3263200;
+dollAccExp[101] = 3363200;
+dollAccExp[102] = 3483200;
+dollAccExp[103] = 3623200;
+dollAccExp[104] = 3783200;
+dollAccExp[105] = 3963200;
+dollAccExp[106] = 4163200;
+dollAccExp[107] = 4383200;
+dollAccExp[108] = 4623200;
+dollAccExp[109] = 4903200;
+dollAccExp[110] = 5263200;
+dollAccExp[111] = 5743200;
+dollAccExp[112] = 6383200;
+dollAccExp[113] = 7283200;
+dollAccExp[114] = 8483200;
+dollAccExp[115] = 10083200;
+dollAccExp[116] = 12283200;
+dollAccExp[117] = 15283200;
+dollAccExp[118] = 19283200;
+dollAccExp[119] = 24283200;
+dollAccExp[120] = 30283200;
 
-		</div>
+document.getElementById("nowLv").addEventListener("keyup", calc);
+document.getElementById("targetLv").addEventListener("keyup", calc);
+document.getElementById("oath").addEventListener("change", calc);
 
+function calc() {
+	var nowLv = document.getElementById("nowLv").value;
+	var targetLv = document.getElementById("targetLv").value;
+	var oath = document.getElementById("oath").checked + 1;
+	var report = 0;
+	var temp = 0;
+	var nowExp = 0;
+
+	if(dollAccExp[nowLv+1] - dollAccExp[nowLv] > nowExp && nowExp >= 0 && targetLv > nowLv) {
+		if(targetLv > 115) {
+			temp = nowLv > 115 ? nowLv : 115;
+			report += Math.ceil((dollAccExp[targetLv] - dollAccExp[temp]) / (3000 * oath));
+			targetLv = 115;
+		}
+		if(targetLv > 110 && nowLv < 115) {
+			temp = nowLv > 110 ? nowLv : 110;
+			report += Math.ceil((dollAccExp[targetLv] - dollAccExp[temp]) / (3000 * oath));
+			targetLv = 110;
+		}
+		if(targetLv > 100 && nowLv < 110) {
+			temp = nowLv > 100 ? nowLv : 100;
+			report += Math.ceil((dollAccExp[targetLv] - dollAccExp[temp]) / (3000 * oath));
+			targetLv = 100;
+		}
+		if(targetLv <= 100 && nowLv < 100) {
+			report += Math.ceil((dollAccExp[targetLv] - dollAccExp[nowLv]) / 3000);
+		}
+
+		document.getElementById("result").innerText = report;
+	}
+}
+
+</script>
 </body>
 </html>
