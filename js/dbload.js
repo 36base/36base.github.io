@@ -30,6 +30,8 @@ function loadData(number){
           document.getElementById("speedvalue").innerHTML = json[i].stats.speed;
           document.getElementById("armorvalue").innerHTML = json[i].stats.armor;
           document.getElementById("critvalue").innerHTML = json[i].stats.crit;
+          buildtime = new Date(json[i].buildTime * 1000).toISOString().substr(11, 8);
+          document.getElementById("buildtime").innerHTML = buildtime;
           imagepath = imagepath + number + ".png";
           document.getElementById("dollimage").src = imagepath;
         }
@@ -51,3 +53,4 @@ function damageToggle(){
     document.getElementById("dollimage").src = imagepath;
 }
 }
+
