@@ -49,7 +49,7 @@ function damageToggle(){
   }
   else if (isdamage==false) {
     isdamage=true;
-    imagepath = imagepath + currentnumber + "_1.png";
+    imagepath = imagepath + currentnumber + "_D.png";
     document.getElementById("dollimage").src = imagepath;
 }
 }
