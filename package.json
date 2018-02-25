@@ -1,0 +1,52 @@
+{
+  "name": "36db.github.io",
+  "version": "1.0.0",
+  "description": "소녀전선 데이터베이스",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node_modules/.bin/webpack-dev-server --config ./webpack/dev.config.js --progress --colors",
+    "build": "webpack --verbose --color --display-error-details --config webpack/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/36DB/36DB.github.io"
+  },
+  "author": "Angrypepsi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/36DB/36DB.github.io/issues"
+  },
+  "homepage": "https://github.com/36DB/36DB.github.io#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.10",
+    "eslint": "^4.18.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.9",
+    "react-hot-loader": "^3.1.3",
+    "style-loader": "^0.20.2",
+    "uglifyjs-webpack-plugin": "^1.2.2",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "dependencies": {
+    "girlsfrontline-core": "^0.1.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "webpack": "^3.11.0"
+  }
+}

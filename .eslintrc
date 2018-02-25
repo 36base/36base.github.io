@@ -1,0 +1,17 @@
+{
+    "parser": "babel-eslint",
+    "extends": ["airbnb"],
+    "env": {
+        "es6": true,
+        "browser": true
+    },
+    
+    "rules": {
+        "class-methods-use-this": "off",
+        "import/no-unresolved": "off",
+        "import/extensions": "off",
+        "arrow-parens": "off",
+        "jsx-a11y-no-noninteractie-element-interactions": "off",
+        "no-restricted-syntax": "off"
+    }
+}
