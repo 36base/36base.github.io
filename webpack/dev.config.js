@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const projDir = path.resolve(__dirname, '..');
 
@@ -20,8 +21,9 @@ module.exports = {
   },
 
   output: {
-    path: path.resolve(projDir, 'dev'),
-    filename: 'bundle.js',
+    filename: 'js/bundle.js',
+    path: path.resolve(projDir, 'assets'),
+    publicPath: 'http://localhost:8080/assets/'
   },
 
   module: {
@@ -33,23 +35,27 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [
-          require.resolve('style-loader'),
-          {
-            loader: require.resolve('css-loader'),
-            options: {
-              importLoaders: 1,
-              modules: true,
-              localIdentName: '[path][name]__[local]--[hash:base64:5]',
-            },
-          },
-        ],
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: 'css-loader'
+        }),
       },
+      {
+        test: /\.(jpe?g|png|gif)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            publicPath: '../',
+            name: "img/[hash].[ext]"
+          }
+        }
+      }
     ],
   },
 
   plugins: [
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
+    new ExtractTextPlugin('css/style.css')
   ],
 };
