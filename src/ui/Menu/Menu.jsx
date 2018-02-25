@@ -9,31 +9,19 @@ export default class Menu extends React.Component {
         {
           name: '소녀전선 도감',
           children: [
-            {
-              name: '전술인형 도감',
-            },
-            {
-              name: '전술요정 도감',
-            },
-            {
-              name: '인형장비 도감',
-            },
+            { name: '전술인형 도감' },
+            { name: '전술요정 도감' },
+            { name: '인형장비 도감' },
           ],
         },
         {
           name: '기타 편의기능',
           children: [
-            {
-              name: '작전보고서 계산기',
-            },
-            {
-              name: 'SD 시뮬레이터',
-            },
+            { name: '작전보고서 계산기' },
+            { name: 'SD 시뮬레이터' },
           ],
         },
-        {
-          name: 'About/Contact',
-        },
+        { name: 'About/Contact' },
       ],
     };
 
