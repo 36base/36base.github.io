@@ -18,6 +18,7 @@ module.exports = {
   devServer: {
     contentBase: './',
     hot: true,
+    historyApiFallback: true
   },
 
   output: {
@@ -31,7 +32,7 @@ module.exports = {
       {
         test: /\.(js|jsx)?$/,
         exclude: /node_modules/,
-        use: ['babel-loader', 'eslint-loader'],
+        use: ['babel-loader'],
       },
       {
         test: /\.css$/,
@@ -45,7 +46,7 @@ module.exports = {
         use: {
           loader: 'file-loader',
           options: {
-            publicPath: '../',
+            publicPath: 'http://localhost:8080/assets',
             name: "img/[hash].[ext]"
           }
         }

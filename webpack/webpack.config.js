@@ -15,9 +15,9 @@ module.exports = {
   },
 
   output: {
-    path: projDir,
-    filename: 'bundle.js',
-    publicPath: proj_dir
+    path: path.resolve(projDir, 'assets'),
+    filename: 'js/bundle.js',
+    publicPath: projDir
   },
 
   module: {

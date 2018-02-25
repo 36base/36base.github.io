@@ -1,13 +1,12 @@
 .wrapper {
-	position: relative;
-	display: flex;
+	position: absolute;
   height: 100%;
 }
 
 .wrapper:after {
   content: "";
 	display: block;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -15,4 +14,8 @@
 	background-image: url('./resources/bg.jpg');
 	opacity: 0.1;
 	z-index: -1;
+}
+
+.content {
+	margin-left: 300px;
 }

@@ -1,5 +1,6 @@
 #menu {
-  flex-basis: 300px;
+  position: fixed;
+  width: 300px;
   font-size: 16px;
   font-weight: 200;
   text-align: left;
@@ -17,6 +18,12 @@
   padding: 0
 }
 
+#menu li > a {
+  color: #e1ffff;
+  text-decoration: none;
+  display: block;
+}
+
 .menu-item {
   display: block;
   cursor: pointer;
@@ -27,6 +34,7 @@
   color: #e1ffff;
   font-weight: 200;
   background-color: #2e353d;
+  border-bottom: 1px solid #23282e;
 }
 
 .menu-item.expandable:after {
@@ -49,12 +57,14 @@
   line-height: 28px;
   color: #e1ffff;
   background-color: #181c20;
+  border-bottom: 1px solid #23282e;
 }
 
 .menu-subitem:before {
   font-family: FontAwesome;
   content: "\f105";
   display: inline-block;
+  float: left;
   padding-right: 10px;
   vertical-align: middle;
 }
