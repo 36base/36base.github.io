@@ -10,7 +10,7 @@ module.exports = {
   },
 
   resolve: {
-    modules: [path.resolve(projDir, 'src'), 'node_modules'],
+    modules: ['node_modules'],
     extensions: ['.js', '.jsx'],
   },
 
@@ -18,13 +18,13 @@ module.exports = {
   devServer: {
     contentBase: './',
     hot: true,
-    historyApiFallback: true
+    historyApiFallback: true,
   },
 
   output: {
     filename: 'js/bundle.js',
     path: path.resolve(projDir, 'assets'),
-    publicPath: 'http://localhost:8080/assets'
+    publicPath: 'http://localhost:8080/assets',
   },
 
   module: {
@@ -38,7 +38,7 @@ module.exports = {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: 'css-loader'
+          use: 'css-loader',
         }),
       },
       {
@@ -47,16 +47,16 @@ module.exports = {
           loader: 'file-loader',
           options: {
             publicPath: 'http://localhost:8080/assets',
-            name: "img/[hash].[ext]"
-          }
-        }
-      }
+            name: 'img/[hash].[ext]',
+          },
+        },
+      },
     ],
   },
 
   plugins: [
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new ExtractTextPlugin('css/style.css')
+    new ExtractTextPlugin('css/style.css'),
   ],
 };
