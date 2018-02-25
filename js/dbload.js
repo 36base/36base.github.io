@@ -2,6 +2,8 @@ var imagepath = "images/dolls/";
 var isdamage = false;
 var currentnumber;
 var drop = "";
+var currentskinindex = 0;
+var isskin = false;
 
 if(window.location.hash) {
   var hash = window.location.hash.substring(1);
@@ -23,6 +25,11 @@ function loadData(number){
           document.getElementById("dollname").innerHTML = json[i].name;
 
           document.getElementById("illustratorname").innerHTML = json[i].illust;
+
+          for (var s=0; s<json[i].skins.length; s++) {
+            btnstr = '<a class="btn btn-secondary" id="skin' + (s+1) + '" onclick="toggleSkin(' + (s+1) + ')">' + json[i].skins[s] + '</a>\n';
+            $(".skintoggle").append(btnstr);
+          }
 
           if(json[i].voice=="" || json[i].voice=="/"){
             document.getElementById("voicename").innerHTML = "보이스 없음";
@@ -62,14 +69,49 @@ function loadData(number){
 
 function damageToggle(){
   imagepath = "images/dolls/";
-  if (isdamage==true) {
-    isdamage=false;
+  if (currentskinindex==0){
+    if (isdamage==true) {
+      isdamage=false;
+      imagepath = imagepath + currentnumber + ".png";
+      document.getElementById("dollimage").src = imagepath;
+    }
+    else if (isdamage==false) {
+      isdamage=true;
+      imagepath = imagepath + currentnumber + "_D.png";
+      document.getElementById("dollimage").src = imagepath;
+    }
+  }
+  else {
+    if (isdamage==true) {
+      isdamage=false;
+      imagepath = imagepath + currentnumber + "_" + currentskinindex + ".png";
+      document.getElementById("dollimage").src = imagepath;
+    }
+    else if (isdamage==false) {
+      isdamage=true;
+      imagepath = imagepath + currentnumber + "_" + currentskinindex + "_D.png";
+      document.getElementById("dollimage").src = imagepath;
+    }
+  }
+}
+
+function toOriginal() {
+  if (isskin) {
+    imagepath = "images/dolls/";
+    isskin = false;
+    currentskinindex=0;
     imagepath = imagepath + currentnumber + ".png";
     document.getElementById("dollimage").src = imagepath;
   }
-  else if (isdamage==false) {
-    isdamage=true;
-    imagepath = imagepath + currentnumber + "_D.png";
-    document.getElementById("dollimage").src = imagepath;
+  else {
+    return
+  }
 }
+
+function toggleSkin(skinidex) {
+  isskin = true;
+  imagepath = "images/dolls/";
+  currentskinindex = skinidex;
+  imagepath = imagepath + currentnumber + "_" + skinidex + ".png";
+  document.getElementById("dollimage").src = imagepath;
 }
