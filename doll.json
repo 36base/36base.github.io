@@ -45,6 +45,8 @@
   "illust": "spirtie",
   "voice": "Eriko Matsui",
   "buildTime": 1200,
+  "drop": ["모든 맵"],
+  "skins": [],
   "stats": {
     "armor": 0,
     "dodge": 74,
@@ -1174,6 +1176,8 @@
   "illust": "多元菌",
   "voice": "Yui Horie",
   "buildTime": 15900,
+  "drop": ["0-2", "0-4", "4-6", "4-4E", "5-4", "5-3E", "6-3", "6-6", "6-4E"],
+  "skins": ["정통파 마녀", "성스러운 밤의 축복", "등불 아래의 여왕", "잠에서 깬 인어"],
   "stats": {
     "armor": 0,
     "dodge": 40,
