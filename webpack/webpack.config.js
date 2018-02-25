@@ -1,5 +1,6 @@
 const path = require('path');
 const UglifyPlugin = require('uglifyjs-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const proj_dir = path.resolve(__dirname, '..');
 
@@ -14,8 +15,9 @@ module.exports = {
     },
 
     output: {
-        path: proj_dir,
-        filename: 'bundle.js'
+        path: path.resolve(proj_dir, 'assets'),
+        filename: 'js/bundle.js',
+        publicPath: proj_dir
     },
 
     module: {
@@ -27,22 +29,26 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [
-                    require.resolve('style-loader'),
-                    {
-                      loader: require.resolve('css-loader'),
-                      options: {
-                        importLoaders: 1,
-                        modules: true,
-                        localIdentName: '[path][name]__[local]--[hash:base64:5]'
-                      },
+                use: ExtractTextPlugin.extract({
+                  fallback: 'style-loader',
+                  use: 'css-loader'
+                }),
+            },
+            {
+                test: /\.(jpe?g|png|gif)$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        publicPath: '../',
+                        name: "img/[hash].[ext]"
                     }
-                ]
+                }
             }
         ]
     },
 
     plugins: [
-        new UglifyPlugin()
+        new UglifyPlugin(),
+        new ExtractTextPlugin('css/style.css')
     ]
 };
