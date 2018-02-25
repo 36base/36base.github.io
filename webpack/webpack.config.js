@@ -17,7 +17,7 @@ module.exports = {
   output: {
     path: path.resolve(projDir, 'assets'),
     filename: 'js/bundle.js',
-    publicPath: projDir
+    publicPath: projDir,
   },
 
   module: {
@@ -31,8 +31,8 @@ module.exports = {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: 'css-loader'
-        })
+          use: 'css-loader',
+        }),
       },
       {
         test: /\.(jpe?g|png|gif)$/,
@@ -40,15 +40,15 @@ module.exports = {
           loader: 'file-loader',
           options: {
             publicPath: '../',
-            name: "img/[hash].[ext]"
-          }
-        }
-      }
+            name: 'img/[hash].[ext]',
+          },
+        },
+      },
     ],
   },
 
   plugins: [
     new UglifyPlugin(),
-    new ExtractTextPlugin('css/style.css')
+    new ExtractTextPlugin('css/style.css'),
   ],
 };
