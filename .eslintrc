@@ -9,6 +9,9 @@
     "rules": {
         "class-methods-use-this": "off",
         "import/no-unresolved": "off",
-        "import/extensions": "off"
+        "import/extensions": "off",
+        "arrow-parens": "off",
+        "jsx-a11y-no-noninteractie-element-interactions": "off",
+        "no-restricted-syntax": "off"
     }
 }

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './style/Menu.css';
+
 export default class Menu extends React.Component {
   constructor(props) {
     super(props);
@@ -7,51 +9,100 @@ export default class Menu extends React.Component {
     this.state = {
       menus: [
         {
+          id: 'dic',
           name: '소녀전선 도감',
+          icon: 'fa-book',
+          expanded: false,
           children: [
-            { name: '전술인형 도감' },
-            { name: '전술요정 도감' },
-            { name: '인형장비 도감' },
+            { id: 'dic-doll', name: '전술인형 도감' },
+            { id: 'dic-fairy', name: '전술요정 도감' },
+            { id: 'dic-equip', name: '인형장비 도감' },
           ],
         },
         {
+          id: 'util',
           name: '기타 편의기능',
+          icon: 'fa-archive',
+          expanded: false,
           children: [
-            { name: '작전보고서 계산기' },
-            { name: 'SD 시뮬레이터' },
+            { id: 'util-expcalc', name: '작전보고서 계산기' },
+            { id: 'util-sdsimul', name: 'SD 시뮬레이터' },
           ],
         },
-        { name: 'About/Contact' },
+        {
+          id: 'contact',
+          name: 'About/Contact',
+          icon: 'fa-question-circle',
+        },
       ],
     };
 
     this.renderItem = this.renderItem.bind(this);
+    this.toggle = this.toggle.bind(this);
+    this.route = this.route.bind(this);
   }
 
-  renderSubItem(item) {
-    return (
-      <li>{item.name}</li>
-    );
+  toggle(id) {
+    const { menus } = this.state;
+    const idx = menus.findIndex((menu) => menu.id === id);
+    const { expanded } = menus[idx];
+
+    menus[idx].expanded = !expanded;
+
+    this.setState({
+      menus: menus,
+    });
+  }
+
+  route(id) {
+    console.log(id);
   }
 
   renderItem(item) {
-    const subItems = item.children && item.children.map(this.renderSubItem);
+    const key = `menu-${item.id}`;
+    const className = `undraggable menu-item expandable ${item.expanded ? 'expanded' : ''}`;
+
     return (
-      <li>
+      <li key={key} className={className} onClick={() => this.toggle(item.id)}>
+        {item.icon && <i className={`fa fa-lg ${item.icon}`} />}
         {item.name}
-        {subItems}
+      </li>
+    );
+  }
+
+  renderSubitem(item) {
+    const key = `menu-${item.id}`;
+    const className = 'undraggable menu-subitem';
+
+    return (
+      <li key={key} className={className} onClick={() => this.route(item.id)}>
+        {item.icon && <i className={`fa fa-lg ${item.icon}`} />}
+        {item.name}
       </li>
     );
   }
 
   render() {
+    const { menus } = this.state;
+    const items = [];
+
+    for (const menu of menus) {
+      items.push(this.renderItem(menu));
+
+      if (menu.children && menu.children.length > 0 && menu.expanded) {
+        for (const submenu of menu.children) {
+          items.push(this.renderSubitem(submenu));
+        }
+      }
+    }
+
     return (
-      <div className="menu-list">
+      <nav id="menu">
         <ul>
-          {
-            this.state.menus.map(this.renderItem)}
+          <li className="undraggable menu-item title">36베이스</li>
+          {items}
         </ul>
-      </div>
+      </nav>
     );
   }
 }

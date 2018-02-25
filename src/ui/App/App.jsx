@@ -2,6 +2,7 @@ import React from 'react';
 import Menu from 'ui/Menu/Menu';
 
 import './style/App.css';
+import './style/common.css';
 
 export default class App extends React.PureComponent {
   constructor(props) {

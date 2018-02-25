@@ -16,14 +16,14 @@ module.exports = {
 
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: './dev',
+    contentBase: './',
     hot: true,
   },
 
   output: {
     filename: 'js/bundle.js',
     path: path.resolve(projDir, 'assets'),
-    publicPath: 'http://localhost:8080/assets/'
+    publicPath: 'http://localhost:8080/assets'
   },
 
   module: {
