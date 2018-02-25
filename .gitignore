@@ -5,3 +5,4 @@ package-lock.json
 yarn.lock
 yarn-error.log
 .yarnclean
+.DS_Store
