@@ -17,7 +17,7 @@ module.exports = {
   output: {
     path: path.resolve(projDir, 'assets'),
     filename: 'js/bundle.js',
-    publicPath: projDir,
+    publicPath: 'http://girlsfrontline.kr/assets',
   },
 
   module: {
@@ -39,7 +39,7 @@ module.exports = {
         use: {
           loader: 'file-loader',
           options: {
-            publicPath: '../',
+            publicPath: 'http://girlsfrontline.kr/assets',
             name: 'img/[hash].[ext]',
           },
         },

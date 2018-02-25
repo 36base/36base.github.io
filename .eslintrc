@@ -7,12 +7,6 @@
     },
 
     "rules": {
-        # "class-methods-use-this": "off",
-        # "import/no-unresolved": "off",
-        # "import/extensions": "off",
-        # "arrow-parens": "off",
-        # "jsx-a11y-no-noninteractie-element-interactions": "off",
-        # "no-restricted-syntax": "off"
         "react/prefer-stateless-function": "off",
         "jsx-a11y/anchor-is-valid": "off"
     }
