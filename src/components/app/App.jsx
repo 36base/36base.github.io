@@ -1,5 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+import ui from '../../controller/ui';
 
 import Menu from '../menu/Menu';
 import Home from '../home/Home';
@@ -13,7 +16,21 @@ import About from '../about/About';
 import './style/App.css';
 import './style/common.css';
 
-export default class App extends React.PureComponent {
+class App extends React.PureComponent {
+  constructor(props) {
+    super(props);
+
+    this.resize = this.resize.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.resize);
+  }
+
+  resize() {
+    this.props.onWindowResize();
+  }
+  
   render() {
     return (
       <Router>
@@ -33,3 +50,13 @@ export default class App extends React.PureComponent {
     );
   }
 }
+
+let dispatchToProps = (dispatch) => {
+  return {
+    onWindowResize: () => dispatch(ui.resize()),
+  };
+}
+
+App = connect(undefined, dispatchToProps)(App);
+
+export default App;

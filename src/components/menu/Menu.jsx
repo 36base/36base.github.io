@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import './style/Menu.css';
 
-export default class Menu extends React.Component {
+class Menu extends React.Component {
   constructor(props) {
     super(props);
 
@@ -92,3 +93,5 @@ export default class Menu extends React.Component {
     );
   }
 }
+
+export default Menu;
