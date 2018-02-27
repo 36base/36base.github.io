@@ -79,15 +79,15 @@ img {
 					<form>
 						<div class="input-group">
 							<span class="input-group-addon">현재 레벨</span>
-								<input type="text" class="form-control" id="nowLv" pattern="[0-9]*" inputmode="numeric" aria-describedby="addon1">
+								<input type="number" class="form-control" id="nowLv" pattern="[0-9]*" inputmode="numeric" aria-describedby="addon1">
 						</div>
 						<div class="input-group">
 							<span class="input-group-addon">현재 경험치</span>
-							<input type="text" class="form-control" id="nowExp" pattern="[0-9]*" inputmode="numeric" aria-describedby="addon2">
+							<input type="number" class="form-control" id="nowExp" pattern="[0-9]*" inputmode="numeric" aria-describedby="addon2">
 						</div>
 						<div class="input-group">
 							<span class="input-group-addon">목표 레벨</span>
-							<input type="text" class="form-control" id="targetLv" pattern="[0-9]*" inputmode="numeric" aria-describedby="addon3">
+							<input type="number" class="form-control" id="targetLv" pattern="[0-9]*" inputmode="numeric" aria-describedby="addon3">
 						</div>
 					</form>
 					<hr>작전보고서 : <span id="result">0</span>개
@@ -220,18 +220,22 @@ dollAccExp[119] = 24283200;
 dollAccExp[120] = 30283200;
 
 document.getElementById("nowLv").addEventListener("keyup", calc);
+document.getElementById("nowExp").addEventListener("keyup", calc);
 document.getElementById("targetLv").addEventListener("keyup", calc);
 document.getElementById("oath").addEventListener("change", calc);
 
 function calc() {
-	var nowLv = document.getElementById("nowLv").value;
-	var targetLv = document.getElementById("targetLv").value;
-	var oath = document.getElementById("oath").checked + 1;
-	var report = 0;
-	var temp = 0;
-	var nowExp = 0;
+	const nowLv    = parseInt(document.getElementById("nowLv").value);
+	const nowExp   = parseInt(document.getElementById("nowExp").value);
+	const targetLv = parseInt(document.getElementById("targetLv").value);
+	const oath     = document.getElementById("oath").checked + 1;
+	let report   = 0;
+	let temp     = 0;
 
-	if(dollAccExp[nowLv+1] - dollAccExp[nowLv] > nowExp && nowExp >= 0 && targetLv > nowLv) {
+	console.log('lv ' + nowLv +' ' + parseInt(dollAccExp[nowLv+1]));
+	console.log('value: ' + (parseInt(dollAccExp[nowLv+1]) - parseInt(dollAccExp[nowLv])));
+	if(((dollAccExp[nowLv+1] - dollAccExp[nowLv]) >= nowExp) && (nowExp >= 0) && (targetLv > nowLv)) {
+		console.log('asd');
 		if(targetLv > 115) {
 			temp = nowLv > 115 ? nowLv : 115;
 			report += Math.ceil((dollAccExp[targetLv] - dollAccExp[temp]) / (3000 * oath));
@@ -250,6 +254,8 @@ function calc() {
 		if(targetLv <= 100 && nowLv < 100) {
 			report += Math.ceil((dollAccExp[targetLv] - dollAccExp[nowLv]) / 3000);
 		}
+
+		console.log(report);
 
 		document.getElementById("result").innerText = report;
 	}
