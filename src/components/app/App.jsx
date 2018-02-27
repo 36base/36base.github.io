@@ -2,8 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import ui from '../../controller/ui';
-
 import Menu from '../menu/Menu';
 import Home from '../home/Home';
 import DollDict from '../doll/DollDict';
@@ -17,19 +15,6 @@ import './style/App.css';
 import './style/common.css';
 
 class App extends React.PureComponent {
-  constructor(props) {
-    super(props);
-
-    this.resize = this.resize.bind(this);
-  }
-
-  componentDidMount() {
-    window.addEventListener('resize', this.resize);
-  }
-
-  resize() {
-    this.props.onWindowResize();
-  }
   
   render() {
     return (
@@ -50,13 +35,5 @@ class App extends React.PureComponent {
     );
   }
 }
-
-let dispatchToProps = (dispatch) => {
-  return {
-    onWindowResize: () => dispatch(ui.resize()),
-  };
-}
-
-App = connect(undefined, dispatchToProps)(App);
 
 export default App;

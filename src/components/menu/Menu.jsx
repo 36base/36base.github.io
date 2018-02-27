@@ -1,6 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+
+import { resetMenu, toggleMenu } from '../../actions/menu';
 
 import './style/Menu.css';
 
@@ -8,90 +10,74 @@ class Menu extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      menus: {
-        dic: {
-          name: '소녀전선 도감',
-          icon: 'fa-book',
-          children: ['doll', 'fairy', 'equip'],
-        },
-        util: {
-          name: '기타 편의기능',
-          icon: 'fa-archive',
-          children: ['calculator', 'sdsim'],
-        },
-        about: {
-          name: 'About/content',
-          icon: 'fa-question-circle',
-          link: '/about',
-        },
-        doll: { name: '전술인형 도감', link: '/doll' },
-        fairy: { name: '전술요정 도감', link: '/fairy' },
-        equip: { name: '인형장비 도감', link: '/equip' },
-        calculator: { name: '작전보고서 계산기', link: '/calculator' },
-        sdsim: { name: 'SD 시뮬레이터', link: '/sdsim' },
-      },
-      list: ['dic', 'util', 'about'],
-    };
-
-    this.renderItem = this.renderItem.bind(this);
-    this.toggle = this.toggle.bind(this);
+    this.renderMenu = this.renderMenu.bind(this);
+    this.renderMenuGroup = this.renderMenuGroup.bind(this);
   }
 
-  toggle(id) {
-    const { menus } = this.state;
-    const expanded = menus[id].expanded || false;
-
-    menus[id].expanded = !expanded;
-
-    this.setState({
-      menus,
-    });
+  componentDidMount() {
+    window.addEventListener('resize', this.props.resetMenu);
   }
 
-  renderItem(id, level) {
-    const menu = this.state.menus[id];
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.props.resetMenu);
+  }
 
-    const key = `menu-${id}`;
-    const type = level === 0 ? 'menu-item' : 'menu-subitem';
-    const expandable = menu.children && menu.children.length > 0 ? 'expandable' : '';
+  renderMenu(menu) {
+    return menu.children ? this.renderMenuGroup(menu) : this.renderLinkItem(menu);
+  }
 
-    const className = `undraggable ${type} ${expandable}`;
-    const onClick = expandable ? () => this.toggle(id) : null;
+  renderMenuGroup(menu) {
+    const className = `undraggable ${menu.type} expandable`;
+    const onClick = () => this.props.toggleMenu(menu.id);
 
-    const item = menu.link ?
-      (
-        <li key={key} className={className}>
-          <Link to={menu.link}>{menu.icon && <i className={`fa fa-lg ${menu.icon}`} />}{menu.name}</Link>
-        </li>
-      )
-      :
-      (
-        <li key={key} className={className} onClick={onClick} aria-hidden>
+    return (
+      <li key={menu.id} className={className} onClick={onClick}>
           {menu.icon && <i className={`fa fa-lg ${menu.icon}`} />}
           {menu.name}
-        </li>
-      );
+      </li>
+    );
+  }
 
-    const children = menu.expanded ? menu.children.map(child => this.renderItem(child, 1)) : [];
+  renderLinkItem(menu) {
+    const className = `undraggable ${menu.type}`;
 
-    return [item, ...children];
+    return (
+      <li key={menu.id} className={className}>
+        <Link to={menu.link}>
+          {menu.icon && <i className={`fa fa-lg ${menu.icon}`} />}
+          {menu.name}
+        </Link>
+      </li>
+    );
   }
 
   render() {
-    const { list } = this.state;
-
     return (
       <nav id="menu">
         <ul>
           <li className="undraggable menu-item title">
             <Link to="/">36베이스</Link>
           </li>
-          {list.map(e => this.renderItem(e, 0))}
+          {this.props.menus.map(this.renderMenu)}
         </ul>
       </nav>
     );
   }
 }
+
+let stateMapper = (state) => {
+  return {
+    menus: state.menu.menus
+  };
+};
+
+let dispatchMapper = (dispatch) => {
+  return {
+    resetMenu: () => dispatch(resetMenu()),
+    toggleMenu: (id) => dispatch(toggleMenu(id)),
+  };
+}
+
+Menu = connect(stateMapper, dispatchMapper)(Menu);
 
 export default Menu;
