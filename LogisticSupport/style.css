@@ -1,0 +1,108 @@
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+.logistic-support-item{
+  background-color: #383838;
+  background-size: 300px;
+
+  margin: 30px;
+}
+
+.logistic-support-item *{
+  background: none;
+  color: #ffffff;
+  border: none;
+}
+
+.logistic-support-resource-item div{
+  color: #efaa1f;
+}
+
+.logistic-support-item-btn{
+  color: #efaa1f;
+}
+
+.form-logistic-support-resource-icon{
+  font-size: 30px;
+}
+
+ .form-logistic-support-reward-icon{
+   width: 50px;
+ }
+
+ .form-logistic-support-resource-input{
+   width: 70px;
+   margin-left: 5px;
+   margin-bottom: 10px;
+ }
+
+#logistic-support-list-table{
+  height:100px;
+  overflow-y: scroll;
+}
+
+.pop-layer .pop-container {
+  padding: 30px;
+}
+
+.pop-layer p.ctxt {
+  color: #666;
+  line-height: 25px;
+}
+
+.pop-layer {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 410px;
+  height: auto;
+  background-color: white;
+  border: 5px solid gray;
+  z-index: 10;
+}
+
+.dim-layer {
+  display: none;
+  position: fixed;
+  _position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+.dim-layer .dimBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .5;
+  filter: alpha(opacity=50);
+}
+
+.dim-layer .pop-layer {
+  display: block;
+}
+
+a.btn-layerClose {
+  display: inline-block;
+  height: 25px;
+  padding: 0 14px 0;
+  border: 1px solid #304a8a;
+  background-color: #3f5a9d;
+  font-size: 13px;
+  color: #fff;
+  line-height: 25px;
+}
+
+a.btn-layerClose:hover {
+  border: 1px solid #091940;
+  background-color: #1f326a;
+  color: #fff;
+}

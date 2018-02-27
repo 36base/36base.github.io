@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>36DB 군수 추천기</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="lib/require.js"></script>
+  <script src="./logisticSupport.js"></script>
+  <script src="./template.js"></script>
+  <script src="./script.js"></script>
+</head>
+<body>
+  <div class="jumbotron" style="background-color: white;">
+    <h1>36DB 군수 추천기</h1>
+    <hr style="border-width: medium; border-color: black;"/>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-12 col-sm-12">
+        <div class="row">
+          <div class="col">
+            <h4 style="color: gray;">전역</h4>
+            <hr style="border-width: 2px; color: gray;"/>
+            <div class="form-group">
+              <label for="form-logistic-support-available-area">현재 열린 최고 전역</label>
+              <select class="form-control" id="form-logistic-support-available-area" style="">
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h4 style="color: gray;">딜레이</h4>
+            <hr style="border-width: 2px; color: gray;"/>
+            <div class="form-group">
+              군수지원을 다시 돌리는데 걸리는 시간 (분) :
+              <input id="form-logistic-support-delay" type="number"
+                class="form-control" value="30">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h4 style="color: gray;">자원 비율</h4>
+            <hr style="border-width: 2px; color: gray;"/>
+            <div class="form-group">
+              <div class="row">
+                <div class="col-6 col-sm-6 col-md-3 clearfix">
+                  <i class="fa fa-male form-logistic-support-resource-icon float-left"></i>
+                  <input id="form-logistic-support-resource-manpower" type="number"
+                    class="form-control float-right form-logistic-support-resource-input"
+                    value="1">
+                </div>
+                <div class="col-6 col-sm-6 col-md-3 clearfix">
+                  <i class="fa fa-archive form-logistic-support-resource-icon float-left"></i>
+                  <input id="form-logistic-support-resource-ammo" type="number"
+                    class="form-control float-right form-logistic-support-resource-input"
+                    value="1">
+                </div>
+                <div class="col-6 col-sm-6 col-md-3 clearfix">
+                  <i class="fa fa-cutlery form-logistic-support-resource-icon float-left"></i>
+                  <input id="form-logistic-support-resource-food" type="number"
+                    class="form-control float-right form-logistic-support-resource-input"
+                    value="1">
+                </div>
+                <div class="col-6 col-sm-6 col-md-3 clearfix">
+                  <i class="fa fa-cog form-logistic-support-resource-icon float-left"></i>
+                  <input id="form-logistic-support-resource-part" type="number"
+                    class="form-control float-right form-logistic-support-resource-input"
+                    value="3">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h4 style="color: gray;">특수획득 (현재 이용불가)</h4>
+            <hr style="border-width: 2px; color: gray;"/>
+            <form>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="form-logistic-support-reward-radio" checked>
+                  N/A
+                </label>
+              </div>
+              <label class="radio-inline">
+                <input type="radio" name="form-logistic-support-reward-radio" disabled>
+                <img class="form-logistic-support-reward-icon" src="./img/gf_icon_doll_manufacture.png">
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="form-logistic-support-reward-radio" disabled>
+                <img class="form-logistic-support-reward-icon" src="./img/gf_icon_doll_quick_manufacture.png">
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="form-logistic-support-reward-radio" disabled>
+                <img class="form-logistic-support-reward-icon" src="./img/gf_icon_doll_quick_reinforce.png">
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="form-logistic-support-reward-radio" disabled>
+                <img class="form-logistic-support-reward-icon" src="./img/gf_icon_equip_manufacture.png">
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="form-logistic-support-reward-radio" disabled>
+                <img class="form-logistic-support-reward-icon" src="./img/gf_icon_furniture_coin.png">
+              </label>
+            </form>
+          </div>
+        </div>
+        <br/>
+        <br/>
+        <div class="row mx-auto">
+          <button class="btn mx-auto" id="form-logistic-support-recommend-button"
+            style="width: 200px; height: 50px; background-color: black; color: white;">
+            군수지원 추천
+          </button>
+        </div>
+        <br/>
+        <br/>
+      </div>
+      <div class="col-md-6 table-responsive" style="height: 600px; overflow-y: auto;">
+        <table class="table table-bordered">
+          <thead class="thead-dark">
+            <tr>
+              <th>임무번호</th>
+              <th>인력</th>
+              <th>탄약</th>
+              <th>식량</th>
+              <th>부품</th>
+              <th>시간</th>
+              <!--<th>조건</th>-->
+              <th>부가</th>
+            </tr>
+          </thead>
+          <tbody id="logistic-support-list-table" class="mx-auto">
+            <template id="template-logistic-support-table-item">
+              <tr>
+                <td align="center">{number}</td>
+                <td align="center">{resource.manpower}</td>
+                <td align="center">{resource.ammo}</td>
+                <td align="center">{resource.food}</td>
+                <td align="center">{resource.part}</td>
+                <td align="center">{time}</td>
+                <td>{reward}</td>
+              </tr>
+            </template>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="dim-layer">
+      <div class="dimBg"></div>
+      <div id="logistic-support-result" class="pop-layer">
+        <div class="pop-container">
+          <div class="pop-contents">
+            <div class="row">
+              <div class="col">
+                <h4>군수지원 추천</h4>
+                <hr style="border-width: 2px; color: gray;"/>
+                <br/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <table class="table">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th>지역</th>
+                      <th><i class="float-left fa fa-child"></i></th>
+                      <th><i class="float-left fa fa-archive"></i></th>
+                      <th><i class="float-left fa fa-cutlery"></i></th>
+                      <th><i class="float-left fa fa-cog"></i></th>
+                      <th>시간</th>
+                    </tr>
+                  </thead>
+                  <tbody id="logistic-support-result-list-table" class="mx-auto">
+                    <template id="template-logistic-support-result-table-item">
+                      <tr>
+                        <td align="center">{number}</td>
+                        <td align="center">{resource.manpower}</td>
+                        <td align="center">{resource.ammo}</td>
+                        <td align="center">{resource.food}</td>
+                        <td align="center">{resource.part}</td>
+                        <td align="center">{time}</td>
+                      </tr>
+                    </template>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <button class="btn pop-closeBtn float-right"
+                  style="width: 100px; height: 50px; background-color: black; color: white;">
+                  닫기
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
