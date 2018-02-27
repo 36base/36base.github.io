@@ -3,7 +3,7 @@ import { CLEAR_MENU, INIT_MENU, TOGGLE_MENU } from '../actions/menu';
 const menuList = {
   dic: { id: 'dic', name: '소녀전선 도감', type: 'menu-item', icon: 'fa-book', children: ['doll', 'fairy', 'equip']},
   util: { id: 'util', name: '기타 편의기능', type: 'menu-item', icon: 'fa-archive', children: ['calculator', 'sdsim']},
-  about: { id: 'about', name: 'About/content', type: 'menu-item', icon: 'fa-question-circle', link: '/about'},
+  about: { id: 'about', name: 'About / Contact', type: 'menu-item', icon: 'fa-question-circle', link: '/about'},
   doll: { id: 'doll', name: '전술인형 도감', type: 'menu-subitem', link: '/doll' },
   fairy: { id: 'fairy', name: '전술요정 도감', type: 'menu-subitem', link: '/fairy' },
   equip: { id: 'equip', name: '인형장비 도감', type: 'menu-subitem', link: '/equip' },
