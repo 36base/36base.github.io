@@ -1,9 +1,13 @@
 import React from 'react';
 
+import DollCard from './card/DollCard';
+
 export default class DollDict extends React.Component {
   render() {
     return (
-      <h1>인형도감</h1>
+      <div>
+        <DollCard />
+      </div>
     );
   }
 }

@@ -1,9 +1,16 @@
-export const RESET_MENU = 'RESET_MENU';
+export const CLEAR_MENU = 'CLEAR_MENU';
+export const INIT_MENU = 'RESET_MENU';
 export const TOGGLE_MENU = 'TOGGLE_MENU';
 
-export function resetMenu() {
+export function clearMenu() {
   return {
-    type: RESET_MENU,
+    type: CLEAR_MENU,
+  };
+}
+
+export function initMenu() {
+  return {
+    type: INIT_MENU,
   };
 }
 

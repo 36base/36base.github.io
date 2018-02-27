@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import { resetMenu, toggleMenu } from '../../actions/menu';
+import { clearMenu, initMenu, toggleMenu } from '../../actions/menu';
 
 import './style/Menu.css';
 
@@ -14,12 +14,10 @@ class Menu extends React.Component {
     this.renderMenuGroup = this.renderMenuGroup.bind(this);
   }
 
-  componentDidMount() {
-    window.addEventListener('resize', this.props.resetMenu);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.props.resetMenu);
+  componentWillReceiveProps(newProps) {
+    if(this.props.isMobile != newProps.isMobile) {
+      newProps.isMobile ? this.props.clearMenu() : this.props.initMenu();
+    }
   }
 
   renderMenu(menu) {
@@ -51,12 +49,29 @@ class Menu extends React.Component {
     );
   }
 
+  renderNavicon() {
+    if(!this.props.isMobile) {
+      return null;
+    }
+
+    const onClick = this.props.menus.length > 0 ? this.props.clearMenu : this.props.initMenu;
+    const style = {
+      display: "inline-block",
+      float: "right",
+      marginRight: "15px",
+    };
+
+    return (
+      <span style={style} onClick={onClick}><i class="fa fa-lg fa-navicon" /></span>
+    );
+  }
+
   render() {
     return (
       <nav id="menu">
         <ul>
           <li className="undraggable menu-item title">
-            <Link to="/">36베이스</Link>
+            <Link to="/">36베이스{this.renderNavicon()}</Link>
           </li>
           {this.props.menus.map(this.renderMenu)}
         </ul>
@@ -67,13 +82,15 @@ class Menu extends React.Component {
 
 let stateMapper = (state) => {
   return {
-    menus: state.menu.menus
+    isMobile: state.common.isMobile,
+    menus: state.menu.menus,
   };
 };
 
 let dispatchMapper = (dispatch) => {
   return {
-    resetMenu: () => dispatch(resetMenu()),
+    clearMenu: () => dispatch(clearMenu()),
+    initMenu: () => dispatch(initMenu()),
     toggleMenu: (id) => dispatch(toggleMenu(id)),
   };
 }

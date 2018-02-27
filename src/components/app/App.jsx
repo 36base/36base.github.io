@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
+import { resize } from '../../actions/common';
+
 import Menu from '../menu/Menu';
 import Home from '../home/Home';
 import DollDict from '../doll/DollDict';
@@ -15,6 +17,14 @@ import './style/App.css';
 import './style/common.css';
 
 class App extends React.PureComponent {
+
+  componentWillMount() {
+    window.addEventListener('resize', this.props.resize);
+  }
+
+  componentWillUnmount() {
+    window.addEventListener('resize', this.props.resize);
+  }
   
   render() {
     return (
@@ -35,5 +45,13 @@ class App extends React.PureComponent {
     );
   }
 }
+
+let dispatchMapper = (dispatch) => {
+  return {
+    resize: () => dispatch(resize()),
+  };
+}
+
+App = connect(undefined, dispatchMapper)(App);
 
 export default App;

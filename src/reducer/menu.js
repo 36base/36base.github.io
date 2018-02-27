@@ -1,6 +1,6 @@
-import { RESET_MENU, TOGGLE_MENU } from '../actions/menu';
+import { CLEAR_MENU, INIT_MENU, TOGGLE_MENU } from '../actions/menu';
 
-const menuList =  {
+const menuList = {
   dic: { id: 'dic', name: '소녀전선 도감', type: 'menu-item', icon: 'fa-book', children: ['doll', 'fairy', 'equip']},
   util: { id: 'util', name: '기타 편의기능', type: 'menu-item', icon: 'fa-archive', children: ['calculator', 'sdsim']},
   about: { id: 'about', name: 'About/content', type: 'menu-item', icon: 'fa-question-circle', link: '/about'},
@@ -11,20 +11,25 @@ const menuList =  {
   sdsim: { id: 'sdsim', name: 'SD 시뮬레이터', type: 'menu-subitem', link: '/sdsim' },
 };
 
-function getInitialMenus() {
-  return screen.width < 767 ? [] : [menuList.dic, menuList.util, menuList.about];
+const initialMenuList = [menuList.dic, menuList.util, menuList.about];
+const initialState = {
+  menus: screen.width < 767 ? [] : initialMenuList.slice(),
 };
 
-const initialState = {
-  menus: getInitialMenus()
-};
+function foldAllMenus() {
+  Object.keys(menuList).forEach((key) => {
+    menuList[key].expanded && (menuList[key].expanded = false)
+  });
+}
 
 const reducer = (state = initialState, action) => {
   switch(action.type) {
-    case RESET_MENU:
-      return Object.assign({}, state, {
-        menus: getInitialMenus(),
-      });
+    case CLEAR_MENU:
+      foldAllMenus();
+      return Object.assign({}, state, {menus: []});
+    case INIT_MENU:
+      foldAllMenus();
+      return Object.assign({}, state, {menus: initialMenuList.slice()});
     case TOGGLE_MENU:
       const menus = state.menus.slice();
       const target = menuList[action.id];

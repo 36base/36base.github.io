@@ -1,0 +1,29 @@
+.dollcard {
+  display: flex;
+  flex-direction: column;
+  width: 170px;
+  height: 300px;
+  border: none;
+  margin: 2px;
+  background-image: url('./resources/cardbg.png');
+}
+
+.dollcard--typeicon {
+  position: absolute;
+  float: left;
+  z-index: 99;
+}
+
+.dollcard--header {
+  width: 100%;
+  height: 20px;
+  text-align: right;
+  color: yellow;
+}
+
+.dollcard--content {
+  width: 170px;
+  height: 212px;
+  overflow: hidden;
+  z-index: -1;
+}

@@ -19,3 +19,10 @@
 .content {
 	margin-left: 300px;
 }
+
+@media(max-width: 767px) {
+	.content {
+		margin-left: 0px;
+		margin-top: 55px;
+	}
+}
