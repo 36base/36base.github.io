@@ -1,9 +1,8 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
 i {
   padding-right: 8px;
 }
-
-
-
 
 .undraggable {
   user-drag: none; 
@@ -12,4 +11,8 @@ i {
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+}
+
+body {
+  font-family: "Noto Sans KR"!important;
 }
