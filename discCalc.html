@@ -13,12 +13,12 @@
 </head>
 <body>
 	<div class="jumbotron" style="background-color: white;">
-		<h1>36DB 작전보고서 계산기</h1>
+		<h1>작전보고서 계산기</h1>
 		<hr style="border-width: medium; border-color: black;"/>
 	</div>
 	<div class="container">
-		<div class="row">
-			<div class="col-sm-6">
+		<div class="row mx-auto">
+			<div class="col-12 col-sm-12 col-md-8 mx-auto">
 				<div class="form-group">
 					<label for="form-disc-calc-nowLv">현재 레벨 : </label>
 					<input id="form-disc-calc-nowLv" class="form-control" type="number" inputmode="numeric" value="0" tabindex="1">
@@ -39,6 +39,8 @@
 				</div>
 				<hr style="border-width: 2px; color: gray;">
 				<h5>필요한 작전보고서 : <span id="disc-calc-result">N/A</span>개</h5>
+				<br/>
+				<div>레벨 계산 구간은 1~100, 100~110, 110~115, 115~120으로 분리되어있으니 참고 바랍니다</div>
 			</div>
 		</div>
 	</div>
