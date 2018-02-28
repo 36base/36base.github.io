@@ -5,7 +5,7 @@ const initialState = {
 };
 
 const reducer = (state = initialState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case RESIZE:
       return Object.assign({}, state, {
         isMobile: screen.width < 767,

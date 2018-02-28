@@ -16,7 +16,11 @@ class Menu extends React.Component {
 
   componentWillReceiveProps(newProps) {
     if (this.props.isMobile !== newProps.isMobile) {
-      newProps.isMobile ? this.props.clearMenu() : this.props.initMenu();
+      if (newProps.isMobile) {
+        this.props.clearMenu();
+      } else {
+        this.props.initMenu();
+      }
     }
   }
 
@@ -60,7 +64,7 @@ class Menu extends React.Component {
     };
 
     return (
-      <span style={style} onClick={onClick}><i className="fa fa-lg fa-navicon" /></span>
+      <span role="button" tabIndex={0} style={style} onClick={onClick}><i className="fa fa-lg fa-navicon" /></span>
     );
   }
 

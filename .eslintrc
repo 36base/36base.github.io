@@ -9,6 +9,12 @@
     "rules": {
         "react/prefer-stateless-function": "off",
         "jsx-a11y/anchor-is-valid": "off",
-        "class-methods-use-this": "off"
+        "class-methods-use-this": "off",
+        "react/prop-types": "off",
+        "import/no-dynamic-require": "off",
+        "global-require": "off",
+        "jsx-a11y/no-noninteractive-element-interactions": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
+        "no-restricted-globals": "off"
     }
 }

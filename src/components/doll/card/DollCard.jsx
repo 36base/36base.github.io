@@ -6,7 +6,12 @@ import './style.css';
 
 class DollCard extends React.Component {
   render() {
-    const { id, type, rank, krName } = this.props;
+    const {
+      id,
+      type,
+      rank,
+      krName,
+    } = this.props;
     const typeName = type ? this.props.typeNameMap[type] : null;
     const rankName = this.props.rankNameMap[id > 1000 ? 1 : rank];
 

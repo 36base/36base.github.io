@@ -17,6 +17,6 @@ export function initMenu() {
 export function toggleMenu(id) {
   return {
     type: TOGGLE_MENU,
-    id: id,
+    id,
   };
 }
