@@ -3,100 +3,47 @@
 <head>
 	<title>36베이스 - 소녀전선 데이터베이스</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<style>
-body {
-	padding-top: 70px;
-}
-img {
-	max-width: 100%;
-}
-
-.navbar-inverse .navbar-brand {
-	color: #eee;
-}
-.navbar-inverse .navbar-nav>li>a {
-	color: #eee;
-}
-.page-header {
-	margin: 10px 0 20px;
-}
-.input-group {
-	margin-bottom: 4px;
-}
-.input-group > .input-group-addon {
-	width: 100px;
-}
-.pull-right > input[type=checkbox], input[type=radio] {
-	margin: 0;
-}
-
-.rmb {
-	color: red;
-}
-.usd {
-	color: orange;
-}
-.twd {
-	color: green;
-}
-.hkd {
-	color: #00f;
-}
-
-@media (max-width: 320px) and (orientation: portrait) {
-	body, .btn {
-		font-size: 11px;
-	}
-}
-@media (min-width: 321px) and (max-width: 360px) and (orientation: portrait) {
-	body, .btn {
-		font-size: 12px;
-	}
-}
-@media (min-width: 361px) and (max-width: 400px) and (orientation: portrait) {
-	body, .btn {
-		font-size: 13px;
-	}
-}
-@media (min-width: 320px) and (max-width: 479px) and (orientation: portrait) {
-	.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
-		padding: 4px;
-	}
-}
-</style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
-<body style="padding: 15px;">
-	<div class="row">
-		<div class="col-sm-6">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title">작전보고서 계산기<span class="pull-right" style="font-size: 14px"><input type="checkbox" id="oath"> 서약</span></h3>
+<body>
+	<div class="jumbotron" style="background-color: white;">
+		<h1>36DB 작전보고서 계산기</h1>
+		<hr style="border-width: medium; border-color: black;"/>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label for="form-disc-calc-nowLv">현재 레벨 : </label>
+					<input id="form-disc-calc-nowLv" class="form-control" type="number" value="0" tabindex="1">
 				</div>
-				<div class="panel-body">
-					<form>
-						<div class="input-group">
-							<span class="input-group-addon">현재 레벨</span>
-								<input type="number" class="form-control" id="nowLv" pattern="[0-9]*" inputmode="numeric" aria-describedby="addon1">
-						</div>
-						<div class="input-group">
-							<span class="input-group-addon">현재 경험치</span>
-							<input type="number" class="form-control" id="nowExp" pattern="[0-9]*" inputmode="numeric" aria-describedby="addon2">
-						</div>
-						<div class="input-group">
-							<span class="input-group-addon">목표 레벨</span>
-							<input type="number" class="form-control" id="targetLv" pattern="[0-9]*" inputmode="numeric" aria-describedby="addon3">
-						</div>
-					</form>
-					<hr>작전보고서 : <span id="result">0</span>개
+				<div class="form-group">
+					<label for="form-disc-calc-nowExp">현재 경험치 : </label>
+					<input id="form-disc-calc-nowExp" class="form-control" type="number" value="0" tabindex="2">
 				</div>
+				<div class="form-check">
+					<label class="form-disc-calc-oath">
+					  <input id="form-disc-calc-oath" type="checkbox" class="form-check-input">서약
+					</label>
+				</div>
+				<br/>	
+				<div class="form-group">
+					<label for="form-disc-calc-targetLv">목표 레벨 : </label>
+					<input id="form-disc-calc-targetLv" class="form-control" type="number" value="0" tabindex="3">
+				</div>
+				<hr style="border-width: 2px; color: gray;">
+				<h5>필요한 작전보고서 : <span id="disc-calc-result">N/A</span>개</h5>
 			</div>
 		</div>
 	</div>
 <script>
-	var dollAccExp = new Array();
+	const dollAccExp = new Array();
 dollAccExp[0] = 0;
 dollAccExp[1] = 0;
 dollAccExp[2] = 100;
@@ -219,45 +166,31 @@ dollAccExp[118] = 19283200;
 dollAccExp[119] = 24283200;
 dollAccExp[120] = 30283200;
 
-document.getElementById("nowLv").addEventListener("keyup", calc);
-document.getElementById("nowExp").addEventListener("keyup", calc);
-document.getElementById("targetLv").addEventListener("keyup", calc);
-document.getElementById("oath").addEventListener("change", calc);
+document.getElementById("form-disc-calc-nowLv").addEventListener("keyup", calc);
+document.getElementById("form-disc-calc-nowExp").addEventListener("keyup", calc);
+document.getElementById("form-disc-calc-targetLv").addEventListener("keyup", calc);
+document.getElementById("form-disc-calc-oath").addEventListener("change", calc);
 
 function calc() {
-	const nowLv    = parseInt(document.getElementById("nowLv").value);
-	const nowExp   = parseInt(document.getElementById("nowExp").value);
-	const targetLv = parseInt(document.getElementById("targetLv").value);
-	const oath     = document.getElementById("oath").checked + 1;
+	const nowLv    = parseInt(document.getElementById("form-disc-calc-nowLv").value);
+	const nowExp   = parseInt(document.getElementById("form-disc-calc-nowExp").value);
+	const targetLv = parseInt(document.getElementById("form-disc-calc-targetLv").value);
+	const oath     = !(document.getElementById("form-disc-calc-oath").checked) ? 1 : 2;
 	let report   = 0;
 	let temp     = 0;
 
-	console.log('lv ' + nowLv +' ' + parseInt(dollAccExp[nowLv+1]));
-	console.log('value: ' + (parseInt(dollAccExp[nowLv+1]) - parseInt(dollAccExp[nowLv])));
 	if(((dollAccExp[nowLv+1] - dollAccExp[nowLv]) >= nowExp) && (nowExp >= 0) && (targetLv > nowLv)) {
-		console.log('asd');
-		if(targetLv > 115) {
-			temp = nowLv > 115 ? nowLv : 115;
-			report += Math.ceil((dollAccExp[targetLv] - dollAccExp[temp]) / (3000 * oath));
-			targetLv = 115;
-		}
-		if(targetLv > 110 && nowLv < 115) {
-			temp = nowLv > 110 ? nowLv : 110;
-			report += Math.ceil((dollAccExp[targetLv] - dollAccExp[temp]) / (3000 * oath));
-			targetLv = 110;
-		}
-		if(targetLv > 100 && nowLv < 110) {
-			temp = nowLv > 100 ? nowLv : 100;
-			report += Math.ceil((dollAccExp[targetLv] - dollAccExp[temp]) / (3000 * oath));
-			targetLv = 100;
+		if((targetLv <= 110 && nowLv >= 100) || (targetLv<=115 && nowLv>=110) || (targetLv <= 120 && nowLv>=115)) {
+			report += Math.ceil((dollAccExp[targetLv] - dollAccExp[nowLv] - nowExp) / (3000 * oath));
 		}
 		if(targetLv <= 100 && nowLv < 100) {
-			report += Math.ceil((dollAccExp[targetLv] - dollAccExp[nowLv]) / 3000);
+			report += Math.ceil((dollAccExp[targetLv] - dollAccExp[nowLv] - nowExp) / 3000);
 		}
 
-		console.log(report);
-
-		document.getElementById("result").innerText = report;
+		document.getElementById("disc-calc-result").innerText = report;
+	}
+	else{
+		document.getElementById("disc-calc-result").innerText = "N/A";
 	}
 }
 
