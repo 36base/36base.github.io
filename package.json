@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
+    "lint": "./node_modules/.bin/eslint ./src --ext .js,.jsx",
     "start": "node_modules/.bin/webpack-dev-server --config ./webpack/dev.config.js --progress --colors",
     "build": "webpack --verbose --color --display-error-details --config webpack/webpack.config.js"
   },
