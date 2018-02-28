@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "extract-text-webpack-plugin": "^3.0.2",
-    "girlsfrontline-core": "^0.1.5",
+    "girlsfrontline-core": "^0.1.7",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",

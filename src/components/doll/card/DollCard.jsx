@@ -27,9 +27,7 @@ class DollCard extends React.Component {
         <div className="dollcard undraggable">
           <img className="dollcard--typeicon" src={typeIcon} alt="로딩중입니다" />
           <div className="dollcard--rankbar">
-            {
-              Array(rank).fill().map(i => <span key={i} className="dollcard--rankbar--star">★</span>)
-            }
+            {Array(rank).fill(<span className="dollcard--rankbar--star">★</span>)}
           </div>
           <div className="dollcard--portrait" style={{ backgroundImage: `url(${portrait})` }} />
           <div className={`dollcard--namebar ${rankName}`}>{krName}</div>

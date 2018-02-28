@@ -1,15 +1,15 @@
-import dolls from 'girlsfrontline-core';
+import { dolls } from 'girlsfrontline-core';
 
 const typeNameMap = [undefined, 'HG', 'SMG', 'RF', 'AR', 'MG', 'SG'];
 const rankNameMap = [undefined, 'extra', 'general', 'rare', 'epochal', 'legendary'];
 
-const map = new Map(dolls.dolls.map(obj => [obj.key, obj.val]));
+const map = new Map(dolls.map(obj => [obj.key, obj.val]));
 
 const initialState = {
   typeNameMap,
   rankNameMap,
   map,
-  list: dolls.dolls,
+  list: dolls,
 };
 
 const reducer = (state = initialState) => state;

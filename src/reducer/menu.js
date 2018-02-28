@@ -1,6 +1,6 @@
 import { CLEAR_MENU, INIT_MENU, TOGGLE_MENU } from '../actions/menu';
 
-const menuList = {
+const menuMap = {
   dic: {
     id: 'dic', name: '소녀전선 도감', type: 'menu-item', icon: 'fa-book', children: ['doll', 'fairy', 'equip'],
   },
@@ -27,21 +27,21 @@ const menuList = {
   },
 };
 
-const initialMenuList = [menuList.dic, menuList.util, menuList.about];
+const initialMenuList = [menuMap.dic, menuMap.util, menuMap.about];
 const initialState = {
   menus: screen.width < 767 ? [] : initialMenuList.slice(),
 };
 
 function foldAllMenus() {
-  Object.keys(menuList).forEach((key) => {
-    if (menuList[key].expanded) {
-      menuList[key].expanded = false;
+  Object.keys(menuMap).forEach((key) => {
+    if (menuMap[key].expanded) {
+      menuMap[key].expanded = false;
     }
   });
 }
 
 function toggleMenu(menus, id) {
-  const target = menus[id];
+  const target = menuMap[id];
   const idx = menus.findIndex(e => e.id === target.id) + 1;
 
   if (target.expanded) {
@@ -49,7 +49,7 @@ function toggleMenu(menus, id) {
     menus.splice(idx, target.children.length);
   } else {
     target.expanded = true;
-    const children = target.children.map(childId => menus[childId]);
+    const children = target.children.map(childId => menuMap[childId]);
     menus.splice(idx, 0, ...children);
   }
 
@@ -66,7 +66,7 @@ const reducer = (state = initialState, action) => {
       return Object.assign({}, state, { menus: initialMenuList.slice() });
     case TOGGLE_MENU:
       return Object.assign({}, state, {
-        menus: toggleMenu(state.menus.slice()),
+        menus: toggleMenu(state.menus.slice(), action.id),
       });
     default:
       return state;
