@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { clearMenu, initMenu, toggleMenu } from '../../actions/menu';
@@ -15,7 +15,7 @@ class Menu extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    if(this.props.isMobile != newProps.isMobile) {
+    if (this.props.isMobile !== newProps.isMobile) {
       newProps.isMobile ? this.props.clearMenu() : this.props.initMenu();
     }
   }
@@ -30,17 +30,15 @@ class Menu extends React.Component {
 
     return (
       <li key={menu.id} className={className} onClick={onClick}>
-          {menu.icon && <i className={`fa fa-lg ${menu.icon}`} />}
-          {menu.name}
+        {menu.icon && <i className={`fa fa-lg ${menu.icon}`} />}
+        {menu.name}
       </li>
     );
   }
 
   renderLinkItem(menu) {
-    const className = `undraggable ${menu.type}`;
-
     return (
-      <li key={menu.id} className={className}>
+      <li key={menu.id} className={`undraggable ${menu.type}`}>
         <Link to={menu.link}>
           {menu.icon && <i className={`fa fa-lg ${menu.icon}`} />}
           {menu.name}
@@ -50,26 +48,26 @@ class Menu extends React.Component {
   }
 
   renderNavicon() {
-    if(!this.props.isMobile) {
+    if (!this.props.isMobile) {
       return null;
     }
 
     const onClick = this.props.menus.length > 0 ? this.props.clearMenu : this.props.initMenu;
     const style = {
-      display: "inline-block",
-      float: "right",
-      marginRight: "15px",
+      display: 'inline-block',
+      float: 'right',
+      marginRight: '15px',
     };
 
     return (
-      <span style={style} onClick={onClick}><i class="fa fa-lg fa-navicon" /></span>
+      <span style={style} onClick={onClick}><i className="fa fa-lg fa-navicon" /></span>
     );
   }
 
   render() {
     return (
       <nav id="menu">
-        <ul>
+        <ul role="menu">
           <li className="undraggable menu-item title">
             <Link to="/">36베이스{this.renderNavicon()}</Link>
           </li>
@@ -80,21 +78,15 @@ class Menu extends React.Component {
   }
 }
 
-let stateMapper = (state) => {
-  return {
-    isMobile: state.common.isMobile,
-    menus: state.menu.menus,
-  };
-};
+const stateMapper = state => ({
+  isMobile: state.common.isMobile,
+  menus: state.menu.menus,
+});
 
-let dispatchMapper = (dispatch) => {
-  return {
-    clearMenu: () => dispatch(clearMenu()),
-    initMenu: () => dispatch(initMenu()),
-    toggleMenu: (id) => dispatch(toggleMenu(id)),
-  };
-}
+const dispatchMapper = dispatch => ({
+  clearMenu: () => dispatch(clearMenu()),
+  initMenu: () => dispatch(initMenu()),
+  toggleMenu: id => dispatch(toggleMenu(id)),
+});
 
-Menu = connect(stateMapper, dispatchMapper)(Menu);
-
-export default Menu;
+export default connect(stateMapper, dispatchMapper)(Menu);

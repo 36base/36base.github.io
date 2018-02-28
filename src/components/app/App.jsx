@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import { resize } from '../../actions/common';
 
@@ -47,12 +47,8 @@ class App extends React.PureComponent {
   }
 }
 
-const dispatchMapper = (dispatch) => {
-  return {
-    resize: () => dispatch(resize()),
-  };
-};
+const dispatchMapper = dispatch => ({
+  resize: () => dispatch(resize()),
+});
 
-App = connect(undefined, dispatchMapper)(App);
-
-export default App;
+export default connect(undefined, dispatchMapper)(App);

@@ -7,11 +7,10 @@ import reducer from './reducer';
 import App from './components/app';
 
 const store = createStore(reducer);
-const app = document.getElementById('app');
 
 ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>
-  , app
+  , document.getElementById('app'),
 );

@@ -8,6 +8,7 @@
 
     "rules": {
         "react/prefer-stateless-function": "off",
-        "jsx-a11y/anchor-is-valid": "off"
+        "jsx-a11y/anchor-is-valid": "off",
+        "class-methods-use-this": "off"
     }
 }

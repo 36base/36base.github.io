@@ -23,7 +23,7 @@ class DollCard extends React.Component {
           <img className="dollcard--typeicon" src={typeIcon} alt="로딩중입니다" />
           <div className="dollcard--rankbar">
             {
-              Array(rank).fill().map((i) => <span key={i} className="dollcard--rankbar--star">★</span>)
+              Array(rank).fill().map(i => <span key={i} className="dollcard--rankbar--star">★</span>)
             }
           </div>
           <div className="dollcard--portrait" style={{ backgroundImage: `url(${portrait})` }} />
@@ -35,13 +35,9 @@ class DollCard extends React.Component {
   }
 }
 
-let stateMapper = (state) => {
-  return {
-    typeNameMap: state.doll.typeNameMap,
-    rankNameMap: state.doll.rankNameMap,
-  };
-};
+const stateMapper = state => ({
+  typeNameMap: state.doll.typeNameMap,
+  rankNameMap: state.doll.rankNameMap,
+});
 
-DollCard = connect(stateMapper)(DollCard);
-
-export default DollCard;
+export default connect(stateMapper)(DollCard);

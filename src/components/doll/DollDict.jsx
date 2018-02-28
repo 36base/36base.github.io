@@ -5,7 +5,7 @@ import DollCard from './card/DollCard';
 
 class DollDict extends React.Component {
   render() {
-    const dollCards = this.props.dolls.map((id) => <DollCard {...id} />);
+    const dollCards = this.props.dolls.map(info => <DollCard key={info.id} {...info} />);
 
     return (
       <div>{dollCards}</div>
@@ -13,12 +13,8 @@ class DollDict extends React.Component {
   }
 }
 
-let stateMapper = (state) => {
-  return {
-    dolls: state.doll.list,
-  };
-};
+const stateMapper = state => ({
+  dolls: state.doll.list,
+});
 
-DollDict = connect(stateMapper)(DollDict);
-
-export default DollDict;
+export default connect(stateMapper)(DollDict);
