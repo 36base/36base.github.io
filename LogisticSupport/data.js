@@ -395,6 +395,94 @@ define({
       },
       "reward": ["인형제조"],
       "time": "09:00"
+    }],
+    [{
+      "title": "초소정리",
+      "resource": {
+        "manpower": 0,
+        "ammo": 0,
+        "food": 100,
+        "part": 50,
+      },
+      "reward": [],
+      "time": "00:30"
+    },
+    {
+      "title": "신호탐지",
+      "resource": {
+        "manpower": 180,
+        "ammo": 0,
+        "food": 180,
+        "part": 100,
+      },
+      "reward": ["쾌속제조"],
+      "time": "01:30"
+    },
+    {
+      "title": "신속구조",
+      "resource": {
+        "manpower": 750,
+        "ammo": 750,
+        "food": 0,
+        "part": 0,
+      },
+      "reward": ["인형제조"],
+      "time": "04:30"
+    },
+    {
+      "title": "긴급제압",
+      "resource": {
+        "manpower": 500,
+        "ammo": 900,
+        "food": 900,
+        "part": 0,
+      },
+      "reward": ["인형제조"],
+      "time": "07:00"
+    }],
+    [{
+      "title": "검문보조",
+      "resource": {
+        "manpower": 140,
+        "ammo": 200,
+        "food": 0,
+        "part": 0,
+      },
+      "reward": [],
+      "time": "0:40"
+    },
+    {
+      "title": "전방지원",
+      "resource": {
+        "manpower": 0,
+        "ammo": 240,
+        "food": 180,
+        "part": 0,
+      },
+      "reward": ["인형제조", "쾌속제조"],
+      "time": "01:40"
+    },
+    {
+      "title": "내지정찰",
+      "resource": {
+        "manpower": 0,
+        "ammo": 480,
+        "food": 480,
+        "part": 300,
+      },
+      "reward": ["쾌속제조", "쾌속수복"],
+      "time": "05:20"
+    },
+    {
+      "title": "통신탈취",
+      "resource": {
+        "manpower": 660,
+        "ammo": 660,
+        "food": 660,
+        "part": 330,
+      },
+      "reward": ["장비제조"],
+      "time": "10:00"
     }]
   ]
 });
