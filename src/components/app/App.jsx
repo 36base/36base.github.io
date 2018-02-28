@@ -17,7 +17,6 @@ import './style/App.css';
 import './style/common.css';
 
 class App extends React.PureComponent {
-
   componentWillMount() {
     window.addEventListener('resize', this.props.resize);
   }
@@ -25,7 +24,7 @@ class App extends React.PureComponent {
   componentWillUnmount() {
     window.addEventListener('resize', this.props.resize);
   }
-  
+
   render() {
     return (
       <Router>
@@ -46,11 +45,11 @@ class App extends React.PureComponent {
   }
 }
 
-let dispatchMapper = (dispatch) => {
+const dispatchMapper = (dispatch) => {
   return {
     resize: () => dispatch(resize()),
   };
-}
+};
 
 App = connect(undefined, dispatchMapper)(App);
 
