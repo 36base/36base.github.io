@@ -1,12 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import { resize } from '../../actions/common';
 
 import Menu from '../menu/Menu';
 import Home from '../home/Home';
 import DollDict from '../doll/DollDict';
+import DollDetail from '../dolldetail/DollDetail';
 import FairyDict from '../fairy/FairyDict';
 import EquipDict from '../equipment/EquipDict';
 import Calculator from '../calculator/Calculator';
@@ -32,7 +33,8 @@ class App extends React.PureComponent {
           <Menu />
           <div className="content">
             <Route exact path="/" component={Home} />
-            <Route path="/doll" component={DollDict} />
+            <Route exact path="/doll" component={DollDict} />
+            <Route path="/doll/:id" component={DollDetail} />
             <Route path="/fairy" component={FairyDict} />
             <Route path="/equip" component={EquipDict} />
             <Route path="/calculator" component={Calculator} />

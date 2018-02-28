@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import './style.css';
@@ -17,17 +18,19 @@ class DollCard extends React.Component {
     }
 
     return (
-      <div className="dollcard undraggable">
-        <img className="dollcard--typeicon" src={typeIcon} alt="로딩중입니다" />
-        <div className="dollcard--rankbar">
-          {
-            Array(rank).fill().map((i) => <span key={i} className="dollcard--rankbar--star">★</span>)
-          }
+      <Link to={`/doll/${id}`} className="dollcard--wrapper" >
+        <div className="dollcard undraggable">
+          <img className="dollcard--typeicon" src={typeIcon} alt="로딩중입니다" />
+          <div className="dollcard--rankbar">
+            {
+              Array(rank).fill().map((i) => <span key={i} className="dollcard--rankbar--star">★</span>)
+            }
+          </div>
+          <div className="dollcard--portrait" style={{ backgroundImage: `url(${portrait})` }} />
+          <div className={`dollcard--namebar ${rankName}`}>{krName}</div>
+          <div className="dollcard--no">{id}</div>
         </div>
-        <div className="dollcard--portrait" style={{ backgroundImage: `url(${portrait})` }} />
-        <div className={`dollcard--namebar ${rankName}`}>{krName}</div>
-        <div className="dollcard--no">{id}</div>
-      </div>
+      </Link>
     );
   }
 }
