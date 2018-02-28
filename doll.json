@@ -1791,7 +1791,7 @@
   "voice": "Nozomi Amane",
   "buildTime": 11400,
   "drop": ["2-5 이후 모든 지역"],
-  "skins":[""],
+  "skins":[],
   "nick":[],
   "stats": {
     "armor": 0,
@@ -4749,7 +4749,7 @@
   "illust": "neco",
   "voice": "Haruka Yoshimura",
   "buildTime": 24000,
-  "drop": [""],
+  "drop": [],
   "skins":["생존맴버"],
   "nick":["망포"],
   "stats": {
