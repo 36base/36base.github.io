@@ -1096,6 +1096,42 @@
 }, {
   "id": 28,
   "name": "MP7",
+  "rank": 5,
+  "type": 2,
+  "illust": "戏言咸咸",
+  "voice": "",
+  "buildTime": "0",
+  "drop": [],
+  "skins": [],
+  "nick": [],
+  "stats": {
+  	"armor": 0,
+  	"dodge": 69,
+  	"hit": 13,
+  	"pow": 30,
+  	"range": 0,
+  	"rate": 91,
+  	"shield": 0,
+  	"speed": 12,
+  	"crit": 5,
+  	"critDmg": 0,
+  	"armorPiercing": 10,
+  	"nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+   },
+    "effect": {
+    	"effectType": 4,
+    	"effectCenter": 5,
+    	"effectPos": [1, 4, 7],
+    	"gridEffect": [{
+      "type": "rate",
+      "value": 15
+    }, {
+      "type": "hit",
+      "value": 25
+    }]
+  },
   "krName": "MP7"
 }, {
   "id": 29,
@@ -7644,6 +7680,40 @@
 }, {
   "id": 202,
   "name": "Thunder50",
+  "rank": 4,
+  "type": 1,
+  "illust": "NIN",
+  "voice": "",
+  "buildTime": 0,
+  "drop": [],
+  "skins":[],
+  "nick":[],
+  "stats": {
+    "armor": 0,
+    "dodge": 60,
+    "hit": 57,
+    "hp": 86,
+    "pow": 46,
+    "range": 0,
+    "rate": 37,
+    "shield": 0,
+    "speed": 15,
+    "crit": 40,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
+    "coolDown": 0,
+    "bullet": 0
+  },
+  "effect": {
+    "effectType": 0,
+    "effectCenter": 5,
+    "effectPos": [1, 6, 7],
+    "gridEffect": [{
+      "type": "pow",
+      "value": 36
+    }]
+  },
   "krName": "썬더"
 }, {
   "id": 203,
