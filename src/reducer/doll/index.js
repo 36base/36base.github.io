@@ -80,7 +80,7 @@ const dollList = dolls.map((doll) => {
   };
 });
 
-const map = new Map(dolls.map(obj => [obj.key, obj.val]));
+const map = new Map(dolls.map(obj => [obj.id, obj]));
 
 const initialState = {
   typeNameMap,
