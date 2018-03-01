@@ -8,19 +8,12 @@ class DollCard extends React.Component {
   render() {
     const {
       id,
-      type,
       rank,
+      rankName,
+      typeIcon,
+      portrait,
       krName,
     } = this.props;
-    const typeName = type ? this.props.typeNameMap[type] : null;
-    const rankName = this.props.rankNameMap[id > 1000 ? 1 : rank];
-
-    const typeIcon = (typeName && rank) ? require(`./resources/icons/${typeName}_${rankName}.png`) : null;
-    const portrait = id ? require(`./resources/portraits/${id}.png`) : null;
-
-    if (!(id && typeName && typeIcon && portrait)) {
-      return null;
-    }
 
     return (
       <Link to={`/doll/${id}`} className="dollcard--wrapper" >

@@ -1,0 +1,232 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);#menu {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 200;
+  text-align: left;
+  background-color: #2e353d;
+  color: #e1ffff; 
+}
+
+#menu ul {
+  padding: 0;
+  margin-bottom: 0px;
+}
+
+#menu li > a {
+  color: #e1ffff;
+  text-decoration: none;
+  display: block;
+}
+
+.menu-item {
+  display: block;
+  cursor: pointer;
+  padding: 3px 0 3px 15px;
+  list-style: none;
+  font-size: 16px;
+  line-height: 35px;
+  color: #e1ffff;
+  font-weight: 200;
+  background-color: #2e353d;
+  border-bottom: 1px solid #23282e;
+}
+
+.menu-item.expandable:after {
+  font-family: FontAwesome;
+  content: "\F078";
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  vertical-align: middle;
+  float: right;
+}
+
+.menu-subitem {
+  display: block;
+  cursor: pointer;
+  padding: 3px 0 3px 20px;
+  list-style: none;
+  font-size: 16px;
+  line-height: 28px;
+  color: #e1ffff;
+  background-color: #181c20;
+  border-bottom: 1px solid #23282e;
+}
+
+.menu-subitem:before {
+  font-family: FontAwesome;
+  content: "\F105";
+  display: inline-block;
+  float: left;
+  padding-right: 10px;
+  vertical-align: middle;
+}
+
+.title {
+  background-color: #23282e;
+  line-height: 50px;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media(max-width: 767px) {
+  #menu {
+    width: 100%;
+    height: 55px;
+  }
+
+  .title {
+    padding: 2px 0 2px 10px;
+    text-align: left;
+  }
+}.dollcard--wrapper {
+  display: inline-block;
+  padding: 0;
+  border-width: 10px 5px;
+  border-style: solid;
+  border-color: transparent;
+}
+
+.dollcard {
+  display: inline-block;
+  position: relative;
+  width: 170px;
+  height: 300px;
+  border: none;
+  background-image: url(http://girlsfrontline.kr/assets/img/4046f54abe31872c6e306f4b3988616d.png);
+}
+
+.dollcard:after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  top: -2;
+  left: -2;
+  width: (100% + 2px);
+  height: (100% + 2px);
+  z-index: -10;
+}
+
+.dollcard--typeicon {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.dollcard--rankbar {
+  width: 100%;
+  height: 20px;
+  padding-right: 5px;
+  text-align: right;
+}
+
+.dollcard--rankbar--star {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  transform: rotate(-20deg);
+  font-size: 17px;
+  color: #ffb600;
+}
+
+.dollcard--portrait {
+  position: absolute;
+  width: 170px;
+  height: 212px;
+  overflow: hidden;
+  background-size: 340px;
+  z-index: -1;
+}
+
+.dollcard--portrait.damaged {
+  background-position-x: -170px;
+}
+
+.dollcard--namebar {
+  display: inline-block;
+  width: 100%;
+  height: 30px;
+  margin-top: 213px;
+  padding: 3px 0 0 8px;
+  line-height: 27px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #404040;
+}
+
+.dollcard--namebar.extra {
+  background: linear-gradient(135deg, #D5A3FD, #D5A3FD 85%, transparent 85%);
+}
+
+.dollcard--namebar.general {
+  background: linear-gradient(135deg, #FFFFFF, #FFFFFF 85%, transparent 85%);
+}
+
+.dollcard--namebar.rare {
+  background: linear-gradient(135deg, #5DD9C3, #5DD9C3 85%, transparent 85%);
+}
+
+.dollcard--namebar.epochal {
+  background: linear-gradient(135deg, #D6E35A, #D6E35A 85%, transparent 85%);
+}
+
+.dollcard--namebar.legendary {
+  background: linear-gradient(135deg, #FDA809, #FDA809 85%, transparent 85%);
+}
+
+.dollcard--no {
+  position: absolute;
+  display: inline-block;
+  left: 135px;
+  top: 278px;
+  font-size: 16px;
+  color: #ababab;
+}
+.wrapper {
+	position: absolute;
+	width: 100%;
+  height: 100%;
+}
+
+.wrapper:after {
+  content: "";
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(http://girlsfrontline.kr/assets/img/59011a5cc4bec09665db2cb126b8fca9.jpg);
+	opacity: 0.1;
+	z-index: -100;
+}
+
+.content {
+	margin-left: 300px;
+}
+
+@media(max-width: 767px) {
+	.content {
+		margin-left: 0px;
+		margin-top: 55px;
+	}
+}i {
+  padding-right: 8px;
+}
+
+.undraggable {
+  user-drag: none; 
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+body {
+  font-family: "Noto Sans KR"!important;
+}

@@ -1,16 +1,18 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 class DollDetail extends React.Component {
   render() {
-    const { id } = this.props.match.params;
-
     return (
       <div>
-        <h1>인형상세</h1>
-        <p>{id}</p>
+        <h1>{this.props.krName}</h1>
       </div>
     );
   }
 }
 
-export default DollDetail;
+const stateMapper = state => ({
+  ...state.doll.list[0],
+});
+
+export default connect(stateMapper)(DollDetail);
