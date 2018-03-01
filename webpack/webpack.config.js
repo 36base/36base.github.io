@@ -17,7 +17,7 @@ module.exports = {
   output: {
     path: path.resolve(projDir, 'assets'),
     filename: 'js/bundle.js',
-    publicPath: 'https://angrypepsi.github.io/36db.github.io/assets',
+    publicPath: 'http://girlsfrontline.kr/assets',
   },
 
   module: {
