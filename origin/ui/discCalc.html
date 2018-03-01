@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>36베이스 - 소녀전선 데이터베이스</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/expdisc.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/calc.css">
+</head>
+<body style="padding: 15px;">
+	<h2 style="margin-left: 10px;">보고서 계산기</h2>
+	<form id="expForm" style="margin-left: 55px; margin-top: 35px;">
+		<div class="inputLine">
+			<label>
+				<span class="textLabel">현재 레벨</span>
+				<span class="inputWrap"><input type="number" name="currentLevel" onfocus="this.value='';" /></span>
+			</label>
+		</div>
+		<div class="inputLine">
+			<label>
+				<span class="textLabel">현재 경험치량</span>
+				<span class="inputWrap"><input type="number" name="currentExp" onfocus="this.value='';" /></span>
+			</label>
+		</div>
+		<div class="inputLine">
+			<label>
+				<span class="textLabel">목표 레벨</span>
+				<span class="inputWrap"><input type="number" name="targetLevel" onfocus="this.value='';" /></span>
+			</label>
+		</div>
+		<div class="inputLine">
+			<input type="submit" class="submit" value="계산">
+		</div>
+		</form>
+		<div class="resultArea" style="margin-left: 55px; margin-top: 10px;">
+
+		</div>
+
+</body>
+</html>
