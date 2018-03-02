@@ -1,14 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Icon, Menu, MenuItem } from 'material-ui';
-import { withStyles } from 'material-ui/styles';
-
-const styles = () => ({
-  menuItem: {
-    fontSize: '1.5rem',
-    width: 120,
-  },
-});
 
 class AppbarMenuGroup extends React.Component {
   constructor(props) {
@@ -35,14 +27,14 @@ class AppbarMenuGroup extends React.Component {
   }
 
   render() {
-    const { classes, name, icon } = this.props;
+    const { name, icon } = this.props;
     const { anchorEl } = this.state;
     const menuItems = this.props.items.map(item => (
       <MenuItem
         key={item.name}
-        className={classes.menuItem}
         onClick={this.close}
         component={props => <Link to={item.route} {...props} />}
+        button
       >
         {item.name}
       </MenuItem>
@@ -75,4 +67,4 @@ class AppbarMenuGroup extends React.Component {
   }
 }
 
-export default withStyles(styles)(AppbarMenuGroup);
+export default AppbarMenuGroup;

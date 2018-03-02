@@ -1,19 +1,36 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import { AppBar, Toolbar, Button, Typography } from 'material-ui';
+import { AppBar, Toolbar, Button } from 'material-ui';
+import { withStyles } from 'material-ui/styles';
 
 import AppbarMenu from './AppbarMenu';
 import AppbarMenuGroup from './AppbarMenuGroup';
 
+const style = {
+  titleMenu: {
+    color: '#80deea',
+    fontWeight: 700,
+    fontSize: '2.0rem',
+  },
+  menu: {
+    color: '#FFFFFF',
+    fontWeight: 500,
+    fontSize: '1.75rem',
+  },
+};
+
 class Appbar extends React.Component {
   render() {
+    const { classes } = this.props;
+
     return (
       <AppBar color="primary" position="fixed">
         <Toolbar>
-          <Button size="large" color="inherit" component={props => <Link to="/" {...props} />}>
-            <Typography variant="title">36Base</Typography>
+          <Button className={classes.titleMenu} component={props => <Link to="/" {...props} />}>
+            36Base
           </Button>
           <AppbarMenuGroup
+            className={classes.menu}
             name="소녀전선 도감"
             icon="fa fa-book"
             items={[
@@ -23,6 +40,7 @@ class Appbar extends React.Component {
             ]}
           />
           <AppbarMenuGroup
+            className={classes.menu}
             name="기타 편의기능"
             icon="fa fa-archive"
             items={[
@@ -37,4 +55,4 @@ class Appbar extends React.Component {
   }
 }
 
-export default withRouter(Appbar);
+export default withStyles(style)(withRouter(Appbar));

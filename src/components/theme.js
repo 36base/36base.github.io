@@ -1,31 +1,24 @@
 import { createMuiTheme } from 'material-ui/styles';
-import * as Color from 'material-ui/colors';
-import spacing from 'material-ui/styles/spacing';
 
 const theme = createMuiTheme({
-  spacing,
   palette: {
     primary: {
-      main: Color.blueGrey[900],
+      light: '#62727B',
+      main: '#37474F',
+      dark: '#102027',
+      contrastText: '#FFFFFF',
     },
     secondary: {
-      main: Color.cyan[900],
-    },
-    error: {
-      main: Color.red[700],
+      light: '#4FB3BF',
+      main: '#00838F',
+      dark: '#005662',
+      constrastText: '#FFFFFF',
     },
   },
   typography: {
-    fontFamily: 'Noto Sans KR, sans-serif',
-    title: {
-      fontWeight: 700,
-      fontSize: '3rem',
-      color: Color.cyan[200],
-    },
+    fontFamily: ['Noto Sans KR', 'Roboto', 'sans-serif'],
+    fontSize: 14,
     button: {
-      fontWeight: 500,
-      fontSize: '1.75rem',
-      color: Color.common.white,
       textTransform: undefined,
     },
   },
