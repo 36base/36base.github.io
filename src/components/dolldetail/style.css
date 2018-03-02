@@ -1,0 +1,30 @@
+.dolldetail--wrapper {
+  width: 100%;
+  padding-left: 500px;
+  padding-top: 85px;
+  background-color: white;
+}
+
+.dolldetail--header {
+  position: fixed;
+  left: 300px;
+  top: 0px;
+  width: calc(100% - 300px);
+  height: 85px;
+  padding: 8px 35px 8px 55px;
+  background-color: white;
+}
+
+.dolldetail--illust {
+  position: fixed;
+  left: 300px;
+  top: 85px;
+  width: 500px;
+  height: calc(100% - 85px);
+}
+
+.dolldetail--content {
+  display: block;
+  width: 100%;
+  padding: 0 35px 0 10px;
+}

@@ -1,72 +1,41 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import './style.css';
+
 class DollDetail extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      container: {},
-      header: {},
-      illust: {},
-      info: {},
-    };
-
-    this.updatePosition = this.updatePosition.bind(this);
-  }
-
   componentDidMount() {
-    window.addEventListener('resize', this.updatePosition);
-    this.updatePosition();
-  }
-
-  componentWillUnmount() {
-    window.addEventListener('resize', this.updatePosition);
-  }
-
-  updatePosition() {
-    const {
-      x,
-      y,
-      width,
-      height,
-    } = document.getElementById('doll-detail').getBoundingClientRect();
-    const left = Math.max(400, width * 0.3);
-
-    const container = {
-      paddingLeft: `${left}px`,
-      paddingTop: '85px',
-    };
-
-    const header = {
-      left: `${x}px`,
-      top: `${y}px`,
-      width: `${width}px`,
-      height: '85px',
-    };
-
-    const illust = {
-      left: `${x}px`,
-      top: `${y + 85}px`,
-      width: `${left}px`,
-      height: `${height - 85}px`,
-    };
-
-    const info = {
-      width: `${width - left}px`,
-    };
-
-    this.setState({ container, header, illust, info });
+    window.scrollTo(0, 0);
   }
 
   render() {
-    const { container, header, illust, info } = this.state;
-    return (
-      <div id="doll-detail" style={{ width: '100%', height: '100%', ...container }}>
-        <div style={{ position: 'fixed', ...header }}>헤더헤더</div>
-        <div style={{ position: 'fixed', ...illust }}>일러일러</div>
-        <div style={{ ...info, }} > 
+    const doll = this.props.map.get(Number(this.props.match.params.id));
 
+    const infoBoxStyle = {
+      margin: '10px 5px',
+      border: '1px solid black',
+      height: '200px',
+    };
+
+    return (
+      <div className="dolldetail--wrapper">
+        <div className="dolldetail--header">
+          <span style={{ display: 'inline-block', fontSize: '20px', marginTop: '15px' }}>
+            No.{doll.id}
+            <span style={{ fontSize: '36px', marginLeft: '10px' }}>{doll.krName}</span>
+          </span>
+          <div style={{ width: '100%', height: 0, borderTop: '2px solid black' }} />
+        </div>
+        <div className="dolldetail--illust">
+          <img style={{ maxWidth: '100%' }} src={doll.illust.common} alt="now loading" />
+        </div>
+        <div className="dolldetail--content" >
+          <div style={infoBoxStyle} >소개</div>
+          <div style={infoBoxStyle}>SD뷰어</div>
+          <div style={infoBoxStyle}>버프효과</div>
+          <div style={infoBoxStyle}>스킬</div>
+          <div style={infoBoxStyle}>장비</div>
+          <div style={infoBoxStyle}>획득처</div>
         </div>
       </div>
     );
@@ -74,7 +43,7 @@ class DollDetail extends React.Component {
 }
 
 const stateMapper = state => ({
-  ...state.doll.map.get(1),
+  map: state.doll.map,
 });
 
 export default connect(stateMapper)(DollDetail);
