@@ -1,8 +1,9 @@
 import React from 'react';
+import { Card } from 'material-ui';
+import { withStyles } from 'material-ui/styles';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
 
-import './style.css';
+import style from './style';
 
 class DollCard extends React.Component {
   render() {
@@ -13,27 +14,22 @@ class DollCard extends React.Component {
       typeIcon,
       portrait,
       krName,
+      classes,
     } = this.props;
 
     return (
-      <Link to={`/doll/${id}`} className="dollcard--wrapper" >
-        <div className="dollcard undraggable">
-          <img className="dollcard--typeicon" src={typeIcon} alt="로딩중입니다" />
-          <div className="dollcard--rankbar">
-            {Array(rank).fill(<span className="dollcard--rankbar--star">★</span>)}
-          </div>
-          <div className="dollcard--portrait" style={{ backgroundImage: `url(${portrait})` }} />
-          <div className={`dollcard--namebar ${rankName}`}>{krName}</div>
-          <div className="dollcard--no">{id}</div>
+      <Card className={classes.root} component={props => <Link to={`/doll/${id}`} {...props} />}>
+        <div className={classes.background} />
+        <div className={classes.rankbar}>
+          {Array(rank).fill().map((_, i) => <span key={i} className={classes.star}>★</span>)}
         </div>
-      </Link>
+        <div className={classes.portrait} style={{ backgroundImage: `url(${portrait})` }} />
+        <div className={[classes.caption, classes[rankName]].join(' ')}>{krName}</div>
+        <img className={classes.typeIcon} src={typeIcon} alt="" />
+        <div className={classes.no}>{id}</div>
+      </Card>
     );
   }
 }
 
-const stateMapper = state => ({
-  typeNameMap: state.doll.typeNameMap,
-  rankNameMap: state.doll.rankNameMap,
-});
-
-export default connect(stateMapper)(DollCard);
+export default withStyles(style)(DollCard);

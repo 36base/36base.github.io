@@ -14,6 +14,11 @@ const theme = createMuiTheme({
       dark: '#005662',
       constrastText: '#FFFFFF',
     },
+    general: { main: '#FFFFFF' },
+    rare: { main: '#5DD9C3' },
+    epochal: { main: '#D6E35A' },
+    legendary: { main: '#FDA809' },
+    extra: { main: '#D5A3FD' },
   },
   typography: {
     fontFamily: ['Noto Sans KR', 'Roboto', 'sans-serif'],
