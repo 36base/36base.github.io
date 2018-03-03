@@ -1,15 +1,19 @@
 import { RESIZE } from '../actions/common';
 
-const initialState = {
-  isMobile: screen.width < 767,
-};
+function getState() {
+  const width = window.innerWidth;
+  const height = window.innerHeight;
 
-const reducer = (state = initialState, action) => {
+  return {
+    width,
+    height,
+  };
+}
+
+const reducer = (state = getState(), action) => {
   switch (action.type) {
     case RESIZE:
-      return Object.assign({}, state, {
-        isMobile: screen.width < 767,
-      });
+      return getState();
     default:
       return state;
   }

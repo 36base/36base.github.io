@@ -1,9 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import { withStyles } from 'material-ui/styles';
 import { Grid, Divider, Typography, Paper } from 'material-ui';
-import { setForDollDetail } from '../../actions/doll';
 
 import style from './style';
 
@@ -11,47 +9,63 @@ class DollDetail extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      x: 0,
-      y: 0,
-      width: 0,
-      height: 0,
+    this.state = this.getRects(props.width);
+  }
+
+  componentWillReceiveProps(newProps) {
+    this.setState(this.getRects(newProps.width));
+  }
+
+  getRects(width) {
+    const rootWidth = Math.min(1024, width);
+    const rootLeft = (width - rootWidth) / 2;
+
+    const rootRect = {
+      width: rootWidth,
+      marginLeft: rootLeft,
+      marginRight: rootLeft,
+    };
+    const headerRect = {
+      left: rootLeft,
+      top: 64,
+      width: rootWidth,
+      height: 64,
+    };
+    const asideRect = {
+      left: rootLeft,
+      top: 128,
+      width: rootWidth / 2,
+      height: 400,
+    };
+    const contentRect = {
+      marginTop: 64,
+      marginLeft: rootWidth / 2,
+      height: 1000,
     };
 
-    this.props.setForDollDetail(Number(this.props.match.params.id));
-  }
-
-  componentDidMount() {
-    window.scrollTo(0, 0);
-    window.addEventListener('resize', this.updatePosition);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updatePosition);
-  }
-
-  updatePosition() {
-    const rect = ReactDOM.findDOMNode(this).getBoundingClientRect();
-
-    this.setState({
-      x: rect.x,
-      y: rect.y,
-      width: rect.width,
-      height: react.height,
-    });
+    return {
+      rootRect,
+      headerRect,
+      asideRect,
+      contentRect,
+    };
   }
 
   render() {
     const { classes } = this.props;
+    const info = this.props.map.get(Number(this.props.match.params.id));
 
     return (
-      <div className={classes.root}>
-        <Typography className={classes.header} component="div">
-          No.{this.props.id}<span className={classes.headerCaption}>{this.props.krName}</span>
-          <Divider className={classes.headerUnderline} />
-        </Typography>
-        <div className={classes.illust}>일러</div>
-        <div className={classes.infobox}>정보</div>
+      <div className={classes.root} style={this.state.rootRect}>
+        <div className={classes.header} style={this.state.headerRect}>
+          헤더
+        </div>
+        <div className={classes.aside} style={this.state.asideRect} >
+          <img className={classes.illust} src={info.illust.common} />
+        </div>
+        <div className={classes.content} style={this.state.contentRect}>
+          정보
+        </div>
       </div>
     );
   }
@@ -59,11 +73,9 @@ class DollDetail extends React.Component {
 
 const stateMapper = state => ({
   map: state.doll.map,
-  ...state.doll.selected,
+  width: state.common.width,
+  height: state.common.height,
 });
-
-const dispatchMapper = dispatch => ({
-  setForDollDetail: id => dispatch(setForDollDetail(id)),
-});
+const dispatchMapper = undefined;
 
 export default withStyles(style)(connect(stateMapper, dispatchMapper)(DollDetail));

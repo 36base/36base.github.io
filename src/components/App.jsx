@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { connect } from 'react-redux'
+import { withRouter } from 'react-router';
 import { Route } from 'react-router-dom';
 import { Reboot } from 'material-ui';
 import { MuiThemeProvider } from 'material-ui/styles';
@@ -14,10 +15,19 @@ import Calculator from './calculator/Calculator';
 import SdSimulator from './sdsim/SdSimulator';
 import About from './about/About';
 
+import { resize } from '../actions/common';
 import './App.css';
 import theme from './theme';
 
-export default class App extends React.Component {
+class App extends React.Component {
+  componentDidMount() {
+    window.addEventListener('resize', this.props.resize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.props.resize);
+  }
+
   render() {
     return (
       <MuiThemeProvider theme={theme}>
@@ -37,3 +47,10 @@ export default class App extends React.Component {
     );
   }
 }
+
+const stateMapper = undefined;
+const dispatchMapper = dispatch => ({
+  resize: () => dispatch(resize()),
+});
+
+export default withRouter(connect(stateMapper, dispatchMapper)(App));

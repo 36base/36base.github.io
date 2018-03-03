@@ -11,11 +11,11 @@ const store = createStore(reducer);
 class Root extends React.Component {
   render() {
     return (
-      <Provider store={store}>
-        <BrowserRouter>
+      <BrowserRouter>
+        <Provider store={store}>
           <App />
-        </BrowserRouter>
-      </Provider>
+        </Provider>
+      </BrowserRouter>
     );
   }
 }
