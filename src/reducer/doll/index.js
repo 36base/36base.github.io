@@ -1,7 +1,5 @@
 import { dolls } from 'girlsfrontline-core';
-
-const typeNameMap = [undefined, 'HG', 'SMG', 'RF', 'AR', 'MG', 'SG'];
-const rankNameMap = [undefined, 'extra', 'general', 'rare', 'epochal', 'legendary'];
+import { SET_FOR_DOLL_DETAIL } from '../../actions/doll';
 
 function getTypeName(typeId) {
   switch (typeId) {
@@ -83,12 +81,20 @@ const dollList = dolls.map((doll) => {
 const map = new Map(dollList.map(obj => [obj.id, obj]));
 
 const initialState = {
-  typeNameMap,
-  rankNameMap,
   map,
   list: dollList,
+  selected: undefined,
 };
 
-const reducer = (state = initialState) => state;
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case SET_FOR_DOLL_DETAIL:
+      return Object.assign({}, state, {
+        selected: map.get(action.id),
+      });
+    default:
+      return state;
+  }
+};
 
 export default reducer;

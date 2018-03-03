@@ -1,42 +1,32 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withStyles } from 'material-ui/styles';
+import { Grid, Typography, Paper } from 'material-ui';
+import { setForDollDetail } from '../../actions/doll';
 
-import './style.css';
+import style from './style';
 
 class DollDetail extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.props.setForDollDetail(Number(this.props.match.params.id));
+  }
+
   componentDidMount() {
     window.scrollTo(0, 0);
   }
 
   render() {
-    const doll = this.props.map.get(Number(this.props.match.params.id));
-
-    const infoBoxStyle = {
-      margin: '10px 5px',
-      border: '1px solid black',
-      height: '200px',
-    };
+    const { classes } = this.props;
 
     return (
-      <div className="dolldetail--wrapper">
-        <div className="dolldetail--header">
-          <span style={{ display: 'inline-block', fontSize: '20px', marginTop: '15px' }}>
-            No.{doll.id}
-            <span style={{ fontSize: '36px', marginLeft: '10px' }}>{doll.krName}</span>
-          </span>
-          <div style={{ width: '100%', height: 0, borderTop: '2px solid black' }} />
+      <div className={classes.root}>
+        <div className={classes.header}>
+          No.{this.props.id}<span className={classes.caption}>{this.props.krName}</span>
         </div>
-        <div className="dolldetail--illust">
-          <img style={{ maxWidth: '100%' }} src={doll.illust.common} alt="now loading" />
-        </div>
-        <div className="dolldetail--content" >
-          <div style={infoBoxStyle} >소개</div>
-          <div style={infoBoxStyle}>SD뷰어</div>
-          <div style={infoBoxStyle}>버프효과</div>
-          <div style={infoBoxStyle}>스킬</div>
-          <div style={infoBoxStyle}>장비</div>
-          <div style={infoBoxStyle}>획득처</div>
-        </div>
+        <div className={classes.illust}>일러</div>
+        <div className={classes.infobox}>정보</div>
       </div>
     );
   }
@@ -44,6 +34,11 @@ class DollDetail extends React.Component {
 
 const stateMapper = state => ({
   map: state.doll.map,
+  ...state.doll.selected,
 });
 
-export default connect(stateMapper)(DollDetail);
+const dispatchMapper = dispatch => ({
+  setForDollDetail: id => dispatch(setForDollDetail(id)),
+});
+
+export default withStyles(style)(connect(stateMapper, dispatchMapper)(DollDetail));
