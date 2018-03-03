@@ -18,6 +18,7 @@ class Calculator extends React.Component {
   }
 
   calc() {
+    // eslint-disable-next-line max-len
     const dollAccExp = [0, 0, 100, 300, 600, 1000, 1500, 2100, 2800, 3600, 4500, 5500, 6600, 7800, 9100, 10500, 12000, 13600];
 
     const nowLv = Number(this.nowLv.value);
