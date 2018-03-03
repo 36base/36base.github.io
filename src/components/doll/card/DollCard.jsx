@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from 'material-ui';
+import { Card, Typography } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 import { Link } from 'react-router-dom';
 
@@ -18,13 +18,13 @@ class DollCard extends React.Component {
     } = this.props;
 
     return (
-      <Card className={classes.root} component={props => <Link to={`/doll/${id}`} {...props} />}>
+      <Card className={[classes.root, 'undraggable'].join(' ')} component={props => <Link to={`/doll/${id}`} {...props} />}>
         <div className={classes.background} />
         <div className={classes.rankbar}>
           {Array(rank).fill().map((_, i) => <span key={i} className={classes.star}>★</span>)}
         </div>
         <div className={classes.portrait} style={{ backgroundImage: `url(${portrait})` }} />
-        <div className={[classes.caption, classes[rankName]].join(' ')}>{krName}</div>
+        <Typography className={[classes.caption, classes[rankName]].join(' ')} component="div">{krName}</Typography>
         <img className={classes.typeIcon} src={typeIcon} alt="" />
         <div className={classes.no}>{id}</div>
       </Card>

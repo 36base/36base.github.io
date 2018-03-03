@@ -21,7 +21,7 @@ const theme = createMuiTheme({
     extra: { main: '#D5A3FD' },
   },
   typography: {
-    fontFamily: ['Noto Sans KR', 'Roboto', 'sans-serif'],
+    fontFamily: ['Roboto', 'Noto Sans KR', 'sans-serif'],
     fontSize: 14,
     button: {
       textTransform: undefined,
