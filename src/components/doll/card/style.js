@@ -26,6 +26,8 @@ const style = {
     height: 20,
     paddingRight: 5,
     textAlign: 'right',
+    lineHeight: '20px',
+    verticalAlign: 'middle',
   },
   portrait: {
     height: 212,
@@ -49,7 +51,7 @@ const style = {
   no: {
     position: 'absolute',
     left: 135,
-    top: 278,
+    top: 277,
     fontSize: 19,
     fontWeight: 400,
     color: '#ababab',

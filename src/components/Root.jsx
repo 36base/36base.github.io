@@ -3,6 +3,8 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { createStore } from 'redux';
 
+import 'normalize.css';
+
 import reducer from '../reducer';
 import App from './App';
 
