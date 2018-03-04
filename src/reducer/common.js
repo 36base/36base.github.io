@@ -5,6 +5,8 @@ function getState() {
   const height = window.innerHeight;
 
   return {
+    left: 0,
+    top: 64,
     width,
     height,
   };

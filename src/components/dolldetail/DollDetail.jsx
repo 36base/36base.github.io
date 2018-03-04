@@ -1,14 +1,44 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import DollDetailIllustBox from './DollDetailIllustBox';
-import DollDetailInfoBox from './DollDetailInfoBox';
+import './DollDetail.css';
+
+function getLayout(width, height) {
+  const w = width / 5;
+  const p = height / (w / 2 + height) * 100;
+  const bgGradation1 = `linear-gradient(${Math.atan2(height, w) * (180 / Math.PI)}deg, #505694 50%, transparent 50%)`;
+  const bgGradation2 = `linear-gradient(-45deg, transparent ${p}%, #8C94BF ${p}%`;
+
+  const background = {
+    position: 'fixed',
+    left: 0,
+    top: 64,
+    width: width / 5,
+    height,
+    background: [bgGradation1, bgGradation2].join(','),
+  };
+
+  const illust = {
+    position: 'fixed',
+    left: width * 0.1,
+    top: 64,
+    width: width * 0.45,
+    height,
+  };
+
+  const information = {
+    marginLeft: width * 0.55,
+    height: 1000,
+  };
+
+  return { background, illust, information };
+}
 
 class DollDetail extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = this.getRects(props.width);
+    this.state = getLayout(props.width, props.height);
   }
 
   componentDidMount() {
@@ -16,60 +46,18 @@ class DollDetail extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    this.setState(this.getRects(newProps.width));
-  }
-
-  getRects(width) {
-    const rootWidth = Math.min(1024, width);
-    const rootLeft = (width - rootWidth) / 2;
-
-    const rootRect = {
-      width: rootWidth,
-      marginLeft: rootLeft,
-      marginRight: rootLeft,
-    };
-    const headerRect = {
-      position: 'fixed',
-      left: rootLeft,
-      top: 64,
-      width: rootWidth,
-      height: 64,
-      lineHeight: '32px',
-      padding: '16px 0',
-      verticalAlign: 'middle',
-      backgroundColor: '#FAFAFA',
-    };
-    const asideRect = {
-      position: 'fixed',
-      left: rootLeft,
-      top: 128,
-      width: rootWidth / 2,
-    };
-    const contentRect = {
-      marginTop: 64,
-      marginLeft: rootWidth / 2,
-      height: 1000,
-    };
-
-    return {
-      rootRect,
-      headerRect,
-      asideRect,
-      contentRect,
-    };
+    this.setState(getLayout(newProps.width, newProps.height));
   }
 
   render() {
     const info = this.props.map.get(Number(this.props.match.params.id));
+    const { background, illust, information } = this.state;
 
     return (
-      <div style={this.state.rootRect}>
-        <div style={this.state.headerRect}>
-          No.{info.id}
-          <h1 style={{display: 'inline', marginLeft: '5px'}}>{info.krName}</h1>
-        </div>
-        <DollDetailIllustBox pos={this.state.asideRect} info={info} />
-        <DollDetailInfoBox pos={this.state.contentRect} info={info} />
+      <div>
+        <div className="doll-detail__background" style={background} />
+        <div className="doll-detail__illust" style={illust} >으앙</div>
+        <div className="doll-detail__informations" style={information} />
       </div>
     );
   }

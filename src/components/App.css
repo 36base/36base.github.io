@@ -5,9 +5,10 @@
   height: 100%;
 }
 
-.content {
-	height: 100%;
-}
+/* .content {
+  height: 100%;
+  background: linear-gradient(75deg, #505694 12.5%, transparent 12.5%), linear-gradient(-45deg, transparent 90%, #8C94BF 90%);
+} */
 
 .undraggable {
   user-drag: none; 
