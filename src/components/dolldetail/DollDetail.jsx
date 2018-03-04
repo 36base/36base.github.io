@@ -1,15 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { withStyles } from 'material-ui/styles';
-import { Grid, Divider, Typography, Paper } from 'material-ui';
 
-import style from './style';
+import DollDetailIllustBox from './DollDetailIllustBox';
+import DollDetailInfoBox from './DollDetailInfoBox';
 
 class DollDetail extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = this.getRects(props.width);
+  }
+
+  componentDidMount() {
+    window.scrollTo(0, 0);
   }
 
   componentWillReceiveProps(newProps) {
@@ -26,16 +29,21 @@ class DollDetail extends React.Component {
       marginRight: rootLeft,
     };
     const headerRect = {
+      position: 'fixed',
       left: rootLeft,
       top: 64,
       width: rootWidth,
       height: 64,
+      lineHeight: '32px',
+      padding: '16px 0',
+      verticalAlign: 'middle',
+      backgroundColor: '#FAFAFA',
     };
     const asideRect = {
+      position: 'fixed',
       left: rootLeft,
       top: 128,
       width: rootWidth / 2,
-      height: 400,
     };
     const contentRect = {
       marginTop: 64,
@@ -52,20 +60,16 @@ class DollDetail extends React.Component {
   }
 
   render() {
-    const { classes } = this.props;
     const info = this.props.map.get(Number(this.props.match.params.id));
 
     return (
-      <div className={classes.root} style={this.state.rootRect}>
-        <div className={classes.header} style={this.state.headerRect}>
-          헤더
+      <div style={this.state.rootRect}>
+        <div style={this.state.headerRect}>
+          No.{info.id}
+          <h1 style={{display: 'inline', marginLeft: '5px'}}>{info.krName}</h1>
         </div>
-        <div className={classes.aside} style={this.state.asideRect} >
-          <img className={classes.illust} src={info.illust.common} />
-        </div>
-        <div className={classes.content} style={this.state.contentRect}>
-          정보
-        </div>
+        <DollDetailIllustBox pos={this.state.asideRect} info={info} />
+        <DollDetailInfoBox pos={this.state.contentRect} info={info} />
       </div>
     );
   }
@@ -78,4 +82,4 @@ const stateMapper = state => ({
 });
 const dispatchMapper = undefined;
 
-export default withStyles(style)(connect(stateMapper, dispatchMapper)(DollDetail));
+export default connect(stateMapper, dispatchMapper)(DollDetail);

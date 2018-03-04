@@ -61,8 +61,8 @@ const dollList = dolls.map((doll) => {
 
   const upgrade = hasUpgrade(doll.id) ? {
     illust: {
-      common: require(`./resources/illustrations/${doll.id}/upg/common.png`),
-      damaged: require(`./resources/illustrations/${doll.id}/upg/damaged.png`),
+      common: require(`./resources/illustrations/${doll.id}/U/common.png`),
+      damaged: require(`./resources/illustrations/${doll.id}/U/damaged.png`),
     },
   } : undefined;
 

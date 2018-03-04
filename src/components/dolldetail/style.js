@@ -14,6 +14,7 @@ const style = {
 
   illust: {
     width: '100%',
+    backgroundColor: 'grey',
   },
 };
 
