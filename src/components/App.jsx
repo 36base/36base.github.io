@@ -33,7 +33,7 @@ class App extends React.Component {
       <MuiThemeProvider theme={theme}>
         <Reboot />
         <Appbar />
-        <div style={{ paddingTop: 64 }} className="content">
+        <div style={{ paddingTop: 64 }} id="content">
           <Route exact path="/" component={Home} />
           <Route exact path="/doll" component={DollDict} />
           <Route path="/doll/:id" component={DollDetail} />

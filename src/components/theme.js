@@ -26,6 +26,18 @@ const theme = createMuiTheme({
     button: {
       textTransform: undefined,
     },
+    caption: {
+      fontSize: '2rem',
+    },
+    display1: {
+      fontSize: '1rem',
+    },
+    display2: {
+      fontSize: '1.25rem',
+    },
+    display3: {
+      fontSize: '1.5rem',
+    },
   },
 });
 
