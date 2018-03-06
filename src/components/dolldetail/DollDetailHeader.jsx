@@ -4,7 +4,7 @@ import { withStyles } from 'material-ui/styles';
 
 const style = {
   container: {
-    paddingTop: '2.5%',
+    paddingTop: '1.5%',
     paddingLeft: '10%',
     paddingRight: 25,
   },
@@ -23,27 +23,27 @@ const style = {
   starBox: {
     color: '#FDA50C',
     paddingRight: 20,
-  }
+  },
 };
 
 class DollDetailHeader extends React.Component {
   render() {
-    const { classes, pos, id, krName, rank } = this.props;
+    const { classes, pos, info } = this.props;
 
     return (
       <div style={pos}>
         <Grid className={classes.container} container >
           <Grid item xs={6} >
-            <Typography className={classes.caption} variant="caption" color="primary" align="left" >{krName}</Typography>
+            <Typography className={classes.caption} variant="caption" color="primary" align="left" >{info.krName}</Typography>
           </Grid>
           <Grid className={classes.noBox} item xs={6} >
-            <Typography variant="display3" align="right" >No.{id}</Typography>
+            <Typography variant="display3" align="right" >No.{info.id}</Typography>
           </Grid>
         </Grid>
         <Divider className={classes.divider} />
         <Grid item xs={12} >
           <Typography className={classes.starBox} variant="display2" align="right">
-            {Array(rank).fill('★')}
+            {Array(info.rank).fill('★')}
           </Typography>
         </Grid>
       </div>

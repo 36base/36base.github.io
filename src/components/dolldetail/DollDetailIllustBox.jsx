@@ -1,9 +1,50 @@
 import React from 'react';
+import { Button } from 'material-ui';
+import { Sync } from 'material-ui-icons';
+import { withStyles } from 'material-ui/styles';
 
 import './illustBox.css';
 
-function isSkin(skinNo) {
-  return Number.isInteger(skinNo);
+const style = {
+  wrapper: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'stretch',
+  },
+  buttons: {
+    paddingLeft: '15%',
+  },
+  button: {
+    margin: '0 5px',
+    padding: '3px 5px',
+    minHeight: '24px',
+  },
+  image: {
+    flexGrow: 1,
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat',
+  },
+  toggleButton: {
+    float: 'right',
+    marginRight: '20%',
+    fontSize: 36,
+    backgroundColor: '#E10050',
+    color: 'white',
+  },
+};
+
+function makeValues(info) {
+  const basic = {
+    name: '기본',
+    common: info.illust.common,
+    damaged: info.illust.damaged,
+  };
+
+  return [basic, ...info.skinList.map(skin => ({
+    name: skin.name,
+    common: skin.illust.common,
+    damaged: skin.illust.damaged,
+  }))];
 }
 
 class DollDetailIllustBox extends React.Component {
@@ -11,59 +52,62 @@ class DollDetailIllustBox extends React.Component {
     super(props);
 
     this.state = {
-      skinNo: 0,
+      values: makeValues(props.info),
+      value: 0,
+      type: 'common',
     };
 
-    this.handleTabChange = this.handleTabChange.bind(this);
-    this.renderTab = this.renderTab.bind(this);
-    this.renderIllust = this.renderIllust.bind(this);
+    this.toggleType = this.toggleType.bind(this);
+    this.handleSelect = this.handleSelect.bind(this);
   }
 
-  handleTabChange(i) {
-    this.setState({ skinNo: i });
+  getImage() {
+    const { values, value, type } = this.state;
+    return values[value][type];
   }
 
-  renderTab(skin, i) {
-    const className = this.state.skinNo === i ? 'doll-detail__tab active' : 'doll-detail__tab';
-    return (
-      <span key={skin.name} className={className} onClick={() => this.handleTabChange(i)} >
-        {skin.name}
-      </span>
-    );
+  toggleType() {
+    const { type } = this.state;
+    this.setState({
+      type: type === 'common' ? 'damaged' : 'common',
+    });
   }
 
-  renderIllust() {
-    const { skinNo } = this.state;
-    const { info } = this.props;
-
-    const illust = isSkin(skinNo) ?
-      info.skinList[skinNo].illust.common :
-      info.illust.common;
-
-    return (
-      <img className="doll-detail__illust" src={illust} alt="이미지" />
-    );
+  handleSelect(value) {
+    this.setState({
+      value,
+    });
   }
 
   render() {
-    const { pos, info } = this.props;
+    const {
+      classes,
+      pos,
+    } = this.props;
+    const { values, value } = this.state;
 
     return (
-      <div className="undraggable doll-detail__wrapper" style={pos} >
-        <div className="doll-detail__tab-container" >
-          <span 
-            className={`doll-detail__tab ${!Number.isInteger(this.state.skinNo) && 'active'}`}
-            onClick={() => this.handleTabChange()}
-          >
-            기본
-          </span>
-          {info.skinList.map(this.renderTab)}
-          <span className="doll-detail__tab-filler" />
+      <div className={classes.wrapper} style={pos}>
+        <div className={classes.buttons}>
+          {values.map((v, i) => (
+            <Button
+              className={classes.button}
+              variant="raised"
+              color={i === value ? 'primary' : 'grey'}
+              onClick={() => this.handleSelect(i)}
+            >
+              {v.name}
+            </Button>
+          ))}
         </div>
-        {this.renderIllust()}
+        <div className={classes.image} style={{ backgroundImage: `url(${this.getImage()})` }} >
+          <Button variant="fab" aria-label="edit" className={classes.toggleButton} onClick={this.toggleType}>
+            <Sync />
+          </Button>
+        </div>
       </div>
     );
   }
 }
 
-export default DollDetailIllustBox;
+export default withStyles(style)(DollDetailIllustBox);
