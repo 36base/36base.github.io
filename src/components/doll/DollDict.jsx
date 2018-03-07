@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Grid } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 
 import DollCard from './card/DollCard';
 
 const style = {
   wrapper: {
-    maxWidth: 1074,
-    minWidth: 644.4,
+    minWidth: 660,
     margin: '0 auto',
   },
 };
@@ -17,14 +17,15 @@ class DollDict extends React.Component {
     const { dolls, classes } = this.props;
 
     return (
-      <div className={classes.wrapper}>
-        {dolls.map(doll => <DollCard {...doll} />)}
-      </div>
+      <Grid className={classes.wrapper} container>
+        {dolls.map(doll => <DollCard key={doll.id} {...doll} />)}
+      </Grid>
     );
   }
 }
 
 const stateMapper = state => ({
+  width: state.common.width,
   dolls: state.doll.list,
 });
 
