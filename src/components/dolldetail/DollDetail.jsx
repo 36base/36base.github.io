@@ -17,6 +17,7 @@ function getBackgroundGradient() {
 const style = theme => ({
   wrapper: {
     display: 'flex',
+    position: 'relative',
     width: '100%',
     height: '100%',
     flexDirection: 'column',
@@ -25,9 +26,9 @@ const style = theme => ({
   background: {
     position: 'absolute',
     left: 0,
-    top: 0,
+    top: -64,
     width: '20%',
-    height: '100%',
+    height: 'calc(100% + 64px)',
   },
   header: {
     paddingTop: '2%',
@@ -40,10 +41,12 @@ const style = theme => ({
     alignItems: 'stretch',
   },
   left: {
-    flexBasis: 720,
+    minWidth: 512,
+    flex: 1,
   },
   right: {
-    flexGrow: 1,
+    flex: 1,
+    backgroundColor: 'green',
     overflow: 'auto',
   },
 });
