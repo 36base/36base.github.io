@@ -1,89 +1,76 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Button } from 'material-ui';
+import { withStyles } from 'material-ui/styles';
 
 import './DollDetail.css';
 import DollDetailHeader from './DollDetailHeader';
 import DollDetailIllustBox from './DollDetailIllustBox';
 
-function getLayout(width, height) {
-  const w = width / 5;
-  const p = (height / ((w * 0.7) + height)) * 100;
-  const bgGradation1 = `linear-gradient(${Math.atan2(height, w * 0.8) * (180 / Math.PI)}deg, #505694 50%, transparent 50%)`;
-  const bgGradation2 = `linear-gradient(-60deg, transparent ${p}%, #8C94BF ${p}%`;
+function getBackgroundGradient() {
+  const bg1 = 'linear-gradient(to right top, #505694 50%, transparent 50%)';
+  const bg2 = 'linear-gradient(135deg, #8C94BF 20%, transparent 20%)';
 
-  const background = {
-    position: 'fixed',
-    left: 0,
-    top: 64,
-    width: width / 5,
-    height: height - 64,
-    background: [bgGradation1, bgGradation2].join(','),
-    zIndex: 20,
-  };
-
-  const header = {
-    position: 'fixed',
-    left: 0,
-    top: 64,
-    width: '100%',
-    backgroundColor: '#FAFAFA',
-    zIndex: 10,
-  };
-
-  const illust = {
-    position: 'fixed',
-    left: 0,
-    top: 150,
-    width: width * 0.5,
-    height: height - 150,
-    zIndex: 20,
-  };
-
-  const information = {
-    marginLeft: width * 0.4,
-    marginTop: 96,
-    height: 1000,
-    backgroundColor: 'green',
-  };
-
-  return {
-    background,
-    header,
-    illust,
-    information,
-  };
+  return { background: [bg1, bg2].join(',') };
 }
 
+const style = theme => ({
+  wrapper: {
+    display: 'flex',
+    width: '100%',
+    height: '100%',
+    flexDirection: 'column',
+    alignItems: 'stretch',
+  },
+  background: {
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    width: '20%',
+    height: '100%',
+  },
+  header: {
+    paddingTop: '2%',
+    paddingRight: 25,
+  },
+  content: {
+    display: 'flex',
+    flexGrow: 1,
+    flexDirection: 'row',
+    alignItems: 'stretch',
+  },
+  left: {
+    flexBasis: 720,
+  },
+  right: {
+    flexGrow: 1,
+    overflow: 'auto',
+  },
+});
+
 class DollDetail extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = getLayout(props.width, props.height);
-  }
-
   componentDidMount() {
     window.scrollTo(0, 0);
   }
 
-  componentWillReceiveProps(newProps) {
-    this.setState(getLayout(newProps.width, newProps.height));
-  }
-
   render() {
     const info = this.props.map.get(Number(this.props.match.params.id));
-    const {
-      background,
-      header,
-      illust,
-      information,
-    } = this.state;
+    const { classes } = this.props;
 
     return (
-      <div>
-        <div className="doll-detail__background" style={background} />
-        <DollDetailHeader pos={header} info={info} />
-        <DollDetailIllustBox pos={illust} info={info} />
-        <div className="doll-detail__informations" style={information} />
+      <div className={classes.wrapper}>
+        <div className={classes.background} style={getBackgroundGradient()} />
+        <div className={classes.header}>
+          <DollDetailHeader info={info} />
+        </div>
+        <div className={classes.content}>
+          <div className={classes.left}>
+            <DollDetailIllustBox info={info} />
+          </div>
+          <div className={classes.right}>
+            
+          </div>
+        </div>
       </div>
     );
   }
@@ -96,4 +83,4 @@ const stateMapper = state => ({
 });
 const dispatchMapper = undefined;
 
-export default connect(stateMapper, dispatchMapper)(DollDetail);
+export default connect(stateMapper, dispatchMapper)(withStyles(style)(DollDetail));

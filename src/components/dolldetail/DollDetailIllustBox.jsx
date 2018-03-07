@@ -8,6 +8,8 @@ import './illustBox.css';
 const style = {
   wrapper: {
     display: 'flex',
+    width: '100%',
+    height: '100%',
     flexDirection: 'column',
     alignItems: 'stretch',
   },
@@ -21,15 +23,9 @@ const style = {
   },
   image: {
     flexGrow: 1,
+    zIndex: 20,
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
-  },
-  toggleButton: {
-    float: 'right',
-    marginRight: '20%',
-    fontSize: 36,
-    backgroundColor: '#E10050',
-    color: 'white',
   },
 };
 
@@ -63,7 +59,11 @@ class DollDetailIllustBox extends React.Component {
 
   getImage() {
     const { values, value, type } = this.state;
-    return values[value][type];
+    const url = values[value][type];
+
+    return {
+      backgroundImage: `url(${url})`,
+    };
   }
 
   toggleType() {
@@ -80,31 +80,17 @@ class DollDetailIllustBox extends React.Component {
   }
 
   render() {
-    const {
-      classes,
-      pos,
-    } = this.props;
+    const { classes } = this.props;
     const { values, value } = this.state;
 
     return (
-      <div className={classes.wrapper} style={pos}>
+      <div className={classes.wrapper}>
         <div className={classes.buttons}>
           {values.map((v, i) => (
-            <Button
-              className={classes.button}
-              variant="raised"
-              color={i === value ? 'primary' : 'grey'}
-              onClick={() => this.handleSelect(i)}
-            >
-              {v.name}
-            </Button>
+            <Button className={classes.button} variant="raised" color={i === value ? 'primary' : 'grey'} onClick={() => this.handleSelect(i)}>{v.name}</Button>
           ))}
         </div>
-        <div className={classes.image} style={{ backgroundImage: `url(${this.getImage()})` }} >
-          <Button variant="fab" aria-label="edit" className={classes.toggleButton} onClick={this.toggleType}>
-            <Sync />
-          </Button>
-        </div>
+        <div className={classes.image} style={this.getImage()} />
       </div>
     );
   }

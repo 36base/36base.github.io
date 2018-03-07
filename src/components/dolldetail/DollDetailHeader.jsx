@@ -2,51 +2,44 @@ import React from 'react';
 import { Grid, Typography, Divider } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 
-const style = {
-  container: {
-    paddingTop: '1.5%',
-    paddingLeft: '10%',
-    paddingRight: 25,
-  },
+const style = theme => ({
   caption: {
-    paddingLeft: 20,
+    paddingLeft: 'calc(10% + 100px)',
   },
-  noBox: {
+  no: {
     display: 'flex',
     flexDirection: 'column-reverse',
     color: '#62727B',
   },
-  divider: {
-    height: 3,
-    backgroundColor: '#102027',
-  },
-  starBox: {
+  star: {
     color: '#FDA50C',
-    paddingRight: 20,
   },
-};
+  divider: {
+    width: '100%',
+    height: 3,
+    backgroundColor: theme.palette.primary.dark,
+  },
+});
 
 class DollDetailHeader extends React.Component {
   render() {
-    const { classes, pos, info } = this.props;
+    const { classes, info } = this.props;
 
     return (
-      <div style={pos}>
-        <Grid className={classes.container} container >
-          <Grid item xs={6} >
-            <Typography className={classes.caption} variant="caption" color="primary" align="left" >{info.krName}</Typography>
-          </Grid>
-          <Grid className={classes.noBox} item xs={6} >
-            <Typography variant="display3" align="right" >No.{info.id}</Typography>
-          </Grid>
+      <Grid container>
+        <Grid item xs={12} sm={6}>
+          <Typography className={classes.caption} variant="caption" color="primary" align="left" >{info.krName}</Typography>
+        </Grid>
+        <Grid className={classes.no} item xs={12} sm={6}>
+          <Typography variant="display3" align="right" >No.{info.id}</Typography>
         </Grid>
         <Divider className={classes.divider} />
-        <Grid item xs={12} >
-          <Typography className={classes.starBox} variant="display2" align="right">
+        <Grid item xs={12}>
+          <Typography className={classes.star} variant="display2" align="right" >
             {Array(info.rank).fill('★')}
           </Typography>
         </Grid>
-      </div>
+      </Grid>
     );
   }
 }

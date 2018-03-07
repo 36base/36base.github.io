@@ -2,7 +2,7 @@ import { RESIZE } from '../actions/common';
 
 function getState() {
   const width = window.innerWidth;
-  const height = window.innerHeight;
+  const height = window.innerHeight - 64;
 
   return {
     left: 0,
