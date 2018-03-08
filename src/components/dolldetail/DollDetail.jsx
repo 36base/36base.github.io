@@ -1,11 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Button } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 
-import './DollDetail.css';
 import DollDetailHeader from './DollDetailHeader';
 import DollDetailIllustBox from './DollDetailIllustBox';
+import DollDetailInfoBox from './DollDetailInfoBox';
 
 function getBackgroundGradient() {
   const bg1 = 'linear-gradient(to right top, #505694 50%, transparent 50%)';
@@ -46,7 +45,6 @@ const style = theme => ({
   },
   right: {
     flex: 1,
-    backgroundColor: 'green',
     overflow: 'auto',
   },
 });
@@ -71,7 +69,7 @@ class DollDetail extends React.Component {
             <DollDetailIllustBox info={info} />
           </div>
           <div className={classes.right}>
-            
+            <DollDetailInfoBox info={info} />
           </div>
         </div>
       </div>

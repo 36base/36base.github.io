@@ -90,4 +90,4 @@ const dispatchMapper = dispatch => ({
   resize: (width, height) => dispatch(resize(width, height)),
 });
 
-export default withRouter(connect(stateMapper, dispatchMapper)(withStyles(style)(App)));
+export default withStyles(style)(withRouter(connect(stateMapper, dispatchMapper)(App)));

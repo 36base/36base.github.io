@@ -3,8 +3,6 @@ import { Button } from 'material-ui';
 import { Sync } from 'material-ui-icons';
 import { withStyles } from 'material-ui/styles';
 
-import './illustBox.css';
-
 const style = {
   wrapper: {
     display: 'flex',
