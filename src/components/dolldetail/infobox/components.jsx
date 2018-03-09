@@ -13,7 +13,9 @@ const style = theme => ({
     color: 'grey',
     paddingLeft: theme.spacing.unit * 2,
   },
-
+  boxContent: {
+    padding: `${theme.spacing.unit * 2}px 0`,
+  },
   rowWrapper: {
     paddingTop: theme.spacing.unit * 0.75,
     paddingBottom: theme.spacing.unit * 0.75,
@@ -37,14 +39,20 @@ const style = theme => ({
 });
 
 export const Box = withStyles(style)((props) => {
-  const { classes, children, name } = props;
+  const { classes, name, bottomLine } = props;
+  const children = React.Children.toArray(props.children);
+
   return (
     <div className={classes.boxWrapper}>
       <Grid item xs={12}>
         <Typography className={classes.boxName}>{name}</Typography>
       </Grid>
-      <Divider className={classes.divider} />
-      {children}
+      {children.reduce((arr, e) => {
+        arr.push(<Divider className={classes.divider} />);
+        arr.push(e);
+        return arr;
+      }, [])}
+      {bottomLine ? <Divider className={classes.divider} /> : ''}
     </div>
   );
 });
@@ -52,35 +60,28 @@ export const Box = withStyles(style)((props) => {
 export const Row = withStyles(style)((props) => {
   const {
     classes,
-    divider,
     label,
     value,
   } = props;
-  const row = (
+  return (
     <Grid className={classes.rowWrapper} container spacing={8}>
       <Grid item xs><Typography className={classes.rowLabel}>{label}</Typography></Grid>
       <Grid item xs={8}><Typography className={classes.rowValue}>{value}</Typography></Grid>
     </Grid>
   );
-
-  if (divider) {
-    return [row, <Divider className={classes.divider} />];
-  }
-  return row;
 });
 
 export const StatusRow = withStyles(style)((props) => {
   const {
     classes,
     color,
-    divider,
     label,
     value,
     maxValue,
   } = props;
   const statusRate = Math.min(1, value / maxValue) * 100;
 
-  const row = (
+  return (
     <Grid className={classes.rowWrapper} container spacing={8}>
       <Grid item xs><Typography>{label}</Typography></Grid>
       <Grid item xs><Typography>{value}</Typography></Grid>
@@ -92,9 +93,4 @@ export const StatusRow = withStyles(style)((props) => {
       </Grid>
     </Grid>
   );
-
-  if (divider) {
-    return [row, <Divider className={classes.divider} />];
-  }
-  return row;
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'material-ui';
+import { Button, RadioGroup, Radio, FormControlLabel } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 
 const style = theme => ({
@@ -25,6 +25,13 @@ const style = theme => ({
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
   },
+  group: {
+    float: 'right',
+    marginRight: 20,
+  },
+  radio: {
+    fontSize: '12px',
+  }
 });
 
 function makeValues(info) {
@@ -94,7 +101,16 @@ class DollDetailIllustBox extends React.Component {
             </Button>
           ))}
         </div>
-        <div className={classes.image} style={this.getImage()} />
+        <div className={classes.image} style={this.getImage()} >
+          <RadioGroup
+            className={classes.group}
+            value={this.state.imgType}
+            onChange={this.setImageType}
+          >
+            <FormControlLabel className={classes.radio} value="common" control={<Radio />} label="통상" />
+            <FormControlLabel className={classes.radio} value="damaged" control={<Radio />} label="중상" />
+          </RadioGroup>
+        </div>
       </div>
     );
   }
