@@ -3,7 +3,14 @@ import { Grid, Divider, Typography, List, ListItem, ListItemText } from 'materia
 import { withStyles } from 'material-ui/styles';
 
 import sd from './sd.png';
-import { Box, Row } from './infobox/components';
+import { Box, Row, StatusRow } from './infobox/components';
+
+function makeDurationString(time) {
+  const hour = Math.floor(time / 360);
+  const min = (time / 60) % 60;
+
+  return `${hour < 10 ? '0' : ''}${hour} : ${min < 10 ? '0' : ''}${min}`;
+}
 
 const style = {
   box: {
@@ -41,49 +48,38 @@ const style = {
 
 class DollDetailInfoBox extends React.Component {
   render() {
-    const { classes } = this.props;
+    const { classes, info } = this.props;
+
+    const basicInfoBox = (
+      <Box name="기본정보">
+        <Row label="분류" value={info.typeName} divider />
+        <Row label="일러스트" value="정보없음" divider />
+        <Row label="성우" value={info.voice} divider />
+      </Box>
+    );
+
+    const statusBox = (
+      <Box name="스테이터스">
+        <StatusRow color="red" divider label="체력" value={info.stats.hp} maxValue={300} />
+        <StatusRow color="red" divider label="화력" value={info.stats.pow} maxValue={200} />
+        <StatusRow color="red" divider label="명중" value={info.stats.hit} maxValue={100} />
+        <StatusRow color="red" divider label="회피" value={info.stats.dodge} maxValue={150} />
+        <StatusRow color="red" divider label="사속" value={info.stats.rate} maxValue={120} />
+      </Box>
+    );
+
+    const gainSpots = (
+      <Box name="획득처">
+        <Row label="제조" value={makeDurationString(info.buildTime)} divider />
+        <Row label="일반 전역" value={info.drop.join(',')} divider />
+        <Row label="이벤트 전역" value="불가" divider />
+      </Box>
+    );
 
     return (
       <div>
-        <Box name="기본정보">
-          <Row label="분류" value="Rifle" divider />
-          <Row label="일러스트" value="受菟" divider />
-          <Row label="성우" value="Ricca Tachibana" divider />
-        </Box>
-
-        <Box name="스테이터스">
-          <Grid className={classes.row} container spacing={6}>
-            <Grid item xs><Typography>체력</Typography></Grid>
-            <Grid item xs><Typography>440</Typography></Grid>
-            <Grid className={classes.statusBar} item xs={8} />
-          </Grid>
-          <Divider />
-          <Grid className={classes.row} container spacing={6}>
-            <Grid item xs><Typography>화력</Typography></Grid>
-            <Grid item xs><Typography>115</Typography></Grid>
-            <Grid className={classes.statusBar} item xs={8} />
-          </Grid>
-          <Divider />
-          <Grid className={classes.row} container spacing={6}>
-            <Grid item xs><Typography>명중</Typography></Grid>
-            <Grid item xs><Typography>65</Typography></Grid>
-            <Grid className={classes.statusBar} item xs={8} />
-          </Grid>
-          <Divider />
-          <Grid className={classes.row} container spacing={6}>
-            <Grid item xs><Typography>회피</Typography></Grid>
-            <Grid item xs><Typography>27</Typography></Grid>
-            <Grid className={classes.statusBar} item xs={8} />
-          </Grid>
-          <Divider />
-          <Grid className={classes.row} container spacing={6}>
-            <Grid item xs><Typography>사속</Typography></Grid>
-            <Grid item xs><Typography>39</Typography></Grid>
-            <Grid className={classes.statusBar} item xs={8} />
-          </Grid>
-          <Divider />
-        </Box>
-
+        {basicInfoBox}
+        {statusBox}
         <Box name="SD">
           <Grid container spacing={6}>
             <Grid item xs={8} >
@@ -134,12 +130,7 @@ class DollDetailInfoBox extends React.Component {
             </Grid>
           </Grid>
         </Box>
-
-        <Box name="획득처">
-          <Row label="제조" value="불가" divider />
-          <Row label="일반 전역" value="불가" divider />
-          <Row label="이벤트 전역" value="저체온증 1-2, 저체온증 1-3, 저체온증 3-3" divider />
-        </Box>
+        {gainSpots}
       </div>
     );
   }

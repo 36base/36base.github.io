@@ -25,7 +25,12 @@ const style = theme => ({
   rowValue: {
 
   },
-
+  statusBar: {
+    width: '100%',
+    height: '100%',
+    borderRadius: 10,
+    border: '1px solid grey',
+  },
   divider: {
     backgroundColor: theme.palette.primary.dark,
   },
@@ -52,9 +57,39 @@ export const Row = withStyles(style)((props) => {
     value,
   } = props;
   const row = (
-    <Grid className={classes.rowWrapper} container spacing={6}>
+    <Grid className={classes.rowWrapper} container spacing={8}>
       <Grid item xs><Typography className={classes.rowLabel}>{label}</Typography></Grid>
       <Grid item xs={8}><Typography className={classes.rowValue}>{value}</Typography></Grid>
+    </Grid>
+  );
+
+  if (divider) {
+    return [row, <Divider className={classes.divider} />];
+  }
+  return row;
+});
+
+export const StatusRow = withStyles(style)((props) => {
+  const {
+    classes,
+    color,
+    divider,
+    label,
+    value,
+    maxValue,
+  } = props;
+  const statusRate = Math.min(1, value / maxValue) * 100;
+
+  const row = (
+    <Grid className={classes.rowWrapper} container spacing={8}>
+      <Grid item xs><Typography>{label}</Typography></Grid>
+      <Grid item xs><Typography>{value}</Typography></Grid>
+      <Grid item xs={8} >
+        <div
+          className={classes.statusBar}
+          style={{ background: `linear-gradient(to right, ${color} ${statusRate}%, transparent ${statusRate}%)` }}
+        />
+      </Grid>
     </Grid>
   );
 

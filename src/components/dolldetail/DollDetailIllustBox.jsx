@@ -1,9 +1,8 @@
 import React from 'react';
 import { Button } from 'material-ui';
-import { Sync } from 'material-ui-icons';
 import { withStyles } from 'material-ui/styles';
 
-const style = {
+const style = theme => ({
   wrapper: {
     display: 'flex',
     width: '100%',
@@ -15,9 +14,10 @@ const style = {
     paddingLeft: '15%',
   },
   button: {
-    margin: '0 5px',
-    padding: '3px 5px',
-    minHeight: '24px',
+    margin: `0 ${theme.spacing.unit / 2}px`,
+    marginBottom: theme.spacing.unit,
+    padding: `${theme.spacing.unit / 4}px ${theme.spacing.unit / 2}px`,
+    minHeight: theme.spacing.unit * 3,
   },
   image: {
     flexGrow: 1,
@@ -25,7 +25,7 @@ const style = {
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
   },
-};
+});
 
 function makeValues(info) {
   const basic = {
@@ -48,26 +48,25 @@ class DollDetailIllustBox extends React.Component {
     this.state = {
       values: makeValues(props.info),
       value: 0,
-      type: 'common',
+      imgType: 'common',
     };
 
-    this.toggleType = this.toggleType.bind(this);
+    this.setImageType = this.setImageType.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
   }
 
   getImage() {
-    const { values, value, type } = this.state;
-    const url = values[value][type];
+    const { values, value, imgType } = this.state;
+    const url = values[value][imgType];
 
     return {
       backgroundImage: `url(${url})`,
     };
   }
 
-  toggleType() {
-    const { type } = this.state;
+  setImageType(event, value) {
     this.setState({
-      type: type === 'common' ? 'damaged' : 'common',
+      imgType: value,
     });
   }
 
@@ -85,7 +84,14 @@ class DollDetailIllustBox extends React.Component {
       <div className={classes.wrapper}>
         <div className={classes.buttons}>
           {values.map((v, i) => (
-            <Button className={classes.button} variant="raised" color={i === value ? 'primary' : 'grey'} onClick={() => this.handleSelect(i)}>{v.name}</Button>
+            <Button
+              className={classes.button}
+              variant="raised"
+              color={i === value ? 'primary' : 'grey'}
+              onClick={() => this.handleSelect(i)}
+            >
+              {v.name}
+            </Button>
           ))}
         </div>
         <div className={classes.image} style={this.getImage()} />
