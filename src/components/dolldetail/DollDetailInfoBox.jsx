@@ -4,7 +4,7 @@ import { withStyles } from 'material-ui/styles';
 
 import sd from './sd.png';
 import { Box, Row, StatusRow } from './infobox/components';
-import StatusBar from "../utils/StatusBar";
+import SDMotion from "../utils/SDMotion";
 
 function makeDurationString(time) {
   if (time === undefined || time === 0) {
@@ -134,7 +134,7 @@ class DollDetailInfoBox extends React.Component {
             </Grid>
             <Grid item xs={4} component="ul">
               {/* StatusBar 컴포넌트 만듬 */}
-              <StatusBar
+              <SDMotion
                 ListItemClassName={classes.noPadding}
                 ComponentName="li"
                 ListItemIconClassName={classes.icon}

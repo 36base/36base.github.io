@@ -1,10 +1,10 @@
 import React from 'react';
 import { ListItem, ListItemIcon, ListItemText, Icon } from 'material-ui';
 
-export default class StatusBar extends React.Component {
+export default class SDMotion extends React.Component {
   render() {
     return (
-      <div className="StatusBar">
+      <div className="SDMotion">
         <ListItem
           className={this.props.ListItemClassName}
           button
