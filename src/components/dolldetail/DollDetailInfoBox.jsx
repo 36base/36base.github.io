@@ -4,6 +4,7 @@ import { withStyles } from 'material-ui/styles';
 
 import sd from './sd.png';
 import { Box, Row, StatusRow } from './infobox/components';
+import StatusBar from "../utils/StatusBar";
 
 function makeDurationString(time) {
   if (time === undefined || time === 0) {
@@ -132,10 +133,14 @@ class DollDetailInfoBox extends React.Component {
               <div style={{ width: '100%', height: '100%', backgroundImage: `url(${sd})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }} />
             </Grid>
             <Grid item xs={4} component="ul">
-              <ListItem className={classes.noPadding} button component="li">
-                <ListItemIcon className={classes.icon}><Icon className="fa fa-lg fa-check" /></ListItemIcon>
-                <ListItemText primary="대기" />
-              </ListItem>
+              {/* StatusBar 컴포넌트 만듬 */}
+              <StatusBar
+                ListItemClassName={classes.noPadding}
+                ComponentName="li"
+                ListItemIconClassName={classes.icon}
+                IconClassName="fa fa-lg fa-check"
+                ListItemTextPrimary="대기"
+              />
               <ListItem className={classes.noPadding} button component="li">
                 <ListItemIcon className={classes.icon}><Icon /></ListItemIcon>
                 <ListItemText primary="이동" />
