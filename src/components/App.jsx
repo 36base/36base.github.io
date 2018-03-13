@@ -28,7 +28,7 @@ const style = theme => ({
   content: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.default,
-    padding: theme.spacing.unit * 3,
+    padding: 0,
     minWidth: 0,
     overflow: 'auto',
   },
@@ -69,10 +69,10 @@ class App extends React.Component {
         <Menu />
         <main id="content" className={classes.content}>
           <div className={classes.mixin} />
-          <div>
+          <div style={{width: '100%', height: 'calc(100% - 64px)'}}>
             <Route exact path="/" component={Home} />
             <Route exact path="/doll" component={DollDict} />
-            <Route path="/doll/:id" component={DollDetail} />
+            <Route path="/doll/:id" component={DollDetail} onEnter={() => console.log('route!')}/>
             <Route path="/fairy" component={FairyDict} />
             <Route path="/equip" component={EquipDict} />
             <Route path="/calculator" component={Calculator} />
@@ -90,5 +90,4 @@ const dispatchMapper = dispatch => ({
   resize: (width, height) => dispatch(resize(width, height)),
 });
 
-export default withRouter(connect(stateMapper, dispatchMapper)(withStyles(style)(App)));
-
+export default withStyles(style)(withRouter(connect(stateMapper, dispatchMapper)(App)));
