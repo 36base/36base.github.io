@@ -12,11 +12,7 @@ const style = {
   },
 };
 
-const stateMapper = state => ({
-  id: state.dolldetail.id,
-});
-
-export default connect(stateMapper)(withStyles(style)((props) => {
+const NumberBox = (props) => {
   const { classes, id } = props;
 
   return (
@@ -26,4 +22,10 @@ export default connect(stateMapper)(withStyles(style)((props) => {
       </Typography>
     </Grid>
   );
-}));
+};
+
+const stateMapper = state => ({
+  id: state.dolldetail.id,
+});
+
+export default connect(stateMapper)(withStyles(style)(NumberBox));

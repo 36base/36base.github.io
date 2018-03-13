@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import { Grid, Typography } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 
-import InfoBox from '../../utils/InfoBox';
-import Square from '../../utils/Square';
+import InfoBox from '../../common/InfoBox';
+import Square from '../../common/Square';
 
 const style = theme => ({
   container: {
@@ -114,6 +114,6 @@ const EffectBox = (props) => {
   );
 };
 
-const stateMapper = state => state.dolldetail.effect;
+const stateMapper = state => state.dolldetail.mounted.effect;
 
 export default connect(stateMapper)(withStyles(style)(EffectBox));

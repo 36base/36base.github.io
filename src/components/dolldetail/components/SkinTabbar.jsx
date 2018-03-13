@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Grid, Button } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 
-import { selectImg } from '../../../actions/doll';
+import { setImgNo } from '../../../actions/doll';
 
 const style = theme => ({
   container: {
@@ -52,12 +52,12 @@ const SkinTabbar = (props) => {
 };
 
 const stateMapper = state => ({
-  value: state.dolldetail.image.idx,
-  values: state.dolldetail.image.values,
+  value: state.dolldetail.imgNo,
+  values: state.dolldetail.mounted.images,
 });
 
 const dispatchMapper = dispatch => ({
-  onBtnClick: id => dispatch(selectImg(id)),
+  onBtnClick: id => dispatch(setImgNo(id)),
 });
 
 export default connect(stateMapper, dispatchMapper)(withStyles(style)(SkinTabbar));

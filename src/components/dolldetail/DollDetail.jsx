@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { withStyles } from 'material-ui/styles';
 import { Grid } from 'material-ui';
-import { selectId } from '../../actions/doll';
+import { withStyles } from 'material-ui/styles';
 
-import HorizonLine from '../utils/HorizonLine';
+import { mount } from '../../actions/doll';
 
+import HorizonLine from '../common/HorizonLine';
 import Background from './components/Background';
 import Caption from './components/Caption';
 import NumberBox from './components/NumberBox';
@@ -18,7 +18,6 @@ import StatusInfoBox from './components/StatusInfoBox';
 import SkillBox from './components/SkillBox';
 import EffectBox from './components/EffectBox';
 import AcquisitionInfoBox from './components/AcquisitionInfoBox';
-
 
 const style = theme => ({
   wrapper: {
@@ -43,6 +42,8 @@ const style = theme => ({
     flexGrow: 1,
     flexDirection: 'row',
     alignItems: 'stretch',
+    margin: 0,
+    width: '100%',
   },
   left: {
     display: 'flex',
@@ -69,8 +70,7 @@ class DollDetail extends React.Component {
   }
 
   componentWillMount() {
-    const { match, select } = this.props;
-    select(Number(match.params.id));
+    this.props.mount(Number(this.props.match.params.id));
   }
 
   wrap(content) {
@@ -114,11 +114,9 @@ class DollDetail extends React.Component {
   }
 }
 
-const stateMapper = state => ({
-  info: state.dolldetail.info,
-});
+const stateMapper = undefined;
 const dispatchMapper = dispatch => ({
-  select: id => dispatch(selectId(id)),
+  mount: id => dispatch(mount(id)),
 });
 
 export default connect(stateMapper, dispatchMapper)(withStyles(style)(DollDetail));

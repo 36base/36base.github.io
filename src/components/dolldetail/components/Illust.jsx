@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { withStyles } from 'material-ui/styles';
 
-import ImageBox from '../../utils/ImageBox';
+import ImageBox from '../../common/ImageBox';
 
 const style = {
   container: {
@@ -12,19 +12,24 @@ const style = {
   },
 };
 
-const stateMapper = state => ({
-  image: state.dolldetail.image,
-});
-
 const Illust = (props) => {
-  const { classes, image } = props;
-  const path = image.values[image.idx][image.type];
+  const { classes, path } = props;
 
   return (
     <div className={classes.container}>
       <ImageBox src={path} />
     </div>
   );
+};
+
+const stateMapper = (state) => {
+  const { images } = state.dolldetail.mounted;
+  const { imgNo } = state.dolldetail;
+  const imgType = state.dolldetail.imgDamaged ? 'damaged' : 'normal';
+
+  return {
+    path: images[imgNo][imgType],
+  };
 };
 
 export default connect(stateMapper)(withStyles(style)(Illust));
