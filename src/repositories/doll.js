@@ -38,6 +38,7 @@ function buildSkill(skill) {
     id: skill.id,
     name: base.name,
     template: base.desc,
+    initCooldown: skill.initCooldown,
     icon: `${domain}/skill/${base.path}.png`,
     dataPool,
   };

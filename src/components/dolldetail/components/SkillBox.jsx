@@ -51,6 +51,11 @@ const SkillBox = (props) => {
   const { classes, dataPool, lv } = props;
 
   const getData = key => dataPool.get(key).values[lv - 1];
+  const renderSide = (label, value) => (
+    <Typography align="right" variant="body1">
+      {label} <span className={classes.yellow}>{value}</span>
+    </Typography>
+  );
   const description = buildDescription(props.template, dataPool, lv);
   const selector = <SmallSelector label="레벨" values={lvValues} selected={lv} onChange={props.onChange} />;
 
@@ -66,15 +71,9 @@ const SkillBox = (props) => {
           <Typography variant="display3">{props.name}</Typography>
         </Grid>
         <Grid className={classes.alignBottom} item xs={4}>
-          <Typography align="right" variant="body1">
-            초기 쿨타임 <span className={classes.yellow}>{props.initCooldown}초</span>
-          </Typography>
-          <Typography align="right" variant="body1">
-            쿨타임 <span className={classes.yellow}>{getData('CD')}초</span>
-          </Typography>
-          <Typography align="right" variant="body1">
-            지속시간 <span className={classes.yellow}>{getData('DR')}초</span>
-          </Typography>
+          {props.initCooldown && renderSide('초기 쿨타임', `${props.initCooldown}초`)}
+          {dataPool.has('CD') && renderSide('쿨타임', `${getData('CD')}초`)}
+          {dataPool.has('DR') && renderSide('지속시간', `${getData('DR')}초`)}
         </Grid>
         <Grid item xs={12}>
           <Typography>{description}</Typography>
