@@ -1,4 +1,4 @@
-export const RESIZE = 'IS_MOBILE';
+export const RESIZE = 'RESIZE';
 
 export function resize(width, height) {
   return {
