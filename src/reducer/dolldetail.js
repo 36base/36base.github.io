@@ -1,5 +1,5 @@
 import dollData from '../repositories/doll';
-import { MOUNT, SET_IMG_NO, TOGGLE_IMG_TYPE, SET_SKILL_LV } from '../actions/doll';
+import { MOUNT, SET_IMG_NO, TOGGLE_IMG_TYPE, SET_SKILL_LV } from '../actions/dolldetail';
 
 const dollMap = new Map(dollData.map(e => [e.id, e]));
 

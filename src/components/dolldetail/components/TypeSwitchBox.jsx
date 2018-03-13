@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { FormControlLabel, Switch } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 
-import { toggleImgType } from '../../../actions/doll';
+import { toggleImgType } from '../../../actions/dolldetail';
 
 const style = {
   container: {

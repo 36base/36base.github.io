@@ -38,6 +38,7 @@ function buildSkill(skill) {
     id: skill.id,
     name: base.name,
     template: base.desc,
+    initCooldown: skill.initCooldown,
     icon: `${domain}/skill/${base.path}.png`,
     dataPool,
   };
@@ -59,6 +60,7 @@ const dollList = dolls.map((doll) => {
     id: doll.id,
     name: doll.name,
     krName: doll.krName,
+    nicknames: doll.nick,
     illust: doll.illust,
     voice: doll.voice,
     type: typeMap.get(doll.type) || {},
