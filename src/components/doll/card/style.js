@@ -40,6 +40,8 @@ const style = {
     top: 232,
     width: 170,
     height: 30,
+    paddingLeft: 10,
+    fontFamily: 'Noto Sans KR',
     fontSize: 18,
     fontWeight: 500,
     lineHeight: '30px',

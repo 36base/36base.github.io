@@ -1,23 +1,8 @@
-@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css); 
 
 .wrapper {
 	width: 100%;
   height: 100%;
-}
-
-.content {
-	height: 100%;
-}
-
-@media(max-width: 767px) {
-	.content {
-		margin-left: 0px;
-		margin-top: 55px;
-	}
-}
-
-i {
-  padding-right: 8px;
 }
 
 .undraggable {
@@ -27,4 +12,8 @@ i {
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+}
+
+.body {
+  font-family: 'Noto Sans KR', 'serif';
 }

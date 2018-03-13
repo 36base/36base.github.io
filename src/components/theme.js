@@ -21,10 +21,22 @@ const theme = createMuiTheme({
     extra: { main: '#D5A3FD' },
   },
   typography: {
-    fontFamily: ['Noto Sans KR', 'Roboto', 'sans-serif'],
+    fontFamily: ['Noto Sans KR', 'sans-serif'],
     fontSize: 14,
     button: {
       textTransform: undefined,
+    },
+    caption: {
+      fontSize: '2rem',
+    },
+    display1: {
+      fontSize: '1rem',
+    },
+    display2: {
+      fontSize: '1.25rem',
+    },
+    display3: {
+      fontSize: '1.5rem',
     },
   },
 });

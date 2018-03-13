@@ -39,7 +39,7 @@ module.exports = {
         use: {
           loader: 'file-loader',
           options: {
-            publicPath: 'http://girlsfrontline.kr/assets',
+            publicPath: 'https://girlsfrontline.kr/assets',
             name: 'img/[hash].[ext]',
           },
         },
