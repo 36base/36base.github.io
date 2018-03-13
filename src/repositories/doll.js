@@ -59,6 +59,7 @@ const dollList = dolls.map((doll) => {
     id: doll.id,
     name: doll.name,
     krName: doll.krName,
+    nicknames: doll.nick,
     illust: doll.illust,
     voice: doll.voice,
     type: typeMap.get(doll.type) || {},
