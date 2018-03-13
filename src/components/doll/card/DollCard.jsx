@@ -3,6 +3,7 @@ import { Card, Typography } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 import { Link } from 'react-router-dom';
 
+import Star from '../../common/Star';
 import style from './style';
 
 class DollCard extends React.Component {
@@ -20,10 +21,7 @@ class DollCard extends React.Component {
       <Card className={[classes.root, 'undraggable'].join(' ')} component={props => <Link to={`/doll/${id}`} {...props} />}>
         <div className={classes.background} />
         <div className={classes.rankbar}>
-          {
-            Array(rank.starCnt).fill()
-              .map((_, i) => <span key={i} className={classes.star}>★</span>)
-          }
+          <Star className={classes.star} count={rank.starCnt} />
         </div>
         <div className={classes.portrait} style={{ backgroundImage: `url(${portrait})` }} />
         <Typography

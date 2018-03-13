@@ -3,12 +3,12 @@ import { connect } from 'react-redux';
 import { Grid, Typography } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 
-import InfoBox from '../../utils/InfoBox';
-import Square from '../../utils/Square';
-import ImageBox from '../../utils/ImageBox';
-import SmallSelector from '../../utils/SmallSelector';
+import InfoBox from '../../common/InfoBox';
+import Square from '../../common/Square';
+import ImageBox from '../../common/ImageBox';
+import SmallSelector from '../../common/SmallSelector';
 
-import { selectSkillLv } from '../../../actions/doll';
+import { setSkillLv } from '../../../actions/doll';
 
 const style = theme => ({
   container: {
@@ -84,9 +84,9 @@ const SkillBox = (props) => {
   );
 };
 
-const stateMapper = state => state.dolldetail.skill;
+const stateMapper = state => ({ ...state.dolldetail.mounted.skill, lv: state.dolldetail.skillLv });
 const dispatchMapper = dispatch => ({
-  onChange: e => dispatch(selectSkillLv(e.target.value)),
+  onChange: e => dispatch(setSkillLv(e.target.value)),
 });
 
 export default connect(stateMapper, dispatchMapper)(withStyles(style)(SkillBox));

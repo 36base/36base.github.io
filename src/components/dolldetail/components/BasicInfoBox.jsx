@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import { Grid, Typography } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 
-import HorizonLine from '../../utils/HorizonLine';
-import InfoBox from '../../utils/InfoBox';
+import HorizonLine from '../../common/HorizonLine';
+import InfoBox from '../../common/InfoBox';
 
 const style = theme => ({
   container: {
@@ -12,12 +12,6 @@ const style = theme => ({
     paddingBottom: theme.spacing.unit * 0.75,
     paddingLeft: theme.spacing.unit * 2,
   },
-});
-
-const stateMapper = state => ({
-  armType: state.dolldetail.type.fullName,
-  illustrator: state.dolldetail.image.illustrator || '알수없음',
-  voiceActor: state.dolldetail.voice || '미정',
 });
 
 const BasicInfoBox = (props) => {
@@ -37,5 +31,11 @@ const BasicInfoBox = (props) => {
     </InfoBox>
   );
 };
+
+const stateMapper = state => ({
+  armType: state.dolldetail.mounted.type.enName,
+  illustrator: state.dolldetail.mounted.illust || '알수없음',
+  voiceActor: state.dolldetail.mounted.voice || '미정',
+});
 
 export default connect(stateMapper)(withStyles(style)(BasicInfoBox));

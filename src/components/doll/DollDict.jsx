@@ -26,7 +26,7 @@ class DollDict extends React.Component {
 
 const stateMapper = state => ({
   width: state.common.width,
-  dolls: state.dolldict.list,
+  dolls: state.doll.list,
 });
 
 export default withStyles(style)(connect(stateMapper)(DollDict));

@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import { Grid, Typography } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 
-import InfoBox from '../../utils/InfoBox';
-import HorizonLine from '../../utils/HorizonLine';
+import InfoBox from '../../common/InfoBox';
+import HorizonLine from '../../common/HorizonLine';
 
 const style = theme => ({
   container: {
@@ -19,8 +19,6 @@ const style = theme => ({
     border: '1px solid grey',
   },
 });
-
-const stateMapper = state => state.dolldetail.stats;
 
 const StatusInfoBox = (props) => {
   const buildRow = (label, value, maxValue, color) => {
@@ -51,5 +49,7 @@ const StatusInfoBox = (props) => {
     </InfoBox>
   );
 };
+
+const stateMapper = state => state.dolldetail.mounted.stats;
 
 export default connect(stateMapper)(withStyles(style)(StatusInfoBox));

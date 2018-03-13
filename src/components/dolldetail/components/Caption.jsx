@@ -16,11 +16,7 @@ const style = {
   },
 };
 
-const stateMapper = state => ({
-  name: state.dolldetail.name,
-});
-
-export default connect(stateMapper)(withStyles(style)((props) => {
+const Caption = (props) => {
   const { classes, name } = props;
 
   return (
@@ -29,4 +25,10 @@ export default connect(stateMapper)(withStyles(style)((props) => {
       <Typography className={classes.inline} variant="caption" color="primary">{name}</Typography>
     </Grid>
   );
-}));
+};
+
+const stateMapper = state => ({
+  name: state.dolldetail.mounted.krName,
+});
+
+export default connect(stateMapper)(withStyles(style)(Caption));

@@ -13,14 +13,6 @@ const style = {
   },
 };
 
-const stateMapper = state => ({
-  on: state.dolldetail.image.type === 'damaged',
-});
-
-const dispatchMapper = dispatch => ({
-  toggle: () => dispatch(toggleImgType()),
-});
-
 const TypeSwitchBox = (props) => {
   const { classes, on, toggle } = props;
 
@@ -33,5 +25,13 @@ const TypeSwitchBox = (props) => {
     </div>
   );
 };
+
+const stateMapper = state => ({
+  on: state.dolldetail.imgDamaged,
+});
+
+const dispatchMapper = dispatch => ({
+  toggle: () => dispatch(toggleImgType()),
+});
 
 export default connect(stateMapper, dispatchMapper)(withStyles(style)(TypeSwitchBox));

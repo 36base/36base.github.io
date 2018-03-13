@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import { Grid, Typography } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 
-import HorizonLine from '../../utils/HorizonLine';
-import InfoBox from '../../utils/InfoBox';
+import HorizonLine from '../../common/HorizonLine';
+import InfoBox from '../../common/InfoBox';
 
 function timeToStr(time) {
   if (time === undefined || time === 0) {
@@ -24,8 +24,6 @@ const style = theme => ({
   },
 });
 
-const stateMapper = state => state.dolldetail.acquisition;
-
 const AcquisitionInfoBox = (props) => {
   const buildRow = (label, value) => [
     <Grid key="row" className={props.classes.container} container spacing={8}>
@@ -38,10 +36,11 @@ const AcquisitionInfoBox = (props) => {
   return (
     <InfoBox name="획득처">
       {buildRow('제조', timeToStr(props.build))}
-      {buildRow('일반 전역', props.storyDrop.join(', ') || '없음')}
-      {buildRow('이벤트 전역', props.eventDrop || '없음')}
+      {buildRow('드롭', props.drop.join(', ') || '없음')}
     </InfoBox>
   );
 };
+
+const stateMapper = state => state.dolldetail.mounted.acquisition;
 
 export default connect(stateMapper)(withStyles(style)(AcquisitionInfoBox));
