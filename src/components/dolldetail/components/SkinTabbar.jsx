@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Grid, Button } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 
-import { setImgNo } from '../../../actions/doll';
+import { setImgNo } from '../../../actions/dolldetail';
 
 const style = theme => ({
   container: {

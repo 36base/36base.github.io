@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Grid } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 
-import { mount } from '../../actions/doll';
+import { mount } from '../../actions/dolldetail';
 
 import HorizonLine from '../common/HorizonLine';
 import Background from './components/Background';

@@ -1,12 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 import { Grid } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 
-import DollCard from './card/DollCard';
+import DollCard from './components/DollCard';
+import SearchBar from './components/SearchBar';
 
 const style = {
   wrapper: {
+    width: '100%',
     minWidth: 660,
     margin: '0 auto',
   },
@@ -14,19 +17,23 @@ const style = {
 
 class DollDict extends React.Component {
   render() {
-    const { dolls, classes } = this.props;
+    const { list, classes } = this.props;
 
     return (
       <Grid className={classes.wrapper} container>
-        {dolls.map(doll => <DollCard key={doll.id} {...doll} />)}
+        <Grid item xs={12}>
+          <SearchBar />
+        </Grid>
+        <Grid item xs={12}>
+          {list.map(doll => <DollCard key={doll.id} {...doll} />)}
+        </Grid>
       </Grid>
     );
   }
 }
 
 const stateMapper = state => ({
-  width: state.common.width,
-  dolls: state.doll.list,
+  list: state.dolldict.list,
 });
 
-export default withStyles(style)(connect(stateMapper)(DollDict));
+export default connect(stateMapper)(withRouter(withStyles(style)(DollDict)));

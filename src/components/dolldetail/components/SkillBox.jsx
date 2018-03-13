@@ -8,7 +8,7 @@ import Square from '../../common/Square';
 import ImageBox from '../../common/ImageBox';
 import SmallSelector from '../../common/SmallSelector';
 
-import { setSkillLv } from '../../../actions/doll';
+import { setSkillLv } from '../../../actions/dolldetail';
 
 const style = theme => ({
   container: {
