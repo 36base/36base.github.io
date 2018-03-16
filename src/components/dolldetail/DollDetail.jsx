@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Grid } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 
-import { mount } from '../../actions/dolldetail';
+import { mount, loadSD } from '../../actions/dolldetail';
 
 import HorizonLine from '../common/HorizonLine';
 import Background from './components/Background';
@@ -15,6 +15,7 @@ import TypeSwitchBox from './components/TypeSwitchBox';
 import Illust from './components/Illust';
 import BasicInfoBox from './components/BasicInfoBox';
 import StatusInfoBox from './components/StatusInfoBox';
+import SDBox from './components/SDBox';
 import SkillBox from './components/SkillBox';
 import EffectBox from './components/EffectBox';
 import AcquisitionInfoBox from './components/AcquisitionInfoBox';
@@ -73,6 +74,13 @@ class DollDetail extends React.Component {
     this.props.mount(Number(this.props.match.params.id));
   }
 
+  componentWillReceiveProps(newProps) {
+    const { dollSpineCode } = newProps;
+    if (dollSpineCode) {
+      this.props.loadSD(dollSpineCode, undefined);
+    }
+  }
+
   wrap(content) {
     return (
       <Grid className={this.props.classes.boxWrapper} item xs={12}>
@@ -104,6 +112,7 @@ class DollDetail extends React.Component {
           <Grid className={classes.right} item>
             {this.wrap(<BasicInfoBox />)}
             {this.wrap(<StatusInfoBox />)}
+            {this.wrap(<SDBox width={250} height={250} />)}
             {this.wrap(<SkillBox />)}
             {this.wrap(<EffectBox />)}
             {this.wrap(<AcquisitionInfoBox />)}
@@ -114,9 +123,12 @@ class DollDetail extends React.Component {
   }
 }
 
-const stateMapper = undefined;
+const stateMapper = state => ({
+  dollSpineCode: state.dolldetail.mounted.spineCode,
+});
 const dispatchMapper = dispatch => ({
   mount: id => dispatch(mount(id)),
+  loadSD: (dollCode, skinCode) => dispatch(loadSD(dollCode, skinCode)),
 });
 
 export default connect(stateMapper, dispatchMapper)(withStyles(style)(DollDetail));

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Grid, Button } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 
-import { setImgNo } from '../../../actions/dolldetail';
+import { setImgNo, loadSD } from '../../../actions/dolldetail';
 
 const style = theme => ({
   container: {
@@ -23,41 +23,57 @@ const style = theme => ({
   },
 });
 
-const SkinTabbar = (props) => {
-  const {
-    classes,
-    value,
-    values,
-    onBtnClick,
-  } = props;
+class SkinTabbar extends React.Component {
+  constructor(props) {
+    super(props);
 
-  const buttons = values.map((v, i) => (
-    <Button
-      key={v.name}
-      className={classes.button}
-      variant="raised"
-      color={value === i ? 'primary' : 'default'}
-      onClick={() => onBtnClick(i)}
-    >
-      {v.name}
-    </Button>
-  ));
+    this.renderButtons = this.renderButtons.bind(this);
+    this.handleSelect = this.handleSelect.bind(this);
+  }
 
-  return (
-    <Grid className={classes.container} item xs={10}>
-      <span className={classes.mixin} />
-      {buttons}
-    </Grid>
-  );
-};
+  handleSelect(i) {
+    this.props.changeImg(i);
+    this.props.changeSd(this.props.dollSpineCode, this.props.values[i].spineCode);
+  }
+
+  renderButtons() {
+    const { classes, value, values } = this.props;
+
+    return values.map((v, i) => (
+      <Button
+        key={v.name}
+        className={classes.button}
+        variant="raised"
+        color={value === i ? 'primary' : 'default'}
+        onClick={() => this.handleSelect(i)}
+      >
+        {v.name}
+      </Button>
+    ));
+  }
+
+  render() {
+    const { classes } = this.props;
+    const buttons = this.renderButtons();
+
+    return (
+      <Grid className={classes.container} item xs={10}>
+        <span className={classes.mixin} />
+        {buttons}
+      </Grid>
+    );
+  }
+}
 
 const stateMapper = state => ({
+  dollSpineCode: state.dolldetail.mounted.spineCode,
   value: state.dolldetail.imgNo,
   values: state.dolldetail.mounted.images,
 });
 
 const dispatchMapper = dispatch => ({
-  onBtnClick: id => dispatch(setImgNo(id)),
+  changeImg: id => dispatch(setImgNo(id)),
+  changeSd: (genus, name) => dispatch(loadSD(genus, name)),
 });
 
 export default connect(stateMapper, dispatchMapper)(withStyles(style)(SkinTabbar));

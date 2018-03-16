@@ -1,5 +1,5 @@
-import dolls from '../repositories/doll';
-import { propertyFilter, nameFilter } from '../repositories/filter';
+import dolls from '../repositories/data/doll';
+import { propertyFilter, nameFilter } from '../repositories/data/filter';
 import { ADD_FILTER, DELETE_FILTER } from '../actions/dolldict';
 
 function apply(filters) {

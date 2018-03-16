@@ -72,7 +72,7 @@ class App extends React.Component {
           <div style={{ width: '100%', height: 'calc(100% - 64px)' }}>
             <Route exact path="/" component={Home} />
             <Route exact path="/doll" component={DollDict} />
-            <Route path="/doll/:id" component={DollDetail} onEnter={() => console.log('route!')} />
+            <Route path="/doll/:id" component={DollDetail} />
             <Route path="/fairy" component={FairyDict} />
             <Route path="/equip" component={EquipDict} />
             <Route path="/calculator" component={Calculator} />
