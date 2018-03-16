@@ -1,6 +1,6 @@
-import dolls from '../repositories/doll';
-import dollTypes from '../repositories/dollType';
-import dollRanks from '../repositories/dollRank';
+import dolls from './doll';
+import dollTypes from './dollType';
+import dollRanks from './dollRank';
 
 const properties = [];
 dollTypes.forEach((e) => {

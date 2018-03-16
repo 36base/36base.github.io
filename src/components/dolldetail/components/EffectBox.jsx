@@ -15,8 +15,8 @@ const style = theme => ({
     width: '100%',
     maxWidth: 180,
     margin: '0 auto',
-    borderLeft: '1px solid grey',
-    borderTop: '1px solid grey',
+    borderLeft: '1px solid black',
+    borderTop: '1px solid black',
   },
   alignBottom: {
     display: 'flex',
@@ -30,17 +30,17 @@ const style = theme => ({
     position: 'absolute',
     width: '33.33%',
     height: '33.33%',
-    borderRight: '1px solid grey',
-    borderBottom: '1px solid grey',
+    borderRight: '1px solid black',
+    borderBottom: '1px solid black',
   },
   center: {
     backgroundColor: 'white',
   },
   effected: {
-    backgroundColor: '#80DEEA',
+    backgroundColor: '#18FFFF',
   },
   default: {
-    backgroundColor: '#EAEAEA',
+    backgroundColor: '#ABABAB',
   },
 });
 
