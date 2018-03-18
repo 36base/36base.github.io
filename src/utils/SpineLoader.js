@@ -7,7 +7,12 @@ import dollSpines from '../repositories/data/dollSpines';
 const domain = 'https://girlsfrontline.kr/hotlink-ok/girlsfrontline-resources/spine/';
 const loader = new PIXI.loaders.Loader(domain);
 const cache = {};
-const spineMap = new Map(Object.values(dollSpines).map(e => [e.genus, e.names]));
+const spineMap = new Map(Object.values(dollSpines).map(e => [e.code, e.names]));
+const xhrTypeMap = {
+  skel: { xhrType: 'arraybuffer' },
+  png: { xhrType: 'png' },
+  atlas: { xhrType: 'text' },
+};
 
 function getSkelJson(skelData) {
   const bin = new SkeletonBinary();
@@ -25,19 +30,40 @@ class SpineLoader {
     return (skinCode in cache[dollCode]);
   }
 
+  async loadDefaultSpine(dollCode) {
+    if (!spineMap.has(dollCode)) {
+      throw Error(`Unknown spineCode : ${dollCode}`);
+    }
+
+    const skinCode = Object.keys(spineMap.get(dollCode))[0];
+    const skeleton = await this.loadSpine(dollCode, skinCode);
+
+    return skeleton;
+  }
+
   async loadSpine(dollCode, skinCode) {
-    const genus = dollCode;
-    const name = skinCode || Object.keys(spineMap.get(dollCode))[0];
+    const exts = spineMap.get(dollCode)[skinCode];
 
-    if (!this.hit(genus, name)) {
-      const getName = ext => [genus, name, ext].join('-');
-      const getPath = ext => `${genus}/${name}.${ext}${ext === 'png' ? '' : '.txt'}`;
+    if (!exts) {
+      throw Error(`Unknown spineCode: ${dollCode}, ${skinCode}`);
+    }
 
-      loader.add(getName('skel'), getPath('skel'), { xhrType: 'arraybuffer' });
-      loader.add(getName('atlas'), getPath('atlas'), { xhrType: 'text' });
-      loader.add(getName('png'), getPath('png'), { xhrType: 'png' });
+    if (!this.hit(dollCode, skinCode)) {
+      const getName = ext => [dollCode, skinCode, ext].join('-');
+      const getPath = ext => `${dollCode}/${skinCode}.${ext}${ext === 'png' ? '' : '.txt'}`;
+
+      exts.forEach((ext) => {
+        loader.add(getName(ext), getPath(ext), xhrTypeMap[ext]);
+      });
 
       const resource = await new Promise(resolve => loader.load((_, res) => resolve(res)));
+
+      exts.forEach((ext) => {
+        const name = getName(ext);
+        if (!(name in resource)) {
+          throw Error(`Failed to fetching ${name}`);
+        }
+      });
 
       const rawSkel = getSkelJson(resource[getName('skel')].data);
       const rawAtlas = resource[getName('atlas')].data;
@@ -48,10 +74,10 @@ class SpineLoader {
       });
       const spineAtlasParser = new spine.SpineRuntime.AtlasAttachmentParser(spineAtlas);
       const spineJsonParser = new spine.SpineRuntime.SkeletonJsonParser(spineAtlasParser);
-      cache[genus][name] = spineJsonParser.readSkeletonData(rawSkel, name);
+      cache[dollCode][skinCode] = spineJsonParser.readSkeletonData(rawSkel, name);
     }
 
-    return cache[genus][name];
+    return cache[dollCode][skinCode];
   }
 }
 

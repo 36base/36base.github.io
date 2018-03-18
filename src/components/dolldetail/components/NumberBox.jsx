@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { Grid, Typography } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 
@@ -24,8 +23,4 @@ const NumberBox = (props) => {
   );
 };
 
-const stateMapper = state => ({
-  id: state.dolldetail.id,
-});
-
-export default connect(stateMapper)(withStyles(style)(NumberBox));
+export default withStyles(style)(NumberBox);

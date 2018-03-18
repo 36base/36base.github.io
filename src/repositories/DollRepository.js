@@ -1,10 +1,10 @@
 import { dolls } from 'girlsfrontline-core';
-import dollRanks from './dollRank';
-import dollTypes from './dollType';
-import dollSkills from './dollSkill';
-import dollSpines from './dollSpines';
+import dollRanks from './data/dollRank';
+import dollTypes from './data/dollType';
+import dollSkills from './data/dollSkill';
+import dollSpines from './data/dollSpines';
 
-const domain = 'https://girlsfrontline.kr/hotlink-ok/girlsfrontline-resources/images';
+const domain = 'https://girlsfrontline.kr/hotlink-ok/girlsfrontline-resources/images/';
 const typeMap = new Map(dollTypes.map(e => [e.id, e]));
 const rankMap = new Map(dollRanks.map(e => [e.id, e]));
 const skillMap = new Map(dollSkills.map((e, i) => [i, e]));
@@ -91,4 +91,14 @@ const dollList = dolls.map((doll) => {
   };
 });
 
-export default dollList;
+const dollMap = new Map(dollList.map(e => [e.id, e]));
+
+async function fetchAll() {
+  return dollList;
+}
+
+async function fetchById(id) {
+  return dollMap.get(id);
+}
+
+export default { fetchAll, fetchById };

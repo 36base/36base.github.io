@@ -1,9 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { Grid } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
-
-import { mount, loadSD } from '../../actions/dolldetail';
 
 import HorizonLine from '../common/HorizonLine';
 import Background from './components/Background';
@@ -19,6 +16,9 @@ import SDBox from './components/SDBox';
 import SkillBox from './components/SkillBox';
 import EffectBox from './components/EffectBox';
 import AcquisitionInfoBox from './components/AcquisitionInfoBox';
+
+import DollRepository from '../../repositories/DollRepository';
+import SpineRepository from '../../repositories/SpineRepository';
 
 const style = theme => ({
   wrapper: {
@@ -49,11 +49,8 @@ const style = theme => ({
   left: {
     display: 'flex',
     flexDirection: 'column',
-    minWidth: 512,
-    flex: 1,
   },
   right: {
-    flex: 1,
     overflow: 'auto',
   },
   boxWrapper: {
@@ -67,18 +64,48 @@ class DollDetail extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      info: undefined,
+      skeleton: undefined,
+
+      skinNo: 0,
+      skinType: 'normal',
+      skillLv: 10,
+    };
+
+    this.handleSkinChange = this.handleSkinChange.bind(this);
+    this.toggleSkinType = this.toggleSkinType.bind(this);
+    this.handleSkillLvChange = this.handleSkillLvChange.bind(this);
     this.wrap = this.wrap.bind(this);
   }
 
   componentWillMount() {
-    this.props.mount(Number(this.props.match.params.id));
+    const id = Number(this.props.match.params.id);
+
+    DollRepository.fetchById(id)
+      .then(info => this.setState({ info }));
+
+    SpineRepository.fetchDefaultSpine(id)
+      .then(skeleton => this.setState({ skeleton }));
   }
 
-  componentWillReceiveProps(newProps) {
-    const { dollSpineCode } = newProps;
-    if (dollSpineCode) {
-      this.props.loadSD(dollSpineCode, undefined);
-    }
+  handleSkinChange(no) {
+    SpineRepository.fetchSpine(this.state.info.id, no)
+      .then(skeleton => this.setState({ skeleton }));
+
+    this.setState({ skinNo: no });
+  }
+
+  toggleSkinType() {
+    this.setState({
+      skinType: this.state.skinType === 'normal' ? 'damaged' : 'normal',
+    });
+  }
+
+  handleSkillLvChange(no) {
+    this.setState({
+      skillLv: no,
+    });
   }
 
   wrap(content) {
@@ -91,31 +118,50 @@ class DollDetail extends React.Component {
 
   render() {
     const { classes } = this.props;
+    const {
+      info,
+      skeleton,
+      skinNo,
+      skinType,
+      skillLv,
+    } = this.state;
+
+    if (!info) {
+      return null;
+    }
 
     return (
       <div className={classes.wrapper}>
         <Background mainColor="#505694" secondColor="#8C94BF" />
         <div className={classes.header}>
           <Grid container>
-            <Caption />
-            <NumberBox />
+            <Caption name={info.krName} />
+            <NumberBox id={info.id} />
             <HorizonLine height={3} />
-            <SkinTabbar />
-            <StarBox />
+            <SkinTabbar selected={skinNo} skins={info.images} onChange={this.handleSkinChange} />
+            <StarBox count={info.rank.starCnt} />
           </Grid>
         </div>
         <Grid className={classes.content} container >
-          <Grid className={classes.left} item>
-            <TypeSwitchBox />
-            <Illust />
+          <Grid className={classes.left} item xs={6}>
+            <TypeSwitchBox on={skinType === 'damaged'} toggle={this.toggleSkinType} />
+            <Illust src={info.images[skinNo][skinType]} />
           </Grid>
-          <Grid className={classes.right} item>
-            {this.wrap(<BasicInfoBox />)}
-            {this.wrap(<StatusInfoBox />)}
-            {this.wrap(<SDBox width={250} height={250} />)}
-            {this.wrap(<SkillBox />)}
-            {this.wrap(<EffectBox />)}
-            {this.wrap(<AcquisitionInfoBox />)}
+          <Grid className={classes.right} item xs={6}>
+            {this.wrap(<BasicInfoBox
+              armType={info.type.enName}
+              illust={info.illust}
+              voice={info.voice}
+            />)}
+            {this.wrap(<StatusInfoBox {...info.stats} />)}
+            {this.wrap(<SDBox width={250} height={250} skeleton={skeleton} />)}
+            {this.wrap(<SkillBox
+              {...info.skill}
+              lv={skillLv}
+              onChange={this.handleSkillLvChange}
+            />)}
+            {this.wrap(<EffectBox {...info.effect} />)}
+            {this.wrap(<AcquisitionInfoBox {...info.acquisition} />)}
           </Grid>
         </Grid>
       </div>
@@ -123,12 +169,4 @@ class DollDetail extends React.Component {
   }
 }
 
-const stateMapper = state => ({
-  dollSpineCode: state.dolldetail.mounted.spineCode,
-});
-const dispatchMapper = dispatch => ({
-  mount: id => dispatch(mount(id)),
-  loadSD: (dollCode, skinCode) => dispatch(loadSD(dollCode, skinCode)),
-});
-
-export default connect(stateMapper, dispatchMapper)(withStyles(style)(DollDetail));
+export default withStyles(style)(DollDetail);

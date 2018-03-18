@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { Grid, Typography } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 
@@ -7,8 +6,6 @@ import InfoBox from '../../common/InfoBox';
 import Square from '../../common/Square';
 import ImageBox from '../../common/ImageBox';
 import SmallSelector from '../../common/SmallSelector';
-
-import { setSkillLv } from '../../../actions/dolldetail';
 
 const style = theme => ({
   container: {
@@ -49,10 +46,11 @@ function buildDescription(template, dataPool, lv) {
 
 const SkillBox = (props) => {
   const { classes, dataPool, lv } = props;
+  const onChange = e => props.onChange(e.target.value);
 
   const getData = key => dataPool.get(key).values[lv - 1];
   const description = buildDescription(props.template, dataPool, lv);
-  const selector = <SmallSelector label="레벨" values={lvValues} selected={lv} onChange={props.onChange} />;
+  const selector = <SmallSelector label="레벨" values={lvValues} selected={lv} onChange={onChange} />;
 
   return (
     <InfoBox name="스킬" selector={selector}>
@@ -84,9 +82,4 @@ const SkillBox = (props) => {
   );
 };
 
-const stateMapper = state => ({ ...state.dolldetail.mounted.skill, lv: state.dolldetail.skillLv });
-const dispatchMapper = dispatch => ({
-  onChange: e => dispatch(setSkillLv(e.target.value)),
-});
-
-export default connect(stateMapper, dispatchMapper)(withStyles(style)(SkillBox));
+export default withStyles(style)(SkillBox);

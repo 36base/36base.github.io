@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { withStyles } from 'material-ui/styles';
 import * as PIXI from 'pixi.js';
 import spine from 'pixi-spine';
@@ -64,6 +63,17 @@ class SDBox extends React.Component {
       this.clear();
       this.setSpine(skeleton);
     }
+  }
+
+  shouldComponentUpdate(newProps, newState) {
+    const { width, height, skeleton } = this.props;
+    const { animationName } = this.state;
+    return !(
+      width === newProps.width &&
+      height === newProps.height &&
+      skeleton === newProps.skeleton &&
+      animationName === newState.animationName
+    );
   }
 
   setAnimation(name) {
@@ -154,8 +164,4 @@ class SDBox extends React.Component {
   }
 }
 
-const stateMapper = state => ({
-  skeleton: state.dolldetail.sd,
-});
-
-export default connect(stateMapper)(withStyles(style)(SDBox));
+export default withStyles(style)(SDBox);

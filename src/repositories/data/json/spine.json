@@ -1,2572 +1,1312 @@
 {
   "1": {
-    "genus": "M1873",
+    "code": "M1873",
     "names": {
-      "M1873": [
-        "png",
-        "atlas",
-        "skel"
-      ],
-      "M1873_301": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "M1873": [ "png", "atlas", "skel" ],
+      "M1873_301": [ "png", "atlas", "skel" ]
     }
   },
   "2": {
-    "genus": "M1911",
+    "code": "M1911",
     "names": {
-      "M1911": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "M1911": [ "png", "atlas", "skel" ]
     }
   },
   "3": {
-    "genus": "M9",
+    "code": "M9",
     "names": {
-      "M9": [
-        "skel",
-        "atlas",
-        "png"
-      ]
+      "M9": [ "png", "atlas", "skel" ]
     }
   },
   "5": {
-    "genus": "M1895",
+    "code": "M1895",
     "names": {
-      "M1895": [
-        "atlas",
-        "png",
-        "skel"
-      ]
+      "M1895": [ "png", "atlas", "skel" ]
     }
   },
   "6": {
-    "genus": "TT33",
+    "code": "TT33",
     "names": {
-      "TT33": [
-        "skel",
-        "png",
-        "atlas"
-      ],
-      "TT33_601": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "TT33": [ "png", "atlas", "skel" ],
+      "TT33_601": [ "png", "atlas", "skel" ]
     }
   },
   "7": {
-    "genus": "APS",
+    "code": "APS",
     "names": {
-      "APS": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "APS": [ "png", "atlas", "skel" ]
     }
   },
   "8": {
-    "genus": "PM",
+    "code": "PM",
     "names": {
-      "PM": [
-        "atlas",
-        "png",
-        "skel"
-      ],
-      "PM_1": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "PM": [ "png", "atlas", "skel" ],
+      "PM_1": [ "png", "atlas", "skel" ]
     }
   },
   "9": {
-    "genus": "P38",
+    "code": "P38",
     "names": {
-      "P38": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "P38": [ "png", "atlas", "skel" ]
     }
   },
   "10": {
-    "genus": "PPK",
+    "code": "PPK",
     "names": {
-      "PPK": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "PPK": [ "png", "atlas", "skel" ]
     }
   },
   "11": {
-    "genus": "P08",
+    "code": "P08",
     "names": {
-      "P08": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "P08": [ "png", "atlas", "skel" ]
     }
   },
   "12": {
-    "genus": "C96",
+    "code": "C96",
     "names": {
-      "C96": [
-        "skel",
-        "atlas",
-        "png"
-      ]
+      "C96": [ "png", "atlas", "skel" ]
     }
   },
   "13": {
-    "genus": "92type",
+    "code": "92type",
     "names": {
-      "92type": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "92type": [ "png", "atlas", "skel" ]
     }
   },
   "14": {
-    "genus": "357",
+    "code": "357",
     "names": {
-      "357": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "357": [ "png", "atlas", "skel" ]
     }
   },
   "15": {
-    "genus": "Glock17",
+    "code": "Glock17",
     "names": {
-      "Glock17": [
-        "skel",
-        "png",
-        "atlas"
-      ]
+      "Glock17": [ "png", "atlas", "skel" ]
     }
   },
   "16": {
-    "genus": "M1928A1",
+    "code": "M1928A1",
     "names": {
-      "M1928A1": [
-        "skel",
-        "atlas",
-        "png"
-      ],
-      "M1928A1_1501": [
-        "skel",
-        "png",
-        "atlas"
-      ]
+      "M1928A1": [ "png", "atlas", "skel" ],
+      "M1928A1_1501": [ "png", "atlas", "skel" ]
     }
   },
   "17": {
-    "genus": "M3",
+    "code": "M3",
     "names": {
-      "M3": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "M3": [ "png", "atlas", "skel" ]
     }
   },
   "18": {
-    "genus": "MAC10",
+    "code": "MAC10",
     "names": {
-      "MAC10": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "MAC10": [ "png", "atlas", "skel" ]
     }
   },
   "19": {
-    "genus": "FMG9",
+    "code": "FMG9",
     "names": {
-      "FMG9": [
-        "skel",
-        "png",
-        "atlas"
-      ]
+      "FMG9": [ "png", "atlas", "skel" ]
     }
   },
   "20": {
-    "genus": "Vector",
+    "code": "Vector",
     "names": {
-      "Vector": [
-        "skel",
-        "png",
-        "atlas"
-      ],
-      "Vector_2": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "Vector": [ "png", "atlas", "skel" ],
+      "Vector_2": [ "png", "atlas", "skel" ]
     }
   },
   "21": {
-    "genus": "PPsh41",
+    "code": "PPsh41",
     "names": {
-      "PPsh41": [
-        "png",
-        "skel",
-        "atlas"
-      ],
-      "PPsh41_602": [
-        "skel",
-        "png",
-        "atlas"
-      ]
+      "PPsh41": [ "png", "atlas", "skel" ],
+      "PPsh41_602": [ "png", "atlas", "skel" ]
     }
   },
   "22": {
-    "genus": "PPS43",
+    "code": "PPS43",
     "names": {
-      "PPS43": [
-        "skel",
-        "atlas",
-        "png"
-      ]
+      "PPS43": [ "png", "atlas", "skel" ]
     }
   },
   "23": {
-    "genus": "PP90",
+    "code": "PP90",
     "names": {
-      "PP90": [
-        "atlas",
-        "png",
-        "skel"
-      ]
+      "PP90": [ "png", "atlas", "skel" ]
     }
   },
   "24": {
-    "genus": "PP2000",
+    "code": "PP2000",
     "names": {
-      "PP2000": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "PP2000": [ "png", "atlas", "skel" ]
     }
   },
   "25": {
-    "genus": "MP40",
+    "code": "MP40",
     "names": {
-      "MP40": [
-        "skel",
-        "png",
-        "atlas"
-      ],
-      "MP40_902": [
-        "skel",
-        "png",
-        "atlas"
-      ]
+      "MP40": [ "png", "atlas", "skel" ],
+      "MP40_902": [ "png", "atlas", "skel" ]
     }
   },
   "26": {
-    "genus": "MP5",
+    "code": "MP5",
     "names": {
-      "MP5": [
-        "skel",
-        "atlas",
-        "png"
-      ],
-      "MP5_3": [
-        "atlas",
-        "png",
-        "skel"
-      ],
-      "MP5_1205": [
-        "skel",
-        "png",
-        "atlas"
-      ]
+      "MP5": [ "png", "atlas", "skel" ],
+      "MP5_3": [ "png", "atlas", "skel" ],
+      "MP5_1205": [ "png", "atlas", "skel" ]
     }
   },
   "27": {
-    "genus": "VZ61",
+    "code": "VZ61",
     "names": {
-      "VZ61": [
-        "atlas",
-        "skel",
-        "png"
-      ],
-      "VZ61_801": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "VZ61": [ "png", "atlas", "skel" ],
+      "VZ61_801": [ "png", "atlas", "skel" ]
     }
   },
   "29": {
-    "genus": "StenMK2",
+    "code": "StenMK2",
     "names": {
-      "StenMK2": [
-        "skel",
-        "atlas",
-        "png"
-      ],
-      "StenMK2_603": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "StenMK2": [ "png", "atlas", "skel" ],
+      "StenMK2_603": [ "png", "atlas", "skel" ]
     }
   },
   "31": {
-    "genus": "MAB38",
+    "code": "MAB38",
     "names": {
-      "MAB38": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "MAB38": [ "png", "atlas", "skel" ]
     }
   },
   "32": {
-    "genus": "MicroUZI",
+    "code": "MicroUZI",
     "names": {
-      "MicroUZI": [
-        "skel",
-        "png",
-        "atlas"
-      ],
-      "MicroUZI_101": [
-        "atlas",
-        "png",
-        "skel"
-      ]
+      "MicroUZI": [ "png", "atlas", "skel" ],
+      "MicroUZI_101": [ "png", "atlas", "skel" ]
     }
   },
   "33": {
-    "genus": "m45",
+    "code": "m45",
     "names": {
-      "m45": [
-        "skel",
-        "atlas",
-        "png"
-      ],
-      "m45_4": [
-        "atlas",
-        "png",
-        "skel"
-      ]
+      "m45": [ "png", "atlas", "skel" ],
+      "m45_4": [ "png", "atlas", "skel" ]
     }
   },
   "34": {
-    "genus": "M1",
+    "code": "M1",
     "names": {
-      "M1": [
-        "png",
-        "skel",
-        "atlas"
-      ],
-      "M1_1106": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "M1": [ "png", "atlas", "skel" ],
+      "M1_1106": [ "png", "atlas", "skel" ]
     }
   },
   "35": {
-    "genus": "M1A1",
+    "code": "M1A1",
     "names": {
-      "M1A1": [
-        "skel",
-        "atlas",
-        "png"
-      ]
+      "M1A1": [ "png", "atlas", "skel" ]
     }
   },
   "36": {
-    "genus": "M1903",
+    "code": "M1903",
     "names": {
-      "M1903": [
-        "png",
-        "atlas",
-        "skel"
-      ],
-      "M1903_5": [
-        "atlas",
-        "skel",
-        "png"
-      ],
-      "M1903_302": [
-        "atlas",
-        "skel",
-        "png"
-      ],
-      "M1903_802": [
-        "skel",
-        "atlas",
-        "png"
-      ],
-      "M1903_1107": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "M1903": [ "png", "atlas", "skel" ],
+      "M1903_5": [ "png", "atlas", "skel" ],
+      "M1903_302": [ "png", "atlas", "skel" ],
+      "M1903_802": [ "png", "atlas", "skel" ],
+      "M1903_1107": [ "png", "atlas", "skel" ]
     }
   },
   "37": {
-    "genus": "M14",
+    "code": "M14",
     "names": {
-      "M14": [
-        "png",
-        "atlas",
-        "skel"
-      ],
-      "M14_303": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "M14": [ "png", "atlas", "skel" ],
+      "M14_303": [ "png", "atlas", "skel" ]
     }
   },
   "38": {
-    "genus": "M21",
+    "code": "M21",
     "names": {
-      "M21": [
-        "atlas",
-        "skel",
-        "png"
-      ],
-      "M21_304": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "M21": [ "png", "atlas", "skel" ],
+      "M21_304": [ "png", "atlas", "skel" ]
     }
   },
   "39": {
-    "genus": "M1891",
+    "code": "M1891",
     "names": {
-      "M1891": [
-        "skel",
-        "atlas",
-        "png"
-      ],
-      "M1891_803": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "M1891": [ "png", "atlas", "skel" ],
+      "M1891_803": [ "png", "atlas", "skel" ]
     }
   },
   "40": {
-    "genus": "SVT38",
+    "code": "SVT38",
     "names": {
-      "SVT38": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "SVT38": [ "png", "atlas", "skel" ]
     }
   },
   "41": {
-    "genus": "SKS",
+    "code": "SKS",
     "names": {
-      "SKS": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "SKS": [ "png", "atlas", "skel" ]
     }
   },
   "42": {
-    "genus": "PTRD",
+    "code": "PTRD",
     "names": {
-      "PTRD": [
-        "png",
-        "atlas",
-        "skel"
-      ],
-      "PTRD_408": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "PTRD": [ "png", "atlas", "skel" ],
+      "PTRD_408": [ "png", "atlas", "skel" ]
     }
   },
   "43": {
-    "genus": "SVD",
+    "code": "SVD",
     "names": {
-      "SVD": [
-        "skel",
-        "atlas",
-        "png"
-      ],
-      "SVD_305": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "SVD": [ "png", "atlas", "skel" ],
+      "SVD_305": [ "png", "atlas", "skel" ]
     }
   },
   "44": {
-    "genus": "SV98",
+    "code": "SV98",
     "names": {
-      "SV98": [
-        "atlas",
-        "skel",
-        "png"
-      ],
-      "SV98_502": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "SV98": [ "png", "atlas", "skel" ],
+      "SV98_502": [ "png", "atlas", "skel" ]
     }
   },
   "46": {
-    "genus": "98K",
+    "code": "98K",
     "names": {
-      "98K": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "98K": [ "png", "atlas", "skel" ]
     }
   },
   "47": {
-    "genus": "G43",
+    "code": "G43",
     "names": {
-      "G43": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "G43": [ "png", "atlas", "skel" ]
     }
   },
   "48": {
-    "genus": "WA2000",
+    "code": "WA2000",
     "names": {
-      "WA2000": [
-        "png",
-        "atlas",
-        "skel"
-      ],
-      "WA2000_6": [
-        "atlas",
-        "png",
-        "skel"
-      ],
-      "WA2000_306": [
-        "skel",
-        "png",
-        "atlas"
-      ],
-      "WA2000_804": [
-        "png",
-        "atlas",
-        "skel"
-      ],
-      "WA2000_1108": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "WA2000": [ "png", "atlas", "skel" ],
+      "WA2000_6": [ "png", "atlas", "skel" ],
+      "WA2000_306": [ "png", "atlas", "skel" ],
+      "WA2000_804": [ "png", "atlas", "skel" ],
+      "WA2000_1108": [ "png", "atlas", "skel" ]
     }
   },
   "49": {
-    "genus": "56typeR",
+    "code": "56typeR",
     "names": {
-      "56typeR": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "56typeR": [ "png", "atlas", "skel" ]
     }
   },
   "50": {
-    "genus": "MLEMK1",
+    "code": "MLEMK1",
     "names": {
-      "MLEMK1": [
-        "png",
-        "atlas",
-        "skel"
-      ],
-      "MLEMK1_10": [
-        "png",
-        "skel",
-        "atlas"
-      ],
-      "MLEMK1_604": [
-        "skel",
-        "png",
-        "atlas"
-      ],
-      "MLEMK1_901": [
-        "skel",
-        "png",
-        "atlas"
-      ]
+      "MLEMK1": [ "png", "atlas", "skel" ],
+      "MLEMK1_10": [ "png", "atlas", "skel" ],
+      "MLEMK1_604": [ "png", "atlas", "skel" ],
+      "MLEMK1_901": [ "png", "atlas", "skel" ]
     }
   },
   "51": {
-    "genus": "FN49",
+    "code": "FN49",
     "names": {
-      "FN49": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "FN49": [ "png", "atlas", "skel" ]
     }
   },
   "52": {
-    "genus": "BM59",
+    "code": "BM59",
     "names": {
-      "BM59": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "BM59": [ "png", "atlas", "skel" ]
     }
   },
   "53": {
-    "genus": "NTW20",
+    "code": "NTW20",
     "names": {
-      "NTW20": [
-        "atlas",
-        "skel",
-        "png"
-      ],
-      "NTW20_307": [
-        "png",
-        "skel",
-        "atlas"
-      ],
-      "NTW20_1101": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "NTW20": [ "png", "atlas", "skel" ],
+      "NTW20_307": [ "png", "atlas", "skel" ],
+      "NTW20_1101": [ "png", "atlas", "skel" ]
     }
   },
   "54": {
-    "genus": "M16A1",
+    "code": "M16A1",
     "names": {
-      "M16A1": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "M16A1": [ "png", "atlas", "skel" ]
     }
   },
   "55": {
-    "genus": "M4A1",
+    "code": "M4A1",
     "names": {
-      "M4A1": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "M4A1": [ "png", "atlas", "skel" ]
     }
   },
   "56": {
-    "genus": "M4 SOPMOD II",
+    "code": "M4 SOPMOD II",
     "names": {
-      "M4 SOPMOD II": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "M4 SOPMOD II": [ "png", "atlas", "skel" ]
     }
   },
   "57": {
-    "genus": "AR15",
+    "code": "AR15",
     "names": {
-      "AR15": [
-        "skel",
-        "atlas",
-        "png"
-      ],
-      "AR15_701": [
-        "atlas",
-        "png",
-        "skel"
-      ]
+      "AR15": [ "png", "atlas", "skel" ],
+      "AR15_701": [ "png", "atlas", "skel" ]
     }
   },
   "58": {
-    "genus": "AK47",
+    "code": "AK47",
     "names": {
-      "AK47": [
-        "png",
-        "skel",
-        "atlas"
-      ],
-      "AK47_501": [
-        "skel",
-        "png",
-        "atlas"
-      ]
+      "AK47": [ "png", "atlas", "skel" ],
+      "AK47_501": [ "png", "atlas", "skel" ]
     }
   },
   "60": {
-    "genus": "ASVAL",
+    "code": "ASVAL",
     "names": {
-      "ASVAL": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "ASVAL": [ "png", "atlas", "skel" ]
     }
   },
   "61": {
-    "genus": "STG44",
+    "code": "STG44",
     "names": {
-      "STG44": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "STG44": [ "png", "atlas", "skel" ]
     }
   },
   "62": {
-    "genus": "G41",
+    "code": "G41",
     "names": {
-      "G41": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "G41": [ "png", "atlas", "skel" ]
     }
   },
   "63": {
-    "genus": "G3",
+    "code": "G3",
     "names": {
-      "G3": [
-        "atlas",
-        "png",
-        "skel"
-      ],
-      "G3_1303": [
-        "skel",
-        "atlas",
-        "png"
-      ]
+      "G3": [ "png", "atlas", "skel" ],
+      "G3_1303": [ "png", "atlas", "skel" ]
     }
   },
   "64": {
-    "genus": "G36",
+    "code": "G36",
     "names": {
-      "G36": [
-        "png",
-        "atlas",
-        "skel"
-      ],
-      "G36_905": [
-        "png",
-        "skel",
-        "atlas"
-      ],
-      "G36_1507": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "G36": [ "png", "atlas", "skel" ],
+      "G36_905": [ "png", "atlas", "skel" ],
+      "G36_1507": [ "png", "atlas", "skel" ]
     }
   },
   "65": {
-    "genus": "HK416",
+    "code": "HK416",
     "names": {
-      "HK416": [
-        "skel",
-        "png",
-        "atlas"
-      ],
-      "HK416_805": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "HK416": [ "png", "atlas", "skel" ],
+      "HK416_805": [ "png", "atlas", "skel" ]
     }
   },
   "66": {
-    "genus": "56-1type",
+    "code": "56-1type",
     "names": {
-      "56-1type": [
-        "skel",
-        "png",
-        "atlas"
-      ],
-      "56-1type_401": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "56-1type": [ "png", "atlas", "skel" ],
+      "56-1type_401": [ "png", "atlas", "skel" ]
     }
   },
   "68": {
-    "genus": "L85A1",
+    "code": "L85A1",
     "names": {
-      "L85A1": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "L85A1": [ "png", "atlas", "skel" ]
     }
   },
   "69": {
-    "genus": "FAMAS",
+    "code": "FAMAS",
     "names": {
-      "FAMAS": [
-        "skel",
-        "atlas",
-        "png"
-      ]
+      "FAMAS": [ "png", "atlas", "skel" ]
     }
   },
   "70": {
-    "genus": "FNFNC",
+    "code": "FNFNC",
     "names": {
-      "FNFNC": [
-        "png",
-        "atlas",
-        "skel"
-      ],
-      "FNFNC_1406": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "FNFNC": [ "png", "atlas", "skel" ],
+      "FNFNC_1406": [ "png", "atlas", "skel" ]
     }
   },
   "71": {
-    "genus": "AR",
+    "code": "AR",
     "names": {
-      "AR": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "AR": [ "png", "atlas", "skel" ]
     }
   },
   "72": {
-    "genus": "TAR21",
+    "code": "TAR21",
     "names": {
-      "TAR21": [
-        "atlas",
-        "skel",
-        "png"
-      ],
-      "TAR21_1305": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "TAR21": [ "png", "atlas", "skel" ],
+      "TAR21_1305": [ "png", "atlas", "skel" ]
     }
   },
   "74": {
-    "genus": "SIG510",
+    "code": "SIG510",
     "names": {
-      "SIG510": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "SIG510": [ "png", "atlas", "skel" ]
     }
   },
   "75": {
-    "genus": "M1918",
+    "code": "M1918",
     "names": {
-      "M1918": [
-        "atlas",
-        "png",
-        "skel"
-      ],
-      "M1918_102": [
-        "skel",
-        "png",
-        "atlas"
-      ],
-      "M1918_806": [
-        "png",
-        "atlas",
-        "skel"
-      ],
-      "M1918_1606": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "M1918": [ "png", "atlas", "skel" ],
+      "M1918_102": [ "png", "atlas", "skel" ],
+      "M1918_806": [ "png", "atlas", "skel" ],
+      "M1918_1606": [ "png", "atlas", "skel" ]
     }
   },
   "77": {
-    "genus": "M2HB",
+    "code": "M2HB",
     "names": {
-      "M2HB": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "M2HB": [ "png", "atlas", "skel" ]
     }
   },
   "78": {
-    "genus": "M60",
+    "code": "M60",
     "names": {
-      "M60": [
-        "skel",
-        "png",
-        "atlas"
-      ]
+      "M60": [ "png", "atlas", "skel" ]
     }
   },
   "79": {
-    "genus": "M249SAW",
+    "code": "M249SAW",
     "names": {
-      "M249SAW": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "M249SAW": [ "png", "atlas", "skel" ]
     }
   },
   "80": {
-    "genus": "M1919A4",
+    "code": "M1919A4",
     "names": {
-      "M1919A4": [
-        "png",
-        "atlas",
-        "skel"
-      ],
-      "M1919A4_7": [
-        "skel",
-        "png",
-        "atlas"
-      ],
-      "M1919A4_106": [
-        "skel",
-        "atlas",
-        "png"
-      ]
+      "M1919A4": [ "png", "atlas", "skel" ],
+      "M1919A4_7": [ "png", "atlas", "skel" ],
+      "M1919A4_106": [ "png", "atlas", "skel" ]
     }
   },
   "81": {
-    "genus": "LWMMG",
+    "code": "LWMMG",
     "names": {
-      "LWMMG": [
-        "skel",
-        "atlas",
-        "png"
-      ]
+      "LWMMG": [ "png", "atlas", "skel" ]
     }
   },
   "82": {
-    "genus": "DP28",
+    "code": "DP28",
     "names": {
-      "DP28": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "DP28": [ "png", "atlas", "skel" ]
     }
   },
   "84": {
-    "genus": "RPD",
+    "code": "RPD",
     "names": {
-      "RPD": [
-        "skel",
-        "atlas",
-        "png"
-      ]
+      "RPD": [ "png", "atlas", "skel" ]
     }
   },
   "85": {
-    "genus": "PK",
+    "code": "PK",
     "names": {
-      "PK": [
-        "atlas",
-        "png",
-        "skel"
-      ],
-      "PK_605": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "PK": [ "png", "atlas", "skel" ],
+      "PK_605": [ "png", "atlas", "skel" ]
     }
   },
   "86": {
-    "genus": "MG42",
+    "code": "MG42",
     "names": {
-      "MG42": [
-        "skel",
-        "png",
-        "atlas"
-      ]
+      "MG42": [ "png", "atlas", "skel" ]
     }
   },
   "87": {
-    "genus": "MG34",
+    "code": "MG34",
     "names": {
-      "MG34": [
-        "skel",
-        "atlas",
-        "png"
-      ]
+      "MG34": [ "png", "atlas", "skel" ]
     }
   },
   "88": {
-    "genus": "MG3",
+    "code": "MG3",
     "names": {
-      "MG3": [
-        "png",
-        "atlas",
-        "skel"
-      ],
-      "MG3_1304": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "MG3": [ "png", "atlas", "skel" ],
+      "MG3_1304": [ "png", "atlas", "skel" ]
     }
   },
   "89": {
-    "genus": "BrenMK",
+    "code": "BrenMK",
     "names": {
-      "BrenMK": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "BrenMK": [ "png", "atlas", "skel" ]
     }
   },
   "90": {
-    "genus": "FNP9",
+    "code": "FNP9",
     "names": {
-      "FNP9": [
-        "atlas",
-        "png",
-        "skel"
-      ]
+      "FNP9": [ "png", "atlas", "skel" ]
     }
   },
   "91": {
-    "genus": "MP446",
+    "code": "MP446",
     "names": {
-      "MP446": [
-        "skel",
-        "png",
-        "atlas"
-      ],
-      "MP446_103": [
-        "skel",
-        "png",
-        "atlas"
-      ],
-      "MP446_402": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "MP446": [ "png", "atlas", "skel" ],
+      "MP446_103": [ "png", "atlas", "skel" ],
+      "MP446_402": [ "png", "atlas", "skel" ]
     }
   },
   "92": {
-    "genus": "SpectreM4",
+    "code": "SpectreM4",
     "names": {
-      "SpectreM4": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "SpectreM4": [ "png", "atlas", "skel" ]
     }
   },
   "93": {
-    "genus": "IDW",
+    "code": "IDW",
     "names": {
-      "IDW": [
-        "skel",
-        "atlas",
-        "png"
-      ]
+      "IDW": [ "png", "atlas", "skel" ]
     }
   },
   "94": {
-    "genus": "64type",
+    "code": "64type",
     "names": {
-      "64type": [
-        "png",
-        "atlas",
-        "skel"
-      ],
-      "64type_11": [
-        "skel",
-        "atlas",
-        "png"
-      ],
-      "64type_104": [
-        "skel",
-        "atlas",
-        "png"
-      ]
+      "64type": [ "png", "atlas", "skel" ],
+      "64type_11": [ "png", "atlas", "skel" ],
+      "64type_104": [ "png", "atlas", "skel" ]
     }
   },
   "95": {
-    "genus": "88type",
+    "code": "88type",
     "names": {
-      "88type": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "88type": [ "png", "atlas", "skel" ]
     }
   },
   "96": {
-    "genus": "Grizzly",
+    "code": "Grizzly",
     "names": {
-      "Grizzly": [
-        "skel",
-        "png",
-        "atlas"
-      ],
-      "Grizzly_105": [
-        "skel",
-        "png",
-        "atlas"
-      ],
-      "Grizzly_903": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "Grizzly": [ "png", "atlas", "skel" ],
+      "Grizzly_105": [ "png", "atlas", "skel" ],
+      "Grizzly_903": [ "png", "atlas", "skel" ]
     }
   },
   "97": {
-    "genus": "M950A",
+    "code": "M950A",
     "names": {
-      "M950A": [
-        "png",
-        "skel",
-        "atlas"
-      ],
-      "M950A_702": [
-        "atlas",
-        "skel",
-        "png"
-      ],
-      "M950A_808": [
-        "atlas",
-        "png",
-        "skel"
-      ]
+      "M950A": [ "png", "atlas", "skel" ],
+      "M950A_702": [ "png", "atlas", "skel" ],
+      "M950A_808": [ "png", "atlas", "skel" ]
     }
   },
   "98": {
-    "genus": "SPP1",
+    "code": "SPP1",
     "names": {
-      "SPP1": [
-        "atlas",
-        "png",
-        "skel"
-      ],
-      "SPP1_1703": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "SPP1": [ "png", "atlas", "skel" ],
+      "SPP1_1703": [ "png", "atlas", "skel" ]
     }
   },
   "99": {
-    "genus": "Mk23",
+    "code": "Mk23",
     "names": {
-      "Mk23": [
-        "png",
-        "atlas",
-        "skel"
-      ],
-      "Mk23_8": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "Mk23": [ "png", "atlas", "skel" ],
+      "Mk23_8": [ "png", "atlas", "skel" ]
     }
   },
   "100": {
-    "genus": "P7",
+    "code": "P7",
     "names": {
-      "P7": [
-        "atlas",
-        "skel",
-        "png"
-      ],
-      "P7_606": [
-        "png",
-        "skel",
-        "atlas"
-      ],
-      "P7_1404": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "P7": [ "png", "atlas", "skel" ],
+      "P7_606": [ "png", "atlas", "skel" ],
+      "P7_1404": [ "png", "atlas", "skel" ]
     }
   },
   "101": {
-    "genus": "UMP9",
+    "code": "UMP9",
     "names": {
-      "UMP9": [
-        "atlas",
-        "skel",
-        "png"
-      ],
-      "UMP9_409": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "UMP9": [ "png", "atlas", "skel" ],
+      "UMP9_409": [ "png", "atlas", "skel" ]
     }
   },
   "102": {
-    "genus": "UMP40",
+    "code": "UMP40",
     "names": {
-      "UMP40": [
-        "atlas",
-        "png",
-        "skel"
-      ]
+      "UMP40": [ "png", "atlas", "skel" ]
     }
   },
   "103": {
-    "genus": "UMP45",
+    "code": "UMP45",
     "names": {
-      "UMP45": [
-        "skel",
-        "png",
-        "atlas"
-      ],
-      "UMP45_410": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "UMP45": [ "png", "atlas", "skel" ],
+      "UMP45_410": [ "png", "atlas", "skel" ]
     }
   },
   "104": {
-    "genus": "G36C",
+    "code": "G36C",
     "names": {
-      "G36C": [
-        "skel",
-        "png",
-        "atlas"
-      ],
-      "G36C_1202": [
-        "atlas",
-        "png",
-        "skel"
-      ]
+      "G36C": [ "png", "atlas", "skel" ],
+      "G36C_1202": [ "png", "atlas", "skel" ]
     }
   },
   "105": {
-    "genus": "OTs12",
+    "code": "OTs12",
     "names": {
-      "OTs12": [
-        "atlas",
-        "png",
-        "skel"
-      ]
+      "OTs12": [ "png", "atlas", "skel" ]
     }
   },
   "106": {
-    "genus": "FNFAL",
+    "code": "FNFAL",
     "names": {
-      "FNFAL": [
-        "png",
-        "atlas",
-        "skel"
-      ],
-      "FNFAL_308": [
-        "skel",
-        "atlas",
-        "png"
-      ],
-      "FNFAL_607": [
-        "atlas",
-        "png",
-        "skel"
-      ]
+      "FNFAL": [ "png", "atlas", "skel" ],
+      "FNFAL_308": [ "png", "atlas", "skel" ],
+      "FNFAL_607": [ "png", "atlas", "skel" ]
     }
   },
   "107": {
-    "genus": "F2000",
+    "code": "F2000",
     "names": {
-      "F2000": [
-        "atlas",
-        "png",
-        "skel"
-      ]
+      "F2000": [ "png", "atlas", "skel" ]
     }
   },
   "108": {
-    "genus": "CZ805",
+    "code": "CZ805",
     "names": {
-      "CZ805": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "CZ805": [ "png", "atlas", "skel" ]
     }
   },
   "109": {
-    "genus": "MG5",
+    "code": "MG5",
     "names": {
-      "MG5": [
-        "png",
-        "atlas",
-        "skel"
-      ],
-      "MG5_309": [
-        "skel",
-        "png",
-        "atlas"
-      ],
-      "MG5_1504": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "MG5": [ "png", "atlas", "skel" ],
+      "MG5_309": [ "png", "atlas", "skel" ],
+      "MG5_1504": [ "png", "atlas", "skel" ]
     }
   },
   "110": {
-    "genus": "FG42",
+    "code": "FG42",
     "names": {
-      "FG42": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "FG42": [ "png", "atlas", "skel" ]
     }
   },
   "111": {
-    "genus": "AAT52",
+    "code": "AAT52",
     "names": {
-      "AAT52": [
-        "atlas",
-        "png",
-        "skel"
-      ]
+      "AAT52": [ "png", "atlas", "skel" ]
     }
   },
   "112": {
-    "genus": "NEGEV",
+    "code": "NEGEV",
     "names": {
-      "NEGEV": [
-        "skel",
-        "atlas",
-        "png"
-      ],
-      "NEGEV_904": [
-        "skel",
-        "png",
-        "atlas"
-      ]
+      "NEGEV": [ "png", "atlas", "skel" ],
+      "NEGEV_904": [ "png", "atlas", "skel" ]
     }
   },
   "113": {
-    "genus": "SPS",
+    "code": "SPS",
     "names": {
-      "SPS": [
-        "skel",
-        "png",
-        "atlas"
-      ]
+      "SPS": [ "png", "atlas", "skel" ]
     }
   },
   "114": {
-    "genus": "Welrod",
+    "code": "Welrod",
     "names": {
-      "Welrod": [
-        "atlas",
-        "png",
-        "skel"
-      ],
-      "Welrod_411": [
-        "png",
-        "skel",
-        "atlas"
-      ],
-      "Welrod_1401": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "Welrod": [ "png", "atlas", "skel" ],
+      "Welrod_411": [ "png", "atlas", "skel" ],
+      "Welrod_1401": [ "png", "atlas", "skel" ]
     }
   },
   "115": {
-    "genus": "KP31",
+    "code": "KP31",
     "names": {
-      "KP31": [
-        "skel",
-        "png",
-        "atlas"
-      ],
-      "KP31_310": [
-        "atlas",
-        "skel",
-        "png"
-      ],
-      "KP31_1103": [
-        "skel",
-        "atlas",
-        "png"
-      ]
+      "KP31": [ "png", "atlas", "skel" ],
+      "KP31_310": [ "png", "atlas", "skel" ],
+      "KP31_1103": [ "png", "atlas", "skel" ]
     }
   },
   "116": {
-    "genus": "Z62",
+    "code": "Z62",
     "names": {
-      "Z62": [
-        "skel",
-        "png",
-        "atlas"
-      ]
+      "Z62": [ "png", "atlas", "skel" ]
     }
   },
   "117": {
-    "genus": "PSG1",
+    "code": "PSG1",
     "names": {
-      "PSG1": [
-        "atlas",
-        "png",
-        "skel"
-      ]
+      "PSG1": [ "png", "atlas", "skel" ]
     }
   },
   "118": {
-    "genus": "9A91",
+    "code": "9A91",
     "names": {
-      "9A91": [
-        "skel",
-        "png",
-        "atlas"
-      ],
-      "9A91_1302": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "9A91": [ "png", "atlas", "skel" ],
+      "9A91_1302": [ "png", "atlas", "skel" ]
     }
   },
   "119": {
-    "genus": "OTs14",
+    "code": "OTs14",
     "names": {
-      "OTs14": [
-        "atlas",
-        "png",
-        "skel"
-      ],
-      "OTs14_1203": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "OTs14": [ "png", "atlas", "skel" ],
+      "OTs14_1203": [ "png", "atlas", "skel" ]
     }
   },
   "120": {
-    "genus": "ARX160",
+    "code": "ARX160",
     "names": {
-      "ARX160": [
-        "atlas",
-        "png",
-        "skel"
-      ]
+      "ARX160": [ "png", "atlas", "skel" ]
     }
   },
   "121": {
-    "genus": "MK48",
+    "code": "MK48",
     "names": {
-      "Mk48": [
-        "skel",
-        "atlas",
-        "png"
-      ]
+      "Mk48": [ "png", "atlas", "skel" ]
     }
   },
   "122": {
-    "genus": "G11",
+    "code": "G11",
     "names": {
-      "G11": [
-        "skel",
-        "atlas",
-        "png"
-      ],
-      "G11_9": [
-        "skel",
-        "atlas",
-        "png"
-      ],
-      "G11_1602": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "G11": [ "png", "atlas", "skel" ],
+      "G11_9": [ "png", "atlas", "skel" ],
+      "G11_1602": [ "png", "atlas", "skel" ]
     }
   },
   "123": {
-    "genus": "P99",
+    "code": "P99",
     "names": {
-      "P99": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "P99": [ "png", "atlas", "skel" ]
     }
   },
   "124": {
-    "genus": "SuperSASS",
+    "code": "SuperSASS",
     "names": {
-      "SuperSASS": [
-        "atlas",
-        "png",
-        "skel"
-      ],
-      "SuperSASS_1407": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "SuperSASS": [ "png", "atlas", "skel" ],
+      "SuperSASS_1407": [ "png", "atlas", "skel" ]
     }
   },
   "125": {
-    "genus": "MG4",
+    "code": "MG4",
     "names": {
-      "MG4": [
-        "atlas",
-        "png",
-        "skel"
-      ],
-      "MG4_703": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "MG4": [ "png", "atlas", "skel" ],
+      "MG4_703": [ "png", "atlas", "skel" ]
     }
   },
   "126": {
-    "genus": "NZ75",
+    "code": "NZ75",
     "names": {
-      "NZ75": [
-        "skel",
-        "atlas",
-        "png"
-      ],
-      "NZ75_403": [
-        "skel",
-        "png",
-        "atlas"
-      ],
-      "NZ75_1702": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "NZ75": [ "png", "atlas", "skel" ],
+      "NZ75_403": [ "png", "atlas", "skel" ],
+      "NZ75_1702": [ "png", "atlas", "skel" ]
     }
   },
   "127": {
-    "genus": "79type",
+    "code": "79type",
     "names": {
-      "79type": [
-        "atlas",
-        "skel",
-        "png"
-      ],
-      "79type_1402": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "79type": [ "png", "atlas", "skel" ],
+      "79type_1402": [ "png", "atlas", "skel" ]
     }
   },
   "128": {
-    "genus": "M99",
+    "code": "M99",
     "names": {
-      "M99": [
-        "atlas",
-        "skel",
-        "png"
-      ],
-      "M99_404": [
-        "atlas",
-        "png",
-        "skel"
-      ],
-      "M99_1701": [
-        "skel",
-        "atlas",
-        "png"
-      ]
+      "M99": [ "png", "atlas", "skel" ],
+      "M99_404": [ "png", "atlas", "skel" ],
+      "M99_1701": [ "png", "atlas", "skel" ]
     }
   },
   "129": {
-    "genus": "95type",
+    "code": "95type",
     "names": {
-      "95type": [
-        "atlas",
-        "skel",
-        "png"
-      ],
-      "95type_405": [
-        "atlas",
-        "png",
-        "skel"
-      ],
-      "95type_1102": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "95type": [ "png", "atlas", "skel" ],
+      "95type_405": [ "png", "atlas", "skel" ],
+      "95type_1102": [ "png", "atlas", "skel" ]
     }
   },
   "130": {
-    "genus": "97type",
+    "code": "97type",
     "names": {
-      "97type": [
-        "skel",
-        "atlas",
-        "png"
-      ],
-      "97type_406": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "97type": [ "png", "atlas", "skel" ],
+      "97type_406": [ "png", "atlas", "skel" ]
     }
   },
   "131": {
-    "genus": "EVO3",
+    "code": "EVO3",
     "names": {
-      "EVO3": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "EVO3": [ "png", "atlas", "skel" ]
     }
   },
   "132": {
-    "genus": "59type",
+    "code": "59type",
     "names": {
-      "59type": [
-        "skel",
-        "atlas",
-        "png"
-      ],
-      "59type_407": [
-        "skel",
-        "atlas",
-        "png"
-      ]
+      "59type": [ "png", "atlas", "skel" ],
+      "59type_407": [ "png", "atlas", "skel" ]
     }
   },
   "133": {
-    "genus": "63type",
+    "code": "63type",
     "names": {
-      "63type": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "63type": [ "png", "atlas", "skel" ]
     }
   },
   "134": {
-    "genus": "AR70",
+    "code": "AR70",
     "names": {
-      "AR70": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "AR70": [ "png", "atlas", "skel" ]
     }
   },
   "135": {
-    "genus": "SR3MP",
+    "code": "SR3MP",
     "names": {
-      "SR3MP": [
-        "png",
-        "skel",
-        "atlas"
-      ],
-      "SR3MP_807": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "SR3MP": [ "png", "atlas", "skel" ],
+      "SR3MP_807": [ "png", "atlas", "skel" ]
     }
   },
   "136": {
-    "genus": "PP19",
+    "code": "PP19",
     "names": {
-      "PP19": [
-        "skel",
-        "atlas",
-        "png"
-      ]
+      "PP19": [ "png", "atlas", "skel" ]
     }
   },
   "137": {
-    "genus": "PP1901",
+    "code": "PP1901",
     "names": {
-      "PP1901": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "PP1901": [ "png", "atlas", "skel" ]
     }
   },
   "138": {
-    "genus": "6P62",
+    "code": "6P62",
     "names": {
-      "6P62": [
-        "atlas",
-        "png",
-        "skel"
-      ],
-      "6P62_704": [
-        "atlas",
-        "png",
-        "skel"
-      ]
+      "6P62": [ "png", "atlas", "skel" ],
+      "6P62_704": [ "png", "atlas", "skel" ]
     }
   },
   "139": {
-    "genus": "BrenTen",
+    "code": "BrenTen",
     "names": {
-      "BrenTen": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "BrenTen": [ "png", "atlas", "skel" ]
     }
   },
   "140": {
-    "genus": "PSM",
+    "code": "PSM",
     "names": {
-      "PSM": [
-        "skel",
-        "atlas",
-        "png"
-      ]
+      "PSM": [ "png", "atlas", "skel" ]
     }
   },
   "141": {
-    "genus": "USPCompact",
+    "code": "USPCompact",
     "names": {
-      "USPCompact": [
-        "skel",
-        "png",
-        "atlas"
-      ]
+      "USPCompact": [ "png", "atlas", "skel" ]
     }
   },
   "142": {
-    "genus": "FN57",
+    "code": "FN57",
     "names": {
-      "FN57": [
-        "png",
-        "skel",
-        "atlas"
-      ],
-      "FN57_1109": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "FN57": [ "png", "atlas", "skel" ],
+      "FN57_1109": [ "png", "atlas", "skel" ]
     }
   },
   "143": {
-    "genus": "RO635",
+    "code": "RO635",
     "names": {
-      "RO635": [
-        "skel",
-        "png",
-        "atlas"
-      ]
+      "RO635": [ "png", "atlas", "skel" ]
     }
   },
   "144": {
-    "genus": "MT9",
+    "code": "MT9",
     "names": {
-      "MT9": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "MT9": [ "png", "atlas", "skel" ]
     }
   },
   "145": {
-    "genus": "OC44",
+    "code": "OC44",
     "names": {
-      "OC44": [
-        "skel",
-        "atlas",
-        "png"
-      ],
-      "OC44_1608": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "OC44": [ "png", "atlas", "skel" ],
+      "OC44_1608": [ "png", "atlas", "skel" ]
     }
   },
   "146": {
-    "genus": "G28",
+    "code": "G28",
     "names": {
-      "G28": [
-        "skel",
-        "png",
-        "atlas"
-      ],
-      "G28_1104": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "G28": [ "png", "atlas", "skel" ],
+      "G28_1104": [ "png", "atlas", "skel" ]
     }
   },
   "147": {
-    "genus": "SSG69",
+    "code": "SSG69",
     "names": {
-      "SSG69": [
-        "skel",
-        "png",
-        "atlas"
-      ]
+      "SSG69": [ "png", "atlas", "skel" ]
     }
   },
   "148": {
-    "genus": "IWS2000",
+    "code": "IWS2000",
     "names": {
-      "IWS2000": [
-        "png",
-        "atlas",
-        "skel"
-      ],
-      "IWS2000_1403": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "IWS2000": [ "png", "atlas", "skel" ],
+      "IWS2000_1403": [ "png", "atlas", "skel" ]
     }
   },
   "149": {
-    "genus": "AEK999",
+    "code": "AEK999",
     "names": {
-      "AEK999": [
-        "skel",
-        "atlas",
-        "png"
-      ],
-      "AEK999_1505": [
-        "skel",
-        "png",
-        "atlas"
-      ]
+      "AEK999": [ "png", "atlas", "skel" ],
+      "AEK999_1505": [ "png", "atlas", "skel" ]
     }
   },
   "150": {
-    "genus": "Shipka",
+    "code": "Shipka",
     "names": {
-      "Shipka": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "Shipka": [ "png", "atlas", "skel" ]
     }
   },
   "151": {
-    "genus": "M1887",
+    "code": "M1887",
     "names": {
-      "M1887": [
-        "skel",
-        "png",
-        "atlas"
-      ]
+      "M1887": [ "png", "atlas", "skel" ]
     }
   },
   "152": {
-    "genus": "M1897",
+    "code": "M1897",
     "names": {
-      "M1897": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "M1897": [ "png", "atlas", "skel" ]
     }
   },
   "153": {
-    "genus": "Ithaca37",
+    "code": "Ithaca37",
     "names": {
-      "Ithaca37": [
-        "png",
-        "atlas",
-        "skel"
-      ],
-      "Ithaca37_1105": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "Ithaca37": [ "png", "atlas", "skel" ],
+      "Ithaca37_1105": [ "png", "atlas", "skel" ]
     }
   },
   "154": {
-    "genus": "M500",
+    "code": "M500",
     "names": {
-      "M500": [
-        "skel",
-        "atlas",
-        "png"
-      ]
+      "M500": [ "png", "atlas", "skel" ]
     }
   },
   "155": {
-    "genus": "M590",
+    "code": "M590",
     "names": {
-      "M590": [
-        "atlas",
-        "png",
-        "skel"
-      ]
+      "M590": [ "png", "atlas", "skel" ]
     }
   },
   "156": {
-    "genus": "SuperShorty",
+    "code": "SuperShorty",
     "names": {
-      "SuperShorty": [
-        "png",
-        "skel",
-        "atlas"
-      ],
-      "SuperShorty_1704": [
-        "atlas",
-        "png",
-        "skel"
-      ]
+      "SuperShorty": [ "png", "atlas", "skel" ],
+      "SuperShorty_1704": [ "png", "atlas", "skel" ]
     }
   },
   "157": {
-    "genus": "KSG",
+    "code": "KSG",
     "names": {
-      "KSG": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "KSG": [ "png", "atlas", "skel" ]
     }
   },
   "158": {
-    "genus": "KS23",
+    "code": "KS23",
     "names": {
-      "KS23": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "KS23": [ "png", "atlas", "skel" ]
     }
   },
   "159": {
-    "genus": "RMB93",
+    "code": "RMB93",
     "names": {
-      "RMB93": [
-        "atlas",
-        "png",
-        "skel"
-      ],
-      "RMB93_1705": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "RMB93": [ "png", "atlas", "skel" ],
+      "RMB93_1705": [ "png", "atlas", "skel" ]
     }
   },
   "160": {
-    "genus": "Saiga12",
+    "code": "Saiga12",
     "names": {
-      "Saiga12": [
-        "atlas",
-        "png",
-        "skel"
-      ]
+      "Saiga12": [ "png", "atlas", "skel" ]
     }
   },
   "161": {
-    "genus": "97typeS",
+    "code": "97typeS",
     "names": {
-      "97typeS": [
-        "skel",
-        "png",
-        "atlas"
-      ]
+      "97typeS": [ "png", "atlas", "skel" ]
     }
   },
   "162": {
-    "genus": "SPAS12",
+    "code": "SPAS12",
     "names": {
-      "SPAS12": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "SPAS12": [ "png", "atlas", "skel" ]
     }
   },
   "166": {
-    "genus": "CZ75",
+    "code": "CZ75",
     "names": {
-      "CZ75": [
-        "atlas",
-        "png",
-        "skel"
-      ],
-      "CZ75_1604": [
-        "skel",
-        "atlas",
-        "png"
-      ]
+      "CZ75": [ "png", "atlas", "skel" ],
+      "CZ75_1604": [ "png", "atlas", "skel" ]
     }
   },
   "167": {
-    "genus": "HK45",
+    "code": "HK45",
     "names": {
-      "HK45": [
-        "atlas",
-        "png",
-        "skel"
-      ]
+      "HK45": [ "png", "atlas", "skel" ]
     }
   },
   "168": {
-    "genus": "Spitfire",
+    "code": "Spitfire",
     "names": {
-      "Spitfire": [
-        "atlas",
-        "png",
-        "skel"
-      ],
-      "Spitfire_1405": [
-        "atlas",
-        "png",
-        "skel"
-      ]
+      "Spitfire": [ "png", "atlas", "skel" ],
+      "Spitfire_1405": [ "png", "atlas", "skel" ]
     }
   },
   "169": {
-    "genus": "ColtSCW",
+    "code": "ColtSCW",
     "names": {
-      "ColtSCW": [
-        "skel",
-        "atlas",
-        "png"
-      ]
+      "ColtSCW": [ "png", "atlas", "skel" ]
     }
   },
   "170": {
-    "genus": "Ash127",
+    "code": "Ash127",
     "names": {
-      "Ash127": [
-        "skel",
-        "png",
-        "atlas"
-      ]
+      "Ash127": [ "png", "atlas", "skel" ]
     }
   },
   "171": {
-    "genus": "Ribeyrolles",
+    "code": "Ribeyrolles",
     "names": {
-      "Ribeyrolles": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "Ribeyrolles": [ "png", "atlas", "skel" ]
     }
   },
   "172": {
-    "genus": "RFB",
+    "code": "RFB",
     "names": {
-      "RFB": [
-        "png",
-        "skel",
-        "atlas"
-      ],
-      "RFB_1601": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "RFB": [ "png", "atlas", "skel" ],
+      "RFB_1601": [ "png", "atlas", "skel" ]
     }
   },
   "173": {
-    "genus": "PKP",
+    "code": "PKP",
     "names": {
-      "PKP": [
-        "png",
-        "atlas",
-        "skel"
-      ],
-      "PKP_1201": [
-        "png",
-        "atlas",
-        "skel"
-      ],
-      "PKP_1503": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "PKP": [ "png", "atlas", "skel" ],
+      "PKP_1201": [ "png", "atlas", "skel" ],
+      "PKP_1503": [ "png", "atlas", "skel" ]
     }
   },
   "174": {
-    "genus": "81typeR",
+    "code": "81typeR",
     "names": {
-      "81typeR": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "81typeR": [ "png", "atlas", "skel" ]
     }
   },
   "175": {
-    "genus": "ART556",
+    "code": "ART556",
     "names": {
-      "ART556": [
-        "atlas",
-        "png",
-        "skel"
-      ]
+      "ART556": [ "png", "atlas", "skel" ]
     }
   },
   "176": {
-    "genus": "TMP",
+    "code": "TMP",
     "names": {
-      "TMP": [
-        "skel",
-        "atlas",
-        "png"
-      ]
+      "TMP": [ "png", "atlas", "skel" ]
     }
   },
   "177": {
-    "genus": "KLIN",
+    "code": "KLIN",
     "names": {
-      "KLIN": [
-        "skel",
-        "png",
-        "atlas"
-      ],
-      "KLIN_1204": [
-        "skel",
-        "png",
-        "atlas"
-      ]
+      "KLIN": [ "png", "atlas", "skel" ],
+      "KLIN_1204": [ "png", "atlas", "skel" ]
     }
   },
   "178": {
-    "genus": "F1",
+    "code": "F1",
     "names": {
-      "F1": [
-        "atlas",
-        "png",
-        "skel"
-      ]
+      "F1": [ "png", "atlas", "skel" ]
     }
   },
   "179": {
-    "genus": "DSR50",
+    "code": "DSR50",
     "names": {
-      "DSR50": [
-        "atlas",
-        "png",
-        "skel"
-      ]
+      "DSR50": [ "png", "atlas", "skel" ]
     }
   },
   "180": {
-    "genus": "PzB39",
+    "code": "PzB39",
     "names": {
-      "PzB39": [
-        "atlas",
-        "skel",
-        "png"
-      ],
-      "PzB39_1506": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "PzB39": [ "png", "atlas", "skel" ],
+      "PzB39_1506": [ "png", "atlas", "skel" ]
     }
   },
   "181": {
-    "genus": "T91",
+    "code": "T91",
     "names": {
-      "T91": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "T91": [ "png", "atlas", "skel" ]
     }
   },
   "182": {
-    "genus": "wz29",
+    "code": "wz29",
     "names": {
-      "wz29": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "wz29": [ "png", "atlas", "skel" ]
     }
   },
   "183": {
-    "genus": "Contender",
+    "code": "Contender",
     "names": {
-      "Contender": [
-        "atlas",
-        "png",
-        "skel"
-      ],
-      "Contender_1502": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "Contender": [ "png", "atlas", "skel" ],
+      "Contender_1502": [ "png", "atlas", "skel" ]
     }
   },
   "184": {
-    "genus": "T5000",
+    "code": "T5000",
     "names": {
-      "T5000": [
-        "skel",
-        "atlas",
-        "png"
-      ]
+      "T5000": [ "png", "atlas", "skel" ]
     }
   },
   "185": {
-    "genus": "Ameli",
+    "code": "Ameli",
     "names": {
-      "Ameli": [
-        "png",
-        "atlas",
-        "skel"
-      ],
-      "Ameli_1605": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "Ameli": [ "png", "atlas", "skel" ],
+      "Ameli_1605": [ "png", "atlas", "skel" ]
     }
   },
   "186": {
-    "genus": "P226",
+    "code": "P226",
     "names": {
-      "P226": [
-        "skel",
-        "png",
-        "atlas"
-      ]
+      "P226": [ "png", "atlas", "skel" ]
     }
   },
   "187": {
-    "genus": "Ak5",
+    "code": "Ak5",
     "names": {
-      "Ak5": [
-        "skel",
-        "png",
-        "atlas"
-      ]
+      "Ak5": [ "png", "atlas", "skel" ]
     }
   },
   "188": {
-    "genus": "SAT8",
+    "code": "SAT8",
     "names": {
-      "SAT8": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "SAT8": [ "png", "atlas", "skel" ]
     }
   },
   "189": {
-    "genus": "USAS12",
+    "code": "USAS12",
     "names": {
-      "USAS12": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "USAS12": [ "png", "atlas", "skel" ]
     }
   },
   "190": {
-    "genus": "NS2000",
+    "code": "NS2000",
     "names": {
-      "NS2000": [
-        "skel",
-        "png",
-        "atlas"
-      ]
+      "NS2000": [ "png", "atlas", "skel" ]
     }
   },
   "191": {
-    "genus": "M12",
+    "code": "M12",
     "names": {
-      "M12": [
-        "atlas",
-        "png",
-        "skel"
-      ]
+      "M12": [ "png", "atlas", "skel" ]
     }
   },
   "192": {
-    "genus": "JS-127",
+    "code": "JS-127",
     "names": {
-      "JS-127": [
-        "skel",
-        "atlas",
-        "png"
-      ]
+      "JS-127": [ "png", "atlas", "skel" ]
     }
   },
   "193": {
-    "genus": "T65",
+    "code": "T65",
     "names": {
-      "T65": [
-        "atlas",
-        "png",
-        "skel"
-      ]
+      "T65": [ "png", "atlas", "skel" ]
     }
   },
   "194": {
-    "genus": "K2",
+    "code": "K2",
     "names": {
-      "K2": [
-        "skel",
-        "png",
-        "atlas"
-      ]
+      "K2": [ "png", "atlas", "skel" ]
     }
   },
   "195": {
-    "genus": "HK23",
+    "code": "HK23",
     "names": {
-      "HK23": [
-        "skel",
-        "atlas",
-        "png"
-      ]
+      "HK23": [ "png", "atlas", "skel" ]
     }
   },
   "196": {
-    "genus": "ZastavaM21",
+    "code": "ZastavaM21",
     "names": {
-      "ZastavaM21": [
-        "skel",
-        "png",
-        "atlas"
-      ],
-      "ZastavaM21_1603": [
-        "atlas",
-        "png",
-        "skel"
-      ]
+      "ZastavaM21": [ "png", "atlas", "skel" ],
+      "ZastavaM21_1603": [ "png", "atlas", "skel" ]
     }
   },
   "197": {
-    "genus": "Carcano1891",
+    "code": "Carcano1891",
     "names": {
-      "Carcano1891": [
-        "atlas",
-        "png",
-        "skel"
-      ]
+      "Carcano1891": [ "png", "atlas", "skel" ]
     }
   },
   "198": {
-    "genus": "Carcano1938",
+    "code": "Carcano1938",
     "names": {
-      "Carcano1938": [
-        "atlas",
-        "png",
-        "skel"
-      ]
+      "Carcano1938": [ "png", "atlas", "skel" ]
     }
   },
   "199": {
-    "genus": "80type",
+    "code": "80type",
     "names": {
-      "80type": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "80type": [ "png", "atlas", "skel" ]
     }
   },
   "200": {
-    "genus": "xm3",
+    "code": "xm3",
     "names": {
-      "xm3": [
-        "skel",
-        "atlas",
-        "png"
-      ]
+      "xm3": [ "png", "atlas", "skel" ]
     }
   },
   "201": {
-    "genus": "GepardM1",
+    "code": "GepardM1",
     "names": {
-      "GepardM1": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "GepardM1": [ "png", "atlas", "skel" ]
     }
   },
   "205": {
-    "genus": "AN94",
+    "code": "AN94",
     "names": {
-      "AN94": [
-        "png",
-        "atlas",
-        "skel"
-      ],
-      "RAN94": [
-        "atlas",
-        "png",
-        "skel"
-      ]
+      "AN94": [ "png", "atlas", "skel" ],
+      "RAN94": [ "png", "atlas", "skel" ]
     }
   },
   "206": {
-    "genus": "AK12",
+    "code": "AK12",
     "names": {
-      "RAK12": [
-        "atlas",
-        "png",
-        "skel"
-      ],
-      "AK12": [
-        "skel",
-        "atlas",
-        "png"
-      ]
+      "RAK12": [ "png", "atlas", "skel" ],
+      "AK12": [ "png", "atlas", "skel" ]
     }
   },
   "1001": {
-    "genus": "BB_Noel",
+    "code": "BB_Noel",
     "names": {
-      "BB_Noel": [
-        "png",
-        "skel",
-        "atlas"
-      ],
-      "BB_Noel_503": [
-        "skel",
-        "png",
-        "atlas"
-      ]
+      "BB_Noel": [ "png", "atlas", "skel" ],
+      "BB_Noel_503": [ "png", "atlas", "skel" ]
     }
   },
   "1002": {
-    "genus": "GG_elfeldt",
+    "code": "GG_elfeldt",
     "names": {
-      "GG_elfeldt": [
-        "png",
-        "atlas",
-        "skel"
-      ],
-      "GG_elfeldt_504": [
-        "atlas",
-        "skel",
-        "png"
-      ],
-      "GG_elfeldt_505": [
-        "skel",
-        "atlas",
-        "png"
-      ]
+      "GG_elfeldt": [ "png", "atlas", "skel" ],
+      "GG_elfeldt_504": [ "png", "atlas", "skel" ],
+      "GG_elfeldt_505": [ "png", "atlas", "skel" ]
     }
   },
   "1003": {
-    "genus": "Kiana",
+    "code": "Kiana",
     "names": {
-      "Kiana": [
-        "atlas",
-        "png",
-        "skel"
-      ],
-      "Kiana_506": [
-        "atlas",
-        "skel",
-        "png"
-      ]
+      "Kiana": [ "png", "atlas", "skel" ],
+      "Kiana_506": [ "png", "atlas", "skel" ]
     }
   },
   "1004": {
-    "genus": "RaidenMei",
+    "code": "RaidenMei",
     "names": {
-      "RaidenMei": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "RaidenMei": [ "png", "atlas", "skel" ]
     }
   },
   "1005": {
-    "genus": "Bronya",
+    "code": "Bronya",
     "names": {
-      "Bronya": [
-        "atlas",
-        "skel",
-        "png"
-      ],
-      "Bronya_507": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "Bronya": [ "png", "atlas", "skel" ],
+      "Bronya_507": [ "png", "atlas", "skel" ]
     }
   },
   "1006": {
-    "genus": "Theresa",
+    "code": "Theresa",
     "names": {
-      "Theresa": [
-        "png",
-        "skel",
-        "atlas"
-      ]
+      "Theresa": [ "png", "atlas", "skel" ]
     }
   },
   "1007": {
-    "genus": "Himeko",
+    "code": "Himeko",
     "names": {
-      "Himeko": [
-        "png",
-        "atlas",
-        "skel"
-      ]
+      "Himeko": [ "png", "atlas", "skel" ]
     }
   },
   "1008": {
-    "genus": "Seele",
+    "code": "Seele",
     "names": {
-      "Seele": [
-        "atlas",
-        "skel",
-        "png"
-      ],
-      "Seele_508": [
-        "skel",
-        "atlas",
-        "png"
-      ]
+      "Seele": [ "png", "atlas", "skel" ],
+      "Seele_508": [ "png", "atlas", "skel" ]
     }
   }
 }
