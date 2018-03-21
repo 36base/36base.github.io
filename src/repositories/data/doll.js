@@ -11,9 +11,7 @@ const skillMap = new Map(dollSkills.map((e, i) => [i, e]));
 const spineMap = new Map(Object.keys(dollSpines).map(k => [Number(k), dollSpines[k]]));
 
 function getTypeIcon(typeId, rankId) {
-  const type = typeMap.get(typeId).shortName;
-
-  return `${domain}/typeicons/${type}${rankId}.png`;
+  return `${domain}/typeicons/${typeId.toUpperCase()}${rankId}.png`;
 }
 
 function getImage(id, skinNo, isDamaged) {

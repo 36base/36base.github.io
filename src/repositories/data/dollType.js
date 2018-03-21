@@ -1,37 +1,31 @@
 export default [
   {
-    id: 1,
-    shortName: 'HG',
+    id: 'hg',
     enName: 'Handgun',
     krName: '권총',
   },
   {
-    id: 2,
-    shortName: 'SMG',
+    id: 'smg',
     enName: 'Submachinegun',
     krName: '기관단총',
   },
   {
-    id: 3,
-    shortName: 'RF',
+    id: 'rf',
     enName: 'Rifle',
     krName: '소총',
   },
   {
-    id: 4,
-    shortName: 'AR',
+    id: 'ar',
     enName: 'Assault Rifle',
     krName: '돌격소총',
   },
   {
-    id: 5,
-    shortName: 'MG',
+    id: 'mg',
     enName: 'Machinegun',
     krName: '기관총',
   },
   {
-    id: 6,
-    shortName: 'SG',
+    id: 'sg',
     enName: 'Shotgun',
     krName: '산탄총',
   },
