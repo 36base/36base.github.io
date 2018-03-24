@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { AppBar, Toolbar, IconButton, Typography } from 'material-ui';
 import MenuIcon from 'material-ui-icons/Menu';
 import { withStyles } from 'material-ui/styles';
@@ -33,7 +34,7 @@ class Appbar extends React.Component {
             <MenuIcon />
           </IconButton>
           <Typography variant="title" color="inherit" noWrap>
-            36베이스
+            <Link style={{ color: 'inherit', textDecoration: 'none' }} to="/">36베이스</Link>
           </Typography>
         </Toolbar>
       </AppBar>
