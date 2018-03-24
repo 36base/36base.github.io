@@ -1,0 +1,1312 @@
+{
+  "1": {
+    "code": "M1873",
+    "names": {
+      "M1873": [ "png", "atlas", "skel" ],
+      "M1873_301": [ "png", "atlas", "skel" ]
+    }
+  },
+  "2": {
+    "code": "M1911",
+    "names": {
+      "M1911": [ "png", "atlas", "skel" ]
+    }
+  },
+  "3": {
+    "code": "M9",
+    "names": {
+      "M9": [ "png", "atlas", "skel" ]
+    }
+  },
+  "5": {
+    "code": "M1895",
+    "names": {
+      "M1895": [ "png", "atlas", "skel" ]
+    }
+  },
+  "6": {
+    "code": "TT33",
+    "names": {
+      "TT33": [ "png", "atlas", "skel" ],
+      "TT33_601": [ "png", "atlas", "skel" ]
+    }
+  },
+  "7": {
+    "code": "APS",
+    "names": {
+      "APS": [ "png", "atlas", "skel" ]
+    }
+  },
+  "8": {
+    "code": "PM",
+    "names": {
+      "PM": [ "png", "atlas", "skel" ],
+      "PM_1": [ "png", "atlas", "skel" ]
+    }
+  },
+  "9": {
+    "code": "P38",
+    "names": {
+      "P38": [ "png", "atlas", "skel" ]
+    }
+  },
+  "10": {
+    "code": "PPK",
+    "names": {
+      "PPK": [ "png", "atlas", "skel" ]
+    }
+  },
+  "11": {
+    "code": "P08",
+    "names": {
+      "P08": [ "png", "atlas", "skel" ]
+    }
+  },
+  "12": {
+    "code": "C96",
+    "names": {
+      "C96": [ "png", "atlas", "skel" ]
+    }
+  },
+  "13": {
+    "code": "92type",
+    "names": {
+      "92type": [ "png", "atlas", "skel" ]
+    }
+  },
+  "14": {
+    "code": "357",
+    "names": {
+      "357": [ "png", "atlas", "skel" ]
+    }
+  },
+  "15": {
+    "code": "Glock17",
+    "names": {
+      "Glock17": [ "png", "atlas", "skel" ]
+    }
+  },
+  "16": {
+    "code": "M1928A1",
+    "names": {
+      "M1928A1": [ "png", "atlas", "skel" ],
+      "M1928A1_1501": [ "png", "atlas", "skel" ]
+    }
+  },
+  "17": {
+    "code": "M3",
+    "names": {
+      "M3": [ "png", "atlas", "skel" ]
+    }
+  },
+  "18": {
+    "code": "MAC10",
+    "names": {
+      "MAC10": [ "png", "atlas", "skel" ]
+    }
+  },
+  "19": {
+    "code": "FMG9",
+    "names": {
+      "FMG9": [ "png", "atlas", "skel" ]
+    }
+  },
+  "20": {
+    "code": "Vector",
+    "names": {
+      "Vector": [ "png", "atlas", "skel" ],
+      "Vector_2": [ "png", "atlas", "skel" ]
+    }
+  },
+  "21": {
+    "code": "PPsh41",
+    "names": {
+      "PPsh41": [ "png", "atlas", "skel" ],
+      "PPsh41_602": [ "png", "atlas", "skel" ]
+    }
+  },
+  "22": {
+    "code": "PPS43",
+    "names": {
+      "PPS43": [ "png", "atlas", "skel" ]
+    }
+  },
+  "23": {
+    "code": "PP90",
+    "names": {
+      "PP90": [ "png", "atlas", "skel" ]
+    }
+  },
+  "24": {
+    "code": "PP2000",
+    "names": {
+      "PP2000": [ "png", "atlas", "skel" ]
+    }
+  },
+  "25": {
+    "code": "MP40",
+    "names": {
+      "MP40": [ "png", "atlas", "skel" ],
+      "MP40_902": [ "png", "atlas", "skel" ]
+    }
+  },
+  "26": {
+    "code": "MP5",
+    "names": {
+      "MP5": [ "png", "atlas", "skel" ],
+      "MP5_3": [ "png", "atlas", "skel" ],
+      "MP5_1205": [ "png", "atlas", "skel" ]
+    }
+  },
+  "27": {
+    "code": "VZ61",
+    "names": {
+      "VZ61": [ "png", "atlas", "skel" ],
+      "VZ61_801": [ "png", "atlas", "skel" ]
+    }
+  },
+  "29": {
+    "code": "StenMK2",
+    "names": {
+      "StenMK2": [ "png", "atlas", "skel" ],
+      "StenMK2_603": [ "png", "atlas", "skel" ]
+    }
+  },
+  "31": {
+    "code": "MAB38",
+    "names": {
+      "MAB38": [ "png", "atlas", "skel" ]
+    }
+  },
+  "32": {
+    "code": "MicroUZI",
+    "names": {
+      "MicroUZI": [ "png", "atlas", "skel" ],
+      "MicroUZI_101": [ "png", "atlas", "skel" ]
+    }
+  },
+  "33": {
+    "code": "m45",
+    "names": {
+      "m45": [ "png", "atlas", "skel" ],
+      "m45_4": [ "png", "atlas", "skel" ]
+    }
+  },
+  "34": {
+    "code": "M1",
+    "names": {
+      "M1": [ "png", "atlas", "skel" ],
+      "M1_1106": [ "png", "atlas", "skel" ]
+    }
+  },
+  "35": {
+    "code": "M1A1",
+    "names": {
+      "M1A1": [ "png", "atlas", "skel" ]
+    }
+  },
+  "36": {
+    "code": "M1903",
+    "names": {
+      "M1903": [ "png", "atlas", "skel" ],
+      "M1903_5": [ "png", "atlas", "skel" ],
+      "M1903_302": [ "png", "atlas", "skel" ],
+      "M1903_802": [ "png", "atlas", "skel" ],
+      "M1903_1107": [ "png", "atlas", "skel" ]
+    }
+  },
+  "37": {
+    "code": "M14",
+    "names": {
+      "M14": [ "png", "atlas", "skel" ],
+      "M14_303": [ "png", "atlas", "skel" ]
+    }
+  },
+  "38": {
+    "code": "M21",
+    "names": {
+      "M21": [ "png", "atlas", "skel" ],
+      "M21_304": [ "png", "atlas", "skel" ]
+    }
+  },
+  "39": {
+    "code": "M1891",
+    "names": {
+      "M1891": [ "png", "atlas", "skel" ],
+      "M1891_803": [ "png", "atlas", "skel" ]
+    }
+  },
+  "40": {
+    "code": "SVT38",
+    "names": {
+      "SVT38": [ "png", "atlas", "skel" ]
+    }
+  },
+  "41": {
+    "code": "SKS",
+    "names": {
+      "SKS": [ "png", "atlas", "skel" ]
+    }
+  },
+  "42": {
+    "code": "PTRD",
+    "names": {
+      "PTRD": [ "png", "atlas", "skel" ],
+      "PTRD_408": [ "png", "atlas", "skel" ]
+    }
+  },
+  "43": {
+    "code": "SVD",
+    "names": {
+      "SVD": [ "png", "atlas", "skel" ],
+      "SVD_305": [ "png", "atlas", "skel" ]
+    }
+  },
+  "44": {
+    "code": "SV98",
+    "names": {
+      "SV98": [ "png", "atlas", "skel" ],
+      "SV98_502": [ "png", "atlas", "skel" ]
+    }
+  },
+  "46": {
+    "code": "98K",
+    "names": {
+      "98K": [ "png", "atlas", "skel" ]
+    }
+  },
+  "47": {
+    "code": "G43",
+    "names": {
+      "G43": [ "png", "atlas", "skel" ]
+    }
+  },
+  "48": {
+    "code": "WA2000",
+    "names": {
+      "WA2000": [ "png", "atlas", "skel" ],
+      "WA2000_6": [ "png", "atlas", "skel" ],
+      "WA2000_306": [ "png", "atlas", "skel" ],
+      "WA2000_804": [ "png", "atlas", "skel" ],
+      "WA2000_1108": [ "png", "atlas", "skel" ]
+    }
+  },
+  "49": {
+    "code": "56typeR",
+    "names": {
+      "56typeR": [ "png", "atlas", "skel" ]
+    }
+  },
+  "50": {
+    "code": "MLEMK1",
+    "names": {
+      "MLEMK1": [ "png", "atlas", "skel" ],
+      "MLEMK1_10": [ "png", "atlas", "skel" ],
+      "MLEMK1_604": [ "png", "atlas", "skel" ],
+      "MLEMK1_901": [ "png", "atlas", "skel" ]
+    }
+  },
+  "51": {
+    "code": "FN49",
+    "names": {
+      "FN49": [ "png", "atlas", "skel" ]
+    }
+  },
+  "52": {
+    "code": "BM59",
+    "names": {
+      "BM59": [ "png", "atlas", "skel" ]
+    }
+  },
+  "53": {
+    "code": "NTW20",
+    "names": {
+      "NTW20": [ "png", "atlas", "skel" ],
+      "NTW20_307": [ "png", "atlas", "skel" ],
+      "NTW20_1101": [ "png", "atlas", "skel" ]
+    }
+  },
+  "54": {
+    "code": "M16A1",
+    "names": {
+      "M16A1": [ "png", "atlas", "skel" ]
+    }
+  },
+  "55": {
+    "code": "M4A1",
+    "names": {
+      "M4A1": [ "png", "atlas", "skel" ]
+    }
+  },
+  "56": {
+    "code": "M4 SOPMOD II",
+    "names": {
+      "M4 SOPMOD II": [ "png", "atlas", "skel" ]
+    }
+  },
+  "57": {
+    "code": "AR15",
+    "names": {
+      "AR15": [ "png", "atlas", "skel" ],
+      "AR15_701": [ "png", "atlas", "skel" ]
+    }
+  },
+  "58": {
+    "code": "AK47",
+    "names": {
+      "AK47": [ "png", "atlas", "skel" ],
+      "AK47_501": [ "png", "atlas", "skel" ]
+    }
+  },
+  "60": {
+    "code": "ASVAL",
+    "names": {
+      "ASVAL": [ "png", "atlas", "skel" ]
+    }
+  },
+  "61": {
+    "code": "STG44",
+    "names": {
+      "STG44": [ "png", "atlas", "skel" ]
+    }
+  },
+  "62": {
+    "code": "G41",
+    "names": {
+      "G41": [ "png", "atlas", "skel" ]
+    }
+  },
+  "63": {
+    "code": "G3",
+    "names": {
+      "G3": [ "png", "atlas", "skel" ],
+      "G3_1303": [ "png", "atlas", "skel" ]
+    }
+  },
+  "64": {
+    "code": "G36",
+    "names": {
+      "G36": [ "png", "atlas", "skel" ],
+      "G36_905": [ "png", "atlas", "skel" ],
+      "G36_1507": [ "png", "atlas", "skel" ]
+    }
+  },
+  "65": {
+    "code": "HK416",
+    "names": {
+      "HK416": [ "png", "atlas", "skel" ],
+      "HK416_805": [ "png", "atlas", "skel" ]
+    }
+  },
+  "66": {
+    "code": "56-1type",
+    "names": {
+      "56-1type": [ "png", "atlas", "skel" ],
+      "56-1type_401": [ "png", "atlas", "skel" ]
+    }
+  },
+  "68": {
+    "code": "L85A1",
+    "names": {
+      "L85A1": [ "png", "atlas", "skel" ]
+    }
+  },
+  "69": {
+    "code": "FAMAS",
+    "names": {
+      "FAMAS": [ "png", "atlas", "skel" ]
+    }
+  },
+  "70": {
+    "code": "FNFNC",
+    "names": {
+      "FNFNC": [ "png", "atlas", "skel" ],
+      "FNFNC_1406": [ "png", "atlas", "skel" ]
+    }
+  },
+  "71": {
+    "code": "AR",
+    "names": {
+      "AR": [ "png", "atlas", "skel" ]
+    }
+  },
+  "72": {
+    "code": "TAR21",
+    "names": {
+      "TAR21": [ "png", "atlas", "skel" ],
+      "TAR21_1305": [ "png", "atlas", "skel" ]
+    }
+  },
+  "74": {
+    "code": "SIG510",
+    "names": {
+      "SIG510": [ "png", "atlas", "skel" ]
+    }
+  },
+  "75": {
+    "code": "M1918",
+    "names": {
+      "M1918": [ "png", "atlas", "skel" ],
+      "M1918_102": [ "png", "atlas", "skel" ],
+      "M1918_806": [ "png", "atlas", "skel" ],
+      "M1918_1606": [ "png", "atlas", "skel" ]
+    }
+  },
+  "77": {
+    "code": "M2HB",
+    "names": {
+      "M2HB": [ "png", "atlas", "skel" ]
+    }
+  },
+  "78": {
+    "code": "M60",
+    "names": {
+      "M60": [ "png", "atlas", "skel" ]
+    }
+  },
+  "79": {
+    "code": "M249SAW",
+    "names": {
+      "M249SAW": [ "png", "atlas", "skel" ]
+    }
+  },
+  "80": {
+    "code": "M1919A4",
+    "names": {
+      "M1919A4": [ "png", "atlas", "skel" ],
+      "M1919A4_7": [ "png", "atlas", "skel" ],
+      "M1919A4_106": [ "png", "atlas", "skel" ]
+    }
+  },
+  "81": {
+    "code": "LWMMG",
+    "names": {
+      "LWMMG": [ "png", "atlas", "skel" ]
+    }
+  },
+  "82": {
+    "code": "DP28",
+    "names": {
+      "DP28": [ "png", "atlas", "skel" ]
+    }
+  },
+  "84": {
+    "code": "RPD",
+    "names": {
+      "RPD": [ "png", "atlas", "skel" ]
+    }
+  },
+  "85": {
+    "code": "PK",
+    "names": {
+      "PK": [ "png", "atlas", "skel" ],
+      "PK_605": [ "png", "atlas", "skel" ]
+    }
+  },
+  "86": {
+    "code": "MG42",
+    "names": {
+      "MG42": [ "png", "atlas", "skel" ]
+    }
+  },
+  "87": {
+    "code": "MG34",
+    "names": {
+      "MG34": [ "png", "atlas", "skel" ]
+    }
+  },
+  "88": {
+    "code": "MG3",
+    "names": {
+      "MG3": [ "png", "atlas", "skel" ],
+      "MG3_1304": [ "png", "atlas", "skel" ]
+    }
+  },
+  "89": {
+    "code": "BrenMK",
+    "names": {
+      "BrenMK": [ "png", "atlas", "skel" ]
+    }
+  },
+  "90": {
+    "code": "FNP9",
+    "names": {
+      "FNP9": [ "png", "atlas", "skel" ]
+    }
+  },
+  "91": {
+    "code": "MP446",
+    "names": {
+      "MP446": [ "png", "atlas", "skel" ],
+      "MP446_103": [ "png", "atlas", "skel" ],
+      "MP446_402": [ "png", "atlas", "skel" ]
+    }
+  },
+  "92": {
+    "code": "SpectreM4",
+    "names": {
+      "SpectreM4": [ "png", "atlas", "skel" ]
+    }
+  },
+  "93": {
+    "code": "IDW",
+    "names": {
+      "IDW": [ "png", "atlas", "skel" ]
+    }
+  },
+  "94": {
+    "code": "64type",
+    "names": {
+      "64type": [ "png", "atlas", "skel" ],
+      "64type_11": [ "png", "atlas", "skel" ],
+      "64type_104": [ "png", "atlas", "skel" ]
+    }
+  },
+  "95": {
+    "code": "88type",
+    "names": {
+      "88type": [ "png", "atlas", "skel" ]
+    }
+  },
+  "96": {
+    "code": "Grizzly",
+    "names": {
+      "Grizzly": [ "png", "atlas", "skel" ],
+      "Grizzly_105": [ "png", "atlas", "skel" ],
+      "Grizzly_903": [ "png", "atlas", "skel" ]
+    }
+  },
+  "97": {
+    "code": "M950A",
+    "names": {
+      "M950A": [ "png", "atlas", "skel" ],
+      "M950A_702": [ "png", "atlas", "skel" ],
+      "M950A_808": [ "png", "atlas", "skel" ]
+    }
+  },
+  "98": {
+    "code": "SPP1",
+    "names": {
+      "SPP1": [ "png", "atlas", "skel" ],
+      "SPP1_1703": [ "png", "atlas", "skel" ]
+    }
+  },
+  "99": {
+    "code": "Mk23",
+    "names": {
+      "Mk23": [ "png", "atlas", "skel" ],
+      "Mk23_8": [ "png", "atlas", "skel" ]
+    }
+  },
+  "100": {
+    "code": "P7",
+    "names": {
+      "P7": [ "png", "atlas", "skel" ],
+      "P7_606": [ "png", "atlas", "skel" ],
+      "P7_1404": [ "png", "atlas", "skel" ]
+    }
+  },
+  "101": {
+    "code": "UMP9",
+    "names": {
+      "UMP9": [ "png", "atlas", "skel" ],
+      "UMP9_409": [ "png", "atlas", "skel" ]
+    }
+  },
+  "102": {
+    "code": "UMP40",
+    "names": {
+      "UMP40": [ "png", "atlas", "skel" ]
+    }
+  },
+  "103": {
+    "code": "UMP45",
+    "names": {
+      "UMP45": [ "png", "atlas", "skel" ],
+      "UMP45_410": [ "png", "atlas", "skel" ]
+    }
+  },
+  "104": {
+    "code": "G36C",
+    "names": {
+      "G36C": [ "png", "atlas", "skel" ],
+      "G36C_1202": [ "png", "atlas", "skel" ]
+    }
+  },
+  "105": {
+    "code": "OTs12",
+    "names": {
+      "OTs12": [ "png", "atlas", "skel" ]
+    }
+  },
+  "106": {
+    "code": "FNFAL",
+    "names": {
+      "FNFAL": [ "png", "atlas", "skel" ],
+      "FNFAL_308": [ "png", "atlas", "skel" ],
+      "FNFAL_607": [ "png", "atlas", "skel" ]
+    }
+  },
+  "107": {
+    "code": "F2000",
+    "names": {
+      "F2000": [ "png", "atlas", "skel" ]
+    }
+  },
+  "108": {
+    "code": "CZ805",
+    "names": {
+      "CZ805": [ "png", "atlas", "skel" ]
+    }
+  },
+  "109": {
+    "code": "MG5",
+    "names": {
+      "MG5": [ "png", "atlas", "skel" ],
+      "MG5_309": [ "png", "atlas", "skel" ],
+      "MG5_1504": [ "png", "atlas", "skel" ]
+    }
+  },
+  "110": {
+    "code": "FG42",
+    "names": {
+      "FG42": [ "png", "atlas", "skel" ]
+    }
+  },
+  "111": {
+    "code": "AAT52",
+    "names": {
+      "AAT52": [ "png", "atlas", "skel" ]
+    }
+  },
+  "112": {
+    "code": "NEGEV",
+    "names": {
+      "NEGEV": [ "png", "atlas", "skel" ],
+      "NEGEV_904": [ "png", "atlas", "skel" ]
+    }
+  },
+  "113": {
+    "code": "SPS",
+    "names": {
+      "SPS": [ "png", "atlas", "skel" ]
+    }
+  },
+  "114": {
+    "code": "Welrod",
+    "names": {
+      "Welrod": [ "png", "atlas", "skel" ],
+      "Welrod_411": [ "png", "atlas", "skel" ],
+      "Welrod_1401": [ "png", "atlas", "skel" ]
+    }
+  },
+  "115": {
+    "code": "KP31",
+    "names": {
+      "KP31": [ "png", "atlas", "skel" ],
+      "KP31_310": [ "png", "atlas", "skel" ],
+      "KP31_1103": [ "png", "atlas", "skel" ]
+    }
+  },
+  "116": {
+    "code": "Z62",
+    "names": {
+      "Z62": [ "png", "atlas", "skel" ]
+    }
+  },
+  "117": {
+    "code": "PSG1",
+    "names": {
+      "PSG1": [ "png", "atlas", "skel" ]
+    }
+  },
+  "118": {
+    "code": "9A91",
+    "names": {
+      "9A91": [ "png", "atlas", "skel" ],
+      "9A91_1302": [ "png", "atlas", "skel" ]
+    }
+  },
+  "119": {
+    "code": "OTs14",
+    "names": {
+      "OTs14": [ "png", "atlas", "skel" ],
+      "OTs14_1203": [ "png", "atlas", "skel" ]
+    }
+  },
+  "120": {
+    "code": "ARX160",
+    "names": {
+      "ARX160": [ "png", "atlas", "skel" ]
+    }
+  },
+  "121": {
+    "code": "MK48",
+    "names": {
+      "Mk48": [ "png", "atlas", "skel" ]
+    }
+  },
+  "122": {
+    "code": "G11",
+    "names": {
+      "G11": [ "png", "atlas", "skel" ],
+      "G11_9": [ "png", "atlas", "skel" ],
+      "G11_1602": [ "png", "atlas", "skel" ]
+    }
+  },
+  "123": {
+    "code": "P99",
+    "names": {
+      "P99": [ "png", "atlas", "skel" ]
+    }
+  },
+  "124": {
+    "code": "SuperSASS",
+    "names": {
+      "SuperSASS": [ "png", "atlas", "skel" ],
+      "SuperSASS_1407": [ "png", "atlas", "skel" ]
+    }
+  },
+  "125": {
+    "code": "MG4",
+    "names": {
+      "MG4": [ "png", "atlas", "skel" ],
+      "MG4_703": [ "png", "atlas", "skel" ]
+    }
+  },
+  "126": {
+    "code": "NZ75",
+    "names": {
+      "NZ75": [ "png", "atlas", "skel" ],
+      "NZ75_403": [ "png", "atlas", "skel" ],
+      "NZ75_1702": [ "png", "atlas", "skel" ]
+    }
+  },
+  "127": {
+    "code": "79type",
+    "names": {
+      "79type": [ "png", "atlas", "skel" ],
+      "79type_1402": [ "png", "atlas", "skel" ]
+    }
+  },
+  "128": {
+    "code": "M99",
+    "names": {
+      "M99": [ "png", "atlas", "skel" ],
+      "M99_404": [ "png", "atlas", "skel" ],
+      "M99_1701": [ "png", "atlas", "skel" ]
+    }
+  },
+  "129": {
+    "code": "95type",
+    "names": {
+      "95type": [ "png", "atlas", "skel" ],
+      "95type_405": [ "png", "atlas", "skel" ],
+      "95type_1102": [ "png", "atlas", "skel" ]
+    }
+  },
+  "130": {
+    "code": "97type",
+    "names": {
+      "97type": [ "png", "atlas", "skel" ],
+      "97type_406": [ "png", "atlas", "skel" ]
+    }
+  },
+  "131": {
+    "code": "EVO3",
+    "names": {
+      "EVO3": [ "png", "atlas", "skel" ]
+    }
+  },
+  "132": {
+    "code": "59type",
+    "names": {
+      "59type": [ "png", "atlas", "skel" ],
+      "59type_407": [ "png", "atlas", "skel" ]
+    }
+  },
+  "133": {
+    "code": "63type",
+    "names": {
+      "63type": [ "png", "atlas", "skel" ]
+    }
+  },
+  "134": {
+    "code": "AR70",
+    "names": {
+      "AR70": [ "png", "atlas", "skel" ]
+    }
+  },
+  "135": {
+    "code": "SR3MP",
+    "names": {
+      "SR3MP": [ "png", "atlas", "skel" ],
+      "SR3MP_807": [ "png", "atlas", "skel" ]
+    }
+  },
+  "136": {
+    "code": "PP19",
+    "names": {
+      "PP19": [ "png", "atlas", "skel" ]
+    }
+  },
+  "137": {
+    "code": "PP1901",
+    "names": {
+      "PP1901": [ "png", "atlas", "skel" ]
+    }
+  },
+  "138": {
+    "code": "6P62",
+    "names": {
+      "6P62": [ "png", "atlas", "skel" ],
+      "6P62_704": [ "png", "atlas", "skel" ]
+    }
+  },
+  "139": {
+    "code": "BrenTen",
+    "names": {
+      "BrenTen": [ "png", "atlas", "skel" ]
+    }
+  },
+  "140": {
+    "code": "PSM",
+    "names": {
+      "PSM": [ "png", "atlas", "skel" ]
+    }
+  },
+  "141": {
+    "code": "USPCompact",
+    "names": {
+      "USPCompact": [ "png", "atlas", "skel" ]
+    }
+  },
+  "142": {
+    "code": "FN57",
+    "names": {
+      "FN57": [ "png", "atlas", "skel" ],
+      "FN57_1109": [ "png", "atlas", "skel" ]
+    }
+  },
+  "143": {
+    "code": "RO635",
+    "names": {
+      "RO635": [ "png", "atlas", "skel" ]
+    }
+  },
+  "144": {
+    "code": "MT9",
+    "names": {
+      "MT9": [ "png", "atlas", "skel" ]
+    }
+  },
+  "145": {
+    "code": "OC44",
+    "names": {
+      "OC44": [ "png", "atlas", "skel" ],
+      "OC44_1608": [ "png", "atlas", "skel" ]
+    }
+  },
+  "146": {
+    "code": "G28",
+    "names": {
+      "G28": [ "png", "atlas", "skel" ],
+      "G28_1104": [ "png", "atlas", "skel" ]
+    }
+  },
+  "147": {
+    "code": "SSG69",
+    "names": {
+      "SSG69": [ "png", "atlas", "skel" ]
+    }
+  },
+  "148": {
+    "code": "IWS2000",
+    "names": {
+      "IWS2000": [ "png", "atlas", "skel" ],
+      "IWS2000_1403": [ "png", "atlas", "skel" ]
+    }
+  },
+  "149": {
+    "code": "AEK999",
+    "names": {
+      "AEK999": [ "png", "atlas", "skel" ],
+      "AEK999_1505": [ "png", "atlas", "skel" ]
+    }
+  },
+  "150": {
+    "code": "Shipka",
+    "names": {
+      "Shipka": [ "png", "atlas", "skel" ]
+    }
+  },
+  "151": {
+    "code": "M1887",
+    "names": {
+      "M1887": [ "png", "atlas", "skel" ]
+    }
+  },
+  "152": {
+    "code": "M1897",
+    "names": {
+      "M1897": [ "png", "atlas", "skel" ]
+    }
+  },
+  "153": {
+    "code": "Ithaca37",
+    "names": {
+      "Ithaca37": [ "png", "atlas", "skel" ],
+      "Ithaca37_1105": [ "png", "atlas", "skel" ]
+    }
+  },
+  "154": {
+    "code": "M500",
+    "names": {
+      "M500": [ "png", "atlas", "skel" ]
+    }
+  },
+  "155": {
+    "code": "M590",
+    "names": {
+      "M590": [ "png", "atlas", "skel" ]
+    }
+  },
+  "156": {
+    "code": "SuperShorty",
+    "names": {
+      "SuperShorty": [ "png", "atlas", "skel" ],
+      "SuperShorty_1704": [ "png", "atlas", "skel" ]
+    }
+  },
+  "157": {
+    "code": "KSG",
+    "names": {
+      "KSG": [ "png", "atlas", "skel" ]
+    }
+  },
+  "158": {
+    "code": "KS23",
+    "names": {
+      "KS23": [ "png", "atlas", "skel" ]
+    }
+  },
+  "159": {
+    "code": "RMB93",
+    "names": {
+      "RMB93": [ "png", "atlas", "skel" ],
+      "RMB93_1705": [ "png", "atlas", "skel" ]
+    }
+  },
+  "160": {
+    "code": "Saiga12",
+    "names": {
+      "Saiga12": [ "png", "atlas", "skel" ]
+    }
+  },
+  "161": {
+    "code": "97typeS",
+    "names": {
+      "97typeS": [ "png", "atlas", "skel" ]
+    }
+  },
+  "162": {
+    "code": "SPAS12",
+    "names": {
+      "SPAS12": [ "png", "atlas", "skel" ]
+    }
+  },
+  "166": {
+    "code": "CZ75",
+    "names": {
+      "CZ75": [ "png", "atlas", "skel" ],
+      "CZ75_1604": [ "png", "atlas", "skel" ]
+    }
+  },
+  "167": {
+    "code": "HK45",
+    "names": {
+      "HK45": [ "png", "atlas", "skel" ]
+    }
+  },
+  "168": {
+    "code": "Spitfire",
+    "names": {
+      "Spitfire": [ "png", "atlas", "skel" ],
+      "Spitfire_1405": [ "png", "atlas", "skel" ]
+    }
+  },
+  "169": {
+    "code": "ColtSCW",
+    "names": {
+      "ColtSCW": [ "png", "atlas", "skel" ]
+    }
+  },
+  "170": {
+    "code": "Ash127",
+    "names": {
+      "Ash127": [ "png", "atlas", "skel" ]
+    }
+  },
+  "171": {
+    "code": "Ribeyrolles",
+    "names": {
+      "Ribeyrolles": [ "png", "atlas", "skel" ]
+    }
+  },
+  "172": {
+    "code": "RFB",
+    "names": {
+      "RFB": [ "png", "atlas", "skel" ],
+      "RFB_1601": [ "png", "atlas", "skel" ]
+    }
+  },
+  "173": {
+    "code": "PKP",
+    "names": {
+      "PKP": [ "png", "atlas", "skel" ],
+      "PKP_1201": [ "png", "atlas", "skel" ],
+      "PKP_1503": [ "png", "atlas", "skel" ]
+    }
+  },
+  "174": {
+    "code": "81typeR",
+    "names": {
+      "81typeR": [ "png", "atlas", "skel" ]
+    }
+  },
+  "175": {
+    "code": "ART556",
+    "names": {
+      "ART556": [ "png", "atlas", "skel" ]
+    }
+  },
+  "176": {
+    "code": "TMP",
+    "names": {
+      "TMP": [ "png", "atlas", "skel" ]
+    }
+  },
+  "177": {
+    "code": "KLIN",
+    "names": {
+      "KLIN": [ "png", "atlas", "skel" ],
+      "KLIN_1204": [ "png", "atlas", "skel" ]
+    }
+  },
+  "178": {
+    "code": "F1",
+    "names": {
+      "F1": [ "png", "atlas", "skel" ]
+    }
+  },
+  "179": {
+    "code": "DSR50",
+    "names": {
+      "DSR50": [ "png", "atlas", "skel" ]
+    }
+  },
+  "180": {
+    "code": "PzB39",
+    "names": {
+      "PzB39": [ "png", "atlas", "skel" ],
+      "PzB39_1506": [ "png", "atlas", "skel" ]
+    }
+  },
+  "181": {
+    "code": "T91",
+    "names": {
+      "T91": [ "png", "atlas", "skel" ]
+    }
+  },
+  "182": {
+    "code": "wz29",
+    "names": {
+      "wz29": [ "png", "atlas", "skel" ]
+    }
+  },
+  "183": {
+    "code": "Contender",
+    "names": {
+      "Contender": [ "png", "atlas", "skel" ],
+      "Contender_1502": [ "png", "atlas", "skel" ]
+    }
+  },
+  "184": {
+    "code": "T5000",
+    "names": {
+      "T5000": [ "png", "atlas", "skel" ]
+    }
+  },
+  "185": {
+    "code": "Ameli",
+    "names": {
+      "Ameli": [ "png", "atlas", "skel" ],
+      "Ameli_1605": [ "png", "atlas", "skel" ]
+    }
+  },
+  "186": {
+    "code": "P226",
+    "names": {
+      "P226": [ "png", "atlas", "skel" ]
+    }
+  },
+  "187": {
+    "code": "Ak5",
+    "names": {
+      "Ak5": [ "png", "atlas", "skel" ]
+    }
+  },
+  "188": {
+    "code": "SAT8",
+    "names": {
+      "SAT8": [ "png", "atlas", "skel" ]
+    }
+  },
+  "189": {
+    "code": "USAS12",
+    "names": {
+      "USAS12": [ "png", "atlas", "skel" ]
+    }
+  },
+  "190": {
+    "code": "NS2000",
+    "names": {
+      "NS2000": [ "png", "atlas", "skel" ]
+    }
+  },
+  "191": {
+    "code": "M12",
+    "names": {
+      "M12": [ "png", "atlas", "skel" ]
+    }
+  },
+  "192": {
+    "code": "JS-127",
+    "names": {
+      "JS-127": [ "png", "atlas", "skel" ]
+    }
+  },
+  "193": {
+    "code": "T65",
+    "names": {
+      "T65": [ "png", "atlas", "skel" ]
+    }
+  },
+  "194": {
+    "code": "K2",
+    "names": {
+      "K2": [ "png", "atlas", "skel" ]
+    }
+  },
+  "195": {
+    "code": "HK23",
+    "names": {
+      "HK23": [ "png", "atlas", "skel" ]
+    }
+  },
+  "196": {
+    "code": "ZastavaM21",
+    "names": {
+      "ZastavaM21": [ "png", "atlas", "skel" ],
+      "ZastavaM21_1603": [ "png", "atlas", "skel" ]
+    }
+  },
+  "197": {
+    "code": "Carcano1891",
+    "names": {
+      "Carcano1891": [ "png", "atlas", "skel" ]
+    }
+  },
+  "198": {
+    "code": "Carcano1938",
+    "names": {
+      "Carcano1938": [ "png", "atlas", "skel" ]
+    }
+  },
+  "199": {
+    "code": "80type",
+    "names": {
+      "80type": [ "png", "atlas", "skel" ]
+    }
+  },
+  "200": {
+    "code": "xm3",
+    "names": {
+      "xm3": [ "png", "atlas", "skel" ]
+    }
+  },
+  "201": {
+    "code": "GepardM1",
+    "names": {
+      "GepardM1": [ "png", "atlas", "skel" ]
+    }
+  },
+  "205": {
+    "code": "AN94",
+    "names": {
+      "AN94": [ "png", "atlas", "skel" ],
+      "RAN94": [ "png", "atlas", "skel" ]
+    }
+  },
+  "206": {
+    "code": "AK12",
+    "names": {
+      "RAK12": [ "png", "atlas", "skel" ],
+      "AK12": [ "png", "atlas", "skel" ]
+    }
+  },
+  "1001": {
+    "code": "BB_Noel",
+    "names": {
+      "BB_Noel": [ "png", "atlas", "skel" ],
+      "BB_Noel_503": [ "png", "atlas", "skel" ]
+    }
+  },
+  "1002": {
+    "code": "GG_elfeldt",
+    "names": {
+      "GG_elfeldt": [ "png", "atlas", "skel" ],
+      "GG_elfeldt_504": [ "png", "atlas", "skel" ],
+      "GG_elfeldt_505": [ "png", "atlas", "skel" ]
+    }
+  },
+  "1003": {
+    "code": "Kiana",
+    "names": {
+      "Kiana": [ "png", "atlas", "skel" ],
+      "Kiana_506": [ "png", "atlas", "skel" ]
+    }
+  },
+  "1004": {
+    "code": "RaidenMei",
+    "names": {
+      "RaidenMei": [ "png", "atlas", "skel" ]
+    }
+  },
+  "1005": {
+    "code": "Bronya",
+    "names": {
+      "Bronya": [ "png", "atlas", "skel" ],
+      "Bronya_507": [ "png", "atlas", "skel" ]
+    }
+  },
+  "1006": {
+    "code": "Theresa",
+    "names": {
+      "Theresa": [ "png", "atlas", "skel" ]
+    }
+  },
+  "1007": {
+    "code": "Himeko",
+    "names": {
+      "Himeko": [ "png", "atlas", "skel" ]
+    }
+  },
+  "1008": {
+    "code": "Seele",
+    "names": {
+      "Seele": [ "png", "atlas", "skel" ],
+      "Seele_508": [ "png", "atlas", "skel" ]
+    }
+  }
+}

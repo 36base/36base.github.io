@@ -5,9 +5,10 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const projDir = path.resolve(__dirname, '..');
 
 module.exports = {
-  entry: {
-    app: path.resolve(projDir, 'src/index.jsx'),
-  },
+  entry: [
+    'babel-polyfill',
+    path.resolve(projDir, 'src/index.jsx'),
+  ],
 
   resolve: {
     modules: ['node_modules'],
@@ -17,6 +18,7 @@ module.exports = {
   devtool: 'inline-source-map',
   devServer: {
     contentBase: './',
+    compress: true,
     hot: true,
     historyApiFallback: true,
   },
