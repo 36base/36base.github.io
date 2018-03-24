@@ -63,6 +63,7 @@ class Menu extends React.Component {
     const { classes } = this.props;
     return (
       <ListItem
+        key={key}
         className={classes.nested}
         button
         onClick={() => this.routeTo(value.to)}
@@ -79,7 +80,7 @@ class Menu extends React.Component {
       <List component="nav" >
         {Object.keys(list).map(key => this.renderMenuItem(key, list[key]))}
         <Divider />
-        <ListItem button onClick={() => this.routeTo('/about')} >
+        <ListItem key="about" button onClick={() => this.routeTo('/about')} >
           <ListItemIcon>
             <Icon className="fa fa-lg fa-question-circle" />
           </ListItemIcon>

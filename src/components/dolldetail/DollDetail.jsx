@@ -160,7 +160,7 @@ class DollDetail extends React.Component {
               lv={skillLv}
               onChange={this.handleSkillLvChange}
             />)}
-            {this.wrap(<EffectBox {...info.effect} />)}
+            {this.wrap(<EffectBox {...info.effect} hasLevel={info.type.code === 'hg'} />)}
             {this.wrap(<AcquisitionInfoBox {...info.acquisition} />)}
           </Grid>
         </Grid>

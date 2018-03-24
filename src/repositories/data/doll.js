@@ -5,13 +5,13 @@ import dollSkills from './dollSkill';
 import dollSpines from './dollSpines';
 
 const domain = 'https://girlsfrontline.kr/hotlink-ok/girlsfrontline-resources/images';
-const typeMap = new Map(dollTypes.map(e => [e.id, e]));
+const typeMap = new Map(dollTypes.map(e => [e.code, e]));
 const rankMap = new Map(dollRanks.map(e => [e.id, e]));
 const skillMap = new Map(dollSkills.map((e, i) => [i, e]));
 const spineMap = new Map(Object.keys(dollSpines).map(k => [Number(k), dollSpines[k]]));
 
 function getTypeIcon(typeId, rankId) {
-  const type = typeMap.get(typeId).shortName;
+  const type = typeMap.get(typeId).code.toUpperCase();
 
   return `${domain}/typeicons/${type}${rankId}.png`;
 }

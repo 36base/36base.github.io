@@ -5,7 +5,7 @@ import dollRanks from './dollRank';
 const properties = [];
 dollTypes.forEach((e) => {
   const predicate = doll => doll.type === e;
-  properties.push([e.shortName, predicate]);
+  properties.push([e.code.toUpperCase(), predicate]);
   properties.push([e.krName, predicate]);
 });
 dollRanks.forEach((e) => {

@@ -1,17 +1,16 @@
-import { dolls } from 'girlsfrontline-core';
+import { dolls, skills } from 'girlsfrontline-core';
 import dollRanks from './data/dollRank';
 import dollTypes from './data/dollType';
-import dollSkills from './data/dollSkill';
 import dollSpines from './data/dollSpines';
 
-const domain = 'https://girlsfrontline.kr/hotlink-ok/girlsfrontline-resources/images/';
-const typeMap = new Map(dollTypes.map(e => [e.id, e]));
+const domain = 'https://girlsfrontline.kr/hotlink-ok/girlsfrontline-resources/images';
+const typeMap = new Map(dollTypes.map(e => [e.code, e]));
 const rankMap = new Map(dollRanks.map(e => [e.id, e]));
-const skillMap = new Map(dollSkills.map((e, i) => [i, e]));
+const skillMap = new Map(skills.map(e => [e.id, e]));
 const spineMap = new Map(Object.keys(dollSpines).map(k => [Number(k), dollSpines[k]]));
 
 function getTypeIcon(typeId, rankId) {
-  const type = typeMap.get(typeId).shortName;
+  const type = typeMap.get(typeId).code.toUpperCase();
 
   return `${domain}/typeicons/${type}${rankId}.png`;
 }
@@ -42,31 +41,22 @@ function buildImage(id, skins, spine) {
 }
 
 function buildSkill(skill) {
-  const base = skillMap.get(skill.id) || {};
-  const dataPool = new Map(base.data.map(e => [e.key, { ...e, values: skill.dataPool[e.key] }]));
+  const base = skillMap.get(skill.id);
 
   return {
     id: skill.id,
-    name: base.name,
-    template: base.desc,
-    icon: `${domain}/skill/${base.path}.png`,
-    dataPool,
+    name: skill.name || base.name,
+    path: `${domain}/skill/${skill.path || base.path}.png`,
+    desc: base.desc,
+    data: base.data,
+    dataPool: skill.dataPool,
+    nightDataPool: skill.nightDataPool,
   };
 }
 
 const dollList = dolls.map((doll) => {
   const rank = doll.id > 1000 ? 1 : doll.rank;
   const spine = spineMap.get(doll.id);
-
-  const skill = {
-    id: 6,
-    initCooldown: 6,
-    dataPool: {
-      PW: [12, 13, 14, 15, 16, 17, 18, 19, 20, 22],
-      DR: [5, 6, 6, 6, 7, 7, 7, 8, 8, 8],
-      CD: [15, 14.7, 14.3, 14, 13.7, 13.3, 13, 12.7, 12.3, 12],
-    },
-  };
 
   return {
     id: doll.id,
@@ -83,7 +73,7 @@ const dollList = dolls.map((doll) => {
     images: buildImage(doll.id, doll.skins, spine),
     stats: doll.stats,
     effect: doll.effect,
-    skill: buildSkill(skill),
+    skill: buildSkill(doll.skill),
     acquisition: {
       build: doll.buildTime,
       drop: doll.drop,

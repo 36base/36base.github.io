@@ -4,6 +4,7 @@ import { withStyles } from 'material-ui/styles';
 
 import InfoBox from '../../common/InfoBox';
 import Square from '../../common/Square';
+import SmallSelector from '../../common/SmallSelector';
 
 const style = theme => ({
   container: {
@@ -72,45 +73,88 @@ const typeMap = new Map([
   ['coolDown', '쿨타임 감소율'],
 ]);
 
-const EffectBox = (props) => {
-  const { classes } = props;
+const rateOptions = [
+  { value: 0.2, name: 1 },
+  { value: 0.4, name: 2 },
+  { value: 0.6, name: 3 },
+  { value: 0.8, name: 4 },
+  { value: 1, name: 5 },
+];
 
-  const grids = effectGridList.map((e) => {
-    let type = classes.default;
-    if (e[0] === props.effectCenter) {
-      type = classes.center;
-    } else if (props.effectPos.indexOf(e[0]) >= 0) {
-      type = classes.effected;
+class EffectBox extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      rate: 1,
+    };
+
+    this.onChangeRate = this.onChangeRate.bind(this);
+    this.renderSelector = this.renderSelector.bind(this);
+  }
+
+  onChangeRate(event) {
+    const { value } = event.target;
+    this.setState({
+      rate: value,
+    });
+  }
+
+  renderSelector() {
+    if (!this.props.hasLevel) {
+      return null;
     }
+
     return (
-      <div key={e[0]} className={[classes.grid, type].join(' ')} style={e[1]} />
+      <SmallSelector
+        label="편제확대"
+        values={rateOptions}
+        selected={this.state.rate}
+        onChange={this.onChangeRate}
+      />
     );
-  });
+  }
 
-  const target = targetMap.get(props.effectType);
-  const effects = Object.keys(props.gridEffect).map((key) => {
-    const type = typeMap.get(key);
-    const value = props.gridEffect[key];
+  render() {
+    const { classes } = this.props;
 
-    return `${type} 상승 ${value}%`;
-  }).join(', ');
+    const grids = effectGridList.map((e) => {
+      let type = classes.default;
+      if (e[0] === this.props.effectCenter) {
+        type = classes.center;
+      } else if (this.props.effectPos.indexOf(e[0]) >= 0) {
+        type = classes.effected;
+      }
+      return (
+        <div key={e[0]} className={[classes.grid, type].join(' ')} style={e[1]} />
+      );
+    });
 
-  return (
-    <InfoBox name="진형버프">
-      <Grid className={classes.container} container>
-        <Grid item xs={4}>
-          <div className={classes.wrapper}>
-            <Square>{grids}</Square>
-          </div>
+    const target = targetMap.get(this.props.effectType);
+    const effects = Object.keys(this.props.gridEffect).map((key) => {
+      const type = typeMap.get(key);
+      const value = this.props.gridEffect[key];
+
+      return `${type} 상승 ${this.props.hasLevel ? value * this.state.rate : value}%`;
+    }).join(', ');
+
+    return (
+      <InfoBox name="진형버프" selector={this.renderSelector()}>
+        <Grid className={classes.container} container>
+          <Grid item xs={4}>
+            <div className={classes.wrapper}>
+              <Square>{grids}</Square>
+            </div>
+          </Grid>
+          <Grid className={classes.alignBottom} item xs>
+            <Typography>
+              버프칸의 <span className={classes.yellow}>{target}</span>에게 {effects}
+            </Typography>
+          </Grid>
         </Grid>
-        <Grid className={classes.alignBottom} item xs>
-          <Typography>
-            버프칸의 <span className={classes.yellow}>{target}</span>에게 {effects}
-          </Typography>
-        </Grid>
-      </Grid>
-    </InfoBox>
-  );
-};
+      </InfoBox>
+    );
+  }
+}
 
 export default withStyles(style)(EffectBox);

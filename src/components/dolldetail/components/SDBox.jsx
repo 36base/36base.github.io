@@ -13,8 +13,10 @@ const style = theme => ({
   },
   sdView: {
     position: 'absolute',
-    width: '100%',
+    width: '300%',
     height: '100%',
+    left: '-100%',
+    zIndex: '1000',
   },
   listWrapper: {
     flexGrow: 1,
@@ -35,7 +37,7 @@ class SDBox extends React.Component {
       animationName: '',
       player: null,
       stage: new PIXI.Container(),
-      renderer: PIXI.autoDetectRenderer(props.width, props.height, { transparent: true }),
+      renderer: PIXI.autoDetectRenderer(props.width * 3, props.height, { transparent: true }),
     };
 
     this.setAnimation = this.setAnimation.bind(this);
@@ -93,7 +95,7 @@ class SDBox extends React.Component {
     const animations = player.spineData.animations.map(e => e.name);
     const scale = 1;
 
-    player.position.set(this.props.width / 2, this.props.height - ((player.height * scale) / 5));
+    player.position.set(this.props.width * 1.5, this.props.height - ((player.height * scale) / 5));
     player.scale.set(scale);
     player.animation_num = 0;
     player.state.setAnimationByName(0, animations[0], true);
