@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { Grid, Typography } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 
@@ -50,6 +49,4 @@ const StatusInfoBox = (props) => {
   );
 };
 
-const stateMapper = state => state.dolldetail.mounted.stats;
-
-export default connect(stateMapper)(withStyles(style)(StatusInfoBox));
+export default withStyles(style)(StatusInfoBox);

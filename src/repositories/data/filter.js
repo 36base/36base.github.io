@@ -1,11 +1,11 @@
-import dolls from '../repositories/doll';
-import dollTypes from '../repositories/dollType';
-import dollRanks from '../repositories/dollRank';
+import dolls from './doll';
+import dollTypes from './dollType';
+import dollRanks from './dollRank';
 
 const properties = [];
 dollTypes.forEach((e) => {
   const predicate = doll => doll.type === e;
-  properties.push([e.shortName, predicate]);
+  properties.push([e.code.toUpperCase(), predicate]);
   properties.push([e.krName, predicate]);
 });
 dollRanks.forEach((e) => {

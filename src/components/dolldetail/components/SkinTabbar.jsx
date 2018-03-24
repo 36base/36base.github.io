@@ -1,9 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { Grid, Button } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
-
-import { setImgNo } from '../../../actions/dolldetail';
 
 const style = theme => ({
   container: {
@@ -23,41 +20,40 @@ const style = theme => ({
   },
 });
 
-const SkinTabbar = (props) => {
-  const {
-    classes,
-    value,
-    values,
-    onBtnClick,
-  } = props;
+class SkinTabbar extends React.Component {
+  constructor(props) {
+    super(props);
 
-  const buttons = values.map((v, i) => (
-    <Button
-      key={v.name}
-      className={classes.button}
-      variant="raised"
-      color={value === i ? 'primary' : 'default'}
-      onClick={() => onBtnClick(i)}
-    >
-      {v.name}
-    </Button>
-  ));
+    this.renderButtons = this.renderButtons.bind(this);
+  }
 
-  return (
-    <Grid className={classes.container} item xs={10}>
-      <span className={classes.mixin} />
-      {buttons}
-    </Grid>
-  );
-};
+  renderButtons() {
+    const { classes, selected, skins } = this.props;
 
-const stateMapper = state => ({
-  value: state.dolldetail.imgNo,
-  values: state.dolldetail.mounted.images,
-});
+    return skins.map((v, i) => (
+      <Button
+        key={v.name}
+        className={classes.button}
+        variant="raised"
+        color={selected === i ? 'primary' : 'default'}
+        onClick={() => this.props.onChange(i)}
+      >
+        {v.name}
+      </Button>
+    ));
+  }
 
-const dispatchMapper = dispatch => ({
-  onBtnClick: id => dispatch(setImgNo(id)),
-});
+  render() {
+    const { classes } = this.props;
+    const buttons = this.renderButtons();
 
-export default connect(stateMapper, dispatchMapper)(withStyles(style)(SkinTabbar));
+    return (
+      <Grid className={classes.container} item xs={10}>
+        <span className={classes.mixin} />
+        {buttons}
+      </Grid>
+    );
+  }
+}
+
+export default withStyles(style)(SkinTabbar);

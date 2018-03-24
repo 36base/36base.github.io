@@ -1,9 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { FormControlLabel, Switch } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
-
-import { toggleImgType } from '../../../actions/dolldetail';
 
 const style = {
   container: {
@@ -26,12 +23,4 @@ const TypeSwitchBox = (props) => {
   );
 };
 
-const stateMapper = state => ({
-  on: state.dolldetail.imgDamaged,
-});
-
-const dispatchMapper = dispatch => ({
-  toggle: () => dispatch(toggleImgType()),
-});
-
-export default connect(stateMapper, dispatchMapper)(withStyles(style)(TypeSwitchBox));
+export default withStyles(style)(TypeSwitchBox);

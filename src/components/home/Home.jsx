@@ -1,8 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import './style.css';
 
-export default class Home extends React.Component {
+class Home extends React.Component {
   render() {
     return (
       <div className="body-content">
@@ -11,3 +12,7 @@ export default class Home extends React.Component {
     );
   }
 }
+
+const stateMapper = undefined;
+
+export default connect(stateMapper)(Home);

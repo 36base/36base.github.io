@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { Grid, Typography } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 
@@ -27,8 +26,4 @@ const Caption = (props) => {
   );
 };
 
-const stateMapper = state => ({
-  name: state.dolldetail.mounted.krName,
-});
-
-export default connect(stateMapper)(withStyles(style)(Caption));
+export default withStyles(style)(Caption);

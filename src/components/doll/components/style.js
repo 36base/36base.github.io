@@ -21,6 +21,8 @@ const style = {
     position: 'absolute',
     left: 0,
     top: 0,
+    width: 74,
+    height: 38,
   },
   rankbar: {
     height: 20,

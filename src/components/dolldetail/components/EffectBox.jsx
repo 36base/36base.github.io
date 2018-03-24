@@ -1,10 +1,10 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { Grid, Typography } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 
 import InfoBox from '../../common/InfoBox';
 import Square from '../../common/Square';
+import SmallSelector from '../../common/SmallSelector';
 
 const style = theme => ({
   container: {
@@ -15,8 +15,8 @@ const style = theme => ({
     width: '100%',
     maxWidth: 180,
     margin: '0 auto',
-    borderLeft: '1px solid grey',
-    borderTop: '1px solid grey',
+    borderLeft: '1px solid black',
+    borderTop: '1px solid black',
   },
   alignBottom: {
     display: 'flex',
@@ -30,17 +30,17 @@ const style = theme => ({
     position: 'absolute',
     width: '33.33%',
     height: '33.33%',
-    borderRight: '1px solid grey',
-    borderBottom: '1px solid grey',
+    borderRight: '1px solid black',
+    borderBottom: '1px solid black',
   },
   center: {
     backgroundColor: 'white',
   },
   effected: {
-    backgroundColor: '#80DEEA',
+    backgroundColor: '#18FFFF',
   },
   default: {
-    backgroundColor: '#EAEAEA',
+    backgroundColor: '#ABABAB',
   },
 });
 
@@ -73,47 +73,88 @@ const typeMap = new Map([
   ['coolDown', '쿨타임 감소율'],
 ]);
 
-const EffectBox = (props) => {
-  const { classes } = props;
+const rateOptions = [
+  { value: 1, name: 1 },
+  { value: 1.25, name: 2 },
+  { value: 1.5, name: 3 },
+  { value: 1.75, name: 4 },
+  { value: 2, name: 5 },
+];
 
-  const grids = effectGridList.map((e) => {
-    let type = classes.default;
-    if (e[0] === props.effectCenter) {
-      type = classes.center;
-    } else if (props.effectPos.indexOf(e[0]) >= 0) {
-      type = classes.effected;
+class EffectBox extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      rate: 2,
+    };
+
+    this.onChangeRate = this.onChangeRate.bind(this);
+    this.renderSelector = this.renderSelector.bind(this);
+  }
+
+  onChangeRate(event) {
+    const { value } = event.target;
+    this.setState({
+      rate: value,
+    });
+  }
+
+  renderSelector() {
+    if (!this.props.hasLevel) {
+      return null;
     }
+
     return (
-      <div key={e[0]} className={[classes.grid, type].join(' ')} style={e[1]} />
+      <SmallSelector
+        label="편제확대"
+        values={rateOptions}
+        selected={this.state.rate}
+        onChange={this.onChangeRate}
+      />
     );
-  });
+  }
 
-  const target = targetMap.get(props.effectType);
-  const effects = Object.keys(props.gridEffect).map((key) => {
-    const type = typeMap.get(key);
-    const value = props.gridEffect[key];
+  render() {
+    const { classes } = this.props;
 
-    return `${type} 상승 ${value}%`;
-  }).join(', ');
+    const grids = effectGridList.map((e) => {
+      let type = classes.default;
+      if (e[0] === this.props.effectCenter) {
+        type = classes.center;
+      } else if (this.props.effectPos.indexOf(e[0]) >= 0) {
+        type = classes.effected;
+      }
+      return (
+        <div key={e[0]} className={[classes.grid, type].join(' ')} style={e[1]} />
+      );
+    });
 
-  return (
-    <InfoBox name="진형버프">
-      <Grid className={classes.container} container>
-        <Grid item xs={4}>
-          <div className={classes.wrapper}>
-            <Square>{grids}</Square>
-          </div>
+    const target = targetMap.get(this.props.effectType);
+    const effects = Object.keys(this.props.gridEffect).map((key) => {
+      const type = typeMap.get(key);
+      const value = this.props.gridEffect[key];
+
+      return `${type} 상승 ${this.props.hasLevel ? value * this.state.rate : value}%`;
+    }).join(', ');
+
+    return (
+      <InfoBox name="진형버프" selector={this.renderSelector()}>
+        <Grid className={classes.container} container>
+          <Grid item xs={4}>
+            <div className={classes.wrapper}>
+              <Square>{grids}</Square>
+            </div>
+          </Grid>
+          <Grid className={classes.alignBottom} item xs>
+            <Typography>
+              버프칸의 <span className={classes.yellow}>{target}</span>에게 {effects}
+            </Typography>
+          </Grid>
         </Grid>
-        <Grid className={classes.alignBottom} item xs>
-          <Typography>
-            버프칸의 <span className={classes.yellow}>{target}</span>에게 {effects}
-          </Typography>
-        </Grid>
-      </Grid>
-    </InfoBox>
-  );
-};
+      </InfoBox>
+    );
+  }
+}
 
-const stateMapper = state => state.dolldetail.mounted.effect;
-
-export default connect(stateMapper)(withStyles(style)(EffectBox));
+export default withStyles(style)(EffectBox);
