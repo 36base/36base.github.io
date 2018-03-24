@@ -1251,8 +1251,8 @@
   "206": {
     "code": "AK12",
     "names": {
-      "RAK12": [ "png", "atlas", "skel" ],
-      "AK12": [ "png", "atlas", "skel" ]
+      "AK12": [ "png", "atlas", "skel" ],
+      "RAK12": [ "png", "atlas", "skel" ]
     }
   },
   "1001": {
