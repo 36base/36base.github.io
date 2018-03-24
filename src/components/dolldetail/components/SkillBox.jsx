@@ -50,35 +50,6 @@ class SkillBox extends React.Component {
     this.props.onChange(value);
   }
 
-<<<<<<< HEAD
-  const getData = key => dataPool.get(key).values[lv - 1];
-  const renderSide = (label, value) => (
-    <Typography align="right" variant="body1">
-      {label} <span className={classes.yellow}>{value}</span>
-    </Typography>
-  );
-  const description = buildDescription(props.template, dataPool, lv);
-  const selector = <SmallSelector label="레벨" values={lvValues} selected={lv} onChange={props.onChange} />;
-
-  return (
-    <InfoBox name="스킬" selector={selector}>
-      <Grid className={classes.container} container>
-        <Grid item xs={4}>
-          <div className={classes.iconWrapper}>
-            <Square><ImageBox src={props.icon} /></Square>
-          </div>
-        </Grid>
-        <Grid className={classes.alignMiddle} item xs={4}>
-          <Typography variant="display3">{props.name}</Typography>
-        </Grid>
-        <Grid className={classes.alignBottom} item xs={4}>
-          {props.initCooldown && renderSide('초기 쿨타임', `${props.initCooldown}초`)}
-          {dataPool.has('CD') && renderSide('쿨타임', `${getData('CD')}초`)}
-          {dataPool.has('DR') && renderSide('지속시간', `${getData('DR')}초`)}
-        </Grid>
-        <Grid item xs={12}>
-          <Typography>{description}</Typography>
-=======
   renderProperty(key, postfix) {
     const data = this.props.skill.data.find(e => e.key === key);
     if (!data) {
@@ -164,7 +135,6 @@ class SkillBox extends React.Component {
             {nightDuration}
           </Grid>
           {description}
->>>>>>> develop
         </Grid>
       </InfoBox>
     );
