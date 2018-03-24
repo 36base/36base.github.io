@@ -19,7 +19,6 @@ class DollCard extends React.Component {
 
     return (
       <Card className={[classes.root, 'undraggable'].join(' ')} component={props => <Link to={`/doll/${id}`} {...props} />}>
-        <div className={classes.background} />
         <div className={classes.rankbar}>
           <Star className={classes.star} count={rank.starCnt} />
         </div>

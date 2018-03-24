@@ -48,7 +48,7 @@
     "material-ui": "^1.0.0-beta.37",
     "material-ui-icons": "^1.0.0-beta.36",
     "normalize.css": "^8.0.0",
-    "pixi-spine": "^1.0.10",
+    "pixi-spine": "1.0.10",
     "pixi.js": "^4.7.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
