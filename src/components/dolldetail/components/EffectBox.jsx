@@ -74,11 +74,11 @@ const typeMap = new Map([
 ]);
 
 const rateOptions = [
-  { value: 0.2, name: 1 },
-  { value: 0.4, name: 2 },
-  { value: 0.6, name: 3 },
-  { value: 0.8, name: 4 },
-  { value: 1, name: 5 },
+  { value: 1, name: 1 },
+  { value: 1.25, name: 2 },
+  { value: 1.5, name: 3 },
+  { value: 1.75, name: 4 },
+  { value: 2, name: 5 },
 ];
 
 class EffectBox extends React.Component {
@@ -86,7 +86,7 @@ class EffectBox extends React.Component {
     super(props);
 
     this.state = {
-      rate: 1,
+      rate: 2,
     };
 
     this.onChangeRate = this.onChangeRate.bind(this);

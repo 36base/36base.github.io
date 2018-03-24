@@ -74,6 +74,7 @@ const dollList = dolls.map((doll) => {
     stats: doll.stats,
     effect: doll.effect,
     skill: buildSkill(doll.skill),
+    getSkill: doll.getSkill,
     acquisition: {
       build: doll.buildTime,
       drop: doll.drop,

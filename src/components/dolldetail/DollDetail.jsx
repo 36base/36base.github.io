@@ -156,7 +156,13 @@ class DollDetail extends React.Component {
             {this.wrap(<StatusInfoBox {...info.stats} />)}
             {this.wrap(<SDBox width={250} height={250} skeleton={skeleton} />)}
             {this.wrap(<SkillBox
-              {...info.skill}
+              hasNight={!(info.skill.nightDataPool === undefined)}
+              skill={info.getSkill({ level: skillLv, night: false })}
+              nightSkill={
+                info.skill.nightDataPool
+                  ? info.getSkill({ level: skillLv, night: true })
+                  : undefined
+              }
               lv={skillLv}
               onChange={this.handleSkillLvChange}
             />)}

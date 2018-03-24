@@ -39,14 +39,10 @@ class SkillBox extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      dataMap: new Map(props.data.map(e => [e.key, e])),
-    };
-
-    this.isSeparated = this.isSeparated.bind(this);
     this.onChange = this.onChange.bind(this);
-    this.getDescription = this.getDescription.bind(this);
-    this.renderCommonProperty = this.renderCommonProperty.bind(this);
+    this.renderProperty = this.renderProperty.bind(this);
+    this.renderNightProperty = this.renderNightProperty.bind(this);
+    this.renderDescription = this.renderDescription.bind(this);
   }
 
   onChange(event) {
@@ -54,54 +50,42 @@ class SkillBox extends React.Component {
     this.props.onChange(value);
   }
 
-  getDescription(dataPool) {
-    const { desc, lv } = this.props;
-
-    return Object.keys(dataPool).reduce((_desc, key) => _desc.replace(`{${key}}`, dataPool[key][lv - 1]), desc);
-  }
-
-  isSeparated() {
-    return (this.props.nightDataPool !== undefined);
-  }
-
-  renderCommonProperty(key, postfix) {
-    const { classes } = this.props;
-    const data = this.props.dataPool[key];
-
-    if (data === undefined) {
+  renderProperty(key, postfix) {
+    const data = this.props.skill.data.find(e => e.key === key);
+    if (!data) {
       return null;
     }
 
-    const label = this.state.dataMap.get(key).label || '';
-    const value = Number.isInteger(data) ? data : data[this.props.lv - 1];
+    const { label } = data;
+    const value = this.props.hasNight
+      ? this.props.nightSkill.dataPool[key]
+      : this.props.skill.dataPool[key];
 
     return (
       <Typography align="right" variant="body1">
-        {label} <span className={classes.yellow}>{value + postfix}</span>
+        {label} <span className={this.props.classes.yellow}>{value + postfix}</span>
       </Typography>
     );
   }
 
   renderNightProperty(key, postfix) {
-    const { classes, nightDataPool } = this.props;
-    if (!(nightDataPool && nightDataPool[key])) {
+    if (!this.props.hasNight) {
       return null;
     }
-    const data = nightDataPool[key];
 
-    const label = `${this.state.dataMap.get(key).label || ''}(야간)`;
-    const value = Number.isInteger(data) ? data : data[this.props.lv - 1];
+    const { label } = this.props.nightSkill.data.find(e => e.key === key);
+    const value = this.props.nightSkill.dataPool[key];
 
     return (
       <Typography align="right" variant="body1">
-        {label} <span className={classes.yellow}>{value + postfix}</span>
+        {`${label}(야간)`} <span className={this.props.classes.yellow}>{value + postfix}</span>
       </Typography>
     );
   }
 
-  renderDiscription() {
+  renderDescription() {
     const { classes } = this.props;
-    if (this.isSeparated()) {
+    if (this.props.hasNight) {
       return [
         <Grid className={classes.alignMiddle} align="center" key="day" item xs={6}>
           <Typography>주간</Typography>
@@ -110,47 +94,45 @@ class SkillBox extends React.Component {
           <Typography>야간</Typography>
         </Grid>,
         <Grid key="desc_day" item xs={6}>
-          <Typography>
-            {this.getDescription(this.props.dataPool)}
-          </Typography>
+          <Typography>{this.props.skill.desc}</Typography>
         </Grid>,
         <Grid key="desc_night" item xs={6}>
-          <Typography>
-            {this.getDescription(this.props.nightDataPool)}
-          </Typography>
+          <Typography>{this.props.nightSkill.desc}</Typography>
         </Grid>,
       ];
     }
 
     return (
-      <Grid item xs={12}>
-        <Typography>{this.getDescription(this.props.dataPool)}</Typography>
-      </Grid>
+      <Grid item xs={12}><Typography>{this.props.skill.desc}</Typography></Grid>
     );
   }
 
   render() {
     const { classes, lv } = this.props;
 
-    const description = this.renderDiscription();
     const selector = <SmallSelector label="레벨" values={lvValues} selected={lv} onChange={this.onChange} />;
+    const initCooldown = this.renderProperty('IC', '초');
+    const cooldown = this.renderProperty('CD', '초');
+    const duration = this.renderProperty('DR', '초');
+    const nightDuration = this.renderNightProperty('DR', '초');
+    const description = this.renderDescription();
 
     return (
       <InfoBox name="스킬" selector={selector}>
         <Grid className={classes.container} container>
           <Grid item xs={4}>
             <div className={classes.iconWrapper}>
-              <Square><ImageBox src={this.props.path} /></Square>
+              <Square><ImageBox src={this.props.skill.path} /></Square>
             </div>
           </Grid>
           <Grid className={classes.alignMiddle} item xs={4}>
-            <Typography variant="display3">{this.props.name}</Typography>
+            <Typography variant="display3">{this.props.skill.name}</Typography>
           </Grid>
           <Grid className={classes.alignBottom} item xs={4}>
-            {this.renderCommonProperty('IC', '초')}
-            {this.renderCommonProperty('CD', '초')}
-            {this.renderCommonProperty('DR', '초')}
-            {this.renderNightProperty('DR', '초')}
+            {initCooldown}
+            {cooldown}
+            {duration}
+            {nightDuration}
           </Grid>
           {description}
         </Grid>
