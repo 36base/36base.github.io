@@ -137,7 +137,7 @@ class DollDetail extends React.Component {
 
     return (
       <div className={classes.wrapper}>
-        <Background mainColor="#505694" secondColor="#8C94BF" />
+        <Background color={info.color || '#505694'} />
         <div className={classes.header}>
           <Grid container>
             <Caption name={info.krName} />
