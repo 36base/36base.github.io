@@ -1,4 +1,5 @@
 import React from 'react';
+import { Hidden } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 
 const style = {
@@ -18,6 +19,8 @@ export default withStyles(style)((props) => {
   const second = `linear-gradient(135deg, ${secondColor} 20%, transparent 20%)`;
 
   return (
-    <div className={classes.background} style={{ background: [main, second].join(',') }} />
+    <Hidden smDown>
+      <div className={classes.background} style={{ background: [main, second].join(',') }} />
+    </Hidden>
   );
 });

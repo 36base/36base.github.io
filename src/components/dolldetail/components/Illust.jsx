@@ -2,21 +2,26 @@ import React from 'react';
 import { withStyles } from 'material-ui/styles';
 
 import ImageBox from '../../common/ImageBox';
+import Square from '../../common/Square';
 
-const style = {
+const style = theme => ({
   container: {
     position: 'relative',
-    flexGrow: 1,
+    width: '100%',
+    top: '50%',
     zIndex: 200,
+    [theme.breakpoints.up('md')]: {
+      transform: 'translateY(-50%)',
+    },
   },
-};
+});
 
 const Illust = (props) => {
   const { classes, src } = props;
 
   return (
     <div className={classes.container}>
-      <ImageBox src={src} />
+      <Square><ImageBox src={src} /></Square>
     </div>
   );
 };

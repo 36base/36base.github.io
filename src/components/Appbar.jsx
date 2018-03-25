@@ -12,7 +12,7 @@ const style = theme => ({
     zIndex: theme.zIndex.drawer + 1,
   },
   navIconHide: {
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('lg')]: {
       display: 'none',
     },
   },

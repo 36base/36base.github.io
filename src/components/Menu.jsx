@@ -8,9 +8,10 @@ import { toggleMobile, expand } from '../actions/menu';
 
 const style = theme => ({
   drawerPaper: {
-    width: 240,
-    [theme.breakpoints.up('md')]: {
+    width: '70%',
+    [theme.breakpoints.up('lg')]: {
       position: 'relative',
+      width: theme.breakpoints.values.lg - theme.breakpoints.values.md,
     },
   },
   nested: {
@@ -90,7 +91,7 @@ class Menu extends React.Component {
     );
 
     return [
-      <Hidden key="mobile" mdUp>
+      <Hidden key="mobile" lgUp>
         <Drawer
           variant="temporary"
           anchor="left"
@@ -102,7 +103,7 @@ class Menu extends React.Component {
           {items}
         </Drawer>
       </Hidden>,
-      <Hidden key="pc" smDown implementation="css">
+      <Hidden key="pc" mdDown implementation="css">
         <Drawer variant="permanent" open classes={{ paper: classes.drawerPaper }} >
           <div className={classes.mixin} />
           {items}
