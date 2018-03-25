@@ -27,7 +27,7 @@ function rgb2hsl(rgb) {
   const min = Math.min(r, g, b);
   let h = (max + min) / 2;
   let s = h;
-  let l = h;
+  const l = h;
 
   if (max === min) {
     h = 0;

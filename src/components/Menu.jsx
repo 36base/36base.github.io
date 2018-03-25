@@ -14,8 +14,8 @@ const style = theme => ({
       width: theme.breakpoints.values.lg - theme.breakpoints.values.md,
     },
   },
-  nested: {
-    paddingLeft: theme.spacing.unit * 2,
+  collapse: {
+    paddingLeft: theme.spacing.unit * 3,
   },
   mixin: theme.mixins.toolbar,
 });
@@ -47,7 +47,7 @@ class Menu extends React.Component {
 
     if (value.opened) {
       items.push((
-        <Collapse key={`${key}_collapse`} in={value.opened} timeout="auto">
+        <Collapse className={this.props.classes.collapse} key={`${key}_collapse`} in={value.opened} timeout="auto">
           <List component="div" disablePadding>
             {
               Object.keys(value.children)
@@ -61,15 +61,13 @@ class Menu extends React.Component {
   }
 
   renderCollapse(key, value) {
-    const { classes } = this.props;
     return (
       <ListItem
         key={key}
-        className={classes.nested}
         button
         onClick={() => this.routeTo(value.to)}
       >
-        <ListItemIcon><Icon /></ListItemIcon>
+        <ListItemIcon><Icon className={value.icon ? `fas ${value.icon}` : ''} /></ListItemIcon>
         <ListItemText primary={value.name} />
       </ListItem>
     );

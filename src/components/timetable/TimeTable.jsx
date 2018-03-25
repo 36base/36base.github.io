@@ -3,12 +3,54 @@ import { Link } from 'react-router-dom';
 import { Grid, Typography } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 
+import Star from '../common/Star';
+import ImageBox from '../common/ImageBox';
+import HorizonLine from '../common/HorizonLine';
 import DollRepository from '../../repositories/DollRepository';
 
 const style = theme => ({
   container: {
-    width: '100%',
-    maxWidth: 512,
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: '90%',
+      margin: '0 auto',
+    },
+    [theme.breakpoints.up('md')]: {
+      border: `1px solid ${theme.palette.primary.dark}`,
+      width: '100%',
+      maxWidth: 512,
+      marginLeft: theme.spacing.unit * 10,
+      marginTop: theme.spacing.unit * 5,
+    },
+  },
+  timeCell: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    borderRight: '1px solid black',
+  },
+  noPadding: {
+    padding: 0,
+  },
+  link: {
+    display: 'block',
+    color: 'inherit',
+    fontSize: 16,
+    textDecoration: 'none',
+    padding: '4px 0 2px 8px',
+  },
+  typeIconWrapper: {
+    display: 'inline-block',
+    position: 'relative',
+    background: 'linear-gradient(140deg, black 90%, transparent 90%)',
+    width: 64,
+    height: 32,
+  },
+  typeIcon: {
+    width: theme.spacing.unit * 8,
+  },
+  star: {
+    color: '#FFB600',
+    fontStyle: 'none',
   },
 });
 
@@ -58,18 +100,25 @@ class TimeTable extends React.Component {
   }
 
   renderRow(key) {
+    const { classes } = this.props;
     const values = this.state.map.get(key);
     if (!values) {
       return null;
     }
 
     return [
-      <Grid item xs={2} align="center">
-        <Typography>{timeToStr(key)}</Typography>
+      <Grid className={classes.timeCell} item xs={2} align="center">
+        <Typography variant="display2">{timeToStr(key)}</Typography>
       </Grid>,
-      <Grid item xs={10}>
+      <Grid className={classes.noPadding} item xs={10}>
         {
-          values.map(e => <Link to={`/doll/${e.id}`}><Typography>{e.krName}</Typography></Link>)
+          values.map(e => (
+            <Link className={classes.link} to={`/doll/${e.id}`}>
+              <span className={classes.typeIconWrapper}><ImageBox src={e.icon} /></span>
+              <Star className={classes.star} count={e.rank.starCnt} />
+              {e.krName}
+            </Link>
+          )).reduce((acc, e) => (acc ? [...acc, <HorizonLine />, e] : [e]), null)
         }
       </Grid>,
     ];
@@ -77,7 +126,9 @@ class TimeTable extends React.Component {
 
   render() {
     const { classes } = this.props;
-    const rows = this.state.keys.map(this.renderRow);
+    const rows = this.state.keys
+      .map(this.renderRow)
+      .reduce((acc, e) => (acc ? [...acc, <HorizonLine />, e] : [e]), null);
 
     return (
       <Grid className={classes.container} container spacing={8}>
