@@ -28,6 +28,7 @@ const animationMap = {
   move: '이동',
   attack: '공격',
   s: '스킬',
+  reload: '재장전',
   die: '사망',
   victory: '승리',
 };
