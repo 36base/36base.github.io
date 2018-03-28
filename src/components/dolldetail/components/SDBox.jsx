@@ -23,6 +23,15 @@ const style = theme => ({
   },
 });
 
+const animationMap = {
+  wait: '대기',
+  move: '이동',
+  attack: '공격',
+  s: '스킬',
+  die: '사망',
+  victory: '승리',
+};
+
 const VIEW_ID = 'dolldetail-sd-view';
 
 class SDBox extends React.Component {
@@ -31,13 +40,14 @@ class SDBox extends React.Component {
 
     this.state = {
       time: 0,
-      lastTime: 0,
       isUpdate: true,
       animations: [],
       animationName: '',
       player: null,
       stage: new PIXI.Container(),
       renderer: PIXI.autoDetectRenderer(props.width * 3, props.height, { transparent: true }),
+
+      hasVictoryLoop: true,
     };
 
     this.setAnimation = this.setAnimation.bind(this);
@@ -48,7 +58,6 @@ class SDBox extends React.Component {
 
   componentDidMount() {
     document.getElementById(VIEW_ID).appendChild(this.state.renderer.view);
-    window.requestAnimationFrame(t => this.tick(t));
 
     if (this.props.seleton) {
       this.setSpine(this.props.skeleton);
@@ -80,25 +89,30 @@ class SDBox extends React.Component {
 
   setAnimation(name) {
     const { player } = this.state;
-    if (player && player.spineData && player.spineData.animations) {
+    if (player) {
+      player.state.clearTrack();
       player.state.setAnimationByName(0, name, true);
       player.update(0);
 
       this.setState({
         animationName: name,
+        isUpdate: true,
       });
     }
   }
 
   setSpine(skeleton) {
     const player = new spine.Spine(skeleton);
-    const animations = player.spineData.animations.map(e => e.name);
+    const spineAnimations = player.spineData.animations.map(e => e.name);
+    const animations = Object.keys(animationMap)
+      .filter(key => spineAnimations.indexOf(key) >= 0)
+      .map(key => ({ value: key, name: animationMap[key] }));
     const scale = 1;
 
     player.position.set(this.props.width * 1.5, this.props.height - ((player.height * scale) / 5));
     player.scale.set(scale);
     player.animation_num = 0;
-    player.state.setAnimationByName(0, animations[0], true);
+    player.state.setAnimationByName(0, animations[0].value, true);
     player.skeleton.setToSetupPose();
     player.autoUpdate = false;
     player.update(0);
@@ -107,26 +121,45 @@ class SDBox extends React.Component {
     this.setState({
       player,
       animations,
-      animationName: animations[0],
+      animationName: animations[0].value,
+
+      hasVictoryLoop: spineAnimations.indexOf('victoryloop') >= 0,
     });
 
+    window.requestAnimationFrame(t => this.tick(t));
     this.state.stage.addChild(player);
     this.state.renderer.render(this.state.stage);
   }
 
   tick(time) {
     window.requestAnimationFrame(t => this.tick(t));
-    this.setState({
-      time,
-      lastTime: this.state.time,
-    });
+    const d = (time - this.state.time) / 1000;
+    this.setState({ time });
 
-    const d = this.state.time - this.state.lastTime;
+    const { player } = this.state;
 
-    if (this.state.isUpdate) {
-      const { player } = this.state;
-      if (player && player.update && player.isupdate) {
-        player.update(d / 1000);
+    if (this.state.isUpdate && player) {
+      const track = player.state.tracks[0];
+
+      if (track.time <= track.endTime && track.time + d > track.endTime) {
+        switch (this.state.animationName) {
+          case 'die':
+            this.setState({ isUpdate: false });
+            break;
+          case 'victory':
+            if (this.state.hasVictoryLoop) {
+              player.state.clearTrack();
+              player.state.setAnimationByName(0, 'victoryloop', true);
+              player.update(0);
+            } else {
+              player.update(d);
+            }
+            break;
+          default:
+            player.update(d);
+        }
+      } else {
+        player.update(d);
       }
     }
 
@@ -149,7 +182,7 @@ class SDBox extends React.Component {
       selector = (
         <SmallSelector
           label=""
-          values={animations.map(e => ({ value: e, name: e }))}
+          values={animations}
           selected={animationName}
           onChange={e => this.setAnimation(e.target.value)}
         />
