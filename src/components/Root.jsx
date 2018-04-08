@@ -1,4 +1,5 @@
 import React from 'react';
+import { hot } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { createStore, applyMiddleware } from 'redux';
@@ -27,4 +28,4 @@ class Root extends React.Component {
   }
 }
 
-export default Root;
+export default hot(module)(Root);
