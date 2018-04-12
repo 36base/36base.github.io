@@ -50,6 +50,6 @@ module.exports = {
 
   plugins: [
     new UglifyPlugin(),
-    new ExtractTextPlugin('css/style.css'),
+    new ExtractTextPlugin('css/style.js'),
   ],
 };

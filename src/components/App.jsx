@@ -10,11 +10,12 @@ import Menu from './Menu';
 import Home from './home/Home';
 import DollDict from './doll/DollDict';
 import DollDetail from './dolldetail/DollDetail';
-import FairyDict from './fairy/FairyDict';
 import EquipDict from './equipment/EquipDict';
 import Calculator from './calculator/Calculator';
 import SdSimulator from './sdsim/SdSimulator';
 import About from './about/About';
+import FairyDict from './fairy/FairyDict';
+import FairyDetail from './fairydetail/FairyDetail';
 
 import { resize } from '../actions/common';
 import './App.css';
@@ -73,11 +74,12 @@ class App extends React.Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/doll" component={DollDict} />
             <Route path="/doll/:id" component={DollDetail} />
-            <Route path="/fairy" component={FairyDict} />
             <Route path="/equip" component={EquipDict} />
             <Route path="/calculator" component={Calculator} />
             <Route path="/sdsim" component={SdSimulator} />
             <Route path="/about" component={About} />
+            <Route exact path="/fairy" component={FairyDict} />
+            <Route path="/fairy/:id" component={FairyDetail} />
           </div>
         </main>
       </div>
