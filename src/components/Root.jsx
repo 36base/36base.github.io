@@ -1,21 +1,26 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import ReduxThunk from 'redux-thunk';
+import { MuiThemeProvider } from 'material-ui/styles';
 
 import 'normalize.css';
+import theme from './theme';
 
 import reducer from '../reducer';
 import App from './App';
 
-const store = createStore(reducer);
+const store = createStore(reducer, applyMiddleware(ReduxThunk));
 
 class Root extends React.Component {
   render() {
     return (
       <Provider store={store}>
         <BrowserRouter>
-          <App />
+          <MuiThemeProvider theme={theme}>
+            <App />
+          </MuiThemeProvider>
         </BrowserRouter>
       </Provider>
     );

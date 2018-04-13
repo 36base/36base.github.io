@@ -5,9 +5,10 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const projDir = path.resolve(__dirname, '..');
 
 module.exports = {
-  entry: {
-    app: path.resolve(projDir, 'src/index.jsx'),
-  },
+  entry: [
+    'babel-polyfill',
+    path.resolve(projDir, 'src/index.jsx'),
+  ],
 
   resolve: {
     modules: [path.resolve(projDir, 'src'), 'node_modules'],
@@ -39,7 +40,7 @@ module.exports = {
         use: {
           loader: 'file-loader',
           options: {
-            publicPath: 'http://girlsfrontline.kr/assets',
+            publicPath: 'https://girlsfrontline.kr/assets',
             name: 'img/[hash].[ext]',
           },
         },
@@ -49,6 +50,6 @@ module.exports = {
 
   plugins: [
     new UglifyPlugin(),
-    new ExtractTextPlugin('css/style.css'),
+    new ExtractTextPlugin('css/style.js'),
   ],
 };
