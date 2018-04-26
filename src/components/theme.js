@@ -1,6 +1,18 @@
 import { createMuiTheme } from 'material-ui/styles';
 
 const theme = createMuiTheme({
+  breakpoints: {
+    // xs ~ md : 모바일 화면
+    // md ~ lg : pc화면(메뉴 토글처리)
+    // lg ~ xl : pc화면(메뉴 고정처리)
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 1240,
+      lg: 1560,
+      xl: 1980,
+    },
+  },
   palette: {
     primary: {
       light: '#62727B',

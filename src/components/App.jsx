@@ -12,6 +12,7 @@ import DollDict from './doll/DollDict';
 import DollDetail from './dolldetail/DollDetail';
 import EquipDict from './equipment/EquipDict';
 import Calculator from './calculator/Calculator';
+import TimeTable from './timetable/TimeTable';
 import SdSimulator from './sdsim/SdSimulator';
 import About from './about/About';
 import FairyDict from './fairy/FairyDict';
@@ -74,7 +75,9 @@ class App extends React.Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/doll" component={DollDict} />
             <Route path="/doll/:id" component={DollDetail} />
+            <Route path="/fairy" component={FairyDict} />
             <Route path="/equip" component={EquipDict} />
+            <Route path="/timetable" component={TimeTable} />
             <Route path="/calculator" component={Calculator} />
             <Route path="/sdsim" component={SdSimulator} />
             <Route path="/about" component={About} />

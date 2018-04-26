@@ -8,12 +8,6 @@ const style = {
     height: 300,
     margin: 10,
     textDecoration: 'none',
-  },
-
-  background: {
-    position: 'absolute',
-    width: '100%',
-    height: '100%',
     backgroundImage: `url(${cardbg})`,
     backgroundSize: '100%',
   },
@@ -35,6 +29,10 @@ const style = {
     height: 212,
     backgroundSize: 340,
     overflow: 'hidden',
+    zIndex: 1000,
+    '&:hover': {
+      backgroundPosition: '-100% 0',
+    },
   },
   caption: {
     position: 'absolute',

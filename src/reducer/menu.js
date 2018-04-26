@@ -8,9 +8,9 @@ const initialState = {
       icon: 'fa-book',
       opened: false,
       children: {
-        doll: { name: '전술인형 도감', icon: 'fa-angle-right', to: '/doll' },
-        eqip: { name: '인형장비 도감', icon: 'fa-angle-right', to: '/equip' },
-        fairy: { name: '전술요정 도감', icon: 'fa-angle-right', to: '/fairy' },
+        doll: { name: '전술인형 도감', icon: 'fa-address-book', to: '/doll' },
+        eqip: { name: '인형장비 도감', icon: 'fa-cogs', to: '/equip' },
+        fairy: { name: '전술요정 도감', to: '/fairy' },
       },
     },
     util: {
@@ -18,8 +18,9 @@ const initialState = {
       icon: 'fa-archive',
       opened: false,
       children: {
-        calculator: { name: '작전보고서 계산기', icon: 'fa-angle-right', to: '/calculator' },
-        sdsim: { name: 'SD 시뮬레이터', icon: 'fa-angle-right', to: '/sdsim' },
+        timetable: { name: '제조 시간표', icon: 'fa-clock', to: '/timetable' },
+        calculator: { name: '작전보고서 계산기', icon: 'fa-calculator', to: '/calculator' },
+        sdsim: { name: 'SD 시뮬레이터', to: '/sdsim' },
       },
     },
   },

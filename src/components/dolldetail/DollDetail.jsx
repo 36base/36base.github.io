@@ -22,41 +22,46 @@ import SpineRepository from '../../repositories/SpineRepository';
 
 const style = theme => ({
   wrapper: {
-    display: 'flex',
     position: 'relative',
     width: '100%',
     height: '100%',
-    flexDirection: 'column',
-    alignItems: 'stretch',
   },
   header: {
     paddingTop: '2%',
+    height: '13%',
     paddingRight: 25,
   },
-  headerDivider: {
-    width: '100%',
-    height: 3,
-    backgroundColor: theme.palette.primary.dark,
+  img: {
+    verticalAlign: 'top',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+      margin: '0 auto',
+    },
+    [theme.breakpoints.up('md')]: {
+      display: 'inline-block',
+      width: '70vh',
+      height: `calc(100vh - 15% - ${theme.mixins.toolbar.minHeight}px)`,
+    },
   },
-  content: {
-    display: 'flex',
-    flexGrow: 1,
-    flexDirection: 'row',
-    alignItems: 'stretch',
-    margin: 0,
-    width: '100%',
-  },
-  left: {
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  right: {
-    overflow: 'auto',
+  info: {
+    [theme.breakpoints.up('md')]: {
+      display: 'inline-block',
+      width: 'calc(100% - 70vh)',
+      height: '85%',
+      overflow: 'auto',
+    },
   },
   boxWrapper: {
     minWidth: 200,
-    maxWidth: 400,
     marginBottom: 36,
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: '90%',
+      margin: '0 auto',
+      marginBottom: 36,
+    },
+    [theme.breakpoints.up('md')]: {
+      maxWidth: 400,
+    },
   },
 });
 
@@ -132,7 +137,7 @@ class DollDetail extends React.Component {
 
     return (
       <div className={classes.wrapper}>
-        <Background mainColor="#505694" secondColor="#8C94BF" />
+        <Background color={info.color || '#505694'} />
         <div className={classes.header}>
           <Grid container>
             <Caption name={info.krName} />
@@ -142,34 +147,32 @@ class DollDetail extends React.Component {
             <StarBox count={info.rank.starCnt} />
           </Grid>
         </div>
-        <Grid className={classes.content} container >
-          <Grid className={classes.left} item xs={6}>
-            <TypeSwitchBox on={skinType === 'damaged'} toggle={this.toggleSkinType} />
-            <Illust src={info.images[skinNo][skinType]} />
-          </Grid>
-          <Grid className={classes.right} item xs={6}>
-            {this.wrap(<BasicInfoBox
-              armType={info.type.enName}
-              illust={info.illust}
-              voice={info.voice}
-            />)}
-            {this.wrap(<StatusInfoBox {...info.stats} />)}
-            {this.wrap(<SDBox width={250} height={250} skeleton={skeleton} />)}
-            {this.wrap(<SkillBox
-              hasNight={!(info.skill.nightDataPool === undefined)}
-              skill={info.getSkill({ level: skillLv, night: false })}
-              nightSkill={
-                info.skill.nightDataPool
-                  ? info.getSkill({ level: skillLv, night: true })
-                  : undefined
-              }
-              lv={skillLv}
-              onChange={this.handleSkillLvChange}
-            />)}
-            {this.wrap(<EffectBox {...info.effect} hasLevel={info.type.code === 'hg'} />)}
-            {this.wrap(<AcquisitionInfoBox {...info.acquisition} />)}
-          </Grid>
-        </Grid>
+        <div className={classes.img}>
+          <TypeSwitchBox on={skinType === 'damaged'} toggle={this.toggleSkinType} />
+          <Illust src={info.images[skinNo][skinType]} />
+        </div>
+        <div className={classes.info}>
+          {this.wrap(<BasicInfoBox
+            armType={info.type.enName}
+            illust={info.illust}
+            voice={info.voice}
+          />)}
+          {this.wrap(<StatusInfoBox {...info.stats} />)}
+          {this.wrap(<SDBox width={250} height={250} skeleton={skeleton} />)}
+          {this.wrap(<SkillBox
+            hasNight={!(info.skill.nightDataPool === undefined)}
+            skill={info.getSkill({ level: skillLv, night: false })}
+            nightSkill={
+              info.skill.nightDataPool
+                ? info.getSkill({ level: skillLv, night: true })
+                : undefined
+            }
+            lv={skillLv}
+            onChange={this.handleSkillLvChange}
+          />)}
+          {this.wrap(<EffectBox {...info.effect} hasLevel={info.type.code === 'hg'} />)}
+          {this.wrap(<AcquisitionInfoBox {...info.acquisition} />)}
+        </div>
       </div>
     );
   }

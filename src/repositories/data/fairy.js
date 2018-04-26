@@ -1,4 +1,4 @@
-import { fairy, skills } from 'girlsfrontline-core';
+import { fairy } from 'girlsfrontline-core';
 
 const domain = 'https://girlsfrontline.kr/hotlink-ok/girlsfrontline-resources/images';
 
@@ -12,21 +12,6 @@ function buildImage(name) {
   return `${domain}/fairy/${fname}.png`;
 }
 
-const skillMap = new Map(skills.map(e => [e.id, e]));
-
-function buildSkill(skill) {
-  const base = skillMap.get(skill.id);
-
-  // TODO::path 추가 필요 (04-05)
-  return {
-    id: skill.id,
-    name: base.name,
-    desc: base.desc,
-    data: base.data,
-    dataPool: skill.dataPool,
-  };
-}
-
 // TODO:add build code : skill, stats (18-03-26)
 // TODO:change variation Fairy upcase name problem (gf-core레포의 fairy를 fairies로 바꾸던가 해야할듯)(18-03-26)
 // TODO:change portrait value to url NOT NULL (null로 되어있는 portrait의 값을 url기반의 값으로 변경)(18-03-26)
@@ -37,7 +22,7 @@ const fairyList = fairy.map((Fairy) => {
     name: Fairy.name,
     krName: Fairy.krName,
     category: Fairy.category,
-    skill: buildSkill(Fairy.skill),
+    skill: Fairy.getSkill(),
     grow: Fairy.grow,
     buildTime: Fairy.buildTime,
     images: buildImage(Fairy.name),

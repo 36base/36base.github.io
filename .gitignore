@@ -7,5 +7,9 @@ yarn.lock
 yarn-error.log
 .yarnclean
 .DS_Store
+<<<<<<< HEAD
 npm-debug.log
 .idea/
+=======
+npm-debug.log
+>>>>>>> 5d148dacb3c67ed90fbe1d32940fa1904044ff42

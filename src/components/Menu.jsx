@@ -8,13 +8,14 @@ import { toggleMobile, expand } from '../actions/menu';
 
 const style = theme => ({
   drawerPaper: {
-    width: 240,
-    [theme.breakpoints.up('md')]: {
+    width: '70%',
+    [theme.breakpoints.up('lg')]: {
       position: 'relative',
+      width: theme.breakpoints.values.lg - theme.breakpoints.values.md,
     },
   },
-  nested: {
-    paddingLeft: theme.spacing.unit * 2,
+  collapse: {
+    paddingLeft: theme.spacing.unit * 3,
   },
   mixin: theme.mixins.toolbar,
 });
@@ -46,7 +47,7 @@ class Menu extends React.Component {
 
     if (value.opened) {
       items.push((
-        <Collapse key={`${key}_collapse`} in={value.opened} timeout="auto">
+        <Collapse className={this.props.classes.collapse} key={`${key}_collapse`} in={value.opened} timeout="auto">
           <List component="div" disablePadding>
             {
               Object.keys(value.children)
@@ -60,15 +61,13 @@ class Menu extends React.Component {
   }
 
   renderCollapse(key, value) {
-    const { classes } = this.props;
     return (
       <ListItem
         key={key}
-        className={classes.nested}
         button
         onClick={() => this.routeTo(value.to)}
       >
-        <ListItemIcon><Icon /></ListItemIcon>
+        <ListItemIcon><Icon className={value.icon ? `fas ${value.icon}` : ''} /></ListItemIcon>
         <ListItemText primary={value.name} />
       </ListItem>
     );
@@ -90,7 +89,7 @@ class Menu extends React.Component {
     );
 
     return [
-      <Hidden key="mobile" mdUp>
+      <Hidden key="mobile" lgUp>
         <Drawer
           variant="temporary"
           anchor="left"
@@ -102,7 +101,7 @@ class Menu extends React.Component {
           {items}
         </Drawer>
       </Hidden>,
-      <Hidden key="pc" smDown implementation="css">
+      <Hidden key="pc" mdDown implementation="css">
         <Drawer variant="permanent" open classes={{ paper: classes.drawerPaper }} >
           <div className={classes.mixin} />
           {items}

@@ -2,12 +2,14 @@ import { dolls, skills } from 'girlsfrontline-core';
 import dollRanks from './data/dollRank';
 import dollTypes from './data/dollType';
 import dollSpines from './data/dollSpines';
+import dollColors from './data/dollColor';
 
 const domain = 'https://girlsfrontline.kr/hotlink-ok/girlsfrontline-resources/images';
 const typeMap = new Map(dollTypes.map(e => [e.code, e]));
 const rankMap = new Map(dollRanks.map(e => [e.id, e]));
-const skillMap = new Map(skills.map(e => [e.id, e]));
+//const skillMap = new Map(skills.map(e => [e.id, e]));
 const spineMap = new Map(Object.keys(dollSpines).map(k => [Number(k), dollSpines[k]]));
+const colorMap = new Map(dollColors.map(e => [e.id, e.color]));
 
 function getTypeIcon(typeId, rankId) {
   const type = typeMap.get(typeId).code.toUpperCase();
@@ -73,12 +75,13 @@ const dollList = dolls.map((doll) => {
     images: buildImage(doll.id, doll.skins, spine),
     stats: doll.stats,
     effect: doll.effect,
-    skill: buildSkill(doll.skill),
+    skill: doll.getSkill(),
     getSkill: doll.getSkill,
     acquisition: {
       build: doll.buildTime,
       drop: doll.drop,
     },
+    color: colorMap.get(doll.id),
   };
 });
 

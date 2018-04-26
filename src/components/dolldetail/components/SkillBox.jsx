@@ -7,6 +7,8 @@ import Square from '../../common/Square';
 import ImageBox from '../../common/ImageBox';
 import SmallSelector from '../../common/SmallSelector';
 
+const domain = 'https://girlsfrontline.kr/hotlink-ok/girlsfrontline-resources/images';
+
 const style = theme => ({
   container: {
     padding: `${theme.spacing.unit}px 0`,
@@ -34,6 +36,10 @@ const style = theme => ({
 });
 
 const lvValues = Array(10).fill().map((_, i) => ({ value: i + 1, name: i + 1 }));
+
+function getUrl(path) {
+  return `${domain}/skill/${path}.png`;
+}
 
 class SkillBox extends React.Component {
   constructor(props) {
@@ -122,7 +128,7 @@ class SkillBox extends React.Component {
         <Grid className={classes.container} container>
           <Grid item xs={4}>
             <div className={classes.iconWrapper}>
-              <Square><ImageBox src={this.props.skill.path} /></Square>
+              <Square><ImageBox src={getUrl(this.props.skill.path)} /></Square>
             </div>
           </Grid>
           <Grid className={classes.alignMiddle} item xs={4}>

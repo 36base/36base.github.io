@@ -70,7 +70,7 @@ const typeMap = new Map([
   ['dodge', '회피'],
   ['rate', '사속'],
   ['crit', '치명타 적중률'],
-  ['coolDown', '쿨타임 감소율'],
+  ['cooldown', '쿨타임 감소율'],
 ]);
 
 const rateOptions = [

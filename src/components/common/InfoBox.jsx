@@ -34,10 +34,10 @@ const InfoBox = (props) => {
   return (
     <div className={classes.container}>
       <Grid container>
-        <Grid item xs={selector ? 6 : 12}>
+        <Grid item xs={selector ? 4 : 12}>
           <Typography className={classes.name}>{name}</Typography>
         </Grid>
-        {selector ? <Grid className={classes.selector} item xs={6}>{selector}</Grid> : ''}
+        {selector ? <Grid className={classes.selector} item xs={8}>{selector}</Grid> : ''}
       </Grid>
       <HorizonLine />
       {content}

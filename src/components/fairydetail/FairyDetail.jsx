@@ -1,9 +1,7 @@
 import React from 'react';
-import { Grid } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 
 import FairyRepository from '../../repositories/FairyRepository';
-import Background from './components/Background';
 import SkillBox from './components/SkillBox';
 import style from './components/style';
 
@@ -57,14 +55,14 @@ class FairyDetail extends React.Component {
       info,
     } = this.state;
 
-    if  (!info) {
+    if (!info) {
       return (
         <div>Undefined</div>
       );
     }
 
 
-  /* TODO:컴포넌트 분리필요(04-11) */
+    /* TODO:컴포넌트 분리필요(04-11) */
     return (
       <div className={classes.root}>
         <div className={classes.titleWrapper}>
@@ -77,7 +75,7 @@ class FairyDetail extends React.Component {
         <div className={classes.divider} />
         <div className={classes.contentWrapper}>
           <div className={classes.imageWrapper}>
-            <div className={classes.image}><img alt={ info.name } src={ info.images.mod1 } /></div>
+            <div className={classes.image}><img alt={info.name} src={info.images.mod1} /></div>
           </div>
           <div className={classes.infoWrapper}>
             <div className={classes.infoBox}>
@@ -118,10 +116,9 @@ class FairyDetail extends React.Component {
                 <div>{ info.grow }</div>
               </div>
             </div>
-            <SkillBox skill={ info.skill } lv={ 1 }/>
+            <SkillBox skill={info.skill} lv={1} />
           </div>
         </div>
-        <Background mainColor="#505694" secondColor="#8C94BF" />
       </div>
     );
   }
