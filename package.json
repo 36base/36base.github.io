@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "extract-text-webpack-plugin": "^3.0.2",
-    "girlsfrontline-core": "^1.0.0-alpha",
+    "girlsfrontline-core": "^1.0.1-alpha2",
     "material-ui": "^1.0.0-beta.37",
     "material-ui-icons": "^1.0.0-beta.36",
     "normalize.css": "^8.0.0",
