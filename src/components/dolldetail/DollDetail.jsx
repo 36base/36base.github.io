@@ -135,9 +135,11 @@ class DollDetail extends React.Component {
       return null;
     }
 
+    // Status랑 Skill사이에
+    // {this.wrap(<SDBox width={250} height={250} skeleton={skeleton} />)}
     return (
       <div className={classes.wrapper}>
-        <Background color={info.color || '#505694'} />
+        <Background color={'#ab7940'} />
         <div className={classes.header}>
           <Grid container>
             <Caption name={info.krName} />
@@ -153,12 +155,11 @@ class DollDetail extends React.Component {
         </div>
         <div className={classes.info}>
           {this.wrap(<BasicInfoBox
-            armType={info.type.enName}
+            armType={info.type.krName}
             illust={info.illust}
             voice={info.voice}
           />)}
           {this.wrap(<StatusInfoBox {...info.stats} />)}
-          {this.wrap(<SDBox width={250} height={250} skeleton={skeleton} />)}
           {this.wrap(<SkillBox
             hasNight={!(info.skill.nightDataPool === undefined)}
             skill={info.getSkill({ level: skillLv, night: false })}

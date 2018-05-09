@@ -16,7 +16,7 @@ dollRanks.forEach((e) => {
 const names = dolls.reduce((arr, e) => {
   arr.push([e.name, e.id]);
   arr.push([e.krName, e.id]);
-  e.nicknames.forEach(nick => arr.push([nick, e.id]));
+  if (e.nicknames) e.nicknames.forEach(nick => arr.push([nick, e.id]));
   return arr;
 }, []);
 

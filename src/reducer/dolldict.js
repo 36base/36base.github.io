@@ -1,4 +1,5 @@
 import dolls from '../repositories/data/doll';
+// import dolls from '../repositories/DollRepository';
 import { propertyFilter, nameFilter } from '../repositories/data/filter';
 import { ADD_FILTER, DELETE_FILTER } from '../actions/dolldict';
 
