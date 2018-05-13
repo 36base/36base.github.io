@@ -135,11 +135,11 @@ class DollDetail extends React.Component {
       return null;
     }
 
-    // Status랑 Skill사이에
+    // between Status and Skill
     // {this.wrap(<SDBox width={250} height={250} skeleton={skeleton} />)}
     return (
       <div className={classes.wrapper}>
-        <Background color={'#ab7940'} />
+        <Background color={info.color || '#505694'} />
         <div className={classes.header}>
           <Grid container>
             <Caption name={info.krName} />

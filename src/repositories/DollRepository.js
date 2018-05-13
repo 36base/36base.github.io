@@ -122,6 +122,7 @@ const dollList = dolls.map((doll) => {
     images: buildImage(doll.id, doll.skins, spine),
     stats: doll.stats,
     effect: doll.effect,
+    skill: doll.getSkill(),
     getSkill: doll.getSkill,
     acquisition: {
       build: doll.buildTime,
