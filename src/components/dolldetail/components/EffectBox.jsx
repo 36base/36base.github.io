@@ -18,10 +18,11 @@ const style = theme => ({
     borderLeft: '1px solid black',
     borderTop: '1px solid black',
   },
-  alignBottom: {
+  explain: {
     display: 'flex',
+    marginLeft: '10px',
     flexDirection: 'column',
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
   },
   yellow: {
     color: '#FDA50C',
@@ -56,13 +57,13 @@ const effectGridList = [
   [9, { left: '66.66%', top: 0 }],
 ];
 const targetMap = new Map([
-  [0, '모든 인형'],
-  [1, '권총'],
-  [2, '기관단총'],
-  [3, '소총'],
-  [4, '돌격소총'],
-  [5, '기관총'],
-  [6, '산탄총'],
+  ['all', '모든 인형'],
+  ['hg', '권총'],
+  ['smg', '기관단총'],
+  ['rifle', '소총'],
+  ['ar', '돌격소총'],
+  ['mg', '기관총'],
+  ['sg', '산탄총'],
 ]);
 const typeMap = new Map([
   ['pow', '화력'],
@@ -130,6 +131,7 @@ class EffectBox extends React.Component {
       );
     });
 
+    console.log(this.props.effectType);
     const target = targetMap.get(this.props.effectType);
     const effects = Object.keys(this.props.gridEffect).map((key) => {
       const type = typeMap.get(key);
@@ -146,7 +148,7 @@ class EffectBox extends React.Component {
               <Square>{grids}</Square>
             </div>
           </Grid>
-          <Grid className={classes.alignBottom} item xs>
+          <Grid className={classes.explain} item xs>
             <Typography>
               버프칸의 <span className={classes.yellow}>{target}</span>에게 {effects}
             </Typography>

@@ -1,4 +1,5 @@
-import { dolls, skills } from 'girlsfrontline-core';
+// import { dolls, skills } from 'girlsfrontline-core';
+import { dolls } from 'girlsfrontline-core';
 import dollRanks from './data/dollRank';
 import dollTypes from './data/dollType';
 import dollSpines from './data/dollSpines';
@@ -7,7 +8,7 @@ import dollColors from './data/dollColor';
 const domain = 'https://girlsfrontline.kr/hotlink-ok/girlsfrontline-resources/images';
 const typeMap = new Map(dollTypes.map(e => [e.code, e]));
 const rankMap = new Map(dollRanks.map(e => [e.id, e]));
-//const skillMap = new Map(skills.map(e => [e.id, e]));
+// const skillMap = new Map(skills.map(e => [e.id, e]));
 const spineMap = new Map(Object.keys(dollSpines).map(k => [Number(k), dollSpines[k]]));
 const colorMap = new Map(dollColors.map(e => [e.id, e.color]));
 
@@ -23,6 +24,7 @@ function getImage(id, skinNo, isDamaged) {
 }
 
 function buildImage(id, skins, spine) {
+  if (!skins) return [];
   const spineNames = spine ? Object.keys(spine.names) : Array.fill(skins.length + 1);
   const base = {
     name: '기본',
@@ -42,6 +44,7 @@ function buildImage(id, skins, spine) {
   ];
 }
 
+/*
 function buildSkill(skill) {
   const base = skillMap.get(skill.id);
 
@@ -55,7 +58,51 @@ function buildSkill(skill) {
     nightDataPool: skill.nightDataPool,
   };
 }
+*/
 
+function buildSkill(skill) {
+  console.log(skill);
+  return {
+    id: skill.id,
+    name: skill.name,
+    path: `${domain}/skill/${skill.path}.png`,
+    desc: skill.desc,
+    data: skill.data,
+    dataPool: skill.dataPool,
+    nightDataPool: skill.nightDataPool,
+  };
+}
+
+const dollList = dolls.map((doll) => {
+  const rank = doll.id > 1000 ? 1 : doll.rank;
+  const spine = spineMap.get(doll.id);
+
+  return {
+    id: doll.id,
+    name: doll.name,
+    krName: doll.krName,
+    nicknames: doll.nick,
+    illust: doll.illust,
+    voice: doll.voice,
+    type: typeMap.get(doll.type) || {},
+    rank: rankMap.get(rank) || {},
+    spineCode: spine ? spine.code : undefined,
+    icon: getTypeIcon(doll.type, rank),
+    portrait: `${domain}/portraits/${doll.id}.png`,
+    images: buildImage(doll.id, doll.skins, spine),
+    stats: doll.stats,
+    effect: doll.effect,
+    skill: buildSkill(doll.getSkill),
+    getSkill: doll.getSkill,
+    acquisition: {
+      build: doll.buildTime,
+      drop: doll.drop,
+    },
+    color: colorMap.get(doll.id),
+  };
+});
+
+/*
 const dollList = dolls.map((doll) => {
   const rank = doll.id > 1000 ? 1 : doll.rank;
   const spine = spineMap.get(doll.id);
@@ -84,6 +131,7 @@ const dollList = dolls.map((doll) => {
     color: colorMap.get(doll.id),
   };
 });
+*/
 
 const dollMap = new Map(dollList.map(e => [e.id, e]));
 
