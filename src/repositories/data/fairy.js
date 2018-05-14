@@ -17,8 +17,6 @@ function buildImage(name) {
 // TODO:change portrait value to url NOT NULL (null로 되어있는 portrait의 값을 url기반의 값으로 변경)(18-03-26)
 
 const fairyList = fairy.map((Fairy) => {
-  console.log(Fairy);
-  console.log(Fairy.getSkill());
   return {
     id: Fairy.id,
     name: Fairy.name,

@@ -15,10 +15,12 @@ class EquipPopup extends React.Component {
   constructor(props) {
     super(props);
 
+    const defaultStat = { };
+    Object.keys(props.stats).map((key) => { defaultStat[key] = props.stats[key].max; });
+
     this.state = {
       level: 10,
-      stats: Object.keys(props.stats)
-        .reduce((obj, key) => ({ ...obj, key: props.stats[key].max }), {}),
+      stats: defaultStat,
     };
     this.handleLvChange = this.handleLvChange.bind(this);
     this.handleStatChange = this.handleStatChange.bind(this);
@@ -48,6 +50,8 @@ class EquipPopup extends React.Component {
   render() {
     const data = this.props;
     const { classes } = this.props;
+
+    console.log(this.state);
 
     return (
       <div>
