@@ -75,14 +75,13 @@ class App extends React.Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/doll" component={DollDict} />
             <Route path="/doll/:id" component={DollDetail} />
-            <Route path="/fairy" component={FairyDict} />
             <Route path="/equip" component={EquipDict} />
+            <Route exact path="/fairy" component={FairyDict} />
+            <Route path="/fairy/:id" component={FairyDetail} />
             <Route path="/timetable" component={TimeTable} />
             <Route path="/calculator" component={Calculator} />
             <Route path="/sdsim" component={SdSimulator} />
             <Route path="/about" component={About} />
-            <Route exact path="/fairy" component={FairyDict} />
-            <Route path="/fairy/:id" component={FairyDetail} />
           </div>
         </main>
       </div>

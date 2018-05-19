@@ -8,7 +8,7 @@ const domain = 'https://girlsfrontline.kr/hotlink-ok/girlsfrontline-resources/im
 // mod 인수는 인형의 강화단계에 따라 3단계로 나누어집니다 (1 : 기본단계, 2: 3단계 강화부터, 3:최종강화)
 
 function buildImage(name) {
-  const fname = `${name}_1_2_res`;
+  const fname = `${name}_1`;
   return `${domain}/fairy/${fname}.png`;
 }
 

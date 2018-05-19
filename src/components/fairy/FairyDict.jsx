@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import { Grid } from 'material-ui';
+// import { Grid } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 
 import FairyCard from './components/FairyCard';
-import SearchBar from './components/SearchBar';
+// import SearchBar from './components/SearchBar';
 
 
 const style = {
@@ -15,7 +15,7 @@ const style = {
     margin: '0 auto',
   },
 };
-//{list.map(fairy => <FairyCard key={fairy.id} {...fairy} />)}
+// {list.map(fairy => <FairyCard key={fairy.id} {...fairy} />)}
 /*
 <Grid container>
   <Grid item xs={12}>
@@ -27,8 +27,9 @@ const style = {
 */
 class FairyDict extends React.Component {
   render() {
-    const { list,classes } = this.props;
-
+    console.log(this.props);
+    const { list } = this.props;
+    
     return (
       <div className={style.wrapper}>
         {list.map(fairy => <FairyCard key={fairy.id} {...fairy} />)}
