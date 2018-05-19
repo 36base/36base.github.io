@@ -135,11 +135,23 @@ class DollDetail extends React.Component {
       return null;
     }
 
+    let color = '#505694';
+
+    console.log(skeleton);
+
+    switch (info.rank.starCnt) {
+      case 2: color = '#787878'; break;
+      case 3: color = '#2e5770'; break;
+      case 4: color = '#7e8644'; break;
+      case 5: color = (info.rank.name === 'Extra') ? '#505694' : '#a97744'; break;
+      default: color = '#505694';
+    }
+
     // between Status and Skill
     // {this.wrap(<SDBox width={250} height={250} skeleton={skeleton} />)}
     return (
       <div className={classes.wrapper}>
-        <Background color={info.color || '#505694'} />
+        <Background color={color} />
         <div className={classes.header}>
           <Grid container>
             <Caption name={info.krName} />

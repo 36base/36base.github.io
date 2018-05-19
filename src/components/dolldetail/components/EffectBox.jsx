@@ -130,8 +130,7 @@ class EffectBox extends React.Component {
         <div key={e[0]} className={[classes.grid, type].join(' ')} style={e[1]} />
       );
     });
-
-    console.log(this.props.effectType);
+    
     const target = targetMap.get(this.props.effectType);
     const effects = Object.keys(this.props.gridEffect).map((key) => {
       const type = typeMap.get(key);
