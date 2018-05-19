@@ -1,6 +1,6 @@
 import dollList from './doll';
 
-const domain = 'https://github.com/36base/girlsfrontline-resources/blob/master/images/equip';
+const domain = 'https://girlsfrontline.kr/hotlink-ok/girlsfrontline-resources/images/equip';
 
 const equipUtil = {
   StatDict: {
@@ -32,6 +32,7 @@ const equipUtil = {
     return color;
   },
   getSpriteUrl: (data) => {
+    console.log(data);
     let spriteName;
     if (data.fitGuns) {
       dollList.forEach((doll) => {
@@ -62,13 +63,8 @@ const equipUtil = {
 
           spriteName = `${data.type}_${detail}`;
         } break;
-        case 'skeleton': {
-          let detail = 'x';
-
-          if (data.name.search('T') !== -1) { detail = 't'; }
-
-          spriteName = `${data.type}_${detail}`;
-        } break;
+        case 'skeleton':
+          spriteName = `${data.type}${(data.name.search('X') !== -1) ? '_x' : ''}`; break;
 
         default: spriteName = data.type; break;
       }
@@ -77,7 +73,7 @@ const equipUtil = {
         spriteName = `${spriteName}_lab`;
       }
     }
-    return `${domain}/${spriteName}.png?raw=true`;
+    return `${domain}/${data.category}_${spriteName}.png`;
   },
   intTime2Str: (time) => {
     const hour = Number.parseInt(time / 3600, 10);
