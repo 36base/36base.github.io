@@ -2,6 +2,8 @@ import React from 'react';
 import { withStyles } from 'material-ui/styles';
 
 import FairyRepository from '../../repositories/FairyRepository';
+
+import StatusInfoBox from './components/StatusInfoBox';
 import SkillBox from './components/SkillBox';
 import style from './components/style';
 
@@ -22,23 +24,8 @@ class FairyDetail extends React.Component {
     this.state = {
       info: undefined,
       modLv: 1,
-      skillLv: 10,
     };
-
-    this.handleSkillLvChange = this.handleSkillLvChange.bind(this);
     this.handleModChange = this.handleModChange.bind(this);
-  }
-
-  handleSkillLvChange(no) {
-    this.setState({
-      skillLv: no,
-    });
-  }
-
-  handleModChange(no) {
-    this.setState({
-      modLv: no,
-    });
   }
 
   componentWillMount() {
@@ -47,13 +34,15 @@ class FairyDetail extends React.Component {
     FairyRepository.fetchById(id)
       .then(info => this.setState({ info }));
   }
+  
+  handleModChange(no) {
+    this.setState({ modLv: no });
+  }
 
   render() {
     const { classes } = this.props;
 
-    const {
-      info,
-    } = this.state;
+    const { info } = this.state;
 
     if (!info) {
       return (
@@ -62,7 +51,6 @@ class FairyDetail extends React.Component {
     }
 
 
-    /* TODO:컴포넌트 분리필요(04-11) */
     return (
       <div className={classes.root}>
         <div className={classes.titleWrapper}>
@@ -89,34 +77,8 @@ class FairyDetail extends React.Component {
                 <div>{ timeToStr(info.buildTime) }</div>
               </div>
             </div>
-            <div className={classes.infoBox}>
-              <div className={classes.infoTitle}>스테이터스</div>
-              <div className={classes.infoRow}>
-                <div className={classes.rowTitle}>화력</div>
-                <div>{ info.stats.pow}</div>
-              </div>
-              <div className={classes.infoRow}>
-                <div className={classes.rowTitle}>회피</div>
-                <div>{ info.stats.dodge}</div>
-              </div>
-              <div className={classes.infoRow}>
-                <div className={classes.rowTitle}>장갑</div>
-                <div>{ info.stats.armor}</div>
-              </div>
-              <div className={classes.infoRow}>
-                <div className={classes.rowTitle}>치명상</div>
-                <div>{ info.stats.critDmg}</div>
-              </div>
-              <div className={classes.infoRow}>
-                <div className={classes.rowTitle}>명중</div>
-                <div>{ info.stats.hit}</div>
-              </div>
-              <div className={classes.infoRow}>
-                <div className={classes.rowTitle}>성장</div>
-                <div>{ info.grow }</div>
-              </div>
-            </div>
-            <SkillBox skill={info.skill} lv={1} />
+            <StatusInfoBox {...Object.assign({ grow: info.grow }, info.stats)} />
+            <SkillBox skill={info.skill} />
           </div>
         </div>
       </div>

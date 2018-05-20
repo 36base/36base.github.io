@@ -59,7 +59,6 @@ function buildSkill(skill) {
 */
 
 function buildSkill(skill) {
-  console.log(skill);
   return {
     id: skill.id,
     name: skill.name,
@@ -90,7 +89,7 @@ const dollList = dolls.map((doll) => {
     images: buildImage(doll.id, doll.skins, spine),
     stats: doll.stats,
     effect: doll.effect,
-    skill: buildSkill(doll.getSkill),
+    skill: buildSkill(doll.skill),
     getSkill: doll.getSkill,
     acquisition: {
       build: doll.buildTime,
