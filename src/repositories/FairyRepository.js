@@ -4,7 +4,7 @@ const domain = 'https://girlsfrontline.kr/hotlink-ok/girlsfrontline-resources/im
 
 
 function getImage(name, mod) {
-  const fname = `${name}_${mod}_2_res`;
+  const fname = `${name}_${mod}`.toLowerCase();
   return `${domain}/fairy/${fname}.png`;
 }
 
@@ -24,8 +24,7 @@ const fairyList = fairy.map(Fairy => ({
   category: Fairy.category,
   stats: Fairy.stats,
   grow: Fairy.grow,
-  skill: Fairy.getSkill(),
-  getSkill: Fairy.getSkill,
+  skill: Fairy.skill,
   buildTime: Fairy.buildTime,
   images: buildImage(Fairy.name),
 }));

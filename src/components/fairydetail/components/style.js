@@ -74,6 +74,7 @@ const style = {
     borderBottom: '1px solid black',
   },
   infoSelector: {
+    display: 'block',
     width: '50px',
     float: 'right',
   },
@@ -85,16 +86,6 @@ const style = {
   },
   rowTitle: {
     width: '30%',
-  },
-  skillName: {
-    fontSize: '1.5em',
-    color: 'rgba(0, 0, 0, 0.54)',
-    fontWeight: '400',
-    textAlign: 'center',
-    margin: '10px',
-  },
-  skillBoxYellow: {
-    color: '#FDA50C',
   },
 };
 
