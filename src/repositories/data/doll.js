@@ -24,6 +24,7 @@ function getImage(id, skinNo, isDamaged) {
 function buildImage(id, skins, spine) {
   if (!skins) return [];
   const spineNames = spine ? Object.keys(spine.names) : Array.fill(skins.length + 1);
+
   const base = {
     name: '기본',
     spineCode: spineNames[0],
