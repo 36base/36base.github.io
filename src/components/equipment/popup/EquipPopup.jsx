@@ -16,7 +16,7 @@ class EquipPopup extends React.Component {
     super(props);
 
     const defaultStat = { };
-    Object.keys(props.stats).map((key) => { defaultStat[key] = props.stats[key].max; });
+    Object.keys(props.stats).forEach((key) => { defaultStat[key] = props.stats[key].max; });
 
     this.state = {
       level: 10,

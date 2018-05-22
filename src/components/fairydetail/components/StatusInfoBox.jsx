@@ -7,14 +7,12 @@ import style from './style';
 const StatusInfoBox = (props) => {
   const { classes } = props;
 
-  const buildRow = (label, value) => {
-    return (
-      <div className={classes.infoRow}>
-        <div className={classes.rowTitle}>{label}</div>
-        <div className={classes.rowTitle}>{value}</div>
-      </div>
-    );
-  };
+  const buildRow = (label, value) => (
+    <div className={classes.infoRow}>
+      <div className={classes.rowTitle}>{label}</div>
+      <div className={classes.rowTitle}>{value}</div>
+    </div>
+  );
 
   return (
     <div className={classes.infoBox}>
