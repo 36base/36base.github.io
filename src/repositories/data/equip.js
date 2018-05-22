@@ -32,7 +32,6 @@ const equipUtil = {
     return color;
   },
   getSpriteUrl: (data) => {
-    console.log(data);
     let spriteName;
     if (data.fitGuns) {
       dollList.forEach((doll) => {

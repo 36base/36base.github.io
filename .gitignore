@@ -10,6 +10,7 @@ yarn-error.log
 <<<<<<< HEAD
 npm-debug.log
 .idea/
+build/
 =======
 npm-debug.log
 >>>>>>> 5d148dacb3c67ed90fbe1d32940fa1904044ff42

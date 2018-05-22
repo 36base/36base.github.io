@@ -7,7 +7,7 @@ function initFilter() {
 }
 
 const reducer = (state = initFilter(), action) => {
-  switch (action.type){
+  switch (action.type) {
     default:
       return state;
   }

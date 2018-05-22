@@ -55,7 +55,7 @@ async function fetchSpine(dollId, skinNo) {
     exts.forEach((ext) => {
       const { error } = resource[getName(ext)];
       if (error) {
-        throw Error(error.message);
+        throw error.message;
       }
     });
 
@@ -80,4 +80,3 @@ async function fetchDefaultSpine(dollId) {
 }
 
 export default { fetchSpine, fetchDefaultSpine };
-

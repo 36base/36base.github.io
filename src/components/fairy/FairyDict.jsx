@@ -27,9 +27,7 @@ const style = {
 */
 class FairyDict extends React.Component {
   render() {
-    console.log(this.props);
     const { list } = this.props;
-    
     return (
       <div className={style.wrapper}>
         {list.map(fairy => <FairyCard key={fairy.id} {...fairy} />)}

@@ -23,9 +23,9 @@ class FairyDetail extends React.Component {
 
     this.state = {
       info: undefined,
-      modLv: 1,
+      // modLv: 1,
     };
-    this.handleModChange = this.handleModChange.bind(this);
+    // this.handleModChange = this.handleModChange.bind(this);
   }
 
   componentWillMount() {
@@ -34,10 +34,9 @@ class FairyDetail extends React.Component {
     FairyRepository.fetchById(id)
       .then(info => this.setState({ info }));
   }
-  
-  handleModChange(no) {
-    this.setState({ modLv: no });
-  }
+  // handleModChange(no) {
+  //   this.setState({ modLv: no });
+  // }
 
   render() {
     const { classes } = this.props;

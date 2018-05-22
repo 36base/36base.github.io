@@ -52,7 +52,6 @@ class SkillBox extends React.Component {
 
     return desc;
   }
-  
   handleSkillLvChange(event) {
     this.setState({ lv: event.target.value });
   }
@@ -60,7 +59,11 @@ class SkillBox extends React.Component {
 
   render() {
     const { classes } = this.props;
-    const description = this.getDesc(this.props.skill.desc, this.props.skill.dataPool, this.state.lv);
+    const description = this.getDesc(
+      this.props.skill.desc,
+      this.props.skill.dataPool,
+      this.state.lv,
+    );
 
     let cd = this.props.skill.dataPool.CD;
     if (cd === undefined) {
@@ -73,7 +76,12 @@ class SkillBox extends React.Component {
       <div className={classes.container}>
         <div className={classes.title}>
           <div className={classes.titleName}>스킬</div>
-          <SmallSelector className={classes.selector} values={lvValues} selected={this.state.lv} onChange={this.handleSkillLvChange} />
+          <SmallSelector
+            className={classes.selector}
+            values={lvValues}
+            selected={this.state.lv}
+            onChange={this.handleSkillLvChange}
+          />
         </div>
         <div className={classes.body}>
           <div className={classes.skillName}>{ this.props.skill.name }</div>

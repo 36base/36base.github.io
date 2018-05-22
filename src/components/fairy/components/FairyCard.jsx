@@ -17,7 +17,6 @@ class FairyCard extends React.Component {
       images,
     } = this.props;
 
-
     return (
       <Card className={classes.root} component={props => <Link to={`/fairy/${id}`} {...props} />}>
         <div className={classes.background} />
@@ -32,7 +31,6 @@ class FairyCard extends React.Component {
         </div>
       </Card>
     );
-
   }
 }
 

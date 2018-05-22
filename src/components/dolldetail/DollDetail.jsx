@@ -12,7 +12,7 @@ import TypeSwitchBox from './components/TypeSwitchBox';
 import Illust from './components/Illust';
 import BasicInfoBox from './components/BasicInfoBox';
 import StatusInfoBox from './components/StatusInfoBox';
-import SDBox from './components/SDBox';
+// import SDBox from './components/SDBox';
 import SkillBox from './components/SkillBox';
 import EffectBox from './components/EffectBox';
 import AcquisitionInfoBox from './components/AcquisitionInfoBox';
