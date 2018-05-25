@@ -18,7 +18,7 @@ import EffectBox from './components/EffectBox';
 import AcquisitionInfoBox from './components/AcquisitionInfoBox';
 
 import DollRepository from '../../repositories/DollRepository';
-import SpineRepository from '../../repositories/SpineRepository';
+// import SpineRepository from '../../repositories/SpineRepository';
 
 const style = theme => ({
   wrapper: {
@@ -30,6 +30,10 @@ const style = theme => ({
     paddingTop: '2%',
     height: '13%',
     paddingRight: 25,
+  },
+  titleLine: {
+    marginTop: '10px',
+    marginBottom: '10px',
   },
   img: {
     verticalAlign: 'top',
@@ -90,13 +94,13 @@ class DollDetail extends React.Component {
     DollRepository.fetchById(id)
       .then(info => this.setState({ info }));
 
-    SpineRepository.fetchDefaultSpine(id)
-      .then(skeleton => this.setState({ skeleton }));
+    // SpineRepository.fetchDefaultSpine(id)
+    //   .then(skeleton => this.setState({ skeleton }));
   }
 
   handleSkinChange(no) {
-    SpineRepository.fetchSpine(this.state.info.id, no)
-      .then(skeleton => this.setState({ skeleton }));
+    // SpineRepository.fetchSpine(this.state.info.id, no)
+    //   .then(skeleton => this.setState({ skeleton }));
 
     this.setState({ skinNo: no });
   }
@@ -156,7 +160,9 @@ class DollDetail extends React.Component {
           <Grid container>
             <Caption name={info.krName} />
             <NumberBox id={info.id} />
-            <HorizonLine height={3} />
+            <Grid container className={classes.titleLine}>
+              <HorizonLine height={3} />
+            </Grid>
             <SkinTabbar selected={skinNo} skins={info.images} onChange={this.handleSkinChange} />
             <StarBox count={info.rank.starCnt} />
           </Grid>
