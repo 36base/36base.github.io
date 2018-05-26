@@ -78,9 +78,9 @@ class EquipPopup extends React.Component {
             </FormControl>
             <table className={classes.statTable}>
               <colgroup>
-                <col style={{ width: '150px' }} />
-                <col style={{ width: '150px' }} />
-                <col style={{ width: '70px' }} />
+                <col style={{ width: '180px' }} />
+                <col style={{ width: '80px' }} />
+                <col style={{ width: '100px' }} />
               </colgroup>
               <tbody>
                 {Object.keys(data.stats).map(key => (
@@ -129,6 +129,7 @@ class EquipPopup extends React.Component {
                 ))}
               </tbody>
             </table>
+            {data.specialFeatures ? <div style={{ textAlign: 'center', color: 'white' }}><h4>특수효과</h4><h4>{data.specialFeatures}</h4></div> : <div />}
             <h3 className={classes.craftTime}>
               {
                 data.buildTime === 0 ?

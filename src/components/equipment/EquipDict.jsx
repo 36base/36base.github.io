@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { withStyles } from 'material-ui/styles';
 
-import { Modal } from 'material-ui';
+import { Grid, Modal } from 'material-ui';
 
 import EquipPopup from './popup/EquipPopup';
 import EquipCard from './card/EquipCard';
@@ -10,12 +10,11 @@ import EquipCard from './card/EquipCard';
 const style = {
   wrapper: {
     padding: '10',
-    margin: '0 auto',
+    margin: '0',
   },
-  equipCard: {
-    display: 'inline-block',
-    margin: 0,
-    padding: 0,
+  cardWrapper: {
+    maxWidth: '1200px',
+    margin: '0 auto',
   },
 };
 
@@ -48,11 +47,13 @@ class EquipDict extends React.Component {
 
     return (
       <div className={classes.wrapper}>
-        {equips.map(equip => (
-          <div role="button" tabIndex={0} onClick={() => this.handleOpen(equip)} className={classes.equipCard}>
-            <EquipCard {...equip} />
-          </div>
-        ))}
+        <Grid className={classes.cardWrapper} container>
+          {equips.map(equip => (
+            <Grid item xs={6} sm={3} md={2} role="button" tabIndex={0} onClick={() => this.handleOpen(equip)}>
+              <EquipCard {...equip} />
+            </Grid>
+          ))}
+        </Grid>
         <Modal
           open={this.state.open}
           onClose={this.handleClose}
