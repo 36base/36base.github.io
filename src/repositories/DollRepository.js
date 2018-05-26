@@ -75,7 +75,7 @@ const dollList = dolls.map((doll) => {
   const rank = doll.id > 1000 ? 1 : doll.rank;
   const spine = spineMap.get(doll.id);
 
-  return {
+  const result = {
     id: doll.id,
     name: doll.name,
     krName: doll.krName,
@@ -97,6 +97,13 @@ const dollList = dolls.map((doll) => {
       drop: doll.drop,
     },
   };
+
+  if (doll.id > 20000) {
+    result.skill2 = buildSkill(doll.skill2);
+    result.getSkill2 = doll.getSkill2;
+  }
+
+  return result;
 });
 
 /*

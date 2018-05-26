@@ -17,11 +17,12 @@ class DollCard extends React.Component {
     } = this.props;
 
     let { id } = this.props;
+    const realId = id;
 
     if (id > 20000) id %= 20000;
 
     return (
-      <Card className={[classes.root, 'undraggable'].join(' ')} component={props => <Link to={`/doll/${id}`} {...props} />}>
+      <Card className={[classes.root, 'undraggable'].join(' ')} component={props => <Link to={`/doll/${realId}`} {...props} />}>
         <div className={classes.rankbar}>
           <Star className={classes.star} count={rank.starCnt} />
         </div>
