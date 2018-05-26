@@ -51,8 +51,6 @@ class EquipPopup extends React.Component {
     const data = this.props;
     const { classes } = this.props;
 
-    console.log(this.state);
-
     return (
       <div>
         {(data) ? (
@@ -131,7 +129,13 @@ class EquipPopup extends React.Component {
                 ))}
               </tbody>
             </table>
-            <h3 className={classes.craftTime}>{`제조시간 - ${EquipUtil.intTime2Str(data.buildTime)}`}</h3>
+            <h3 className={classes.craftTime}>
+              {
+                data.buildTime === 0 ?
+                  (<span style={{ color: 'red' }}>제조불가</span>) :
+                  `제조시간 - ${EquipUtil.intTime2Str(data.buildTime)}`
+              }
+            </h3>
           </div>
         ) : <div />}
       </div>

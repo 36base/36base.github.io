@@ -1,8 +1,5 @@
 import React from 'react';
-import TextField from 'material-ui/TextField';
-import Grid from 'material-ui/Grid';
-import Paper from 'material-ui/Paper';
-import Checkbox from 'material-ui/Checkbox';
+import { TextField, Grid, Paper, Checkbox } from 'material-ui/';
 import { FormControlLabel } from 'material-ui/Form';
 import { withStyles } from 'material-ui/styles';
 
