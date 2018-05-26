@@ -4,7 +4,8 @@ import SkeletonBinary from '../utils/SkeletonBinary';
 
 import dollSpines from '../repositories/data/dollSpines';
 
-const domain = 'https://girlsfrontline.kr/hotlink-ok/girlsfrontline-resources/spine/';
+// const domain = 'https://girlsfrontline.kr/hotlink-ok/girlsfrontline-resources/spine/';
+const domain = 'https://github.com/36base/girlsfrontline-resources/tree/master/spine/';
 const loader = new PIXI.loaders.Loader(domain);
 const cache = {};
 const xhrTypeMap = {

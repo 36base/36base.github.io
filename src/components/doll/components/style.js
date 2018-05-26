@@ -58,7 +58,7 @@ const style = {
     color: '#ababab',
   },
 
-  general: { background: 'linear-gradient(135deg, #FFFFFF, #FFFFFF 85%, transparent 85%)' },
+  general: { background: 'linear-gradient(135deg, #a2a2a2, #a2a2a2 85%, transparent 85%)' },
   rare: { background: 'linear-gradient(135deg, #5DD9C3, #5DD9C3 85%, transparent 85%)' },
   epochal: { background: 'linear-gradient(135deg, #D6E35A, #D6E35A 85%, transparent 85%)' },
   legendary: { background: 'linear-gradient(135deg, #FDA809, #FDA809 85%, transparent 85%)' },

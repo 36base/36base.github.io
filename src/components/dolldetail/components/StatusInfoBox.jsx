@@ -41,10 +41,10 @@ const StatusInfoBox = (props) => {
   return (
     <InfoBox name="스테이터스">
       {buildRow('체력', props.hp, 300, 'red')}
-      {buildRow('화력', props.pow, 200, 'red')}
-      {buildRow('명중', props.hit, 100, 'red')}
-      {buildRow('회피', props.dodge, 150, 'red')}
-      {buildRow('사속', props.rate, 120, 'red')}
+      {buildRow('화력', props.pow, 200, 'brown')}
+      {buildRow('명중', props.hit, 100, 'yellow')}
+      {buildRow('회피', props.dodge, 150, 'green')}
+      {buildRow('사속', props.rate, 120, 'orange')}
     </InfoBox>
   );
 };
