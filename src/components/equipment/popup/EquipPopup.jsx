@@ -51,8 +51,6 @@ class EquipPopup extends React.Component {
     const data = this.props;
     const { classes } = this.props;
 
-    console.log(this.state);
-
     return (
       <div>
         {(data) ? (
@@ -80,9 +78,9 @@ class EquipPopup extends React.Component {
             </FormControl>
             <table className={classes.statTable}>
               <colgroup>
-                <col style={{ width: '150px' }} />
-                <col style={{ width: '150px' }} />
-                <col style={{ width: '70px' }} />
+                <col style={{ width: '180px' }} />
+                <col style={{ width: '80px' }} />
+                <col style={{ width: '100px' }} />
               </colgroup>
               <tbody>
                 {Object.keys(data.stats).map(key => (
@@ -131,7 +129,14 @@ class EquipPopup extends React.Component {
                 ))}
               </tbody>
             </table>
-            <h3 className={classes.craftTime}>{`제조시간 - ${EquipUtil.intTime2Str(data.buildTime)}`}</h3>
+            {data.specialFeatures ? <div style={{ textAlign: 'center', color: 'white' }}><h4>특수효과</h4><h4>{data.specialFeatures}</h4></div> : <div />}
+            <h3 className={classes.craftTime}>
+              {
+                data.buildTime === 0 ?
+                  (<span style={{ color: 'red' }}>제조불가</span>) :
+                  `제조시간 - ${EquipUtil.intTime2Str(data.buildTime)}`
+              }
+            </h3>
           </div>
         ) : <div />}
       </div>

@@ -73,18 +73,27 @@ class DollDetail extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
+    /* this.state = {
       info: undefined,
       skeleton: undefined,
 
       skinNo: 0,
       skinType: 'normal',
       skillLv: 10,
+    }; */
+    this.state = {
+      info: undefined,
+
+      skinNo: 0,
+      skinType: 'normal',
+      skillLv: 10,
+      skill2Lv: 10,
     };
 
     this.handleSkinChange = this.handleSkinChange.bind(this);
     this.toggleSkinType = this.toggleSkinType.bind(this);
     this.handleSkillLvChange = this.handleSkillLvChange.bind(this);
+    this.handleSkill2LvChange = this.handleSkill2LvChange.bind(this);
     this.wrap = this.wrap.bind(this);
   }
 
@@ -116,6 +125,11 @@ class DollDetail extends React.Component {
       skillLv: no,
     });
   }
+  handleSkill2LvChange(no) {
+    this.setState({
+      skill2Lv: no,
+    });
+  }
 
   wrap(content) {
     return (
@@ -127,12 +141,13 @@ class DollDetail extends React.Component {
 
   render() {
     const { classes } = this.props;
+    // const { skeleton } = this.state;
     const {
       info,
-      skeleton,
       skinNo,
       skinType,
       skillLv,
+      skill2Lv,
     } = this.state;
 
     if (!info) {
@@ -140,8 +155,6 @@ class DollDetail extends React.Component {
     }
 
     let color = '#505694';
-
-    console.log(skeleton);
 
     switch (info.rank.starCnt) {
       case 2: color = '#787878'; break;
@@ -189,6 +202,20 @@ class DollDetail extends React.Component {
             lv={skillLv}
             onChange={this.handleSkillLvChange}
           />)}
+          {info.skill2 ?
+            this.wrap(<SkillBox
+              hasNight={!(info.skill2.nightDataPool === undefined)}
+              skill={info.getSkill2({ level: skill2Lv, night: false })}
+              nightSkill={
+                info.skill2.nightDataPool
+                  ? info.getSkill2({ level: skillLv, night: true })
+                  : undefined
+              }
+              lv={skill2Lv}
+              onChange={this.handleSkill2LvChange}
+            />) :
+            <div />
+          }
           {this.wrap(<EffectBox {...info.effect} hasLevel={info.type.code === 'hg'} />)}
           {this.wrap(<AcquisitionInfoBox {...info.acquisition} />)}
         </div>
