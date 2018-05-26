@@ -6,15 +6,24 @@ import Checkbox from 'material-ui/Checkbox';
 import { FormControlLabel } from 'material-ui/Form';
 import { withStyles } from 'material-ui/styles';
 
-const style = {};
+const style = {
+  wrapper: {
+    marginTop: '1em',
+  },
+};
 
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { report: 'N/A' };
+    this.state = { oath: false, report: 'N/A' };
 
+    this.oath = this.oath.bind(this);
     this.calc = this.calc.bind(this);
+  }
+
+  oath(e) {
+    this.setState({ oath: e.target.checked }, this.calc());
   }
 
   calc() {
@@ -145,7 +154,7 @@ class Calculator extends React.Component {
     const nowLv = Number(this.nowLv.value);
     const nowExp = Number(this.nowExp.value);
     const targetLv = Number(this.targetLv.value);
-    const oath = !(this.oath.value) ? 1 : 2;
+    const oath = (this.state.oath) ? 1 : 2;
     let result = 0;
     if (
       ((dollAccExp[nowLv + 1] - dollAccExp[nowLv]) >= nowExp) &&
@@ -171,55 +180,52 @@ class Calculator extends React.Component {
     const { classes } = this.props;
     return (
       <div className={classes.wrapper} align="center">
-        <Grid container spacing={24} align="center" justify="center">
-          <Grid item md={6}>
-            <Paper align="left" style={{ padding: '20px' }}>
-              <h1>작전 보고서 계산기</h1>
-              <TextField
-                id="form-disc-calc-nowLv"
-                label="현재 레벨"
-                type="number"
-                margin="normal"
-                inputRef={(el) => { this.nowLv = el; }}
-                onChange={this.calc}
-              />
-              <FormControlLabel
-                control={
-                  <Checkbox
-                    inputRef={(el) => { this.oath = el; }}
-                    onChange={this.calc}
-                  />
-                }
-                label="서약"
-              />
-              <br />
-              <TextField
-                id="form-disc-calc-nowExp"
-                label="현재 경험치"
-                type="number"
-                margin="normal"
-                inputRef={(el) => { this.nowExp = el; }}
-                onChange={this.calc}
-              />
-              <br />
-              <br />
-              <TextField
-                id="tf-disc-calc-targetLv"
-                label="목표 레벨"
-                type="number"
-                margin="normal"
-                inputRef={(el) => { this.targetLv = el; }}
-                onChange={this.calc}
-              />
-              <h4>
-                필요한 작전보고서 : <span id="disc-calc-result">{this.state.report}</span>개
-              </h4>
-              <br />
-              <div>
-                레벨 계산 구간은 1~100, 100~110, 110~115, 115~120으로 분리되어있으니 참고 바랍니다
-              </div>
-            </Paper>
-          </Grid>
+        <Grid container align="center" justify="center">
+          <Paper align="left" style={{ padding: '20px' }}>
+            <h1>작전 보고서 계산기</h1>
+            <TextField
+              id="form-disc-calc-nowLv"
+              label="현재 레벨"
+              type="number"
+              margin="normal"
+              inputRef={(el) => { this.nowLv = el; }}
+              onChange={this.calc}
+            />
+            <FormControlLabel
+              control={
+                <Checkbox
+                  onChange={this.oath}
+                />
+              }
+              label="서약"
+            />
+            <br />
+            <TextField
+              id="form-disc-calc-nowExp"
+              label="현재 경험치"
+              type="number"
+              margin="normal"
+              inputRef={(el) => { this.nowExp = el; }}
+              onChange={this.calc}
+            />
+            <br />
+            <br />
+            <TextField
+              id="tf-disc-calc-targetLv"
+              label="목표 레벨"
+              type="number"
+              margin="normal"
+              inputRef={(el) => { this.targetLv = el; }}
+              onChange={this.calc}
+            />
+            <h4>
+              필요한 작전보고서 : <span id="disc-calc-result">{this.state.report}</span>개
+            </h4>
+            <br />
+            <div>
+              레벨 계산 구간은 1~100, 100~110, 110~115, 115~120으로 분리되어있으니 참고 바랍니다
+            </div>
+          </Paper>
         </Grid>
       </div>
     );
