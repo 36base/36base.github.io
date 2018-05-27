@@ -106,6 +106,9 @@ class DollDetail extends React.Component {
     // SpineRepository.fetchDefaultSpine(id)
     //   .then(skeleton => this.setState({ skeleton }));
   }
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
 
   handleSkinChange(no) {
     // SpineRepository.fetchSpine(this.state.info.id, no)
@@ -208,7 +211,7 @@ class DollDetail extends React.Component {
               skill={info.getSkill2({ level: skill2Lv, night: false })}
               nightSkill={
                 info.skill2.nightDataPool
-                  ? info.getSkill2({ level: skillLv, night: true })
+                  ? info.getSkill2({ level: skill2Lv, night: true })
                   : undefined
               }
               lv={skill2Lv}

@@ -9,7 +9,7 @@ const style = theme => ({
     position: 'relative',
     width: '100%',
     top: '50%',
-    zIndex: 200,
+    zIndex: 150,
     [theme.breakpoints.up('md')]: {
       transform: 'translateY(-50%)',
     },
