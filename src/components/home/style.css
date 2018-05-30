@@ -51,7 +51,7 @@
   padding-right: 10px;
 }
 
-.wrapper-banner-link > img {
+.wrapper-banner-link > a > img{
   display: block;
   width: 100%;
   max-width: 400px;
@@ -106,7 +106,7 @@
     padding: 20px 0;
   }
 
-  .wrapper-banner-link > img {
+  .wrapper-banner-link > a > img {
     width: calc(100% - 32px);
     max-width: none;
     margin: 16px auto;
