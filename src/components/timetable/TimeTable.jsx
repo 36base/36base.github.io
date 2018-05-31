@@ -85,7 +85,9 @@ class TimeTable extends React.Component {
             if (build in map) {
               map[build].push(e);
             } else {
-              return { ...map, build: [e] };
+              const temp = map;
+              temp[build] = [e];
+              return temp;
             }
           }
 
