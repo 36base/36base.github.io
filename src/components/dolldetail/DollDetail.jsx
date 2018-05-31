@@ -67,6 +67,17 @@ const style = theme => ({
       maxWidth: 400,
     },
   },
+  button: {
+    display: 'block',
+    padding: '15px',
+    fontSize: '17px',
+    textDecoration: 'none',
+    color: 'black',
+    textAlign: 'center',
+    borderStyle: 'solid',
+    borderColor: 'black',
+    borderWidth: '1px',
+  },
 });
 
 class DollDetail extends React.Component {
@@ -83,7 +94,7 @@ class DollDetail extends React.Component {
     }; */
     this.state = {
       info: undefined,
-
+      hasMod: false,
       skinNo: 0,
       skinType: 'normal',
       skillLv: 10,
@@ -103,6 +114,12 @@ class DollDetail extends React.Component {
     DollRepository.fetchById(id)
       .then(info => this.setState({ info }));
 
+    if (id < 20000) {
+      DollRepository.fetchById(id + 20000)
+        .then((info) => {
+          if (info) this.setState({ hasMod: true });
+        });
+    }
     // SpineRepository.fetchDefaultSpine(id)
     //   .then(skeleton => this.setState({ skeleton }));
   }
@@ -175,7 +192,7 @@ class DollDetail extends React.Component {
         <div className={classes.header}>
           <Grid container>
             <Caption name={info.krName} />
-            <NumberBox id={info.id} />
+            <NumberBox id={info.id < 20000 ? info.id : info.id - 20000} />
             <Grid container className={classes.titleLine}>
               <HorizonLine height={3} />
             </Grid>
@@ -194,6 +211,12 @@ class DollDetail extends React.Component {
             voice={info.voice}
           />)}
           {this.wrap(<StatusInfoBox {...info.stats} />)}
+          {this.state.hasMod
+            ? this.wrap(<a href={info.id + 20000} className={classes.button}>개장 Ver link</a>)
+            : <div />}
+          {info.id > 20000
+            ? this.wrap(<a href={info.id - 20000} className={classes.button}>개장 이전 Ver link</a>)
+            : <div />}
           {this.wrap(<SkillBox
             hasNight={!(info.skill.nightDataPool === undefined)}
             skill={info.getSkill({ level: skillLv, night: false })}
