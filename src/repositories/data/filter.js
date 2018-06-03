@@ -6,7 +6,6 @@ const properties = [];
 dollTypes.forEach((e) => {
   const predicate = doll => doll.type === e;
   properties.push([e.code.toUpperCase(), predicate]);
-  properties.push([e.krName, predicate]);
 });
 dollRanks.forEach((e) => {
   const predicate = doll => doll.rank === e;
