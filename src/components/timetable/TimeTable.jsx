@@ -52,6 +52,14 @@ const style = theme => ({
     color: '#FFB600',
     fontStyle: 'none',
   },
+  name: {
+    fontWeight: 'bold',
+  },
+  general: { color: '#a2a2a2' },
+  rare: { color: '#5DD9C3' },
+  epochal: { color: '#D6E35A' },
+  legendary: { color: '#FDA809' },
+  extra: { color: '#D5A3FD' },
 });
 
 function timeToStr(time) {
@@ -80,12 +88,15 @@ class TimeTable extends React.Component {
     DollRepository.fetchAll()
       .then((dolls) => {
         const group = dolls.reduce((map, e) => {
+          const { id } = e;
           const { build } = e.acquisition;
-          if (Number.isInteger(build) && build > 0) {
+          if (Number.isInteger(build) && build > 0 && id < 20000) {
             if (build in map) {
               map[build].push(e);
             } else {
-              return { ...map, build: [e] };
+              const temp = map;
+              temp[build] = [e];
+              return temp;
             }
           }
 
@@ -107,16 +118,16 @@ class TimeTable extends React.Component {
     }
 
     return [
-      <Grid className={classes.timeCell} item xs={2} align="center">
+      <Grid className={classes.timeCell} item xs={3} align="center">
         <Typography variant="display2">{timeToStr(key)}</Typography>
       </Grid>,
-      <Grid className={classes.noPadding} item xs={10}>
+      <Grid className={classes.noPadding} item xs={9}>
         {
           values.map(e => (
             <Link className={classes.link} to={`/doll/${e.id}`}>
               <span className={classes.typeIconWrapper}><ImageBox src={e.icon} /></span>
               <Star className={classes.star} count={e.rank.starCnt} />
-              {e.krName}
+              <div className={`${classes.name} ${classes[e.rank.name.toLowerCase()]}`}>{e.krName}</div>
             </Link>
           )).reduce((acc, e) => (acc ? [...acc, <HorizonLine />, e] : [e]), null)
         }

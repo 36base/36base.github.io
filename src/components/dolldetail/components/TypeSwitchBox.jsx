@@ -8,6 +8,9 @@ const style = {
     flexDirection: 'row-reverse',
     paddingRight: '40px',
   },
+  button: {
+    zIndex: 200,
+  },
 };
 
 const TypeSwitchBox = (props) => {
@@ -16,6 +19,7 @@ const TypeSwitchBox = (props) => {
   return (
     <div className={classes.container} >
       <FormControlLabel
+        className={classes.button}
         control={<Switch color="primary" onClick={toggle} checked={on} />}
         label="중상보기"
       />

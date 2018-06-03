@@ -8,27 +8,57 @@ function apply(filters) {
     return dolls;
   }
 
-  return dolls.filter(doll => filters.every(filter => filter.predicate(doll)));
+  const nameFilters = filters.map(filter => (filter.type === 'name' ? filter : null)).filter(item => item !== null);
+  const rankFilters = filters.map(filter => (filter.type === 'rank' ? filter : null)).filter(item => item !== null);
+  const typeFilters = filters.map(filter => (filter.type === 'type' ? filter : null)).filter(item => item !== null);
+  return dolls.filter((doll) => {
+    const nameFilterResult = nameFilters.every(filter => filter.predicate(doll));
+    let rankFilterResult = false;
+    if (rankFilters.length === 0) rankFilterResult = true;
+    else {
+      let flag = false;
+      rankFilters.map((filter) => {
+        const result = filter.predicate(doll);
+        if (result) flag = true;
+        return result;
+      });
+      if (flag === true) rankFilterResult = true;
+    }
+
+    let typeFilterResult = false;
+    if (typeFilters.length === 0) typeFilterResult = true;
+    else {
+      let flag = false;
+      typeFilters.map((filter) => {
+        const result = filter.predicate(doll);
+        if (result) flag = true;
+        return result;
+      });
+      if (flag === true) typeFilterResult = true;
+    }
+
+    return nameFilterResult && rankFilterResult && typeFilterResult;
+  });
 }
 
-function addFilter(filters, value) {
-  if (propertyFilter.has(value)) {
-    filters.push({
-      type: 'type',
-      query: value,
-      predicate: propertyFilter.get(value),
-    });
-  } else {
+function addFilter(filters, data) {
+  if (data.type === 'name') {
     const ids = [];
     Array.from(nameFilter.keys()).forEach((key) => {
-      if (key.indexOf(value) >= 0) {
+      if (key.indexOf(data.value) >= 0) {
         ids.push(nameFilter.get(key));
       }
     });
     filters.push({
       type: 'name',
-      query: value,
+      query: data.value,
       predicate: doll => ids.indexOf(doll.id) >= 0,
+    });
+  } else {
+    filters.push({
+      type: data.type,
+      query: data.value,
+      predicate: propertyFilter.get(data.value),
     });
   }
 

@@ -5,12 +5,15 @@ import { withStyles } from 'material-ui/styles';
 const style = theme => ({
   container: {
     display: 'flex',
+    flexWrap: 'wrap',
     zIndex: 200,
   },
   mixin: {
     display: 'inline-block',
-    width: '10%',
-    height: '100%',
+    [theme.breakpoints.up('md')]: {
+      width: '10%',
+      height: '100%',
+    },
   },
   button: {
     margin: `0 ${theme.spacing.unit / 2}px`,

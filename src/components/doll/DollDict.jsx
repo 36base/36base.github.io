@@ -7,13 +7,19 @@ import { withStyles } from 'material-ui/styles';
 import DollCard from './components/DollCard';
 import SearchBar from './components/SearchBar';
 
-const style = {
+const style = theme => ({
   wrapper: {
     width: '100%',
-    minWidth: 660,
     margin: '0 auto',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+      margin: '0 auto',
+    },
+    [theme.breakpoints.up('md')]: {
+      minWidth: 660,
+    },
   },
-};
+});
 
 class DollDict extends React.Component {
   render() {
