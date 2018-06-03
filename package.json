@@ -65,6 +65,7 @@
     "react-redux": "^5.0.7",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
+    "react-twitter-widgets": "^1.7.1",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
     "resolve": "1.6.0",
