@@ -2,6 +2,8 @@ import React from 'react';
 import { withStyles } from 'material-ui/styles';
 
 import style from './resources/style';
+import working01 from './resources/working1.png';
+import working02 from './resources/working2.png';
 
 class CheckList extends React.Component{
   render() {
@@ -9,7 +11,7 @@ class CheckList extends React.Component{
 
     return (
       <div className={classes.root}>
-        hello
+        <img className={classes.working} alt="working - checklist" src={ working01 } />
       </div>
     );
   }

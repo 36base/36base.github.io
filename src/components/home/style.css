@@ -1,3 +1,7 @@
+body {
+  overflow: hidden;
+}
+
 .body-content{
   display: grid;
   grid-template-columns: repeat(12,1fr);
@@ -38,7 +42,7 @@
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 5;
-  grid-row-end: 9;
+  grid-row-end: 13;
 
   padding: 10px;
 }
@@ -85,59 +89,18 @@
   display: none;
 }
 
-@media only screen
-and (max-width: 960px) {
-
+#gf-sim-mobile {
+  display: none;
 }
 
-/* tablet portrait */
-@media only screen
-and (min-device-width: 768px)
-and (max-device-width: 1024px)
-and (orientation: portrait) {
-  .banner-main {
-    grid-column-start: 1;
-    grid-column-end: 13;
-    grid-row-start: 1;
-    grid-row-end: 5;
-    padding: 10px;
-  }
-
-  .wrapper-checklist {
-    grid-column-start: 1;
-    grid-column-end: 8;
-    grid-row-start: 5;
-    grid-row-end: 9;
-  }
-
-  .wrapper-banner-link {
-    grid-column-start: 1;
-    grid-column-end: 8;
-    grid-row-start: 9;
-    grid-row-end: 13;
-    padding: 20px 0;
-  }
-
-  .wrapper-banner-link > a > img{
-    width: 45%;
-    margin: 5px;
-  }
-
-  .wrapper-content-twitter {
-    grid-column-start: 8;
-    grid-column-end: 13;
-    grid-row-start: 5;
-    grid-row-end: 13;
-  }
-
-  .wrapper-content-twitter > div > iframe {
-    height: 55vh !important;
-  }
+#gf-sim-pc {
+  display: block;
 }
 
-/* mobile */
 @media only screen
-and (max-device-width: 480px) {
+and (max-width: 640px) {
+  body { overflow: visible; }
+
   .body-content{
     grid-template-columns: 1fr;
     grid-auto-rows: unset;
@@ -150,8 +113,15 @@ and (max-device-width: 480px) {
   }
 
   .wrapper-checklist {
+    display: none;
     grid-column-start: 1;
     grid-column-end: 1;
+  }
+
+  .wrapper-checklist > div {
+    max-width: none;
+    max-height: none;
+    height: 400px;
   }
 
   .wrapper-banner-link {
@@ -174,5 +144,190 @@ and (max-device-width: 480px) {
 
   #banner-link-twitter {
     display: block;
+  }
+}
+
+@media only screen
+and (min-width: 641px)
+and (max-width: 960px){
+.banner-main {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  padding: 10px;
+}
+
+.wrapper-checklist {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 4;
+  grid-row-end: 8;
+}
+
+.wrapper-banner-link {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 8;
+  grid-row-end: 12;
+  padding: 20px;
+}
+
+  .wrapper-banner-link > a > img{
+    float: none;
+    width: 100%;
+    height: auto;
+  }
+
+  .wrapper-banner-link > a {
+    display: block;
+    width: 40%;
+    min-width: 300px;
+    max-width: 400px;
+    min-height: 60px;
+    max-height: 80px;
+  }
+
+
+.wrapper-content-twitter {
+  grid-column-start: 7;
+  grid-column-end: 13;
+  grid-row-start: 4;
+  grid-row-end: 8;
+}
+
+  .wrapper-content-twitter > div > iframe {
+    height: 32vh !important;
+  }
+
+
+}
+
+/* tablet portrait */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: portrait) {
+  .banner-main {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    padding: 10px;
+  }
+
+  .wrapper-checklist {
+    grid-column-start: 1;
+    grid-column-end: 8;
+    grid-row-start: 4;
+    grid-row-end: 8;
+  }
+
+  .wrapper-banner-link {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 9;
+    grid-row-end: 12;
+    padding: 20px 0;
+  }
+
+  .wrapper-banner-link > a{
+    width: 45%;
+    max-height: 80px;
+  }
+
+  .wrapper-banner-link > a > img{
+    width: 100%;
+    margin: 5px;
+    float: none;
+  }
+
+  .wrapper-content-twitter {
+    grid-column-start: 8;
+    grid-column-end: 13;
+    grid-row-start: 4;
+    grid-row-end: 9;
+  }
+
+  .wrapper-content-twitter > div > iframe {
+    height: 40vh !important;
+  }
+
+  #gf-sim-mobile {
+    display: block;
+  }
+
+  #gf-sim-pc {
+    display: none;
+  }
+}
+
+/* mobile */
+@media only screen
+and (max-device-width: 480px) {
+  body { overflow: visible; }
+
+  .body-content{
+    grid-template-columns: 1fr;
+    grid-auto-rows: 150px;
+  }
+
+  .banner-main {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 10px;
+  }
+
+  .wrapper-checklist {
+    display: none; /* TODO: temporary code while checklist making*/
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+
+  .wrapper-checklist > div {
+    max-width: none;
+    max-height: none;
+    height: auto;
+  }
+
+  .wrapper-banner-link {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: auto;
+    padding: 0;
+  }
+
+  .wrapper-banner-link > a > img {
+    width: calc(100% - 32px);
+    max-width: none;
+    margin: 16px auto;
+    border-radius: 3px;
+    float: none;
+  }
+
+  .wrapper-content-twitter {
+    display: none;
+  }
+
+  #banner-link-twitter {
+    display: block;
+  }
+
+  #gf-sim-mobile {
+    display: block;
+  }
+
+  #gf-sim-pc {
+    display: none;
   }
 }
