@@ -1,0 +1,92 @@
+export default [
+  {
+    name: 'Dynamic',
+    profile: 'https://cdn.discordapp.com/avatars/259889978467680256/4e24f33b453802622245ed3ba69bf45d.png',
+    role: '대빵',
+    impression: '@Worker 개발진들은 여기에 자기 닉네임/역할/한줄 소감 을 적고 가도록 하시오',
+  },
+  {
+    name: 'Cosmos0',
+    profile: 'https://cdn.discordapp.com/avatars/416134554965770240/c6f4e27821c057aa1f7cc1ab1a128047.png',
+    role: '소녀전선 편성 시뮬레이터 제작',
+    impression: '섹스',
+  },
+  {
+    name: 'Nostalgia',
+    profile: 'https://cdn.discordapp.com/avatars/252260680906964993/348256fcb8558d9e5cb11fb813c2c905.png',
+    role: 'SD Simulator, 웹 서버',
+    impression: ':joy:',
+  },
+  {
+    name: 'Blume',
+    profile: 'https://cdn.discordapp.com/avatars/282070867486310411/f47f82706934255684aa0cefb49650e2.png',
+    role: 'Layout Design',
+    impression: '(╯°□°）╯︵ ┻━┻',
+  },
+  {
+    name: 'PROMETA',
+    profile: 'https://cdn.discordapp.com/avatars/234952297967255553/8d0db005012575a3d9e5c45917374c4d.png',
+    role: 'Frontend',
+    impression: '망포 싶다',
+  },
+  {
+    name: 'ASUKA_NINOMIYA',
+    profile: 'https://cdn.discordapp.com/avatars/332823853275545600/a5ec3ddacb045bdc3b07c093d49daa80.png',
+    role: '비정규직 핫산',
+    impression: '',
+  },
+  {
+    name: 'MagicWorld',
+    profile: 'https://cdn.discordapp.com/avatars/285739359423168513/2749cc8c31de1d69b3f7e6720e753352.png',
+    role: '인게임 데이터 추출, 정리 & 개발 도움',
+    impression: '멘션 받고 반응하기까지 시간이 오래 걸릴 수 있습니다만 어쨌든 100% 다 합니다',
+  },
+  {
+    name: 'CZ',
+    profile: 'https://cdn.discordapp.com/avatars/335397661823729667/969ca9f923b08f5c2abb0f841e655a24.png',
+    role: '진짜 하는거 없는 잉여인간 (제대 시뮬레이터 기술지원) + 36베이스 채팅봇 개발자',
+    impression: '게임 클라이언트 개발자 절대하지마라',
+  },
+  {
+    name: '밤샘코딩',
+    profile: 'https://cdn.discordapp.com/avatars/320656248133648384/7b967049b3f45bd890ba0c9efb768828.png',
+    role: '부관리자, 데이터 & 리소스 관리와 검수, 전투 시뮬레이터 제작, 기타 기술지원',
+    impression: '코드가 내가 된다 ┬─┬ ノ( ゜-゜ノ)',
+  },
+  {
+    name: 'Angrypepsi',
+    profile: '',
+    role: 'Web Frontend developer',
+    impression: '●▅▇█▇▆▆▅▄▇',
+  },
+  {
+    name: 'barney',
+    profile: 'https://cdn.discordapp.com/avatars/229868126165008385/47be0d481c82004326e4ef95599e725f.png',
+    role: '레이아웃 디자이너,프론트 ,핫산',
+    impression: ':thinking:',
+  },
+  {
+    name: 'chocosable',
+    profile: 'https://cdn.discordapp.com/avatars/303179291842314241/63df15117820c6b5804814a90326897c.png',
+    role: '리액트 개발자',
+    impression: '밥벌어 먹고 살기 힘들다',
+  },
+  {
+    name: 'Krepe',
+    profile: 'https://cdn.discordapp.com/avatars/364744339919732740/57ee64dd66536eb3ff4bbba6a6ab715a.png',
+    role: '리소스 관리',
+    impression: '눈을 떠야해 또 아침이야',
+  },
+  {
+    name: '코딩조무사',
+    profile: '',
+    role: '리소스 관리',
+    impression: '당당해지고 싶다',
+  },
+  {
+    name: 'DigetArk',
+    profile: 'https://cdn.discordapp.com/avatars/247969711353102336/7149a26f7ae8160ed6a2b4e987582268.png',
+    role: '음성 대사 번역',
+    impression: '미카팀 때문에 일자리 잃음',
+  },
+];
