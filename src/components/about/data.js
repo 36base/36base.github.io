@@ -42,7 +42,7 @@ export default [
   {
     name: 'PROMETA',
     profile: profilePROMETA,
-    role: 'Web Frontend',
+    role: '프론트 조무사',
     impression: '망포 싶다',
   },
   {
@@ -102,8 +102,8 @@ export default [
   {
     name: 'DigetArk',
     profile: profileDigetArk,
-    role: '음성 대사 번역',
-    impression: '미카팀 때문에 일자리 잃음',
+    role: '번역조무사',
+    impression: 'Adobe After Effects CC 2018 플레이 중',
   },
   {
     name: '수매',
