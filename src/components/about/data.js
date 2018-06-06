@@ -2,7 +2,7 @@ import profileDynamic from './profile/dynamic.png';
 import profileCosmos0 from './profile/cosmos0.png';
 import profileNostalgia from './profile/nostalgia.png';
 import profileBlume from './profile/blume.png';
-import profilePROMETA from './profile/prometa.png';
+import profilePrometa from './profile/prometa.png';
 import profileAsukaNinomiya from './profile/asuka_ninomiya.png';
 import profileMagicWorld from './profile/magic_world.png';
 import profileCZ from './profile/cz.png';
@@ -13,6 +13,7 @@ import profileKrepe from './profile/krepe.png';
 import profileDigetArk from './profile/diget_ark.png';
 import profileSume from './profile/sume.png';
 
+import defaultProfile from './profile/icons-male-user.png';
 
 export default [
   {
@@ -25,7 +26,7 @@ export default [
     name: 'Cosmos0',
     profile: profileCosmos0,
     role: '소녀전선 편성 시뮬레이터 제작',
-    impression: '섹스',
+    impression: '',
   },
   {
     name: 'Nostalgia',
@@ -41,7 +42,7 @@ export default [
   },
   {
     name: 'PROMETA',
-    profile: profilePROMETA,
+    profile: profilePrometa,
     role: '프론트 조무사',
     impression: '망포 싶다',
   },
@@ -71,12 +72,12 @@ export default [
   },
   {
     name: 'Angrypepsi',
-    profile: '',
+    profile: defaultProfile,
     role: 'Web Frontend developer',
     impression: '●▅▇█▇▆▆▅▄▇',
   },
   {
-    name: 'barney',
+    name: 'Barney',
     profile: profileBarney,
     role: '레이아웃 디자이너,프론트 ,핫산',
     impression: ':thinking:',
@@ -95,7 +96,7 @@ export default [
   },
   {
     name: '코딩조무사',
-    profile: '',
+    profile: defaultProfile,
     role: '리소스 관리',
     impression: '당당해지고 싶다',
   },

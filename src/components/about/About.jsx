@@ -2,6 +2,9 @@ import React from 'react';
 import { Grid, Card } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 
+import iconDiscord from './img/discord.png';
+import iconGithub from './img/github.png';
+
 import data from './data';
 
 const style = theme => ({
@@ -14,7 +17,7 @@ const style = theme => ({
   },
   title: {
     textAlign: 'center',
-    margin: '20px',
+    margin: '40px',
   },
   cardContainer: {
     justifyContent: 'center',
@@ -39,10 +42,13 @@ const style = theme => ({
     display: 'flex',
     flexDirection: 'flex-end',
   },
-  titleWrapper: {
+  contactWrapper: {
+    maxWidth: '1200px',
     margin: '0 auto',
-    [theme.breakpoints.up('md')]: {
-      marginLeft: '30px',
+    textAlign: 'center',
+    padding: '20px',
+    [theme.breakpoints.down('sm')]: {
+      margin: '0px 30px',
     },
   },
   linkWrapper: {
@@ -51,11 +57,20 @@ const style = theme => ({
   linkButton: {
     textAlign: 'center',
     padding: '10px',
+    margin: '10px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  icon: {
+    width: '40px',
   },
   link: {
+    display: 'inline-block',
+    marginLeft: '10px',
     textDecoration: 'none',
-    color: 'white',
-    fontSize: '20px',
+    color: 'black',
+    fontSize: '25px',
     fontWeight: 'bolder',
   },
 });
@@ -71,31 +86,29 @@ class About extends React.Component {
             {data.map(item => (
               <Card className={classes.card} key={item.name} >
                 {item.profile ? <img src={item.profile} alt="profile" className={classes.profile} /> : <div />}
-                <h3 className={classes.name}>{item.name}</h3>
-                <h4 className={classes.role}>{item.role}</h4>
+                <h3>{item.name}</h3>
+                <h4>{item.role}</h4>
                 <div className={classes.impression}>{item.impression}</div>
               </Card>
             ))}
           </Grid>
         </div>
-        <footer className={classes.footer}>
-          <Grid container style={{ justifyContent: 'center', alignItems: 'center' }} >
-            <Grid item xs={12} md={8}>
-              <div className={classes.titleWrapper}>
-                <h1 style={{ display: 'inline-block', color: 'white' }} className={classes.title}>Contact us</h1>
-                <h2 style={{ display: 'inline-block', color: 'gray' }}>36 베이스</h2>
-              </div>
-            </Grid>
-            <Grid item xs={12} md={4} container className={classes.linkWrapper}>
-              <Grid item xs={12} md={6} className={classes.linkButton}>
+        <div className={classes.wrapper}>
+          <h1 className={classes.title}>contact us</h1>
+          <Card className={classes.contactWrapper}>
+            <h1 style={{ color: 'gray' }} >36 베이스</h1>
+            <div className={classes.linkWrapper}>
+              <div className={classes.linkButton}>
+                <img className={classes.icon} src={iconGithub} alt="GitHubIcon" />
                 <a className={classes.link} href="https://github.com/36base">GitHub Link</a>
-              </Grid>
-              <Grid item xs={12} md={6} className={classes.linkButton}>
+              </div>
+              <div className={classes.linkButton}>
+                <img className={classes.icon} src={iconDiscord} alt="DiscordIcon" />
                 <a className={classes.link} href="https://discord.gg/qrG9gf9">Discord Link</a>
-              </Grid>
-            </Grid>
-          </Grid>
-        </footer>
+              </div>
+            </div>
+          </Card>
+        </div>
       </div>
     );
   }
