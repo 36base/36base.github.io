@@ -11,6 +11,7 @@ import profileBarney from './profile/barney.png';
 import profileChocosable from './profile/chocosable.png';
 import profileKrepe from './profile/krepe.png';
 import profileDigetArk from './profile/diget_ark.png';
+import profileSume from './profile/sume.png';
 
 
 export default [
@@ -18,7 +19,7 @@ export default [
     name: 'Dynamic',
     profile: profileDynamic,
     role: '대빵',
-    impression: '고 3인데 내가 뭔짓을 한거지',
+    impression: '고3 인데 내가 뭔짓을 한거지',
   },
   {
     name: 'Cosmos0',
@@ -103,5 +104,11 @@ export default [
     profile: profileDigetArk,
     role: '음성 대사 번역',
     impression: '미카팀 때문에 일자리 잃음',
+  },
+  {
+    name: '수매',
+    profile: profileSume,
+    role: '디자이너',
+    impression: '소전사전 개발자',
   },
 ];
