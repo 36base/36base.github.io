@@ -94,17 +94,17 @@ class About extends React.Component {
           </Grid>
         </div>
         <div className={classes.wrapper}>
-          <h1 className={classes.title}>contact us</h1>
+          <h1 className={classes.title}>Contact Us</h1>
           <Card className={classes.contactWrapper}>
             <h1 style={{ color: 'gray' }} >36 베이스</h1>
             <div className={classes.linkWrapper}>
               <div className={classes.linkButton}>
                 <img className={classes.icon} src={iconGithub} alt="GitHubIcon" />
-                <a className={classes.link} href="https://github.com/36base">GitHub Link</a>
+                <a className={classes.link} href="https://github.com/36base">GitHub</a>
               </div>
               <div className={classes.linkButton}>
                 <img className={classes.icon} src={iconDiscord} alt="DiscordIcon" />
-                <a className={classes.link} href="https://discord.gg/qrG9gf9">Discord Link</a>
+                <a className={classes.link} href="https://discord.gg/qrG9gf9">Discord</a>
               </div>
             </div>
           </Card>

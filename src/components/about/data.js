@@ -2,8 +2,8 @@ import profileDynamic from './profile/dynamic.png';
 import profileCosmos0 from './profile/cosmos0.png';
 import profileNostalgia from './profile/nostalgia.png';
 import profileBlume from './profile/blume.png';
-import profilePrometa from './profile/prometa.png';
-import profileAsukaNinomiya from './profile/asuka_ninomiya.png';
+import profilePrometa from './profile/prometa.jpg';
+import profileNinomiya from './profile/ninomiya.png';
 import profileMagicWorld from './profile/magic_world.png';
 import profileCZ from './profile/cz.png';
 import profileBC from './profile/cirnov.png';
@@ -19,8 +19,8 @@ export default [
   {
     name: 'Dynamic',
     profile: profileDynamic,
-    role: '대빵',
-    impression: '고3 인데 내가 뭔짓을 한거지',
+    role: '대빵, 프로젝트 총괄, 데이터 작성',
+    impression: '고3인데 내가 뭔짓을 한거지',
   },
   {
     name: 'Cosmos0',
@@ -47,10 +47,10 @@ export default [
     impression: '망포 싶다',
   },
   {
-    name: 'ASUKA_NINOMIYA',
-    profile: profileAsukaNinomiya,
+    name: 'NINOMIYA',
+    profile: profileNinomiya,
     role: '비정규직 핫산',
-    impression: '',
+    impression: '열혈 정시파이터',
   },
   {
     name: 'MagicWorld',
