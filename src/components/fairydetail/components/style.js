@@ -87,6 +87,12 @@ const style = {
   rowTitle: {
     width: '30%',
   },
+  graph: {
+    width: '60%',
+    height: '20px',
+    border: '1px solid grey',
+    borderRadius: '10px',
+  },
 };
 
 export default style;

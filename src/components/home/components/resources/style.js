@@ -1,5 +1,5 @@
 const style = {
-  root: { /* /src/components/home/style.css 와 연동되는 element 입니다 (.wrapper-checklist > div 참조)*/
+  root: { // /src/components/home/style.css 와 연동되는 element 입니다 (.wrapper-checklist > div 참조)
     width: '100%',
     height: '100%',
     maxWidth: '500px',
@@ -13,7 +13,7 @@ const style = {
     width: '80%',
     height: 'auto',
     maxHeight: '100%',
-  }
+  },
 };
 
 export default style;
