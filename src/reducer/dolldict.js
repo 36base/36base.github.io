@@ -8,9 +8,9 @@ function apply(filters) {
     return dolls;
   }
 
-  const nameFilters = filters.map(filter => (filter.type === 'name' ? filter : null)).filter(item => item !== null);
-  const rankFilters = filters.map(filter => (filter.type === 'rank' ? filter : null)).filter(item => item !== null);
-  const typeFilters = filters.map(filter => (filter.type === 'type' ? filter : null)).filter(item => item !== null);
+  const nameFilters = filters.filter(filter => filter.type === 'name');
+  const rankFilters = filters.filter(filter => filter.type === 'rank');
+  const typeFilters = filters.filter(filter => filter.type === 'type');
   return dolls.filter((doll) => {
     const nameFilterResult = nameFilters.every(filter => filter.predicate(doll));
     let rankFilterResult = false;
