@@ -32,32 +32,17 @@ function buildImage(id, skins, spine) {
     damaged: getImage(id, undefined, true),
   };
 
+  const generalId = id < 20000 ? id : id - 20000;
   return [
     base,
     ...skins.map((e, i) => ({
       name: e,
       spineCode: spineNames[i + 1],
-      normal: getImage(id, i, false),
-      damaged: getImage(id, i, true),
+      normal: getImage(generalId, i, false),
+      damaged: getImage(generalId, i, true),
     })),
   ];
 }
-
-/*
-function buildSkill(skill) {
-  const base = skillMap.get(skill.id);
-
-  return {
-    id: skill.id,
-    name: skill.name || base.name,
-    path: `${domain}/skill/${skill.path || base.path}.png`,
-    desc: base.desc,
-    data: base.data,
-    dataPool: skill.dataPool,
-    nightDataPool: skill.nightDataPool,
-  };
-}
-*/
 
 function buildSkill(skill) {
   return {
@@ -105,37 +90,6 @@ const dollList = dolls.map((doll) => {
 
   return result;
 });
-
-/*
-const dollList = dolls.map((doll) => {
-  const rank = doll.id > 1000 ? 1 : doll.rank;
-  const spine = spineMap.get(doll.id);
-
-  return {
-    id: doll.id,
-    name: doll.name,
-    krName: doll.krName,
-    nicknames: doll.nick,
-    illust: doll.illust,
-    voice: doll.voice,
-    type: typeMap.get(doll.type) || {},
-    rank: rankMap.get(rank) || {},
-    spineCode: spine ? spine.code : undefined,
-    icon: getTypeIcon(doll.type, rank),
-    portrait: `${domain}/portraits/${doll.id}.png`,
-    images: buildImage(doll.id, doll.skins, spine),
-    stats: doll.stats,
-    effect: doll.effect,
-    skill: doll.getSkill(),
-    getSkill: doll.getSkill,
-    acquisition: {
-      build: doll.buildTime,
-      drop: doll.drop,
-    },
-    color: colorMap.get(doll.id),
-  };
-});
-*/
 
 const dollMap = new Map(dollList.map(e => [e.id, e]));
 
