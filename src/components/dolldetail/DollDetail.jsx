@@ -202,10 +202,10 @@ class DollDetail extends React.Component {
           />)}
           {this.wrap(<StatusInfoBox {...info.stats} />)}
           {this.state.hasMod
-            ? this.wrap(<a href={info.id + 20000} className={classes.button}>개장 Ver link</a>)
+            ? this.wrap(<a href={info.id + 20000} className={classes.button}>개장 Ver</a>)
             : <div />}
           {info.id > 20000
-            ? this.wrap(<a href={info.id - 20000} className={classes.button}>개장 이전 Ver link</a>)
+            ? this.wrap(<a href={info.id - 20000} className={classes.button}>개장 이전 Ver</a>)
             : <div />}
           {this.wrap(<SDBox width={250} height={250} skeleton={skeleton} />)}
           {this.wrap(<SkillBox
