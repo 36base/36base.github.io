@@ -5,6 +5,7 @@ import FairyRepository from '../../repositories/FairyRepository';
 
 import StatusInfoBox from './components/StatusInfoBox';
 import SkillBox from './components/SkillBox';
+import SkinTabbar from './components/SkinTabbar';
 import style from './components/style';
 
 function timeToStr(time) {
@@ -23,33 +24,34 @@ class FairyDetail extends React.Component {
 
     this.state = {
       info: undefined,
+      skinNo: 0,
       // modLv: 1,
     };
+    this.handleSkinChange = this.handleSkinChange.bind(this);
     // this.handleModChange = this.handleModChange.bind(this);
   }
 
   componentWillMount() {
     const id = Number(this.props.match.params.id);
-
     FairyRepository.fetchById(id)
       .then(info => this.setState({ info }));
   }
-  // handleModChange(no) {
-  //   this.setState({ modLv: no });
-  // }
 
+  // eslint-disable-next-line
+  handleSkinChange(no) {
+    const number = no - 2;// 왜 인지는 모르겠는데 no로 넘어오는숫자가 2,3,4입니다 그래서 일단은 이렇게 처리합니다.
+    this.setState({ skinNo: number });
+  }
   render() {
     const { classes } = this.props;
 
     const { info } = this.state;
-
     if (!info) {
       return (
         <div>Undefined</div>
       );
     }
-
-
+    const skinImage = [info.images.mod1, info.images.mod2, info.images.mod3];
     return (
       <div className={classes.root}>
         <div className={classes.titleWrapper}>
@@ -62,7 +64,10 @@ class FairyDetail extends React.Component {
         <div className={classes.divider} />
         <div className={classes.contentWrapper}>
           <div className={classes.imageWrapper}>
-            <div className={classes.image}><img alt={info.name} src={info.images.mod1} /></div>
+            <SkinTabbar onChange={this.handleSkinChange} />
+            <div className={classes.image}>
+              <img alt={info.name} src={skinImage[this.state.skinNo]} />
+            </div>
           </div>
           <div className={classes.infoWrapper}>
             <div className={classes.infoBox}>

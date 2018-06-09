@@ -23,8 +23,7 @@ const StatusInfoBox = (props) => {
       </div>,
     ];
   };
-  // eslint-disable-next-line
-  console.log(props);
+
   return (
     <div className={classes.infoBox}>
       <div className={classes.infoTitle}>스테이터스</div>
