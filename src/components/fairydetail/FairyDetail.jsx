@@ -1,5 +1,6 @@
 import React from 'react';
 import { withStyles } from 'material-ui/styles';
+import { Grid } from 'material-ui';
 
 import FairyRepository from '../../repositories/FairyRepository';
 
@@ -53,7 +54,7 @@ class FairyDetail extends React.Component {
     }
     const skinImage = [info.images.mod1, info.images.mod2, info.images.mod3];
     return (
-      <div className={classes.root}>
+      <Grid className={classes.root}>
         <div className={classes.titleWrapper}>
           <div className={classes.nameWrapper}>
             <div className={classes.krName}>{ info.krName }</div>
@@ -62,14 +63,18 @@ class FairyDetail extends React.Component {
           <div className={classes.number}>NO. { info.id }</div>
         </div>
         <div className={classes.divider} />
-        <div className={classes.contentWrapper}>
-          <div className={classes.imageWrapper}>
+        <Grid container className={classes.contentWrapper}>
+          <Grid item xs={6} className={classes.imageWrapper}>
             <SkinTabbar onChange={this.handleSkinChange} />
             <div className={classes.image}>
-              <img alt={info.name} src={skinImage[this.state.skinNo]} />
+              <img
+                className={classes.skinImage}
+                alt={info.name}
+                src={skinImage[this.state.skinNo]}
+              />
             </div>
-          </div>
-          <div className={classes.infoWrapper}>
+          </Grid>
+          <Grid item xs={6} className={classes.infoWrapper}>
             <div className={classes.infoBox}>
               <div className={classes.infoTitle}>기본정보</div>
               <div className={classes.infoRow}>
@@ -83,9 +88,9 @@ class FairyDetail extends React.Component {
             </div>
             <StatusInfoBox {...Object.assign({ grow: info.grow }, info.stats)} />
             <SkillBox skill={info.skill} />
-          </div>
-        </div>
-      </div>
+          </Grid>
+        </Grid>
+      </Grid>
     );
   }
 }
