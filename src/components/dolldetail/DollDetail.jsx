@@ -122,7 +122,7 @@ class DollDetail extends React.Component {
 
   handleSkinChange(no) {
     const { id } = this.state.info;
-    SpineRepository.fetchSpine(id < 20000 ? id : id - 20000, no)
+    SpineRepository.fetchSpine((id > 20000 && no !== 0) ? id - 20000 : id, no)
       .then(skeleton => this.setState({ skeleton }));
 
     this.setState({ skinNo: no });

@@ -1356,7 +1356,7 @@
   "20057": {
     "code": "AR15Mod",
     "names": {
-      "M1911Mod": [ "png", "atlas", "skel" ]
+      "AR15Mod": [ "png", "atlas", "skel" ]
     }
   },
   "20075": {
