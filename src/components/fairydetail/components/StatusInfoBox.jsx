@@ -16,7 +16,7 @@ class StatusInfoBox extends React.Component {
     this.state = {
       lv: 1,
       mod: 1,
-      stats: target[0].getStats(),
+      stats: target[0].getStats({ level: 1, quality: 1 }),
     };
     this.handleLvChange = this.handleLvChange.bind(this);
     this.handleModChange = this.handleModChange.bind(this);

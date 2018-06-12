@@ -111,6 +111,7 @@ const style = theme => ({
   },
   titleName: {
     float: 'left',
+    marginRight: '10px',
   },
   selectorLabel: {
     fontSize: '0.8em',
