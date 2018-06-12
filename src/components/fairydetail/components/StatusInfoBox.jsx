@@ -76,12 +76,12 @@ class StatusInfoBox extends React.Component {
             onChange={this.handleModChange}
           />
         </div>
-        {this.buildRow('화력', this.state.stats.pow, 55, 'brown')}
-        {this.buildRow('회피', this.state.stats.dodge, 88, 'green')}
-        {this.buildRow('장갑', this.state.stats.armor, 25, 'red')}
-        {this.buildRow('치명상', this.state.stats.critDmg, 40, 'orange')}
-        {this.buildRow('명중', this.state.stats.hit, 90, 'yellow')}
-        {this.buildRow('성장', this.props.grow, 320, 'blue')}
+        {this.buildRow('화력', this.state.stats.pow, 55, '#00b8d4')}
+        {this.buildRow('회피', this.state.stats.dodge, 88, '#00c853')}
+        {this.buildRow('장갑', this.state.stats.armor, 25, '#d50000')}
+        {this.buildRow('치명상', this.state.stats.critDmg, 40, '#ff6d00')}
+        {this.buildRow('명중', this.state.stats.hit, 90, '#ffd600')}
+        {this.buildRow('성장', this.props.grow, 320, '#2962ff')}
       </div>
     );
   }

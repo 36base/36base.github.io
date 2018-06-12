@@ -49,6 +49,7 @@ class SkillBox extends React.Component {
       <div className={classes.infoBox}>
         <div className={classes.title}>
           <div className={classes.titleName}>스킬</div>
+          <div className={classes.selectorLabel}>레벨</div>
           <SmallSelector
             className={classes.selector}
             values={lvValues}
