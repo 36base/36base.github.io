@@ -6,7 +6,7 @@ const style = {
   root: {
     display: 'inline-block',
     position: 'relative',
-    margin: '10',
+    margin: '10px',
     width: 170,
     height: 300,
     textDecoration: 'none',
@@ -26,7 +26,7 @@ const style = {
     width: '100%',
     position: 'absolute',
     bottom: 0,
-    marginBottom: '10px',
+    marginBottom: '20px',
     textAlign: 'center',
   },
   krName: {

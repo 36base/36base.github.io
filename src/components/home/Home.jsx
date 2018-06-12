@@ -1,16 +1,16 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import { Timeline } from 'react-twitter-widgets';
 import CheckList from './components/CheckList';
 
 import './style.css';
 import gfDict from './components/resources/gfdict.png';
 import gfPixel from './components/resources/gfpixel.png';
-import gfSim from './components/resources/gfsim.png';
+// import gfSim from './components/resources/gfsim.png';
 import gfSimPc from './components/resources/gfsimpc.png';
 import gfSimMobile from './components/resources/gfsimmobile.png';
 import gfTwitter from './components/resources/gftwitter.png';
-import gfBjsn from './components/resources/bjsn.jpg';
+// import gfBjsn from './components/resources/bjsn.jpg';
 import gfl2 from './components/resources/gfl2.png';
 import gfMicateam from './components/resources/micateam.png';
 import gfSheet from './components/resources/gfsheet.png';
@@ -24,7 +24,7 @@ class Home extends React.Component {
           <img alt="36베이스 메인배너" src={mainBanner} />
         </div>
         <div className="wrapper-checklist">
-          <CheckList className="checklist"/>
+          <CheckList className="checklist" />
         </div>
         <div className="wrapper-banner-link">
           <a href="http://gall.dcinside.com/mgallery/board/lists/?id=gfl2" target="_blank" rel="noopener noreferrer" ><img alt="DCinside 소녀전선2갤러리" src={gfl2} /></a>

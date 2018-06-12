@@ -11,8 +11,7 @@ import FairyCard from './components/FairyCard';
 const style = {
   wrapper: {
     width: '100%',
-    minWidth: 660,
-    margin: '0 auto',
+    margin: '0 10px',
   },
 };
 // {list.map(fairy => <FairyCard key={fairy.id} {...fairy} />)}
@@ -27,9 +26,9 @@ const style = {
 */
 class FairyDict extends React.Component {
   render() {
-    const { list } = this.props;
+    const { list, classes } = this.props;
     return (
-      <div className={style.wrapper}>
+      <div className={classes.wrapper}>
         {list.map(fairy => <FairyCard key={fairy.id} {...fairy} />)}
       </div>
     );

@@ -1,47 +1,51 @@
 
-const style = {
+const style = theme => ({
   root: {
     width: '100%',
     height: '100%',
+    overflowX: 'hidden',
   },
   titleWrapper: {
-    position: 'relative',
     zIndex: '200',
     boxSizing: 'border-box',
     display: 'flex',
+    height: '64px',
+    padding: '0 10px',
     alignItems: 'center',
     justifyContent: 'space-between',
-    height: '100px',
-    width: '100%',
-    padding: '0px 30px 0px 100px',
   },
   image: {
     width: '100%',
     height: '100%',
     textAlign: 'center',
   },
+  skinImage: {
+    maxWidth: '100vw',
+  },
   contentWrapper: {
-    position: 'relative',
     zIndex: '200',
-    display: 'flex',
-    alignItems: 'center',
-    width: '100%',
   },
   divider: {
     position: 'relative',
     zIndex: '200',
     width: 'calc(100% - 20px)',
     height: '3px',
-    margin: '0px auto',
+    margin: '10px auto',
     backgroundColor: 'black',
   },
   imageWrapper: {
-    width: '50%',
-    height: '100%',
+    [theme.breakpoints.down('md')]: {
+      width: '100%',
+      maxWidth: '100%',
+      flexBasis: '100%',
+    },
   },
   infoWrapper: {
-    width: '50%',
-    minHeight: '100%',
+    [theme.breakpoints.down('md')]: {
+      width: '100%',
+      maxWidth: '100%',
+      flexBasis: '100%',
+    },
   },
   nameWrapper: {
     display: 'flex',
@@ -65,6 +69,10 @@ const style = {
   infoBox: {
     width: '70%',
     margin: '30px 0px',
+    [theme.breakpoints.down('md')]: {
+      width: '90%',
+      margin: '30px auto',
+    },
   },
   infoTitle: {
     justifyContent: 'space-between',
@@ -87,6 +95,38 @@ const style = {
   rowTitle: {
     width: '30%',
   },
-};
+  graph: {
+    width: '60%',
+    height: '20px',
+    border: '1px solid grey',
+    borderRadius: '10px',
+  },
+  title: {
+    display: 'flex',
+    width: '100%',
+    color: 'grey',
+    fontSize: '1.25em',
+    padding: '6px',
+    borderBottom: '1px solid black',
+  },
+  titleName: {
+    float: 'left',
+    marginRight: '10px',
+  },
+  selectorLabel: {
+    fontSize: '0.8em',
+    color: 'black',
+  },
+  skillName: {
+    fontSize: '1.5em',
+    color: 'rgba(0, 0, 0, 0.54)',
+    fontWeight: '400',
+    textAlign: 'center',
+    margin: '10px',
+  },
+  skillBoxYellow: {
+    color: '#FDA50C',
+  },
+});
 
 export default style;
