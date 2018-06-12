@@ -45,7 +45,6 @@ class FairyDetail extends React.Component {
   }
   render() {
     const { classes } = this.props;
-
     const { info } = this.state;
     if (!info) {
       return (
@@ -86,7 +85,7 @@ class FairyDetail extends React.Component {
                 <div>{ timeToStr(info.buildTime) }</div>
               </div>
             </div>
-            <StatusInfoBox {...Object.assign({ grow: info.grow }, info.stats)} />
+            <StatusInfoBox grow={info.grow} stats={info.stats} id={info.id} />
             <SkillBox skill={info.skill} />
           </Grid>
         </Grid>

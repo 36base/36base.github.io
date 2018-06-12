@@ -3,6 +3,7 @@ const style = theme => ({
   root: {
     width: '100%',
     height: '100%',
+    overflowX: 'hidden',
   },
   titleWrapper: {
     zIndex: '200',
@@ -101,15 +102,19 @@ const style = theme => ({
     borderRadius: '10px',
   },
   title: {
-    justifyContent: 'space-between',
+    display: 'flex',
+    width: '100%',
     color: 'grey',
     fontSize: '1.25em',
     padding: '6px',
     borderBottom: '1px solid black',
-    clear: 'both',
   },
   titleName: {
     float: 'left',
+  },
+  selectorLabel: {
+    fontSize: '0.8em',
+    color: 'black',
   },
   skillName: {
     fontSize: '1.5em',
