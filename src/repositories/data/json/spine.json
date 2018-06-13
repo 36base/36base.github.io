@@ -1255,6 +1255,92 @@
       "RAK12": [ "png", "atlas", "skel" ]
     }
   },
+  "207": {
+    "code": "CZ2000",
+    "names": {
+      "CZ2000": [ "png", "atlas", "skel" ]
+    }
+  },
+  "208": {
+    "code": "HK21",
+    "names": {
+      "HK21": [ "png", "atlas", "skel" ]
+    }
+  },
+  "209": {
+    "code": "OTs39",
+    "names": {
+      "OTs39": [ "png", "atlas", "skel" ]
+    }
+  },
+  "210": {
+    "code": "CZ52",
+    "names": {
+      "CZ52": [ "png", "atlas", "skel" ]
+    }
+  },
+  "211": {
+    "code": "DTASRS",
+    "names": {
+      "DTASRS": [ "png", "atlas", "skel" ]
+    }
+  },
+  "212": {
+    "code": "K5",
+    "names": {
+      "K5": [ "png", "atlas", "skel" ],
+      "K5_2002": [ "png", "atlas", "skel" ]
+    }
+  },
+  "213": {
+    "code": "CBJMS",
+    "names": {
+      "CBJMS": [ "png", "atlas", "skel" ],
+      "CBJMS_2205": [ "png", "atlas", "skel" ]
+    }
+  },
+  "215": {
+    "code": "MDR",
+    "names": {
+      "MDR": [ "png", "atlas", "skel" ]
+    }
+  },
+  "216": {
+    "code": "XM8",
+    "names": {
+      "XM8": [ "png", "atlas", "skel" ]
+    }
+  },
+  "217": {
+    "code": "HEZISM1",
+    "names": {
+      "HEZISM1": [ "png", "atlas", "skel" ]
+    }
+  },
+  "218": {
+    "code": "T77",
+    "names": {
+      "T77": [ "png", "atlas", "skel" ]
+    }
+  },
+  "220": {
+    "code": "MP443",
+    "names": {
+      "MP443": [ "png", "atlas", "skel" ]
+    }
+  },
+  "221": {
+    "code": "GSH18",
+    "names": {
+      "GSH18": [ "png", "atlas", "skel" ]
+    }
+  },
+  "222": {
+    "code": "TAC50",
+    "names": {
+      "TAC50": [ "png", "atlas", "skel" ]
+    }
+  },
   "1001": {
     "code": "BB_Noel",
     "names": {

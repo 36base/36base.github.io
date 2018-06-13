@@ -60,36 +60,40 @@ const dollList = dolls.map((doll) => {
   const rank = doll.id > 1000 ? 1 : doll.rank;
   const spine = spineMap.get(doll.id);
 
-  const result = {
-    id: doll.id,
-    name: doll.name,
-    krName: doll.krName,
-    nicknames: doll.nick,
-    illust: doll.illust,
-    voice: doll.voice,
-    type: typeMap.get(doll.type) || {},
-    rank: rankMap.get(rank) || {},
-    spineCode: spine ? spine.code : undefined,
-    icon: getTypeIcon(doll.type, rank),
-    portrait: `${domain}/portraits/${doll.id}.png`,
-    images: buildImage(doll.id, doll.skins, spine),
-    stats: doll.stats,
-    effect: doll.effect,
-    skill: buildSkill(doll.skill),
-    getSkill: doll.getSkill,
-    acquisition: {
-      build: doll.buildTime,
-      drop: doll.drop,
-    },
-  };
+  let result = { };
+  try {
+    result = {
+      id: doll.id,
+      name: doll.name,
+      krName: doll.krName,
+      nicknames: doll.nick,
+      illust: doll.illust,
+      voice: doll.voice,
+      type: typeMap.get(doll.type) || {},
+      rank: rankMap.get(rank) || {},
+      spineCode: spine ? spine.code : undefined,
+      icon: getTypeIcon(doll.type, rank),
+      portrait: `${domain}/portraits/${doll.id}.png`,
+      images: buildImage(doll.id, doll.skins, spine),
+      stats: doll.stats,
+      effect: doll.effect,
+      skill: buildSkill(doll.skill),
+      getSkill: doll.getSkill,
+      acquisition: {
+        build: doll.buildTime,
+        drop: doll.drop,
+      },
+    };
 
-  if (doll.id > 20000) {
-    result.skill2 = buildSkill(doll.skill2);
-    result.getSkill2 = doll.getSkill2;
+    if (doll.id > 20000) {
+      result.skill2 = buildSkill(doll.skill2);
+      result.getSkill2 = doll.getSkill2;
+    }
+  } catch (exception) {
+    result = null;
   }
-
   return result;
-});
+}).filter(doll => doll !== null);
 
 const dollMap = new Map(dollList.map(e => [e.id, e]));
 
