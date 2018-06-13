@@ -11,7 +11,6 @@ import FairyCard from './components/FairyCard';
 const style = {
   wrapper: {
     width: '100%',
-    margin: '0 10px',
   },
 };
 // {list.map(fairy => <FairyCard key={fairy.id} {...fairy} />)}

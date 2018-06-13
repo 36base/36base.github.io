@@ -34,6 +34,12 @@ const style = theme => ({
     minWidth: 0,
     overflow: 'auto',
   },
+  container: {
+    width: '100%',
+    minHeight: 'calc(100% - 64px)',
+    position: 'absolute',
+    top: '64px',
+  },
   mixin: theme.mixins.toolbar,
 });
 
@@ -71,7 +77,7 @@ class App extends React.Component {
         <Menu />
         <main id="content" className={classes.content}>
           <div className={classes.mixin} />
-          <div style={{ width: '100%', height: 'calc(100% - 64px)' }}>
+          <div className={classes.container}>
             <Route exact path="/" component={Home} />
             <Route exact path="/doll" component={DollDict} />
             <Route path="/doll/:id" component={DollDetail} />
