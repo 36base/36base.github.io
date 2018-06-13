@@ -18,6 +18,7 @@ function buildImage(name) {
 
 // TODO:IMAGE 처리 (04-05)
 const fairyList = fairy.map(Fairy => ({
+  getStats: Fairy.getStats({ level: 100, quality: 1 }),
   id: Fairy.id,
   name: Fairy.name,
   krName: Fairy.krName,

@@ -2,36 +2,9 @@ import React from 'react';
 import { withStyles } from 'material-ui/styles';
 
 import SmallSelector from '../../common/SmallSelector';
+import style from './style';
 
 const lvValues = Array(10).fill().map((_, i) => ({ value: i + 1, name: i + 1 }));
-
-const style = ({
-  container: {
-    width: '70%',
-    margin: '30px 0px',
-  },
-  title: {
-    justifyContent: 'space-between',
-    color: 'grey',
-    fontSize: '1.25em',
-    padding: '6px',
-    borderBottom: '1px solid black',
-    clear: 'both',
-  },
-  titleName: {
-    float: 'left',
-  },
-  skillName: {
-    fontSize: '1.5em',
-    color: 'rgba(0, 0, 0, 0.54)',
-    fontWeight: '400',
-    textAlign: 'center',
-    margin: '10px',
-  },
-  skillBoxYellow: {
-    color: '#FDA50C',
-  },
-});
 
 class SkillBox extends React.Component {
   constructor(props) {
@@ -73,9 +46,10 @@ class SkillBox extends React.Component {
     const cp = this.props.skill.dataPool.CP;
 
     return (
-      <div className={classes.container}>
+      <div className={classes.infoBox}>
         <div className={classes.title}>
           <div className={classes.titleName}>스킬</div>
+          <div className={classes.selectorLabel}>레벨</div>
           <SmallSelector
             className={classes.selector}
             values={lvValues}

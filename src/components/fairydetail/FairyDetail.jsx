@@ -1,10 +1,12 @@
 import React from 'react';
 import { withStyles } from 'material-ui/styles';
+import { Grid } from 'material-ui';
 
 import FairyRepository from '../../repositories/FairyRepository';
 
 import StatusInfoBox from './components/StatusInfoBox';
 import SkillBox from './components/SkillBox';
+import SkinTabbar from './components/SkinTabbar';
 import style from './components/style';
 
 function timeToStr(time) {
@@ -23,35 +25,35 @@ class FairyDetail extends React.Component {
 
     this.state = {
       info: undefined,
+      skinNo: 0,
       // modLv: 1,
     };
+    this.handleSkinChange = this.handleSkinChange.bind(this);
     // this.handleModChange = this.handleModChange.bind(this);
   }
 
   componentWillMount() {
     const id = Number(this.props.match.params.id);
-
     FairyRepository.fetchById(id)
       .then(info => this.setState({ info }));
   }
-  // handleModChange(no) {
-  //   this.setState({ modLv: no });
-  // }
 
+  // eslint-disable-next-line
+  handleSkinChange(no) {
+    const number = no - 2;// 왜 인지는 모르겠는데 no로 넘어오는숫자가 2,3,4입니다 그래서 일단은 이렇게 처리합니다.
+    this.setState({ skinNo: number });
+  }
   render() {
     const { classes } = this.props;
-
     const { info } = this.state;
-
     if (!info) {
       return (
         <div>Undefined</div>
       );
     }
-
-
+    const skinImage = [info.images.mod1, info.images.mod2, info.images.mod3];
     return (
-      <div className={classes.root}>
+      <Grid className={classes.root}>
         <div className={classes.titleWrapper}>
           <div className={classes.nameWrapper}>
             <div className={classes.krName}>{ info.krName }</div>
@@ -60,11 +62,18 @@ class FairyDetail extends React.Component {
           <div className={classes.number}>NO. { info.id }</div>
         </div>
         <div className={classes.divider} />
-        <div className={classes.contentWrapper}>
-          <div className={classes.imageWrapper}>
-            <div className={classes.image}><img alt={info.name} src={info.images.mod1} /></div>
-          </div>
-          <div className={classes.infoWrapper}>
+        <Grid container className={classes.contentWrapper}>
+          <Grid item xs={6} className={classes.imageWrapper}>
+            <SkinTabbar onChange={this.handleSkinChange} />
+            <div className={classes.image}>
+              <img
+                className={classes.skinImage}
+                alt={info.name}
+                src={skinImage[this.state.skinNo]}
+              />
+            </div>
+          </Grid>
+          <Grid item xs={6} className={classes.infoWrapper}>
             <div className={classes.infoBox}>
               <div className={classes.infoTitle}>기본정보</div>
               <div className={classes.infoRow}>
@@ -76,11 +85,11 @@ class FairyDetail extends React.Component {
                 <div>{ timeToStr(info.buildTime) }</div>
               </div>
             </div>
-            <StatusInfoBox {...Object.assign({ grow: info.grow }, info.stats)} />
+            <StatusInfoBox grow={info.grow} stats={info.stats} id={info.id} />
             <SkillBox skill={info.skill} />
-          </div>
-        </div>
-      </div>
+          </Grid>
+        </Grid>
+      </Grid>
     );
   }
 }
