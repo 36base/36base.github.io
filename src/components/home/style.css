@@ -4,21 +4,17 @@ body{
   left: 0;
   right: 0;
   bottom: 0;
-  overflow: scroll;
-  overflow-scrolling: touch;
-  -webkit-overflow-scrolling: touch;
 }
 
 #content{
-  max-width: 100%;
-  overflow: scroll;
   -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
 }
 
 .body-content{
   display: grid;
   grid-template-columns: repeat(12,1fr);
-  grid-auto-rows: calc(100vh/12);
+  grid-auto-rows: calc((100vh - 80px) / 12);
   position: relative;
   top: 0;
   left: 0;
@@ -286,6 +282,11 @@ and (orientation: portrait) {
 @media only screen
 and (max-device-width: 480px) {
   body { overflow: visible; }
+
+  .withRouter-Connect-App---container-3{
+    position: absolute;
+    top: 64px;
+  }
 
   .body-content{
     grid-template-columns: 1fr;

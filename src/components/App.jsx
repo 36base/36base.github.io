@@ -36,9 +36,7 @@ const style = theme => ({
   },
   container: {
     width: '100%',
-    minHeight: 'calc(100% - 64px)',
-    position: 'absolute',
-    top: '64px',
+    height: 'calc(100% - 64px)',
   },
   mixin: theme.mixins.toolbar,
 });
