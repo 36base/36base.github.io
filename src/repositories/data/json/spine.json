@@ -1308,5 +1308,79 @@
       "Seele": [ "png", "atlas", "skel" ],
       "Seele_508": [ "png", "atlas", "skel" ]
     }
+  },
+  "1009": {
+    "code": "CLEAR",
+    "names": {
+      "CLEAR": [ "png", "atlas", "skel" ],
+      "CLEAR_509": [ "png", "atlas", "skel" ]
+    }
+  },
+  "1010": {
+    "code": "FAIL",
+    "names": {
+      "FAIL": [ "png", "atlas", "skel" ],
+      "FAIL_509": [ "png", "atlas", "skel" ]
+    }
+  },
+  "20002": {
+    "code": "M1911Mod",
+    "names": {
+      "M1911Mod": [ "png", "atlas", "skel" ]
+    }
+  },
+  "20005": {
+    "code": "M1895Mod",
+    "names": {
+      "M1895Mod": [ "png", "atlas", "skel" ]
+    }
+  },
+  "20039": {
+    "code": "M1891Mod",
+    "names": {
+      "M1891Mod": [ "png", "atlas", "skel" ]
+    }
+  },
+  "20051": {
+    "code": "FN49Mod",
+    "names": {
+      "FN49Mod": [ "png", "atlas", "skel" ]
+    }
+  },
+  "20055": {
+    "code": "M4A1Mod",
+    "names": {
+      "M4A1Mod": [ "png", "atlas", "skel" ]
+    }
+  },
+  "20057": {
+    "code": "AR15Mod",
+    "names": {
+      "AR15Mod": [ "png", "atlas", "skel" ]
+    }
+  },
+  "20075": {
+    "code": "M1918Mod",
+    "names": {
+      "M1918Mod": [ "png", "atlas", "skel" ]
+    }
+  },
+  "20091": {
+    "code": "MP446Mod",
+    "names": {
+      "MP446Mod": [ "png", "atlas", "skel" ]
+    }
+  },
+  "20093": {
+    "code": "IDWMod",
+    "names": {
+      "IDWMod": [ "png", "atlas", "skel" ]
+    }
+  },
+  "20094": {
+    "code": "64TypeMod",
+    "names": {
+      "64TypeMod": [ "png", "atlas", "skel" ]
+    }
   }
 }

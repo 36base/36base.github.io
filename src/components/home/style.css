@@ -75,10 +75,26 @@ body {
   grid-column-start: 9;
   grid-column-end: 13;
   grid-row-start: 1;
+  grid-row-end: 6;
+  width: 100%;
+  max-height: 100vh;
+  padding: 10px 20px 20px 20px;
+}
+
+.wrapper-content-discord{
+  grid-column-start: 9;
+  grid-column-end: 13;
+  grid-row-start: 7;
   grid-row-end:12;
   width: 100%;
   max-height: 100vh;
   padding: 10px 20px 20px 20px;
+}
+
+.wrapper-content-discord > iframe {
+  border: none;
+  height: 100%;
+  width: 100%;
 }
 
 .wrapper-content-twitter > div {
@@ -138,7 +154,7 @@ and (max-width: 640px) {
     float: none;
   }
 
-  .wrapper-content-twitter {
+  .wrapper-content-twitter, .wrapper-content-discord {
     display: none;
   }
 
@@ -199,6 +215,9 @@ and (max-width: 960px){
   grid-row-start: 4;
   grid-row-end: 8;
 }
+.wrapper-content-discord {
+  display: none;
+}
 
   .wrapper-content-twitter > div > iframe {
     height: 32vh !important;
@@ -254,6 +273,9 @@ and (orientation: portrait) {
     grid-column-end: 13;
     grid-row-start: 4;
     grid-row-end: 9;
+  }
+  .wrapper-content-discord{
+    display: none;
   }
 
   .wrapper-content-twitter > div > iframe {
@@ -315,7 +337,7 @@ and (max-device-width: 480px) {
     float: none;
   }
 
-  .wrapper-content-twitter {
+  .wrapper-content-twitter, .wrapper-content-discord {
     display: none;
   }
 

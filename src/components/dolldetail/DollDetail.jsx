@@ -12,13 +12,13 @@ import TypeSwitchBox from './components/TypeSwitchBox';
 import Illust from './components/Illust';
 import BasicInfoBox from './components/BasicInfoBox';
 import StatusInfoBox from './components/StatusInfoBox';
-// import SDBox from './components/SDBox';
+import SDBox from './components/SDBox';
 import SkillBox from './components/SkillBox';
 import EffectBox from './components/EffectBox';
 import AcquisitionInfoBox from './components/AcquisitionInfoBox';
 
 import DollRepository from '../../repositories/DollRepository';
-// import SpineRepository from '../../repositories/SpineRepository';
+import SpineRepository from '../../repositories/SpineRepository';
 
 const style = theme => ({
   wrapper: {
@@ -84,16 +84,9 @@ class DollDetail extends React.Component {
   constructor(props) {
     super(props);
 
-    /* this.state = {
-      info: undefined,
-      skeleton: undefined,
-
-      skinNo: 0,
-      skinType: 'normal',
-      skillLv: 10,
-    }; */
     this.state = {
       info: undefined,
+      skeleton: undefined,
       hasMod: false,
       skinNo: 0,
       skinType: 'normal',
@@ -120,16 +113,17 @@ class DollDetail extends React.Component {
           if (info) this.setState({ hasMod: true });
         });
     }
-    // SpineRepository.fetchDefaultSpine(id)
-    //   .then(skeleton => this.setState({ skeleton }));
+    SpineRepository.fetchDefaultSpine(id)
+      .then(skeleton => this.setState({ skeleton }));
   }
   componentDidMount() {
     window.scrollTo(0, 0);
   }
 
   handleSkinChange(no) {
-    // SpineRepository.fetchSpine(this.state.info.id, no)
-    //   .then(skeleton => this.setState({ skeleton }));
+    const { id } = this.state.info;
+    SpineRepository.fetchSpine((id > 20000 && no !== 0) ? id - 20000 : id, no)
+      .then(skeleton => this.setState({ skeleton }));
 
     this.setState({ skinNo: no });
   }
@@ -161,18 +155,16 @@ class DollDetail extends React.Component {
 
   render() {
     const { classes } = this.props;
-    // const { skeleton } = this.state;
     const {
       info,
+      skeleton,
       skinNo,
       skinType,
       skillLv,
       skill2Lv,
     } = this.state;
 
-    if (!info) {
-      return null;
-    }
+    if (!info) { return null; }
 
     let color = '#505694';
 
@@ -184,8 +176,6 @@ class DollDetail extends React.Component {
       default: color = '#505694';
     }
 
-    // between Status and Skill
-    // {this.wrap(<SDBox width={250} height={250} skeleton={skeleton} />)}
     return (
       <div className={classes.wrapper}>
         <Background color={color} />
@@ -212,11 +202,12 @@ class DollDetail extends React.Component {
           />)}
           {this.wrap(<StatusInfoBox {...info.stats} />)}
           {this.state.hasMod
-            ? this.wrap(<a href={info.id + 20000} className={classes.button}>개장 Ver link</a>)
+            ? this.wrap(<a href={info.id + 20000} className={classes.button}>개장 Ver Link</a>)
             : <div />}
           {info.id > 20000
-            ? this.wrap(<a href={info.id - 20000} className={classes.button}>개장 이전 Ver link</a>)
+            ? this.wrap(<a href={info.id - 20000} className={classes.button}>개장 이전 Ver Link</a>)
             : <div />}
+          {this.wrap(<SDBox width={250} height={250} skeleton={skeleton} />)}
           {this.wrap(<SkillBox
             hasNight={!(info.skill.nightDataPool === undefined)}
             skill={info.getSkill({ level: skillLv, night: false })}

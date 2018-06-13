@@ -107,6 +107,9 @@ class About extends React.Component {
                 <a className={classes.link} href="https://discord.gg/qrG9gf9">Discord</a>
               </div>
             </div>
+            <div>
+              &copy; 2018 Digital Sky Entertainment Limited. All rights reserved.
+            </div>
           </Card>
         </div>
       </div>
