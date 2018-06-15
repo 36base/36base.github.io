@@ -3,7 +3,6 @@ const style = theme => ({
   root: {
     width: '100%',
     height: '100%',
-    overflowX: 'hidden',
   },
   titleWrapper: {
     zIndex: '200',

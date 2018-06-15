@@ -32,12 +32,22 @@ class SkillBox extends React.Component {
 
   render() {
     const { classes } = this.props;
-    const description = this.getDesc(
+    let description = this.getDesc(
       this.props.skill.desc,
       this.props.skill.dataPool,
       this.state.lv,
     );
-
+    if (this.props.skill.id === 1011) {
+      if (this.props.skill.dataPool.MV[9] === 0) {
+        const temp = this.props.skill.dataPool;
+        temp.MV[9] = '무한대';
+        description = this.getDesc(
+          this.props.skill.desc,
+          temp,
+          this.state.lv,
+        );
+      }
+    }
     let cd = this.props.skill.dataPool.CD;
     if (cd === undefined) {
       cd = '없음';
