@@ -20,7 +20,7 @@ class Calculator extends React.Component {
   }
 
   oath(e) {
-    this.setState({ oath: e.target.checked }, this.calc());
+    this.setState({ oath: e.target.checked }, () => this.calc());
   }
 
   calc() {
@@ -151,7 +151,7 @@ class Calculator extends React.Component {
     const nowLv = Number(this.nowLv.value);
     const nowExp = Number(this.nowExp.value);
     const targetLv = Number(this.targetLv.value);
-    const oath = (this.state.oath) ? 1 : 2;
+    const oath = (!this.state.oath) ? 1 : 2;
     let result = 0;
     if (
       ((dollAccExp[nowLv + 1] - dollAccExp[nowLv]) >= nowExp) &&

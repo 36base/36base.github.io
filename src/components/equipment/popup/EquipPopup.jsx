@@ -88,7 +88,7 @@ class EquipPopup extends React.Component {
                     <td className={classes.statName}>{EquipUtil.StatDict[key]}</td>
                     <td className={classes.statNum}>
                       {
-                        Math.round(this.state.stats[key] +
+                        Math.floor(this.state.stats[key] +
                           (this.state.stats[key] *
                             (data.stats[key].upgrade *
                               (Number(this.state.level) / 100)

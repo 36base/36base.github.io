@@ -3,7 +3,8 @@
     "code": "M1873",
     "names": {
       "M1873": [ "png", "atlas", "skel" ],
-      "M1873_301": [ "png", "atlas", "skel" ]
+      "M1873_301": [ "png", "atlas", "skel" ],
+      "m1873_2105": [ "png", "atlas", "skel" ]
     }
   },
   "2": {
@@ -115,7 +116,8 @@
     "code": "Vector",
     "names": {
       "Vector": [ "png", "atlas", "skel" ],
-      "Vector_2": [ "png", "atlas", "skel" ]
+      "Vector_2": [ "png", "atlas", "skel" ],
+      "Vector_1901": [ "png", "atlas", "skel" ]
     }
   },
   "21": {
@@ -155,7 +157,8 @@
     "names": {
       "MP5": [ "png", "atlas", "skel" ],
       "MP5_3": [ "png", "atlas", "skel" ],
-      "MP5_1205": [ "png", "atlas", "skel" ]
+      "MP5_1205": [ "png", "atlas", "skel" ],
+      "MP5_1903": [ "png", "atlas", "skel" ]
     }
   },
   "27": {
@@ -163,6 +166,12 @@
     "names": {
       "VZ61": [ "png", "atlas", "skel" ],
       "VZ61_801": [ "png", "atlas", "skel" ]
+    }
+  },
+  "28": {
+    "code": "MP7",
+    "names": {
+      "MP7": [ "png", "atlas", "skel" ]
     }
   },
   "29": {
@@ -266,7 +275,8 @@
     "code": "SV98",
     "names": {
       "SV98": [ "png", "atlas", "skel" ],
-      "SV98_502": [ "png", "atlas", "skel" ]
+      "SV98_502": [ "png", "atlas", "skel" ],
+      "SV98_1906": [ "png", "atlas", "skel" ]
     }
   },
   "46": {
@@ -388,7 +398,8 @@
     "names": {
       "G36": [ "png", "atlas", "skel" ],
       "G36_905": [ "png", "atlas", "skel" ],
-      "G36_1507": [ "png", "atlas", "skel" ]
+      "G36_1507": [ "png", "atlas", "skel" ],
+      "G36_1904": [ "png", "atlas", "skel" ]
     }
   },
   "65": {
@@ -402,7 +413,8 @@
     "code": "56-1type",
     "names": {
       "56-1type": [ "png", "atlas", "skel" ],
-      "56-1type_401": [ "png", "atlas", "skel" ]
+      "56-1type_401": [ "png", "atlas", "skel" ],
+      "56-1type_1905": [ "png", "atlas", "skel" ]
     }
   },
   "68": {
@@ -437,6 +449,12 @@
       "TAR21_1305": [ "png", "atlas", "skel" ]
     }
   },
+  "73": {
+    "code": "AUG",
+    "names": {
+      "AUG": [ "png", "atlas", "skel" ]
+    }
+  },
   "74": {
     "code": "SIG510",
     "names": {
@@ -467,7 +485,8 @@
   "79": {
     "code": "M249SAW",
     "names": {
-      "M249SAW": [ "png", "atlas", "skel" ]
+      "M249SAW": [ "png", "atlas", "skel" ],
+      "M249SAW_1301": [ "png", "atlas", "skel" ]
     }
   },
   "80": {
@@ -481,7 +500,8 @@
   "81": {
     "code": "LWMMG",
     "names": {
-      "LWMMG": [ "png", "atlas", "skel" ]
+      "LWMMG": [ "png", "atlas", "skel" ],
+      "LWMMG_1808": [ "png", "atlas", "skel" ]
     }
   },
   "82": {
@@ -551,7 +571,8 @@
   "93": {
     "code": "IDW",
     "names": {
-      "IDW": [ "png", "atlas", "skel" ]
+      "IDW": [ "png", "atlas", "skel" ],
+      "idw_2108": [ "png", "atlas", "skel" ]
     }
   },
   "94": {
@@ -573,7 +594,8 @@
     "names": {
       "Grizzly": [ "png", "atlas", "skel" ],
       "Grizzly_105": [ "png", "atlas", "skel" ],
-      "Grizzly_903": [ "png", "atlas", "skel" ]
+      "Grizzly_903": [ "png", "atlas", "skel" ],
+      "grizzly_2102": [ "png", "atlas", "skel" ]
     }
   },
   "97": {
@@ -595,7 +617,8 @@
     "code": "Mk23",
     "names": {
       "Mk23": [ "png", "atlas", "skel" ],
-      "Mk23_8": [ "png", "atlas", "skel" ]
+      "Mk23_8": [ "png", "atlas", "skel" ],
+      "Mk23_1805": [ "png", "atlas", "skel" ]
     }
   },
   "100": {
@@ -610,7 +633,8 @@
     "code": "UMP9",
     "names": {
       "UMP9": [ "png", "atlas", "skel" ],
-      "UMP9_409": [ "png", "atlas", "skel" ]
+      "UMP9_409": [ "png", "atlas", "skel" ],
+      "ump9_2106": [ "png", "atlas", "skel" ]
     }
   },
   "102": {
@@ -623,7 +647,8 @@
     "code": "UMP45",
     "names": {
       "UMP45": [ "png", "atlas", "skel" ],
-      "UMP45_410": [ "png", "atlas", "skel" ]
+      "UMP45_410": [ "png", "atlas", "skel" ],
+      "ump45_2107": [ "png", "atlas", "skel" ]
     }
   },
   "104": {
@@ -697,7 +722,8 @@
     "names": {
       "Welrod": [ "png", "atlas", "skel" ],
       "Welrod_411": [ "png", "atlas", "skel" ],
-      "Welrod_1401": [ "png", "atlas", "skel" ]
+      "Welrod_1401": [ "png", "atlas", "skel" ],
+      "welrod_2103": [ "png", "atlas", "skel" ]
     }
   },
   "115": {
@@ -815,7 +841,8 @@
   "131": {
     "code": "EVO3",
     "names": {
-      "EVO3": [ "png", "atlas", "skel" ]
+      "EVO3": [ "png", "atlas", "skel" ],
+      "evo3_2109": [ "png", "atlas", "skel" ]
     }
   },
   "132": {
@@ -847,7 +874,8 @@
   "136": {
     "code": "PP19",
     "names": {
-      "PP19": [ "png", "atlas", "skel" ]
+      "PP19": [ "png", "atlas", "skel" ],
+      "PP19_2204": [ "png", "atlas", "skel" ]
     }
   },
   "137": {
@@ -885,7 +913,9 @@
     "code": "FN57",
     "names": {
       "FN57": [ "png", "atlas", "skel" ],
-      "FN57_1109": [ "png", "atlas", "skel" ]
+      "FN57_1109": [ "png", "atlas", "skel" ],
+      "FN57_1902": [ "png", "atlas", "skel" ],
+      "FN57_2203": [ "png", "atlas", "skel" ]
     }
   },
   "143": {
@@ -968,7 +998,8 @@
   "155": {
     "code": "M590",
     "names": {
-      "M590": [ "png", "atlas", "skel" ]
+      "M590": [ "png", "atlas", "skel" ],
+      "M590_1806": [ "png", "atlas", "skel" ]
     }
   },
   "156": {
@@ -1071,7 +1102,8 @@
   "174": {
     "code": "81typeR",
     "names": {
-      "81typeR": [ "png", "atlas", "skel" ]
+      "81typeR": [ "png", "atlas", "skel" ],
+      "81typeR_1807": [ "png", "atlas", "skel" ]
     }
   },
   "175": {
@@ -1090,7 +1122,8 @@
     "code": "KLIN",
     "names": {
       "KLIN": [ "png", "atlas", "skel" ],
-      "KLIN_1204": [ "png", "atlas", "skel" ]
+      "KLIN_1204": [ "png", "atlas", "skel" ],
+      "KLIN_2003": [ "png", "atlas", "skel" ]
     }
   },
   "178": {
@@ -1102,7 +1135,9 @@
   "179": {
     "code": "DSR50",
     "names": {
-      "DSR50": [ "png", "atlas", "skel" ]
+      "DSR50": [ "png", "atlas", "skel" ],
+      "DSR50_1801": [ "png", "atlas", "skel" ],
+      "dsr50_2101": [ "png", "atlas", "skel" ]
     }
   },
   "180": {
@@ -1183,7 +1218,8 @@
   "192": {
     "code": "JS-127",
     "names": {
-      "JS-127": [ "png", "atlas", "skel" ]
+      "JS-127": [ "png", "atlas", "skel" ],
+      "JS-127_1804": [ "png", "atlas", "skel" ]
     }
   },
   "193": {
@@ -1195,7 +1231,8 @@
   "194": {
     "code": "K2",
     "names": {
-      "K2": [ "png", "atlas", "skel" ]
+      "K2": [ "png", "atlas", "skel" ],
+      "K2_2001": [ "png", "atlas", "skel" ]
     }
   },
   "195": {
@@ -1208,19 +1245,22 @@
     "code": "ZastavaM21",
     "names": {
       "ZastavaM21": [ "png", "atlas", "skel" ],
-      "ZastavaM21_1603": [ "png", "atlas", "skel" ]
+      "ZastavaM21_1603": [ "png", "atlas", "skel" ],
+      "zastavam21_2104": [ "png", "atlas", "skel" ]
     }
   },
   "197": {
     "code": "Carcano1891",
     "names": {
-      "Carcano1891": [ "png", "atlas", "skel" ]
+      "Carcano1891": [ "png", "atlas", "skel" ],
+      "Carcano1891_2201": [ "png", "atlas", "skel" ]
     }
   },
   "198": {
     "code": "Carcano1938",
     "names": {
-      "Carcano1938": [ "png", "atlas", "skel" ]
+      "Carcano1938": [ "png", "atlas", "skel" ],
+      "Carcano1938_2202": [ "png", "atlas", "skel" ]
     }
   },
   "199": {
@@ -1239,6 +1279,25 @@
     "code": "GepardM1",
     "names": {
       "GepardM1": [ "png", "atlas", "skel" ]
+    }
+  },
+  "202": {
+    "code": "Thunder50",
+    "names": {
+      "Thunder50": [ "png", "atlas", "skel" ],
+      "Thunder50_2206": [ "png", "atlas", "skel" ]
+    }
+  },
+  "203": {
+    "code": "PDW",
+    "names": {
+      "PDW": [ "png", "atlas", "skel" ]
+    }
+  },
+  "204": {
+    "code": "Ballista",
+    "names": {
+      "Ballista": [ "png", "atlas", "skel" ]
     }
   },
   "205": {
@@ -1406,7 +1465,7 @@
     "code": "FAIL",
     "names": {
       "FAIL": [ "png", "atlas", "skel" ],
-      "FAIL_509": [ "png", "atlas", "skel" ]
+      "FAIL_510": [ "png", "atlas", "skel" ]
     }
   },
   "20002": {

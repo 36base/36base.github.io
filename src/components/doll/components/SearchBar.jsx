@@ -73,38 +73,39 @@ class SearchBar extends React.Component {
     const { value } = this.state;
     const isEmpty = value.length === 0 && filters.length === 0;
 
-    const chips = filters.map((item) => {
-      if (item.type !== 'name') return '';
-      return (
-        <Chip
-          className={classes.chip}
-          key={item.query}
-          tabIndex={-1}
-          label={item.query}
-          onDelete={() => this.props.deleteFilter(item)}
-        />
-      );
-    });
+    const chips = filters.filter(item => item.type === 'name').map(item => (
+      <Chip
+        className={classes.chip}
+        key={item.query}
+        tabIndex={-1}
+        label={item.query}
+        onDelete={() => this.props.deleteFilter(item)}
+      />
+    ));
+
+    const checks = filters.filter(item => item.type !== 'name');
+    const checkVal = { };
+    for (let i = 0; i < checks.length; i += 1) checkVal[checks[i].query] = true;
 
     return (
       <Grid container>
         <Grid item xs={12} md={4} container>
           <Grid item xs={12} md={12}>
-            <div className={classes.checkbox}><Checkbox id="2성" onChange={this.onRankCheckboxChange} />2성</div>
-            <div className={classes.checkbox}><Checkbox id="3성" onChange={this.onRankCheckboxChange} />3성</div>
-            <div className={classes.checkbox}><Checkbox id="4성" onChange={this.onRankCheckboxChange} />4성</div>
-            <div className={classes.checkbox}><Checkbox id="5성" onChange={this.onRankCheckboxChange} />5성</div>
+            <div className={classes.checkbox}><Checkbox id="2성" onChange={this.onRankCheckboxChange} checked={checkVal['2성'] ? 1 : 0} />2성</div>
+            <div className={classes.checkbox}><Checkbox id="3성" onChange={this.onRankCheckboxChange} checked={checkVal['3성'] ? 1 : 0} />3성</div>
+            <div className={classes.checkbox}><Checkbox id="4성" onChange={this.onRankCheckboxChange} checked={checkVal['4성'] ? 1 : 0} />4성</div>
+            <div className={classes.checkbox}><Checkbox id="5성" onChange={this.onRankCheckboxChange} checked={checkVal['5성'] ? 1 : 0} />5성</div>
             <div className={classes.checkbox}>
-              <Checkbox id="엑스트라" onChange={this.onRankCheckboxChange} />Extra
+              <Checkbox id="엑스트라" onChange={this.onRankCheckboxChange} checked={checkVal['엑스트라'] ? 1 : 0} />Extra
             </div>
           </Grid>
           <Grid item xs={12} md={12}>
-            <div className={classes.checkbox}><Checkbox id="HG" onChange={this.onTypeCheckboxChange} />HG</div>
-            <div className={classes.checkbox}><Checkbox id="SMG" onChange={this.onTypeCheckboxChange} />SMG</div>
-            <div className={classes.checkbox}><Checkbox id="AR" onChange={this.onTypeCheckboxChange} />AR</div>
-            <div className={classes.checkbox}><Checkbox id="RF" onChange={this.onTypeCheckboxChange} />RF</div>
-            <div className={classes.checkbox}><Checkbox id="MG" onChange={this.onTypeCheckboxChange} />MG</div>
-            <div className={classes.checkbox}><Checkbox id="SG" onChange={this.onTypeCheckboxChange} />SG</div>
+            <div className={classes.checkbox}><Checkbox id="HG" onChange={this.onTypeCheckboxChange} checked={checkVal.HG ? 1 : 0} />HG</div>
+            <div className={classes.checkbox}><Checkbox id="SMG" onChange={this.onTypeCheckboxChange} checked={checkVal.SMG ? 1 : 0} />SMG</div>
+            <div className={classes.checkbox}><Checkbox id="AR" onChange={this.onTypeCheckboxChange} checked={checkVal.AR ? 1 : 0} />AR</div>
+            <div className={classes.checkbox}><Checkbox id="RF" onChange={this.onTypeCheckboxChange} checked={checkVal.RF ? 1 : 0} />RF</div>
+            <div className={classes.checkbox}><Checkbox id="MG" onChange={this.onTypeCheckboxChange} checked={checkVal.MG ? 1 : 0} />MG</div>
+            <div className={classes.checkbox}><Checkbox id="SG" onChange={this.onTypeCheckboxChange} checked={checkVal.SG ? 1 : 0} />SG</div>
           </Grid>
         </Grid>
         <Grid className={classes.container} item xs={12} md={6}>
