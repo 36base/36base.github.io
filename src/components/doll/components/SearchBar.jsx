@@ -96,7 +96,7 @@ class SearchBar extends React.Component {
             <div className={classes.checkbox}><Checkbox id="4성" onChange={this.onRankCheckboxChange} checked={checkVal['4성'] ? 1 : 0} />4성</div>
             <div className={classes.checkbox}><Checkbox id="5성" onChange={this.onRankCheckboxChange} checked={checkVal['5성'] ? 1 : 0} />5성</div>
             <div className={classes.checkbox}>
-              <Checkbox id="엑스트라" onChange={this.onRankCheckboxChange} checked={checkVal.Extra ? 1 : 0} />Extra
+              <Checkbox id="엑스트라" onChange={this.onRankCheckboxChange} checked={checkVal['엑스트라'] ? 1 : 0} />Extra
             </div>
           </Grid>
           <Grid item xs={12} md={12}>
