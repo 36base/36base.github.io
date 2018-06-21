@@ -2,7 +2,7 @@ import cardbg from './resources/fairy_bg.png';
 import iconBattle from './resources/battle.png';
 import iconStrategy from './resources/strategy.png';
 
-const style = {
+const style = theme => ({
   root: {
     display: 'inline-block',
     position: 'relative',
@@ -10,6 +10,11 @@ const style = {
     width: 170,
     height: 300,
     textDecoration: 'none',
+    [theme.breakpoints.down(480)]: {
+      width: 150,
+      height: 265,
+      margin: '10px 5px',
+    },
   },
 
   background: {
@@ -28,6 +33,9 @@ const style = {
     bottom: 0,
     marginBottom: '20px',
     textAlign: 'center',
+    [theme.breakpoints.down(480)]: {
+      marginBottom: '12px',
+    },
   },
   krName: {
     marginBottom: '10px',
@@ -42,7 +50,6 @@ const style = {
     color: '#fefefe',
   },
   skillIdWrapper: {
-
   },
   battle: {
     backgroundImage: `url(${iconBattle})`,
@@ -65,6 +72,6 @@ const style = {
     backgroundSize: '100%',
     backgroundRepeat: 'no-repeat',
   },
-};
+});
 
 export default style;
