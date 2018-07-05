@@ -1,6 +1,6 @@
 import cardbg from './resources/cardbg.png';
 
-const style = {
+const style = theme => ({
   root: {
     display: 'inline-block',
     position: 'relative',
@@ -10,6 +10,12 @@ const style = {
     textDecoration: 'none',
     backgroundImage: `url(${cardbg})`,
     backgroundSize: '100%',
+    [theme.breakpoints.down(480)]: {
+      width: 150,
+      height: 300,
+      margin: '10px 5px',
+      backgroundSize: '170px 300px',
+    },
   },
   typeIcon: {
     position: 'absolute',
@@ -32,6 +38,12 @@ const style = {
     zIndex: 1000,
     '&:hover': {
       backgroundPosition: '-100% 0',
+    },
+    [theme.breakpoints.down(480)]: {
+      backgroundSize: 300,
+      '&:hover': {
+        backgroundPosition: '-100% 0',
+      },
     },
   },
   caption: {
@@ -56,6 +68,11 @@ const style = {
     fontSize: 19,
     fontWeight: 400,
     color: '#ababab',
+    [theme.breakpoints.down(480)]: {
+      fontSize: 12,
+      left: 129,
+      lineHeight: '25px',
+    },
   },
 
   general: { background: 'linear-gradient(135deg, #a2a2a2, #a2a2a2 85%, transparent 85%)' },
@@ -71,6 +88,6 @@ const style = {
     fontSize: 20,
     color: '#FFB600',
   },
-};
+});
 
 export default style;
