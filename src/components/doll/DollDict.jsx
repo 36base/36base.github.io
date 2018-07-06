@@ -19,6 +19,37 @@ const style = theme => ({
       minWidth: 660,
     },
   },
+  cardWrapper: {
+    width: '1520px',
+    margin: '0 auto',
+    [theme.breakpoints.down(1857)]: {
+      width: '1330px',
+    },
+    [theme.breakpoints.down(1667)]: {
+      width: '1140px',
+    },
+    [theme.breakpoints.down(1560)]: {
+      width: '1330px',
+    },
+    [theme.breakpoints.down(1370)]: {
+      width: '1140px',
+    },
+    [theme.breakpoints.down(1180)]: {
+      width: '950px',
+    },
+    [theme.breakpoints.down(990)]: {
+      width: '760px',
+    },
+    [theme.breakpoints.down(800)]: {
+      width: '570px',
+    },
+    [theme.breakpoints.down(610)]: {
+      width: '380px',
+    },
+    [theme.breakpoints.down(480)]: {
+      width: '320px',
+    },
+  },
 });
 
 class DollDict extends React.Component {
@@ -30,7 +61,7 @@ class DollDict extends React.Component {
         <Grid item xs={12}>
           <SearchBar />
         </Grid>
-        <Grid item xs={12}>
+        <Grid className={classes.cardWrapper}>
           {list.map(doll => <DollCard key={doll.id} {...doll} />)}
         </Grid>
       </Grid>
