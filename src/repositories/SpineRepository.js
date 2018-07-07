@@ -4,8 +4,8 @@ import SkeletonBinary from '../utils/SkeletonBinary';
 
 import dollSpines from '../repositories/data/dollSpines';
 
-// const domain = 'https://girlsfrontline.kr/hotlink-ok/girlsfrontline-resources/spine/';
-const domain = 'http://127.0.0.1:8887/spine/';
+const domain = 'https://girlsfrontline.kr/hotlink-ok/girlsfrontline-resources/spine/';
+// const domain = 'http://127.0.0.1:8887/spine/';
 const loader = new PIXI.loaders.Loader(domain);
 const cache = {};
 const xhrTypeMap = {

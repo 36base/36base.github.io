@@ -1046,6 +1046,24 @@
       "SPAS12": [ "png", "atlas", "skel" ]
     }
   },
+  "163": {
+    "code": "AA12",
+    "names": {
+      "aa12": [ "png", "atlas", "skel" ]
+    }
+  },
+  "164": {
+    "code": "FP6",
+    "names": {
+      "fp6": [ "png", "atlas", "skel" ]
+    }
+  },
+  "165": {
+    "code": "M1014",
+    "names": {
+      "m1014": [ "png", "atlas", "skel" ]
+    }
+  },
   "166": {
     "code": "CZ75",
     "names": {
