@@ -27,7 +27,7 @@ class DollCard extends React.Component {
         <div className={classes.rankbar}>
           <Star className={classes.star} count={rank.starCnt} />
         </div>
-        <LazyLoad height={214} offset={100} overflow once>
+        <LazyLoad>
           <div className={classes.portrait} style={{ backgroundImage: `url(${portrait})` }} />
         </LazyLoad>
         <Typography

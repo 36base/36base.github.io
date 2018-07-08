@@ -23,8 +23,6 @@ import './App.css';
 
 const style = theme => ({
   root: {
-    display: 'flex',
-    alignItems: 'stretch',
     height: '100%',
   },
   content: {
@@ -32,11 +30,14 @@ const style = theme => ({
     backgroundColor: theme.palette.background.default,
     padding: 0,
     minWidth: 0,
-    overflow: 'auto',
+    [theme.breakpoints.up('lg')]: {
+      paddingLeft: 320,
+      paddingRight: 0,
+    },
   },
   container: {
     width: '100%',
-    height: 'calc(100% - 64px)',
+    height: '100%',
   },
   mixin: theme.mixins.toolbar,
 });
