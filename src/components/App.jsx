@@ -26,6 +26,7 @@ const style = theme => ({
     height: '100%',
   },
   content: {
+    height: 'calc(100% - 64px)',
     flexGrow: 1,
     backgroundColor: theme.palette.background.default,
     padding: 0,
