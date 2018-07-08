@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, Typography } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 import { Link } from 'react-router-dom';
+import LazyLoad from 'react-lazyload';
 
 import Star from '../../common/Star';
 import style from './style';
@@ -26,7 +27,9 @@ class DollCard extends React.Component {
         <div className={classes.rankbar}>
           <Star className={classes.star} count={rank.starCnt} />
         </div>
-        <div className={classes.portrait} style={{ backgroundImage: `url(${portrait})` }} />
+        <LazyLoad height={214} offset={100} overflow once>
+          <div className={classes.portrait} style={{ backgroundImage: `url(${portrait})` }} />
+        </LazyLoad>
         <Typography
           className={[classes.caption, classes[rank.name.toLowerCase()]].join(' ')}
           component="div"
