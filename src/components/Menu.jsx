@@ -16,6 +16,9 @@ const style = theme => ({
   collapse: {
     paddingLeft: theme.spacing.unit * 3,
   },
+  icon: {
+    width: '30px',
+  },
   mixin: theme.mixins.toolbar,
 });
 
@@ -66,7 +69,9 @@ class Menu extends React.Component {
         button
         onClick={() => this.routeTo(value.to)}
       >
-        <ListItemIcon><Icon className={value.icon ? `fas ${value.icon}` : ''} /></ListItemIcon>
+        <div className={this.props.classes.icon}>
+          <ListItemIcon><Icon className={value.icon ? `fas ${value.icon}` : ''} /></ListItemIcon>
+        </div>
         <ListItemText primary={value.name} />
       </ListItem>
     );
