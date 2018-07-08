@@ -52,13 +52,15 @@ const style = theme => ({
     },
   },
   linkWrapper: {
-    justifyContent: 'center',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   linkButton: {
     textAlign: 'center',
-    padding: '10px',
-    margin: '10px',
     display: 'flex',
+    margin: 10,
+    textDecoration: 'none',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -68,7 +70,6 @@ const style = theme => ({
   link: {
     display: 'inline-block',
     marginLeft: '10px',
-    textDecoration: 'none',
     color: 'black',
     fontSize: '25px',
     fontWeight: 'bolder',
@@ -98,14 +99,14 @@ class About extends React.Component {
           <Card className={classes.contactWrapper}>
             <h1 style={{ color: 'gray' }} >36 베이스</h1>
             <div className={classes.linkWrapper}>
-              <div className={classes.linkButton}>
+              <a className={classes.linkButton} target="_blank" rel="noopener noreferrer" href="https://github.com/36base">
                 <img className={classes.icon} src={iconGithub} alt="GitHubIcon" />
-                <a className={classes.link} href="https://github.com/36base">GitHub</a>
-              </div>
-              <div className={classes.linkButton}>
+                <div className={classes.link}>GitHub</div>
+              </a>
+              <a className={classes.linkButton} target="_blank" rel="noopener noreferrer" href="https://discord.gg/qrG9gf9" >
                 <img className={classes.icon} src={iconDiscord} alt="DiscordIcon" />
-                <a className={classes.link} href="https://discord.gg/qrG9gf9">Discord</a>
-              </div>
+                <div className={classes.link}>Discord</div>
+              </a>
             </div>
             <div>
               &copy; 2018 Digital Sky Entertainment Limited. All rights reserved.
