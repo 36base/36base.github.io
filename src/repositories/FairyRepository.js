@@ -16,6 +16,10 @@ function buildImage(name) {
   };
 }
 
+function buildIcon(name) {
+  return `${domain}/skill/${name}.png`;
+}
+
 // TODO:IMAGE 처리 (04-05)
 const fairyList = fairy.map(Fairy => ({
   getStats: Fairy.getStats({ level: 100, quality: 1 }),
@@ -28,6 +32,7 @@ const fairyList = fairy.map(Fairy => ({
   skill: Fairy.skill,
   buildTime: Fairy.buildTime,
   images: buildImage(Fairy.name),
+  skillIcon: buildIcon(Fairy.name),
 }));
 
 const fairyMap = new Map(fairyList.map(e => [e.id, e]));
