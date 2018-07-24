@@ -68,9 +68,14 @@ class SkillBox extends React.Component {
           />
         </div>
         <div className={classes.body}>
-          <div className={classes.skillName}>{ this.props.skill.name }</div>
-          <div> 쿨다운 <span className={classes.skillBoxYellow}>{ cd }</span></div>
-          <div> 지령 소모치 <span className={classes.skillBoxYellow}>{ cp }</span></div>
+          <div className={classes.skillInfo}>
+            <img src={this.props.icon} alt="skill icon" className={classes.skillIcon} />
+            <div className={classes.skillName}>{ this.props.skill.name }</div>
+            <div>
+              <div> 쿨다운 <span className={classes.skillBoxYellow}>{ cd }</span></div>
+              <div> 지령 소모치 <span className={classes.skillBoxYellow}>{ cp }</span></div>
+            </div>
+          </div>
           <div>{ description }</div>
         </div>
       </div>

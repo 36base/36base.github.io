@@ -86,7 +86,7 @@ class FairyDetail extends React.Component {
               </div>
             </div>
             <StatusInfoBox grow={info.grow} stats={info.stats} id={info.id} />
-            <SkillBox skill={info.skill} />
+            <SkillBox skill={info.skill} icon={info.skillIcon} />
           </Grid>
         </Grid>
       </Grid>

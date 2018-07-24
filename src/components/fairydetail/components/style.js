@@ -126,6 +126,15 @@ const style = theme => ({
   skillBoxYellow: {
     color: '#FDA50C',
   },
+  skillIcon: {
+    width: '64px',
+    height: '64px',
+  },
+  skillInfo: {
+    display: 'flex',
+    justifyContent: 'space-around',
+    margin: '10px 0',
+  },
 });
 
 export default style;
