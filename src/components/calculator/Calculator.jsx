@@ -13,10 +13,12 @@ class Calculator extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { oath: false, report: 'N/A' };
+    this.state = { oath: false, report: 'N/A', reportFairy: 'N/A' };
 
     this.oath = this.oath.bind(this);
     this.calc = this.calc.bind(this);
+    this.calcFairy = this.calcFairy.bind(this);
+    this.calcDoll = this.calcDoll.bind(this);
   }
 
   oath(e) {
@@ -24,6 +26,10 @@ class Calculator extends React.Component {
   }
 
   calc() {
+    this.calcDoll();
+    this.calcFairy();
+  }
+  calcDoll() {
     const dollAccExp = [];
 
     dollAccExp[0] = 0;
@@ -149,21 +155,35 @@ class Calculator extends React.Component {
     dollAccExp[120] = 30283200;
 
     const nowLv = Number(this.nowLv.value);
-    const nowExp = Number(this.nowExp.value);
-    const targetLv = Number(this.targetLv.value);
+    let nowExp = Number(this.nowExp.value);
+    let targetLv = Number(this.targetLv.value);
     const oath = (!this.state.oath) ? 1 : 2;
     let result = 0;
     if (
       ((dollAccExp[nowLv + 1] - dollAccExp[nowLv]) >= nowExp) &&
       (nowExp >= 0) && (targetLv > nowLv)
     ) {
-      if (
-        (targetLv <= 110 && nowLv >= 100) ||
-        (targetLv <= 115 && nowLv >= 110) ||
-        (targetLv <= 120 && nowLv >= 115)
-      ) {
-        result += Math.ceil((dollAccExp[targetLv] - dollAccExp[nowLv] - nowExp) / (3000 * oath));
+      if (targetLv > 115) {
+        result += Math.ceil((dollAccExp[targetLv] - dollAccExp[Math.max(nowLv, 115)] - nowExp)
+          / (3000 * oath));
+        targetLv = 115;
+        nowExp = 0;
       }
+
+      if (targetLv > 110 && nowLv < 115) {
+        result += Math.ceil((dollAccExp[targetLv] - dollAccExp[Math.max(nowLv, 110)] - nowExp)
+          / (3000 * oath));
+        targetLv = 110;
+        nowExp = 0;
+      }
+
+      if (targetLv > 100 && nowLv < 110) {
+        result += Math.ceil((dollAccExp[targetLv] - dollAccExp[Math.max(nowLv, 100)] - nowExp)
+          / (3000 * oath));
+        targetLv = 100;
+        nowExp = 0;
+      }
+
       if (targetLv <= 100 && nowLv < 100) {
         result += Math.ceil((dollAccExp[targetLv] - dollAccExp[nowLv] - nowExp) / 3000);
       }
@@ -172,7 +192,125 @@ class Calculator extends React.Component {
       this.setState({ report: 'N/A' });
     }
   }
+  calcFairy() {
+    const fairyAccExp = [];
+    fairyAccExp[0] = 0;
+    fairyAccExp[1] = 0;
+    fairyAccExp[2] = 300;
+    fairyAccExp[3] = 900;
+    fairyAccExp[4] = 1800;
+    fairyAccExp[5] = 3000;
+    fairyAccExp[6] = 4500;
+    fairyAccExp[7] = 6300;
+    fairyAccExp[8] = 8400;
+    fairyAccExp[9] = 10800;
+    fairyAccExp[10] = 13500;
+    fairyAccExp[11] = 16500;
+    fairyAccExp[12] = 19800;
+    fairyAccExp[13] = 23400;
+    fairyAccExp[14] = 27300;
+    fairyAccExp[15] = 31500;
+    fairyAccExp[16] = 36000;
+    fairyAccExp[17] = 40800;
+    fairyAccExp[18] = 45900;
+    fairyAccExp[19] = 51400;
+    fairyAccExp[20] = 57400;
+    fairyAccExp[21] = 63900;
+    fairyAccExp[22] = 71000;
+    fairyAccExp[23] = 79000;
+    fairyAccExp[24] = 88000;
+    fairyAccExp[25] = 98000;
+    fairyAccExp[26] = 109000;
+    fairyAccExp[27] = 121200;
+    fairyAccExp[28] = 134600;
+    fairyAccExp[29] = 149300;
+    fairyAccExp[30] = 165300;
+    fairyAccExp[31] = 182800;
+    fairyAccExp[32] = 201700;
+    fairyAccExp[33] = 222200;
+    fairyAccExp[34] = 244400;
+    fairyAccExp[35] = 268300;
+    fairyAccExp[36] = 294000;
+    fairyAccExp[37] = 321600;
+    fairyAccExp[38] = 351100;
+    fairyAccExp[39] = 382700;
+    fairyAccExp[40] = 416400;
+    fairyAccExp[41] = 452300;
+    fairyAccExp[42] = 490500;
+    fairyAccExp[43] = 531000;
+    fairyAccExp[44] = 574000;
+    fairyAccExp[45] = 619500;
+    fairyAccExp[46] = 667700;
+    fairyAccExp[47] = 718600;
+    fairyAccExp[48] = 772300;
+    fairyAccExp[49] = 828900;
+    fairyAccExp[50] = 888500;
+    fairyAccExp[51] = 951200;
+    fairyAccExp[52] = 1017100;
+    fairyAccExp[53] = 1086300;
+    fairyAccExp[54] = 1158900;
+    fairyAccExp[55] = 1234900;
+    fairyAccExp[56] = 1314500;
+    fairyAccExp[57] = 1397800;
+    fairyAccExp[58] = 1484800;
+    fairyAccExp[59] = 1575700;
+    fairyAccExp[60] = 1670600;
+    fairyAccExp[61] = 1769600;
+    fairyAccExp[62] = 1872700;
+    fairyAccExp[63] = 1980100;
+    fairyAccExp[64] = 2091900;
+    fairyAccExp[65] = 2208200;
+    fairyAccExp[66] = 2329100;
+    fairyAccExp[67] = 2454700;
+    fairyAccExp[68] = 2585100;
+    fairyAccExp[69] = 2720400;
+    fairyAccExp[70] = 2860800;
+    fairyAccExp[71] = 3006300;
+    fairyAccExp[72] = 3157100;
+    fairyAccExp[73] = 3313200;
+    fairyAccExp[74] = 3474800;
+    fairyAccExp[75] = 3642000;
+    fairyAccExp[76] = 3814900;
+    fairyAccExp[77] = 3993600;
+    fairyAccExp[78] = 4178300;
+    fairyAccExp[79] = 4369000;
+    fairyAccExp[80] = 4565900;
+    fairyAccExp[81] = 4768200;
+    fairyAccExp[82] = 4977800;
+    fairyAccExp[83] = 5193900;
+    fairyAccExp[84] = 5416700;
+    fairyAccExp[85] = 5646300;
+    fairyAccExp[86] = 5882800;
+    fairyAccExp[87] = 6126300;
+    fairyAccExp[88] = 6376900;
+    fairyAccExp[89] = 6634800;
+    fairyAccExp[90] = 6900100;
+    fairyAccExp[91] = 7172900;
+    fairyAccExp[92] = 7453300;
+    fairyAccExp[93] = 7741500;
+    fairyAccExp[94] = 8037600;
+    fairyAccExp[95] = 8341700;
+    fairyAccExp[96] = 8654000;
+    fairyAccExp[97] = 8974600;
+    fairyAccExp[98] = 9303600;
+    fairyAccExp[99] = 9641100;
+    fairyAccExp[100] = 9998100;
 
+    const nowLv = Number(this.nowLv.value);
+    const nowExp = Number(this.nowExp.value);
+    const targetLv = Number(this.targetLv.value);
+    let result = 0;
+    if (nowLv > 0
+      && nowLv <= 100
+      && targetLv > 0
+      && targetLv <= 100
+      && nowExp <= fairyAccExp[nowLv + 1] - fairyAccExp[nowLv]) {
+      result = Math.ceil((fairyAccExp[targetLv] - (fairyAccExp[nowLv] + nowExp)) / 3000);
+      this.setState({ reportFairy: result });
+    } else {
+      this.setState({ reportFairy: 'N/A' });
+    }
+  }
   render() {
     const { classes } = this.props;
     return (
@@ -216,12 +354,12 @@ class Calculator extends React.Component {
               onChange={this.calc}
             />
             <h4>
-              필요한 작전보고서 : <span id="disc-calc-result">{this.state.report}</span>개
+              (인형) 필요한 작전보고서 : <span id="disc-calc-result">{this.state.report}</span>개
+            </h4>
+            <h4>
+              (요정) 필요한 작전보고서 : <span id="disc-calc-result">{this.state.reportFairy}</span>개
             </h4>
             <br />
-            <div>
-              레벨 계산 구간은 1~100, 100~110, 110~115, 115~120으로 분리되어있으니 참고 바랍니다
-            </div>
           </Paper>
         </Grid>
       </div>
