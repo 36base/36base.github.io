@@ -62,6 +62,7 @@
     "react-dev-utils": "^5.0.1",
     "react-dom": "^16.2.0",
     "react-hot-loader": "^4.0.1",
+    "react-intl": "^2.4.0",
     "react-lazyload": "^2.3.0",
     "react-redux": "^5.0.7",
     "react-router": "^4.2.0",

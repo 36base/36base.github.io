@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { AppBar, Toolbar, IconButton, Typography } from 'material-ui';
 import MenuIcon from 'material-ui-icons/Menu';
 import { withStyles } from 'material-ui/styles';
+import { FormattedMessage } from 'react-intl';
 
 import { toggleMobile } from '../actions/menu';
 
@@ -34,7 +35,7 @@ class Appbar extends React.Component {
             <MenuIcon />
           </IconButton>
           <Typography variant="title" color="inherit" noWrap>
-            <Link style={{ color: 'inherit', textDecoration: 'none' }} to="/">36베이스</Link>
+            <Link style={{ color: 'inherit', textDecoration: 'none' }} to="/"><FormattedMessage id="title" /></Link>
           </Typography>
         </Toolbar>
       </AppBar>
