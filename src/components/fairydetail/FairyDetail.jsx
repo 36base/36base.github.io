@@ -1,6 +1,7 @@
 import React from 'react';
 import { withStyles } from 'material-ui/styles';
 import { Grid } from 'material-ui';
+import { injectIntl, FormattedMessage } from 'react-intl';
 
 import FairyRepository from '../../repositories/FairyRepository';
 
@@ -9,9 +10,11 @@ import SkillBox from './components/SkillBox';
 import SkinTabbar from './components/SkinTabbar';
 import style from './components/style';
 
+let nonCraftableText = '';
+
 function timeToStr(time) {
   if (time === undefined || time === 0) {
-    return '불가';
+    return nonCraftableText;
   }
 
   const hour = Math.floor(time / 3600);
@@ -44,13 +47,14 @@ class FairyDetail extends React.Component {
     this.setState({ skinNo: number });
   }
   render() {
-    const { classes } = this.props;
+    const { classes, intl } = this.props;
     const { info } = this.state;
     if (!info) {
       return (
         <div>Undefined</div>
       );
     }
+    nonCraftableText = intl.formatMessage({ id: 'Non-craftable' });
     const skinImage = [info.images.mod1, info.images.mod2, info.images.mod3];
     return (
       <Grid className={classes.root}>
@@ -75,13 +79,13 @@ class FairyDetail extends React.Component {
           </Grid>
           <Grid item xs={6} className={classes.infoWrapper}>
             <div className={classes.infoBox}>
-              <div className={classes.infoTitle}>기본정보</div>
+              <div className={classes.infoTitle}><FormattedMessage id="Basic Information" /></div>
               <div className={classes.infoRow}>
-                <div className={classes.rowTitle}>분류</div>
+                <div className={classes.rowTitle}><FormattedMessage id="type" /></div>
                 <div>{ info.category }</div>
               </div>
               <div className={classes.infoRow}>
-                <div className={classes.rowTitle}>제조시간</div>
+                <div className={classes.rowTitle}><FormattedMessage id="Production Time" /></div>
                 <div>{ timeToStr(info.buildTime) }</div>
               </div>
             </div>
@@ -94,4 +98,4 @@ class FairyDetail extends React.Component {
   }
 }
 
-export default withStyles(style)(FairyDetail);
+export default injectIntl(withStyles(style)(FairyDetail));

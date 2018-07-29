@@ -35,7 +35,7 @@ class Appbar extends React.Component {
             <MenuIcon />
           </IconButton>
           <Typography variant="title" color="inherit" noWrap>
-            <Link style={{ color: 'inherit', textDecoration: 'none' }} to="/"><FormattedMessage id="title" /></Link>
+            <Link style={{ color: 'inherit', textDecoration: 'none' }} to="/"><FormattedMessage id="36base" /></Link>
           </Typography>
         </Toolbar>
       </AppBar>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, Card } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
+import { FormattedMessage } from 'react-intl';
 
 import iconDiscord from './img/discord.png';
 import iconGithub from './img/github.png';
@@ -97,7 +98,7 @@ class About extends React.Component {
         <div className={classes.wrapper}>
           <h1 className={classes.title}>Contact Us</h1>
           <Card className={classes.contactWrapper}>
-            <h1 style={{ color: 'gray' }} >36 베이스</h1>
+            <h1 style={{ color: 'gray' }} ><FormattedMessage id="36base" /></h1>
             <div className={classes.linkWrapper}>
               <a className={classes.linkButton} target="_blank" rel="noopener noreferrer" href="https://github.com/36base">
                 <img className={classes.icon} src={iconGithub} alt="GitHubIcon" />

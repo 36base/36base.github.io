@@ -23,7 +23,7 @@ import App from './App';
 addLocaleData([...en, ...ko, ...ja, ...zh]);
 
 const store = createStore(reducer, applyMiddleware(ReduxThunk));
-const defaultLang = localStorage.getItem('lang') || 'en';
+const defaultLang = localStorage.getItem('lang') || 'ko';
 
 class Root extends React.Component {
   render() {

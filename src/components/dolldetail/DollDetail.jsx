@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
+import { FormattedMessage } from 'react-intl';
 
 import HorizonLine from '../common/HorizonLine';
 import Background from './components/Background';
@@ -202,10 +203,10 @@ class DollDetail extends React.Component {
           />)}
           {this.wrap(<StatusInfoBox {...info.stats} />)}
           {this.state.hasMod
-            ? this.wrap(<a href={info.id + 20000} className={classes.button}>개장 Ver Link</a>)
+            ? this.wrap(<a href={info.id + 20000} className={classes.button}><FormattedMessage id="MOD Ver Link" /></a>)
             : <div />}
           {info.id > 20000
-            ? this.wrap(<a href={info.id - 20000} className={classes.button}>개장 이전 Ver Link</a>)
+            ? this.wrap(<a href={info.id - 20000} className={classes.button}><FormattedMessage id="NON-MOD Ver Link" /></a>)
             : <div />}
           {this.wrap(<SDBox width={250} height={250} skeleton={skeleton} />)}
           {this.wrap(<SkillBox

@@ -4,6 +4,7 @@ import { withStyles } from 'material-ui/styles';
 import Select from 'material-ui/Select';
 import { InputLabel } from 'material-ui/Input';
 import { FormControl } from 'material-ui/Form';
+import { injectIntl, FormattedMessage } from 'react-intl';
 
 
 import style from './style';
@@ -49,7 +50,7 @@ class EquipPopup extends React.Component {
 
   render() {
     const data = this.props;
-    const { classes } = this.props;
+    const { classes, intl } = this.props;
 
     return (
       <div>
@@ -60,7 +61,7 @@ class EquipPopup extends React.Component {
             <h3 style={{ textAlign: 'center', color: 'white' }}>{data.krCategory}</h3>
             <h3 style={{ textAlign: 'center', color: 'white' }}>{data.krType}</h3>
             <FormControl className={classes.levelForm}>
-              <InputLabel htmlFor="level" style={{ color: 'gray' }}>레벨</InputLabel>
+              <InputLabel htmlFor="level" style={{ color: 'gray' }}><FormattedMessage id="level" /></InputLabel>
               <Select
                 native
                 className={classes.levelSelect}
@@ -99,7 +100,7 @@ class EquipPopup extends React.Component {
                     <td>
                       <FormControl className={classes.statCustom}>
                         <InputLabel htmlFor={`statSelect-${key}`} style={{ color: 'gray' }}>
-                          {`교정수치 (${data.stats[key].min} ~ ${data.stats[key].max})`}
+                          {`${intl.formatMessage({ id: 'Calibration value' })} (${data.stats[key].min} ~ ${data.stats[key].max})`}
                         </InputLabel>
                         <Select
                           native
@@ -129,12 +130,12 @@ class EquipPopup extends React.Component {
                 ))}
               </tbody>
             </table>
-            {data.specialFeatures ? <div style={{ textAlign: 'center', color: 'white' }}><h4>특수효과</h4><h4>{data.specialFeatures}</h4></div> : <div />}
+            {data.specialFeatures ? <div style={{ textAlign: 'center', color: 'white' }}><h4><FormattedMessage id="Special Effect" /></h4><h4>{data.specialFeatures}</h4></div> : <div />}
             <h3 className={classes.craftTime}>
               {
                 data.buildTime === 0 ?
-                  (<span style={{ color: 'red' }}>제조불가</span>) :
-                  `제조시간 - ${EquipUtil.intTime2Str(data.buildTime)}`
+                  (<span style={{ color: 'red' }}><FormattedMessage id="Non-craftable" /></span>) :
+                  `${intl.formatMessage({ id: 'Production Time' })} - ${EquipUtil.intTime2Str(data.buildTime)}`
               }
             </h3>
           </div>
@@ -144,4 +145,4 @@ class EquipPopup extends React.Component {
   }
 }
 
-export default withStyles(style)(EquipPopup);
+export default injectIntl(withStyles(style)(EquipPopup));

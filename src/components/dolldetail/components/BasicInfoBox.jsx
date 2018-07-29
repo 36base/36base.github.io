@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, Typography } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
+import { injectIntl } from 'react-intl';
 
 import HorizonLine from '../../common/HorizonLine';
 import InfoBox from '../../common/InfoBox';
@@ -23,12 +24,12 @@ const BasicInfoBox = (props) => {
   ];
 
   return (
-    <InfoBox name="기본정보">
-      {buildRow('분류', props.armType)}
-      {buildRow('일러스트', props.illust)}
-      {buildRow('성우', props.voice)}
+    <InfoBox name={props.intl.formatMessage({ id: 'Basic Information' })}>
+      {buildRow(props.intl.formatMessage({ id: 'type' }), props.armType)}
+      {buildRow(props.intl.formatMessage({ id: 'Artist' }), props.illust)}
+      {buildRow(props.intl.formatMessage({ id: 'voice actor' }), props.voice)}
     </InfoBox>
   );
 };
 
-export default withStyles(style)(BasicInfoBox);
+export default injectIntl(withStyles(style)(BasicInfoBox));

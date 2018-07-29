@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, Typography } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
+import { injectIntl } from 'react-intl';
 
 import InfoBox from '../../common/InfoBox';
 import HorizonLine from '../../common/HorizonLine';
@@ -37,16 +38,16 @@ const StatusInfoBox = (props) => {
       <HorizonLine key="hr" />,
     ];
   };
-
+  // TODO: Rate of Fire에서 글자수 때문에 그래프스타일이 깨지는 문제발생 (2018-0729)
   return (
-    <InfoBox name="스테이터스">
-      {buildRow('체력', props.hp, 300, 'red')}
-      {buildRow('화력', props.pow, 200, 'brown')}
-      {buildRow('명중', props.hit, 100, 'yellow')}
-      {buildRow('회피', props.dodge, 150, 'green')}
-      {buildRow('사속', props.rate, 120, 'orange')}
+    <InfoBox name={props.intl.formatMessage({ id: 'Status' })}>
+      {buildRow(props.intl.formatMessage({ id: 'Health' }), props.hp, 300, 'red')}
+      {buildRow(props.intl.formatMessage({ id: 'Damage' }), props.pow, 200, 'brown')}
+      {buildRow(props.intl.formatMessage({ id: 'Accuracy' }), props.hit, 100, 'yellow')}
+      {buildRow(props.intl.formatMessage({ id: 'Evasion' }), props.dodge, 150, 'green')}
+      {buildRow(props.intl.formatMessage({ id: 'Rate of Fire' }), props.rate, 120, 'orange')}
     </InfoBox>
   );
 };
 
-export default withStyles(style)(StatusInfoBox);
+export default injectIntl(withStyles(style)(StatusInfoBox));

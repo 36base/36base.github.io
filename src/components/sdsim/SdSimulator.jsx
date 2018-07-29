@@ -1,5 +1,6 @@
 import React from 'react';
 import { withStyles } from 'material-ui/styles';
+import { FormattedMessage } from 'react-intl';
 
 const style = theme => ({
   container: {
@@ -34,8 +35,8 @@ class SdSimulator extends React.Component {
       <div className={classes.container}>
         <iframe title="SD 시뮬레이터" src="https://girlsfrontline.kr/db/simulator/" className={classes.frame} />
         <div className={classes.errorBox}>
-          <h2>모바일에서는 아래의 링크로 들어가주시기 바랍니다.</h2>
-          <a href="https://girlsfrontline.kr/db/simulator/">SD 시뮬레이터 링크</a>
+          <h2><FormattedMessage id="in mobile please follow the link below" /></h2>
+          <a href="https://girlsfrontline.kr/db/simulator/"><FormattedMessage id="SD simulator link" /></a>
         </div>
       </div>
     );

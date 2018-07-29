@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, Typography } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
+import { injectIntl, FormattedMessage } from 'react-intl';
 
 import InfoBox from '../../common/InfoBox';
 import Square from '../../common/Square';
@@ -94,10 +95,10 @@ class SkillBox extends React.Component {
     if (this.props.hasNight) {
       return [
         <Grid className={classes.alignMiddle} align="center" key="day" item xs={6}>
-          <Typography>주간</Typography>
+          <Typography><FormattedMessage id="day" /></Typography>
         </Grid>,
         <Grid className={classes.alignMiddle} align="center" key="night" item xs={6}>
-          <Typography>야간</Typography>
+          <Typography><FormattedMessage id="night" /></Typography>
         </Grid>,
         <Grid key="desc_day" item xs={6}>
           <Typography>{this.props.skill.desc}</Typography>
@@ -114,17 +115,18 @@ class SkillBox extends React.Component {
   }
 
   render() {
-    const { classes, lv } = this.props;
+    const { classes, lv, intl } = this.props;
 
-    const selector = <SmallSelector label="레벨" values={lvValues} selected={lv} onChange={this.onChange} />;
-    const initCooldown = this.renderProperty('IC', '초');
-    const cooldown = this.renderProperty('CD', '초');
-    const duration = this.renderProperty('DR', '초');
-    const nightDuration = this.renderNightProperty('DR', '초');
+    const sec = this.props.intl.formatMessage({ id: 's' }); // 초
+    const selector = <SmallSelector label={intl.formatMessage({ id: 'level' })} values={lvValues} selected={lv} onChange={this.onChange} />;
+    const initCooldown = this.renderProperty('IC', sec);
+    const cooldown = this.renderProperty('CD', sec);
+    const duration = this.renderProperty('DR', sec);
+    const nightDuration = this.renderNightProperty('DR', sec);
     const description = this.renderDescription();
 
     return (
-      <InfoBox name="스킬" selector={selector}>
+      <InfoBox name={intl.formatMessage({ id: 'Skill' })} selector={selector}>
         <Grid className={classes.container} container>
           <Grid item xs={4}>
             <div className={classes.iconWrapper}>
@@ -147,4 +149,4 @@ class SkillBox extends React.Component {
   }
 }
 
-export default withStyles(style)(SkillBox);
+export default injectIntl(withStyles(style)(SkillBox));

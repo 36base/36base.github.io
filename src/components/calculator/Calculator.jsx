@@ -2,6 +2,7 @@ import React from 'react';
 import { TextField, Grid, Paper, Checkbox } from 'material-ui/';
 import { FormControlLabel } from 'material-ui/Form';
 import { withStyles } from 'material-ui/styles';
+import { injectIntl, FormattedMessage } from 'react-intl';
 
 const style = {
   wrapper: {
@@ -312,15 +313,15 @@ class Calculator extends React.Component {
     }
   }
   render() {
-    const { classes } = this.props;
+    const { classes, intl } = this.props;
     return (
       <div className={classes.wrapper} align="center">
         <Grid container align="center" justify="center">
           <Paper align="left" style={{ padding: '20px' }}>
-            <h1>작전 보고서 계산기</h1>
+            <h1><FormattedMessage id="Combat Report Calculator" /></h1>
             <TextField
               id="form-disc-calc-nowLv"
-              label="현재 레벨"
+              label={intl.formatMessage({ id: 'current level' })}
               type="number"
               margin="normal"
               inputRef={(el) => { this.nowLv = el; }}
@@ -332,12 +333,12 @@ class Calculator extends React.Component {
                   onChange={this.oath}
                 />
               }
-              label="서약"
+              label={intl.formatMessage({ id: 'OATH' })}
             />
             <br />
             <TextField
               id="form-disc-calc-nowExp"
-              label="현재 경험치"
+              label={intl.formatMessage({ id: 'Current EXP.' })}
               type="number"
               margin="normal"
               inputRef={(el) => { this.nowExp = el; }}
@@ -347,17 +348,17 @@ class Calculator extends React.Component {
             <br />
             <TextField
               id="tf-disc-calc-targetLv"
-              label="목표 레벨"
+              label={intl.formatMessage({ id: 'Target Level' })}
               type="number"
               margin="normal"
               inputRef={(el) => { this.targetLv = el; }}
               onChange={this.calc}
             />
             <h4>
-              (인형) 필요한 작전보고서 : <span id="disc-calc-result">{this.state.report}</span>개
+              ({intl.formatMessage({ id: 'doll' })}) {intl.formatMessage({ id: 'Require amount' })} : <span id="disc-calc-result">{this.state.report}</span>{intl.formatMessage({ id: 'amount' })}
             </h4>
             <h4>
-              (요정) 필요한 작전보고서 : <span id="disc-calc-result">{this.state.reportFairy}</span>개
+              ({intl.formatMessage({ id: 'fairy' })}) {intl.formatMessage({ id: 'Require amount' })} : <span id="disc-calc-result">{this.state.reportFairy}</span>{intl.formatMessage({ id: 'amount' })}
             </h4>
             <br />
           </Paper>
@@ -367,4 +368,4 @@ class Calculator extends React.Component {
   }
 }
 
-export default withStyles(style)(Calculator);
+export default injectIntl(withStyles(style)(Calculator));

@@ -1,6 +1,7 @@
 import React from 'react';
 import { FormControlLabel, Switch } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
+import { injectIntl } from 'react-intl';
 
 const style = {
   container: {
@@ -14,17 +15,19 @@ const style = {
 };
 
 const TypeSwitchBox = (props) => {
-  const { classes, on, toggle } = props;
+  const {
+    classes, on, toggle, intl,
+  } = props;
 
   return (
     <div className={classes.container} >
       <FormControlLabel
         className={classes.button}
         control={<Switch color="primary" onClick={toggle} checked={on} />}
-        label="중상보기"
+        label={intl.formatMessage({ id: 'Damaged' })}
       />
     </div>
   );
 };
 
-export default withStyles(style)(TypeSwitchBox);
+export default injectIntl(withStyles(style)(TypeSwitchBox));
