@@ -65,7 +65,7 @@ const style = theme => ({
       marginBottom: 36,
     },
     [theme.breakpoints.up('md')]: {
-      maxWidth: 400,
+      maxWidth: 500,
     },
   },
   button: {

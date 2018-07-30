@@ -2,6 +2,7 @@ import React from 'react';
 import { withStyles } from 'material-ui/styles';
 import * as PIXI from 'pixi.js';
 import spine from 'pixi-spine';
+import { injectIntl } from 'react-intl';
 
 import InfoBox from '../../common/InfoBox';
 import SmallSelector from '../../common/SmallSelector';
@@ -23,15 +24,7 @@ const style = theme => ({
   },
 });
 
-const animationMap = {
-  wait: '대기',
-  move: '이동',
-  attack: '공격',
-  s: '스킬',
-  reload: '재장전',
-  die: '사망',
-  victory: '승리',
-};
+let animationMap = {};
 
 const VIEW_ID = 'dolldetail-sd-view';
 
@@ -175,8 +168,20 @@ class SDBox extends React.Component {
   }
 
   render() {
-    const { classes, width, height } = this.props;
+    const {
+      classes, width, height, intl,
+    } = this.props;
     const { animations, animationName } = this.state;
+
+    animationMap = {
+      wait: intl.formatMessage({ id: 'Idle' }),
+      move: intl.formatMessage({ id: 'Move' }),
+      attack: intl.formatMessage({ id: 'Attack' }),
+      s: intl.formatMessage({ id: 'Skill' }),
+      reload: intl.formatMessage({ id: 'Reload' }),
+      die: intl.formatMessage({ id: 'Dead' }),
+      victory: intl.formatMessage({ id: 'Victory' }),
+    };
 
     let selector = null;
     if (animations.length > 0) {
@@ -200,4 +205,4 @@ class SDBox extends React.Component {
   }
 }
 
-export default withStyles(style)(SDBox);
+export default injectIntl(withStyles(style)(SDBox));
