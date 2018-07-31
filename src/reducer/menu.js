@@ -4,23 +4,23 @@ const initialState = {
   openMobile: false,
   list: {
     dic: {
-      name: '소녀전선 도감',
+      name: 'gf dictionary',
       icon: 'fa-book',
       opened: false,
       children: {
-        doll: { name: '전술인형 도감', icon: 'fa-address-book', to: '/doll' },
-        eqip: { name: '인형장비 도감', icon: 'fa-cogs', to: '/equip' },
-        fairy: { name: '전술요정 도감', icon: 'fa-street-view', to: '/fairy' },
+        doll: { name: 'doll dictionary', icon: 'fa-address-book', to: '/doll' },
+        eqip: { name: 'equipment dictionary', icon: 'fa-cogs', to: '/equip' },
+        fairy: { name: 'fairy dictionary', icon: 'fa-street-view', to: '/fairy' },
       },
     },
     util: {
-      name: '기타 편의기능',
+      name: 'Convenience Features',
       icon: 'fa-archive',
       opened: false,
       children: {
-        timetable: { name: '제조 시간표', icon: 'fa-clock', to: '/timetable' },
-        calculator: { name: '작전보고서 계산기', icon: 'fa-calculator', to: '/calculator' },
-        sdsim: { name: 'SD 시뮬레이터', icon: 'fa-industry', to: '/sdsim' },
+        timetable: { name: 'time table', icon: 'fa-clock', to: '/timetable' },
+        calculator: { name: 'Disc calculator', icon: 'fa-calculator', to: '/calculator' },
+        sdsim: { name: 'SD simulator', icon: 'fa-industry', to: '/sdsim' },
       },
     },
   },

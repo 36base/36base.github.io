@@ -2,14 +2,14 @@
 /* eslint-env es6 */
 
 export default {
-  'gf dictionary': 'gf dictionary',
-  'doll dictionary': 'doll dictionary',
-  'equipment dictionary': 'equipment dictionary',
-  'fairy dictionary': 'fairy dictionary',
+  'gf dictionary': 'GF Dictionary',
+  'doll dictionary': 'Doll Dictionary',
+  'equipment dictionary': 'Equipment Dictionary',
+  'fairy dictionary': 'Fairy Dictionary',
   'Convenience Features': 'Convenience Features',
-  'time table': 'time table',
-  'Disc calculator': 'Disc calculator',
-  'SD simulator': 'SD simulator',
+  'time table': 'Time Table',
+  'Disc calculator': 'Disc Calculator',
+  'SD simulator': 'SD Simulator',
   'About / Contact': 'About / Contact',
   '2-Star': '2-Star',
   '3-Star': '3-Star',
@@ -34,7 +34,7 @@ export default {
   'Crit. Damage': 'Crit. Damage',
   'Armor Pen.': 'Armor Pen.',
   'MOD Ver Link': 'MOD Ver Link',
-  'NON-MOD Ver Link': 'NON-MOD 이전 Ver Link',
+  'NON-MOD Ver Link': 'NON-MOD Ver Link',
   'Idle': 'Idle',
   'Move': 'Move',
   'Attack': 'Attack',
@@ -75,5 +75,5 @@ export default {
   'amount': ' ',
   'in mobile please follow the link below': 'in mobile please follow the link below',
   'SD simulator link': 'SD simulator link',
-  '36base': '36base',
+  '36base': '36Base',
 };
