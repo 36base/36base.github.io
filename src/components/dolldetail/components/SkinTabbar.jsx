@@ -33,7 +33,7 @@ class SkinTabbar extends React.Component {
   renderButtons() {
     const { classes, selected, skins } = this.props;
 
-    return skins.map((v, i) => (
+    return Object.values(skins).map((v, i) => (
       <Button
         key={v.name}
         className={classes.button}
