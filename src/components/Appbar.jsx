@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { AppBar, Toolbar, IconButton, Typography } from 'material-ui';
 import MenuIcon from 'material-ui-icons/Menu';
 import { withStyles } from 'material-ui/styles';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, injectIntl } from 'react-intl';
 import { instanceOf } from 'prop-types';
 import { withCookies, Cookies } from 'react-cookie';
 
@@ -32,7 +32,7 @@ const language = [
     name: 'English',
   },
   {
-    value: 'jp',
+    value: 'ja',
     name: '日本語',
   },
 ];
@@ -61,6 +61,11 @@ class Appbar extends React.Component {
 
 
     this.setLanguage = this.setLanguage.bind(this);
+  }
+
+  componentDidMount() {
+    const { intl } = this.props;
+    document.title = intl.formatMessage({ id: '36Base - Girl\'s Frontline Database' });
   }
 
   setLanguage(event) {
@@ -104,4 +109,5 @@ const dispatchMapper = dispatch => ({
   toggleMobile: () => dispatch(toggleMobile()),
 });
 
-export default connect(stateMapper, dispatchMapper)(withStyles(style)(withCookies(Appbar)));
+// eslint-disable-next-line
+export default connect(stateMapper, dispatchMapper)(withStyles(style)(withCookies(injectIntl(Appbar))));

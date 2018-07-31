@@ -14,7 +14,7 @@ import locale from '../locale/locale';
 
 addLocaleData([...en, ...ko, ...ja, ...zh]);
 
-let defaultLang = localStorage.getItem('lang') || 'en';
+let defaultLang = localStorage.getItem('lang') || 'ko';
 
 class IntlApp extends React.Component {
   static propTypes = {
