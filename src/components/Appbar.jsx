@@ -20,6 +20,9 @@ const style = theme => ({
       display: 'none',
     },
   },
+  flex: {
+    flexGrow: 1,
+  },
 });
 
 const language = [
@@ -89,11 +92,11 @@ class Appbar extends React.Component {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="title" color="inherit" noWrap>
+          <Typography variant="title" color="inherit" className={classes.flex} noWrap>
             <Link style={{ color: 'inherit', textDecoration: 'none' }} to="/"><FormattedMessage id="36base" /></Link>
           </Typography>
           <SmallSelector
-            label=""
+            label="Language"
             values={language}
             selected={this.state.languageName}
             onChange={this.setLanguage}

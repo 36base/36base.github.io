@@ -2,6 +2,8 @@ import React from 'react';
 import { withStyles } from 'material-ui/styles';
 import { Grid } from 'material-ui';
 import { injectIntl, FormattedMessage } from 'react-intl';
+import { instanceOf } from 'prop-types';
+import { withCookies, Cookies } from 'react-cookie';
 
 import FairyRepository from '../../repositories/FairyRepository';
 
@@ -23,16 +25,28 @@ function timeToStr(time) {
 }
 
 class FairyDetail extends React.Component {
+  static propTypes = {
+    cookies: instanceOf(Cookies).isRequired,
+  };
+
   constructor(props) {
     super(props);
+
+    const { cookies } = props;
+
+    let langState = cookies.get('lang');
+
+    if (langState === undefined) {
+      langState = 'ko';
+    }
 
     this.state = {
       info: undefined,
       skinNo: 0,
-      // modLv: 1,
+      languageName: langState,
     };
     this.handleSkinChange = this.handleSkinChange.bind(this);
-    // this.handleModChange = this.handleModChange.bind(this);
+    this.handleLanguageChange = this.handleLanguageChange.bind();
   }
 
   componentWillMount() {
@@ -41,14 +55,33 @@ class FairyDetail extends React.Component {
       .then(info => this.setState({ info }));
   }
 
-  // eslint-disable-next-line
   handleSkinChange(no) {
     const number = no - 2;// 왜 인지는 모르겠는데 no로 넘어오는숫자가 2,3,4입니다 그래서 일단은 이렇게 처리합니다.
     this.setState({ skinNo: number });
   }
+
+  handleLanguageChange(langName) {
+    const { classes } = this.props;
+    const { info } = this.state;
+
+    if (langName === 'ko') {
+      return (
+        <div className={classes.nameWrapper}>
+          <div className={classes.krName}>{ info.krName }</div>
+          <div className={classes.name}>{ info.name }</div>
+        </div>
+      );
+    }
+    return (
+      <div className={classes.nameWrapper}>
+        <div className={classes.krName}>{ info.name }</div>
+      </div>
+    );
+  }
+
   render() {
     const { classes, intl } = this.props;
-    const { info } = this.state;
+    const { info, languageName } = this.state;
     if (!info) {
       return (
         <div>Undefined</div>
@@ -59,10 +92,7 @@ class FairyDetail extends React.Component {
     return (
       <Grid className={classes.root}>
         <div className={classes.titleWrapper}>
-          <div className={classes.nameWrapper}>
-            <div className={classes.krName}>{ info.krName }</div>
-            <div className={classes.name}>{ info.name }</div>
-          </div>
+          { this.handleLanguageChange(languageName) }
           <div className={classes.number}>NO. { info.id }</div>
         </div>
         <div className={classes.divider} />
@@ -98,4 +128,4 @@ class FairyDetail extends React.Component {
   }
 }
 
-export default injectIntl(withStyles(style)(FairyDetail));
+export default injectIntl(withStyles(style)(withCookies(FairyDetail)));

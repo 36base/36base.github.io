@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-// import { Grid } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
+import { instanceOf } from 'prop-types';
+import { withCookies, Cookies } from 'react-cookie';
 
 import FairyCard from './components/FairyCard';
-// import SearchBar from './components/SearchBar';
 
 
 const style = theme => ({
@@ -57,22 +57,32 @@ const style = theme => ({
     },
   },
 });
-// {list.map(fairy => <FairyCard key={fairy.id} {...fairy} />)}
-/*
-<Grid container>
-  <Grid item xs={12}>
-    <SearchBar />
-  </Grid>
-  <Grid item xs={12}>
-  </Grid>
-</Grid>
-*/
+
 class FairyDict extends React.Component {
+  static propTypes = {
+    cookies: instanceOf(Cookies).isRequired,
+  };
+
+  constructor(props) {
+    super(props);
+
+    const { cookies } = props;
+
+    let langState = cookies.get('lang');
+
+    if (langState === undefined) {
+      langState = 'ko';
+    }
+
+    this.state = {
+      languageName: langState,
+    };
+  }
   render() {
     const { list, classes } = this.props;
     return (
       <div className={classes.wrapper}>
-        {list.map(fairy => <FairyCard key={fairy.id} {...fairy} />)}
+        {list.map(fairy => <FairyCard lang={this.state.languageName} key={fairy.id} {...fairy} />)}
       </div>
     );
   }
@@ -83,4 +93,4 @@ const stateMapper = state => ({
   list: state.fairydict.list,
 });
 
-export default connect(stateMapper)(withRouter(withStyles(style)(FairyDict)));
+export default connect(stateMapper)(withRouter(withStyles(style)(withCookies(FairyDict))));

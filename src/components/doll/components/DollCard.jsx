@@ -8,13 +8,26 @@ import Star from '../../common/Star';
 import style from './style';
 
 class DollCard extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.handleLanguageChange = this.handleLanguageChange.bind(this);
+  }
+
+  handleLanguageChange(langName) {
+    if (langName === 'ko') {
+      return (this.props.krName);
+    }
+    return (this.props.name);
+  }
+
   render() {
     const {
       classes,
-      krName,
       rank,
       icon,
       portrait,
+      lang,
     } = this.props;
 
     let { id } = this.props;
@@ -34,7 +47,7 @@ class DollCard extends React.Component {
           className={[classes.caption, classes[rank.name.toLowerCase()]].join(' ')}
           component="div"
         >
-          {krName}
+          {this.handleLanguageChange(lang)}
         </Typography>
         <img className={classes.typeIcon} src={icon} alt="" />
         <div className={classes.no}>{id}</div>

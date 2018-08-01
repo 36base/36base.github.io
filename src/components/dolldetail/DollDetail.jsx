@@ -2,6 +2,8 @@ import React from 'react';
 import { Grid } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 import { FormattedMessage } from 'react-intl';
+import { instanceOf } from 'prop-types';
+import { withCookies, Cookies } from 'react-cookie';
 
 import HorizonLine from '../common/HorizonLine';
 import Background from './components/Background';
@@ -82,8 +84,20 @@ const style = theme => ({
 });
 
 class DollDetail extends React.Component {
+  static propTypes = {
+    cookies: instanceOf(Cookies).isRequired,
+  };
+
   constructor(props) {
     super(props);
+
+    const { cookies } = props;
+
+    let langState = cookies.get('lang');
+
+    if (langState === undefined) {
+      langState = 'ko';
+    }
 
     this.state = {
       info: undefined,
@@ -93,8 +107,10 @@ class DollDetail extends React.Component {
       skinType: 'normal',
       skillLv: 10,
       skill2Lv: 10,
+      languageName: langState,
     };
 
+    this.handleLanguageChange = this.handleLanguageChange.bind(this);
     this.handleSkinChange = this.handleSkinChange.bind(this);
     this.toggleSkinType = this.toggleSkinType.bind(this);
     this.handleSkillLvChange = this.handleSkillLvChange.bind(this);
@@ -119,6 +135,17 @@ class DollDetail extends React.Component {
   }
   componentDidMount() {
     window.scrollTo(0, 0);
+  }
+
+  handleLanguageChange(langName) {
+    if (langName === 'ko') {
+      return (
+        <Caption name={this.state.info.krName} />
+      );
+    }
+    return (
+      <Caption name={this.state.info.name} />
+    );
   }
 
   handleSkinChange(no) {
@@ -163,6 +190,7 @@ class DollDetail extends React.Component {
       skinType,
       skillLv,
       skill2Lv,
+      languageName,
     } = this.state;
 
     if (!info) { return null; }
@@ -182,7 +210,7 @@ class DollDetail extends React.Component {
         <Background color={color} />
         <div className={classes.header}>
           <Grid container>
-            <Caption name={info.krName} />
+            { this.handleLanguageChange(languageName) }
             <NumberBox id={info.id < 20000 ? info.id : info.id - 20000} />
             <Grid container className={classes.titleLine}>
               <HorizonLine height={3} />
@@ -242,4 +270,4 @@ class DollDetail extends React.Component {
   }
 }
 
-export default withStyles(style)(DollDetail);
+export default withStyles(style)(withCookies(DollDetail));
