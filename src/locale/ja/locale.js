@@ -2,14 +2,14 @@
 /* eslint-env es6 */
 
 export default {
-  'gf dictionary': '소녀전선 도감',
-  'doll dictionary': '전술인형 도감',
-  'equipment dictionary': '인형장비 도감',
-  'fairy dictionary': '전술요정 도감',
-  'Convenience Features': '기타 편의기능',
-  'time table': '제조 시간표',
-  'Disc calculator': '작전보고서 계산기',
-  'SD simulator': 'SD 시뮬레이터',
+  'gf dictionary': 'ドルフロ辞書',
+  'doll dictionary': 'ドール辞書',
+  'equipment dictionary': '裝備辞書',
+  'fairy dictionary': 'フェアリー辞書',
+  'Convenience Features': '便宜機能',
+  'time table': '製造タイムテーブル',
+  'Disc calculator': '作戦報告書計算機',
+  'SD simulator': 'SDシミュレーター',
   'About / Contact': 'About / Contact',
   '2-Star': '2성',
   '3-Star': '3성',
@@ -75,6 +75,6 @@ export default {
   'amount': '개',
   'in mobile please follow the link below': '모바일에서는 아래의 링크로 들어가주시기 바랍니다',
   'SD simulator link': 'SD 시뮬레이터 링크',
-  '36base': '36베이스',
+  '36base': '36ベース',
   '36Base - Girl\'s Frontline Database': '36ベース / ドルフロデータベース',
 };
