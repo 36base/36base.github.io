@@ -28,6 +28,7 @@ const style = theme => ({
     position: 'relative',
     width: '100%',
     height: '100%',
+    overflowX: 'hidden',
   },
   header: {
     paddingTop: '2%',

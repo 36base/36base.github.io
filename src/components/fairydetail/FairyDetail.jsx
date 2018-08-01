@@ -46,7 +46,7 @@ class FairyDetail extends React.Component {
       languageName: langState,
     };
     this.handleSkinChange = this.handleSkinChange.bind(this);
-    this.handleLanguageChange = this.handleLanguageChange.bind();
+    this.handleLanguageChange = this.handleLanguageChange.bind(this);
   }
 
   componentWillMount() {
