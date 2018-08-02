@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import { Hidden, Drawer, List, ListItem, ListItemText, ListItemIcon, Divider, Icon, Collapse } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
+import { injectIntl } from 'react-intl';
 
 import { toggleMobile, expand } from '../actions/menu';
 
@@ -42,7 +43,7 @@ class Menu extends React.Component {
     const items = [
       <ListItem key={key} button onClick={() => this.props.expand(key)}>
         <ListItemIcon><Icon className={`fa fa-lg ${value.icon}`} /></ListItemIcon>
-        <ListItemText primary={value.name} />
+        <ListItemText primary={this.props.intl.formatMessage({ id: value.name })} />
         <Icon className={`fa fa-lg ${value.opened ? 'fa-angle-up' : 'fa-angle-down'}`} />
       </ListItem>,
     ];
@@ -72,13 +73,14 @@ class Menu extends React.Component {
         <div className={this.props.classes.icon}>
           <ListItemIcon><Icon className={value.icon ? `fas ${value.icon}` : ''} /></ListItemIcon>
         </div>
-        <ListItemText primary={value.name} />
+        <ListItemText primary={this.props.intl.formatMessage({ id: value.name })} />
       </ListItem>
     );
   }
 
   render() {
-    const { classes, list } = this.props;
+    // eslint-disable-next-line
+    const { classes, list, intl } = this.props;
     const items = (
       <List component="nav" >
         {Object.keys(list).map(key => this.renderMenuItem(key, list[key]))}
@@ -125,4 +127,5 @@ const dispatchMapper = dispatch => ({
   toggleMobile: () => dispatch(toggleMobile()),
 });
 
-export default connect(stateMapper, dispatchMapper)(withStyles(style)(withRouter(Menu)));
+// eslint-disable-next-line
+export default connect(stateMapper, dispatchMapper)(injectIntl(withStyles(style)(withRouter(Menu))));

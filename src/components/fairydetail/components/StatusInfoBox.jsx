@@ -1,6 +1,7 @@
 import React from 'react';
 import { withStyles } from 'material-ui/styles';
 import { fairy } from 'girlsfrontline-core';
+import { injectIntl, FormattedMessage } from 'react-intl';
 
 import SmallSelector from '../../common/SmallSelector';
 import style from './style';
@@ -56,19 +57,19 @@ class StatusInfoBox extends React.Component {
     });
   }
   render() {
-    const { classes } = this.props;
+    const { classes, intl } = this.props;
     return (
       <div className={classes.infoBox}>
         <div className={classes.title}>
-          <div className={classes.titleName}>스테이터스</div>
-          <div className={classes.selectorLabel}>레벨</div>
+          <div className={classes.titleName}><FormattedMessage id="Status" /></div>
+          <div className={classes.selectorLabel}><FormattedMessage id="level" /></div>
           <SmallSelector
             className={classes.selector}
             values={lvValues}
             selected={this.state.lv}
             onChange={this.handleLvChange}
           />
-          <div className={classes.selectorLabel}>개발수치</div>
+          <div className={classes.selectorLabel}><FormattedMessage id="Rarity" /></div>
           <SmallSelector
             className={classes.selector}
             values={modValues}
@@ -76,15 +77,15 @@ class StatusInfoBox extends React.Component {
             onChange={this.handleModChange}
           />
         </div>
-        {this.buildRow('화력', this.state.stats.pow, 55, '#00b8d4')}
-        {this.buildRow('회피', this.state.stats.dodge, 88, '#00c853')}
-        {this.buildRow('장갑', this.state.stats.armor, 25, '#d50000')}
-        {this.buildRow('치명상', this.state.stats.critDmg, 40, '#ff6d00')}
-        {this.buildRow('명중', this.state.stats.hit, 90, '#ffd600')}
-        {this.buildRow('성장', this.props.grow, 320, '#2962ff')}
+        {this.buildRow(intl.formatMessage({ id: 'Damage' }), this.state.stats.pow, 55, '#00b8d4')}
+        {this.buildRow(intl.formatMessage({ id: 'Evasion' }), this.state.stats.dodge, 88, '#00c853')}
+        {this.buildRow(intl.formatMessage({ id: 'Armor' }), this.state.stats.armor, 25, '#d50000')}
+        {this.buildRow(intl.formatMessage({ id: 'Crit. Damage' }), this.state.stats.critDmg, 40, '#ff6d00')}
+        {this.buildRow(intl.formatMessage({ id: 'Accuracy' }), this.state.stats.hit, 90, '#ffd600')}
+        {this.buildRow(intl.formatMessage({ id: 'grow' }), this.props.grow, 320, '#2962ff')}
       </div>
     );
   }
 }
 
-export default withStyles(style)(StatusInfoBox);
+export default injectIntl(withStyles(style)(StatusInfoBox));

@@ -33,7 +33,7 @@ const theme = createMuiTheme({
     extra: { main: '#D5A3FD' },
   },
   typography: {
-    fontFamily: ['Noto Sans KR', 'sans-serif'],
+    fontFamily: ['Noto Sans KR', 'Rounded Mplus 1c', 'sans-serif'],
     fontSize: 14,
     button: {
       textTransform: undefined,

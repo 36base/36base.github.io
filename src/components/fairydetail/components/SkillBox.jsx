@@ -1,5 +1,6 @@
 import React from 'react';
 import { withStyles } from 'material-ui/styles';
+import { injectIntl, FormattedMessage } from 'react-intl';
 
 import SmallSelector from '../../common/SmallSelector';
 import style from './style';
@@ -58,8 +59,8 @@ class SkillBox extends React.Component {
     return (
       <div className={classes.infoBox}>
         <div className={classes.title}>
-          <div className={classes.titleName}>스킬</div>
-          <div className={classes.selectorLabel}>레벨</div>
+          <div className={classes.titleName}><FormattedMessage id="Skill" /></div>
+          <div className={classes.selectorLabel}><FormattedMessage id="level" /></div>
           <SmallSelector
             className={classes.selector}
             values={lvValues}
@@ -72,8 +73,8 @@ class SkillBox extends React.Component {
             <img src={this.props.icon} alt="skill icon" className={classes.skillIcon} />
             <div className={classes.skillName}>{ this.props.skill.name }</div>
             <div>
-              <div> 쿨다운 <span className={classes.skillBoxYellow}>{ cd }</span></div>
-              <div> 지령 소모치 <span className={classes.skillBoxYellow}>{ cp }</span></div>
+              <div><FormattedMessage id="cool down" /><span className={classes.skillBoxYellow}>{ cd }</span></div>
+              <div><FormattedMessage id="Support Order Consume" /><span className={classes.skillBoxYellow}>{ cp }</span></div>
             </div>
           </div>
           <div>{ description }</div>
@@ -83,4 +84,4 @@ class SkillBox extends React.Component {
   }
 }
 
-export default withStyles(style)(SkillBox);
+export default injectIntl(withStyles(style)(SkillBox));

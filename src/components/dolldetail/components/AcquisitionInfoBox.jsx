@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, Typography } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
+import { injectIntl } from 'react-intl';
 
 import HorizonLine from '../../common/HorizonLine';
 import InfoBox from '../../common/InfoBox';
@@ -33,11 +34,11 @@ const AcquisitionInfoBox = (props) => {
   ];
 
   return (
-    <InfoBox name="획득처">
-      {buildRow('제조', timeToStr(props.build))}
-      {buildRow('드롭', props.drop.join(', ') || '없음')}
+    <InfoBox name={props.intl.formatMessage({ id: 'Acquisition' })} >
+      {buildRow(props.intl.formatMessage({ id: 'Production' }), timeToStr(props.build))}
+      {buildRow(props.intl.formatMessage({ id: 'drop' }), props.drop.join(', ') || props.intl.formatMessage({ id: 'none' }))}
     </InfoBox>
   );
 };
 
-export default withStyles(style)(AcquisitionInfoBox);
+export default injectIntl(withStyles(style)(AcquisitionInfoBox));

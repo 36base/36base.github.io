@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Grid, Input, Chip, Checkbox } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
+import { FormattedMessage, injectIntl } from 'react-intl';
 
 import { addFilter, deleteFilter } from '../../../actions/dolldict';
 
@@ -69,7 +70,7 @@ class SearchBar extends React.Component {
   }
 
   render() {
-    const { classes, filters } = this.props;
+    const { classes, filters, intl } = this.props;
     const { value } = this.state;
     const isEmpty = value.length === 0 && filters.length === 0;
 
@@ -91,10 +92,10 @@ class SearchBar extends React.Component {
       <Grid container>
         <Grid item xs={12} md={4} container>
           <Grid item xs={12} md={12}>
-            <div className={classes.checkbox}><Checkbox id="2성" onChange={this.onRankCheckboxChange} checked={checkVal['2성'] ? 1 : 0} />2성</div>
-            <div className={classes.checkbox}><Checkbox id="3성" onChange={this.onRankCheckboxChange} checked={checkVal['3성'] ? 1 : 0} />3성</div>
-            <div className={classes.checkbox}><Checkbox id="4성" onChange={this.onRankCheckboxChange} checked={checkVal['4성'] ? 1 : 0} />4성</div>
-            <div className={classes.checkbox}><Checkbox id="5성" onChange={this.onRankCheckboxChange} checked={checkVal['5성'] ? 1 : 0} />5성</div>
+            <div className={classes.checkbox}><Checkbox id="2성" onChange={this.onRankCheckboxChange} checked={checkVal['2성'] ? 1 : 0} /><FormattedMessage id="2-Star" /></div>
+            <div className={classes.checkbox}><Checkbox id="3성" onChange={this.onRankCheckboxChange} checked={checkVal['3성'] ? 1 : 0} /><FormattedMessage id="3-Star" /></div>
+            <div className={classes.checkbox}><Checkbox id="4성" onChange={this.onRankCheckboxChange} checked={checkVal['4성'] ? 1 : 0} /><FormattedMessage id="4-Star" /></div>
+            <div className={classes.checkbox}><Checkbox id="5성" onChange={this.onRankCheckboxChange} checked={checkVal['5성'] ? 1 : 0} /><FormattedMessage id="5-Star" /></div>
             <div className={classes.checkbox}>
               <Checkbox id="엑스트라" onChange={this.onRankCheckboxChange} checked={checkVal['엑스트라'] ? 1 : 0} />Extra
             </div>
@@ -113,7 +114,7 @@ class SearchBar extends React.Component {
             id="doll-dict-search"
             type="search"
             fullWidth
-            placeholder={isEmpty ? '이름, 별명' : ''}
+            placeholder={isEmpty ? intl.formatMessage({ id: 'Name' }) : ''}
             className={classes.input}
             value={this.state.value}
             onChange={this.onTextInputChangeValue}
@@ -135,4 +136,4 @@ const dispatchMapper = dispatch => ({
   deleteFilter: filter => dispatch(deleteFilter(filter)),
 });
 
-export default connect(stateMapper, dispatchMapper)(withStyles(styles)(SearchBar));
+export default connect(stateMapper, dispatchMapper)(injectIntl(withStyles(styles)(SearchBar)));

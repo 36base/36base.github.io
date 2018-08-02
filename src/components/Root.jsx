@@ -1,16 +1,16 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
 import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
 import { createStore, applyMiddleware } from 'redux';
 import ReduxThunk from 'redux-thunk';
 import { MuiThemeProvider } from 'material-ui/styles';
+import { CookiesProvider } from 'react-cookie';
 
 import 'normalize.css';
-import theme from './theme';
 
+import IntlApp from './IntlApp';
+import theme from './theme';
 import reducer from '../reducer';
-import App from './App';
 
 const store = createStore(reducer, applyMiddleware(ReduxThunk));
 
@@ -18,11 +18,11 @@ class Root extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <BrowserRouter>
-          <MuiThemeProvider theme={theme}>
-            <App />
-          </MuiThemeProvider>
-        </BrowserRouter>
+        <MuiThemeProvider theme={theme}>
+          <CookiesProvider>
+            <IntlApp />
+          </CookiesProvider>
+        </MuiThemeProvider>
       </Provider>
     );
   }

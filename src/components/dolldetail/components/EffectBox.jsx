@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, Typography } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
+import { injectIntl } from 'react-intl';
 
 import InfoBox from '../../common/InfoBox';
 import Square from '../../common/Square';
@@ -108,7 +109,7 @@ class EffectBox extends React.Component {
 
     return (
       <SmallSelector
-        label="편제확대"
+        label={this.props.intl.formatMessage({ id: 'Combine' })}
         values={rateOptions}
         selected={this.state.rate}
         onChange={this.onChangeRate}
@@ -117,7 +118,7 @@ class EffectBox extends React.Component {
   }
 
   render() {
-    const { classes } = this.props;
+    const { classes, intl } = this.props;
 
     const grids = effectGridList.map((e) => {
       let type = classes.default;
@@ -139,7 +140,7 @@ class EffectBox extends React.Component {
     }).join(', ');
 
     return (
-      <InfoBox name="진형버프" selector={this.renderSelector()}>
+      <InfoBox name={intl.formatMessage({ id: 'Tiles' })} selector={this.renderSelector()}>
         <Grid className={classes.container} container>
           <Grid item xs={4}>
             <div className={classes.wrapper}>
@@ -157,4 +158,4 @@ class EffectBox extends React.Component {
   }
 }
 
-export default withStyles(style)(EffectBox);
+export default injectIntl(withStyles(style)(EffectBox));
