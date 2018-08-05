@@ -72,6 +72,7 @@ export default {
   'Require amount': '필요한 작전보고서',
   'fairy': '요정',
   'doll': '인형',
+  'equip': '장비',
   'amount': '개',
   'in mobile please follow the link below': '모바일에서는 아래의 링크로 들어가주시기 바랍니다',
   'SD simulator link': 'SD 시뮬레이터 링크',

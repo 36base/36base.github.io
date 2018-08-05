@@ -74,6 +74,7 @@ export default {
   'Require amount :': '必要な作戦報告書',
   'fairy': 'フェアリー',
   'doll': 'ドール',
+  'equip': '備品',
   'amount': '個',
   'in mobile please follow the link below': 'モバイルでは、下記のリンクに入ってください',
   'SD simulator link': 'SDシミュレーターリンク',
