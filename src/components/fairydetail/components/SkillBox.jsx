@@ -60,7 +60,7 @@ class SkillBox extends React.Component {
       <div className={classes.infoBox}>
         <div className={classes.title}>
           <div className={classes.titleName}><FormattedMessage id="Skill" /></div>
-          <div className={classes.selectorLabel}><FormattedMessage id="level" /></div>
+          <div className={classes.selectorLabel}><FormattedMessage id="Level" /></div>
           <SmallSelector
             className={classes.selector}
             values={lvValues}
