@@ -222,9 +222,9 @@ class TimeTable extends React.Component {
   renderFairyItem(data) {
     const { classes } = this.props;
     return (
-      <div>
+      <Link className={classes.link} to={`/fairy/${data.id}`}>
         <div className={classes.name}>{data.krName}</div>
-      </div>
+      </Link>
     );
   }
 
