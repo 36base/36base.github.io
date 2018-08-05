@@ -72,6 +72,7 @@ export default {
   'Require amount': 'Require amount',
   'fairy': 'fairy',
   'doll': 'doll',
+  'equip': 'equipment',
   'amount': ' ',
   'in mobile please follow the link below': 'in mobile please follow the link below',
   'SD simulator link': 'SD simulator link',

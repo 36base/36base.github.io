@@ -1,14 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Grid, Typography } from 'material-ui';
+import { Grid, Typography, Radio, RadioGroup, FormControlLabel, FormControl, FormLabel } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
+import { equips } from 'girlsfrontline-core';
+import { injectIntl, FormattedMessage } from 'react-intl';
 
 import Star from '../common/Star';
 import ImageBox from '../common/ImageBox';
 import HorizonLine from '../common/HorizonLine';
 import DollRepository from '../../repositories/DollRepository';
+import FairyRepository from '../../repositories/FairyRepository';
+import EquipUtil from '../../repositories/data/equip';
 
 const style = theme => ({
+  formControl: {
+    marginTop: theme.spacing.unit * 3,
+    marginLeft: theme.spacing.unit * 3,
+  },
+  group: {
+    display: 'flex',
+    flexDirection: 'row',
+    margin: `${theme.spacing.unit}px 0`,
+  },
   container: {
     [theme.breakpoints.down('sm')]: {
       maxWidth: '90%',
@@ -48,6 +61,12 @@ const style = theme => ({
   typeIcon: {
     width: theme.spacing.unit * 8,
   },
+  equipImageWrapper: {
+    display: 'inline-block',
+    position: 'relative',
+    width: 64,
+    height: 32,
+  },
   star: {
     color: '#FFB600',
     fontStyle: 'none',
@@ -77,37 +96,136 @@ class TimeTable extends React.Component {
     super(props);
 
     this.state = {
+      selectedType: 'doll',
       map: undefined,
       keys: [],
+      renderItem: undefined,
     };
 
+    this.setData = this.setData.bind(this);
+    this.handleTypeChange = this.handleTypeChange.bind(this);
+    this.renderDollItem = this.renderDollItem.bind(this);
+    this.renderEquipItem = this.renderEquipItem.bind(this);
+    this.renderFairyItem = this.renderFairyItem.bind(this);
     this.renderRow = this.renderRow.bind(this);
   }
 
   componentWillMount() {
-    DollRepository.fetchAll()
-      .then((dolls) => {
-        const group = dolls.reduce((map, e) => {
-          const { id } = e;
-          const { build } = e.acquisition;
-          if (Number.isInteger(build) && build > 0 && id < 20000) {
-            if (build in map) {
-              map[build].push(e);
-            } else {
-              const temp = map;
-              temp[build] = [e];
-              return temp;
+    this.setData(this.state.selectedType);
+  }
+
+  setData(type) {
+    if (type === 'doll') {
+      DollRepository.fetchAll()
+        .then((dolls) => {
+          const group = dolls.reduce((map, e) => {
+            const { id } = e;
+            const { build } = e.acquisition;
+            if (Number.isInteger(build) && build > 0 && id < 20000) {
+              if (build in map) {
+                map[build].push(e);
+              } else {
+                const temp = map;
+                temp[build] = [e];
+                return temp;
+              }
             }
-          }
 
-          return map;
-        }, {});
+            return map;
+          }, {});
 
-        this.setState({
-          keys: Object.keys(group).map(Number).sort((l, r) => l - r),
-          map: new Map(Object.keys(group).map(key => [Number(key), group[key]])),
+          this.setState({
+            keys: Object.keys(group).map(Number).sort((l, r) => l - r),
+            map: new Map(Object.keys(group).map(key => [Number(key), group[key]])),
+            renderItem: this.renderDollItem,
+          });
         });
+    } else if (type === 'equip') {
+      const group = equips.reduce((map, e) => {
+        const { buildTime } = e;
+
+        if (buildTime && Number.isInteger(buildTime) && buildTime > 0) {
+          if (buildTime in map) {
+            map[buildTime].push(e);
+          } else {
+            const temp = map;
+            temp[buildTime] = [e];
+            return temp;
+          }
+        }
+        return map;
+      }, {});
+
+      this.setState({
+        keys: Object.keys(group).map(Number).sort((l, r) => l - r),
+        map: new Map(Object.keys(group).map(key => [Number(key), group[key]])),
+        renderItem: this.renderEquipItem,
       });
+    } else if (type === 'fairy') {
+      FairyRepository.fetchAll()
+        .then((fairys) => {
+          const group = fairys.reduce((map, e) => {
+            const { buildTime } = e;
+
+            if (buildTime && Number.isInteger(buildTime) && buildTime > 0) {
+              if (buildTime in map) {
+                map[buildTime].push(e);
+              } else {
+                const temp = map;
+                temp[buildTime] = [e];
+                return temp;
+              }
+            }
+
+            return map;
+          }, {});
+
+          this.setState({
+            keys: Object.keys(group).map(Number).sort((l, r) => l - r),
+            map: new Map(Object.keys(group).map(key => [Number(key), group[key]])),
+            renderItem: this.renderFairyItem,
+          });
+        });
+    }
+  }
+
+  handleTypeChange(e) {
+    this.setState({ selectedType: e.target.value }, () => {
+      this.setData(this.state.selectedType);
+    });
+  }
+
+  renderDollItem(data) {
+    const { classes } = this.props;
+    return (
+      <Link className={classes.link} to={`/doll/${data.id}`}>
+        <span className={classes.typeIconWrapper}><ImageBox src={data.icon} /></span>
+        <Star className={classes.star} count={data.rank.starCnt} />
+        <div className={`${classes.name} ${classes[data.rank.name.toLowerCase()]}`}>{data.krName}</div>
+      </Link>
+    );
+  }
+
+  renderEquipItem(data) {
+    const { classes } = this.props;
+    return (
+      <div>
+        <span className={classes.equipImageWrapper}>
+          <ImageBox src={EquipUtil.getSpriteUrl(data)} />
+        </span>
+        <Star className={classes.star} count={data.rank} />
+        <div className={`${classes.name} ${classes[EquipUtil.getRankName(data.rank)]}`}>{data.name}</div>
+      </div>
+    );
+  }
+
+  renderFairyItem(data) {
+    const { classes } = this.props;
+    return (
+      <div>
+        <div className={classes.name}>{data.krName}</div>
+      </div>
+    );
   }
 
   renderRow(key) {
@@ -123,30 +241,41 @@ class TimeTable extends React.Component {
       </Grid>,
       <Grid className={classes.noPadding} item xs={9}>
         {
-          values.map(e => (
-            <Link className={classes.link} to={`/doll/${e.id}`}>
-              <span className={classes.typeIconWrapper}><ImageBox src={e.icon} /></span>
-              <Star className={classes.star} count={e.rank.starCnt} />
-              <div className={`${classes.name} ${classes[e.rank.name.toLowerCase()]}`}>{e.krName}</div>
-            </Link>
-          )).reduce((acc, e) => (acc ? [...acc, <HorizonLine />, e] : [e]), null)
+          values.map(e => this.state.renderItem(e))
+            .reduce((acc, e) => (acc ? [...acc, <HorizonLine />, e] : [e]), null)
         }
       </Grid>,
     ];
   }
 
   render() {
-    const { classes } = this.props;
+    const { classes, intl } = this.props;
     const rows = this.state.keys
       .map(this.renderRow)
       .reduce((acc, e) => (acc ? [...acc, <HorizonLine />, e] : [e]), null);
 
     return (
-      <Grid className={classes.container} container spacing={8}>
-        {rows}
-      </Grid>
+      <div>
+        <div>
+          <FormControl component="fieldset" className={classes.formControl}>
+            <FormLabel component="legend"><FormattedMessage id="type" /></FormLabel>
+            <RadioGroup
+              className={classes.group}
+              value={this.state.selectedType}
+              onChange={this.handleTypeChange}
+            >
+              <FormControlLabel value="doll" control={<Radio />} label={intl.formatMessage({ id: 'doll' })} />
+              <FormControlLabel value="equip" control={<Radio />} label={intl.formatMessage({ id: 'equip' })} />
+              <FormControlLabel value="fairy" control={<Radio />} label={intl.formatMessage({ id: 'fairy' })} />
+            </RadioGroup>
+          </FormControl>
+        </div>
+        <Grid className={classes.container} container spacing={8}>
+          {rows}
+        </Grid>
+      </div>
     );
   }
 }
 
-export default withStyles(style)(TimeTable);
+export default injectIntl(withStyles(style)(TimeTable));
