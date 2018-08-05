@@ -31,6 +31,19 @@ const equipUtil = {
 
     return color;
   },
+  getRankName: (rank) => {
+    let name;
+
+    switch (rank) {
+      case 2: name = 'general'; break;
+      case 3: name = 'rate'; break;
+      case 4: name = 'epochal'; break;
+      case 5: name = 'legendary'; break;
+      default: name = 'legendary'; break;
+    }
+
+    return name;
+  },
   getSpriteUrl: (data) => {
     let spriteName;
     if (data.fitGuns) {
