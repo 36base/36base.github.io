@@ -75,8 +75,8 @@ const dollList = dolls.map((doll) => {
       icon: getTypeIcon(doll.type, rank),
       portrait: `${domain}/portraits/${doll.id}.png`,
       images: buildImage(doll.id, Object.values(doll.skins) || [], spine),
-      stats: doll.stats,
       effect: doll.effect,
+      getStats: doll.getStats,
       skill: buildSkill(doll.skill),
       getSkill: doll.getSkill,
       acquisition: {

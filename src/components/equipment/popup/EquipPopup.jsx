@@ -61,7 +61,7 @@ class EquipPopup extends React.Component {
             <h3 style={{ textAlign: 'center', color: 'white' }}>{data.krCategory}</h3>
             <h3 style={{ textAlign: 'center', color: 'white' }}>{data.krType}</h3>
             <FormControl className={classes.levelForm}>
-              <InputLabel htmlFor="level" style={{ color: 'gray' }}><FormattedMessage id="level" /></InputLabel>
+              <InputLabel htmlFor="level" style={{ color: 'gray' }}><FormattedMessage id="Level" /></InputLabel>
               <Select
                 native
                 className={classes.levelSelect}
