@@ -21,6 +21,7 @@ const initialState = {
         timetable: { name: 'time table', icon: 'fa-clock', to: '/timetable' },
         calculator: { name: 'Disc calculator', icon: 'fa-calculator', to: '/calculator' },
         sdsim: { name: 'SD simulator', icon: 'fa-industry', to: '/sdsim' },
+        logisticsupport: { name: 'Logistic support', icon: 'fa-industry', to: '/logisticsupport' },
       },
     },
   },
