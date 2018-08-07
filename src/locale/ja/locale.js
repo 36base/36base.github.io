@@ -10,6 +10,7 @@ export default {
   'time table': '製造タイムテーブル',
   'Disc calculator': '作戦報告書計算機',
   'SD simulator': 'SDシミュレーター',
+  'Logistic support': 'ㅁㄴㅇㄹ',
   'About / Contact': 'About / Contact',
   '2-Star': '★2',
   '3-Star': '★3',

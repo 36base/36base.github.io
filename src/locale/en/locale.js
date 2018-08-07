@@ -10,6 +10,7 @@ export default {
   'time table': 'Time Table',
   'Disc calculator': 'Disc Calculator',
   'SD simulator': 'SD Simulator',
+  'Logistic support': 'Logistic Support',
   'About / Contact': 'About / Contact',
   '2-Star': '2-Star',
   '3-Star': '3-Star',
