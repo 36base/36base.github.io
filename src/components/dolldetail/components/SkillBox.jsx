@@ -118,7 +118,7 @@ class SkillBox extends React.Component {
     const { classes, lv, intl } = this.props;
 
     const sec = this.props.intl.formatMessage({ id: 's' }); // 초
-    const selector = <SmallSelector label={intl.formatMessage({ id: 'level' })} values={lvValues} selected={lv} onChange={this.onChange} />;
+    const selector = <SmallSelector label={intl.formatMessage({ id: 'Level' })} values={lvValues} selected={lv} onChange={this.onChange} />;
     const initCooldown = this.renderProperty('IC', sec);
     const cooldown = this.renderProperty('CD', sec);
     const duration = this.renderProperty('DR', sec);

@@ -9,7 +9,7 @@ import profileCZ from './profile/cz.png';
 import profileBC from './profile/cirnov.png';
 import profileBarney from './profile/barney.png';
 import profileChocosable from './profile/chocosable.png';
-import profileKrepe from './profile/krepe.png';
+import profileKrepe from './profile/krepe.jpg';
 import profileDigetArk from './profile/diget_ark.png';
 import profileSume from './profile/sume.png';
 
@@ -89,7 +89,7 @@ export default [
     impression: '밥벌어 먹고 살기 힘들다',
   },
   {
-    name: 'Krepe',
+    name: 'Krepe-suZette',
     profile: profileKrepe,
     role: '리소스 관리',
     impression: '눈을 떠야해 또 아침이야',

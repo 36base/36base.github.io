@@ -230,7 +230,7 @@ class DollDetail extends React.Component {
             illust={info.illust}
             voice={info.voice}
           />)}
-          {this.wrap(<StatusInfoBox {...info.stats} />)}
+          {this.wrap(<StatusInfoBox id={info.id} getStats={info.getStats} />)}
           {this.state.hasMod
             ? this.wrap(<a href={info.id + 20000} className={classes.button}><FormattedMessage id="MOD Ver Link" /></a>)
             : <div />}

@@ -74,9 +74,9 @@ const dollList = dolls.map((doll) => {
       spineCode: spine ? spine.code : undefined,
       icon: getTypeIcon(doll.type, rank),
       portrait: `${domain}/portraits/${doll.id}.png`,
-      images: buildImage(doll.id, doll.skins || [], spine),
-      stats: doll.stats,
+      images: buildImage(doll.id, Object.values(doll.skins) || [], spine),
       effect: doll.effect,
+      getStats: doll.getStats,
       skill: buildSkill(doll.skill),
       getSkill: doll.getSkill,
       acquisition: {

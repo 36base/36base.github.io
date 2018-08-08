@@ -14,6 +14,7 @@ import EquipDict from './equipment/EquipDict';
 import Calculator from './calculator/Calculator';
 import TimeTable from './timetable/TimeTable';
 import SdSimulator from './sdsim/SdSimulator';
+import LogisticSupport from './logisticsupport/LogisticSupport';
 import About from './about/About';
 import FairyDict from './fairy/FairyDict';
 import FairyDetail from './fairydetail/FairyDetail';
@@ -87,6 +88,7 @@ class App extends React.Component {
             <Route path="/timetable" component={TimeTable} />
             <Route path="/calculator" component={Calculator} />
             <Route path="/sdsim" component={SdSimulator} />
+            <Route path="/logisticsupport" component={LogisticSupport} />
             <Route path="/about" component={About} />
           </div>
         </main>
