@@ -71,7 +71,7 @@ export default {
   'OATH': '誓約',
   'Current EXP.': '現在経験値',
   'Target Level': '目標レベル',
-  'Require amount :': '必要な作戦報告書',
+  'Require amount': '必要な作戦報告書',
   'fairy': 'フェアリー',
   'doll': 'ドール',
   'amount': '個',
