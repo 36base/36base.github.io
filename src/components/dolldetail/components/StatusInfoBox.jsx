@@ -53,8 +53,8 @@ class StatusInfoBox extends React.Component {
     const { id } = this.props;
 
     if (id < 20000) {
-      lvValues = fullLvValues.splice(0, 100);
-      favorValues = fullFavorValues.splice(0, 150);
+      lvValues = fullLvValues.slice(0, 100);
+      favorValues = fullFavorValues.slice(0, 150);
     } else {
       lvValues = fullLvValues;
       favorValues = fullFavorValues;
