@@ -2,10 +2,10 @@
 /* eslint-env es6 */
 
 export default {
-  'gf dictionary': 'ドルフロ圖鑑',
-  'doll dictionary': '人形圖鑑',
-  'equipment dictionary': '裝備圖鑑',
-  'fairy dictionary': 'フェアリー圖鑑',
+  'gf dictionary': 'ドルフロ図鑑',
+  'doll dictionary': '人形図鑑',
+  'equipment dictionary': '装備図鑑',
+  'fairy dictionary': 'フェアリー図鑑',
   'Convenience Features': '便宜機能',
   'time table': '製造タイムテーブル',
   'Disc calculator': '作戦報告書計算機',
