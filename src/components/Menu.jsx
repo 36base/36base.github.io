@@ -1,5 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { instanceOf } from 'prop-types';
+import { withCookies, Cookies } from 'react-cookie';
 import { withRouter } from 'react-router';
 import { Hidden, Drawer, List, ListItem, ListItemText, ListItemIcon, Divider, Icon, Collapse } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
@@ -24,8 +26,24 @@ const style = theme => ({
 });
 
 class Menu extends React.Component {
+  static propTypes = {
+    cookies: instanceOf(Cookies).isRequired,
+  };
+
   constructor(props) {
     super(props);
+
+    const { cookies } = props;
+
+    let langState = cookies.get('lang');
+
+    if (langState === undefined) {
+      langState = 'ko';
+    }
+
+    this.state = {
+      languageName: langState,
+    };
 
     this.routeTo = this.routeTo.bind(this);
     this.renderMenuItem = this.renderMenuItem.bind(this);
@@ -64,6 +82,11 @@ class Menu extends React.Component {
   }
 
   renderCollapse(key, value) {
+    if (value.fitLanguage) {
+      const filtered = value.fitLanguage.filter(iter => iter === this.state.languageName);
+
+      if (filtered.length === 0) return (<div />);
+    }
     return (
       <ListItem
         key={key}
@@ -81,6 +104,7 @@ class Menu extends React.Component {
   render() {
     // eslint-disable-next-line
     const { classes, list, intl } = this.props;
+
     const items = (
       <List component="nav" >
         {Object.keys(list).map(key => this.renderMenuItem(key, list[key]))}
@@ -128,4 +152,4 @@ const dispatchMapper = dispatch => ({
 });
 
 // eslint-disable-next-line
-export default connect(stateMapper, dispatchMapper)(injectIntl(withStyles(style)(withRouter(Menu))));
+export default connect(stateMapper, dispatchMapper)(withCookies((injectIntl(withStyles(style)(withRouter(Menu))))));
