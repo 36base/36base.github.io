@@ -19,6 +19,8 @@ import SDBox from './components/SDBox';
 import SkillBox from './components/SkillBox';
 import EffectBox from './components/EffectBox';
 import AcquisitionInfoBox from './components/AcquisitionInfoBox';
+import IntroduceBox from './components/IntroduceBox';
+import ScriptBox from './components/ScriptBox';
 
 import DollRepository from '../../repositories/DollRepository';
 import SpineRepository from '../../repositories/SpineRepository';
@@ -265,6 +267,8 @@ class DollDetail extends React.Component {
           }
           {this.wrap(<EffectBox {...info.effect} hasLevel={info.type.code === 'hg'} />)}
           {this.wrap(<AcquisitionInfoBox {...info.acquisition} />)}
+          {this.wrap(<IntroduceBox {...{ id: info.id }} />)}
+          {this.wrap(<ScriptBox {...{ id: info.id, skinNo }} />)}
         </div>
       </div>
     );
