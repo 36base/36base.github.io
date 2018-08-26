@@ -60,7 +60,7 @@ function buildSkill(skill) {
 }
 
 const dollList = dolls.map((doll) => {
-  const rank = doll.id > 1000 ? 1 : doll.rank;
+  const rank = (parseInt((Number(doll.id) / 1000), 10) === 1) ? 1 : doll.rank;
   const spine = spineMap.get(doll.id);
 
   let result = { };
@@ -69,7 +69,7 @@ const dollList = dolls.map((doll) => {
       id: doll.id,
       name: doll.name,
       krName: doll.krName,
-      nicknames: (dollNickname[doll.id] ? dollNickname[doll.id] : []),
+      nicknames: (dollNickname[doll.id % 20000] ? dollNickname[doll.id % 20000] : []),
       illust: doll.illust,
       voice: doll.voice,
       type: typeMap.get(doll.type) || {},
