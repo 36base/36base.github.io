@@ -1,5 +1,6 @@
 // import { dolls, skills } from 'girlsfrontline-core';
 import { dolls } from 'girlsfrontline-core';
+import gfextradata from 'girlsfrontline-extra-data';
 import dollRanks from './data/dollRank';
 import dollTypes from './data/dollType';
 import dollSpines from './data/dollSpines';
@@ -9,6 +10,8 @@ const typeMap = new Map(dollTypes.map(e => [e.code, e]));
 const rankMap = new Map(dollRanks.map(e => [e.id, e]));
 // const skillMap = new Map(skills.map(e => [e.id, e]));
 const spineMap = new Map(Object.keys(dollSpines).map(k => [Number(k), dollSpines[k]]));
+
+const { dollNickname } = gfextradata({ locale: 'ko' });
 
 function getTypeIcon(typeId, rankId) {
   const type = typeMap.get(typeId).code.toUpperCase();
@@ -66,7 +69,7 @@ const dollList = dolls.map((doll) => {
       id: doll.id,
       name: doll.name,
       krName: doll.krName,
-      nicknames: doll.nick,
+      nicknames: (dollNickname[doll.id] ? dollNickname[doll.id] : []),
       illust: doll.illust,
       voice: doll.voice,
       type: typeMap.get(doll.type) || {},
