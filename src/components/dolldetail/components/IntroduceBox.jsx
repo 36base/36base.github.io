@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, Typography } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 import { injectIntl } from 'react-intl';
-import { characterScript } from 'girlsfrontline-extra-data';
+import gfextradata from 'girlsfrontline-extra-data';
 
 import HorizonLine from '../../common/HorizonLine';
 import InfoBox from '../../common/InfoBox';
@@ -16,7 +16,8 @@ const style = theme => ({
 });
 
 const IntroduceBox = (props) => {
-  const str = (characterScript[props.id].Introduce).replace(/\\n/gi, '<br>');
+  const { characterScript } = gfextradata({ locale: props.intl.locale });
+  const str = (characterScript[props.id].default.Introduce).replace(/\\n/gi, '<br>');
 
   return (
     <InfoBox name={props.intl.formatMessage({ id: 'Introduce' })} >

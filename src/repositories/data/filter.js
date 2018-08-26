@@ -13,12 +13,18 @@ dollRanks.forEach((e) => {
 });
 
 const names = dolls.reduce((arr, e) => {
-  arr.push([e.name, e.id]);
-  arr.push([e.krName, e.id]);
-  if (e.nicknames) e.nicknames.forEach(nick => arr.push([nick, e.id]));
+  if (e.id < 20000) {
+    const ids = [e.id];
+
+    if (dolls.find(iter => iter.id === e.id + 20000)) {
+      ids.push(e.id + 20000);
+    }
+    arr.push([e.name, ids]);
+    arr.push([e.krName, ids]);
+    if (e.nicknames) e.nicknames.forEach(nick => arr.push([nick, ids]));
+  }
   return arr;
 }, []);
-
 
 export const propertyFilter = new Map(properties);
 export const nameFilter = new Map(names);

@@ -46,7 +46,7 @@ function addFilter(filters, data) {
     const ids = [];
     Array.from(nameFilter.keys()).forEach((key) => {
       if (String(key).indexOf(data.value) >= 0) {
-        ids.push(nameFilter.get(String(key)));
+        ids.push(...(nameFilter.get(String(key))));
       }
     });
     filters.push({
