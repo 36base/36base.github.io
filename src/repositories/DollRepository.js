@@ -3,13 +3,13 @@ import { dolls } from 'girlsfrontline-core';
 import gfextradata from 'girlsfrontline-extra-data';
 import dollRanks from './data/dollRank';
 import dollTypes from './data/dollType';
-import dollSpines from './data/dollSpines';
+import getDollSpine from './data/getDollSpine';
 
 const domain = 'https://girlsfrontline.kr/hotlink-ok/girlsfrontline-resources/images';
 const typeMap = new Map(dollTypes.map(e => [e.code, e]));
 const rankMap = new Map(dollRanks.map(e => [e.id, e]));
 // const skillMap = new Map(skills.map(e => [e.id, e]));
-const spineMap = new Map(Object.keys(dollSpines).map(k => [Number(k), dollSpines[k]]));
+const spineMap = new Map(dolls.map(item => [Number(item.id), getDollSpine(item.id)]));
 
 const { dollNickname } = gfextradata({ locale: 'ko' });
 
