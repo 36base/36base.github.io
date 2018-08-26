@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, Typography } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 import { injectIntl } from 'react-intl';
-import { characterScript } from 'girlsfrontline-extra-data';
+import gfextradata from 'girlsfrontline-extra-data';
 
 import HorizonLine from '../../common/HorizonLine';
 import InfoBox from '../../common/InfoBox';
@@ -16,7 +16,13 @@ const style = theme => ({
 });
 
 const ScriptBox = (props) => {
-  const script = characterScript[props.id];
+  const { characterScript } = gfextradata({ locale: props.intl.locale });
+
+  let script = characterScript[props.id].default;
+
+  if (characterScript[props.id][props.skinCode]) {
+    script = characterScript[props.id][props.skinCode];
+  }
 
   const keyFormatMessage = (key) => {
     const label = Number(key.charAt(key.length - 1)) ? 'DIALOGUE' : key;

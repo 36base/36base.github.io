@@ -106,6 +106,7 @@ class DollDetail extends React.Component {
       info: undefined,
       skeleton: undefined,
       hasMod: false,
+      skinCode: 0,
       skinNo: 0,
       skinType: 'normal',
       skillLv: 10,
@@ -156,7 +157,10 @@ class DollDetail extends React.Component {
     SpineRepository.fetchSpine((id > 20000 && no !== 0) ? id - 20000 : id, no)
       .then(skeleton => this.setState({ skeleton }));
 
-    this.setState({ skinNo: no });
+    this.setState({
+      skinNo: no,
+      skinCode: Object.keys(this.state.info.skins)[no - 1],
+    });
   }
 
   toggleSkinType() {
@@ -190,6 +194,7 @@ class DollDetail extends React.Component {
       info,
       skeleton,
       skinNo,
+      skinCode,
       skinType,
       skillLv,
       skill2Lv,
@@ -267,8 +272,8 @@ class DollDetail extends React.Component {
           }
           {this.wrap(<EffectBox {...info.effect} hasLevel={info.type.code === 'hg'} />)}
           {this.wrap(<AcquisitionInfoBox {...info.acquisition} />)}
-          {this.wrap(<IntroduceBox {...{ id: info.id }} />)}
-          {this.wrap(<ScriptBox {...{ id: info.id, skinNo }} />)}
+          {this.wrap(<IntroduceBox {...{ id: info.id, skinCode }} />)}
+          {this.wrap(<ScriptBox {...{ id: info.id, skinCode }} />)}
         </div>
       </div>
     );

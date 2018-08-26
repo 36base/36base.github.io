@@ -72,6 +72,7 @@ const dollList = dolls.map((doll) => {
       type: typeMap.get(doll.type) || {},
       rank: rankMap.get(rank) || {},
       spineCode: spine ? spine.code : undefined,
+      skins: doll.skins,
       icon: getTypeIcon(doll.type, rank),
       portrait: `${domain}/portraits/${doll.id}.png`,
       images: buildImage(doll.id, Object.values(doll.skins) || [], spine),
