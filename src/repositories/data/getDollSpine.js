@@ -3,13 +3,14 @@ import { dolls } from 'girlsfrontline-core';
 
 const getDollSpine = (dollId) => {
   const doll = dolls.find(item => item.id === dollId);
+  const lowerDollName = String(doll.name).toLowerCase();
   const dollSpine = {
-    code: doll.name,
+    code: lowerDollName,
     names: { },
   };
-  dollSpine.names[doll.name] = ['png', 'atlas', 'skel'];
+  dollSpine.names[lowerDollName] = ['png', 'atlas', 'skel'];
   Object.keys(doll.skins).forEach((key) => {
-    dollSpine.names[`${doll.name}_${key}`] = ['png', 'atlas', 'skel'];
+    dollSpine.names[`${lowerDollName}_${key}`] = ['png', 'atlas', 'skel'];
   });
 
   return dollSpine;
