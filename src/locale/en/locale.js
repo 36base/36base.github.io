@@ -79,4 +79,11 @@ export default {
   'SD simulator link': 'SD simulator link',
   '36base': '36Base',
   '36Base - Girl\'s Frontline Database': '36Base - Girl\'s Frontline Database',
+  'Introduce': 'Introduce',
+  'DIALOGUE': 'Dialogue',
+  'SOULCONTRACT': 'Soul Contract',
+  'ALLHALLOWS': 'Halloween',
+  'DIALOGUEWEDDING': 'Wedding Dialogue',
+  'CHRISTMAS': 'Christmas',
+  'GAIN': 'Gain',
 };
