@@ -11,6 +11,7 @@ export default {
   'Disc calculator': '작전보고서 계산기',
   'SD simulator': 'SD 시뮬레이터',
   'Logistic support': '군수지원 계산기',
+  'Music Player': '음악(OST) 플레이어',
   'Gf dict': '소전사전 공략',
   'About / Contact': 'About / Contact',
   '2-Star': '2성',
