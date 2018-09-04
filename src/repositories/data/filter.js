@@ -19,9 +19,9 @@ const names = dolls.reduce((arr, e) => {
     if (dolls.find(iter => iter.id === e.id + 20000)) {
       ids.push(e.id + 20000);
     }
-    arr.push([e.name, ids]);
-    arr.push([e.krName, ids]);
-    if (e.nicknames) e.nicknames.forEach(nick => arr.push([nick, ids]));
+    arr.push([String(e.name).toLowerCase(), ids]);
+    arr.push([String(e.krName).toLowerCase(), ids]);
+    if (e.nicknames) e.nicknames.forEach(nick => arr.push([String(nick).toLowerCase(), ids]));
   }
   return arr;
 }, []);
