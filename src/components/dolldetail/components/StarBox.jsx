@@ -14,7 +14,7 @@ const style = {
 };
 
 const StarBox = props => (
-  <Grid className={props.classes.container} item xs={2}>
+  <Grid className={props.classes.container} item>
     <Typography className={props.classes.font} variant="display2" align="right" >
       <Star count={props.count} />
     </Typography>

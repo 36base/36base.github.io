@@ -223,8 +223,16 @@ class DollDetail extends React.Component {
             <Grid container className={classes.titleLine}>
               <HorizonLine height={3} />
             </Grid>
-            <SkinTabbar selected={skinNo} skins={info.images} onChange={this.handleSkinChange} />
-            <StarBox count={info.rank.starCnt} />
+            <Grid container>
+              <Grid item xs={8} md={10}>
+                <SkinTabbar
+                  selected={skinNo}
+                  skins={info.images}
+                  onChange={this.handleSkinChange}
+                />
+              </Grid>
+              <Grid item xs={4} md={2}><StarBox count={info.rank.starCnt} /></Grid>
+            </Grid>
           </Grid>
         </div>
         <div className={classes.img}>
