@@ -17,7 +17,10 @@ const style = theme => ({
 
 const IntroduceBox = (props) => {
   const { characterScript } = gfextradata({ locale: props.intl.locale });
-  const str = (characterScript[props.id].default.Introduce).replace(/\\n/gi, '<br>');
+
+  const str = characterScript[props.id] ?
+    (characterScript[props.id].default.Introduce).replace(/\\n/gi, '<br>') :
+    (`[Error] ${props.intl.formatMessage({ id: 'no data' })}`);
 
   return (
     <InfoBox name={props.intl.formatMessage({ id: 'Introduce' })} >

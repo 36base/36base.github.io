@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Typography } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
-import { injectIntl } from 'react-intl';
+import { injectIntl, FormattedMessage } from 'react-intl';
 import gfextradata from 'girlsfrontline-extra-data';
 
 import HorizonLine from '../../common/HorizonLine';
@@ -18,10 +18,13 @@ const style = theme => ({
 const ScriptBox = (props) => {
   const { characterScript } = gfextradata({ locale: props.intl.locale });
 
-  let script = characterScript[props.id].default;
+  let script = { };
+  if (characterScript[props.id]) {
+    script = characterScript[props.id].default;
 
-  if (characterScript[props.id][props.skinCode]) {
-    script = characterScript[props.id][props.skinCode];
+    if (characterScript[props.id][props.skinCode]) {
+      script = characterScript[props.id][props.skinCode];
+    }
   }
 
   const keyFormatMessage = (key) => {
@@ -42,7 +45,15 @@ const ScriptBox = (props) => {
 
   return (
     <InfoBox name={props.intl.formatMessage({ id: 'CharacterScript' })} >
-      {Object.keys(script).map(iter => (iter === 'Introduce' ? (<div />) : buildRow(iter, script[iter])))}
+      {characterScript[props.id] ?
+        Object.keys(script).map(iter => (iter === 'Introduce' ? (<div />) : buildRow(iter, script[iter]))) :
+        [
+          <Grid key="row" className={props.classes.container} container spacing={8}>
+            <Grid item xs><Typography>[Error] <FormattedMessage id="no data" /></Typography></Grid>
+          </Grid>,
+          <HorizonLine key="hr" />,
+        ]
+      }
     </InfoBox>
   );
 };
