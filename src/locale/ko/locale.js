@@ -79,6 +79,7 @@ export default {
   'equip': '장비',
   'amount': '개',
   'in mobile please follow the link below': '모바일에서는 아래의 링크로 들어가주시기 바랍니다',
+  'no data': '데이터 없음',
   'SD simulator link': 'SD 시뮬레이터 링크',
   '36base': '36베이스',
   '36Base - Girl\'s Frontline Database': '36베이스 - 소녀전선 데이터베이스',
