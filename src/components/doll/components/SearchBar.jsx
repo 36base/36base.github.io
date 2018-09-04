@@ -55,7 +55,7 @@ class SearchBar extends React.Component {
     const { value } = this.state;
     const { filters } = this.props;
     if (e.keyCode === 13) {
-      this.props.addFilter({ value: this.state.value, type: 'name' });
+      this.props.addFilter({ value: value.toLowerCase(), type: 'name' });
       this.setState({ value: '' });
     } else if (e.keyCode === 8 && value.length === 0 && filters.length > 0) {
       const nameFilters = filters.map(item => (item.type === 'name' ? item : null));

@@ -15,6 +15,7 @@ import Calculator from './calculator/Calculator';
 import TimeTable from './timetable/TimeTable';
 import SdSimulator from './sdsim/SdSimulator';
 import LogisticSupport from './logisticsupport/LogisticSupport';
+import MusicPlayer from './musicplayer/MusicPlayer';
 import GfDict from './gfdict/GfDict';
 import About from './about/About';
 import FairyDict from './fairy/FairyDict';
@@ -90,6 +91,7 @@ class App extends React.Component {
             <Route path="/calculator" component={Calculator} />
             <Route path="/sdsim" component={SdSimulator} />
             <Route path="/logisticsupport" component={LogisticSupport} />
+            <Route path="/musicplayer" component={MusicPlayer} />
             <Route path="/gfdict" component={GfDict} />
             <Route path="/about" component={About} />
           </div>

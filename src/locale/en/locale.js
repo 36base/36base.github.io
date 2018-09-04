@@ -76,6 +76,7 @@ export default {
   'equip': 'equipment',
   'amount': ' ',
   'in mobile please follow the link below': 'in mobile please follow the link below',
+  'no data': 'No Data',
   'SD simulator link': 'SD simulator link',
   '36base': '36Base',
   '36Base - Girl\'s Frontline Database': '36Base - Girl\'s Frontline Database',

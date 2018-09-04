@@ -12,6 +12,13 @@ dollRanks.forEach((e) => {
   e.nickNames.forEach(nick => properties.push([nick, predicate]));
 });
 
+const buildTimeToString = (time) => {
+  const hour = `${Number.parseInt(time / 3600, 10)}`;
+  const min = `${Number.parseInt((time % 3600) / 60, 10)}`;
+
+  return `${hour.padStart(2, '0')}${min.padStart(2, '0')}`;
+};
+
 const names = dolls.reduce((arr, e) => {
   if (e.id < 20000) {
     const ids = [e.id];
@@ -19,9 +26,10 @@ const names = dolls.reduce((arr, e) => {
     if (dolls.find(iter => iter.id === e.id + 20000)) {
       ids.push(e.id + 20000);
     }
-    arr.push([e.name, ids]);
-    arr.push([e.krName, ids]);
-    if (e.nicknames) e.nicknames.forEach(nick => arr.push([nick, ids]));
+    arr.push([String(e.name).toLowerCase(), ids]);
+    arr.push([String(e.krName).toLowerCase(), ids]);
+    if (e.nicknames) e.nicknames.forEach(nick => arr.push([String(nick).toLowerCase(), ids]));
+    arr.push([buildTimeToString(e.acquisition.build), ids]);
   }
   return arr;
 }, []);
