@@ -3,16 +3,21 @@ import { FormControlLabel, Switch } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 import { injectIntl } from 'react-intl';
 
-const style = {
+const style = theme => ({
   container: {
     display: 'flex',
     flexDirection: 'row-reverse',
-    paddingRight: '40px',
+    [theme.breakpoints.down('sm')]: {
+      paddingTop: '40px',
+    },
+    [theme.breakpoints.up('md')]: {
+      paddingRight: '40px',
+    },
   },
   button: {
     zIndex: 200,
   },
-};
+});
 
 const TypeSwitchBox = (props) => {
   const {
