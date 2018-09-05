@@ -6,7 +6,7 @@ const style = theme => ({
   container: {
     display: 'flex',
     flexWrap: 'wrap',
-    zIndex: 200,
+    zIndex: 210,
   },
   mixin: {
     display: 'inline-block',
@@ -20,6 +20,7 @@ const style = theme => ({
     marginBottom: theme.spacing.unit,
     padding: `${theme.spacing.unit / 4}px ${theme.spacing.unit / 2}px`,
     minHeight: theme.spacing.unit * 3,
+    zIndex: 210,
   },
 });
 

@@ -13,9 +13,10 @@ const style = theme => ({
     [theme.breakpoints.up('md')]: {
       paddingRight: '40px',
     },
+    zIndex: 100,
   },
   button: {
-    zIndex: 200,
+    zIndex: 100,
   },
 });
 
