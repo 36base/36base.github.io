@@ -29,7 +29,7 @@ const names = dolls.reduce((arr, e) => {
     arr.push([String(e.name).toLowerCase(), ids]);
     arr.push([String(e.krName).toLowerCase(), ids]);
     if (e.nicknames) e.nicknames.forEach(nick => arr.push([String(nick).toLowerCase(), ids]));
-    arr.push([buildTimeToString(e.acquisition.build), ids]);
+    arr.push([`${buildTimeToString(e.acquisition.build)} - ${e.name}`, ids]);
   }
   return arr;
 }, []);
