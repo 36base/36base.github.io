@@ -24,6 +24,7 @@ const getSprite = async (data) => {
     case 'armorPlate': resourceName.type = 'armor'; break;
     case 'ammunitionBox': resourceName.type = 'ammoBox'; break;
     case 'spPart': resourceName.type = 'special'; break;
+    case 'medal': resourceName.type = 'special'; break;
     case 'exoSkeleton': {
       resourceName.type = 'skeleton';
 
@@ -56,9 +57,17 @@ const getSprite = async (data) => {
 
   return new Promise((resolve) => {
     if (data.fitGuns) {
-      DollRepository.fetchById(data.fitGuns[0])
+      DollRepository.fetchById((data.fitGuns[0] % 20000))
         .then((doll) => {
-          resourceName.special = (doll && doll.codename) ? doll.codename : 'clear';
+          resourceName.special = (doll && doll.codename) ? String(doll.codename).toLowerCase() : '';
+
+          if (resourceName.special.indexOf('ump') !== -1) resourceName.special = 'ump';
+          else if (resourceName.special.indexOf('ak') !== -1) resourceName.special = 'ak';
+
+          if (resourceName.type === 'suit') resourceName.option = '';
+
+          if (resourceName.special === 'clear' || resourceName.special === 'fail') resourceName.type = 'special';
+
           resolve(buildSpriteUrl(resourceName));
         });
     } else {
