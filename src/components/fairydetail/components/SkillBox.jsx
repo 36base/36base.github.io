@@ -5,56 +5,36 @@ import { injectIntl, FormattedMessage } from 'react-intl';
 import SmallSelector from '../../common/SmallSelector';
 import style from './style';
 
-const lvValues = Array(10).fill().map((_, i) => ({ value: i + 1, name: i + 1 }));
+const levelValues = Array(10).fill().map((_, i) => ({ value: i + 1, name: i + 1 }));
 
 class SkillBox extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { lv: 1 };
+    this.state = { level: props.default.level };
 
     this.getDesc = this.getDesc.bind(this);
-    this.handleSkillLvChange = this.handleSkillLvChange.bind(this);
+    this.handleSkillLevelChange = this.handleSkillLevelChange.bind(this);
   }
 
-  getDesc(template, dataPool, lv) {
+  getDesc(template, dataPool, level) {
     let desc = template;
 
     Object.entries(dataPool).forEach(([key, value]) => {
-      desc = desc.replace(new RegExp(`{${key}}`, 'g'), value[lv - 1]);
+      desc = desc.replace(new RegExp(`{${key}}`, 'g'), value[level - 1]);
     });
 
     return desc;
   }
-  handleSkillLvChange(event) {
-    this.setState({ lv: event.target.value });
+  handleSkillLevelChange(event) {
+    this.setState({ level: event.target.value }, () => {
+      this.props.handler(this.state.level);
+    });
   }
 
 
   render() {
-    const { classes } = this.props;
-    let description = this.getDesc(
-      this.props.skill.desc,
-      this.props.skill.dataPool,
-      this.state.lv,
-    );
-    if (this.props.skill.id === 1011) {
-      if (this.props.skill.dataPool.MV[9] === 0) {
-        const temp = this.props.skill.dataPool;
-        temp.MV[9] = '무한대';
-        description = this.getDesc(
-          this.props.skill.desc,
-          temp,
-          this.state.lv,
-        );
-      }
-    }
-    let cd = this.props.skill.dataPool.CD;
-    if (cd === undefined) {
-      cd = '없음';
-    }
-
-    const cp = this.props.skill.dataPool.CP;
+    const { classes, skill } = this.props;
 
     return (
       <div className={classes.infoBox}>
@@ -63,21 +43,21 @@ class SkillBox extends React.Component {
           <div className={classes.selectorLabel}><FormattedMessage id="Level" /></div>
           <SmallSelector
             className={classes.selector}
-            values={lvValues}
-            selected={this.state.lv}
-            onChange={this.handleSkillLvChange}
+            values={levelValues}
+            selected={this.state.level}
+            onChange={this.handleSkillLevelChange}
           />
         </div>
         <div className={classes.body}>
           <div className={classes.skillInfo}>
             <img src={this.props.icon} alt="skill icon" className={classes.skillIcon} />
-            <div className={classes.skillName}>{ this.props.skill.name }</div>
+            <div className={classes.skillName}>{skill.name}</div>
             <div>
-              <div><FormattedMessage id="cool down" /><span className={classes.skillBoxYellow}>{ cd }</span></div>
-              <div><FormattedMessage id="Support Order Consume" /><span className={classes.skillBoxYellow}>{ cp }</span></div>
+              <div><FormattedMessage id="cool down" /><span className={classes.skillBoxYellow}>{skill.coolDown}</span></div>
+              <div><FormattedMessage id="Support Order Consume" /><span className={classes.skillBoxYellow}>{skill.consumption}</span></div>
             </div>
           </div>
-          <div>{ description }</div>
+          <div>{skill.description}</div>
         </div>
       </div>
     );

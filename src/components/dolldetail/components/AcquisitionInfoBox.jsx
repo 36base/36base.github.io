@@ -25,6 +25,8 @@ const style = theme => ({
 });
 
 const AcquisitionInfoBox = (props) => {
+  const { info } = props;
+
   const buildRow = (label, value) => [
     <Grid key="row" className={props.classes.container} container spacing={8}>
       <Grid item xs><Typography>{label}</Typography></Grid>
@@ -35,8 +37,8 @@ const AcquisitionInfoBox = (props) => {
 
   return (
     <InfoBox name={props.intl.formatMessage({ id: 'Acquisition' })} >
-      {buildRow(props.intl.formatMessage({ id: 'Production' }), timeToStr(props.build))}
-      {buildRow(props.intl.formatMessage({ id: 'drop' }), props.drop.join(', ') || props.intl.formatMessage({ id: 'none' }))}
+      {buildRow(props.intl.formatMessage({ id: 'Production' }), timeToStr(info.buildTime))}
+      {buildRow(props.intl.formatMessage({ id: 'drop' }), info.obtain.map(item => item.description).join(', ') || props.intl.formatMessage({ id: 'none' }))}
     </InfoBox>
   );
 };

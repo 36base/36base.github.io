@@ -2,9 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import { withStyles } from 'material-ui/styles';
-import { instanceOf } from 'prop-types';
-import { withCookies, Cookies } from 'react-cookie';
 
+import FairyRepository from './../../repositories/FairyRepository';
 import FairyCard from './components/FairyCard';
 
 
@@ -59,30 +58,25 @@ const style = theme => ({
 });
 
 class FairyDict extends React.Component {
-  static propTypes = {
-    cookies: instanceOf(Cookies).isRequired,
-  };
-
   constructor(props) {
     super(props);
 
-    const { cookies } = props;
-
-    let langState = cookies.get('lang');
-
-    if (langState === undefined) {
-      langState = 'ko';
-    }
-
     this.state = {
-      languageName: langState,
+      list: [],
     };
   }
+  componentWillMount() {
+    FairyRepository.fetchAll()
+      .then(list => this.setState({ list }));
+  }
   render() {
-    const { list, classes } = this.props;
+    const { classes } = this.props;
+
     return (
       <div className={classes.wrapper}>
-        {list.map(fairy => <FairyCard lang={this.state.languageName} key={fairy.id} {...fairy} />)}
+        {this.state.list.map(fairy => (
+          <FairyCard key={fairy.id} info={fairy} />
+        ))}
       </div>
     );
   }
@@ -93,4 +87,4 @@ const stateMapper = state => ({
   list: state.fairydict.list,
 });
 
-export default connect(stateMapper)(withRouter(withStyles(style)(withCookies(FairyDict))));
+export default connect(stateMapper)(withRouter(withStyles(style)(FairyDict)));

@@ -18,9 +18,19 @@ const style = theme => ({
 const IntroduceBox = (props) => {
   const { characterScript } = gfextradata({ locale: props.intl.locale });
 
-  const str = characterScript[props.id] ?
-    (characterScript[props.id].default.Introduce).replace(/\\n/gi, '<br>') :
-    (`[Error] ${props.intl.formatMessage({ id: 'no data' })}`);
+  let str = '';
+
+  if (characterScript[props.id]) {
+    str = (characterScript[props.id].default.Introduce);
+
+    if (characterScript[props.id][props.skinCode]) {
+      str = characterScript[props.id][props.skinCode].Introduce;
+    }
+
+    str = str.replace(/\\n/gi, '<br>');
+  } else {
+    str = `[Error] ${props.intl.formatMessage({ id: 'no data' })}`;
+  }
 
   return (
     <InfoBox name={props.intl.formatMessage({ id: 'Introduce' })} >

@@ -25,6 +25,8 @@ import ScriptBox from './components/ScriptBox';
 import DollRepository from '../../repositories/DollRepository';
 import SpineRepository from '../../repositories/SpineRepository';
 
+import getDollSpine from './../../repositories/data/getDollSpine';
+
 const style = theme => ({
   wrapper: {
     position: 'relative',
@@ -94,29 +96,19 @@ class DollDetail extends React.Component {
   constructor(props) {
     super(props);
 
-    const { cookies } = props;
-
-    let langState = cookies.get('lang');
-
-    if (langState === undefined) {
-      langState = 'ko';
-    }
-
     this.state = {
       info: undefined,
+      images: undefined,
       skeleton: undefined,
       hasMod: false,
       skinCode: 0,
       skinNo: 0,
       skinType: 'normal',
-      skillLv: 10,
-      skill2Lv: 10,
-      languageName: langState,
     };
 
-    this.handleLanguageChange = this.handleLanguageChange.bind(this);
     this.handleSkinChange = this.handleSkinChange.bind(this);
     this.toggleSkinType = this.toggleSkinType.bind(this);
+    this.handleStatusChange = this.handleStatusChange.bind(this);
     this.handleSkillLvChange = this.handleSkillLvChange.bind(this);
     this.handleSkill2LvChange = this.handleSkill2LvChange.bind(this);
     this.wrap = this.wrap.bind(this);
@@ -126,7 +118,35 @@ class DollDetail extends React.Component {
     const id = Number(this.props.match.params.id);
 
     DollRepository.fetchById(id)
-      .then(info => this.setState({ info }));
+      .then(info => this.setState({ info }, () => {
+        const getImage = (dollId, skinNo, isDamaged) => {
+          const fname = `${dollId}${Number.isInteger(skinNo) ? `_${skinNo + 1}` : ''}`;
+          return `https://girlsfrontline.kr/hotlink-ok/girlsfrontline-resources/images/guns/${fname}${isDamaged ? '_D' : ''}.png`;
+        };
+
+        const spine = getDollSpine(info.id);
+        const spineNames = spine ? Object.keys(spine.names) : Array(info.skins.length + 1);
+        const base = {
+          id: 0,
+          name: 'Default',
+          spineCode: spineNames[0],
+          normal: getImage(info.id, undefined, false),
+          damaged: getImage(info.id, undefined, true),
+        };
+
+        const generalId = info.id < 20000 ? info.id : info.id - 20000;
+        const images = [
+          base,
+          ...((info.id < 20000) ? (info.skins.map((e, i) => ({
+            id: e.id + 1,
+            name: e.name,
+            spineCode: spineNames[i + 1],
+            normal: getImage(generalId, i, false),
+            damaged: getImage(generalId, i, true),
+          }))) : []),
+        ];
+        this.setState({ images });
+      }));
 
     if (id < 20000) {
       DollRepository.fetchById(id + 20000)
@@ -141,17 +161,6 @@ class DollDetail extends React.Component {
     window.scrollTo(0, 0);
   }
 
-  handleLanguageChange(langName) {
-    if (langName === 'ko') {
-      return (
-        <Caption name={this.state.info.krName} />
-      );
-    }
-    return (
-      <Caption name={this.state.info.name} />
-    );
-  }
-
   handleSkinChange(no) {
     const { id } = this.state.info;
     SpineRepository.fetchSpine((id > 20000 && no !== 0) ? id - 20000 : id, no)
@@ -159,7 +168,7 @@ class DollDetail extends React.Component {
 
     this.setState({
       skinNo: no,
-      skinCode: Object.keys(this.state.info.skins)[no - 1],
+      skinCode: this.state.info.skins[no - 1].id,
     });
   }
 
@@ -169,15 +178,15 @@ class DollDetail extends React.Component {
     });
   }
 
-  handleSkillLvChange(no) {
-    this.setState({
-      skillLv: no,
-    });
+  handleStatusChange(level, favor) {
+    this.setState({ info: Object.assign(this.state.info, { level, favor }) });
   }
-  handleSkill2LvChange(no) {
-    this.setState({
-      skill2Lv: no,
-    });
+
+  handleSkillLvChange(level) {
+    this.setState({ info: Object.assign(this.state.info, { skillLevel: level }) });
+  }
+  handleSkill2LvChange(level) {
+    this.setState({ info: Object.assign(this.state.info, { skillLevel2: level }) });
   }
 
   wrap(content) {
@@ -192,16 +201,16 @@ class DollDetail extends React.Component {
     const { classes } = this.props;
     const {
       info,
+      images,
       skeleton,
       skinNo,
       skinCode,
       skinType,
-      skillLv,
-      skill2Lv,
-      languageName,
     } = this.state;
 
-    if (!info) { return null; }
+    console.log(info);
+
+    if (info === undefined || images === undefined) return (<div />);
 
     let color = '#505694';
 
@@ -218,7 +227,7 @@ class DollDetail extends React.Component {
         <Background color={color} />
         <div className={classes.header}>
           <Grid container>
-            { this.handleLanguageChange(languageName) }
+            <Caption name={info.name} />
             <NumberBox id={info.id < 20000 ? info.id : info.id - 20000} />
             <Grid container className={classes.titleLine}>
               <HorizonLine height={3} />
@@ -227,7 +236,7 @@ class DollDetail extends React.Component {
               <Grid item xs={8} md={10}>
                 <SkinTabbar
                   selected={skinNo}
-                  skins={info.images}
+                  skins={images}
                   onChange={this.handleSkinChange}
                 />
               </Grid>
@@ -237,15 +246,19 @@ class DollDetail extends React.Component {
         </div>
         <div className={classes.img}>
           <TypeSwitchBox on={skinType === 'damaged'} toggle={this.toggleSkinType} />
-          <Illust src={info.images[skinNo][skinType]} />
+          <Illust src={images[skinNo][skinType]} />
         </div>
         <div className={classes.info}>
           {this.wrap(<BasicInfoBox
-            armType={info.type.krName}
+            armType={info.type.name}
             illust={info.illust}
             voice={info.voice}
           />)}
-          {this.wrap(<StatusInfoBox id={info.id} getStats={info.getStats} />)}
+          {this.wrap(<StatusInfoBox
+            id={info.id}
+            stats={info.stats}
+            handler={this.handleStatusChange}
+          />)}
           {this.state.hasMod
             ? this.wrap(<a href={info.id + 20000} className={classes.button}><FormattedMessage id="MOD Ver Link" /></a>)
             : <div />}
@@ -254,32 +267,20 @@ class DollDetail extends React.Component {
             : <div />}
           {this.wrap(<SDBox width={250} height={250} skeleton={skeleton} />)}
           {this.wrap(<SkillBox
-            hasNight={!(info.skill.nightDataPool === undefined)}
-            skill={info.getSkill({ level: skillLv, night: false })}
-            nightSkill={
-              info.skill.nightDataPool
-                ? info.getSkill({ level: skillLv, night: true })
-                : undefined
-            }
-            lv={skillLv}
+            skill={info.skill1}
+            skillLevel={info.skillLevel}
             onChange={this.handleSkillLvChange}
           />)}
           {info.skill2 ?
             this.wrap(<SkillBox
-              hasNight={!(info.skill2.nightDataPool === undefined)}
-              skill={info.getSkill2({ level: skill2Lv, night: false })}
-              nightSkill={
-                info.skill2.nightDataPool
-                  ? info.getSkill2({ level: skill2Lv, night: true })
-                  : undefined
-              }
-              lv={skill2Lv}
+              skill={info.skill2}
+              skillLevel={info.skillLevel2}
               onChange={this.handleSkill2LvChange}
             />) :
             <div />
           }
           {this.wrap(<EffectBox {...info.effect} hasLevel={info.type.code === 'hg'} />)}
-          {this.wrap(<AcquisitionInfoBox {...info.acquisition} />)}
+          {this.wrap(<AcquisitionInfoBox info={info} />)}
           {this.wrap(<IntroduceBox {...{ id: info.id, skinCode }} />)}
           {this.wrap(<ScriptBox {...{ id: info.id, skinCode }} />)}
         </div>

@@ -1,16 +1,15 @@
 import { combineReducers } from 'redux';
 
 import common from './common';
-
 import menu from './menu';
 import dolldict from './dolldict';
-import fairydict from './fairydict';
 import equipdict from './equipdict';
+import fairydict from './fairydict';
 
 export default combineReducers({
   common,
   menu,
-  equipdict,
   dolldict,
+  equipdict,
   fairydict,
 });

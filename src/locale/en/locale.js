@@ -31,6 +31,7 @@ export default {
   'Rate of Fire': 'Rate of Fire',
   'Move Speed': 'Move Speed',
   'Armor': 'Armor',
+  'NightView': 'NightView',
   'Crit. Rate': 'Crit. Rate',
   'Crit. Damage': 'Crit. Damage',
   'Armor Pen.': 'Armor Pen.',

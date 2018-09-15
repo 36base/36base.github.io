@@ -1,4 +1,4 @@
-import dolls from './doll';
+import DollRepository from './../DollRepository';
 import dollTypes from './dollType';
 import dollRanks from './dollRank';
 
@@ -19,6 +19,11 @@ const buildTimeToString = (time) => {
   return `${hour.padStart(2, '0')}${min.padStart(2, '0')}`;
 };
 
+const dolls = [];
+
+DollRepository.fetchAll()
+  .then(data => data.forEach(item => dolls.push(item)));
+
 const names = dolls.reduce((arr, e) => {
   if (e.id < 20000) {
     const ids = [e.id];
@@ -27,9 +32,8 @@ const names = dolls.reduce((arr, e) => {
       ids.push(e.id + 20000);
     }
     arr.push([String(e.name).toLowerCase(), ids]);
-    arr.push([String(e.krName).toLowerCase(), ids]);
     if (e.nicknames) e.nicknames.forEach(nick => arr.push([String(nick).toLowerCase(), ids]));
-    arr.push([`${buildTimeToString(e.acquisition.build)} - ${e.name}`, ids]);
+    arr.push([`${buildTimeToString(e.buildTime)} - ${e.name}`, ids]);
   }
   return arr;
 }, []);

@@ -7,7 +7,7 @@ import { instanceOf } from 'prop-types';
 import { withCookies, Cookies } from 'react-cookie';
 
 import DollCard from './components/DollCard';
-import SearchBar from './components/SearchBar';
+// import SearchBar from './components/SearchBar';
 
 const style = theme => ({
   wrapper: {
@@ -77,13 +77,14 @@ class DollDict extends React.Component {
   render() {
     const { list, classes } = this.props;
 
+    // <Grid item xs={12}>
+    //   <SearchBar />
+    // </Grid>
+
     return (
       <Grid className={classes.wrapper} container>
-        <Grid item xs={12}>
-          <SearchBar />
-        </Grid>
         <Grid className={classes.cardWrapper}>
-          {list.map(doll => <DollCard lang={this.state.languageName} key={doll.id} {...doll} />)}
+          {list.map(doll => <DollCard lang={this.state.languageName} key={doll.id} info={doll} />)}
         </Grid>
       </Grid>
     );

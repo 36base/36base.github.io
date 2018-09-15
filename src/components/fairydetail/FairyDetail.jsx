@@ -46,18 +46,30 @@ class FairyDetail extends React.Component {
       languageName: langState,
     };
     this.handleSkinChange = this.handleSkinChange.bind(this);
+    this.handleSkillChange = this.handleSkillChange.bind(this);
+    this.handleStatusChange = this.handleStatusChange.bind(this);
     this.handleLanguageChange = this.handleLanguageChange.bind(this);
   }
 
   componentWillMount() {
     const id = Number(this.props.match.params.id);
     FairyRepository.fetchById(id)
-      .then(info => this.setState({ info }));
+      .then((info) => {
+        this.setState({ info });
+      });
   }
 
   handleSkinChange(no) {
     const number = no - 2;// 왜 인지는 모르겠는데 no로 넘어오는숫자가 2,3,4입니다 그래서 일단은 이렇게 처리합니다.
     this.setState({ skinNo: number });
+  }
+
+  handleSkillChange(level) {
+    this.setState({ info: Object.assign(this.state.info, { skillLevel: level }) });
+  }
+
+  handleStatusChange(level, qualityLevel) {
+    this.setState({ info: Object.assign(this.state.info, { level, qualityLevel }) });
   }
 
   handleLanguageChange(langName) {
@@ -98,7 +110,7 @@ class FairyDetail extends React.Component {
         <div className={classes.divider} />
         <Grid container className={classes.contentWrapper}>
           <Grid item xs={6} className={classes.imageWrapper}>
-            <SkinTabbar onChange={this.handleSkinChange} />
+            <SkinTabbar onChange={this.handleSkinChange} selected={this.state.skinNo} />
             <div className={classes.image}>
               <img
                 className={classes.skinImage}
@@ -119,8 +131,18 @@ class FairyDetail extends React.Component {
                 <div>{ timeToStr(info.buildTime) }</div>
               </div>
             </div>
-            <StatusInfoBox grow={info.grow} stats={info.stats} id={info.id} />
-            <SkillBox skill={info.skill} icon={info.skillIcon} />
+            <StatusInfoBox
+              handler={this.handleStatusChange}
+              stats={info.stats}
+              grow={info.grow}
+              default={{ level: info.level, qualityLevel: info.qualityLevel }}
+            />
+            <SkillBox
+              handler={this.handleSkillChange}
+              skill={info.skill}
+              icon={info.skillIcon}
+              default={{ level: info.skillLevel }}
+            />
           </Grid>
         </Grid>
       </Grid>

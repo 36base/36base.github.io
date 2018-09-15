@@ -9,57 +9,76 @@ import { injectIntl, FormattedMessage } from 'react-intl';
 
 import style from './style';
 
-import EquipUtil from '../../../repositories/data/equip';
+// const categoryFormatDict = {
+//   doll: 'Doll Equip',
+// };
 
+const StatNameFormatDict = {
+  pow: 'Damage',
+  hit: 'Accuracy',
+  rate: 'Rate of Fire',
+  dodge: 'Evasion',
+  speed: 'Move Speed',
+  criticalHarmRate: 'Crit. Damage',
+  criticalPercent: 'Crit. Rate',
+  nightview: 'NightView',
+  bullet: 'Bullet Amount',
+  armorPiercing: 'Armor Pen.',
+};
 
 class EquipPopup extends React.Component {
   constructor(props) {
     super(props);
 
-    const defaultStat = { };
-    Object.keys(props.stats).forEach((key) => { defaultStat[key] = props.stats[key].max; });
+    const { info } = props;
 
     this.state = {
-      level: 10,
-      stats: defaultStat,
+      level: info.maxLevel,
     };
     this.handleLvChange = this.handleLvChange.bind(this);
-    this.handleStatChange = this.handleStatChange.bind(this);
+  }
+  buildTime2Str(time) {
+    const hour = Number.parseInt(time / 3600, 10);
+    const min = Number.parseInt((time - (hour * 3600)) / 60, 10);
+    const sec = Number.parseInt(time % 60, 10);
+
+    return `${hour < 10 ? `0${hour}` : hour}:${min < 10 ? `0${min}` : min}:${sec < 10 ? `0${sec}` : sec}`;
   }
 
   handleLvChange(event) {
     let newLevel = (event.target.value !== '') ? Number(event.target.value) : 1;
 
-    newLevel = (newLevel > 10) ? 10 : newLevel;
-    newLevel = (newLevel < 1) ? 1 : newLevel;
+    newLevel = (newLevel > this.props.info.maxLevel) ? this.props.info.maxLevel : newLevel;
+    newLevel = (newLevel < 0) ? 0 : newLevel;
 
+    this.props.info.level = newLevel;
     this.setState({ level: newLevel });
   }
 
-  handleStatChange(event) {
-    const name = String(event.target.name);
-    let value = (event.target.value !== '') ? Number(event.target.value) : 0;
-    value = (this.props.stats[name].min > value) ? this.props.stats[name].min : value;
-    value = (this.props.stats[name].max < value) ? this.props.stats[name].max : value;
-
-    const newStateStats = this.state.stats;
-    newStateStats[name] = value;
-
-    this.setState({ stats: newStateStats });
-  }
-
   render() {
-    const data = this.props;
-    const { classes, intl } = this.props;
+    const { classes, intl, info } = this.props;
+    const {
+      name,
+      sprite,
+      color,
+      category,
+      type,
+      stats,
+      maxLevel,
+      buildTime,
+      introduction,
+    } = info;
 
     return (
       <div>
-        {(data) ? (
+        {(info) ? (
           <div className={classes.popup}>
-            <img style={{ width: '100%' }} alt={data.name} src={EquipUtil.getSpriteUrl(data)} />
-            <h2 style={{ textAlign: 'center', color: EquipUtil.getRankColor(data.rank) }}>{data.name}</h2>
-            <h3 style={{ textAlign: 'center', color: 'white' }}>{data.krCategory}</h3>
-            <h3 style={{ textAlign: 'center', color: 'white' }}>{data.krType}</h3>
+            <img style={{ width: '100%' }} alt={name} src={sprite} />
+            <h2 style={{ textAlign: 'center', color }}>{name}</h2>
+            <h3 style={{ textAlign: 'center', color: 'white' }}>{category}</h3>
+            <h3 style={{ textAlign: 'center', color: 'white' }}>{type}</h3>
+            <div style={{ textAlign: 'center', color: 'white' }}>{introduction}</div>
+            <br />
             <FormControl className={classes.levelForm}>
               <InputLabel htmlFor="level" style={{ color: 'gray' }}><FormattedMessage id="Level" /></InputLabel>
               <Select
@@ -72,70 +91,39 @@ class EquipPopup extends React.Component {
                   name: 'level',
                 }}
               >
-                {Array(10).fill().map((_, i) => (
-                  <option className={classes.statOption} value={i + 1}>{i + 1}</option>
-                ))}
+                {maxLevel === 0
+                  ? <option className={classes.statOption} value={0}>-</option>
+                  : Array(maxLevel).fill().map((_, i) => (
+                    <option className={classes.statOption} value={i + 1}>{i + 1}</option>
+                    ))
+                }
               </Select>
             </FormControl>
             <table className={classes.statTable}>
-              <colgroup>
-                <col style={{ width: '180px' }} />
-                <col style={{ width: '80px' }} />
-                <col style={{ width: '100px' }} />
-              </colgroup>
               <tbody>
-                {Object.keys(data.stats).map(key => (
+                {Object.keys(stats).map(key => (
                   <tr>
-                    <td className={classes.statName}>{EquipUtil.StatDict[key]}</td>
-                    <td className={classes.statNum}>
+                    <td className={classes.statName}>
                       {
-                        Math.floor(this.state.stats[key] +
-                          (this.state.stats[key] *
-                            (data.stats[key].upgrade *
-                              (Number(this.state.level) / 100)
-                            )
-                          ))
+                        StatNameFormatDict[key]
+                        ? intl.formatMessage({ id: StatNameFormatDict[key] })
+                        : key
                       }
                     </td>
-                    <td>
-                      <FormControl className={classes.statCustom}>
-                        <InputLabel htmlFor={`statSelect-${key}`} style={{ color: 'gray' }}>
-                          {`${intl.formatMessage({ id: 'Calibration value' })} (${data.stats[key].min} ~ ${data.stats[key].max})`}
-                        </InputLabel>
-                        <Select
-                          native
-                          value={this.state.stats[key]}
-                          onChange={this.handleStatChange}
-                          inputProps={{
-                            id: `statSelect-${key}`,
-                            name: key,
-                          }}
-                          style={{ color: 'white' }}
-                        >
-                          {
-                            Array((data.stats[key].max - data.stats[key].min) + 1).fill()
-                              .map((_, i) => (
-                                <option
-                                  className={classes.statOption}
-                                  value={data.stats[key].min + i}
-                                >
-                                  {data.stats[key].min + i}
-                                </option>
-                            ))
-                          }
-                        </Select>
-                      </FormControl>
+                    <td className={classes.statNum}>
+                      {stats[key].min === stats[key].max
+                        ? `${stats[key].min}`
+                        : `${stats[key].min} ~ ${stats[key].max}`}
                     </td>
                   </tr>
                 ))}
               </tbody>
             </table>
-            {data.specialFeatures ? <div style={{ textAlign: 'center', color: 'white' }}><h4><FormattedMessage id="Special Effect" /></h4><h4>{data.specialFeatures}</h4></div> : <div />}
             <h3 className={classes.craftTime}>
               {
-                data.buildTime === 0 ?
+                buildTime === 0 ?
                   (<span style={{ color: 'red' }}><FormattedMessage id="Non-craftable" /></span>) :
-                  `${intl.formatMessage({ id: 'Production Time' })} - ${EquipUtil.intTime2Str(data.buildTime)}`
+                  `${intl.formatMessage({ id: 'Production Time' })} - ${this.buildTime2Str(buildTime)}`
               }
             </h3>
           </div>

@@ -42,11 +42,12 @@ class StatusInfoBox extends React.Component {
     super(props);
 
     this.state = {
-      lv: 100,
+      level: 100,
       favor: 100,
     };
+    this.props.handler(100, 100);
 
-    this.handleLvChange = this.handleLvChange.bind(this);
+    this.handleLevelChange = this.handleLevelChange.bind(this);
     this.handleFavorChange = this.handleFavorChange.bind(this);
   }
   componentWillMount() {
@@ -60,20 +61,18 @@ class StatusInfoBox extends React.Component {
       favorValues = fullFavorValues;
     }
   }
-  handleLvChange(event) {
-    this.setState({ lv: event.target.value }, () => {
-      this.forceUpdate();
+  handleLevelChange(event) {
+    this.setState({ level: event.target.value }, () => {
+      this.props.handler(this.state.level, this.state.favor);
     });
   }
   handleFavorChange(event) {
     this.setState({ favor: event.target.value }, () => {
-      this.forceUpdate();
+      this.props.handler(this.state.level, this.state.favor);
     });
   }
   render() {
-    const { lv, favor } = this.state;
-
-    const stats = this.props.getStats({ level: lv, favor });
+    const { stats } = this.props;
 
     const buildRow = (label, value, maxValue, color) => {
       const statusRate = Math.min(1, value / maxValue) * 100;
@@ -98,8 +97,8 @@ class StatusInfoBox extends React.Component {
         <div className={this.props.classes.selectorLabel}><FormattedMessage id="Level" /></div>
         <SmallSelector
           values={lvValues}
-          selected={this.state.lv}
-          onChange={this.handleLvChange}
+          selected={this.state.level}
+          onChange={this.handleLevelChange}
         />
         <div className={this.props.classes.selectorLabel}><FormattedMessage id="Favor" /></div>
         <SmallSelector
