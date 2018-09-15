@@ -71,6 +71,7 @@ class SkillBox extends React.Component {
     } = this.props;
 
     const {
+      codename,
       name,
       detail,
       desc,
@@ -83,7 +84,7 @@ class SkillBox extends React.Component {
         <Grid className={classes.container} container>
           <Grid item xs={4}>
             <div className={classes.iconWrapper}>
-              <Square><ImageBox src={getUrl(this.props.skill.path)} /></Square>
+              <Square><ImageBox src={getUrl(codename)} /></Square>
             </div>
           </Grid>
           <Grid className={classes.alignMiddle} item xs={4}>

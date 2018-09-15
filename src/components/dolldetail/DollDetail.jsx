@@ -168,7 +168,7 @@ class DollDetail extends React.Component {
 
     this.setState({
       skinNo: no,
-      skinCode: this.state.info.skins[no - 1].id,
+      skinCode: this.state.images[no].id,
     });
   }
 
@@ -207,8 +207,6 @@ class DollDetail extends React.Component {
       skinCode,
       skinType,
     } = this.state;
-
-    console.log(info);
 
     if (info === undefined || images === undefined) return (<div />);
 
