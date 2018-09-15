@@ -8,29 +8,16 @@ import Star from '../../common/Star';
 import style from './style';
 
 class DollCard extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.handleLanguageChange = this.handleLanguageChange.bind(this);
-  }
-
-  handleLanguageChange(langName) {
-    if (langName === 'ko') {
-      return (this.props.krName);
-    }
-    return (this.props.name);
-  }
-
   render() {
+    const { classes, info } = this.props;
     const {
-      classes,
+      name,
       rank,
       icon,
       portrait,
-      lang,
-    } = this.props;
+    } = info;
 
-    let { id } = this.props;
+    let { id } = info;
     const realId = id;
 
     if (id > 1000) id %= 1000;
@@ -47,7 +34,7 @@ class DollCard extends React.Component {
           className={[classes.caption, classes[rank.name.toLowerCase()]].join(' ')}
           component="div"
         >
-          {this.handleLanguageChange(lang)}
+          {name}
         </Typography>
         <img className={classes.typeIcon} src={icon} alt="" />
         <div className={classes.no}>{id}</div>

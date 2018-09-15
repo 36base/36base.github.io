@@ -1,8 +1,9 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { withStyles } from 'material-ui/styles';
 
 import { Grid, Modal } from 'material-ui';
+
+import EquipRepository from './../../repositories/EquipRepository';
 
 import EquipPopup from './popup/EquipPopup';
 import EquipCard from './card/EquipCard';
@@ -18,22 +19,22 @@ const style = {
   },
 };
 
-const stateMapper = state => ({
-  equips: state.equipdict.list,
-});
-
 class EquipDict extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { open: false, data: null };
+    this.state = { open: false, list: [], selectedEquip: null };
 
     this.handleOpen = this.handleOpen.bind(this);
     this.handleClose = this.handleClose.bind(this);
   }
+  componentWillMount() {
+    EquipRepository.fetchAll()
+      .then(list => this.setState({ list }));
+  }
   handleOpen(equipData) {
     this.setState({
-      data: equipData,
+      selectedEquip: equipData,
     }, () => {
       this.setState({ open: true });
     });
@@ -43,14 +44,14 @@ class EquipDict extends React.Component {
   }
 
   render() {
-    const { equips, classes } = this.props;
+    const { classes } = this.props;
 
     return (
       <div className={classes.wrapper}>
         <Grid className={classes.cardWrapper} container>
-          {equips.map(equip => (
+          {this.state.list.map(equip => (
             <Grid item xs={6} sm={3} md={2} role="button" tabIndex={0} onClick={() => this.handleOpen(equip)}>
-              <EquipCard {...equip} />
+              <EquipCard key={equip.id} info={equip} />
             </Grid>
           ))}
         </Grid>
@@ -58,11 +59,11 @@ class EquipDict extends React.Component {
           open={this.state.open}
           onClose={this.handleClose}
         >
-          <EquipPopup className={classes.popup} {...this.state.data} />
+          <EquipPopup className={classes.popup} info={this.state.selectedEquip} />
         </Modal>
       </div>
     );
   }
 }
 
-export default withStyles(style)(connect(stateMapper)(EquipDict));
+export default withStyles(style)(EquipDict);

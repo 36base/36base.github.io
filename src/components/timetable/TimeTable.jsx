@@ -120,13 +120,12 @@ class TimeTable extends React.Component {
         .then((dolls) => {
           const group = dolls.reduce((map, e) => {
             const { id } = e;
-            const { build } = e.acquisition;
-            if (Number.isInteger(build) && build > 0 && id < 20000) {
-              if (build in map) {
-                map[build].push(e);
+            if (e.buildTime > 0 && id < 20000) {
+              if (e.buildTime in map) {
+                map[e.buildTime].push(e);
               } else {
                 const temp = map;
-                temp[build] = [e];
+                temp[e.buildTime] = [e];
                 return temp;
               }
             }
@@ -163,8 +162,8 @@ class TimeTable extends React.Component {
       });
     } else if (type === 'fairy') {
       FairyRepository.fetchAll()
-        .then((fairys) => {
-          const group = fairys.reduce((map, e) => {
+        .then((fairies) => {
+          const group = fairies.reduce((map, e) => {
             const { buildTime } = e;
 
             if (buildTime && Number.isInteger(buildTime) && buildTime > 0) {
@@ -201,7 +200,9 @@ class TimeTable extends React.Component {
       <Link className={classes.link} to={`/doll/${data.id}`}>
         <span className={classes.typeIconWrapper}><ImageBox src={data.icon} /></span>
         <Star className={classes.star} count={data.rank.starCnt} />
-        <div className={`${classes.name} ${classes[data.rank.name.toLowerCase()]}`}>{data.krName}</div>
+        <div className={`${classes.name} ${classes[data.rank.name.toLowerCase()]}`}>
+          {data.name}
+        </div>
       </Link>
     );
   }
@@ -223,7 +224,7 @@ class TimeTable extends React.Component {
     const { classes } = this.props;
     return (
       <Link className={classes.link} to={`/fairy/${data.id}`}>
-        <div className={classes.name}>{data.krName}</div>
+        <div className={classes.name}>{data.name}</div>
       </Link>
     );
   }
@@ -273,6 +274,7 @@ class TimeTable extends React.Component {
         <Grid className={classes.container} container spacing={8}>
           {rows}
         </Grid>
+        <div style={{ height: '100px' }} />
       </div>
     );
   }

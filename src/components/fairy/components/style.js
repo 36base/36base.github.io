@@ -37,7 +37,7 @@ const style = theme => ({
       marginBottom: '12px',
     },
   },
-  krName: {
+  name: {
     marginBottom: '10px',
     fontSize: '1.2em',
     fontWeight: '600',

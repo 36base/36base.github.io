@@ -7,6 +7,7 @@ import { withStyles } from 'material-ui/styles';
 import { FormattedMessage, injectIntl } from 'react-intl';
 import { instanceOf } from 'prop-types';
 import { withCookies, Cookies } from 'react-cookie';
+import { i18next } from 'girlsfrontline-core';
 
 import SmallSelector from './common/SmallSelector';
 import { toggleMobile } from '../actions/menu';
@@ -76,6 +77,21 @@ class Appbar extends React.Component {
     cookies.set('lang', event.target.value, { path: '/' });
     this.setState({ languageName: event.target.value });
     window.location.reload();
+
+    switch (event.target.value) {
+      case 'ko':
+        i18next.changeLanguage('ko-KR');
+        break;
+      case 'en':
+        i18next.changeLanguage('en-US');
+        break;
+      case 'ja':
+        i18next.changeLanguage('ja-JP');
+        break;
+      default:
+        i18next.changeLanguage('ko-KR');
+        break;
+    }
   }
 
   render() {

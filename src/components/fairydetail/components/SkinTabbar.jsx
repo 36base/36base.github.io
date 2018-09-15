@@ -31,7 +31,7 @@ class SkinTabbar extends React.Component {
   }
 
   renderButtons() {
-    const { classes } = this.props;
+    const { classes, selected } = this.props;
 
     const buttons = [];
     for (let i = 1; i <= 3;) {
@@ -41,9 +41,10 @@ class SkinTabbar extends React.Component {
           key={i}
           className={classes.button}
           variant="raised"
+          color={selected === i ? 'primary' : 'default'}
           onClick={() => this.props.onChange(i)}
         >
-          mod{i}
+          Mod {i}
         </Button>);
       i += 1;
     }

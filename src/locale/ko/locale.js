@@ -33,6 +33,8 @@ export default {
   'Rate of Fire': '사속',
   'Move Speed': '이동속도',
   'Armor': '장갑',
+  'NightView': '야시능력',
+  'Bullet Amount': '장탄수',
   'Crit. Rate': '치명타 확률',
   'Crit. Damage': '치명 데미지',
   'Armor Pen.': '관통',

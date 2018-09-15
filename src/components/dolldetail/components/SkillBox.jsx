@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Typography } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
-import { injectIntl, FormattedMessage } from 'react-intl';
+import { injectIntl } from 'react-intl';
 
 import InfoBox from '../../common/InfoBox';
 import Square from '../../common/Square';
@@ -48,8 +48,6 @@ class SkillBox extends React.Component {
 
     this.onChange = this.onChange.bind(this);
     this.renderProperty = this.renderProperty.bind(this);
-    this.renderNightProperty = this.renderNightProperty.bind(this);
-    this.renderDescription = this.renderDescription.bind(this);
   }
 
   onChange(event) {
@@ -57,73 +55,28 @@ class SkillBox extends React.Component {
     this.props.onChange(value);
   }
 
-  renderProperty(key, postfix) {
-    const data = this.props.skill.data.find(e => e.key === key);
-    if (!data) {
-      return null;
-    }
-
-    const { label } = data;
-    const value = this.props.hasNight
-      ? this.props.nightSkill.dataPool[key]
-      : this.props.skill.dataPool[key];
-
+  renderProperty(label, value) {
     return (
       <Typography align="right" variant="body1">
-        {label} <span className={this.props.classes.yellow}>{value + postfix}</span>
+        {label} <span className={this.props.classes.yellow}>{value}</span>
       </Typography>
     );
   }
-
-  renderNightProperty(key, postfix) {
-    if (!this.props.hasNight) {
-      return null;
-    }
-
-    const { label } = this.props.nightSkill.data.find(e => e.key === key);
-    const value = this.props.nightSkill.dataPool[key];
-
-    return (
-      <Typography align="right" variant="body1">
-        {`${label}(야간)`} <span className={this.props.classes.yellow}>{value + postfix}</span>
-      </Typography>
-    );
-  }
-
-  renderDescription() {
-    const { classes } = this.props;
-    if (this.props.hasNight) {
-      return [
-        <Grid className={classes.alignMiddle} align="center" key="day" item xs={6}>
-          <Typography><FormattedMessage id="day" /></Typography>
-        </Grid>,
-        <Grid className={classes.alignMiddle} align="center" key="night" item xs={6}>
-          <Typography><FormattedMessage id="night" /></Typography>
-        </Grid>,
-        <Grid key="desc_day" item xs={6}>
-          <Typography>{this.props.skill.desc}</Typography>
-        </Grid>,
-        <Grid key="desc_night" item xs={6}>
-          <Typography>{this.props.nightSkill.desc}</Typography>
-        </Grid>,
-      ];
-    }
-
-    return (
-      <Grid item xs={12}><Typography>{this.props.skill.desc}</Typography></Grid>
-    );
-  }
-
   render() {
-    const { classes, lv, intl } = this.props;
+    const {
+      classes,
+      intl,
+      skill,
+      skillLevel,
+    } = this.props;
 
-    const sec = this.props.intl.formatMessage({ id: 's' }); // 초
-    const selector = <SmallSelector label={intl.formatMessage({ id: 'Level' })} values={lvValues} selected={lv} onChange={this.onChange} />;
-    const initCooldown = this.renderProperty('IC', sec);
-    const cooldown = this.renderProperty('CD', sec);
-    const duration = this.renderProperty('DR', sec);
-    const nightDuration = this.renderNightProperty('DR', sec);
-    const description = this.renderDescription();
+    const {
+      name,
+      detail,
+      desc,
+    } = skill;
+
+    const selector = <SmallSelector label={intl.formatMessage({ id: 'Level' })} values={lvValues} selected={skillLevel} onChange={this.onChange} />;
 
     return (
       <InfoBox name={intl.formatMessage({ id: 'Skill' })} selector={selector}>
@@ -134,15 +87,12 @@ class SkillBox extends React.Component {
             </div>
           </Grid>
           <Grid className={classes.alignMiddle} item xs={4}>
-            <Typography variant="display3">{this.props.skill.name}</Typography>
+            <Typography variant="display3">{name}</Typography>
           </Grid>
           <Grid className={classes.alignBottom} item xs={4}>
-            {initCooldown}
-            {cooldown}
-            {duration}
-            {nightDuration}
+            {Object.keys(detail).map(key => this.renderProperty(key, detail[key]))}
           </Grid>
-          {description}
+          <Grid item xs={12}><Typography>{desc}</Typography></Grid>
         </Grid>
       </InfoBox>
     );

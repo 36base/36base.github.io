@@ -1,5 +1,3 @@
-import dollList from './doll';
-
 const domain = 'https://girlsfrontline.kr/hotlink-ok/girlsfrontline-resources/images/equip';
 
 const equipUtil = {
@@ -47,6 +45,7 @@ const equipUtil = {
   getSpriteUrl: (data) => {
     let spriteName;
     if (data.fitGuns) {
+      /*
       dollList.forEach((doll) => {
         if (data.fitGuns[0] === doll.id) {
           let dollName = doll.name.toLowerCase();
@@ -57,6 +56,7 @@ const equipUtil = {
           spriteName = `${data.type}_${dollName}`;
         }
       });
+      */
     } else {
       switch (data.type) {
         case 'suit': {

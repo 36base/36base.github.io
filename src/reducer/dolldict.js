@@ -1,7 +1,12 @@
-import dolls from '../repositories/data/doll';
-// import dolls from '../repositories/DollRepository';
+// import dolls from '../repositories/data/doll';
+import DollRepository from '../repositories/DollRepository';
 import { propertyFilter, nameFilter } from '../repositories/data/filter';
 import { ADD_FILTER, DELETE_FILTER } from '../actions/dolldict';
+
+const dolls = [];
+
+DollRepository.fetchAll()
+  .then(data => data.forEach(item => dolls.push(item)));
 
 function apply(filters) {
   if (filters.length === 0) {

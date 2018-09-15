@@ -1,4 +1,4 @@
-import { fairy } from 'girlsfrontline-core';
+import { fairies } from 'girlsfrontline-core';
 
 const domain = 'https://girlsfrontline.kr/hotlink-ok/girlsfrontline-resources/images';
 
@@ -20,20 +20,19 @@ function buildIcon(name) {
   return `${domain}/skill/${name}.png`;
 }
 
-// TODO:IMAGE 처리 (04-05)
-const fairyList = fairy.map(Fairy => ({
-  getStats: Fairy.getStats({ level: 100, quality: 1 }),
-  id: Fairy.id,
-  name: Fairy.name,
-  krName: Fairy.krName,
-  category: Fairy.category,
-  stats: Fairy.stats,
-  grow: Fairy.grow,
-  skill: Fairy.skill,
-  buildTime: Fairy.buildTime,
-  images: buildImage(Fairy.name),
-  skillIcon: buildIcon(Fairy.name),
-}));
+const fairyList = fairies.map(fairy => (Object.assign(
+  fairy,
+  {
+    buildTime: (
+      fairy.id > 1000 ||
+      fairy.id === 18 ||
+      fairy.id === 19 ||
+      fairy.id === 20
+    ) ? 0 : fairy.buildTime,
+    images: buildImage(fairy.codename),
+    skillIcon: buildIcon(fairy.codename),
+  },
+))).filter(item => (item.id !== 0)); // 황금요정(18), 폭죽요정(20) skill 에러 터짐
 
 const fairyMap = new Map(fairyList.map(e => [e.id, e]));
 
