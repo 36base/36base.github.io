@@ -48,7 +48,16 @@ class IntlApp extends React.Component {
         case 'ja': lang = 'ja-JP'; break;
         default: lang = 'ko-KR'; break;
       }
-      await init({ lng: lang, fallbackLng: lang });
+      await init({
+        lng: lang,
+        fallbackLng: lang,
+        ns: 'gfcore',
+        defaultNS: 'gfcore',
+        backend: {
+          loadPath: 'https://unpkg.com/girlsfrontline-core@latest/build/i18n/{{lng}}/{{ns}}.json',
+          crossDomain: true,
+        },
+      });
     };
     coreInit().then(() => {
       this.setState({
