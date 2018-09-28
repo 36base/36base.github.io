@@ -1,6 +1,6 @@
 import React from 'react';
-import { FormControlLabel, Switch } from 'material-ui';
-import { withStyles } from 'material-ui/styles';
+import { FormControlLabel, Switch } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 import { injectIntl } from 'react-intl';
 
 const style = theme => ({

@@ -1,5 +1,5 @@
 import React from 'react';
-import { withStyles } from 'material-ui/styles';
+import { withStyles } from '@material-ui/core/styles';
 import * as PIXI from 'pixi.js';
 import spine from 'pixi-spine';
 import { injectIntl } from 'react-intl';

@@ -1,9 +1,7 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
-import { MuiThemeProvider } from 'material-ui/styles';
+import { MuiThemeProvider } from '@material-ui/core/styles';
 import { CookiesProvider } from 'react-cookie';
-
-import 'normalize.css';
 
 import IntlApp from './IntlApp';
 import theme from './theme';

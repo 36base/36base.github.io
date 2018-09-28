@@ -24,10 +24,10 @@ const fairyList = fairies.map(fairy => (Object.assign(
   fairy,
   {
     buildTime: (
-      fairy.id > 1000 ||
-      fairy.id === 18 ||
-      fairy.id === 19 ||
-      fairy.id === 20
+      fairy.id > 1000
+      || fairy.id === 18
+      || fairy.id === 19
+      || fairy.id === 20
     ) ? 0 : fairy.buildTime,
     images: buildImage(fairy.codename),
     skillIcon: buildIcon(fairy.codename),
@@ -45,4 +45,3 @@ async function fetchById(id) {
 }
 
 export default { fetchAll, fetchById };
-

@@ -1,9 +1,9 @@
 import React from 'react';
-import { withStyles } from 'material-ui/styles';
+import { withStyles } from '@material-ui/core/styles';
 
-import { Grid, Modal } from 'material-ui';
+import { Grid, Modal } from '@material-ui/core';
 
-import EquipRepository from './../../repositories/EquipRepository';
+import EquipRepository from '../../repositories/EquipRepository';
 
 import EquipPopup from './popup/EquipPopup';
 import EquipCard from './card/EquipCard';
@@ -28,10 +28,12 @@ class EquipDict extends React.Component {
     this.handleOpen = this.handleOpen.bind(this);
     this.handleClose = this.handleClose.bind(this);
   }
+
   componentWillMount() {
     EquipRepository.fetchAll()
       .then(list => this.setState({ list }));
   }
+
   handleOpen(equipData) {
     this.setState({
       selectedEquip: equipData,
@@ -39,6 +41,7 @@ class EquipDict extends React.Component {
       this.setState({ open: true });
     });
   }
+
   handleClose() {
     this.setState({ open: false });
   }
@@ -50,8 +53,8 @@ class EquipDict extends React.Component {
       <div className={classes.wrapper}>
         <Grid className={classes.cardWrapper} container>
           {this.state.list.map(equip => (
-            <Grid item xs={6} sm={3} md={2} role="button" tabIndex={0} onClick={() => this.handleOpen(equip)}>
-              <EquipCard key={equip.id} info={equip} />
+            <Grid key={equip.id} item xs={6} sm={3} md={2} role="button" tabIndex={0} onClick={() => this.handleOpen(equip)}>
+              <EquipCard info={equip} />
             </Grid>
           ))}
         </Grid>

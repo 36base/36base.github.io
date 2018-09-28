@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-import { withStyles } from 'material-ui/styles';
-import Select from 'material-ui/Select';
-import { InputLabel } from 'material-ui/Input';
-import { FormControl } from 'material-ui/Form';
+import { compose } from 'redux';
+import { withStyles } from '@material-ui/core/styles';
+import Select from '@material-ui/core/Select';
+import { InputLabel } from '@material-ui/core/Input';
+import FormControl from '@material-ui/core/FormControl';
 import { injectIntl, FormattedMessage } from 'react-intl';
-
 
 import style from './style';
 
@@ -26,7 +26,15 @@ const StatNameFormatDict = {
   armorPiercing: 'Armor Pen.',
 };
 
-class EquipPopup extends React.Component {
+function buildTime2Str(time) {
+  const hour = Number.parseInt(time / 3600, 10);
+  const min = Number.parseInt((time - (hour * 3600)) / 60, 10);
+  const sec = Number.parseInt(time % 60, 10);
+
+  return `${hour < 10 ? `0${hour}` : hour}:${min < 10 ? `0${min}` : min}:${sec < 10 ? `0${sec}` : sec}`;
+}
+
+class EquipPopup extends Component {
   constructor(props) {
     super(props);
 
@@ -36,13 +44,6 @@ class EquipPopup extends React.Component {
       level: info.maxLevel,
     };
     this.handleLvChange = this.handleLvChange.bind(this);
-  }
-  buildTime2Str(time) {
-    const hour = Number.parseInt(time / 3600, 10);
-    const min = Number.parseInt((time - (hour * 3600)) / 60, 10);
-    const sec = Number.parseInt(time % 60, 10);
-
-    return `${hour < 10 ? `0${hour}` : hour}:${min < 10 ? `0${min}` : min}:${sec < 10 ? `0${sec}` : sec}`;
   }
 
   handleLvChange(event) {
@@ -71,66 +72,64 @@ class EquipPopup extends React.Component {
 
     return (
       <div>
-        {(info) ? (
-          <div className={classes.popup}>
-            <img style={{ width: '100%' }} alt={name} src={sprite} />
-            <h2 style={{ textAlign: 'center', color }}>{name}</h2>
-            <h3 style={{ textAlign: 'center', color: 'white' }}>{category}</h3>
-            <h3 style={{ textAlign: 'center', color: 'white' }}>{type}</h3>
-            <div style={{ textAlign: 'center', color: 'white' }}>{introduction}</div>
-            <br />
-            <FormControl className={classes.levelForm}>
-              <InputLabel htmlFor="level" style={{ color: 'gray' }}><FormattedMessage id="Level" /></InputLabel>
-              <Select
-                native
-                className={classes.levelSelect}
-                value={this.state.level}
-                onChange={this.handleLvChange}
-                inputProps={{
-                  id: 'level',
-                  name: 'level',
-                }}
-              >
-                {maxLevel === 0
-                  ? <option className={classes.statOption} value={0}>-</option>
-                  : Array(maxLevel).fill().map((_, i) => (
-                    <option className={classes.statOption} value={i + 1}>{i + 1}</option>
-                    ))
+        <div className={classes.popup}>
+          <img style={{ width: '100%' }} alt={name} src={sprite} />
+          <h2 style={{ textAlign: 'center', color }}>{name}</h2>
+          <h3 style={{ textAlign: 'center', color: 'white' }}>{category}</h3>
+          <h3 style={{ textAlign: 'center', color: 'white' }}>{type}</h3>
+          <div style={{ textAlign: 'center', color: 'white' }}>{introduction}</div>
+          <br />
+          {/* <div className={classes.levelForm}>
+            <InputLabel htmlFor="level" style={{ color: 'gray' }}><FormattedMessage id="Level" /></InputLabel>
+            <Select
+              native
+              className={classes.levelSelect}
+              value={this.state.level}
+              onChange={this.handleLvChange}
+              inputProps={{
+                id: 'level',
+                name: 'level',
+              }}
+            >
+              {maxLevel === 0
+                ? <option className={classes.statOption} value={0}>-</option>
+                : Array(maxLevel).fill().map((_, i) => (
+                  <option key={i} className={classes.statOption} value={i + 1}>{i + 1}</option>
+                ))
                 }
-              </Select>
-            </FormControl>
-            <table className={classes.statTable}>
-              <tbody>
-                {Object.keys(stats).map(key => (
-                  <tr>
-                    <td className={classes.statName}>
-                      {
+            </Select>
+          </div> */}
+          <table className={classes.statTable}>
+            <tbody>
+              {Object.keys(stats).map(key => (
+                <tr key={key}>
+                  <td className={classes.statName}>
+                    {
                         StatNameFormatDict[key]
-                        ? intl.formatMessage({ id: StatNameFormatDict[key] })
-                        : key
+                          ? intl.formatMessage({ id: StatNameFormatDict[key] })
+                          : key
                       }
-                    </td>
-                    <td className={classes.statNum}>
-                      {stats[key].min === stats[key].max
-                        ? `${stats[key].min}`
-                        : `${stats[key].min} ~ ${stats[key].max}`}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-            <h3 className={classes.craftTime}>
-              {
-                buildTime === 0 ?
-                  (<span style={{ color: 'red' }}><FormattedMessage id="Non-craftable" /></span>) :
-                  `${intl.formatMessage({ id: 'Production Time' })} - ${this.buildTime2Str(buildTime)}`
+                  </td>
+                  <td className={classes.statNum}>
+                    {stats[key].min === stats[key].max
+                      ? `${stats[key].min}`
+                      : `${stats[key].min} ~ ${stats[key].max}`}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <h3 className={classes.craftTime}>
+            {
+                buildTime === 0
+                  ? (<span style={{ color: 'red' }}><FormattedMessage id="Non-craftable" /></span>)
+                  : `${intl.formatMessage({ id: 'Production Time' })} - ${buildTime2Str(buildTime)}`
               }
-            </h3>
-          </div>
-        ) : <div />}
+          </h3>
+        </div>
       </div>
     );
   }
 }
 
-export default injectIntl(withStyles(style)(EquipPopup));
+export default compose(injectIntl, withStyles(style))(EquipPopup);

@@ -2,8 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import { Route } from 'react-router-dom';
-import { CssBaseline } from 'material-ui';
-import { withStyles } from 'material-ui/styles';
+import { CssBaseline } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 
 import Appbar from './Appbar';
 import Menu from './Menu';

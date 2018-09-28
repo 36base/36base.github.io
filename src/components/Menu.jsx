@@ -1,10 +1,13 @@
 import React from 'react';
+import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { instanceOf } from 'prop-types';
 import { withCookies, Cookies } from 'react-cookie';
 import { withRouter } from 'react-router';
-import { Hidden, Drawer, List, ListItem, ListItemText, ListItemIcon, Divider, Icon, Collapse } from 'material-ui';
-import { withStyles } from 'material-ui/styles';
+import {
+  Hidden, Drawer, List, ListItem, ListItemText, ListItemIcon, Divider, Icon, Collapse,
+} from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 import { injectIntl } from 'react-intl';
 
 import { toggleMobile, expand } from '../actions/menu';
@@ -106,10 +109,10 @@ class Menu extends React.Component {
     const { classes, list, intl } = this.props;
 
     const items = (
-      <List component="nav" >
+      <List component="nav">
         {Object.keys(list).map(key => this.renderMenuItem(key, list[key]))}
         <Divider />
-        <ListItem key="about" button onClick={() => this.routeTo('/about')} >
+        <ListItem key="about" button onClick={() => this.routeTo('/about')}>
           <ListItemIcon>
             <Icon className="fa fa-lg fa-question-circle" />
           </ListItemIcon>
@@ -132,7 +135,7 @@ class Menu extends React.Component {
         </Drawer>
       </Hidden>,
       <Hidden key="pc" mdDown implementation="css">
-        <Drawer variant="permanent" open classes={{ paper: classes.drawerPaper }} >
+        <Drawer variant="permanent" open classes={{ paper: classes.drawerPaper }}>
           <div className={classes.mixin} />
           {items}
         </Drawer>
@@ -151,5 +154,10 @@ const dispatchMapper = dispatch => ({
   toggleMobile: () => dispatch(toggleMobile()),
 });
 
-// eslint-disable-next-line
-export default connect(stateMapper, dispatchMapper)(withCookies((injectIntl(withStyles(style)(withRouter(Menu))))));
+export default compose(
+  connect(stateMapper, dispatchMapper),
+  injectIntl,
+  withStyles(style),
+  withRouter,
+  withCookies,
+)(Menu);

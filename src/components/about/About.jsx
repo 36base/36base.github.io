@@ -1,6 +1,6 @@
 import React from 'react';
-import { Grid, Card } from 'material-ui';
-import { withStyles } from 'material-ui/styles';
+import { Grid, Card } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 import { FormattedMessage } from 'react-intl';
 
 import iconDiscord from './img/discord.png';

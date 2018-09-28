@@ -1,7 +1,7 @@
 import React from 'react';
-import { TextField, Grid, Paper, Checkbox } from 'material-ui/';
-import { FormControlLabel } from 'material-ui/Form';
-import { withStyles } from 'material-ui/styles';
+import { TextField, Grid, Paper, Checkbox } from '@material-ui/core/';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import { withStyles } from '@material-ui/core/styles';
 import { injectIntl, FormattedMessage } from 'react-intl';
 
 const style = {

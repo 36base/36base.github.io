@@ -1,6 +1,6 @@
 import React from 'react';
-import { Grid, Typography } from 'material-ui';
-import { withStyles } from 'material-ui/styles';
+import { Grid, Typography } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 import { injectIntl } from 'react-intl';
 
 import HorizonLine from '../../common/HorizonLine';

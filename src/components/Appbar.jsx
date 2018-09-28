@@ -1,9 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { AppBar, Toolbar, IconButton, Typography } from 'material-ui';
-import MenuIcon from 'material-ui-icons/Menu';
-import { withStyles } from 'material-ui/styles';
+import {
+  AppBar, Toolbar, IconButton, Typography,
+} from '@material-ui/core';
+import MenuIcon from '@material-ui/icons/Menu';
+import { withStyles } from '@material-ui/core/styles';
 import { FormattedMessage, injectIntl } from 'react-intl';
 import { instanceOf } from 'prop-types';
 import { withCookies, Cookies } from 'react-cookie';

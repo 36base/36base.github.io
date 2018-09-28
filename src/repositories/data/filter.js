@@ -1,4 +1,4 @@
-import DollRepository from './../DollRepository';
+import DollRepository from '../DollRepository';
 import dollTypes from './dollType';
 import dollRanks from './dollRank';
 

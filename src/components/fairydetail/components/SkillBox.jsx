@@ -1,5 +1,5 @@
 import React from 'react';
-import { withStyles } from 'material-ui/styles';
+import { withStyles } from '@material-ui/core/styles';
 import { injectIntl, FormattedMessage } from 'react-intl';
 
 import SmallSelector from '../../common/SmallSelector';

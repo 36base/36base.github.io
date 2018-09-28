@@ -1,6 +1,6 @@
 import React from 'react';
-import { withStyles } from 'material-ui/styles';
-import { Grid } from 'material-ui';
+import { withStyles } from '@material-ui/core/styles';
+import { Grid } from '@material-ui/core';
 import { injectIntl, FormattedMessage } from 'react-intl';
 import { instanceOf } from 'prop-types';
 import { withCookies, Cookies } from 'react-cookie';

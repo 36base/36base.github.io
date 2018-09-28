@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import { Grid } from 'material-ui';
-import { withStyles } from 'material-ui/styles';
+import { Grid } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 import { instanceOf } from 'prop-types';
 import { withCookies, Cookies } from 'react-cookie';
 
@@ -74,6 +74,7 @@ class DollDict extends React.Component {
       languageName: langState,
     };
   }
+
   render() {
     const { list, classes } = this.props;
 

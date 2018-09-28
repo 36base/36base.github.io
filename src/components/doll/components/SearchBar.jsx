@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Grid, Input, Chip, Checkbox } from 'material-ui';
-import { withStyles } from 'material-ui/styles';
+import { Grid, Input, Chip, Checkbox } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 import { FormattedMessage, injectIntl } from 'react-intl';
 
 import { addFilter, deleteFilter } from '../../../actions/dolldict';

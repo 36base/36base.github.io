@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Grid, Typography, Radio, RadioGroup, FormControlLabel, FormControl, FormLabel } from 'material-ui';
-import { withStyles } from 'material-ui/styles';
+import { Grid, Typography, Radio, RadioGroup, FormControlLabel, FormControl, FormLabel } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 import { equips } from 'girlsfrontline-core';
 import { injectIntl, FormattedMessage } from 'react-intl';
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Divider } from 'material-ui';
-import { withStyles } from 'material-ui/styles';
+import { Divider } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 
 const style = theme => ({
   default: {

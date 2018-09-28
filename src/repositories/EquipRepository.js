@@ -112,4 +112,3 @@ async function fetchAll() {
 }
 
 export default { fetchAll };
-
