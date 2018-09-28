@@ -45,7 +45,7 @@ async function fetchSpine(dollId, skinNo) {
   if (!hit(dollCode, skinCode)) {
     const exts = dollSpine.names[skinCode];
     const getName = ext => [dollCode, skinCode, ext].join('-');
-    const getPath = ext => `${dollCode}/${skinCode}.${ext}${ext === 'png' ? '' : '.txt'}`;
+    const getPath = ext => `${dollCode}/${skinCode}.${ext}`;
 
     exts.forEach((ext) => {
       loader.add(getName(ext), getPath(ext), xhrTypeMap[ext]);
