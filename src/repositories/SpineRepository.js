@@ -1,6 +1,6 @@
 import * as PIXI from 'pixi.js';
 import spine from 'pixi-spine';
-import SkeletonBinary from '../utils/SkeletonBinary';
+import SkeletonBinary from '../utils/spine/SkeletonBinary';
 import getDollSpine from './data/getDollSpine';
 
 const domain = 'https://girlsfrontline.kr/hotlink-ok/girlsfrontline-resources/spine/';

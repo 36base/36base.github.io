@@ -10,7 +10,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { withStyles } from '@material-ui/core/styles';
 
 import SmallSelector from './common/SmallSelector';
-import { toggleMobile } from '../actions/menu';
+import { toggleMobile } from '../store/modules/menu';
 
 const style = theme => ({
   appBar: {

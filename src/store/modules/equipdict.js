@@ -1,12 +1,12 @@
 // import dolls from '../repositories/data/fairy';
-import FairyRepository from '../repositories/FairyRepository';
+import EquipRepository from '../../repositories/EquipRepository';
 
-let fairies = [];
-FairyRepository.fetchAll().then((data) => { fairies = data; });
+let equips = [];
+EquipRepository.fetchAll().then((data) => { equips = data; });
 
 function initFilter() {
   return {
-    list: fairies,
+    list: equips,
   };
 }
 

@@ -8,7 +8,7 @@ import {
 } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 
-import { toggleMobile, expand } from '../actions/menu';
+import { toggleMobile, expand } from '../store/modules/menu';
 
 const style = theme => ({
   drawerPaper: {
@@ -84,8 +84,6 @@ class Menu extends React.Component {
     const {
       classes, list, t, i18n,
     } = this.props;
-
-    console.log(i18n.languages);
 
     const items = (
       <List component="nav">

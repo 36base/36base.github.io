@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { I18nextProvider } from 'react-i18next';
 import theme from './theme';
-import store from './reducer';
+import store from './store';
 import i18n from './i18n';
 import App from './components/App';
 

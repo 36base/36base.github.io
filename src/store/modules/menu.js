@@ -1,4 +1,7 @@
-import { TOGGLE_MOBILE, EXPAND } from '../actions/menu';
+import { createAction, handleActions } from 'redux-actions';
+
+export const toggleMobile = createAction('TOGGLE_MOBILE');
+export const expand = createAction('EXPAND');
 
 const initialState = {
   openMobile: false,
@@ -34,36 +37,35 @@ const initialState = {
   },
 };
 
-const reducer = (state = initialState, action) => {
-  switch (action.type) {
-    case TOGGLE_MOBILE:
-      return Object.assign({}, state, {
-        openMobile: !state.openMobile,
-        list: {
-          dic: {
-            ...state.list.dic,
-            opened: false,
-          },
-          util: {
-            ...state.list.util,
-            opened: false,
-          },
+export default handleActions(
+  {
+    TOGGLE_MOBILE: state => ({
+      ...state,
+      openMobile: !state.openMobile,
+      list: {
+        dic: {
+          ...state.list.dic,
+          opened: false,
         },
-      });
-    case EXPAND:
-      return Object.assign({}, state, {
+        util: {
+          ...state.list.util,
+          opened: false,
+        },
+      },
+    }),
+    EXPAND: (state, { payload: id }) => {
+      const { list } = state;
+      return {
         ...state,
         list: {
-          ...state.list,
-          [action.id]: {
-            ...state.list[action.id],
-            opened: !state.list[action.id].opened,
+          ...list,
+          [id]: {
+            ...list[id],
+            opened: !list[id].opened,
           },
         },
-      });
-    default:
-      return state;
-  }
-};
-
-export default reducer;
+      };
+    },
+  },
+  initialState,
+);
