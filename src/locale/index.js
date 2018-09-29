@@ -7,9 +7,9 @@ import ko from './ko-KR/36base.json';
 import ja from './ja-JP/36base.json';
 
 const locale = {
-  en: { translation: en, gfcore: coreEn },
-  ko: { translation: ko, gfcore: coreKo },
-  ja: { translation: ja, gfcore: coreJa },
-  zh: { gfcore: coreZh },
+  en: { translation: { ...en, ...coreEn } },
+  ko: { translation: { ...ko, ...coreKo } },
+  ja: { translation: { ...ja, ...coreJa } },
+  zh: { translation: coreZh },
 };
 export default locale;

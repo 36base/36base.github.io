@@ -18,8 +18,8 @@ import LogisticSupport from './logisticsupport/LogisticSupport';
 import MusicPlayer from './musicplayer/MusicPlayer';
 import GfDict from './gfdict/GfDict';
 import About from './about/About';
-// import FairyDict from './fairy/FairyDict';
 import FairyDetail from './fairydetail/FairyDetail';
+import FairyDict from '../containers/Fairy/FairyDict';
 
 import { resize } from '../store/modules/common';
 import './App.css';
@@ -63,7 +63,7 @@ class App extends React.Component {
             <Route exact path="/doll" component={DollDict} />
             <Route path="/doll/:id" component={DollDetail} />
             <Route path="/equip" component={EquipDict} />
-            {/* <Route exact path="/fairy" component={FairyDict} /> */}
+            <Route exact path="/fairy" component={FairyDict} />
             <Route path="/fairy/:id" component={FairyDetail} />
             <Route path="/timetable" component={TimeTable} />
             <Route path="/calculator" component={Calculator} />

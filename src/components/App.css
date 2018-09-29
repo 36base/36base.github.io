@@ -1,4 +1,4 @@
-@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css); 
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 .wrapper {
 	width: 100%;
@@ -6,7 +6,7 @@
 }
 
 .undraggable {
-  user-drag: none; 
+  user-drag: none;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-drag: none;

@@ -1,20 +1,19 @@
-// import dolls from '../repositories/data/fairy';
+import { createAction, handleActions } from 'redux-actions';
 import FairyRepository from '../../repositories/FairyRepository';
 
 let fairies = [];
 FairyRepository.fetchAll().then((data) => { fairies = data; });
 
-function initFilter() {
-  return {
-    list: fairies,
-  };
-}
-
-const reducer = (state = initFilter(), action) => {
-  switch (action.type) {
-    default:
-      return state;
-  }
+const initialstate = {
+  list: fairies,
+  viewType: 'module',
 };
 
-export default reducer;
+export const changeView = createAction('FairyDict/CHANGE_VIEW');
+
+export default handleActions(
+  {
+    'FairyDict/CHANGE_VIEW': (state, { payload: viewType }) => ({ ...state, viewType }),
+  },
+  initialstate,
+);
