@@ -1,6 +1,7 @@
 import React from 'react';
+import { compose } from 'redux';
+import { translate } from 'react-i18next';
 import { withStyles } from '@material-ui/core/styles';
-import { injectIntl, FormattedMessage } from 'react-intl';
 
 import SmallSelector from '../../common/SmallSelector';
 import style from './style';
@@ -16,10 +17,8 @@ class StatusInfoBox extends React.Component {
       level: props.default.level,
       qualityLevel: props.default.qualityLevel,
     };
-    this.handleLevelChange = this.handleLevelChange.bind(this);
-    this.handleQualityLevelChange = this.handleQualityLevelChange.bind(this);
-    this.buildRow = this.buildRow.bind(this);
   }
+
   buildRow = (label, value, maxValue, color) => {
     const { classes } = this.props;
     const statusRate = Math.min(1, value / maxValue) * 100;
@@ -37,20 +36,27 @@ class StatusInfoBox extends React.Component {
       </div>,
     ];
   };
-  handleLevelChange(event) {
+
+  handleLevelChange = (event) => {
     this.setState({ level: event.target.value }, () => {
-      this.props.handler(this.state.level, this.state.qualityLevel);
+      const { handler } = this.props;
+      const { level, qualityLevel } = this.state;
+      handler(level, qualityLevel);
     });
   }
-  handleQualityLevelChange(event) {
+
+  handleQualityLevelChange = (event) => {
     this.setState({ qualityLevel: event.target.value }, () => {
-      this.props.handler(this.state.level, this.state.qualityLevel);
+      const { handler } = this.props;
+      const { level, qualityLevel } = this.state;
+      handler(level, qualityLevel);
     });
   }
+
   render() {
     const {
       classes,
-      intl,
+      t,
       stats,
       grow,
     } = this.props;
@@ -58,15 +64,21 @@ class StatusInfoBox extends React.Component {
     return (
       <div className={classes.infoBox}>
         <div className={classes.title}>
-          <div className={classes.titleName}><FormattedMessage id="Status" /></div>
-          <div className={classes.selectorLabel}><FormattedMessage id="Level" /></div>
+          <div className={classes.titleName}>
+            {t('Status')}
+          </div>
+          <div className={classes.selectorLabel}>
+            {t('Level')}
+          </div>
           <SmallSelector
             className={classes.selector}
             values={levelValues}
             selected={level}
             onChange={this.handleLevelChange}
           />
-          <div className={classes.selectorLabel}><FormattedMessage id="Rarity" /></div>
+          <div className={classes.selectorLabel}>
+            {t('Rarity')}
+          </div>
           <SmallSelector
             className={classes.selector}
             values={qualityLevelValues}
@@ -74,15 +86,18 @@ class StatusInfoBox extends React.Component {
             onChange={this.handleQualityLevelChange}
           />
         </div>
-        {this.buildRow(intl.formatMessage({ id: 'Damage' }), stats.pow, 55, '#00b8d4')}
-        {this.buildRow(intl.formatMessage({ id: 'Evasion' }), stats.dodge, 88, '#00c853')}
-        {this.buildRow(intl.formatMessage({ id: 'Armor' }), stats.armor, 25, '#d50000')}
-        {this.buildRow(intl.formatMessage({ id: 'Crit. Damage' }), stats.critDmg, 40, '#ff6d00')}
-        {this.buildRow(intl.formatMessage({ id: 'Accuracy' }), stats.hit, 90, '#ffd600')}
-        {this.buildRow(intl.formatMessage({ id: 'grow' }), grow, 320, '#2962ff')}
+        {this.buildRow(t('Damage'), stats.pow, 55, '#00b8d4')}
+        {this.buildRow(t('Evasion'), stats.dodge, 88, '#00c853')}
+        {this.buildRow(t('Armor'), stats.armor, 25, '#d50000')}
+        {this.buildRow(t('Crit. Damage'), stats.critDmg, 40, '#ff6d00')}
+        {this.buildRow(t('Accuracy'), stats.hit, 90, '#ffd600')}
+        {this.buildRow(t('grow'), grow, 320, '#2962ff')}
       </div>
     );
   }
 }
 
-export default injectIntl(withStyles(style)(StatusInfoBox));
+export default compose(
+  translate(),
+  withStyles(style),
+)(StatusInfoBox);

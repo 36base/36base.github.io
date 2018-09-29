@@ -27,7 +27,7 @@ const initialState = {
           name: 'Gf dict',
           icon: 'fa-book',
           to: '/gfdict',
-          fitLanguage: ['ko'],
+          fitLanguage: ['ko-KR'],
         },
       },
     },

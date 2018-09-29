@@ -1,7 +1,8 @@
 import React from 'react';
+import { compose } from 'redux';
+import { translate } from 'react-i18next';
 import { Grid, Typography } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
-import { injectIntl } from 'react-intl';
 
 import InfoBox from '../../common/InfoBox';
 import Square from '../../common/Square';
@@ -46,28 +47,35 @@ class SkillBox extends React.Component {
   constructor(props) {
     super(props);
 
-    this.onChange = this.onChange.bind(this);
     this.renderProperty = this.renderProperty.bind(this);
   }
 
-  onChange(event) {
+  handleChange = (event) => {
     const { value } = event.target;
-    this.props.onChange(value);
+    const { onChange } = this.props;
+
+    onChange(value);
   }
 
   renderProperty(label, value) {
+    const { classes } = this.props;
     return (
       <Typography align="right" variant="body1">
-        {label} <span className={this.props.classes.yellow}>{value}</span>
+        {label}
+        {' '}
+        <span className={classes.yellow}>
+          {value}
+        </span>
       </Typography>
     );
   }
+
   render() {
     const {
       classes,
-      intl,
       skill,
       skillLevel,
+      t,
     } = this.props;
 
     const {
@@ -77,10 +85,10 @@ class SkillBox extends React.Component {
       desc,
     } = skill;
 
-    const selector = <SmallSelector label={intl.formatMessage({ id: 'Level' })} values={lvValues} selected={skillLevel} onChange={this.onChange} />;
+    const selector = <SmallSelector label={t('Level')} values={lvValues} selected={skillLevel} onChange={this.onChange} />;
 
     return (
-      <InfoBox name={intl.formatMessage({ id: 'Skill' })} selector={selector}>
+      <InfoBox name={t('Skill')} selector={selector}>
         <Grid className={classes.container} container>
           <Grid item xs={4}>
             <div className={classes.iconWrapper}>
@@ -100,4 +108,7 @@ class SkillBox extends React.Component {
   }
 }
 
-export default injectIntl(withStyles(style)(SkillBox));
+export default compose(
+  translate(),
+  withStyles(style),
+)(SkillBox);

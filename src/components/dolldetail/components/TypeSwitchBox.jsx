@@ -1,7 +1,8 @@
 import React from 'react';
+import { compose } from 'redux';
+import { translate } from 'react-i18next';
 import { FormControlLabel, Switch } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
-import { injectIntl } from 'react-intl';
 
 const style = theme => ({
   container: {
@@ -22,18 +23,21 @@ const style = theme => ({
 
 const TypeSwitchBox = (props) => {
   const {
-    classes, on, toggle, intl,
+    classes, on, toggle, t,
   } = props;
 
   return (
-    <div className={classes.container} >
+    <div className={classes.container}>
       <FormControlLabel
         className={classes.button}
         control={<Switch color="primary" onClick={toggle} checked={on} />}
-        label={intl.formatMessage({ id: 'Damaged' })}
+        label={t('Damaged')}
       />
     </div>
   );
 };
 
-export default injectIntl(withStyles(style)(TypeSwitchBox));
+export default compose(
+  translate(),
+  withStyles(style),
+)(TypeSwitchBox);

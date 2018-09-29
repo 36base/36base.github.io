@@ -1,9 +1,8 @@
 import React from 'react';
+import { compose } from 'redux';
+import { translate } from 'react-i18next';
 import { withStyles } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
-import { injectIntl, FormattedMessage } from 'react-intl';
-import { instanceOf } from 'prop-types';
-import { withCookies, Cookies } from 'react-cookie';
 
 import FairyRepository from '../../repositories/FairyRepository';
 
@@ -25,58 +24,38 @@ function timeToStr(time) {
 }
 
 class FairyDetail extends React.Component {
-  static propTypes = {
-    cookies: instanceOf(Cookies).isRequired,
+  state = {
+    info: undefined,
+    skinNo: 0,
   };
 
-  constructor(props) {
-    super(props);
-
-    const { cookies } = props;
-
-    let langState = cookies.get('lang');
-
-    if (langState === undefined) {
-      langState = 'ko';
-    }
-
-    this.state = {
-      info: undefined,
-      skinNo: 0,
-      languageName: langState,
-    };
-    this.handleSkinChange = this.handleSkinChange.bind(this);
-    this.handleSkillChange = this.handleSkillChange.bind(this);
-    this.handleStatusChange = this.handleStatusChange.bind(this);
-    this.handleLanguageChange = this.handleLanguageChange.bind(this);
-  }
-
   componentWillMount() {
-    const id = Number(this.props.match.params.id);
+    const { match } = this.props;
+    const id = Number(match.params.id);
     FairyRepository.fetchById(id)
       .then((info) => {
         this.setState({ info });
       });
   }
 
-  handleSkinChange(no) {
+  handleSkinChange = (no) => {
     const number = no - 2;// 왜 인지는 모르겠는데 no로 넘어오는숫자가 2,3,4입니다 그래서 일단은 이렇게 처리합니다.
     this.setState({ skinNo: number });
   }
 
-  handleSkillChange(level) {
-    this.setState({ info: Object.assign(this.state.info, { skillLevel: level }) });
+  handleSkillChange = (level) => {
+    this.setState(prevState => ({ info: Object.assign(prevState.info, { skillLevel: level }) }));
   }
 
-  handleStatusChange(level, qualityLevel) {
-    this.setState({ info: Object.assign(this.state.info, { level, qualityLevel }) });
+  handleStatusChange = (level, qualityLevel) => {
+    this.setState(prevState => ({ info: Object.assign(prevState.info, { level, qualityLevel }) }));
   }
 
-  handleLanguageChange(langName) {
+  handleLanguageChange = (langName) => {
     const { classes } = this.props;
     const { info } = this.state;
 
-    if (langName === 'ko') {
+    if (langName === 'ko-KR') {
       return (
         <div className={classes.nameWrapper}>
           <div className={classes.krName}>{ info.krName }</div>
@@ -92,42 +71,54 @@ class FairyDetail extends React.Component {
   }
 
   render() {
-    const { classes, intl } = this.props;
-    const { info, languageName } = this.state;
+    const {
+      classes, t, i18n,
+    } = this.props;
+    const { info, skinNo } = this.state;
     if (!info) {
       return (
         <div>Undefined</div>
       );
     }
-    nonCraftableText = intl.formatMessage({ id: 'Non-craftable' });
+    nonCraftableText = t('Non-craftable');
     const skinImage = [info.images.mod1, info.images.mod2, info.images.mod3];
     return (
       <Grid className={classes.root}>
         <div className={classes.titleWrapper}>
-          { this.handleLanguageChange(languageName) }
-          <div className={classes.number}>NO. { info.id }</div>
+          { this.handleLanguageChange(i18n.language) }
+          <div className={classes.number}>
+            {'NO.'}
+            {' '}
+            { info.id }
+          </div>
         </div>
         <div className={classes.divider} />
         <Grid container className={classes.contentWrapper}>
           <Grid item xs={6} className={classes.imageWrapper}>
-            <SkinTabbar onChange={this.handleSkinChange} selected={this.state.skinNo} />
+            <SkinTabbar onChange={this.handleSkinChange} selected={skinNo} />
             <div className={classes.image}>
               <img
                 className={classes.skinImage}
                 alt={info.name}
-                src={skinImage[this.state.skinNo]}
+                src={skinImage[skinNo]}
               />
             </div>
           </Grid>
           <Grid item xs={6} className={classes.infoWrapper}>
             <div className={classes.infoBox}>
-              <div className={classes.infoTitle}><FormattedMessage id="Basic Information" /></div>
+              <div className={classes.infoTitle}>
+                {t('Basic Information')}
+              </div>
               <div className={classes.infoRow}>
-                <div className={classes.rowTitle}><FormattedMessage id="type" /></div>
+                <div className={classes.rowTitle}>
+                  {t('type')}
+                </div>
                 <div>{ info.category }</div>
               </div>
               <div className={classes.infoRow}>
-                <div className={classes.rowTitle}><FormattedMessage id="Production Time" /></div>
+                <div className={classes.rowTitle}>
+                  {t('Production Time')}
+                </div>
                 <div>{ timeToStr(info.buildTime) }</div>
               </div>
             </div>
@@ -150,4 +141,7 @@ class FairyDetail extends React.Component {
   }
 }
 
-export default injectIntl(withStyles(style)(withCookies(FairyDetail)));
+export default compose(
+  translate(),
+  withStyles(style),
+)(FairyDetail);

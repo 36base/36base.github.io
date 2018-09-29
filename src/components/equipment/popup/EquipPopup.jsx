@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-
 import { compose } from 'redux';
+import { translate } from 'react-i18next';
 import { withStyles } from '@material-ui/core/styles';
 import Select from '@material-ui/core/Select';
-import { InputLabel } from '@material-ui/core/Input';
+import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
-import { injectIntl, FormattedMessage } from 'react-intl';
 
 import style from './style';
 
@@ -57,7 +56,8 @@ class EquipPopup extends Component {
   }
 
   render() {
-    const { classes, intl, info } = this.props;
+    const { classes, info, t } = this.props;
+    const { level } = this.state;
     const {
       name,
       sprite,
@@ -72,19 +72,21 @@ class EquipPopup extends Component {
 
     return (
       <div>
-        <div className={classes.popup}>
+        <FormControl className={classes.popup}>
           <img style={{ width: '100%' }} alt={name} src={sprite} />
           <h2 style={{ textAlign: 'center', color }}>{name}</h2>
           <h3 style={{ textAlign: 'center', color: 'white' }}>{category}</h3>
           <h3 style={{ textAlign: 'center', color: 'white' }}>{type}</h3>
           <div style={{ textAlign: 'center', color: 'white' }}>{introduction}</div>
           <br />
-          {/* <div className={classes.levelForm}>
-            <InputLabel htmlFor="level" style={{ color: 'gray' }}><FormattedMessage id="Level" /></InputLabel>
+          <div className={classes.levelForm}>
+            <InputLabel htmlFor="level" style={{ color: 'gray' }}>
+              {t('Level')}
+            </InputLabel>
             <Select
               native
               className={classes.levelSelect}
-              value={this.state.level}
+              value={level}
               onChange={this.handleLvChange}
               inputProps={{
                 id: 'level',
@@ -98,7 +100,7 @@ class EquipPopup extends Component {
                 ))
                 }
             </Select>
-          </div> */}
+          </div>
           <table className={classes.statTable}>
             <tbody>
               {Object.keys(stats).map(key => (
@@ -106,7 +108,7 @@ class EquipPopup extends Component {
                   <td className={classes.statName}>
                     {
                         StatNameFormatDict[key]
-                          ? intl.formatMessage({ id: StatNameFormatDict[key] })
+                          ? t(StatNameFormatDict[key])
                           : key
                       }
                   </td>
@@ -122,14 +124,21 @@ class EquipPopup extends Component {
           <h3 className={classes.craftTime}>
             {
                 buildTime === 0
-                  ? (<span style={{ color: 'red' }}><FormattedMessage id="Non-craftable" /></span>)
-                  : `${intl.formatMessage({ id: 'Production Time' })} - ${buildTime2Str(buildTime)}`
+                  ? (
+                    <span style={{ color: 'red' }}>
+                      {t('Non-craftable')}
+                    </span>
+                  )
+                  : `${t('Production Time')} - ${buildTime2Str(buildTime)}`
               }
           </h3>
-        </div>
+        </FormControl>
       </div>
     );
   }
 }
 
-export default compose(injectIntl, withStyles(style))(EquipPopup);
+export default compose(
+  translate(),
+  withStyles(style),
+)(EquipPopup);

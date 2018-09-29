@@ -1,10 +1,9 @@
 import React from 'react';
+import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import { Grid } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
-import { instanceOf } from 'prop-types';
-import { withCookies, Cookies } from 'react-cookie';
 
 import DollCard from './components/DollCard';
 // import SearchBar from './components/SearchBar';
@@ -54,27 +53,8 @@ const style = theme => ({
   },
 });
 
+// eslint-disable-next-line react/prefer-stateless-function
 class DollDict extends React.Component {
-  static propTypes = {
-    cookies: instanceOf(Cookies).isRequired,
-  };
-
-  constructor(props) {
-    super(props);
-
-    const { cookies } = props;
-
-    let langState = cookies.get('lang');
-
-    if (langState === undefined) {
-      langState = 'ko';
-    }
-
-    this.state = {
-      languageName: langState,
-    };
-  }
-
   render() {
     const { list, classes } = this.props;
 
@@ -85,7 +65,7 @@ class DollDict extends React.Component {
     return (
       <Grid className={classes.wrapper} container>
         <Grid className={classes.cardWrapper}>
-          {list.map(doll => <DollCard lang={this.state.languageName} key={doll.id} info={doll} />)}
+          {list.map(doll => <DollCard key={doll.id} info={doll} />)}
         </Grid>
       </Grid>
     );
@@ -96,4 +76,8 @@ const stateMapper = state => ({
   list: state.dolldict.list,
 });
 
-export default connect(stateMapper)(withRouter(withStyles(style)(withCookies(DollDict))));
+export default compose(
+  connect(stateMapper),
+  withRouter,
+  withStyles(style),
+)(DollDict);

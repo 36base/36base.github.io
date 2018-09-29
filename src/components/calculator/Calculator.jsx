@@ -1,8 +1,11 @@
 import React from 'react';
-import { TextField, Grid, Paper, Checkbox } from '@material-ui/core/';
+import { compose } from 'redux';
+import {
+  TextField, Grid, Paper, Checkbox,
+} from '@material-ui/core/';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import { withStyles } from '@material-ui/core/styles';
-import { injectIntl, FormattedMessage } from 'react-intl';
+import { translate } from 'react-i18next';
 
 const style = {
   wrapper: {
@@ -30,6 +33,7 @@ class Calculator extends React.Component {
     this.calcDoll();
     this.calcFairy();
   }
+
   calcDoll() {
     const dollAccExp = [];
 
@@ -158,11 +162,11 @@ class Calculator extends React.Component {
     const nowLv = Number(this.nowLv.value);
     let nowExp = Number(this.nowExp.value);
     let targetLv = Number(this.targetLv.value);
-    const oath = (!this.state.oath) ? 1 : 2;
+    const oath = (this.state.oath) ? 2 : 1;
     let result = 0;
     if (
-      ((dollAccExp[nowLv + 1] - dollAccExp[nowLv]) >= nowExp) &&
-      (nowExp >= 0) && (targetLv > nowLv)
+      ((dollAccExp[nowLv + 1] - dollAccExp[nowLv]) >= nowExp)
+      && (nowExp >= 0) && (targetLv > nowLv)
     ) {
       if (targetLv > 115) {
         result += Math.ceil((dollAccExp[targetLv] - dollAccExp[Math.max(nowLv, 115)] - nowExp)
@@ -193,6 +197,7 @@ class Calculator extends React.Component {
       this.setState({ report: 'N/A' });
     }
   }
+
   calcFairy() {
     const fairyAccExp = [];
     fairyAccExp[0] = 0;
@@ -312,33 +317,36 @@ class Calculator extends React.Component {
       this.setState({ reportFairy: 'N/A' });
     }
   }
+
   render() {
-    const { classes, intl } = this.props;
+    const { classes, t } = this.props;
     return (
       <div className={classes.wrapper} align="center">
         <Grid container align="center" justify="center">
           <Paper align="left" style={{ padding: '20px' }}>
-            <h1><FormattedMessage id="Combat Report Calculator" /></h1>
+            <h1>
+              {t('Combat Report Calculator')}
+            </h1>
             <TextField
               id="form-disc-calc-nowLv"
-              label={intl.formatMessage({ id: 'current level' })}
+              label={t('current level')}
               type="number"
               margin="normal"
               inputRef={(el) => { this.nowLv = el; }}
               onChange={this.calc}
             />
             <FormControlLabel
-              control={
+              control={(
                 <Checkbox
                   onChange={this.oath}
                 />
-              }
-              label={intl.formatMessage({ id: 'OATH' })}
+)}
+              label={t('OATH')}
             />
             <br />
             <TextField
               id="form-disc-calc-nowExp"
-              label={intl.formatMessage({ id: 'Current EXP.' })}
+              label={t('Current EXP.')}
               type="number"
               margin="normal"
               inputRef={(el) => { this.nowExp = el; }}
@@ -348,17 +356,35 @@ class Calculator extends React.Component {
             <br />
             <TextField
               id="tf-disc-calc-targetLv"
-              label={intl.formatMessage({ id: 'Target Level' })}
+              label={t('Target Level')}
               type="number"
               margin="normal"
               inputRef={(el) => { this.targetLv = el; }}
               onChange={this.calc}
             />
             <h4>
-              ({intl.formatMessage({ id: 'doll' })}) {intl.formatMessage({ id: 'Require amount' })} : <span id="disc-calc-result">{this.state.report}</span>{intl.formatMessage({ id: 'amount' })}
+              (
+              {t('doll')}
+)
+              {' '}
+              {t('Require amount')}
+              {' '}
+:
+              {' '}
+              <span id="disc-calc-result">{this.state.report}</span>
+              {t('amount')}
             </h4>
             <h4>
-              ({intl.formatMessage({ id: 'fairy' })}) {intl.formatMessage({ id: 'Require amount' })} : <span id="disc-calc-result">{this.state.reportFairy}</span>{intl.formatMessage({ id: 'amount' })}
+              (
+              {t('fairy')}
+)
+              {' '}
+              {t('Require amount')}
+              {' '}
+:
+              {' '}
+              <span id="disc-calc-result">{this.state.reportFairy}</span>
+              {t('amount')}
             </h4>
             <br />
           </Paper>
@@ -368,4 +394,7 @@ class Calculator extends React.Component {
   }
 }
 
-export default injectIntl(withStyles(style)(Calculator));
+export default compose(
+  translate(),
+  withStyles(style),
+)(Calculator);

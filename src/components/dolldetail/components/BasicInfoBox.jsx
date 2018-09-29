@@ -1,7 +1,8 @@
 import React from 'react';
+import { compose } from 'redux';
+import { translate } from 'react-i18next';
 import { Grid, Typography } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
-import { injectIntl } from 'react-intl';
 
 import HorizonLine from '../../common/HorizonLine';
 import InfoBox from '../../common/InfoBox';
@@ -14,9 +15,11 @@ const style = theme => ({
   },
 });
 
-const BasicInfoBox = (props) => {
+const BasicInfoBox = ({
+  classes, t, armType, illust, voice,
+}) => {
   const buildRow = (label, value) => [
-    <Grid key="row" className={props.classes.container} container spacing={8}>
+    <Grid key="row" className={classes.container} container spacing={8}>
       <Grid item xs><Typography>{label}</Typography></Grid>
       <Grid item xs={8}><Typography>{value}</Typography></Grid>
     </Grid>,
@@ -24,12 +27,15 @@ const BasicInfoBox = (props) => {
   ];
 
   return (
-    <InfoBox name={props.intl.formatMessage({ id: 'Basic Information' })}>
-      {buildRow(props.intl.formatMessage({ id: 'type' }), props.armType)}
-      {buildRow(props.intl.formatMessage({ id: 'Artist' }), props.illust)}
-      {buildRow(props.intl.formatMessage({ id: 'voice actor' }), props.voice)}
+    <InfoBox name={t('Basic Information')}>
+      {buildRow(t('type'), armType)}
+      {buildRow(t('Artist'), illust)}
+      {buildRow(t('voice actor'), voice)}
     </InfoBox>
   );
 };
 
-export default injectIntl(withStyles(style)(BasicInfoBox));
+export default compose(
+  translate(),
+  withStyles(style),
+)(BasicInfoBox);

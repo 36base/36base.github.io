@@ -46,30 +46,8 @@ const style = theme => ({
   mixin: theme.mixins.toolbar,
 });
 
+// eslint-disable-next-line react/prefer-stateless-function
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.handleResize = this.handleResize.bind(this);
-  }
-
-  componentDidMount() {
-    // window.addEventListener('resize', this.handleResize);
-    // this.handleResize();
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.handleResize);
-  }
-
-  handleResize() {
-    const content = document.getElementById('content');
-    if (content) {
-      const { width, height } = content.getBoundingClientRect();
-      this.props.resize(width, height);
-    }
-  }
-
   render() {
     const { classes } = this.props;
 
@@ -101,9 +79,8 @@ class App extends React.Component {
   }
 }
 
-const stateMapper = undefined;
 const dispatchMapper = dispatch => ({
   resize: (width, height) => dispatch(resize(width, height)),
 });
 
-export default withStyles(style)(withRouter(connect(stateMapper, dispatchMapper)(App)));
+export default withStyles(style)(withRouter(connect(null, dispatchMapper)(App)));

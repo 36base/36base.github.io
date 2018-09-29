@@ -1,8 +1,9 @@
 import React from 'react';
+import { compose } from 'redux';
+import { translate } from 'react-i18next';
 import { withStyles } from '@material-ui/core/styles';
 import * as PIXI from 'pixi.js';
 import spine from 'pixi-spine';
-import { injectIntl } from 'react-intl';
 
 import InfoBox from '../../common/InfoBox';
 import SmallSelector from '../../common/SmallSelector';
@@ -29,26 +30,17 @@ let animationMap = {};
 const VIEW_ID = 'dolldetail-sd-view';
 
 class SDBox extends React.Component {
-  constructor(props) {
-    super(props);
+  state = {
+    time: 0,
+    isUpdate: true,
+    animations: [],
+    animationName: '',
+    player: null,
+    stage: new PIXI.Container(),
+    renderer: PIXI.autoDetectRenderer(props.width * 3, props.height, { transparent: true }),
 
-    this.state = {
-      time: 0,
-      isUpdate: true,
-      animations: [],
-      animationName: '',
-      player: null,
-      stage: new PIXI.Container(),
-      renderer: PIXI.autoDetectRenderer(props.width * 3, props.height, { transparent: true }),
-
-      hasVictoryLoop: true,
-    };
-
-    this.setAnimation = this.setAnimation.bind(this);
-    this.clear = this.clear.bind(this);
-    this.setSpine = this.setSpine.bind(this);
-    this.tick = this.tick.bind(this);
-  }
+    hasVictoryLoop: true,
+  };
 
   componentDidMount() {
     document.getElementById(VIEW_ID).appendChild(this.state.renderer.view);
@@ -74,14 +66,14 @@ class SDBox extends React.Component {
     const { width, height, skeleton } = this.props;
     const { animationName } = this.state;
     return !(
-      width === newProps.width &&
-      height === newProps.height &&
-      skeleton === newProps.skeleton &&
-      animationName === newState.animationName
+      width === newProps.width
+      && height === newProps.height
+      && skeleton === newProps.skeleton
+      && animationName === newState.animationName
     );
   }
 
-  setAnimation(name) {
+  setAnimation = (name) => {
     const { player } = this.state;
     if (player) {
       player.state.clearTrack();
@@ -95,7 +87,7 @@ class SDBox extends React.Component {
     }
   }
 
-  setSpine(skeleton) {
+  setSpine = (skeleton) => {
     const player = new spine.Spine(skeleton);
     const spineAnimations = player.spineData.animations.map(e => e.name);
     const animations = Object.keys(animationMap)
@@ -125,7 +117,7 @@ class SDBox extends React.Component {
     this.state.renderer.render(this.state.stage);
   }
 
-  tick(time) {
+  tick = (time) => {
     window.requestAnimationFrame(t => this.tick(t));
     const d = (time - this.state.time) / 1000;
     this.setState({ time });
@@ -160,7 +152,7 @@ class SDBox extends React.Component {
     this.state.renderer.render(this.state.stage);
   }
 
-  clear() {
+  clear = () => {
     this.state.stage.removeChildren();
     this.setState({
       player: null,
@@ -169,18 +161,18 @@ class SDBox extends React.Component {
 
   render() {
     const {
-      classes, width, height, intl,
+      classes, width, height, t,
     } = this.props;
     const { animations, animationName } = this.state;
 
     animationMap = {
-      wait: intl.formatMessage({ id: 'Idle' }),
-      move: intl.formatMessage({ id: 'Move' }),
-      attack: intl.formatMessage({ id: 'Attack' }),
-      s: intl.formatMessage({ id: 'Skill' }),
-      reload: intl.formatMessage({ id: 'Reload' }),
-      die: intl.formatMessage({ id: 'Dead' }),
-      victory: intl.formatMessage({ id: 'Victory' }),
+      wait: t('Idle'),
+      move: t('Move'),
+      attack: t('Attack'),
+      s: t('Skill'),
+      reload: t('Reload'),
+      die: t('Dead'),
+      victory: t('Victory'),
     };
 
     let selector = null;
@@ -205,4 +197,7 @@ class SDBox extends React.Component {
   }
 }
 
-export default injectIntl(withStyles(style)(SDBox));
+export default compose(
+  translate(),
+  withStyles(style),
+)(SDBox);

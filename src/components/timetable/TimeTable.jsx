@@ -1,9 +1,12 @@
 import React from 'react';
+import { compose } from 'redux';
+import { translate } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { Grid, Typography, Radio, RadioGroup, FormControlLabel, FormControl, FormLabel } from '@material-ui/core';
+import {
+  Grid, Typography, Radio, RadioGroup, FormControlLabel, FormControl, FormLabel,
+} from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 import { equips } from 'girlsfrontline-core';
-import { injectIntl, FormattedMessage } from 'react-intl';
 
 import Star from '../common/Star';
 import ImageBox from '../common/ImageBox';
@@ -92,29 +95,18 @@ function timeToStr(time) {
 }
 
 class TimeTable extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      selectedType: 'doll',
-      map: undefined,
-      keys: [],
-      renderItem: undefined,
-    };
-
-    this.setData = this.setData.bind(this);
-    this.handleTypeChange = this.handleTypeChange.bind(this);
-    this.renderDollItem = this.renderDollItem.bind(this);
-    this.renderEquipItem = this.renderEquipItem.bind(this);
-    this.renderFairyItem = this.renderFairyItem.bind(this);
-    this.renderRow = this.renderRow.bind(this);
-  }
+  state = {
+    selectedType: 'doll',
+    map: undefined,
+    keys: [],
+    renderItem: undefined,
+  };
 
   componentWillMount() {
     this.setData(this.state.selectedType);
   }
 
-  setData(type) {
+  setData = (type) => {
     if (type === 'doll') {
       DollRepository.fetchAll()
         .then((dolls) => {
@@ -188,13 +180,13 @@ class TimeTable extends React.Component {
     }
   }
 
-  handleTypeChange(e) {
+  handleTypeChange = (e) => {
     this.setState({ selectedType: e.target.value }, () => {
       this.setData(this.state.selectedType);
     });
   }
 
-  renderDollItem(data) {
+  renderDollItem = (data) => {
     const { classes } = this.props;
     return (
       <Link className={classes.link} to={`/doll/${data.id}`}>
@@ -207,7 +199,7 @@ class TimeTable extends React.Component {
     );
   }
 
-  renderEquipItem(data) {
+  renderEquipItem = (data) => {
     const { classes } = this.props;
     return (
       <div>
@@ -220,7 +212,7 @@ class TimeTable extends React.Component {
     );
   }
 
-  renderFairyItem(data) {
+  renderFairyItem = (data) => {
     const { classes } = this.props;
     return (
       <Link className={classes.link} to={`/fairy/${data.id}`}>
@@ -229,7 +221,7 @@ class TimeTable extends React.Component {
     );
   }
 
-  renderRow(key) {
+  renderRow = (key) => {
     const { classes } = this.props;
     const values = this.state.map.get(key);
     if (!values) {
@@ -250,7 +242,7 @@ class TimeTable extends React.Component {
   }
 
   render() {
-    const { classes, intl } = this.props;
+    const { classes, t } = this.props;
     const rows = this.state.keys
       .map(this.renderRow)
       .reduce((acc, e) => (acc ? [...acc, <HorizonLine />, e] : [e]), null);
@@ -259,15 +251,17 @@ class TimeTable extends React.Component {
       <div>
         <div>
           <FormControl component="fieldset" className={classes.formControl}>
-            <FormLabel component="legend"><FormattedMessage id="type" /></FormLabel>
+            <FormLabel component="legend">
+              {t('type')}
+            </FormLabel>
             <RadioGroup
               className={classes.group}
               value={this.state.selectedType}
               onChange={this.handleTypeChange}
             >
-              <FormControlLabel value="doll" control={<Radio />} label={intl.formatMessage({ id: 'doll' })} />
-              <FormControlLabel value="equip" control={<Radio />} label={intl.formatMessage({ id: 'equip' })} />
-              <FormControlLabel value="fairy" control={<Radio />} label={intl.formatMessage({ id: 'fairy' })} />
+              <FormControlLabel value="doll" control={<Radio />} label={t('doll')} />
+              <FormControlLabel value="equip" control={<Radio />} label={t('equip')} />
+              <FormControlLabel value="fairy" control={<Radio />} label={t('fairy')} />
             </RadioGroup>
           </FormControl>
         </div>
@@ -280,4 +274,7 @@ class TimeTable extends React.Component {
   }
 }
 
-export default injectIntl(withStyles(style)(TimeTable));
+export default compose(
+  translate(),
+  withStyles(style),
+)(TimeTable);

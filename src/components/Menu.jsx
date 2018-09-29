@@ -1,20 +1,18 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { compose } from 'redux';
+import { translate } from 'react-i18next';
 import { connect } from 'react-redux';
-import { instanceOf } from 'prop-types';
-import { withCookies, Cookies } from 'react-cookie';
 import { withRouter } from 'react-router';
 import {
   Hidden, Drawer, List, ListItem, ListItemText, ListItemIcon, Divider, Icon, Collapse,
 } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
-import { injectIntl } from 'react-intl';
 
 import { toggleMobile, expand } from '../actions/menu';
 
 const style = theme => ({
   drawerPaper: {
-    width: '70%',
+    minWidth: '300px',
     [theme.breakpoints.up('lg')]: {
       width: theme.breakpoints.values.lg - theme.breakpoints.values.md,
     },
@@ -29,49 +27,26 @@ const style = theme => ({
 });
 
 class Menu extends React.Component {
-  static propTypes = {
-    cookies: instanceOf(Cookies).isRequired,
-  };
-
-  constructor(props) {
-    super(props);
-
-    const { cookies } = props;
-
-    let langState = cookies.get('lang');
-
-    if (langState === undefined) {
-      langState = 'ko';
-    }
-
-    this.state = {
-      languageName: langState,
-    };
-
-    this.routeTo = this.routeTo.bind(this);
-    this.renderMenuItem = this.renderMenuItem.bind(this);
-    this.renderCollapse = this.renderCollapse.bind(this);
-  }
-
-  routeTo(path) {
+  routeTo = (path) => {
     this.props.history.push(path);
     if (this.props.openMobile) {
       this.props.toggleMobile();
     }
   }
 
-  renderMenuItem(key, value) {
+  renderMenuItem = (key, value) => {
+    const { t, expand, classes } = this.props;
     const items = [
-      <ListItem key={key} button onClick={() => this.props.expand(key)}>
+      <ListItem key={key} button onClick={() => expand(key)}>
         <ListItemIcon><Icon className={`fa fa-lg ${value.icon}`} /></ListItemIcon>
-        <ListItemText primary={this.props.intl.formatMessage({ id: value.name })} />
+        <ListItemText primary={t(value.name)} />
         <Icon className={`fa fa-lg ${value.opened ? 'fa-angle-up' : 'fa-angle-down'}`} />
       </ListItem>,
     ];
 
     if (value.opened) {
       items.push((
-        <Collapse className={this.props.classes.collapse} key={`${key}_collapse`} in={value.opened} timeout="auto">
+        <Collapse className={classes.collapse} key={`${key}_collapse`} in={value.opened} timeout="auto">
           <List component="div" disablePadding>
             {
               Object.keys(value.children)
@@ -84,9 +59,10 @@ class Menu extends React.Component {
     return items;
   }
 
-  renderCollapse(key, value) {
+  renderCollapse = (key, value) => {
+    const { classes, t, i18n } = this.props;
     if (value.fitLanguage) {
-      const filtered = value.fitLanguage.filter(iter => iter === this.state.languageName);
+      const filtered = value.fitLanguage.filter(iter => iter === i18n.language);
 
       if (filtered.length === 0) return (<div />);
     }
@@ -96,17 +72,20 @@ class Menu extends React.Component {
         button
         onClick={() => this.routeTo(value.to)}
       >
-        <div className={this.props.classes.icon}>
+        <div className={classes.icon}>
           <ListItemIcon><Icon className={value.icon ? `fas ${value.icon}` : ''} /></ListItemIcon>
         </div>
-        <ListItemText primary={this.props.intl.formatMessage({ id: value.name })} />
+        <ListItemText primary={t(value.name)} />
       </ListItem>
     );
   }
 
   render() {
-    // eslint-disable-next-line
-    const { classes, list, intl } = this.props;
+    const {
+      classes, list, t, i18n,
+    } = this.props;
+
+    console.log(i18n.languages);
 
     const items = (
       <List component="nav">
@@ -121,26 +100,28 @@ class Menu extends React.Component {
       </List>
     );
 
-    return [
-      <Hidden key="mobile" lgUp>
-        <Drawer
-          variant="temporary"
-          anchor="left"
-          open={this.props.openMobile}
-          onClose={this.props.toggleMobile}
-          classes={{ paper: classes.drawerPaper }}
-        >
-          <div className={classes.mixin} />
-          {items}
-        </Drawer>
-      </Hidden>,
-      <Hidden key="pc" mdDown implementation="css">
-        <Drawer variant="permanent" open classes={{ paper: classes.drawerPaper }}>
-          <div className={classes.mixin} />
-          {items}
-        </Drawer>
-      </Hidden>,
-    ];
+    return (
+      <Fragment>
+        <Hidden key="mobile" lgUp>
+          <Drawer
+            variant="temporary"
+            anchor="left"
+            open={this.props.openMobile}
+            onClose={this.props.toggleMobile}
+            classes={{ paper: classes.drawerPaper }}
+          >
+            <div className={classes.mixin} />
+            {items}
+          </Drawer>
+        </Hidden>
+        <Hidden key="pc" mdDown implementation="css">
+          <Drawer variant="permanent" open classes={{ paper: classes.drawerPaper }}>
+            <div className={classes.mixin} />
+            {items}
+          </Drawer>
+        </Hidden>
+      </Fragment>
+    );
   }
 }
 
@@ -155,9 +136,8 @@ const dispatchMapper = dispatch => ({
 });
 
 export default compose(
-  connect(stateMapper, dispatchMapper),
-  injectIntl,
-  withStyles(style),
   withRouter,
-  withCookies,
+  translate(),
+  connect(stateMapper, dispatchMapper),
+  withStyles(style),
 )(Menu);

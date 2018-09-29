@@ -33,23 +33,23 @@ const theme = createMuiTheme({
     extra: { main: '#D5A3FD' },
   },
   typography: {
-    fontFamily: ['Noto Sans KR', 'Rounded Mplus 1c', 'sans-serif'],
-    fontSize: 14,
-    button: {
-      textTransform: undefined,
-    },
-    caption: {
-      fontSize: '2rem',
-    },
-    display1: {
-      fontSize: '1rem',
-    },
-    display2: {
-      fontSize: '1.25rem',
-    },
-    display3: {
-      fontSize: '1.5rem',
-    },
+    fontFamily: ['Roboto', '"Noto Sans KR"', '"Rounded Mplus 1c"', 'sans-serif'],
+    // fontSize: 14,
+    // button: {
+    //   textTransform: undefined,
+    // },
+    // caption: {
+    //   fontSize: '2rem',
+    // },
+    // display1: {
+    //   fontSize: '1rem',
+    // },
+    // display2: {
+    //   fontSize: '1.25rem',
+    // },
+    // display3: {
+    //   fontSize: '1.5rem',
+    // },
   },
 });
 

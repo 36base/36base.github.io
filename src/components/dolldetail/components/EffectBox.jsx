@@ -1,7 +1,8 @@
 import React from 'react';
+import { compose } from 'redux';
+import { translate } from 'react-i18next';
 import { Grid, Typography } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
-import { injectIntl } from 'react-intl';
 
 import InfoBox from '../../common/InfoBox';
 import Square from '../../common/Square';
@@ -84,63 +85,66 @@ const rateOptions = [
 ];
 
 class EffectBox extends React.Component {
-  constructor(props) {
-    super(props);
+  state = {
+    rate: 2,
+  };
 
-    this.state = {
-      rate: 2,
-    };
-
-    this.onChangeRate = this.onChangeRate.bind(this);
-    this.renderSelector = this.renderSelector.bind(this);
-  }
-
-  onChangeRate(event) {
+  onChangeRate = (event) => {
     const { value } = event.target;
     this.setState({
       rate: value,
     });
   }
 
-  renderSelector() {
-    if (!this.props.hasLevel) {
+  renderSelector = () => {
+    const { hasLevel, t } = this.props;
+    const { rate } = this.state;
+    if (!hasLevel) {
       return null;
     }
 
     return (
       <SmallSelector
-        label={this.props.intl.formatMessage({ id: 'Combine' })}
+        label={t('Combine')}
         values={rateOptions}
-        selected={this.state.rate}
+        selected={rate}
         onChange={this.onChangeRate}
       />
     );
   }
 
   render() {
-    const { classes, intl } = this.props;
+    const {
+      classes,
+      effectCenter,
+      effectPos,
+      effectType,
+      gridEffect,
+      hasLevel,
+    } = this.props;
+    const { rate } = this.state;
 
     const grids = effectGridList.map((e) => {
       let type = classes.default;
-      if (e[0] === this.props.effectCenter) {
+      if (e[0] === effectCenter) {
         type = classes.center;
-      } else if (this.props.effectPos.indexOf(e[0]) >= 0) {
+      } else if (effectPos.indexOf(e[0]) >= 0) {
         type = classes.effected;
       }
       return (
         <div key={e[0]} className={[classes.grid, type].join(' ')} style={e[1]} />
       );
     });
-    const target = targetMap.get(this.props.effectType);
-    const effects = Object.keys(this.props.gridEffect).map((key) => {
+    const target = targetMap.get(effectType);
+    const effects = Object.keys(gridEffect).map((key) => {
       const type = typeMap.get(key);
-      const value = this.props.gridEffect[key];
+      const value = gridEffect[key];
 
-      return `${type} 상승 ${this.props.hasLevel ? value * this.state.rate : value}%`;
+      return `${type} 상승 ${hasLevel ? value * rate : value}%`;
     }).join(', ');
 
     return (
-      <InfoBox name={intl.formatMessage({ id: 'Tiles' })} selector={this.renderSelector()}>
+      <InfoBox name={t('Tiles')} selector={this.renderSelector()}>
         <Grid className={classes.container} container>
           <Grid item xs={4}>
             <div className={classes.wrapper}>
@@ -149,7 +153,12 @@ class EffectBox extends React.Component {
           </Grid>
           <Grid className={classes.explain} item xs>
             <Typography>
-              버프칸의 <span className={classes.yellow}>{target}</span>에게 {effects}
+              {'버프칸의'}
+              {' '}
+              <span className={classes.yellow}>{target}</span>
+              {'에게'}
+              {' '}
+              {effects}
             </Typography>
           </Grid>
         </Grid>
@@ -158,4 +167,7 @@ class EffectBox extends React.Component {
   }
 }
 
-export default injectIntl(withStyles(style)(EffectBox));
+export default compose(
+  translate(),
+  withStyles(style),
+)(EffectBox);

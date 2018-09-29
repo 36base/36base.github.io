@@ -1,9 +1,7 @@
 import React from 'react';
 import { compose } from 'redux';
-import { connect } from 'react-redux';
+import { translate } from 'react-i18next';
 import { Timeline } from 'react-twitter-widgets';
-import { instanceOf } from 'prop-types';
-import { withCookies, Cookies } from 'react-cookie';
 import CheckList from './components/CheckList';
 
 import './style.css';
@@ -22,31 +20,9 @@ import gfKakao from './components/resources/gfkakao.png';
 import mainBanner from './components/resources/36main_Terrain.png';
 
 class Home extends React.Component {
-  static propTypes = {
-    cookies: instanceOf(Cookies).isRequired,
-  };
-
-  constructor(props) {
-    super(props);
-
-    const { cookies } = props;
-
-    let langState = cookies.get('lang');
-
-    if (langState === undefined) {
-      langState = 'ko';
-    }
-
-    this.state = {
-      languageName: langState,
-    };
-
-    this.handleLanguageChanged = this.handleLanguageChanged.bind(this);
-  }
-
-  handleLanguageChanged(name) {
-    switch (name) {
-      case 'ko':
+  renderBanner = (language) => {
+    switch (language) {
+      case 'ko-KR':
         return (
           <div className="wrapper-banner-link">
             <a href="http://gall.dcinside.com/mgallery/board/lists/?id=gfl2" target="_blank" rel="noopener noreferrer"><img alt="DCinside 소녀전선 2 갤러리" src={gfGf2} /></a>
@@ -60,7 +36,7 @@ class Home extends React.Component {
             <a href="http://pf.kakao.com/_MaxmXC" target="_blank" rel="noopener noreferrer"><img alt="36베이스 플러스친구" src={gfKakao} /></a>
           </div>
         );
-      case 'ja':
+      case 'ja-JP':
         return (
           <div className="wrapper-banner-link">
             <a href="https://twitter.com/GirlsFrontline" target="_blank" rel="noopener noreferrer"><img alt="ドルプロ公式 Twitter" src={gfTwitterJapan} /></a>
@@ -85,7 +61,7 @@ class Home extends React.Component {
   }
 
   render() {
-    const { languageName } = this.state;
+    const { i18n } = this.props;
     return (
       <div className="body-content">
         <div className="banner-main">
@@ -94,7 +70,7 @@ class Home extends React.Component {
         <div className="wrapper-checklist">
           <CheckList className="checklist" />
         </div>
-        { this.handleLanguageChanged(languageName) }
+        { this.renderBanner(i18n.language) }
         <div className="wrapper-content-twitter">
           <Timeline
             dataSource={{
@@ -117,9 +93,6 @@ class Home extends React.Component {
   }
 }
 
-const stateMapper = undefined;
-
 export default compose(
-  withCookies,
-  connect(stateMapper),
+  translate(),
 )(Home);

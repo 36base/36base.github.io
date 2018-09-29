@@ -1,7 +1,8 @@
 import React from 'react';
+import { compose } from 'redux';
+import { translate } from 'react-i18next';
 import { Grid, Typography } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
-import { injectIntl } from 'react-intl';
 
 import HorizonLine from '../../common/HorizonLine';
 import InfoBox from '../../common/InfoBox';
@@ -25,10 +26,10 @@ const style = theme => ({
 });
 
 const AcquisitionInfoBox = (props) => {
-  const { info } = props;
+  const { classes, info, t } = props;
 
   const buildRow = (label, value) => [
-    <Grid key="row" className={props.classes.container} container spacing={8}>
+    <Grid key="row" className={classes.container} container spacing={8}>
       <Grid item xs><Typography>{label}</Typography></Grid>
       <Grid item xs={8}><Typography>{value}</Typography></Grid>
     </Grid>,
@@ -36,11 +37,14 @@ const AcquisitionInfoBox = (props) => {
   ];
 
   return (
-    <InfoBox name={props.intl.formatMessage({ id: 'Acquisition' })} >
-      {buildRow(props.intl.formatMessage({ id: 'Production' }), timeToStr(info.buildTime))}
-      {buildRow(props.intl.formatMessage({ id: 'drop' }), info.obtain.map(item => item.description).join(', ') || props.intl.formatMessage({ id: 'none' }))}
+    <InfoBox name={t('Acquisition')}>
+      {buildRow(t('Production'), timeToStr(info.buildTime))}
+      {buildRow(t('drop'), info.obtain.map(item => item.description).join(', ') || t('none'))}
     </InfoBox>
   );
 };
 
-export default injectIntl(withStyles(style)(AcquisitionInfoBox));
+export default compose(
+  translate(),
+  withStyles(style),
+)(AcquisitionInfoBox);
