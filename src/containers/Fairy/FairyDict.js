@@ -3,32 +3,11 @@ import PropTypes from 'prop-types';
 import { compose, bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { withStyles } from '@material-ui/core/styles';
-import { fairies as fairyData } from 'girlsfrontline-core';
-import Fairy from 'girlsfrontline-core/lib/fairy';
 import ViewTypePanel from '../../components/ViewTypePanel';
 import FairyTable from './FairyTable';
 import FairyGrid from './FairyGrid';
 
 import * as dictActions from '../../store/modules/fairyDict';
-
-const fairies = fairyData.map(fairy => new Fairy(fairy.toJSON())).map(({
-  id, codename, name, category, buildTime, skill, stats, introduce, description, skins,
-}) => ({
-  id,
-  codename,
-  name,
-  category,
-  introduce,
-  description,
-  skins,
-  buildTime,
-  skill,
-  pow: stats.pow || 0,
-  hit: stats.hit || 0,
-  dodge: stats.dodge || 0,
-  criticalHarmRate: stats.criticalHarmRate || 0,
-  armor: stats.armor || 0,
-}));
 
 const styles = () => ({
   grid: {
@@ -46,7 +25,7 @@ class FairyDict extends Component {
   }
 
   render() {
-    const { classes, viewType } = this.props;
+    const { classes, viewType, fairies } = this.props;
     return (
       <div>
         <ViewTypePanel viewType={viewType} onChangeView={this.handleChangeViewType} />
@@ -61,11 +40,13 @@ FairyDict.propTypes = {
   classes: PropTypes.object.isRequired,
   changeView: PropTypes.func.isRequired,
   viewType: PropTypes.string.isRequired,
+  fairies: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 const mapStateToProps = (state) => {
-  const { viewType } = state.fairyDict;
+  const { fairies, viewType } = state.fairyDict;
   return {
+    fairies,
     viewType,
   };
 };
