@@ -4,7 +4,7 @@ import { compose, bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { withStyles } from '@material-ui/core/styles';
 import ViewTypePanel from '../../components/ViewTypePanel';
-import FairyTable from './FairyTable';
+import FairyTable from '../../components/Fairy/FairyTable';
 import FairyGrid from './FairyGrid';
 
 import * as dictActions from '../../store/modules/fairyDict';
@@ -24,12 +24,27 @@ class FairyDict extends Component {
     changeView(viewType);
   }
 
+  handleSortTable = (orderBy) => {
+    const { sort } = this.props;
+
+    sort(orderBy);
+  }
+
   render() {
-    const { classes, viewType, fairies } = this.props;
+    const {
+      classes, viewType, fairies, fairyTable,
+    } = this.props;
     return (
       <div>
         <ViewTypePanel viewType={viewType} onChangeView={this.handleChangeViewType} />
-        {viewType === 'headline' && <FairyTable fairies={fairies} />}
+        {viewType === 'headline' && (
+        <FairyTable
+          fairies={fairies}
+          orderBy={fairyTable.orderBy}
+          order={fairyTable.order}
+          onSort={this.handleSortTable}
+        />
+        )}
         {viewType === 'module' && <FairyGrid className={classes.grid} fairies={fairies} />}
       </div>
     );
@@ -41,13 +56,19 @@ FairyDict.propTypes = {
   changeView: PropTypes.func.isRequired,
   viewType: PropTypes.string.isRequired,
   fairies: PropTypes.arrayOf(PropTypes.object).isRequired,
+  fairyTable: PropTypes.shape({
+    orderBy: PropTypes.string.isRequired,
+    order: PropTypes.string.isRequired,
+  }).isRequired,
+  sort: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => {
-  const { fairies, viewType } = state.fairyDict;
+  const { fairies, viewType, fairyTable } = state.fairyDict;
   return {
     fairies,
     viewType,
+    fairyTable,
   };
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import SkillBase from '../../../components/Skill/SkillBase';
+import SkillBase from '../../Skill/SkillBase';
 
 const headRows = [];
 function addTableRow(id, label, numeric, sortable, render) {

@@ -7,7 +7,7 @@ import { I18nextProvider } from 'react-i18next';
 import theme from './theme';
 import store from './store';
 import i18n from './i18n';
-import App from './components/App';
+import App from './App';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class Root extends React.Component {

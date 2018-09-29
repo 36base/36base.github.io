@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import FairyCard from '../src/components/Fairy/FairyCard';
 import Provider from './Provider';
 import store from '../src/store';
-import FairyTable from '../src/containers/Fairy/FairyTable';
+import FairyTable from '../src/components/Fairy/FairyTable';
 
 const fairyCardProps = {
   onClick: action('clicked'),
@@ -58,5 +58,5 @@ storiesOf('FairyCard', module)
 storiesOf('FairyTable', module)
   .addDecorator(story => <Provider story={story()} />)
   .add('default', () => (
-    <FairyTable fairies={store.getState().fairyDict.fairies} />
+    <FairyTable fairies={store.getState().fairyDict.fairies} onSort={action('sort')} />
   ));

@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import { compose, bindActionCreators } from 'redux';
+import { compose } from 'redux';
 import { translate } from 'react-i18next';
-import { connect } from 'react-redux';
 import { withStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -15,7 +14,6 @@ import TableSortLabel from '@material-ui/core/TableSortLabel';
 
 import { headRows } from './tableData';
 import { stableSort, getSorting } from '../../../utils/sort';
-import * as tableActions from '../../../store/modules/fairyTable';
 
 const styles = () => ({
   root: {
@@ -32,12 +30,12 @@ const styles = () => ({
 });
 
 class FairyTable extends Component {
-  handleClickSortLabel = row => () => {
-    const { id, sortable } = row;
-    const { sort } = this.props;
+  handleSort = row => () => {
+    const { id: orderBy, sortable } = row;
+    const { onSort } = this.props;
 
     if (sortable) {
-      sort(id);
+      onSort(orderBy);
     }
   }
 
@@ -63,7 +61,7 @@ class FairyTable extends Component {
                     <TableSortLabel
                       active={orderBy === id}
                       direction={order}
-                      onClick={this.handleClickSortLabel(row)}
+                      onClick={this.handleSort(row)}
                     >
                       {label}
                     </TableSortLabel>
@@ -104,6 +102,8 @@ class FairyTable extends Component {
 FairyTable.defaultProps = {
   className: '',
   onClick: () => null,
+  orderBy: '',
+  order: '',
 };
 FairyTable.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
@@ -111,28 +111,13 @@ FairyTable.propTypes = {
   className: PropTypes.string,
   fairies: PropTypes.arrayOf(PropTypes.object).isRequired,
   t: PropTypes.func.isRequired,
-  orderBy: PropTypes.string.isRequired,
-  order: PropTypes.string.isRequired,
+  orderBy: PropTypes.string,
+  order: PropTypes.string,
   onClick: PropTypes.func,
-  sort: PropTypes.func.isRequired,
+  onSort: PropTypes.func.isRequired,
 };
-
-const mapStateToProps = (state) => {
-  const {
-    orderBy, order,
-  } = state.fairyTable;
-  return {
-    orderBy,
-    order,
-  };
-};
-
-const mapDispatchToProps = dispatch => ({
-  ...bindActionCreators(tableActions, dispatch),
-});
 
 export default compose(
   translate(),
-  connect(mapStateToProps, mapDispatchToProps),
   withStyles(styles),
 )(FairyTable);

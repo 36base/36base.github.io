@@ -5,7 +5,6 @@ import menu from './menu';
 import dolldict from './dolldict';
 import equipdict from './equipdict';
 import fairyDict from './fairyDict';
-import fairyTable from './fairyTable';
 
 export default combineReducers({
   common,
@@ -13,5 +12,4 @@ export default combineReducers({
   dolldict,
   equipdict,
   fairyDict,
-  fairyTable,
 });
