@@ -1,7 +1,8 @@
 import React from 'react';
-import { Grid, Card } from 'material-ui';
-import { withStyles } from 'material-ui/styles';
-import { FormattedMessage } from 'react-intl';
+import { compose } from 'redux';
+import { translate } from 'react-i18next';
+import { Grid, Card } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 
 import iconDiscord from './img/discord.png';
 import iconGithub from './img/github.png';
@@ -77,16 +78,17 @@ const style = theme => ({
   },
 });
 
+// eslint-disable-next-line react/prefer-stateless-function
 class About extends React.Component {
   render() {
-    const { classes } = this.props;
+    const { classes, t } = this.props;
     return (
       <div className={classes.container}>
         <div className={classes.wrapper}>
           <h1 className={classes.title}>developer</h1>
           <Grid container className={classes.cardContainer}>
             {data.map(item => (
-              <Card className={classes.card} key={item.name} >
+              <Card className={classes.card} key={item.name}>
                 {item.profile ? <img src={item.profile} alt="profile" className={classes.profile} /> : <div />}
                 <h3>{item.name}</h3>
                 <h4>{item.role}</h4>
@@ -98,13 +100,15 @@ class About extends React.Component {
         <div className={classes.wrapper}>
           <h1 className={classes.title}>Contact Us</h1>
           <Card className={classes.contactWrapper}>
-            <h1 style={{ color: 'gray' }} ><FormattedMessage id="36base" /></h1>
+            <h1 style={{ color: 'gray' }}>
+              {t('36base')}
+            </h1>
             <div className={classes.linkWrapper}>
               <a className={classes.linkButton} target="_blank" rel="noopener noreferrer" href="https://github.com/36base">
                 <img className={classes.icon} src={iconGithub} alt="GitHubIcon" />
                 <div className={classes.link}>GitHub</div>
               </a>
-              <a className={classes.linkButton} target="_blank" rel="noopener noreferrer" href="https://discord.gg/qrG9gf9" >
+              <a className={classes.linkButton} target="_blank" rel="noopener noreferrer" href="https://discord.gg/qrG9gf9">
                 <img className={classes.icon} src={iconDiscord} alt="DiscordIcon" />
                 <div className={classes.link}>Discord</div>
               </a>
@@ -119,4 +123,7 @@ class About extends React.Component {
   }
 }
 
-export default withStyles(style)(About);
+export default compose(
+  translate(),
+  withStyles(style),
+)(About);

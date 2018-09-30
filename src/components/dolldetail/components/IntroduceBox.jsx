@@ -1,7 +1,8 @@
 import React from 'react';
-import { Grid, Typography } from 'material-ui';
-import { withStyles } from 'material-ui/styles';
-import { injectIntl } from 'react-intl';
+import { compose } from 'redux';
+import { translate } from 'react-i18next';
+import { Grid, Typography } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 import gfextradata from 'girlsfrontline-extra-data';
 
 import HorizonLine from '../../common/HorizonLine';
@@ -15,26 +16,31 @@ const style = theme => ({
   },
 });
 
-const IntroduceBox = (props) => {
-  const { characterScript } = gfextradata({ locale: props.intl.locale });
+const IntroduceBox = ({
+  id,
+  skinCode,
+  classes,
+  t,
+}) => {
+  const { characterScript } = gfextradata({ locale: 'ko' });
 
   let str = '';
 
-  if (characterScript[props.id]) {
-    str = (characterScript[props.id].default.Introduce);
+  if (characterScript[id]) {
+    str = (characterScript[id].default.Introduce);
 
-    if (characterScript[props.id][props.skinCode]) {
-      str = characterScript[props.id][props.skinCode].Introduce;
+    if (characterScript[id][skinCode]) {
+      str = characterScript[id][skinCode].Introduce;
     }
 
     str = str.replace(/\\n/gi, '<br>');
   } else {
-    str = `[Error] ${props.intl.formatMessage({ id: 'no data' })}`;
+    str = `[Error] ${t('no data')}`;
   }
 
   return (
-    <InfoBox name={props.intl.formatMessage({ id: 'Introduce' })} >
-      <Grid key="row" className={props.classes.container} container spacing={8}>
+    <InfoBox name={t('Introduce')}>
+      <Grid key="row" className={classes.container} container spacing={8}>
         <Grid item xs><Typography dangerouslySetInnerHTML={{ __html: str }} /></Grid>
       </Grid>
       <HorizonLine key="hr" />
@@ -42,4 +48,7 @@ const IntroduceBox = (props) => {
   );
 };
 
-export default injectIntl(withStyles(style)(IntroduceBox));
+export default compose(
+  translate(),
+  withStyles(style),
+)(IntroduceBox);

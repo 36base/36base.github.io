@@ -1,16 +1,26 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
 
-assets/
-.vscode/
-node_modules/
-package-lock.json
-yarn.lock
-yarn-error.log
-.yarnclean
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# storybook
+/storybook-static
+
+# production
+/build
+/assets
+/idia
+
+# misc
 .DS_Store
-<<<<<<< HEAD
-npm-debug.log
-.idea/
-build/
-=======
-npm-debug.log
->>>>>>> 5d148dacb3c67ed90fbe1d32940fa1904044ff42
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

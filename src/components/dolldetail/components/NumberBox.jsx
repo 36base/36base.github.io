@@ -1,6 +1,6 @@
 import React from 'react';
-import { Grid, Typography } from 'material-ui';
-import { withStyles } from 'material-ui/styles';
+import { Grid, Typography } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 
 const style = {
   container: {
@@ -16,8 +16,8 @@ const NumberBox = (props) => {
 
   return (
     <Grid className={classes.container} item xs={2}>
-      <Typography variant="display3" align="right">
-        No.{id}
+      <Typography variant="display1" align="right">
+        {`No. ${id}`}
       </Typography>
     </Grid>
   );

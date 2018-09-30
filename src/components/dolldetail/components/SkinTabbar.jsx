@@ -1,6 +1,6 @@
 import React from 'react';
-import { Grid, Button } from 'material-ui';
-import { withStyles } from 'material-ui/styles';
+import { Grid, Button } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 
 const style = theme => ({
   container: {
@@ -25,14 +25,13 @@ const style = theme => ({
 });
 
 class SkinTabbar extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.renderButtons = this.renderButtons.bind(this);
-  }
-
-  renderButtons() {
-    const { classes, selected, skins } = this.props;
+  renderButtons = () => {
+    const {
+      classes,
+      selected,
+      skins,
+      onChange,
+    } = this.props;
 
     return skins.map((skin, i) => (
       <Button
@@ -40,7 +39,7 @@ class SkinTabbar extends React.Component {
         className={classes.button}
         variant="raised"
         color={selected === i ? 'primary' : 'default'}
-        onClick={() => this.props.onChange(i)}
+        onClick={() => onChange(i)}
       >
         {skin.name}
       </Button>

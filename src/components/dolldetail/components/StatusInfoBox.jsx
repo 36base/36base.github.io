@@ -1,7 +1,8 @@
 import React from 'react';
-import { Grid, Typography } from 'material-ui';
-import { withStyles } from 'material-ui/styles';
-import { injectIntl, FormattedMessage } from 'react-intl';
+import { compose } from 'redux';
+import { translate } from 'react-i18next';
+import { Grid, Typography } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 
 import InfoBox from '../../common/InfoBox';
 import HorizonLine from '../../common/HorizonLine';
@@ -38,18 +39,20 @@ let lvValues = fullLvValues;
 let favorValues = fullFavorValues;
 
 class StatusInfoBox extends React.Component {
+  state = {
+    level: 100,
+    favor: 100,
+  };
+
   constructor(props) {
     super(props);
 
-    this.state = {
-      level: 100,
-      favor: 100,
-    };
-    this.props.handler(100, 100);
+    props.handler(100, 100);
 
     this.handleLevelChange = this.handleLevelChange.bind(this);
     this.handleFavorChange = this.handleFavorChange.bind(this);
   }
+
   componentWillMount() {
     const { id } = this.props;
 
@@ -61,18 +64,26 @@ class StatusInfoBox extends React.Component {
       favorValues = fullFavorValues;
     }
   }
-  handleLevelChange(event) {
+
+  handleLevelChange = (event) => {
     this.setState({ level: event.target.value }, () => {
-      this.props.handler(this.state.level, this.state.favor);
+      const { handler } = this.props;
+      const { level, favor } = this.state;
+      handler(level, favor);
     });
   }
-  handleFavorChange(event) {
+
+  handleFavorChange = (event) => {
     this.setState({ favor: event.target.value }, () => {
-      this.props.handler(this.state.level, this.state.favor);
+      const { handler } = this.props;
+      const { level, favor } = this.state;
+      handler(level, favor);
     });
   }
+
   render() {
-    const { stats } = this.props;
+    const { classes, stats, t } = this.props;
+    const { level, favor } = this.state;
 
     const buildRow = (label, value, maxValue, color) => {
       const statusRate = Math.min(1, value / maxValue) * 100;
@@ -81,11 +92,11 @@ class StatusInfoBox extends React.Component {
       };
 
       return [
-        <Grid key="row" className={this.props.classes.container} container spacing={8}>
+        <Grid key="row" className={classes.container} container spacing={8}>
           <Grid item xs><Typography>{label}</Typography></Grid>
           <Grid item xs><Typography>{value}</Typography></Grid>
           <Grid item xs={8}>
-            <div className={this.props.classes.statusBar} style={statusBackground} />
+            <div className={classes.statusBar} style={statusBackground} />
           </Grid>
         </Grid>,
         <HorizonLine key="hr" />,
@@ -93,31 +104,38 @@ class StatusInfoBox extends React.Component {
     };
     // TODO: Rate of Fire에서 글자수 때문에 그래프스타일이 깨지는 문제발생 (2018-0729)
     const selectors = (
-      <div className={this.props.classes.selectors}>
-        <div className={this.props.classes.selectorLabel}><FormattedMessage id="Level" /></div>
+      <div className={classes.selectors}>
+        <div className={classes.selectorLabel}>
+          {t('Level')}
+        </div>
         <SmallSelector
           values={lvValues}
-          selected={this.state.level}
+          selected={level}
           onChange={this.handleLevelChange}
         />
-        <div className={this.props.classes.selectorLabel}><FormattedMessage id="Favor" /></div>
+        <div className={classes.selectorLabel}>
+          {t('Favor')}
+        </div>
         <SmallSelector
           values={favorValues}
-          selected={this.state.favor}
+          selected={favor}
           onChange={this.handleFavorChange}
         />
       </div>
     );
     return (
-      <InfoBox name={this.props.intl.formatMessage({ id: 'Status' })} selector={selectors}>
-        {buildRow(this.props.intl.formatMessage({ id: 'Health' }), stats.hp, 300, 'red')}
-        {buildRow(this.props.intl.formatMessage({ id: 'Damage' }), stats.pow, 200, 'brown')}
-        {buildRow(this.props.intl.formatMessage({ id: 'Accuracy' }), stats.hit, 100, 'yellow')}
-        {buildRow(this.props.intl.formatMessage({ id: 'Evasion' }), stats.dodge, 150, 'green')}
-        {buildRow(this.props.intl.formatMessage({ id: 'Rate of Fire' }), stats.rate, 120, 'orange')}
+      <InfoBox name={t('Status')} selector={selectors}>
+        {buildRow(t('Health'), stats.hp, 1300, 'red')}
+        {buildRow(t('Damage'), stats.pow, 200, 'brown')}
+        {buildRow(t('Accuracy'), stats.hit, 100, 'yellow')}
+        {buildRow(t('Evasion'), stats.dodge, 150, 'green')}
+        {buildRow(t('Rate of Fire'), stats.rate, 120, 'orange')}
       </InfoBox>
     );
   }
 }
 
-export default injectIntl(withStyles(style)(StatusInfoBox));
+export default compose(
+  translate(),
+  withStyles(style),
+)(StatusInfoBox);
