@@ -69,7 +69,7 @@ class DictTable extends Component {
                       direction={order}
                       onClick={this.handleSort(row)}
                     >
-                      {t(label)}
+                      {label}
                     </TableSortLabel>
                   </TableCell>
                 );
