@@ -1,6 +1,6 @@
 import React from 'react';
-import { Grid, Typography } from 'material-ui';
-import { withStyles } from 'material-ui/styles';
+import { Grid, Typography } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 
 import Star from '../../common/Star';
 
@@ -13,11 +13,16 @@ const style = {
   },
 };
 
-const StarBox = props => (
-  <Grid className={props.classes.container} item>
-    <Typography className={props.classes.font} variant="display2" align="right" >
-      <Star count={props.count} />
-    </Typography>
-  </Grid>
-);
+const StarBox = (props) => {
+  const { classes, count } = props;
+
+  return (
+    <Grid className={classes.container} item>
+      <Typography className={classes.font} variant="display1" align="right">
+        <Star count={count} />
+      </Typography>
+    </Grid>
+  );
+};
+
 export default withStyles(style)(StarBox);

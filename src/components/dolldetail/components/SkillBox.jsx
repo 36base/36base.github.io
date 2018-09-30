@@ -1,7 +1,8 @@
 import React from 'react';
-import { Grid, Typography } from 'material-ui';
-import { withStyles } from 'material-ui/styles';
-import { injectIntl } from 'react-intl';
+import { compose } from 'redux';
+import { translate } from 'react-i18next';
+import { Grid, Typography } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 
 import InfoBox from '../../common/InfoBox';
 import Square from '../../common/Square';
@@ -43,31 +44,35 @@ function getUrl(path) {
 }
 
 class SkillBox extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.onChange = this.onChange.bind(this);
-    this.renderProperty = this.renderProperty.bind(this);
-  }
-
-  onChange(event) {
+  handleChange = (event) => {
     const { value } = event.target;
-    this.props.onChange(value);
+    const { onChange } = this.props;
+
+    onChange(value);
   }
 
-  renderProperty(label, value) {
+  renderProperty = (content) => {
+    const { t, classes } = this.props;
+    const splits = content.split(':');
+    const label = splits[0].trim();
+    const value = splits[1].trim();
+    
     return (
       <Typography align="right" variant="body1">
-        {label} <span className={this.props.classes.yellow}>{value}</span>
+        {`${label} `}
+        <span className={classes.yellow}>
+          {value}
+        </span>
       </Typography>
     );
   }
+
   render() {
     const {
       classes,
-      intl,
       skill,
       skillLevel,
+      t,
     } = this.props;
 
     const {
@@ -77,10 +82,10 @@ class SkillBox extends React.Component {
       desc,
     } = skill;
 
-    const selector = <SmallSelector label={intl.formatMessage({ id: 'Level' })} values={lvValues} selected={skillLevel} onChange={this.onChange} />;
+    const selector = <SmallSelector label={t('Level')} values={lvValues} selected={skillLevel} onChange={this.onChange} />;
 
     return (
-      <InfoBox name={intl.formatMessage({ id: 'Skill' })} selector={selector}>
+      <InfoBox name={t('Skill')} selector={selector}>
         <Grid className={classes.container} container>
           <Grid item xs={4}>
             <div className={classes.iconWrapper}>
@@ -88,16 +93,19 @@ class SkillBox extends React.Component {
             </div>
           </Grid>
           <Grid className={classes.alignMiddle} item xs={4}>
-            <Typography variant="display3">{name}</Typography>
+            <Typography variant="display2">{t(name)}</Typography>
           </Grid>
           <Grid className={classes.alignBottom} item xs={4}>
-            {Object.keys(detail).map(key => this.renderProperty(key, detail[key]))}
+            {String(t(detail)).split(',').map(item => this.renderProperty(item))}
           </Grid>
-          <Grid item xs={12}><Typography>{desc}</Typography></Grid>
+          <Grid item xs={12}><Typography>{t(desc)}</Typography></Grid>
         </Grid>
       </InfoBox>
     );
   }
 }
 
-export default injectIntl(withStyles(style)(SkillBox));
+export default compose(
+  translate(),
+  withStyles(style),
+)(SkillBox);

@@ -1,6 +1,7 @@
 import React from 'react';
-import { withStyles } from 'material-ui/styles';
-import { FormattedMessage } from 'react-intl';
+import { compose } from 'redux';
+import { translate } from 'react-i18next';
+import { withStyles } from '@material-ui/core/styles';
 
 const style = theme => ({
   container: {
@@ -28,19 +29,27 @@ const style = theme => ({
   },
 });
 
+// eslint-disable-next-line react/prefer-stateless-function
 class SdSimulator extends React.Component {
   render() {
-    const { classes } = this.props;
+    const { classes, t } = this.props;
     return (
       <div className={classes.container}>
         <iframe title="SD 시뮬레이터" src="https://girlsfrontline.kr/db/simulator/" className={classes.frame} />
         <div className={classes.errorBox}>
-          <h2><FormattedMessage id="in mobile please follow the link below" /></h2>
-          <a href="https://girlsfrontline.kr/db/simulator/"><FormattedMessage id="SD simulator link" /></a>
+          <h2>
+            {t('in mobile please follow the link below')}
+          </h2>
+          <a href="https://girlsfrontline.kr/db/simulator/">
+            {t('SD simulator link')}
+          </a>
         </div>
       </div>
     );
   }
 }
 
-export default withStyles(style)(SdSimulator);
+export default compose(
+  translate(),
+  withStyles(style),
+)(SdSimulator);

@@ -1,7 +1,8 @@
 import React from 'react';
-import { Grid, Typography } from 'material-ui';
-import { withStyles } from 'material-ui/styles';
-import { injectIntl, FormattedMessage } from 'react-intl';
+import { compose } from 'redux';
+import { translate } from 'react-i18next';
+import { Grid, Typography } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 import gfextradata from 'girlsfrontline-extra-data';
 
 import HorizonLine from '../../common/HorizonLine';
@@ -15,27 +16,29 @@ const style = theme => ({
   },
 });
 
-const ScriptBox = (props) => {
-  const { characterScript } = gfextradata({ locale: props.intl.locale });
+const ScriptBox = ({
+  t, id, skinCode, classes,
+}) => {
+  const { characterScript } = gfextradata({ locale: 'ko' });
 
   let script = { };
-  if (characterScript[props.id]) {
-    script = characterScript[props.id].default;
+  if (characterScript[id]) {
+    script = characterScript[id].default;
 
-    if (characterScript[props.id][props.skinCode]) {
-      script = characterScript[props.id][props.skinCode];
+    if (characterScript[id][skinCode]) {
+      script = characterScript[id][skinCode];
     }
   }
 
   const keyFormatMessage = (key) => {
     const label = Number(key.charAt(key.length - 1)) ? 'DIALOGUE' : key;
-    return `${props.intl.formatMessage({ id: label })}${label === 'DIALOGUE' ? key.charAt(key.length - 1) : ''}`;
+    return `${t(label)}${label === 'DIALOGUE' ? key.charAt(key.length - 1) : ''}`;
   };
 
   const buildRow = (key, value) => {
     const str = value.replace(/<>/gi, '<br>');
     return [
-      <Grid key="row" className={props.classes.container} container spacing={8}>
+      <Grid key="row" className={classes.container} container spacing={8}>
         <Grid item xs><Typography>{keyFormatMessage(key)}</Typography></Grid>
         <Grid item xs={8}><Typography dangerouslySetInnerHTML={{ __html: str }} /></Grid>
       </Grid>,
@@ -44,12 +47,19 @@ const ScriptBox = (props) => {
   };
 
   return (
-    <InfoBox name={props.intl.formatMessage({ id: 'CharacterScript' })} >
-      {characterScript[props.id] ?
-        Object.keys(script).map(iter => (iter === 'Introduce' ? (<div />) : buildRow(iter, script[iter]))) :
-        [
-          <Grid key="row" className={props.classes.container} container spacing={8}>
-            <Grid item xs><Typography>[Error] <FormattedMessage id="no data" /></Typography></Grid>
+    <InfoBox name={t('CharacterScript')}>
+      {characterScript[id]
+        ? Object.keys(script).map(iter => (iter === 'Introduce' ? (<div />) : buildRow(iter, script[iter])))
+        : [
+          <Grid key="row" className={classes.container} container spacing={8}>
+            <Grid item xs>
+              <Typography>
+                [Error]
+                {' '}
+                {t('no data')}
+              </Typography>
+
+            </Grid>
           </Grid>,
           <HorizonLine key="hr" />,
         ]
@@ -58,4 +68,7 @@ const ScriptBox = (props) => {
   );
 };
 
-export default injectIntl(withStyles(style)(ScriptBox));
+export default compose(
+  translate(),
+  withStyles(style),
+)(ScriptBox);

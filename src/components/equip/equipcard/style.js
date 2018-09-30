@@ -1,0 +1,86 @@
+
+import cardbg from './resources/equip_cardBg_trim.png';
+
+const style = {
+  root: {
+    display: 'inline-block',
+    position: 'relative',
+    width: 160,
+    height: 200,
+    margin: 10,
+    textDecoration: 'none',
+  },
+  cardbackground: {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    backgroundSize: '100%',
+    backgroundImage: `url(${cardbg})`,
+    zIndex: 2,
+  },
+  typeIcon: {
+    position: 'absolute',
+    left: 0,
+    top: 0,
+  },
+  rankbar: {
+    position: 'absolute',
+    height: 30,
+    right: 10,
+    textAlign: 'right',
+    lineHeight: '20px',
+    verticalAlign: 'middle',
+    zIndex: 4,
+  },
+  spriteBg: {
+    position: 'absolute',
+    top: 0,
+    height: '160px',
+    width: '160px',
+    zIndex: 1,
+  },
+  sprite: {
+    position: 'absolute',
+    top: 15,
+    height: 160,
+    width: 160,
+    zIndex: 2,
+  },
+  caption: {
+    position: 'absolute',
+    top: 165,
+    width: 160,
+    height: 30,
+    fontSize: 18,
+    fontWeight: 500,
+    lineHeight: '30px',
+    fontStyle: undefined,
+    textAlign: 'center',
+    color: '#ffffff',
+    zIndex: 3,
+  },
+  star: {
+    display: 'inline-block',
+    width: 13,
+    height: 13,
+    transform: 'rotate(-20deg)',
+    marginLeft: 2,
+    fontSize: 20,
+    color: '#FFB600',
+  },
+  stats: {
+    position: 'absolute',
+    top: 220,
+    width: 170,
+    height: 30,
+    fontSize: 15,
+    fontWeight: 500,
+    lineHeight: '30px',
+    fontStyle: undefined,
+    textAlign: 'center',
+    color: '#ffffff',
+    zIndex: 3,
+  },
+};
+
+export default style;

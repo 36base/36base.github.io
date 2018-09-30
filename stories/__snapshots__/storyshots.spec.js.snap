@@ -1,0 +1,2687 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots FairyCard DJMAXSUEE 1`] = `
+<div
+  className="MuiGrid-container-127"
+>
+  <div
+    className="MuiGrid-item-128"
+  >
+    <div
+      className="MuiPaper-root-230 MuiPaper-elevation1-233 MuiPaper-rounded-231 MuiCard-root-229 FairyCard-card-224"
+      onClick={[Function]}
+      style={
+        Object {
+          "maxWidth": 344,
+        }
+      }
+    >
+      <button
+        className="MuiButtonBase-root-260 MuiCardActionArea-root-257"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+        tabIndex="0"
+        type="button"
+      >
+        <div
+          className="MuiCardMedia-root-263 FairyCard-media-225"
+          style={
+            Object {
+              "backgroundImage": "url(\\"background.png\\")",
+            }
+          }
+          title="DJMAXSUEE"
+        >
+          <img
+            alt="strategy"
+            className="FairyCard-typeIcon-226"
+            src="strategy.png"
+          />
+          <div
+            className="FairyCard-fairyImg-227"
+            style={
+              Object {
+                "backgroundImage": "url(https://raw.githubusercontent.com/36base/girlsfrontline-resources/next/fairy/DJMAXSUEE_3.png)",
+              }
+            }
+          />
+        </div>
+        <div
+          className="MuiCardContent-root-265"
+        >
+          <h1
+            className="MuiTypography-root-266 MuiTypography-headline-271"
+          >
+            스이
+          </h1>
+          <p
+            className="MuiTypography-root-266 MuiTypography-body1-275 MuiTypography-colorTextSecondary-290"
+          >
+            “전 당신이 필요해요, 제 곁에 있어주세요！”
+          </p>
+          <div
+            className="MuiGrid-container-127 MuiGrid-wrap-xs-nowrap-133 MuiGrid-align-items-xs-center-135 FairyCard-skill-228"
+          >
+            <img
+              alt="IWantU"
+              className="SkillBase-skillImage-293"
+              src="https://raw.githubusercontent.com/36base/girlsfrontline-resources/next/icon/skilicon/IWantU.png"
+            />
+            <div
+              className="SkillBase-typoContainer-294"
+            >
+              <h3
+                className="MuiTypography-root-266 MuiTypography-subheading-273"
+              >
+                I WANT YOU
+              </h3>
+              <span
+                className="MuiTypography-root-266 MuiTypography-caption-276 MuiTypography-colorTextSecondary-290"
+              >
+                지정 위치에 이로운 효과를 부여하는 능력을 가지고 있습니다, 평소에는 동료들을 몰래 관찰하거나 데이트를 미행하곤 합니다.
+              </span>
+            </div>
+          </div>
+        </div>
+        <span
+          className="MuiCardActionArea-focusHighlight-259"
+        />
+        <span
+          className="MuiTouchRipple-root-295"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots FairyCard shield 1`] = `
+<div
+  className="MuiGrid-container-302"
+>
+  <div
+    className="MuiGrid-item-303"
+  >
+    <div
+      className="MuiPaper-root-405 MuiPaper-elevation1-408 MuiPaper-rounded-406 MuiCard-root-404 FairyCard-card-399"
+      onClick={[Function]}
+      style={
+        Object {
+          "maxWidth": 344,
+        }
+      }
+    >
+      <button
+        className="MuiButtonBase-root-435 MuiCardActionArea-root-432"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+        tabIndex="0"
+        type="button"
+      >
+        <div
+          className="MuiCardMedia-root-438 FairyCard-media-400"
+          style={
+            Object {
+              "backgroundImage": "url(\\"background.png\\")",
+            }
+          }
+          title="shield"
+        >
+          <img
+            alt="battle"
+            className="FairyCard-typeIcon-401"
+            src="battle.png"
+          />
+          <div
+            className="FairyCard-fairyImg-402"
+            style={
+              Object {
+                "backgroundImage": "url(https://raw.githubusercontent.com/36base/girlsfrontline-resources/next/fairy/shield_3.png)",
+              }
+            }
+          />
+        </div>
+        <div
+          className="MuiCardContent-root-440"
+        >
+          <h1
+            className="MuiTypography-root-441 MuiTypography-headline-446"
+          >
+            수호요정
+          </h1>
+          <p
+            className="MuiTypography-root-441 MuiTypography-body1-450 MuiTypography-colorTextSecondary-465"
+          >
+            "이제 무서워하지 않아도 괜찮아요."
+          </p>
+          <div
+            className="MuiGrid-container-302 MuiGrid-wrap-xs-nowrap-308 MuiGrid-align-items-xs-center-310 FairyCard-skill-403"
+          >
+            <img
+              alt="shield"
+              className="SkillBase-skillImage-468"
+              src="https://raw.githubusercontent.com/36base/girlsfrontline-resources/next/icon/skilicon/shield.png"
+            />
+            <div
+              className="SkillBase-typoContainer-469"
+            >
+              <h3
+                className="MuiTypography-root-441 MuiTypography-subheading-448"
+              >
+                에너지 실드
+              </h3>
+              <span
+                className="MuiTypography-root-441 MuiTypography-caption-451 MuiTypography-colorTextSecondary-465"
+              >
+                포스실드를 펼치는 능력을 지니고 있습니다. 평소에는 방수, 방진, 반재밍에 사용할 수 있을 것 같습니다.
+              </span>
+            </div>
+          </div>
+        </div>
+        <span
+          className="MuiCardActionArea-focusHighlight-434"
+        />
+        <span
+          className="MuiTouchRipple-root-470"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots FairyTable default 1`] = `
+<div
+  className="MuiPaper-root-480 MuiPaper-elevation2-484 MuiPaper-rounded-481 FairyTable-root-477"
+>
+  <table
+    className="MuiTable-root-507"
+  >
+    <thead
+      className="MuiTableHead-root-508"
+    >
+      <tr
+        className="MuiTableRow-root-509 MuiTableRow-head-512"
+      >
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-head-515 FairyTable-name-478"
+          scope="col"
+        >
+          <span
+            className="MuiButtonBase-root-527 MuiTableSortLabel-root-522"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+          >
+            Name
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-530 MuiTableSortLabel-icon-524"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+              />
+            </svg>
+          </span>
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-head-515 MuiTableCell-numeric-518 FairyTable-cell-479"
+          scope="col"
+        >
+          <span
+            className="MuiButtonBase-root-527 MuiTableSortLabel-root-522"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+          >
+            Category
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-530 MuiTableSortLabel-icon-524"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+              />
+            </svg>
+          </span>
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-head-515 MuiTableCell-numeric-518 FairyTable-cell-479"
+          scope="col"
+        >
+          <span
+            className="MuiButtonBase-root-527 MuiTableSortLabel-root-522"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+          >
+            BuildTime
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-530 MuiTableSortLabel-icon-524"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+              />
+            </svg>
+          </span>
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-head-515 FairyTable-cell-479"
+          scope="col"
+        >
+          <span
+            className="MuiButtonBase-root-527 MuiTableSortLabel-root-522"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+          >
+            Skill
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-530 MuiTableSortLabel-icon-524"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+              />
+            </svg>
+          </span>
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-head-515 MuiTableCell-numeric-518 FairyTable-cell-479"
+          scope="col"
+        >
+          <span
+            className="MuiButtonBase-root-527 MuiTableSortLabel-root-522"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+          >
+            Pow
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-530 MuiTableSortLabel-icon-524"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+              />
+            </svg>
+          </span>
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-head-515 MuiTableCell-numeric-518 FairyTable-cell-479"
+          scope="col"
+        >
+          <span
+            className="MuiButtonBase-root-527 MuiTableSortLabel-root-522"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+          >
+            Hit
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-530 MuiTableSortLabel-icon-524"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+              />
+            </svg>
+          </span>
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-head-515 MuiTableCell-numeric-518 FairyTable-cell-479"
+          scope="col"
+        >
+          <span
+            className="MuiButtonBase-root-527 MuiTableSortLabel-root-522"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+          >
+            Dodge
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-530 MuiTableSortLabel-icon-524"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+              />
+            </svg>
+          </span>
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-head-515 MuiTableCell-numeric-518 FairyTable-cell-479"
+          scope="col"
+        >
+          <span
+            className="MuiButtonBase-root-527 MuiTableSortLabel-root-522"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+          >
+            Critical Damage
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-530 MuiTableSortLabel-icon-524"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+              />
+            </svg>
+          </span>
+        </th>
+        <th
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-head-515 MuiTableCell-numeric-518 FairyTable-cell-479"
+          scope="col"
+        >
+          <span
+            className="MuiButtonBase-root-527 MuiTableSortLabel-root-522"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="button"
+            tabIndex="0"
+          >
+            Armor
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-530 MuiTableSortLabel-icon-524"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+              />
+            </svg>
+          </span>
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      className="MuiTableBody-root-539"
+    >
+      <tr
+        className="MuiTableRow-root-509 MuiTableRow-hover-511"
+        onClick={null}
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-name-478"
+        >
+          Warrior Fairy
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          battle
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          04:30:00
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-cell-479"
+        >
+          <div
+            className="MuiGrid-container-543 MuiGrid-wrap-xs-nowrap-549 MuiGrid-align-items-xs-center-551"
+          >
+            <img
+              alt="fighting"
+              className="SkillBase-skillImage-541"
+              src="https://raw.githubusercontent.com/36base/girlsfrontline-resources/next/icon/skilicon/fighting.png"
+            />
+            <div
+              className="SkillBase-typoContainer-542"
+            >
+              <h3
+                className="MuiTypography-root-640 MuiTypography-subheading-647"
+              >
+                Combat Efficiency
+              </h3>
+              <span
+                className="MuiTypography-root-640 MuiTypography-caption-650 MuiTypography-colorTextSecondary-664"
+              >
+                In the next battle, increase the Echelon's damage by 20% and rate of fire by 10% for 20 seconds (does not stack).
+              </span>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          25%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          80%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          40%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          0%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          10%
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-509 MuiTableRow-hover-511"
+        onClick={null}
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-name-478"
+        >
+          Fury Fairy
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          battle
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          04:35:00
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-cell-479"
+        >
+          <div
+            className="MuiGrid-container-543 MuiGrid-wrap-xs-nowrap-549 MuiGrid-align-items-xs-center-551"
+          >
+            <img
+              alt="crit"
+              className="SkillBase-skillImage-541"
+              src="https://raw.githubusercontent.com/36base/girlsfrontline-resources/next/icon/skilicon/crit.png"
+            />
+            <div
+              className="SkillBase-typoContainer-542"
+            >
+              <h3
+                className="MuiTypography-root-640 MuiTypography-subheading-647"
+              >
+                Power Overwhelming
+              </h3>
+              <span
+                className="MuiTypography-root-640 MuiTypography-caption-650 MuiTypography-colorTextSecondary-664"
+              >
+                In the next battle, increase the Echelon's accuracy by 50% and critical rate by 25% for 20 seconds (does not stack).
+              </span>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          15%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          0%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          40%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          40%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          10%
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-509 MuiTableRow-hover-511"
+        onClick={null}
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-name-478"
+        >
+          Armor Fairy
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          battle
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          03:00:00
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-cell-479"
+        >
+          <div
+            className="MuiGrid-container-543 MuiGrid-wrap-xs-nowrap-549 MuiGrid-align-items-xs-center-551"
+          >
+            <img
+              alt="armor"
+              className="SkillBase-skillImage-541"
+              src="https://raw.githubusercontent.com/36base/girlsfrontline-resources/next/icon/skilicon/armor.png"
+            />
+            <div
+              className="SkillBase-typoContainer-542"
+            >
+              <h3
+                className="MuiTypography-root-640 MuiTypography-subheading-647"
+              >
+                Riot Control
+              </h3>
+              <span
+                className="MuiTypography-root-640 MuiTypography-caption-650 MuiTypography-colorTextSecondary-664"
+              >
+                In the next battle, increase the armor of all SGs in the Echelon by 50% for 20 seconds.
+              </span>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          22%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          0%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          0%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          22%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          25%
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-509 MuiTableRow-hover-511"
+        onClick={null}
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-name-478"
+        >
+          Shield Fairy
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          battle
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          03:05:00
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-cell-479"
+        >
+          <div
+            className="MuiGrid-container-543 MuiGrid-wrap-xs-nowrap-549 MuiGrid-align-items-xs-center-551"
+          >
+            <img
+              alt="shield"
+              className="SkillBase-skillImage-541"
+              src="https://raw.githubusercontent.com/36base/girlsfrontline-resources/next/icon/skilicon/shield.png"
+            />
+            <div
+              className="SkillBase-typoContainer-542"
+            >
+              <h3
+                className="MuiTypography-root-640 MuiTypography-subheading-647"
+              >
+                Energy Shield
+              </h3>
+              <span
+                className="MuiTypography-root-640 MuiTypography-caption-650 MuiTypography-colorTextSecondary-664"
+              >
+                In the next battle, grant a shield to all SMGs in the Echelon. Each shield can absorb up to 150 points of damage.
+              </span>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          20%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          60%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          80%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          0%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          0%
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-509 MuiTableRow-hover-511"
+        onClick={null}
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-name-478"
+        >
+          Defense Fairy
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          strategy
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          04:10:00
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-cell-479"
+        >
+          <div
+            className="MuiGrid-container-543 MuiGrid-wrap-xs-nowrap-549 MuiGrid-align-items-xs-center-551"
+          >
+            <img
+              alt="defense"
+              className="SkillBase-skillImage-541"
+              src="https://raw.githubusercontent.com/36base/girlsfrontline-resources/next/icon/skilicon/defense.png"
+            />
+            <div
+              className="SkillBase-typoContainer-542"
+            >
+              <h3
+                className="MuiTypography-root-640 MuiTypography-subheading-647"
+              >
+                Temporary Protection
+              </h3>
+              <span
+                className="MuiTypography-root-640 MuiTypography-caption-650 MuiTypography-colorTextSecondary-664"
+              >
+                For one turn, reduce the damage taken by all units within the Echelon by 30% for 20 seconds in all battles.
+              </span>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          22%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          0%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          80%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          0%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          20%
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-509 MuiTableRow-hover-511"
+        onClick={null}
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-name-478"
+        >
+          Taunt Fairy
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          battle
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          03:10:00
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-cell-479"
+        >
+          <div
+            className="MuiGrid-container-543 MuiGrid-wrap-xs-nowrap-549 MuiGrid-align-items-xs-center-551"
+          >
+            <img
+              alt="target"
+              className="SkillBase-skillImage-541"
+              src="https://raw.githubusercontent.com/36base/girlsfrontline-resources/next/icon/skilicon/target.png"
+            />
+            <div
+              className="SkillBase-typoContainer-542"
+            >
+              <h3
+                className="MuiTypography-root-640 MuiTypography-subheading-647"
+              >
+                Taunt Target
+              </h3>
+              <span
+                className="MuiTypography-root-640 MuiTypography-caption-650 MuiTypography-colorTextSecondary-664"
+              >
+                In the next battle, deploy a target dummy to attract enemy fire, the dummy will have 1000 HP.
+              </span>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          18%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          58%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          28%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          25%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          8%
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-509 MuiTableRow-hover-511"
+        onClick={null}
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-name-478"
+        >
+          Sniper Fairy
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          battle
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          03:30:00
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-cell-479"
+        >
+          <div
+            className="MuiGrid-container-543 MuiGrid-wrap-xs-nowrap-549 MuiGrid-align-items-xs-center-551"
+          >
+            <img
+              alt="sniper"
+              className="SkillBase-skillImage-541"
+              src="https://raw.githubusercontent.com/36base/girlsfrontline-resources/next/icon/skilicon/sniper.png"
+            />
+            <div
+              className="SkillBase-typoContainer-542"
+            >
+              <h3
+                className="MuiTypography-root-640 MuiTypography-subheading-647"
+              >
+                Sniper Command
+              </h3>
+              <span
+                className="MuiTypography-root-640 MuiTypography-caption-650 MuiTypography-colorTextSecondary-664"
+              >
+                In the next battle, aim at the enemy with the highest HP and inflict 20000 damage.
+              </span>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          0%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          88%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          28%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          36%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          15%
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-509 MuiTableRow-hover-511"
+        onClick={null}
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-name-478"
+        >
+          Artillery Fairy
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          battle
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          03:35:00
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-cell-479"
+        >
+          <div
+            className="MuiGrid-container-543 MuiGrid-wrap-xs-nowrap-549 MuiGrid-align-items-xs-center-551"
+          >
+            <img
+              alt="bombard"
+              className="SkillBase-skillImage-541"
+              src="https://raw.githubusercontent.com/36base/girlsfrontline-resources/next/icon/skilicon/bombard.png"
+            />
+            <div
+              className="SkillBase-typoContainer-542"
+            >
+              <h3
+                className="MuiTypography-root-640 MuiTypography-subheading-647"
+              >
+                Bombard Command
+              </h3>
+              <span
+                className="MuiTypography-root-640 MuiTypography-caption-650 MuiTypography-colorTextSecondary-664"
+              >
+                In the next battle, launch a mortar shell that deals 1200 damage to enemies within a radius of 2.5 units.
+              </span>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          55%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          0%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          56%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          0%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          6%
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-509 MuiTableRow-hover-511"
+        onClick={null}
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-name-478"
+        >
+          Airstrike Fairy
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          battle
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          03:40:00
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-cell-479"
+        >
+          <div
+            className="MuiGrid-container-543 MuiGrid-wrap-xs-nowrap-549 MuiGrid-align-items-xs-center-551"
+          >
+            <img
+              alt="air_attack"
+              className="SkillBase-skillImage-541"
+              src="https://raw.githubusercontent.com/36base/girlsfrontline-resources/next/icon/skilicon/air_attack.png"
+            />
+            <div
+              className="SkillBase-typoContainer-542"
+            >
+              <h3
+                className="MuiTypography-root-640 MuiTypography-subheading-647"
+              >
+                Fatal Airstrike
+              </h3>
+              <span
+                className="MuiTypography-root-640 MuiTypography-caption-650 MuiTypography-colorTextSecondary-664"
+              >
+                In the next battle, call in an airstrike when the battle starts, dealing 500 damage to all enemies.
+              </span>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          30%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          50%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          40%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          0%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          10%
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-509 MuiTableRow-hover-511"
+        onClick={null}
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-name-478"
+        >
+          Reinforcement Fairy
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          strategy
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          04:00:00
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-cell-479"
+        >
+          <div
+            className="MuiGrid-container-543 MuiGrid-wrap-xs-nowrap-549 MuiGrid-align-items-xs-center-551"
+          >
+            <img
+              alt="reinforce"
+              className="SkillBase-skillImage-541"
+              src="https://raw.githubusercontent.com/36base/girlsfrontline-resources/next/icon/skilicon/reinforce.png"
+            />
+            <div
+              className="SkillBase-typoContainer-542"
+            >
+              <h3
+                className="MuiTypography-root-640 MuiTypography-subheading-647"
+              >
+                T-Doll Reinforcement
+              </h3>
+              <span
+                className="MuiTypography-root-640 MuiTypography-caption-650 MuiTypography-colorTextSecondary-664"
+              >
+                Reinforce the T-Doll with the lowest HP % in the Echelon with one dummy and increase the Echelon's evasion by 10% for 20 seconds in all battles for one turn.
+              </span>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          12%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          0%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          88%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          15%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          12%
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-509 MuiTableRow-hover-511"
+        onClick={null}
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-name-478"
+        >
+          Parachute Fairy
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          strategy
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          04:05:00
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-cell-479"
+        >
+          <div
+            className="MuiGrid-container-543 MuiGrid-wrap-xs-nowrap-549 MuiGrid-align-items-xs-center-551"
+          >
+            <img
+              alt="airborne"
+              className="SkillBase-skillImage-541"
+              src="https://raw.githubusercontent.com/36base/girlsfrontline-resources/next/icon/skilicon/airborne.png"
+            />
+            <div
+              className="SkillBase-typoContainer-542"
+            >
+              <h3
+                className="MuiTypography-root-640 MuiTypography-subheading-647"
+              >
+                Heliport Liberation
+              </h3>
+              <span
+                className="MuiTypography-root-640 MuiTypography-caption-650 MuiTypography-colorTextSecondary-664"
+              >
+                The Echelon can parachute to any Heliport on the map, but the Echelon will have its damage, accuracy, evasion, armor and crit rate reduced by 40% for two turns.
+              </span>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          36%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          0%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          32%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          40%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          8%
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-509 MuiTableRow-hover-511"
+        onClick={null}
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-name-478"
+        >
+          Landmine Fairy
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          strategy
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          05:30:00
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-cell-479"
+        >
+          <div
+            className="MuiGrid-container-543 MuiGrid-wrap-xs-nowrap-549 MuiGrid-align-items-xs-center-551"
+          >
+            <img
+              alt="Landmines"
+              className="SkillBase-skillImage-541"
+              src="https://raw.githubusercontent.com/36base/girlsfrontline-resources/next/icon/skilicon/Landmines.png"
+            />
+            <div
+              className="SkillBase-typoContainer-542"
+            >
+              <h3
+                className="MuiTypography-root-640 MuiTypography-subheading-647"
+              >
+                Mines Frontline
+              </h3>
+              <span
+                className="MuiTypography-root-640 MuiTypography-caption-650 MuiTypography-colorTextSecondary-664"
+              >
+                Bury a mine in an adjacent empty node that lasts for two turns. Enemies who step on the mine will receive damage equal to 50% of their current HP. Ineffective against bosses.
+              </span>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          25%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          44%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          85%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          0%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          0%
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-509 MuiTableRow-hover-511"
+        onClick={null}
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-name-478"
+        >
+          Rocket Fairy
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          strategy
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          05:35:00
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-cell-479"
+        >
+          <div
+            className="MuiGrid-container-543 MuiGrid-wrap-xs-nowrap-549 MuiGrid-align-items-xs-center-551"
+          >
+            <img
+              alt="position"
+              className="SkillBase-skillImage-541"
+              src="https://raw.githubusercontent.com/36base/girlsfrontline-resources/next/icon/skilicon/position.png"
+            />
+            <div
+              className="SkillBase-typoContainer-542"
+            >
+              <h3
+                className="MuiTypography-root-640 MuiTypography-subheading-647"
+              >
+                Battlefield Reaper
+              </h3>
+              <span
+                className="MuiTypography-root-640 MuiTypography-caption-650 MuiTypography-colorTextSecondary-664"
+              >
+                Deploy a rocket launcher that has three rockets in total and lasts for two turns. When enemies move within a range of two nodes, they will receive damage equal to 20% of their current HP. Ineffective against bosses.
+              </span>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          0%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          44%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          0%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          35%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          22%
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-509 MuiTableRow-hover-511"
+        onClick={null}
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-name-478"
+        >
+          Construction Fairy
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          strategy
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          05:40:00
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-cell-479"
+        >
+          <div
+            className="MuiGrid-container-543 MuiGrid-wrap-xs-nowrap-549 MuiGrid-align-items-xs-center-551"
+          >
+            <img
+              alt="fortress"
+              className="SkillBase-skillImage-541"
+              src="https://raw.githubusercontent.com/36base/girlsfrontline-resources/next/icon/skilicon/fortress.png"
+            />
+            <div
+              className="SkillBase-typoContainer-542"
+            >
+              <h3
+                className="MuiTypography-root-640 MuiTypography-subheading-647"
+              >
+                Emergency Fortress
+              </h3>
+              <span
+                className="MuiTypography-root-640 MuiTypography-caption-650 MuiTypography-colorTextSecondary-664"
+              >
+                Build an immovable fortress at this node. Any allies conducting battle on this node within three turns will gain 30% damage, accuracy, evasion, armor and crit rate.
+              </span>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          15%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          50%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          40%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          20%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          10%
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-509 MuiTableRow-hover-511"
+        onClick={null}
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-name-478"
+        >
+          Command Fairy
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          strategy
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          05:00:00
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-cell-479"
+        >
+          <div
+            className="MuiGrid-container-543 MuiGrid-wrap-xs-nowrap-549 MuiGrid-align-items-xs-center-551"
+          >
+            <img
+              alt="command"
+              className="SkillBase-skillImage-541"
+              src="https://raw.githubusercontent.com/36base/girlsfrontline-resources/next/icon/skilicon/command.png"
+            />
+            <div
+              className="SkillBase-typoContainer-542"
+            >
+              <h3
+                className="MuiTypography-root-640 MuiTypography-subheading-647"
+              >
+                Super EXP
+              </h3>
+              <span
+                className="MuiTypography-root-640 MuiTypography-caption-650 MuiTypography-colorTextSecondary-664"
+              >
+                Increase the EXP gained by the Echelon in the next battle by 25% (ineffective in EXP Mode).
+              </span>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          36%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          0%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          32%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          36%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          8%
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-509 MuiTableRow-hover-511"
+        onClick={null}
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-name-478"
+        >
+          Rescue Fairy
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          strategy
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          05:05:00
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-cell-479"
+        >
+          <div
+            className="MuiGrid-container-543 MuiGrid-wrap-xs-nowrap-549 MuiGrid-align-items-xs-center-551"
+          >
+            <img
+              alt="rescue"
+              className="SkillBase-skillImage-541"
+              src="https://raw.githubusercontent.com/36base/girlsfrontline-resources/next/icon/skilicon/rescue.png"
+            />
+            <div
+              className="SkillBase-typoContainer-542"
+            >
+              <h3
+                className="MuiTypography-root-640 MuiTypography-subheading-647"
+              >
+                Efficient Rescue
+              </h3>
+              <span
+                className="MuiTypography-root-640 MuiTypography-caption-650 MuiTypography-colorTextSecondary-664"
+              >
+                Increase the chance of obtaining a rare T-Doll in the next battle by a huge amount.
+              </span>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          32%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          80%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          64%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          0%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          0%
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-509 MuiTableRow-hover-511"
+        onClick={null}
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-name-478"
+        >
+          Illumination Fairy
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          strategy
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          05:10:00
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-cell-479"
+        >
+          <div
+            className="MuiGrid-container-543 MuiGrid-wrap-xs-nowrap-549 MuiGrid-align-items-xs-center-551"
+          >
+            <img
+              alt="illumine"
+              className="SkillBase-skillImage-541"
+              src="https://raw.githubusercontent.com/36base/girlsfrontline-resources/next/icon/skilicon/illumine.png"
+            />
+            <div
+              className="SkillBase-typoContainer-542"
+            >
+              <h3
+                className="MuiTypography-root-640 MuiTypography-subheading-647"
+              >
+                Night Illumination
+              </h3>
+              <span
+                className="MuiTypography-root-640 MuiTypography-caption-650 MuiTypography-colorTextSecondary-664"
+              >
+                During Night battles, increase the vision range of the Echelon by 2 nodes and the Echelon's accuracy by 30% for 20 seconds in all battles for two turns.
+              </span>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          0%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          90%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          32%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          38%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          8%
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-509 MuiTableRow-hover-511"
+        onClick={null}
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-name-478"
+        >
+          Golden Fairy
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          battle
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          05:10:00
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-cell-479"
+        >
+          <div
+            className="MuiGrid-container-543 MuiGrid-wrap-xs-nowrap-549 MuiGrid-align-items-xs-center-551"
+          >
+            <img
+              alt="golden"
+              className="SkillBase-skillImage-541"
+              src="https://raw.githubusercontent.com/36base/girlsfrontline-resources/next/icon/skilicon/golden.png"
+            />
+            <div
+              className="SkillBase-typoContainer-542"
+            >
+              <h3
+                className="MuiTypography-root-640 MuiTypography-subheading-647"
+              >
+                Golden Law
+              </h3>
+              <span
+                className="MuiTypography-root-640 MuiTypography-caption-650 MuiTypography-colorTextSecondary-664"
+              >
+                Revelations of destiny shall fill you with determination.
+              </span>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          20%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          62%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          50%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          25%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          12%
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-509 MuiTableRow-hover-511"
+        onClick={null}
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-name-478"
+        >
+          炊事妖精
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          battle
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          05:10:00
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-cell-479"
+        >
+          <div
+            className="MuiGrid-container-543 MuiGrid-wrap-xs-nowrap-549 MuiGrid-align-items-xs-center-551"
+          >
+            <img
+              alt="golden"
+              className="SkillBase-skillImage-541"
+              src="https://raw.githubusercontent.com/36base/girlsfrontline-resources/next/icon/skilicon/golden.png"
+            />
+            <div
+              className="SkillBase-typoContainer-542"
+            >
+              <h3
+                className="MuiTypography-root-640 MuiTypography-subheading-647"
+              >
+                紧急开饭！
+              </h3>
+              <span
+                className="MuiTypography-root-640 MuiTypography-caption-650 MuiTypography-colorTextSecondary-664"
+              >
+                下场战斗中,对我方梯队施加以下效果中的随机一种:提升伤害20%/提升射速20%/提升命中30%/提升回避25%,持续30秒
+              </span>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          10%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          20%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          80%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          10%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          20%
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-509 MuiTableRow-hover-511"
+        onClick={null}
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-name-478"
+        >
+          花火妖精
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          battle
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          05:10:00
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-cell-479"
+        >
+          <div
+            className="MuiGrid-container-543 MuiGrid-wrap-xs-nowrap-549 MuiGrid-align-items-xs-center-551"
+          >
+            <img
+              alt="hanabi"
+              className="SkillBase-skillImage-541"
+              src="https://raw.githubusercontent.com/36base/girlsfrontline-resources/next/icon/skilicon/hanabi.png"
+            />
+            <div
+              className="SkillBase-typoContainer-542"
+            >
+              <h3
+                className="MuiTypography-root-640 MuiTypography-subheading-647"
+              >
+                夏末花火
+              </h3>
+              <span
+                className="MuiTypography-root-640 MuiTypography-caption-650 MuiTypography-colorTextSecondary-664"
+              >
+                染红这片小小的天空和未来吧！下场战斗中提升本梯队全体命中80%,持续10秒。
+              </span>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          32%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          75%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          32%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          0%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          8%
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-509 MuiTableRow-hover-511"
+        onClick={null}
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-name-478"
+        >
+          希依
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          strategy
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          05:10:00
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-cell-479"
+        >
+          <div
+            className="MuiGrid-container-543 MuiGrid-wrap-xs-nowrap-549 MuiGrid-align-items-xs-center-551"
+          >
+            <img
+              alt="IWantU"
+              className="SkillBase-skillImage-541"
+              src="https://raw.githubusercontent.com/36base/girlsfrontline-resources/next/icon/skilicon/IWantU.png"
+            />
+            <div
+              className="SkillBase-typoContainer-542"
+            >
+              <h3
+                className="MuiTypography-root-640 MuiTypography-subheading-647"
+              >
+                我需要你
+              </h3>
+              <span
+                className="MuiTypography-root-640 MuiTypography-caption-650 MuiTypography-colorTextSecondary-664"
+              >
+                在相邻无敌人的一个指定点上撒下鲜花，两回合内我方在该点位战斗时，伤害、命中、回避、护甲和暴击率提升20%。
+              </span>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          0%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          0%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          70%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          30%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          18%
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-509 MuiTableRow-hover-511"
+        onClick={null}
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-name-478"
+        >
+          世拉&妮娜
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          battle
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          05:10:00
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-cell-479"
+        >
+          <div
+            className="MuiGrid-container-543 MuiGrid-wrap-xs-nowrap-549 MuiGrid-align-items-xs-center-551"
+          >
+            <img
+              alt="LadyMadeSTAR"
+              className="SkillBase-skillImage-541"
+              src="https://raw.githubusercontent.com/36base/girlsfrontline-resources/next/icon/skilicon/LadyMadeSTAR.png"
+            />
+            <div
+              className="SkillBase-typoContainer-542"
+            >
+              <h3
+                className="MuiTypography-root-640 MuiTypography-subheading-647"
+              >
+                淑女之星
+              </h3>
+              <span
+                className="MuiTypography-root-640 MuiTypography-caption-650 MuiTypography-colorTextSecondary-664"
+              >
+                下场战斗中提升本梯队全体伤害20%并降低敌方全体命中10%，持续20秒。
+              </span>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          15%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          40%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          50%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          20%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          0%
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-509 MuiTableRow-hover-511"
+        onClick={null}
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-name-478"
+        >
+          普蕾娅&卡米莉娅
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          battle
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          05:10:00
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-cell-479"
+        >
+          <div
+            className="MuiGrid-container-543 MuiGrid-wrap-xs-nowrap-549 MuiGrid-align-items-xs-center-551"
+          >
+            <img
+              alt="OblivioN"
+              className="SkillBase-skillImage-541"
+              src="https://raw.githubusercontent.com/36base/girlsfrontline-resources/next/icon/skilicon/OblivioN.png"
+            />
+            <div
+              className="SkillBase-typoContainer-542"
+            >
+              <h3
+                className="MuiTypography-root-640 MuiTypography-subheading-647"
+              >
+                湮灭
+              </h3>
+              <span
+                className="MuiTypography-root-640 MuiTypography-caption-650 MuiTypography-colorTextSecondary-664"
+              >
+                下场战斗中位于红色特殊格上的我方单位伤害与命中提升30%,回避与护甲下降20%;位于黄色特殊格上的我方单位回避与护甲提升30%,伤害与命中下降20%,持续30秒。
+              </span>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          22%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          50%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          10%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          22%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          10%
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-509 MuiTableRow-hover-511"
+        onClick={null}
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-name-478"
+        >
+          Construction Special
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          battle
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          05:10:00
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-cell-479"
+        >
+          <div
+            className="MuiGrid-container-543 MuiGrid-wrap-xs-nowrap-549 MuiGrid-align-items-xs-center-551"
+          >
+            <img
+              alt="Sakura"
+              className="SkillBase-skillImage-541"
+              src="https://raw.githubusercontent.com/36base/girlsfrontline-resources/next/icon/skilicon/Sakura.png"
+            />
+            <div
+              className="SkillBase-typoContainer-542"
+            >
+              <h3
+                className="MuiTypography-root-640 MuiTypography-subheading-647"
+              >
+                绯狱幻世
+              </h3>
+              <span
+                className="MuiTypography-root-640 MuiTypography-caption-650 MuiTypography-colorTextSecondary-664"
+              >
+                下场战斗中召唤绯狱丸，在敌方所处大范围内出现火柱，火柱在场上存在2秒，每0.5秒对接触到的敌人造成120伤害。
+              </span>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          26%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          0%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          24%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          32%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          6%
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-509 MuiTableRow-hover-511"
+        onClick={null}
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-name-478"
+        >
+          Command Special
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          strategy
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          05:10:00
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-cell-479"
+        >
+          <div
+            className="MuiGrid-container-543 MuiGrid-wrap-xs-nowrap-549 MuiGrid-align-items-xs-center-551"
+          >
+            <img
+              alt="Kaguya"
+              className="SkillBase-skillImage-541"
+              src="https://raw.githubusercontent.com/36base/girlsfrontline-resources/next/icon/skilicon/Kaguya.png"
+            />
+            <div
+              className="SkillBase-typoContainer-542"
+            >
+              <h3
+                className="MuiTypography-root-640 MuiTypography-subheading-647"
+              >
+                八咫辉光
+              </h3>
+              <span
+                className="MuiTypography-root-640 MuiTypography-caption-650 MuiTypography-colorTextSecondary-664"
+              >
+                在自身周围范围2的区域部署八咫镜并发射可折射的激光，随机对区域内的3队敌人造成当前血量20%的伤害，该伤害对boss无效。
+              </span>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          0%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          70%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          24%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          32%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          15%
+        </td>
+      </tr>
+      <tr
+        className="MuiTableRow-root-509 MuiTableRow-hover-511"
+        onClick={null}
+      >
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-name-478"
+        >
+          Rescue Special
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          battle
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          05:10:00
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 FairyTable-cell-479"
+        >
+          <div
+            className="MuiGrid-container-543 MuiGrid-wrap-xs-nowrap-549 MuiGrid-align-items-xs-center-551"
+          >
+            <img
+              alt="Chloe"
+              className="SkillBase-skillImage-541"
+              src="https://raw.githubusercontent.com/36base/girlsfrontline-resources/next/icon/skilicon/Chloe.png"
+            />
+            <div
+              className="SkillBase-typoContainer-542"
+            >
+              <h3
+                className="MuiTypography-root-640 MuiTypography-subheading-647"
+              >
+                悲恸人形
+              </h3>
+              <span
+                className="MuiTypography-root-640 MuiTypography-caption-650 MuiTypography-colorTextSecondary-664"
+              >
+                下场战斗中召唤2个血量为600的分身，每个分身每两秒会对全体敌人造成100伤害。
+              </span>
+            </div>
+          </div>
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          18%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          55%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          64%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          0%
+        </td>
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root-514 MuiTableCell-body-516 MuiTableCell-numeric-518 FairyTable-cell-479"
+        >
+          6%
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Storyshots SkillBase shield 1`] = `
+<div
+  className="MuiGrid-container-4 MuiGrid-wrap-xs-nowrap-10 MuiGrid-align-items-xs-center-12"
+>
+  <img
+    alt="shield"
+    className="SkillBase-skillImage-2"
+    src="https://raw.githubusercontent.com/36base/girlsfrontline-resources/next/icon/skilicon/shield.png"
+  />
+  <div
+    className="SkillBase-typoContainer-3"
+  >
+    <h3
+      className="MuiTypography-root-101 MuiTypography-subheading-108"
+    >
+      에너지 실드
+    </h3>
+    <span
+      className="MuiTypography-root-101 MuiTypography-caption-111 MuiTypography-colorTextSecondary-125"
+    >
+      포스실드를 펼치는 능력을 지니고 있습니다. 평소에는 방수, 방진, 반재밍에 사용할 수 있을 것 같습니다.
+    </span>
+  </div>
+</div>
+`;

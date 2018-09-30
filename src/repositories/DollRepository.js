@@ -1,41 +1,27 @@
 import { dolls } from 'girlsfrontline-core';
+import Doll from 'girlsfrontline-core/lib/doll';
 
 // import gfextradata from 'girlsfrontline-extra-data';
-import dollRanks from './data/dollRank';
-import dollTypes from './data/dollType';
+import dollRank from './data/dollRank.json';
 
-const domain = 'https://girlsfrontline.kr/hotlink-ok/girlsfrontline-resources/images';
-const typeMap = new Map(dollTypes.map(e => [e.code, e]));
-const rankMap = new Map(dollRanks.map(e => [e.id, e]));
 
 // const { dollNickname } = gfextradata({ locale: 'ko' });
 
-function getTypeIcon(typeId, rankId) {
-  const type = typeMap.get(typeId).code.toUpperCase();
-
-  return `${domain}/typeicons/${type}${rankId}.png`;
-}
-const dollList = dolls.map((doll) => {
+const buildData = (doll) => {
   const rank = (parseInt((Number(doll.id) / 1000), 10) === 1) ? 1 : doll.rank;
 
   return Object.assign(
     doll,
     {
-      rank: rankMap.get(rank) || {},
-      icon: getTypeIcon(doll.type, rank),
-      portrait: `${domain}/portraits/${doll.id}.png`,
+      rank: dollRank[rank],
     },
   );
-});
+};
 
-const dollMap = new Map(dollList.map(e => [e.id, e]));
+// const dollList = dolls.map(doll => buildData(doll));
+// const dollMap = new Map(dollList.map(e => [e.id, e]));
 
-async function fetchAll() {
-  return dollList;
-}
+const getAll = () => dolls.map(doll => buildData(new Doll(doll.toJSON())));
+const getNewById = id => buildData(new Doll(dolls.find(equip => equip.id === id).toJSON()));
 
-async function fetchById(id) {
-  return dollMap.get(id);
-}
-
-export default { fetchAll, fetchById };
+export default { getAll, getNewById };

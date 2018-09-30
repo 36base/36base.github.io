@@ -1,9 +1,8 @@
-import React from 'react';
-import { Grid } from 'material-ui';
-import { withStyles } from 'material-ui/styles';
-import { FormattedMessage } from 'react-intl';
-import { instanceOf } from 'prop-types';
-import { withCookies, Cookies } from 'react-cookie';
+import React, { Component } from 'react';
+import { compose } from 'redux';
+import { translate } from 'react-i18next';
+import { Grid } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 
 import HorizonLine from '../common/HorizonLine';
 import Background from './components/Background';
@@ -25,7 +24,7 @@ import ScriptBox from './components/ScriptBox';
 import DollRepository from '../../repositories/DollRepository';
 import SpineRepository from '../../repositories/SpineRepository';
 
-import getDollSpine from './../../repositories/data/getDollSpine';
+import getDollSpine from '../../repositories/data/getDollSpine';
 
 const style = theme => ({
   wrapper: {
@@ -88,34 +87,20 @@ const style = theme => ({
   },
 });
 
-class DollDetail extends React.Component {
-  static propTypes = {
-    cookies: instanceOf(Cookies).isRequired,
+class DollDetail extends Component {
+  state = {
+    info: undefined,
+    images: undefined,
+    skeleton: undefined,
+    hasMod: false,
+    skinCode: 0,
+    skinNo: 0,
+    skinType: 'normal',
   };
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      info: undefined,
-      images: undefined,
-      skeleton: undefined,
-      hasMod: false,
-      skinCode: 0,
-      skinNo: 0,
-      skinType: 'normal',
-    };
-
-    this.handleSkinChange = this.handleSkinChange.bind(this);
-    this.toggleSkinType = this.toggleSkinType.bind(this);
-    this.handleStatusChange = this.handleStatusChange.bind(this);
-    this.handleSkillLvChange = this.handleSkillLvChange.bind(this);
-    this.handleSkill2LvChange = this.handleSkill2LvChange.bind(this);
-    this.wrap = this.wrap.bind(this);
-  }
-
   componentWillMount() {
-    const id = Number(this.props.match.params.id);
+    const { match } = this.props;
+    const id = Number(match.params.id);
 
     DollRepository.fetchById(id)
       .then(info => this.setState({ info }, () => {
@@ -157,48 +142,42 @@ class DollDetail extends React.Component {
     SpineRepository.fetchDefaultSpine(id)
       .then(skeleton => this.setState({ skeleton }));
   }
+
   componentDidMount() {
     window.scrollTo(0, 0);
   }
 
-  handleSkinChange(no) {
-    const { id } = this.state.info;
+  handleSkinChange = (no) => {
+    const { info: { id }, images } = this.state;
     SpineRepository.fetchSpine((id > 20000 && no !== 0) ? id - 20000 : id, no)
       .then(skeleton => this.setState({ skeleton }));
 
     this.setState({
       skinNo: no,
-      skinCode: this.state.images[no].id,
+      skinCode: images[no].id,
     });
   }
 
-  toggleSkinType() {
-    this.setState({
-      skinType: this.state.skinType === 'normal' ? 'damaged' : 'normal',
-    });
+  toggleSkinType = () => {
+    this.setState(prevState => ({
+      skinType: prevState.skinType === 'normal' ? 'damaged' : 'normal',
+    }));
   }
 
-  handleStatusChange(level, favor) {
-    this.setState({ info: Object.assign(this.state.info, { level, favor }) });
+  handleStatusChange = (level, favor) => {
+    this.setState(prevState => ({ info: Object.assign(prevState.info, { level, favor }) }));
   }
 
-  handleSkillLvChange(level) {
-    this.setState({ info: Object.assign(this.state.info, { skillLevel: level }) });
-  }
-  handleSkill2LvChange(level) {
-    this.setState({ info: Object.assign(this.state.info, { skillLevel2: level }) });
+  handleSkillLvChange = (level) => {
+    this.setState(prevState => ({ info: Object.assign(prevState.info, { skillLevel: level }) }));
   }
 
-  wrap(content) {
-    return (
-      <Grid className={this.props.classes.boxWrapper} item xs={12}>
-        {content}
-      </Grid>
-    );
+  handleSkill2LvChange = (level) => {
+    this.setState(prevState => ({ info: Object.assign(prevState.info, { skillLevel2: level }) }));
   }
 
   render() {
-    const { classes } = this.props;
+    const { classes, t } = this.props;
     const {
       info,
       images,
@@ -206,6 +185,7 @@ class DollDetail extends React.Component {
       skinNo,
       skinCode,
       skinType,
+      hasMod,
     } = this.state;
 
     if (info === undefined || images === undefined) return (<div />);
@@ -247,44 +227,73 @@ class DollDetail extends React.Component {
           <Illust src={images[skinNo][skinType]} />
         </div>
         <div className={classes.info}>
-          {this.wrap(<BasicInfoBox
-            armType={info.type.name}
-            illust={info.illust}
-            voice={info.voice}
-          />)}
-          {this.wrap(<StatusInfoBox
-            id={info.id}
-            stats={info.stats}
-            handler={this.handleStatusChange}
-          />)}
-          {this.state.hasMod
-            ? this.wrap(<a href={info.id + 20000} className={classes.button}><FormattedMessage id="MOD Ver Link" /></a>)
-            : <div />}
-          {info.id > 20000
-            ? this.wrap(<a href={info.id - 20000} className={classes.button}><FormattedMessage id="NON-MOD Ver Link" /></a>)
-            : <div />}
-          {this.wrap(<SDBox width={250} height={250} skeleton={skeleton} />)}
-          {this.wrap(<SkillBox
-            skill={info.skill1}
-            skillLevel={info.skillLevel}
-            onChange={this.handleSkillLvChange}
-          />)}
-          {info.skill2 ?
-            this.wrap(<SkillBox
+          <Grid className={classes.boxWrapper} item xs={12}>
+            <BasicInfoBox
+              armType={info.type.name}
+              illust={info.illust}
+              voice={info.voice}
+            />
+          </Grid>
+          <Grid className={classes.boxWrapper} item xs={12}>
+            <StatusInfoBox
+              id={info.id}
+              stats={info.stats}
+              handler={this.handleStatusChange}
+            />
+          </Grid>
+          {hasMod && (
+          <Grid className={classes.boxWrapper} item xs={12}>
+            <a href={info.id + 20000} className={classes.button}>
+              {t('MOD Ver Link')}
+            </a>
+          </Grid>
+          )}
+          {info.id > 20000 && (
+          <Grid className={classes.boxWrapper} item xs={12}>
+            <a href={info.id - 20000} className={classes.button}>
+              {t('NON-MOD Ver Link')}
+            </a>
+          </Grid>
+          )}
+          <Grid className={classes.boxWrapper} item xs={12}>
+            <SDBox width={250} height={250} skeleton={skeleton} />
+          </Grid>
+          <Grid className={classes.boxWrapper} item xs={12}>
+            <SkillBox
+              skill={info.skill1}
+              skillLevel={info.skillLevel}
+              onChange={this.handleSkillLvChange}
+            />
+          </Grid>
+          <Grid className={classes.boxWrapper} item xs={12} />
+          <Grid className={classes.boxWrapper} item xs={12}>
+            {info.skill2 && (
+            <SkillBox
               skill={info.skill2}
               skillLevel={info.skillLevel2}
               onChange={this.handleSkill2LvChange}
-            />) :
-            <div />
-          }
-          {this.wrap(<EffectBox {...info.effect} hasLevel={info.type.code === 'hg'} />)}
-          {this.wrap(<AcquisitionInfoBox info={info} />)}
-          {this.wrap(<IntroduceBox {...{ id: info.id, skinCode }} />)}
-          {this.wrap(<ScriptBox {...{ id: info.id, skinCode }} />)}
+            />
+            )}
+          </Grid>
+          <Grid className={classes.boxWrapper} item xs={12}>
+            <EffectBox {...info.effect} hasLevel={info.type.code === 'hg'} />
+          </Grid>
+          <Grid className={classes.boxWrapper} item xs={12}>
+            <AcquisitionInfoBox info={info} />
+          </Grid>
+          <Grid className={classes.boxWrapper} item xs={12}>
+            <IntroduceBox {...{ id: info.id, skinCode }} />
+          </Grid>
+          <Grid className={classes.boxWrapper} item xs={12}>
+            <ScriptBox {...{ id: info.id, skinCode }} />
+          </Grid>
         </div>
       </div>
     );
   }
 }
 
-export default withStyles(style)(withCookies(DollDetail));
+export default compose(
+  translate(),
+  withStyles(style),
+)(DollDetail);

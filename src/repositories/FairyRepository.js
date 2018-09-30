@@ -1,4 +1,5 @@
 import { fairies } from 'girlsfrontline-core';
+import Fairy from 'girlsfrontline-core/lib/fairy';
 
 const domain = 'https://girlsfrontline.kr/hotlink-ok/girlsfrontline-resources/images';
 
@@ -20,29 +21,22 @@ function buildIcon(name) {
   return `${domain}/skill/${name}.png`;
 }
 
-const fairyList = fairies.map(fairy => (Object.assign(
+const buildData = fairy => Object.assign(
   fairy,
   {
     buildTime: (
-      fairy.id > 1000 ||
-      fairy.id === 18 ||
-      fairy.id === 19 ||
-      fairy.id === 20
+      fairy.id > 1000
+      || fairy.id === 18
+      || fairy.id === 19
+      || fairy.id === 20
     ) ? 0 : fairy.buildTime,
     images: buildImage(fairy.codename),
     skillIcon: buildIcon(fairy.codename),
   },
-))).filter(item => (item.id !== 0)); // 황금요정(18), 폭죽요정(20) skill 에러 터짐
+);
 
-const fairyMap = new Map(fairyList.map(e => [e.id, e]));
+const getAll = () => fairies.map(fairy => buildData(new Fairy(fairy.toJSON())));
 
-async function fetchAll() {
-  return fairyList;
-}
+const getNewById = id => buildData(new Fairy(fairies.find(fairy => fairy.id === id).toJSON()));
 
-async function fetchById(id) {
-  return fairyMap.get(id);
-}
-
-export default { fetchAll, fetchById };
-
+export default { getAll, getNewById };

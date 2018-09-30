@@ -1,6 +1,6 @@
 import React from 'react';
-import { Hidden } from 'material-ui';
-import { withStyles } from 'material-ui/styles';
+import { Hidden } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 
 const style = {
   background: {

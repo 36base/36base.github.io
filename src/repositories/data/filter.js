@@ -1,16 +1,18 @@
-import DollRepository from './../DollRepository';
+import DollRepository from '../DollRepository';
 import dollTypes from './dollType';
-import dollRanks from './dollRank';
+// import dollRanks from './dollRank';
 
 const properties = [];
 dollTypes.forEach((e) => {
   const predicate = doll => doll.type === e;
   properties.push([e.code.toUpperCase(), predicate]);
 });
+/*
 dollRanks.forEach((e) => {
   const predicate = doll => doll.rank === e;
   e.nickNames.forEach(nick => properties.push([nick, predicate]));
 });
+*/
 
 const buildTimeToString = (time) => {
   const hour = `${Number.parseInt(time / 3600, 10)}`;
