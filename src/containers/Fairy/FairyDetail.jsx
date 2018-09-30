@@ -6,10 +6,11 @@ import { Grid } from '@material-ui/core';
 
 import FairyRepository from '../../repositories/FairyRepository';
 
-import StatusInfoBox from './components/StatusInfoBox';
-import SkillBox from './components/SkillBox';
-import SkinTabbar from './components/SkinTabbar';
-import style from './components/style';
+import StatusInfoBox from '../../components/fairydetail/components/StatusInfoBox';
+import SkillBox from '../../components/fairydetail/components/SkillBox';
+import SkinTabbar from '../../components/fairydetail/components/SkinTabbar';
+
+import styles from './FairyDetailStyles';
 
 let nonCraftableText = '';
 
@@ -26,20 +27,18 @@ function timeToStr(time) {
 class FairyDetail extends React.Component {
   state = {
     info: undefined,
-    skinNo: 0,
+    skinNo: 1,
   };
 
   componentWillMount() {
     const { match } = this.props;
     const id = Number(match.params.id);
-    FairyRepository.fetchById(id)
-      .then((info) => {
-        this.setState({ info });
-      });
+
+    this.setState({ info: FairyRepository.getNewById(id) });
   }
 
   handleSkinChange = (no) => {
-    const number = no - 2;// 왜 인지는 모르겠는데 no로 넘어오는숫자가 2,3,4입니다 그래서 일단은 이렇게 처리합니다.
+    const number = no;
     this.setState({ skinNo: number });
   }
 
@@ -51,29 +50,8 @@ class FairyDetail extends React.Component {
     this.setState(prevState => ({ info: Object.assign(prevState.info, { level, qualityLevel }) }));
   }
 
-  handleLanguageChange = (langName) => {
-    const { classes } = this.props;
-    const { info } = this.state;
-
-    if (langName === 'ko-KR') {
-      return (
-        <div className={classes.nameWrapper}>
-          <div className={classes.krName}>{ info.krName }</div>
-          <div className={classes.name}>{ info.name }</div>
-        </div>
-      );
-    }
-    return (
-      <div className={classes.nameWrapper}>
-        <div className={classes.krName}>{ info.name }</div>
-      </div>
-    );
-  }
-
   render() {
-    const {
-      classes, t, i18n,
-    } = this.props;
+    const { t, classes } = this.props;
     const { info, skinNo } = this.state;
     if (!info) {
       return (
@@ -85,11 +63,8 @@ class FairyDetail extends React.Component {
     return (
       <Grid className={classes.root}>
         <div className={classes.titleWrapper}>
-          { this.handleLanguageChange(i18n.language) }
           <div className={classes.number}>
-            {'NO.'}
-            {' '}
-            { info.id }
+            {`NO. ${info.id} ${t(info.name)}`}
           </div>
         </div>
         <div className={classes.divider} />
@@ -100,7 +75,7 @@ class FairyDetail extends React.Component {
               <img
                 className={classes.skinImage}
                 alt={info.name}
-                src={skinImage[skinNo]}
+                src={skinImage[skinNo - 1]}
               />
             </div>
           </Grid>
@@ -143,5 +118,5 @@ class FairyDetail extends React.Component {
 
 export default compose(
   translate(),
-  withStyles(style),
+  withStyles(styles),
 )(FairyDetail);

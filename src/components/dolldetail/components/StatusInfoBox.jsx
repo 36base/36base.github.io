@@ -125,7 +125,7 @@ class StatusInfoBox extends React.Component {
     );
     return (
       <InfoBox name={t('Status')} selector={selectors}>
-        {buildRow(t('Health'), stats.hp, 300, 'red')}
+        {buildRow(t('Health'), stats.hp, 1300, 'red')}
         {buildRow(t('Damage'), stats.pow, 200, 'brown')}
         {buildRow(t('Accuracy'), stats.hit, 100, 'yellow')}
         {buildRow(t('Evasion'), stats.dodge, 150, 'green')}

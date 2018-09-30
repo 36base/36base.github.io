@@ -3,6 +3,9 @@
   "extends": "airbnb",
   "rules": {
     "react/jsx-filename-extension": false,
+    "react/prefer-stateless-function": false,
+    "react/prop-types": false,
+    "react/no-array-index-key": false,
     "import/prefer-default-export": false
   },
   "env": {

@@ -21,9 +21,8 @@ const IntroduceBox = ({
   skinCode,
   classes,
   t,
-  i18n,
 }) => {
-  const { characterScript } = gfextradata({ locale: i18n.language });
+  const { characterScript } = gfextradata({ locale: 'ko' });
 
   let str = '';
 

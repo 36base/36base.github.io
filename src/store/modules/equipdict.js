@@ -1,20 +1,16 @@
-// import dolls from '../repositories/data/fairy';
+import { handleActions } from 'redux-actions';
 import EquipRepository from '../../repositories/EquipRepository';
 
-let equips = [];
-EquipRepository.fetchAll().then((data) => { equips = data; });
 
 function initFilter() {
   return {
-    list: equips,
+    equips: EquipRepository.getAll(),
   };
 }
 
-const reducer = (state = initFilter(), action) => {
-  switch (action.type) {
-    default:
-      return state;
-  }
-};
+const reducer = handleActions(
+  { },
+  initFilter(),
+);
 
 export default reducer;

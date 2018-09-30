@@ -24,6 +24,10 @@ export function getDollResourceUrl(codename, type, { skin = null } = {}) {
   return `${getResourceHost()}pic/${resourceName}.png`;
 }
 
+export function getDollTypeIconUrl(type, rank) {
+  return `${getResourceHost()}typeicons/gun/${type.toUpperCase()}${rank}.png`;
+}
+
 export function getFairyResourceUrl(codename) {
   return `${getResourceHost()}fairy/${codename}.png`;
 }
@@ -32,10 +36,10 @@ export function getFairyTypeIconUrl(type) {
   return `${getResourceHost()}typeicons/fairy/${type}.png`;
 }
 
-export function getDollTypeIconUrl(type, rank) {
-  return `${getResourceHost()}typeicons/gun/${type.toUpperCase()}${rank}.png`;
-}
-
 export function getSkillIconUrl(codename) {
   return `${getResourceHost()}icon/skilicon/${codename}.png`;
+}
+
+export function getEquipIconUrl(codename) {
+  return `${getResourceHost()}icon/equip/${codename}.png`;
 }

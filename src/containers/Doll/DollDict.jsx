@@ -1,11 +1,12 @@
 import React from 'react';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
+import { translate } from 'react-i18next';
 import { withRouter } from 'react-router';
 import { Grid } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 
-import DollCard from './components/DollCard';
+import DollCard from '../../components/doll/dollcard/DollCard';
 // import SearchBar from './components/SearchBar';
 
 const style = theme => ({
@@ -56,7 +57,7 @@ const style = theme => ({
 // eslint-disable-next-line react/prefer-stateless-function
 class DollDict extends React.Component {
   render() {
-    const { list, classes } = this.props;
+    const { t, classes, dolls } = this.props;
 
     // <Grid item xs={12}>
     //   <SearchBar />
@@ -65,7 +66,16 @@ class DollDict extends React.Component {
     return (
       <Grid className={classes.wrapper} container>
         <Grid className={classes.cardWrapper}>
-          {list.map(doll => <DollCard key={doll.id} info={doll} />)}
+          {dolls.map(doll => (
+            <DollCard
+              key={doll.id}
+              id={doll.id}
+              codename={doll.codename}
+              name={t(doll.name)}
+              type={doll.type}
+              rank={doll.rank}
+            />
+          ))}
         </Grid>
       </Grid>
     );
@@ -73,10 +83,11 @@ class DollDict extends React.Component {
 }
 
 const stateMapper = state => ({
-  list: state.dolldict.list,
+  dolls: state.dollDict.dolls,
 });
 
 export default compose(
+  translate(),
   connect(stateMapper),
   withRouter,
   withStyles(style),

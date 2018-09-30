@@ -16,8 +16,8 @@ const NumberBox = (props) => {
 
   return (
     <Grid className={classes.container} item xs={2}>
-      <Typography variant="display3" align="right">
-        No.{id}
+      <Typography variant="display1" align="right">
+        {`No. ${id}`}
       </Typography>
     </Grid>
   );

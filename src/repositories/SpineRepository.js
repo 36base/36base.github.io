@@ -69,7 +69,8 @@ async function fetchSpine(dollId, skinNo) {
     });
     const spineAtlasParser = new spine.SpineRuntime.AtlasAttachmentParser(spineAtlas);
     const spineJsonParser = new spine.SpineRuntime.SkeletonJsonParser(spineAtlasParser);
-    cache[dollCode][skinCode] = spineJsonParser.readSkeletonData(rawSkel, name);
+    // cache[dollCode][skinCode] = spineJsonParser.readSkeletonData(rawSkel, name); // name 어디서나온놈이여
+    cache[dollCode][skinCode] = spineJsonParser.readSkeletonData(rawSkel);
   }
 
   return cache[dollCode][skinCode];

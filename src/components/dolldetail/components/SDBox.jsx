@@ -30,35 +30,41 @@ let animationMap = {};
 const VIEW_ID = 'dolldetail-sd-view';
 
 class SDBox extends React.Component {
-  state = {
-    time: 0,
-    isUpdate: true,
-    animations: [],
-    animationName: '',
-    player: null,
-    stage: new PIXI.Container(),
-    renderer: PIXI.autoDetectRenderer(props.width * 3, props.height, { transparent: true }),
+  constructor(props) {
+    super(props);
 
-    hasVictoryLoop: true,
-  };
+    this.state = {
+      time: 0,
+      isUpdate: true,
+      animations: [],
+      animationName: '',
+      player: null,
+      stage: new PIXI.Container(),
+      renderer: PIXI.autoDetectRenderer(props.width * 3, props.height, { transparent: true }),
+      hasVictoryLoop: true,
+    };
+  }
 
   componentDidMount() {
-    document.getElementById(VIEW_ID).appendChild(this.state.renderer.view);
+    const { skeleton } = this.props;
+    const { renderer } = this.state;
+    document.getElementById(VIEW_ID).appendChild(renderer.view);
 
-    if (this.props.seleton) {
-      this.setSpine(this.props.skeleton);
+    if (skeleton) {
+      this.setSpine(skeleton);
     }
   }
 
   componentWillReceiveProps(newProps) {
-    const { skeleton } = newProps;
+    const { skeleton: prevSkeleton } = this.props;
+    const { skeleton: newSkeleton } = newProps;
 
-    if (this.props.skeleton !== skeleton) {
+    if (prevSkeleton !== newSkeleton) {
       this.clear();
     }
-    if (skeleton) {
+    if (newSkeleton) {
       this.clear();
-      this.setSpine(skeleton);
+      this.setSpine(newSkeleton);
     }
   }
 
@@ -88,6 +94,9 @@ class SDBox extends React.Component {
   }
 
   setSpine = (skeleton) => {
+    const { width, height } = this.props;
+    const { stage, renderer } = this.state;
+
     const player = new spine.Spine(skeleton);
     const spineAnimations = player.spineData.animations.map(e => e.name);
     const animations = Object.keys(animationMap)
@@ -95,7 +104,7 @@ class SDBox extends React.Component {
       .map(key => ({ value: key, name: animationMap[key] }));
     const scale = 1;
 
-    player.position.set(this.props.width * 1.5, this.props.height - ((player.height * scale) / 5));
+    player.position.set(width * 1.5, height - ((player.height * scale) / 5));
     player.scale.set(scale);
     player.animation_num = 0;
     player.state.setAnimationByName(0, animations[0].value, true);
@@ -113,27 +122,36 @@ class SDBox extends React.Component {
     });
 
     window.requestAnimationFrame(t => this.tick(t));
-    this.state.stage.addChild(player);
-    this.state.renderer.render(this.state.stage);
+    stage.addChild(player);
+    renderer.render(stage);
   }
 
   tick = (time) => {
+    const {
+      time: stateTime,
+      isUpdate,
+      animationName,
+      hasVictoryLoop,
+      renderer,
+      stage,
+    } = this.state;
+
     window.requestAnimationFrame(t => this.tick(t));
-    const d = (time - this.state.time) / 1000;
+    const d = (time - stateTime) / 1000;
     this.setState({ time });
 
     const { player } = this.state;
 
-    if (this.state.isUpdate && player) {
+    if (isUpdate && player) {
       const track = player.state.tracks[0];
 
       if (track.time <= track.endTime && track.time + d > track.endTime) {
-        switch (this.state.animationName) {
+        switch (animationName) {
           case 'die':
             this.setState({ isUpdate: false });
             break;
           case 'victory':
-            if (this.state.hasVictoryLoop) {
+            if (hasVictoryLoop) {
               player.state.clearTrack();
               player.state.setAnimationByName(0, 'victoryloop', true);
               player.update(0);
@@ -149,11 +167,12 @@ class SDBox extends React.Component {
       }
     }
 
-    this.state.renderer.render(this.state.stage);
+    renderer.render(stage);
   }
 
   clear = () => {
-    this.state.stage.removeChildren();
+    const { stage } = this.state;
+    stage.removeChildren();
     this.setState({
       player: null,
     });

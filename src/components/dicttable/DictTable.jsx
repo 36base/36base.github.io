@@ -12,8 +12,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import TableSortLabel from '@material-ui/core/TableSortLabel';
 
-import { headRows } from './tableData';
-import { stableSort, getSorting } from '../../../utils/sort';
+import { stableSort, getSorting } from '../../utils/sort';
 
 const styles = () => ({
   root: {
@@ -29,7 +28,7 @@ const styles = () => ({
   },
 });
 
-class FairyTable extends Component {
+class DictTable extends Component {
   handleSort = row => () => {
     const { id: orderBy, sortable } = row;
     const { onSort } = this.props;
@@ -41,7 +40,14 @@ class FairyTable extends Component {
 
   render() {
     const {
-      className, classes, t, orderBy, order, onClick, fairies,
+      t,
+      className,
+      classes,
+      orderBy,
+      order,
+      onClick,
+      headRows,
+      list,
     } = this.props;
 
     return (
@@ -63,7 +69,7 @@ class FairyTable extends Component {
                       direction={order}
                       onClick={this.handleSort(row)}
                     >
-                      {label}
+                      {t(label)}
                     </TableSortLabel>
                   </TableCell>
                 );
@@ -71,13 +77,14 @@ class FairyTable extends Component {
             </TableRow>
           </TableHead>
           <TableBody>
-            {stableSort(fairies, getSorting(order, orderBy)).map((fairy) => {
-              const { id } = fairy;
+            {stableSort(list, getSorting(order, orderBy)).map((data) => {
+              const { id } = data;
+              const clickHandler = clickedDataId => (() => { onClick(clickedDataId); });
               return (
                 <TableRow
                   key={id}
                   hover
-                  onClick={onClick(fairy)}
+                  onClick={clickHandler(data.id)}
                 >
                   {headRows.map(({
                     id: headId, numeric, render,
@@ -87,7 +94,7 @@ class FairyTable extends Component {
                       className={headId === 'name' ? classes.name : classes.cell}
                       numeric={numeric}
                     >
-                      {render(t, fairy[headId])}
+                      {render(t, data[headId])}
                     </TableCell>
                   ))}
                 </TableRow>
@@ -99,17 +106,17 @@ class FairyTable extends Component {
     );
   }
 }
-FairyTable.defaultProps = {
+DictTable.defaultProps = {
   className: '',
   onClick: () => null,
   orderBy: '',
   order: '',
 };
-FairyTable.propTypes = {
+DictTable.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   classes: PropTypes.object.isRequired,
   className: PropTypes.string,
-  fairies: PropTypes.arrayOf(PropTypes.object).isRequired,
+  list: PropTypes.arrayOf(PropTypes.object).isRequired,
   t: PropTypes.func.isRequired,
   orderBy: PropTypes.string,
   order: PropTypes.string,
@@ -120,4 +127,4 @@ FairyTable.propTypes = {
 export default compose(
   translate(),
   withStyles(styles),
-)(FairyTable);
+)(DictTable);

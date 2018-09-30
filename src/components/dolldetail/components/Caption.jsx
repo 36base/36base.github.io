@@ -21,7 +21,7 @@ const Caption = (props) => {
   return (
     <Grid className={classes.container} item xs={10}>
       <span className={[classes.inline, classes.mixin].join(' ')} />
-      <Typography className={classes.inline} variant="caption" color="primary">{name}</Typography>
+      <Typography className={classes.inline} variant="display1" color="primary">{name}</Typography>
     </Grid>
   );
 };

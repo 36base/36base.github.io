@@ -58,7 +58,7 @@ class Appbar extends React.Component {
 
   render() {
     const {
-      classes, t, i18n, toggleMobile,
+      classes, t, i18n, toggleMobile: propToggleMobile,
     } = this.props;
 
     return (
@@ -67,7 +67,7 @@ class Appbar extends React.Component {
           <IconButton
             color="inherit"
             aria-label="open drawer"
-            onClick={toggleMobile}
+            onClick={propToggleMobile}
             className={classes.navIconHide}
           >
             <MenuIcon />

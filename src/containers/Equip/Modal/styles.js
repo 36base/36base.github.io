@@ -1,4 +1,4 @@
-const style = {
+const styles = {
   popup: {
     left: '50%',
     top: '50%',
@@ -45,4 +45,4 @@ const style = {
   },
 };
 
-export default style;
+export default styles;

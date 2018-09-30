@@ -26,7 +26,12 @@ const style = theme => ({
 });
 
 const AcquisitionInfoBox = (props) => {
-  const { classes, info, t } = props;
+  const {
+    t,
+    classes,
+    buildTime,
+    obtain,
+  } = props;
 
   const buildRow = (label, value) => [
     <Grid key="row" className={classes.container} container spacing={8}>
@@ -38,8 +43,8 @@ const AcquisitionInfoBox = (props) => {
 
   return (
     <InfoBox name={t('Acquisition')}>
-      {buildRow(t('Production'), timeToStr(info.buildTime))}
-      {buildRow(t('drop'), info.obtain.map(item => item.description).join(', ') || t('none'))}
+      {buildRow(t('Production'), timeToStr(buildTime))}
+      {buildRow(t('drop'), obtain.map(item => item.description).join(', ') || t('none'))}
     </InfoBox>
   );
 };

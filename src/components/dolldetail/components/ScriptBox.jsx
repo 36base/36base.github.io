@@ -17,9 +17,9 @@ const style = theme => ({
 });
 
 const ScriptBox = ({
-  t, i18n, id, skinCode, classes,
+  t, id, skinCode, classes,
 }) => {
-  const { characterScript } = gfextradata({ locale: i18n.language });
+  const { characterScript } = gfextradata({ locale: 'ko' });
 
   let script = { };
   if (characterScript[id]) {

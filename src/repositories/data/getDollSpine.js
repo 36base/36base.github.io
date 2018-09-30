@@ -1,8 +1,9 @@
 
-import { dolls } from 'girlsfrontline-core';
+import DollRepository from '../DollRepository';
 
 const getDollSpine = (dollId) => {
-  const doll = dolls.find(item => item.id === dollId);
+  const doll = DollRepository.getNewById(dollId);
+
   const lowerDollName = String(doll.codename).toLowerCase();
   const dollSpine = {
     code: lowerDollName,

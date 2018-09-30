@@ -4,7 +4,7 @@ import { compose, bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { withStyles } from '@material-ui/core/styles';
 import ViewTypePanel from '../../components/ViewTypePanel';
-import FairyTable from '../../components/Fairy/FairyTable';
+import FairyTable from './FairyTable';
 import FairyGrid from './FairyGrid';
 
 import * as dictActions from '../../store/modules/fairyDict';
@@ -18,6 +18,11 @@ const styles = () => ({
 });
 
 class FairyDict extends Component {
+  handleOnClick = (fairyId) => {
+    const { history } = this.props;
+    history.push(`/fairy/${fairyId}`);
+  }
+
   handleChangeViewType = (event, viewType) => {
     const { changeView } = this.props;
 
@@ -38,14 +43,21 @@ class FairyDict extends Component {
       <div>
         <ViewTypePanel viewType={viewType} onChangeView={this.handleChangeViewType} />
         {viewType === 'headline' && (
-        <FairyTable
-          fairies={fairies}
-          orderBy={fairyTable.orderBy}
-          order={fairyTable.order}
-          onSort={this.handleSortTable}
-        />
+          <FairyTable
+            fairies={fairies}
+            orderBy={fairyTable.orderBy}
+            order={fairyTable.order}
+            handleSortTable={this.handleSortTable}
+            onClick={fairyId => this.handleOnClick(fairyId)}
+          />
         )}
-        {viewType === 'module' && <FairyGrid className={classes.grid} fairies={fairies} />}
+        {viewType === 'module' && (
+          <FairyGrid
+            className={classes.grid}
+            fairies={fairies}
+            onClick={fairyId => this.handleOnClick(fairyId)}
+          />
+        )}
       </div>
     );
   }

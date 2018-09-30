@@ -59,7 +59,7 @@ class SkillBox extends React.Component {
         <div className={classes.body}>
           <div className={classes.skillInfo}>
             <img src={icon} alt="skill icon" className={classes.skillIcon} />
-            <div className={classes.skillName}>{skill.name}</div>
+            <div className={classes.skillName}>{t(skill.name)}</div>
             <div>
               <div>
                 {t('cool down')}
@@ -71,7 +71,7 @@ class SkillBox extends React.Component {
               </div>
             </div>
           </div>
-          <div>{skill.description}</div>
+          <div>{t(skill.description)}</div>
         </div>
       </div>
     );

@@ -8,18 +8,18 @@ import { withStyles } from '@material-ui/core/styles';
 import Appbar from './components/Appbar';
 import Menu from './components/Menu';
 import Home from './components/home/Home';
-import DollDict from './components/doll/DollDict';
-import DollDetail from './components/dolldetail/DollDetail';
-import EquipDict from './components/equipment/EquipDict';
 import Calculator from './components/calculator/Calculator';
-import TimeTable from './components/timetable/TimeTable';
 import SdSimulator from './components/sdsim/SdSimulator';
 import LogisticSupport from './components/logisticsupport/LogisticSupport';
 import MusicPlayer from './components/musicplayer/MusicPlayer';
 import GfDict from './components/gfdict/GfDict';
 import About from './components/about/About';
-import FairyDetail from './components/fairydetail/FairyDetail';
+import TimeTable from './containers/TimeTable/TimeTable';
+import DollDict from './containers/Doll/DollDict';
+import DollDetail from './containers/Doll/DollDetail';
+import EquipDict from './containers/Equip/EquipDict';
 import FairyDict from './containers/Fairy/FairyDict';
+import FairyDetail from './containers/Fairy/FairyDetail';
 
 import { resize } from './store/modules/common';
 import './App.css';
@@ -62,7 +62,7 @@ class App extends React.Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/doll" component={DollDict} />
             <Route path="/doll/:id" component={DollDetail} />
-            <Route path="/equip" component={EquipDict} />
+            <Route path="/equip/:id?" component={EquipDict} />
             <Route exact path="/fairy" component={FairyDict} />
             <Route path="/fairy/:id" component={FairyDetail} />
             <Route path="/timetable" component={TimeTable} />

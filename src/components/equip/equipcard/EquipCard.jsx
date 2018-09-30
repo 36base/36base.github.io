@@ -1,25 +1,28 @@
 import React from 'react';
+import { compose } from 'redux';
 import { Card } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 
 import Star from '../../common/Star';
 import style from './style';
 
-import spriteBg2 from './bg_2.png';
-import spriteBg3 from './bg_3.png';
-import spriteBg4 from './bg_4.png';
-import spriteBg5 from './bg_5.png';
+import spriteBg2 from './resources/bg_2.png';
+import spriteBg3 from './resources/bg_3.png';
+import spriteBg4 from './resources/bg_4.png';
+import spriteBg5 from './resources/bg_5.png';
+
+import { getEquipIconUrl } from '../../../utils/url';
 
 
 class EquipCard extends React.Component {
   render() {
-    const { classes, info } = this.props;
     const {
+      classes,
       rank,
-      sprite,
+      codename,
       name,
       color,
-    } = info;
+    } = this.props;
 
     let spriteBg;
     switch (rank) {
@@ -37,11 +40,13 @@ class EquipCard extends React.Component {
           <Star className={classes.star} count={rank} />
         </div>
         <img className={classes.spriteBg} alt="background" src={spriteBg} />
-        <img className={classes.sprite} alt={name} src={sprite} />
+        <img className={classes.sprite} alt={name} src={getEquipIconUrl(codename)} />
         <div className={classes.caption} style={{ color }}>{name}</div>
       </Card>
     );
   }
 }
 
-export default withStyles(style)(EquipCard);
+export default compose(
+  withStyles(style),
+)(EquipCard);

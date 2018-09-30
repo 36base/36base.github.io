@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import { connect } from 'react-redux';
 import { Grid, Input, Chip, Checkbox } from '@material-ui/core';
@@ -137,3 +138,4 @@ const dispatchMapper = dispatch => ({
 });
 
 export default connect(stateMapper, dispatchMapper)(injectIntl(withStyles(styles)(SearchBar)));
+*/

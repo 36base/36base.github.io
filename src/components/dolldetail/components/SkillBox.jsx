@@ -44,12 +44,6 @@ function getUrl(path) {
 }
 
 class SkillBox extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.renderProperty = this.renderProperty.bind(this);
-  }
-
   handleChange = (event) => {
     const { value } = event.target;
     const { onChange } = this.props;
@@ -57,12 +51,15 @@ class SkillBox extends React.Component {
     onChange(value);
   }
 
-  renderProperty(label, value) {
-    const { classes } = this.props;
+  renderProperty = (content) => {
+    const { t, classes } = this.props;
+    const splits = content.split(':');
+    const label = splits[0].trim();
+    const value = splits[1].trim();
+    
     return (
       <Typography align="right" variant="body1">
-        {label}
-        {' '}
+        {`${label} `}
         <span className={classes.yellow}>
           {value}
         </span>
@@ -96,12 +93,12 @@ class SkillBox extends React.Component {
             </div>
           </Grid>
           <Grid className={classes.alignMiddle} item xs={4}>
-            <Typography variant="display3">{name}</Typography>
+            <Typography variant="display2">{t(name)}</Typography>
           </Grid>
           <Grid className={classes.alignBottom} item xs={4}>
-            {Object.keys(detail).map(key => this.renderProperty(key, detail[key]))}
+            {String(t(detail)).split(',').map(item => this.renderProperty(item))}
           </Grid>
-          <Grid item xs={12}><Typography>{desc}</Typography></Grid>
+          <Grid item xs={12}><Typography>{t(desc)}</Typography></Grid>
         </Grid>
       </InfoBox>
     );

@@ -6,7 +6,9 @@ import Select from '@material-ui/core/Select';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
 
-import style from './style';
+import { getEquipIconUrl } from '../../../utils/url';
+
+import styles from './styles';
 
 // const categoryFormatDict = {
 //   doll: 'Doll Equip',
@@ -33,34 +35,38 @@ function buildTime2Str(time) {
   return `${hour < 10 ? `0${hour}` : hour}:${min < 10 ? `0${min}` : min}:${sec < 10 ? `0${sec}` : sec}`;
 }
 
-class EquipPopup extends Component {
+class EquipModal extends Component {
   constructor(props) {
     super(props);
 
-    const { info } = props;
+    const { maxLevel } = props;
 
     this.state = {
-      level: info.maxLevel,
+      level: maxLevel,
     };
-    this.handleLvChange = this.handleLvChange.bind(this);
   }
 
-  handleLvChange(event) {
+  handleLvChange = (event) => {
+    const { maxLevel } = this.props;
+
     let newLevel = (event.target.value !== '') ? Number(event.target.value) : 1;
 
-    newLevel = (newLevel > this.props.info.maxLevel) ? this.props.info.maxLevel : newLevel;
+    newLevel = (newLevel > maxLevel) ? maxLevel : newLevel;
     newLevel = (newLevel < 0) ? 0 : newLevel;
 
-    this.props.info.level = newLevel;
+    this.props.level = newLevel;
     this.setState({ level: newLevel });
   }
 
   render() {
-    const { classes, info, t } = this.props;
-    const { level } = this.state;
     const {
+      t,
+      classes,
+      equip,
+    } = this.props;
+    const {
+      codename,
       name,
-      sprite,
       color,
       category,
       type,
@@ -68,16 +74,17 @@ class EquipPopup extends Component {
       maxLevel,
       buildTime,
       introduction,
-    } = info;
+    } = equip;
+    const { level } = this.state;
 
     return (
       <div>
         <FormControl className={classes.popup}>
-          <img style={{ width: '100%' }} alt={name} src={sprite} />
-          <h2 style={{ textAlign: 'center', color }}>{name}</h2>
+          <img style={{ width: '100%' }} alt={name} src={getEquipIconUrl(codename)} />
+          <h2 style={{ textAlign: 'center', color }}>{t(name)}</h2>
           <h3 style={{ textAlign: 'center', color: 'white' }}>{category}</h3>
           <h3 style={{ textAlign: 'center', color: 'white' }}>{type}</h3>
-          <div style={{ textAlign: 'center', color: 'white' }}>{introduction}</div>
+          <div style={{ textAlign: 'center', color: 'white' }}>{t(introduction)}</div>
           <br />
           <div className={classes.levelForm}>
             <InputLabel htmlFor="level" style={{ color: 'gray' }}>
@@ -140,5 +147,5 @@ class EquipPopup extends Component {
 
 export default compose(
   translate(),
-  withStyles(style),
-)(EquipPopup);
+  withStyles(styles),
+)(EquipModal);

@@ -115,6 +115,7 @@ class EffectBox extends React.Component {
 
   render() {
     const {
+      t,
       classes,
       effectCenter,
       effectPos,

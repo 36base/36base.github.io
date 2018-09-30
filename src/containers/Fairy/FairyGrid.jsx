@@ -5,13 +5,15 @@ import { translate } from 'react-i18next';
 import Grid from '@material-ui/core/Grid';
 import FairyCard from '../../components/Fairy/FairyCard';
 
-const FairyGrid = ({ className, fairies, t }) => (
+const FairyGrid = ({
+  t, className, fairies, onClick,
+}) => (
   <Grid className={className} container spacing={8} justify="space-around">
     {fairies.map(({
       id, codename, name,
       category, introduce, description, skins, skill,
     }) => (
-      <Grid item key={id} xs={12} sm={6} md={4} lg={3} xl={2}>
+      <Grid item key={id} xs={12} sm={6} md={4} lg={3} xl={2} onClick={() => { onClick(id); }}>
         <FairyCard
           codename={codename}
           name={t(name)}

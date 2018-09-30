@@ -1,26 +1,8 @@
 import { createAction, handleActions } from 'redux-actions';
-import { fairies } from 'girlsfrontline-core';
-import Fairy from 'girlsfrontline-core/lib/fairy';
+import FairyRepository from '../../repositories/FairyRepository';
 
 const initialstate = {
-  fairies: fairies.map(fairy => new Fairy(fairy.toJSON())).map(({
-    id, codename, name, category, buildTime, skill, stats, introduce, description, skins,
-  }) => ({
-    id,
-    codename,
-    name,
-    category,
-    introduce,
-    description,
-    skins,
-    buildTime,
-    skill,
-    pow: stats.pow || 0,
-    hit: stats.hit || 0,
-    dodge: stats.dodge || 0,
-    criticalHarmRate: stats.criticalHarmRate || 0,
-    armor: stats.armor || 0,
-  })),
+  fairies: FairyRepository.getAll(),
   viewType: 'module',
   fairyTable: {
     orderBy: '',

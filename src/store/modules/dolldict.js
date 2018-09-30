@@ -1,15 +1,11 @@
 import { createAction, handleActions } from 'redux-actions';
 import DollRepository from '../../repositories/DollRepository';
-import { propertyFilter, nameFilter } from '../../repositories/data/filter';
+// import { propertyFilter, nameFilter } from '../../repositories/data/filter';
 
-export const addFilter = createAction('ADD_FILTER');
-export const deleteFilter = createAction('DELETE_FILTER');
+export const addFilter = createAction('DollDict/ADD_FILTER');
+export const deleteFilter = createAction('DollDict/DELETE_FILTER');
 
-const dolls = [];
-
-DollRepository.fetchAll()
-  .then(data => data.forEach(item => dolls.push(item)));
-
+/*
 function apply(filters) {
   if (filters.length === 0) {
     return dolls;
@@ -83,18 +79,21 @@ function removeFilter(filters, value) {
     filters,
   };
 }
+*/
 
 function initFilter() {
   return {
-    list: dolls,
+    dolls: DollRepository.getAll(),
     filters: [],
   };
 }
 
-export default handleActions(
+const reducer = handleActions(
   {
-    ADD_FILTER: (state, { payload: value }) => filter([...state.filters], value),
-    DELETE_FILTER: (state, { payload: value }) => removeFilter([...state.filters], value),
+    // DollDict/ADD_FILTER: (state, { payload: value }) => filter([...state.filters], value),
+    // DollDict/DELETE_Filter: (state, { payload: value }) => removeFilter([...state.filters], value),
   },
   initFilter(),
 );
+
+export default reducer;

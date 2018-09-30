@@ -28,16 +28,17 @@ const style = theme => ({
 
 class Menu extends React.Component {
   routeTo = (path) => {
-    this.props.history.push(path);
-    if (this.props.openMobile) {
-      this.props.toggleMobile();
+    const { history, openMobile, toggleMobile: propToggleMobile } = this.props;
+    history.push(path);
+    if (openMobile) {
+      propToggleMobile();
     }
   }
 
   renderMenuItem = (key, value) => {
-    const { t, expand, classes } = this.props;
+    const { t, expand: propExpand, classes } = this.props;
     const items = [
-      <ListItem key={key} button onClick={() => expand(key)}>
+      <ListItem key={key} button onClick={() => propExpand(key)}>
         <ListItemIcon><Icon className={`fa fa-lg ${value.icon}`} /></ListItemIcon>
         <ListItemText primary={t(value.name)} />
         <Icon className={`fa fa-lg ${value.opened ? 'fa-angle-up' : 'fa-angle-down'}`} />
@@ -82,7 +83,10 @@ class Menu extends React.Component {
 
   render() {
     const {
-      classes, list, t, i18n,
+      classes,
+      list,
+      openMobile,
+      toggleMobile: propToggleMobile,
     } = this.props;
 
     const items = (
@@ -104,8 +108,8 @@ class Menu extends React.Component {
           <Drawer
             variant="temporary"
             anchor="left"
-            open={this.props.openMobile}
-            onClose={this.props.toggleMobile}
+            open={openMobile}
+            onClose={propToggleMobile}
             classes={{ paper: classes.drawerPaper }}
           >
             <div className={classes.mixin} />

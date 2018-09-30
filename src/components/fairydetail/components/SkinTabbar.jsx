@@ -24,30 +24,20 @@ const style = theme => ({
 });
 
 class SkinTabbar extends React.Component {
-  constructor(props) {
-    super(props);
+  renderButtons = () => {
+    const { classes, selected, onChange } = this.props;
 
-    this.renderButtons = this.renderButtons.bind(this);
-  }
-
-  renderButtons() {
-    const { classes, selected } = this.props;
-
-    const buttons = [];
-    for (let i = 1; i <= 3;) {
-      // eslint-disable-next-line
-      buttons.push(
-        <Button
-          key={i}
-          className={classes.button}
-          variant="raised"
-          color={selected === i ? 'primary' : 'default'}
-          onClick={() => this.props.onChange(i)}
-        >
-          Mod {i}
-        </Button>);
-      i += 1;
-    }
+    const buttons = Array(3).fill().map((_, i) => (
+      <Button
+        key={i + 1}
+        className={classes.button}
+        variant="raised"
+        color={(selected === i + 1) ? 'primary' : 'default'}
+        onClick={() => onChange(i + 1)}
+      >
+        {`Mod ${i + 1}`}
+      </Button>
+    ));
     return buttons;
   }
 

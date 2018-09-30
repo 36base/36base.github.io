@@ -1,5 +1,5 @@
 
-import cardbg from './equip_cardBg_trim.png';
+import cardbg from './resources/equip_cardBg_trim.png';
 
 const style = {
   root: {
