@@ -9,7 +9,7 @@ import Square from '../../common/Square';
 import ImageBox from '../../common/ImageBox';
 import SmallSelector from '../../common/SmallSelector';
 
-const domain = 'https://girlsfrontline.kr/hotlink-ok/girlsfrontline-resources/images';
+import { getSkillIconUrl } from '../../../utils/url';
 
 const style = theme => ({
   container: {
@@ -39,10 +39,6 @@ const style = theme => ({
 
 const lvValues = Array(10).fill().map((_, i) => ({ value: i + 1, name: i + 1 }));
 
-function getUrl(path) {
-  return `${domain}/skill/${path}.png`;
-}
-
 class SkillBox extends React.Component {
   handleChange = (event) => {
     const { value } = event.target;
@@ -52,11 +48,11 @@ class SkillBox extends React.Component {
   }
 
   renderProperty = (content) => {
-    const { t, classes } = this.props;
+    const { classes } = this.props;
     const splits = content.split(':');
     const label = splits[0].trim();
     const value = splits[1].trim();
-    
+
     return (
       <Typography align="right" variant="body1">
         {`${label} `}
@@ -89,7 +85,7 @@ class SkillBox extends React.Component {
         <Grid className={classes.container} container>
           <Grid item xs={4}>
             <div className={classes.iconWrapper}>
-              <Square><ImageBox src={getUrl(codename)} /></Square>
+              <Square><ImageBox src={getSkillIconUrl(codename)} /></Square>
             </div>
           </Grid>
           <Grid className={classes.alignMiddle} item xs={4}>
