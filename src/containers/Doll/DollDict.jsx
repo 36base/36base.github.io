@@ -6,7 +6,7 @@ import { withRouter } from 'react-router';
 import { Grid } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 
-import DollCard from '../../components/doll/dollcard/DollCard';
+import DollCard from '../../components/Doll/DollCard';
 // import SearchBar from './components/SearchBar';
 
 const style = theme => ({
