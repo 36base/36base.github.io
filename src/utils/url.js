@@ -37,7 +37,7 @@ export function getFairyTypeIconUrl(type) {
 }
 
 export function getSkillIconUrl(codename) {
-  return `${getResourceHost()}icon/skilicon/${codename}.png`;
+  return `${getResourceHost()}icon/skillicon/${codename}.png`;
 }
 
 export function getEquipIconUrl(codename) {
