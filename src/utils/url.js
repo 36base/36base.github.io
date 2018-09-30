@@ -43,3 +43,12 @@ export function getSkillIconUrl(codename) {
 export function getEquipIconUrl(codename) {
   return `${getResourceHost()}icon/equip/${codename}.png`;
 }
+
+export function getSpineResourceUrl(codename, skinId) {
+  const resourceName = skinId ? `${codename}_${skinId}` : codename;
+  const exts = ['png', 'skel', 'atlas'];
+
+  const url = `${getResourceHost()}spine/${resourceName.toLowerCase()}/${resourceName}`;
+
+  return exts.map(ext => `${url}.${ext}`);
+}

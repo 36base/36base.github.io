@@ -32,11 +32,11 @@ class About extends React.Component {
             <h3>{name}</h3>
           </div>
           <div className={classes.forMobile}>
-            <a href={`https://girlsfrontline.kr/hotlink-ok/GFS/[소전사전] ${name}.png`} targer="_blank" style={{ textDecoration: 'none', color: 'blue' }}>
+            <a href={`https://girlsfrontline.kr/data/GFS/[소전사전] ${name}.png`} targer="_blank" style={{ textDecoration: 'none', color: 'blue' }}>
               <h3>{name}</h3>
             </a>
           </div>
-          <img className={classes.forDesktop} src={`https://girlsfrontline.kr/hotlink-ok/GFS/[소전사전] ${name}.png`} alt={name} />
+          <img className={classes.forDesktop} src={`https://girlsfrontline.kr/data/GFS/[소전사전] ${name}.png`} alt={name} />
         </div>
       );
       return item;

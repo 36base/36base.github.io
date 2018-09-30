@@ -4,6 +4,8 @@ import { translate } from 'react-i18next';
 import { withStyles } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
 
+import { getFairyResourceUrl, getSkillIconUrl } from '../../utils/url';
+
 import FairyRepository from '../../repositories/FairyRepository';
 
 import StatusInfoBox from '../../components/fairydetail/components/StatusInfoBox';
@@ -59,7 +61,6 @@ class FairyDetail extends React.Component {
       );
     }
     nonCraftableText = t('Non-craftable');
-    const skinImage = [info.images.mod1, info.images.mod2, info.images.mod3];
     return (
       <Grid className={classes.root}>
         <div className={classes.titleWrapper}>
@@ -75,7 +76,7 @@ class FairyDetail extends React.Component {
               <img
                 className={classes.skinImage}
                 alt={info.name}
-                src={skinImage[skinNo - 1]}
+                src={getFairyResourceUrl(info.skins[skinNo - 1].codename)}
               />
             </div>
           </Grid>
@@ -94,7 +95,7 @@ class FairyDetail extends React.Component {
                 <div className={classes.rowTitle}>
                   {t('Production Time')}
                 </div>
-                <div>{ timeToStr(info.buildTime) }</div>
+                <div>{timeToStr(info.buildTime)}</div>
               </div>
             </div>
             <StatusInfoBox
@@ -106,7 +107,7 @@ class FairyDetail extends React.Component {
             <SkillBox
               handler={this.handleSkillChange}
               skill={info.skill}
-              icon={info.skillIcon}
+              icon={getSkillIconUrl(info.codename)}
               default={{ level: info.skillLevel }}
             />
           </Grid>
