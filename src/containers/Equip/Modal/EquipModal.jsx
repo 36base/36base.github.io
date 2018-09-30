@@ -39,22 +39,23 @@ class EquipModal extends Component {
   constructor(props) {
     super(props);
 
-    const { maxLevel } = props;
+    const { equip } = props;
+    console.log(this.props);
 
     this.state = {
-      level: maxLevel,
+      level: equip.maxLevel,
     };
   }
 
   handleLvChange = (event) => {
-    const { maxLevel } = this.props;
+    const { equip } = this.props;
 
     let newLevel = (event.target.value !== '') ? Number(event.target.value) : 1;
 
-    newLevel = (newLevel > maxLevel) ? maxLevel : newLevel;
+    newLevel = (newLevel > equip.maxLevel) ? equip.maxLevel : newLevel;
     newLevel = (newLevel < 0) ? 0 : newLevel;
 
-    this.props.level = newLevel;
+    equip.level = newLevel;
     this.setState({ level: newLevel });
   }
 
