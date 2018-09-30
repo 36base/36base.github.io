@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { compose } from 'redux';
 import { translate } from 'react-i18next';
 import Grid from '@material-ui/core/Grid';
-import FairyCard from '../../components/fairy/fairycard/FairyCard';
+import FairyCard from '../../components/Fairy/FairyCard/FairyCard';
 
 const FairyGrid = ({
   t, className, fairies, onClick,
