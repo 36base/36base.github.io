@@ -3,9 +3,9 @@ import spine from 'pixi-spine';
 import SkeletonBinary from '../utils/spine/SkeletonBinary';
 import getDollSpine from './data/getDollSpine';
 
-const domain = 'https://girlsfrontline.kr/hotlink-ok/girlsfrontline-resources/spine/';
-// const domain = 'http://127.0.0.1:8887/spine/';
-const loader = new PIXI.loaders.Loader(domain);
+import { getSpineResourceUrl } from '../utils/url';
+
+const loader = new PIXI.loaders.Loader();
 const cache = {};
 const xhrTypeMap = {
   skel: { xhrType: 'arraybuffer' },
@@ -28,27 +28,17 @@ function hit(dollCode, skinCode) {
   return (skinCode in cache[dollCode]);
 }
 
-async function fetchSpine(dollId, skinNo) {
+async function fetchSpine(dollId, skinCode) {
   const dollSpine = getDollSpine(dollId);
 
-  if (!dollSpine) {
-    throw Error(`No spine are defined for ${dollId}`);
-  }
-
-  if (skinNo >= dollSpine.names) {
-    throw Error(`No spine are defined for ${dollId}, ${skinNo}`);
-  }
-
   const dollCode = dollSpine.code;
-  const skinCode = Object.keys(dollSpine.names)[skinNo];
 
   if (!hit(dollCode, skinCode)) {
     const exts = dollSpine.names[skinCode];
     const getName = ext => [dollCode, skinCode, ext].join('-');
-    const getPath = ext => `${dollCode}/${skinCode}.${ext}`;
 
     exts.forEach((ext) => {
-      loader.add(getName(ext), getPath(ext), xhrTypeMap[ext]);
+      loader.add(getName(ext), getSpineResourceUrl(dollCode, skinCode, ext), xhrTypeMap[ext]);
     });
 
     const resource = await new Promise(resolve => loader.load((_, res) => resolve(res)));

@@ -3,16 +3,16 @@ import DollRepository from '../DollRepository';
 
 const getDollSpine = (dollId) => {
   const doll = DollRepository.getNewById(dollId);
+  const { id, codename, skins } = doll;
 
-  const lowerDollName = String(doll.codename).toLowerCase();
   const dollSpine = {
-    code: lowerDollName,
+    code: codename,
     names: { },
   };
-  dollSpine.names[lowerDollName] = ['png', 'atlas', 'skel'];
-  if (doll.skins && doll.id < 20000) {
-    doll.skins.forEach((item) => {
-      dollSpine.names[`${lowerDollName}_${item.id}`] = ['png', 'atlas', 'skel'];
+  dollSpine.names[0] = ['png', 'atlas', 'skel'];
+  if (skins && id < 20000) {
+    skins.forEach((skin) => {
+      dollSpine.names[skin.id] = ['png', 'atlas', 'skel'];
     });
   }
 

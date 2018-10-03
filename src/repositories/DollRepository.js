@@ -4,7 +4,6 @@ import Doll from 'girlsfrontline-core/lib/doll';
 // import gfextradata from 'girlsfrontline-extra-data';
 import dollRank from './data/dollRank.json';
 
-
 // const { dollNickname } = gfextradata({ locale: 'ko' });
 
 const buildData = (doll) => {
@@ -12,10 +11,11 @@ const buildData = (doll) => {
 
   const rank = (parseInt((Number(id) / 1000), 10) === 1) ? 1 : doll.rank;
 
-  let codename = doll.codename;
-  
+  let { codename } = doll;
+
   switch (id) {
     case 121: codename = 'MK48'; break;
+    default: break;
   }
 
   return Object.assign(

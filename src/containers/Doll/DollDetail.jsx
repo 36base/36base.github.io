@@ -12,9 +12,9 @@ import SkinTabbar from '../../components/dolldetail/components/SkinTabbar';
 import StarBox from '../../components/dolldetail/components/StarBox';
 import TypeSwitchBox from '../../components/dolldetail/components/TypeSwitchBox';
 import Illust from '../../components/dolldetail/components/Illust';
-// import BasicInfoBox from '../../components/dolldetail/components/BasicInfoBox';
+import BasicInfoBox from '../../components/dolldetail/components/BasicInfoBox';
 import StatusInfoBox from '../../components/dolldetail/components/StatusInfoBox';
-// import SDBox from '../../components/dolldetail/components/SDBox';
+import SDBox from '../../components/dolldetail/components/SDBox';
 import SkillBox from '../../components/dolldetail/components/SkillBox';
 import EffectBox from '../../components/dolldetail/components/EffectBox';
 import AcquisitionInfoBox from '../../components/dolldetail/components/AcquisitionInfoBox';
@@ -22,7 +22,7 @@ import IntroduceBox from '../../components/dolldetail/components/IntroduceBox';
 import ScriptBox from '../../components/dolldetail/components/ScriptBox';
 
 import DollRepository from '../../repositories/DollRepository';
-// import SpineRepository from '../../repositories/SpineRepository';
+import SpineRepository from '../../repositories/SpineRepository';
 
 import getDollSpine from '../../repositories/data/getDollSpine';
 
@@ -125,7 +125,7 @@ class DollDetail extends Component {
       const images = [
         base,
         ...((info.id < 20000) ? (skins.map((e, i) => ({
-          id: e.id + 1,
+          id: e.id,
           name: e.name,
           spineCode: spineNames[i + 1],
           normal: getDollResourceUrl(codename, 'normal', { skin: e.id }),
@@ -142,10 +142,8 @@ class DollDetail extends Component {
         });
     }
     */
-    /*
     SpineRepository.fetchDefaultSpine(dollId)
       .then(skeleton => this.setState({ skeleton }));
-    */
   }
 
   componentDidMount() {
@@ -154,13 +152,14 @@ class DollDetail extends Component {
 
   handleSkinChange = (no) => {
     const {
-      // info: { id },
+      info: { id },
       images,
     } = this.state;
-    /*
-    SpineRepository.fetchSpine((id > 20000 && no !== 0) ? id - 20000 : id, no)
-      .then(skeleton => this.setState({ skeleton }));
-    */
+
+    SpineRepository.fetchSpine(
+      (id > 20000 && no !== 0) ? id - 20000 : id,
+      images[no].id,
+    ).then(skeleton => this.setState({ skeleton }));
 
     this.setState({
       skinNo: no,
@@ -191,12 +190,14 @@ class DollDetail extends Component {
     const {
       info,
       images,
-      // skeleton,
+      skeleton,
       skinNo,
       skinCode,
       skinType,
       hasMod,
     } = this.state;
+
+    const extra = t(info.extra).split(',');
 
     if (info === undefined || images === undefined) return (<div />);
 
@@ -251,6 +252,13 @@ class DollDetail extends Component {
         </div>
         <div className={classes.info}>
           <Grid className={classes.boxWrapper} item xs={12}>
+            <BasicInfoBox
+              armType={info.type}
+              illust={t(extra[0])}
+              voice={t(extra[1])}
+            />
+          </Grid>
+          <Grid className={classes.boxWrapper} item xs={12}>
             <StatusInfoBox
               id={info.id}
               stats={info.stats}
@@ -271,6 +279,9 @@ class DollDetail extends Component {
             </a>
           </Grid>
           )}
+          <Grid className={classes.boxWrapper} item xs={12}>
+            <SDBox width={250} height={250} skeleton={skeleton} />
+          </Grid>
           <Grid className={classes.boxWrapper} item xs={12}>
             <SkillBox
               skill={info.skill1}
