@@ -1,6 +1,8 @@
 import { getResourceHost } from './host';
 
-export function getDollResourceUrl(codename, type, { skin = null } = {}) {
+const makeUrl = str => encodeURI(`${getResourceHost()}${str}`);
+
+export const getDollResourceUrl = (codename, type, { skin = null } = {}) => {
   const modExp = /Mod$/gi;
   const mod = modExp.test(codename);
   let resourceName = mod && skin
@@ -21,34 +23,24 @@ export function getDollResourceUrl(codename, type, { skin = null } = {}) {
       throw Error(`unexpected resource type: ${type}`);
   }
 
-  return `${getResourceHost()}pic/${resourceName}.png`;
-}
+  return makeUrl(`pic/${resourceName}.png`);
+};
 
-export function getDollTypeIconUrl(type, rank) {
-  return `${getResourceHost()}typeicons/gun/${type.toUpperCase()}${rank}.png`;
-}
+export const getDollTypeIconUrl = (type, rank) => makeUrl(`typeicons/gun/${type.toUpperCase()}${rank}.png`);
 
-export function getFairyResourceUrl(codename) {
-  return `${getResourceHost()}fairy/${codename}.png`;
-}
+export const getFairyResourceUrl = codename => makeUrl(`fairy/${codename}.png`);
 
-export function getFairyTypeIconUrl(type) {
-  return `${getResourceHost()}typeicons/fairy/${type}.png`;
-}
+export const getFairyTypeIconUrl = type => makeUrl(`typeicons/fairy/${type}.png`);
 
-export function getSkillIconUrl(codename) {
-  return `${getResourceHost()}icon/skillicon/${codename}.png`;
-}
+export const getSkillIconUrl = codename => makeUrl(`icon/skillicon/${codename}.png`);
 
-export function getEquipIconUrl(codename) {
-  return `${getResourceHost()}icon/equip/${codename}.png`;
-}
+export const getEquipIconUrl = codename => makeUrl(`icon/equip/${codename}.png`);
 
-export function getSpineResourceUrl(codename, skinId) {
+export const getSpineResourceUrl = (codename, skinId) => {
   const resourceName = skinId ? `${codename}_${skinId}` : codename;
   const exts = ['png', 'skel', 'atlas'];
 
-  const url = `${getResourceHost()}spine/${resourceName.toLowerCase()}/${resourceName}`;
+  const url = makeUrl(`spine/${resourceName.toLowerCase()}/${resourceName}`);
 
   return exts.map(ext => `${url}.${ext}`);
-}
+};
