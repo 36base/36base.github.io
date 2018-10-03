@@ -8,11 +8,20 @@ import dollRank from './data/dollRank.json';
 // const { dollNickname } = gfextradata({ locale: 'ko' });
 
 const buildData = (doll) => {
-  const rank = (parseInt((Number(doll.id) / 1000), 10) === 1) ? 1 : doll.rank;
+  const { id } = doll;
+
+  const rank = (parseInt((Number(id) / 1000), 10) === 1) ? 1 : doll.rank;
+
+  let codename = doll.codename;
+  
+  switch (id) {
+    case 121: codename = 'MK48'; break;
+  }
 
   return Object.assign(
     doll,
     {
+      codename,
       rank: dollRank[rank],
     },
   );
