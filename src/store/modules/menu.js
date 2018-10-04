@@ -5,8 +5,9 @@ export const expand = createAction('EXPAND');
 
 const initialState = {
   openMobile: false,
-  list: {
-    dic: {
+  list: [
+    {
+      id: 'dic',
       name: 'gf dictionary',
       icon: 'fa-book',
       opened: false,
@@ -16,7 +17,8 @@ const initialState = {
         fairy: { name: 'fairy dictionary', icon: 'fa-street-view', to: '/fairy' },
       },
     },
-    util: {
+    {
+      id: 'util',
       name: 'Convenience Features',
       icon: 'fa-archive',
       opened: false,
@@ -34,36 +36,36 @@ const initialState = {
         },
       },
     },
-  },
+  ],
 };
 
 export default handleActions(
   {
-    TOGGLE_MOBILE: state => ({
-      ...state,
-      openMobile: !state.openMobile,
-      list: {
-        dic: {
-          ...state.list.dic,
+    TOGGLE_MOBILE: (state) => {
+      const { list } = state;
+
+      return ({
+        ...state,
+        openMobile: !state.openMobile,
+        list: list.map(menu => ({
+          ...menu,
           opened: false,
-        },
-        util: {
-          ...state.list.util,
-          opened: false,
-        },
-      },
-    }),
+        })),
+      });
+    },
     EXPAND: (state, { payload: id }) => {
       const { list } = state;
       return {
         ...state,
-        list: {
-          ...list,
-          [id]: {
-            ...list[id],
-            opened: !list[id].opened,
-          },
-        },
+        list: list.map((menu) => {
+          if (menu.id === id) {
+            return {
+              ...menu,
+              opened: !menu.opened,
+            };
+          }
+          return { ...menu };
+        }),
       };
     },
   },

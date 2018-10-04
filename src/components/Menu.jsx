@@ -35,29 +35,29 @@ class Menu extends React.Component {
     }
   }
 
-  renderMenuItem = (key, value) => {
+  renderMenuItem = ({
+    id, icon, name, opened, children,
+  }) => {
     const { t, expand: propExpand, classes } = this.props;
-    const items = [
-      <ListItem key={key} button onClick={() => propExpand(key)}>
-        <ListItemIcon><Icon className={`fa fa-lg ${value.icon}`} /></ListItemIcon>
-        <ListItemText primary={t(value.name)} />
-        <Icon className={`fa fa-lg ${value.opened ? 'fa-angle-up' : 'fa-angle-down'}`} />
-      </ListItem>,
-    ];
 
-    if (value.opened) {
-      items.push((
-        <Collapse className={classes.collapse} key={`${key}_collapse`} in={value.opened} timeout="auto">
-          <List component="div" disablePadding>
-            {
-              Object.keys(value.children)
-                .map(childKey => this.renderCollapse(childKey, value.children[childKey]))
+    return (
+      <Fragment key={id}>
+        <ListItem button onClick={() => propExpand(id)}>
+          <ListItemIcon><Icon className={`fa fa-lg ${icon}`} /></ListItemIcon>
+          <ListItemText primary={t(name)} />
+          <Icon className={`fa fa-lg ${opened ? 'fa-angle-up' : 'fa-angle-down'}`} />
+        </ListItem>
+        {opened && (
+          <Collapse className={classes.collapse} key={`${id}_collapse`} in={opened} timeout="auto">
+            <List component="div" disablePadding>
+              {
+              Object.keys(children)
+                .map(childKey => this.renderCollapse(childKey, children[childKey]))
             }
-          </List>
-        </Collapse>
-      ));
-    }
-    return items;
+            </List>
+          </Collapse>)}
+      </Fragment>
+    );
   }
 
   renderCollapse = (key, value) => {
@@ -91,7 +91,7 @@ class Menu extends React.Component {
 
     const items = (
       <List component="nav">
-        {Object.keys(list).map(key => this.renderMenuItem(key, list[key]))}
+        {list.map(item => this.renderMenuItem(item))}
         <Divider />
         <ListItem key="about" button onClick={() => this.routeTo('/about')}>
           <ListItemIcon>
