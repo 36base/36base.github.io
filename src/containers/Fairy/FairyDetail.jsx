@@ -107,7 +107,7 @@ class FairyDetail extends React.Component {
             <SkillBox
               handler={this.handleSkillChange}
               skill={info.skill}
-              icon={getSkillIconUrl(info.codename)}
+              icon={getSkillIconUrl(info.skill.codename)}
               default={{ level: info.skillLevel }}
             />
           </Grid>
