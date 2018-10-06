@@ -23,7 +23,15 @@ const style = theme => ({
 class About extends React.Component {
   render() {
     const { classes } = this.props;
-    const dataArr = ['군수지원 효율표', '레벨링 루트', '요정 제조 시간표', '인형 제조 시간표', '인형 제조식', '장비 제조 시간표'];
+    const dataArr = [
+      '군수지원 효율표',
+      '레벨링 루트 (1)',
+      '레벨링 루트 (2)',
+      '요정 제조 시간표',
+      '인형 제조 시간표',
+      '인형 제조식',
+      '장비 제조 시간표',
+    ];
 
     const renderItem = (name) => {
       const item = (
