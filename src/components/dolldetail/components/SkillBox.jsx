@@ -51,7 +51,7 @@ class SkillBox extends React.Component {
     const { classes } = this.props;
     const splits = content.split(':');
     const label = splits[0].trim();
-    const value = splits[1].trim();
+    const value = splits.length > 1 ? splits[1].trim() : '';
 
     return (
       <Typography align="right" variant="body1">
