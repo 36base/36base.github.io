@@ -40,7 +40,6 @@ class EquipModal extends Component {
     super(props);
 
     const { equip } = props;
-    console.log(this.props);
 
     this.state = {
       level: equip.maxLevel,
