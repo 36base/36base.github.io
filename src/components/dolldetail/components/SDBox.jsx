@@ -1,6 +1,7 @@
 import React from 'react';
 import { compose } from 'redux';
 import { translate } from 'react-i18next';
+import { FormControlLabel, Switch } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 import * as PIXI from 'pixi.js';
 import spine from 'pixi-spine';
@@ -12,6 +13,10 @@ const style = theme => ({
   container: {
     position: 'relative',
     margin: `${theme.spacing.unit}px auto`,
+  },
+  selector: {
+    display: 'flex',
+    justifyContent: 'flex-end',
   },
   sdView: {
     position: 'absolute',
@@ -180,7 +185,12 @@ class SDBox extends React.Component {
 
   render() {
     const {
-      classes, width, height, t,
+      t,
+      classes,
+      width,
+      height,
+      toggleStayingHandler,
+      isStaying,
     } = this.props;
     const { animations, animationName } = this.state;
 
@@ -197,12 +207,19 @@ class SDBox extends React.Component {
     let selector = null;
     if (animations.length > 0) {
       selector = (
-        <SmallSelector
-          label=""
-          values={animations}
-          selected={animationName}
-          onChange={e => this.setAnimation(e.target.value)}
-        />
+        <div className={classes.selector}>
+          <FormControlLabel
+            style={{ display: 'inline-flex' }}
+            control={<Switch color="primary" onClick={toggleStayingHandler} />}
+            label={t('Show Staying SD')}
+          />
+          <SmallSelector
+            label=""
+            values={animations}
+            selected={animationName}
+            onChange={e => this.setAnimation(e.target.value)}
+          />
+        </div>
       );
     }
 

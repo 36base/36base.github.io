@@ -28,66 +28,7 @@ import getDollSpine from '../../repositories/data/getDollSpine';
 
 import { getDollResourceUrl } from '../../utils/url';
 
-const style = theme => ({
-  wrapper: {
-    position: 'relative',
-    width: '100%',
-    height: '100%',
-    overflowX: 'hidden',
-  },
-  header: {
-    paddingTop: '2%',
-    height: '13%',
-    paddingRight: 25,
-  },
-  titleLine: {
-    marginTop: '10px',
-    marginBottom: '10px',
-  },
-  img: {
-    verticalAlign: 'top',
-    [theme.breakpoints.down('sm')]: {
-      width: '100%',
-      margin: '0 auto',
-    },
-    [theme.breakpoints.up('md')]: {
-      display: 'inline-block',
-      width: '70vh',
-      height: `calc(100vh - 15% - ${theme.mixins.toolbar.minHeight}px)`,
-    },
-  },
-  info: {
-    [theme.breakpoints.up('md')]: {
-      display: 'inline-block',
-      width: 'calc(100% - 70vh)',
-      height: '85%',
-      overflow: 'auto',
-    },
-  },
-  boxWrapper: {
-    minWidth: 200,
-    marginBottom: 36,
-    [theme.breakpoints.down('sm')]: {
-      maxWidth: '90%',
-      margin: '0 auto',
-      marginBottom: 36,
-    },
-    [theme.breakpoints.up('md')]: {
-      maxWidth: 500,
-    },
-  },
-  button: {
-    display: 'block',
-    padding: '15px',
-    fontSize: '17px',
-    textDecoration: 'none',
-    color: 'black',
-    textAlign: 'center',
-    borderStyle: 'solid',
-    borderColor: 'black',
-    borderWidth: '1px',
-  },
-});
+import styles from './DollDetailStyles';
 
 class DollDetail extends Component {
   state = {
@@ -95,6 +36,7 @@ class DollDetail extends Component {
     images: undefined,
     // skeleton: undefined,
     hasMod: false,
+    isSdStaying: false,
     skinCode: 0,
     skinNo: 0,
     skinType: 'normal',
@@ -154,11 +96,13 @@ class DollDetail extends Component {
     const {
       info: { id },
       images,
+      isSdStaying,
     } = this.state;
 
     SpineRepository.fetchSpine(
       (id > 20000 && no !== 0) ? id - 20000 : id,
       images[no].id,
+      isSdStaying,
     ).then(skeleton => this.setState({ skeleton }));
 
     this.setState({
@@ -171,6 +115,23 @@ class DollDetail extends Component {
     this.setState(prevState => ({
       skinType: prevState.skinType === 'normal' ? 'damaged' : 'normal',
     }));
+  }
+
+  toggleSdStaying = () => {
+    this.setState(prevState => ({ isSdStaying: !(prevState.isSdStaying) }), () => {
+      const {
+        info: { id },
+        images,
+        skinNo,
+        isSdStaying,
+      } = this.state;
+
+      SpineRepository.fetchSpine(
+        (id > 20000 && skinNo !== 0) ? id - 20000 : id,
+        images[skinNo].id,
+        isSdStaying,
+      ).then(skeleton => this.setState({ skeleton }));
+    });
   }
 
   handleStatusChange = (level, favor) => {
@@ -195,6 +156,7 @@ class DollDetail extends Component {
       skinCode,
       skinType,
       hasMod,
+      isSdStaying,
     } = this.state;
 
     const extra = t(info.extra).split(',');
@@ -280,7 +242,13 @@ class DollDetail extends Component {
           </Grid>
           )}
           <Grid className={classes.boxWrapper} item xs={12}>
-            <SDBox width={250} height={250} skeleton={skeleton} />
+            <SDBox
+              width={250}
+              height={250}
+              skeleton={skeleton}
+              toggleStayingHandler={this.toggleSdStaying}
+              isStaying={isSdStaying}
+            />
           </Grid>
           <Grid className={classes.boxWrapper} item xs={12}>
             <SkillBox
@@ -322,5 +290,5 @@ class DollDetail extends Component {
 
 export default compose(
   translate(),
-  withStyles(style),
+  withStyles(styles),
 )(DollDetail);

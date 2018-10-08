@@ -20,25 +20,33 @@ function getSkelJson(skelData) {
   return bin.json;
 }
 
-function hit(dollCode, skinCode) {
+function hit(dollCode, skinCode, type) {
   if (!(dollCode in cache)) {
-    cache[dollCode] = {};
+    cache[dollCode] = {
+      battle: { },
+      stay: { },
+    };
   }
 
-  return (skinCode in cache[dollCode]);
+  return (skinCode in (cache[dollCode][type]));
 }
 
-async function fetchSpine(dollId, skinCode) {
+async function fetchSpine(dollId, skinCode, isStaying = false) {
   const dollSpine = getDollSpine(dollId);
 
   const dollCode = dollSpine.code;
+  const type = isStaying ? 'stay' : 'battle';
 
-  if (!hit(dollCode, skinCode)) {
+  if (!hit(dollCode, skinCode, type)) {
     const exts = dollSpine.names[skinCode];
-    const getName = ext => [dollCode, skinCode, ext].join('-');
+    const getName = ext => [dollCode, type, skinCode, ext].join('-');
 
     exts.forEach((ext) => {
-      loader.add(getName(ext), getSpineResourceUrl(dollCode, skinCode, ext), xhrTypeMap[ext]);
+      loader.add(
+        getName(ext),
+        getSpineResourceUrl(dollCode, isStaying, skinCode, ext),
+        xhrTypeMap[ext],
+      );
     });
 
     const resource = await new Promise(resolve => loader.load((_, res) => resolve(res)));
@@ -59,11 +67,10 @@ async function fetchSpine(dollId, skinCode) {
     });
     const spineAtlasParser = new spine.SpineRuntime.AtlasAttachmentParser(spineAtlas);
     const spineJsonParser = new spine.SpineRuntime.SkeletonJsonParser(spineAtlasParser);
-    // cache[dollCode][skinCode] = spineJsonParser.readSkeletonData(rawSkel, name); // name 어디서나온놈이여
-    cache[dollCode][skinCode] = spineJsonParser.readSkeletonData(rawSkel);
+    cache[dollCode][type][skinCode] = spineJsonParser.readSkeletonData(rawSkel);
   }
 
-  return cache[dollCode][skinCode];
+  return cache[dollCode][type][skinCode];
 }
 
 async function fetchDefaultSpine(dollId) {
