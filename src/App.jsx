@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import { Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import { CssBaseline } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 
@@ -20,6 +20,8 @@ import DollDetail from './containers/Doll/DollDetail';
 import EquipDict from './containers/Equip/EquipDict';
 import FairyDict from './containers/Fairy/FairyDict';
 import FairyDetail from './containers/Fairy/FairyDetail';
+
+import Page404 from './components/Page404';
 
 import { resize } from './store/modules/common';
 import './App.css';
@@ -59,19 +61,23 @@ class App extends React.Component {
         <main id="content" className={classes.content}>
           <div className={classes.mixin} />
           <div className={classes.container}>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/doll" component={DollDict} />
-            <Route path="/doll/:id" component={DollDetail} />
-            <Route path="/equip/:id?" component={EquipDict} />
-            <Route exact path="/fairy" component={FairyDict} />
-            <Route path="/fairy/:id" component={FairyDetail} />
-            <Route path="/timetable" component={TimeTable} />
-            <Route path="/calculator" component={Calculator} />
-            <Route path="/sdsim" component={SdSimulator} />
-            <Route path="/logisticsupport" component={LogisticSupport} />
-            <Route path="/musicplayer" component={MusicPlayer} />
-            <Route path="/gfdict" component={GfDict} />
-            <Route path="/about" component={About} />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/doll" component={DollDict} />
+              <Route path="/doll/:id" component={DollDetail} />
+              <Route path="/equip/:id?" component={EquipDict} />
+              <Route exact path="/fairy" component={FairyDict} />
+              <Route path="/fairy/:id" component={FairyDetail} />
+              <Route path="/timetable" component={TimeTable} />
+              <Route path="/calculator" component={Calculator} />
+              <Route path="/sdsim" component={SdSimulator} />
+              <Route path="/logisticsupport" component={LogisticSupport} />
+              <Route path="/musicplayer" component={MusicPlayer} />
+              <Route path="/gfdict" component={GfDict} />
+              <Route path="/about" component={About} />
+
+              <Route component={Page404} />
+            </Switch>
           </div>
         </main>
       </div>
