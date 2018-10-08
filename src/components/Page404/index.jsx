@@ -12,6 +12,8 @@ const style = theme => ({
 
 class Page404 extends React.Component {
   render() {
+    window.location.replace('/');
+
     const { classes, t } = this.props;
     return (
       <div className={classes.container}>
