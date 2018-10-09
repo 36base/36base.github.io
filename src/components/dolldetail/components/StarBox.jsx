@@ -4,14 +4,17 @@ import { withStyles } from '@material-ui/core/styles';
 
 import Star from '../../common/Star';
 
-const style = {
+const style = theme => ({
   container: {
     zIndex: 200,
   },
   font: {
     color: '#FDA50C',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.2rem',
+    },
   },
-};
+});
 
 const StarBox = (props) => {
   const { classes, count } = props;
