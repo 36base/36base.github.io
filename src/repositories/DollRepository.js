@@ -15,6 +15,7 @@ const buildData = (doll) => {
   let spinecodename = codename;
 
   switch (id) {
+    case 101: spinecodename = 'ump9'; break;
     case 121: codename = 'MK48'; break;
     case 124: spinecodename = 'SuperSass'; break;
     default: break;
