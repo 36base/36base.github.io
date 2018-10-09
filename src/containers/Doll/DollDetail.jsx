@@ -215,7 +215,7 @@ class DollDetail extends Component {
         <div className={classes.info}>
           <Grid className={classes.boxWrapper} item xs={12}>
             <BasicInfoBox
-              armType={info.type}
+              armType={t(info.type)}
               illust={t(extra[0])}
               voice={t(extra[1])}
             />

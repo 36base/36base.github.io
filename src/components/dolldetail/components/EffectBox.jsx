@@ -60,20 +60,20 @@ const effectGridList = [
 ];
 const targetMap = new Map([
   ['all', '모든 인형'],
-  ['hg', '권총'],
-  ['smg', '기관단총'],
-  ['rifle', '소총'],
-  ['ar', '돌격소총'],
-  ['mg', '기관총'],
-  ['sg', '산탄총'],
+  ['hg', 'hg'],
+  ['smg', 'smg'],
+  ['rifle', 'rf'],
+  ['ar', 'ar'],
+  ['mg', 'mg'],
+  ['sg', 'sg'],
 ]);
 const typeMap = new Map([
-  ['pow', '화력'],
-  ['hit', '명중'],
-  ['dodge', '회피'],
-  ['rate', '사속'],
-  ['crit', '치명타 적중률'],
-  ['cooldown', '쿨타임 감소율'],
+  ['pow', 'Damage'],
+  ['hit', 'Accuracy'],
+  ['dodge', 'Evasion'],
+  ['rate', 'Rate of Fire'],
+  ['criticalPercent', 'Crit Rate'],
+  ['cooldown', 'cool down'],
 ]);
 
 const rateOptions = [
@@ -141,7 +141,7 @@ class EffectBox extends React.Component {
       const type = typeMap.get(key);
       const value = gridEffect[key];
 
-      return `${type} 상승 ${hasLevel ? value * rate : value}%`;
+      return `${t(type)} ${t('up')} ${hasLevel ? value * rate : value}%`;
     }).join(', ');
 
     return (
@@ -156,7 +156,7 @@ class EffectBox extends React.Component {
             <Typography>
               {'버프칸의'}
               {' '}
-              <span className={classes.yellow}>{target}</span>
+              <span className={classes.yellow}>{t(target)}</span>
               {'에게'}
               {' '}
               {effects}
