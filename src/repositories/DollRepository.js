@@ -12,9 +12,11 @@ const buildData = (doll) => {
   const rank = (parseInt((Number(id) / 1000), 10) === 1) ? 1 : doll.rank;
 
   let { codename } = doll;
+  let spinecodename = codename;
 
   switch (id) {
     case 121: codename = 'MK48'; break;
+    case 124: spinecodename = 'SuperSass'; break;
     default: break;
   }
 
@@ -22,6 +24,7 @@ const buildData = (doll) => {
     doll,
     {
       codename,
+      spinecodename,
       rank: dollRank[rank],
     },
   );

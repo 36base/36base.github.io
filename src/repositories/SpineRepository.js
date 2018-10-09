@@ -49,7 +49,21 @@ async function fetchSpine(dollId, skinCode, isStaying = false) {
       );
     });
 
-    const resource = await new Promise(resolve => loader.load((_, res) => resolve(res)));
+    let resource = await new Promise(resolve => loader.load((_, res) => resolve(res)));
+
+    // 숙소 모델이 atlas, png 는 전투용 리소스를 사용하는 경우가 있음
+    if (isStaying && resource[getName('atlas')].error) {
+      loader.destroy(true);
+      exts.forEach((ext) => {
+        loader.add(
+          getName(ext),
+          getSpineResourceUrl(dollCode, ext === 'skel', skinCode, ext),
+          xhrTypeMap[ext],
+        );
+      });
+      resource = await new Promise(resolve => loader.load((_, res) => resolve(res)));
+    }
+    loader.destroy(true);
 
     exts.forEach((ext) => {
       const { error } = resource[getName(ext)];
@@ -67,6 +81,7 @@ async function fetchSpine(dollId, skinCode, isStaying = false) {
     });
     const spineAtlasParser = new spine.SpineRuntime.AtlasAttachmentParser(spineAtlas);
     const spineJsonParser = new spine.SpineRuntime.SkeletonJsonParser(spineAtlasParser);
+
     cache[dollCode][type][skinCode] = spineJsonParser.readSkeletonData(rawSkel);
   }
 
