@@ -47,11 +47,8 @@ class SkillBox extends React.Component {
     onChange(value);
   }
 
-  renderProperty = (content) => {
+  renderProperty = (label, value) => {
     const { classes } = this.props;
-    const splits = content.split(':');
-    const label = splits[0].trim();
-    const value = splits.length > 1 ? splits[1].trim() : '';
 
     return (
       <Typography align="right" variant="body1">
@@ -74,6 +71,7 @@ class SkillBox extends React.Component {
     const {
       codename,
       name,
+      initialCooldown,
       detail,
       desc,
     } = skill;
@@ -92,7 +90,14 @@ class SkillBox extends React.Component {
             <Typography variant="display2">{t(name)}</Typography>
           </Grid>
           <Grid className={classes.alignBottom} item xs={4}>
-            {String(t(detail)).split(',').map(item => this.renderProperty(item))}
+            {this.renderProperty(t('Initial cooldown'), `${initialCooldown / 60}${t('s')}`)}
+            {String(t(detail)).split(',').map((item) => {
+              const splits = item.split(':');
+              const label = splits[0].trim();
+              const value = splits.length > 1 ? splits[1].trim() : '';
+
+              return this.renderProperty(label, value);
+            })}
           </Grid>
           <Grid item xs={12}><Typography>{t(desc)}</Typography></Grid>
         </Grid>
