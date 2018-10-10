@@ -75,6 +75,7 @@ class SkillBox extends React.Component {
       detail,
       desc,
     } = skill;
+    console.log(skill);
 
     const selector = <SmallSelector label={t('Level')} values={lvValues} selected={skillLevel} onChange={this.onChange} />;
 
@@ -87,10 +88,10 @@ class SkillBox extends React.Component {
             </div>
           </Grid>
           <Grid className={classes.alignMiddle} item xs={4}>
-            <Typography variant="display2">{t(name)}</Typography>
+            <Typography variant="display1">{t(name)}</Typography>
           </Grid>
           <Grid className={classes.alignBottom} item xs={4}>
-            {this.renderProperty(t('Initial cooldown'), `${initialCooldown / 60}${t('s')}`)}
+            {this.renderProperty(t('Initial cooldown'), `${initialCooldown / 30}${t('s')}`)}
             {String(t(detail)).split(',').map((item) => {
               const splits = item.split(':');
               const label = splits[0].trim();
