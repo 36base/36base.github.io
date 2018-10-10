@@ -75,7 +75,6 @@ class SkillBox extends React.Component {
       detail,
       desc,
     } = skill;
-    console.log(skill);
 
     const selector = <SmallSelector label={t('Level')} values={lvValues} selected={skillLevel} onChange={this.onChange} />;
 
