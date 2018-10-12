@@ -22,9 +22,9 @@ import IntroduceBox from '../../components/dolldetail/components/IntroduceBox';
 import ScriptBox from '../../components/dolldetail/components/ScriptBox';
 
 import DollRepository from '../../repositories/DollRepository';
-import SpineRepository from '../../repositories/SpineRepository';
+import SpineLoader from '../../utils/spine/SpineLoader';
 
-import getDollSpine from '../../repositories/data/getDollSpine';
+import getDollSpine from '../../utils/spine/getDollSpine';
 
 import { getDollResourceUrl } from '../../utils/url';
 
@@ -84,7 +84,7 @@ class DollDetail extends Component {
         });
     }
     */
-    SpineRepository.fetchDefaultSpine(dollId)
+    SpineLoader.loadDefaultSpine(dollId)
       .then(skeleton => this.setState({ skeleton }));
   }
 
@@ -99,7 +99,7 @@ class DollDetail extends Component {
       isSdStaying,
     } = this.state;
 
-    SpineRepository.fetchSpine(
+    SpineLoader.loadSpine(
       (id > 20000 && no !== 0) ? id - 20000 : id,
       images[no].id,
       isSdStaying,
@@ -126,7 +126,7 @@ class DollDetail extends Component {
         isSdStaying,
       } = this.state;
 
-      SpineRepository.fetchSpine(
+      SpineLoader.loadSpine(
         (id > 20000 && skinNo !== 0) ? id - 20000 : id,
         images[skinNo].id,
         isSdStaying,

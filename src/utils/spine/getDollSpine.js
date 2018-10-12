@@ -1,16 +1,16 @@
 
-import DollRepository from '../DollRepository';
+import DollRepository from '../../repositories/DollRepository';
 
 const getDollSpine = (dollId) => {
   const doll = DollRepository.getNewById(dollId);
-  const { id, codename, skins } = doll;
+  const { codename, skins } = doll;
 
   const dollSpine = {
     code: codename,
     names: { },
   };
-  dollSpine.names[0] = ['png', 'atlas', 'skel'];
-  if (skins && id < 20000) {
+  dollSpine.names[0] = ['png', 'atlas', 'skel']; // set default skin spine
+  if (skins) {
     skins.forEach((skin) => {
       dollSpine.names[skin.id] = ['png', 'atlas', 'skel'];
     });
