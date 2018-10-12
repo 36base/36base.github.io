@@ -3,10 +3,10 @@ import DollRepository from '../DollRepository';
 
 const getDollSpine = (dollId) => {
   const doll = DollRepository.getNewById(dollId);
-  const { id, spinecodename, skins } = doll;
+  const { id, codename, skins } = doll;
 
   const dollSpine = {
-    code: spinecodename,
+    code: codename,
     names: { },
   };
   dollSpine.names[0] = ['png', 'atlas', 'skel'];
