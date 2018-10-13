@@ -83,17 +83,17 @@ class FairyDetail extends React.Component {
           <Grid item xs={6} className={classes.infoWrapper}>
             <div className={classes.infoBox}>
               <div className={classes.infoTitle}>
-                {t('Basic Information')}
+                {t('PageMessage.Basic Information')}
               </div>
               <div className={classes.infoRow}>
                 <div className={classes.rowTitle}>
-                  {t('type')}
+                  {t('Info.Type')}
                 </div>
-                <div>{ info.category }</div>
+                <div>{t(`PageMessage.Fairy.Type.${info.category}`)}</div>
               </div>
               <div className={classes.infoRow}>
                 <div className={classes.rowTitle}>
-                  {t('Production Time')}
+                  {t('Info.Production Time')}
                 </div>
                 <div>{timeToStr(info.buildTime)}</div>
               </div>

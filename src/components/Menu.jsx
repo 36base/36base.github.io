@@ -44,7 +44,7 @@ class Menu extends React.Component {
       <Fragment key={id}>
         <ListItem button onClick={() => propExpand(id)}>
           <ListItemIcon><Icon className={`fa fa-lg ${icon}`} /></ListItemIcon>
-          <ListItemText primary={t(name)} />
+          <ListItemText primary={t(`Menu.${name}`)} />
           <Icon className={`fa fa-lg ${opened ? 'fa-angle-up' : 'fa-angle-down'}`} />
         </ListItem>
         {opened && (
@@ -76,7 +76,7 @@ class Menu extends React.Component {
         <div className={classes.icon}>
           <ListItemIcon><Icon className={value.icon ? `fas ${value.icon}` : ''} /></ListItemIcon>
         </div>
-        <ListItemText primary={t(value.name)} />
+        <ListItemText primary={t(`Menu.${value.name}`)} />
       </ListItem>
     );
   }

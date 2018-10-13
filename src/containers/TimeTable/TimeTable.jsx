@@ -18,7 +18,7 @@ import styles from './styles';
 
 function timeToStr(time) {
   if (time === undefined || time === 0) {
-    return '불가';
+    return 'Error';
   }
 
   const hour = Math.floor(time / 3600);
@@ -189,16 +189,16 @@ class TimeTable extends React.Component {
         <div>
           <FormControl component="fieldset" className={classes.formControl}>
             <FormLabel component="legend">
-              {t('type')}
+              {t('PageMessage.Type')}
             </FormLabel>
             <RadioGroup
               className={classes.group}
               value={selectedType}
               onChange={this.handleTypeChange}
             >
-              <FormControlLabel value="doll" control={<Radio />} label={t('doll')} />
-              <FormControlLabel value="equip" control={<Radio />} label={t('equip')} />
-              <FormControlLabel value="fairy" control={<Radio />} label={t('fairy')} />
+              <FormControlLabel value="doll" control={<Radio />} label={t('PageMessage.Doll.doll')} />
+              <FormControlLabel value="equip" control={<Radio />} label={t('PageMessage.Equip.equip')} />
+              <FormControlLabel value="fairy" control={<Radio />} label={t('PageMessage.Fairy.fairy')} />
             </RadioGroup>
           </FormControl>
         </div>

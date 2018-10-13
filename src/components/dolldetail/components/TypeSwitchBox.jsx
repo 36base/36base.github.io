@@ -31,7 +31,7 @@ const TypeSwitchBox = (props) => {
       <FormControlLabel
         className={classes.button}
         control={<Switch color="primary" onClick={toggle} checked={on} />}
-        label={t('Damaged')}
+        label={t('PageMessage.Doll.Damaged')}
       />
     </div>
   );

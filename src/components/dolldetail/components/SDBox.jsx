@@ -190,18 +190,17 @@ class SDBox extends React.Component {
       width,
       height,
       toggleStayingHandler,
-      isStaying,
     } = this.props;
     const { animations, animationName } = this.state;
 
     animationMap = {
-      wait: t('Idle'),
-      move: t('Move'),
-      attack: t('Attack'),
-      s: t('Skill'),
+      wait: t('SD Motion.Idle'),
+      move: t('SD Motion.Move'),
+      attack: t('SD Motion.Attack'),
+      s: t('SD Motion.Skill'),
       reload: t('Reload'),
-      die: t('Dead'),
-      victory: t('Victory'),
+      die: t('SD Motion.Dead'),
+      victory: t('SD Motion.Victory'),
     };
 
     let selector = null;
@@ -211,7 +210,7 @@ class SDBox extends React.Component {
           <FormControlLabel
             style={{ display: 'inline-flex' }}
             control={<Switch color="primary" onClick={toggleStayingHandler} />}
-            label={t('Show Staying SD')}
+            label={t('PageMessage.Doll.Show Staying SD')}
           />
           <SmallSelector
             label=""

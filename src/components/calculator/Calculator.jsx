@@ -325,11 +325,11 @@ class Calculator extends React.Component {
         <Grid container align="center" justify="center">
           <Paper align="left" style={{ padding: '20px' }}>
             <h1>
-              {t('Combat Report Calculator')}
+              {t('PageMessage.Disc Calculator.Combat Report Calculator')}
             </h1>
             <TextField
               id="form-disc-calc-nowLv"
-              label={t('current level')}
+              label={t('PageMessage.Disc Calculator.Current Level')}
               type="number"
               margin="normal"
               inputRef={(el) => { this.nowLv = el; }}
@@ -341,12 +341,12 @@ class Calculator extends React.Component {
                   onChange={this.oath}
                 />
 )}
-              label={t('OATH')}
+              label={t('PageMessage.Disc Calculator.Oath')}
             />
             <br />
             <TextField
               id="form-disc-calc-nowExp"
-              label={t('Current EXP.')}
+              label={t('PageMessage.Disc Calculator.Current Exp')}
               type="number"
               margin="normal"
               inputRef={(el) => { this.nowExp = el; }}
@@ -356,7 +356,7 @@ class Calculator extends React.Component {
             <br />
             <TextField
               id="tf-disc-calc-targetLv"
-              label={t('Target Level')}
+              label={t('PageMessage.Disc Calculator.Target Level')}
               type="number"
               margin="normal"
               inputRef={(el) => { this.targetLv = el; }}
@@ -364,27 +364,27 @@ class Calculator extends React.Component {
             />
             <h4>
               (
-              {t('doll')}
+              {t('PageMessage.Doll.doll')}
 )
               {' '}
-              {t('Require amount')}
+              {t('PageMessage.Disc Calculator.Require Amount')}
               {' '}
 :
               {' '}
               <span id="disc-calc-result">{this.state.report}</span>
-              {t('amount')}
+              {t('PageMessage.Disc Calculator.Amount')}
             </h4>
             <h4>
               (
-              {t('fairy')}
+              {t('PageMessage.Fairy.fairy')}
 )
               {' '}
-              {t('Require amount')}
+              {t('PageMessage.Disc Calculator.Require Amount')}
               {' '}
 :
               {' '}
               <span id="disc-calc-result">{this.state.reportFairy}</span>
-              {t('amount')}
+              {t('PageMessage.Disc Calculator.Amount')}
             </h4>
             <br />
           </Paper>

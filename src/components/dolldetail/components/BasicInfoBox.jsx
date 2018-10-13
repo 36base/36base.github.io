@@ -27,10 +27,10 @@ const BasicInfoBox = ({
   ];
 
   return (
-    <InfoBox name={t('Basic Information')}>
-      {buildRow(t('type'), armType)}
-      {buildRow(t('Artist'), illust)}
-      {buildRow(t('voice actor'), voice)}
+    <InfoBox name={t('PageMessage.Basic Information')}>
+      {buildRow(t('Info.Type'), armType)}
+      {buildRow(t('Info.Illust'), illust)}
+      {buildRow(t('Info.Character Voice'), voice)}
     </InfoBox>
   );
 };

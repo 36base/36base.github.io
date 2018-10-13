@@ -58,7 +58,7 @@ class DollDetail extends Component {
       const spineNames = spine ? Object.keys(spine.names) : Array(skins.length + 1);
       const base = {
         id: 0,
-        name: 'Default',
+        name: 'PageMessage.Doll.Default',
         spineCode: spineNames[0],
         normal: getDollResourceUrl(codename, 'normal'),
         damaged: getDollResourceUrl(codename, 'damaged'),
@@ -230,14 +230,14 @@ class DollDetail extends Component {
           {hasMod && (
           <Grid className={classes.boxWrapper} item xs={12}>
             <a href={info.id + 20000} className={classes.button}>
-              {t('MOD Ver Link')}
+              {t('PageMessage.Doll.MOD Ver Link')}
             </a>
           </Grid>
           )}
           {info.id > 20000 && (
           <Grid className={classes.boxWrapper} item xs={12}>
             <a href={info.id - 20000} className={classes.button}>
-              {t('NON-MOD Ver Link')}
+              {t('PageMessage.Doll.NON-MOD Ver Link')}
             </a>
           </Grid>
           )}

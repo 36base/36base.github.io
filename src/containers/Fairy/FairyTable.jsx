@@ -11,7 +11,7 @@ function addTableRow(id, label, numeric, sortable, render) {
   });
 }
 addTableRow('name', 'Name', false, true, (t, value) => t(value));
-addTableRow('category', 'Category', true, true, (t, value) => value);
+addTableRow('category', 'Category', true, true, (t, value) => t(`PageMessage.Fairy.Type.${value}`));
 addTableRow('buildTime', 'BuildTime', true, true, (t, value) => new Date(value * 1000).toISOString().substr(11, 8));
 addTableRow('skill', 'Skill', false, false, (t, skill) => (
   <SkillBase

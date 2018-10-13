@@ -106,7 +106,7 @@ class StatusInfoBox extends React.Component {
     const selectors = (
       <div className={classes.selectors}>
         <div className={classes.selectorLabel}>
-          {t('Level')}
+          {t('Stat.level')}
         </div>
         <SmallSelector
           values={lvValues}
@@ -114,7 +114,7 @@ class StatusInfoBox extends React.Component {
           onChange={this.handleLevelChange}
         />
         <div className={classes.selectorLabel}>
-          {t('Favor')}
+          {t('Stat.favor')}
         </div>
         <SmallSelector
           values={favorValues}
@@ -124,12 +124,12 @@ class StatusInfoBox extends React.Component {
       </div>
     );
     return (
-      <InfoBox name={t('Status')} selector={selectors}>
-        {buildRow(t('Health'), stats.hp, 1300, 'red')}
-        {buildRow(t('Damage'), stats.pow, 200, 'brown')}
-        {buildRow(t('Accuracy'), stats.hit, 100, 'yellow')}
-        {buildRow(t('Evasion'), stats.dodge, 150, 'green')}
-        {buildRow(t('Rate of Fire'), stats.rate, 120, 'orange')}
+      <InfoBox name={t('PageMessage.Status')} selector={selectors}>
+        {buildRow(t('Stat.hp'), stats.hp, 1300, 'red')}
+        {buildRow(t('Stat.pow'), stats.pow, 200, 'brown')}
+        {buildRow(t('Stat.hit'), stats.hit, 100, 'yellow')}
+        {buildRow(t('Stat.dodge'), stats.dodge, 150, 'green')}
+        {buildRow(t('Stat.rate'), stats.rate, 120, 'orange')}
       </InfoBox>
     );
   }

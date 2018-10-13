@@ -39,7 +39,7 @@ const IntroduceBox = ({
   }
 
   return (
-    <InfoBox name={t('Introduce')}>
+    <InfoBox name={t('PageMessage.Doll.Script.Introduce')}>
       <Grid key="row" className={classes.container} container spacing={8}>
         <Grid item xs><Typography dangerouslySetInnerHTML={{ __html: str }} /></Grid>
       </Grid>

@@ -62,11 +62,11 @@ class SkillBox extends React.Component {
             <div className={classes.skillName}>{t(skill.name)}</div>
             <div>
               <div>
-                {t('cool down')}
+                {t('Skill.Cooldown')}
                 <span className={classes.skillBoxYellow}>{skill.coolDown}</span>
               </div>
               <div>
-                {t('Support Order Consume')}
+                {t('Skill.Support Order Consume')}
                 <span className={classes.skillBoxYellow}>{skill.consumption}</span>
               </div>
             </div>

@@ -8,13 +8,13 @@ const initialState = {
   list: [
     {
       id: 'dic',
-      name: 'gf dictionary',
+      name: 'Gf Dictionary',
       icon: 'fa-book',
       opened: false,
       children: {
-        doll: { name: 'doll dictionary', icon: 'fa-address-book', to: '/doll' },
-        eqip: { name: 'equipment dictionary', icon: 'fa-cogs', to: '/equip' },
-        fairy: { name: 'fairy dictionary', icon: 'fa-street-view', to: '/fairy' },
+        doll: { name: 'Doll Dictionary', icon: 'fa-address-book', to: '/doll' },
+        eqip: { name: 'Equipment Dictionary', icon: 'fa-cogs', to: '/equip' },
+        fairy: { name: 'Fairy Dictionary', icon: 'fa-street-view', to: '/fairy' },
       },
     },
     {
@@ -23,13 +23,13 @@ const initialState = {
       icon: 'fa-archive',
       opened: false,
       children: {
-        timetable: { name: 'time table', icon: 'fa-clock', to: '/timetable' },
-        calculator: { name: 'Disc calculator', icon: 'fa-calculator', to: '/calculator' },
-        sdsim: { name: 'SD simulator', icon: 'fa-industry', to: '/sdsim' },
-        logisticsupport: { name: 'Logistic support', icon: 'fa-industry', to: '/logisticsupport' },
+        timetable: { name: 'Time Table', icon: 'fa-clock', to: '/timetable' },
+        calculator: { name: 'Disc Calculator', icon: 'fa-calculator', to: '/calculator' },
+        sdsim: { name: 'SD Simulator', icon: 'fa-industry', to: '/sdsim' },
+        logisticsupport: { name: 'Logistic Support', icon: 'fa-industry', to: '/logisticsupport' },
         musicplayer: { name: 'Music Player', icon: 'fa-music', to: '/musicplayer' },
         gfdict: {
-          name: 'Gf dict',
+          name: 'Gf Dict',
           icon: 'fa-book',
           to: '/gfdict',
           fitLanguage: ['ko-KR'],

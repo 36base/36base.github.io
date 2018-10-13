@@ -10,23 +10,6 @@ import { getEquipIconUrl } from '../../../utils/url';
 
 import styles from './styles';
 
-// const categoryFormatDict = {
-//   doll: 'Doll Equip',
-// };
-
-const StatNameFormatDict = {
-  pow: 'Damage',
-  hit: 'Accuracy',
-  rate: 'Rate of Fire',
-  dodge: 'Evasion',
-  speed: 'Move Speed',
-  criticalHarmRate: 'Crit. Damage',
-  criticalPercent: 'Crit. Rate',
-  nightview: 'NightView',
-  bullet: 'Bullet Amount',
-  armorPiercing: 'Armor Pen.',
-};
-
 function buildTime2Str(time) {
   const hour = Number.parseInt(time / 3600, 10);
   const min = Number.parseInt((time - (hour * 3600)) / 60, 10);
@@ -82,13 +65,13 @@ class EquipModal extends Component {
         <FormControl className={classes.popup}>
           <img style={{ width: '100%' }} alt={name} src={getEquipIconUrl(codename)} />
           <h2 style={{ textAlign: 'center', color }}>{t(name)}</h2>
-          <h3 style={{ textAlign: 'center', color: 'white' }}>{category}</h3>
-          <h3 style={{ textAlign: 'center', color: 'white' }}>{type}</h3>
+          <h3 style={{ textAlign: 'center', color: 'white' }}>{t(`PageMessage.Equip.Category.${category}`)}</h3>
+          <h3 style={{ textAlign: 'center', color: 'white' }}>{t(`PageMessage.Equip.Type.${type}`)}</h3>
           <div style={{ textAlign: 'center', color: 'white' }}>{t(introduction)}</div>
           <br />
           <div className={classes.levelForm}>
             <InputLabel htmlFor="level" style={{ color: 'gray' }}>
-              {t('Level')}
+              {t('Stats.Level')}
             </InputLabel>
             <Select
               native
@@ -113,11 +96,7 @@ class EquipModal extends Component {
               {Object.keys(stats).map(key => (
                 <tr key={key}>
                   <td className={classes.statName}>
-                    {
-                        StatNameFormatDict[key]
-                          ? t(StatNameFormatDict[key])
-                          : key
-                      }
+                    {t(`Stat.${key}`)}
                   </td>
                   <td className={classes.statNum}>
                     {stats[key].min === stats[key].max
@@ -133,10 +112,10 @@ class EquipModal extends Component {
                 buildTime === 0
                   ? (
                     <span style={{ color: 'red' }}>
-                      {t('Non-craftable')}
+                      {t('Info.Non-Craftable')}
                     </span>
                   )
-                  : `${t('Production Time')} - ${buildTime2Str(buildTime)}`
+                  : `${t('Info.Production Time')} - ${buildTime2Str(buildTime)}`
               }
           </h3>
         </FormControl>

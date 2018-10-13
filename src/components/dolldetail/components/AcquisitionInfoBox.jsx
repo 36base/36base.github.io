@@ -42,9 +42,9 @@ const AcquisitionInfoBox = (props) => {
   ];
 
   return (
-    <InfoBox name={t('Acquisition')}>
-      {buildRow(t('Production'), timeToStr(buildTime))}
-      {buildRow(t('drop'), obtain.map(item => item.description).join(', ') || t('none'))}
+    <InfoBox name={t('Info.Acquisition')}>
+      {buildRow(t('Info.Production Time'), timeToStr(buildTime))}
+      {buildRow(t('Info.Drop'), obtain.map(item => item.description).join(', ') || t('none'))}
     </InfoBox>
   );
 };

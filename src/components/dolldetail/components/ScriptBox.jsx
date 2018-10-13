@@ -32,7 +32,7 @@ const ScriptBox = ({
 
   const keyFormatMessage = (key) => {
     const label = Number(key.charAt(key.length - 1)) ? 'DIALOGUE' : key;
-    return `${t(label)}${label === 'DIALOGUE' ? key.charAt(key.length - 1) : ''}`;
+    return `${t(`PageMessage.Doll.Script.${label}`)}${label === 'DIALOGUE' ? key.charAt(key.length - 1) : ''}`;
   };
 
   const buildRow = (key, value) => {
@@ -47,7 +47,7 @@ const ScriptBox = ({
   };
 
   return (
-    <InfoBox name={t('CharacterScript')}>
+    <InfoBox name={t('PageMessage.Doll.CharacterScript')}>
       {characterScript[id]
         ? Object.keys(script).map(iter => (iter === 'Introduce' ? (<div />) : buildRow(iter, script[iter])))
         : [
@@ -56,7 +56,7 @@ const ScriptBox = ({
               <Typography>
                 [Error]
                 {' '}
-                {t('no data')}
+                {t('PageMessage.No Data')}
               </Typography>
 
             </Grid>

@@ -65,10 +65,10 @@ class StatusInfoBox extends React.Component {
       <div className={classes.infoBox}>
         <div className={classes.title}>
           <div className={classes.titleName}>
-            {t('Status')}
+            {t('PageMessage.Status')}
           </div>
           <div className={classes.selectorLabel}>
-            {t('Level')}
+            {t('Stat.level')}
           </div>
           <SmallSelector
             className={classes.selector}
@@ -77,7 +77,7 @@ class StatusInfoBox extends React.Component {
             onChange={this.handleLevelChange}
           />
           <div className={classes.selectorLabel}>
-            {t('Rarity')}
+            {t('Stat.rarity')}
           </div>
           <SmallSelector
             className={classes.selector}
@@ -86,12 +86,12 @@ class StatusInfoBox extends React.Component {
             onChange={this.handleQualityLevelChange}
           />
         </div>
-        {this.buildRow(t('Damage'), stats.pow, 55, '#00b8d4')}
-        {this.buildRow(t('Evasion'), stats.dodge, 88, '#00c853')}
-        {this.buildRow(t('Armor'), stats.armor, 25, '#d50000')}
-        {this.buildRow(t('Crit. Damage'), stats.critDmg, 40, '#ff6d00')}
-        {this.buildRow(t('Accuracy'), stats.hit, 90, '#ffd600')}
-        {this.buildRow(t('grow'), grow, 320, '#2962ff')}
+        {this.buildRow(t('Stat.pow'), stats.pow, 55, '#00b8d4')}
+        {this.buildRow(t('Stat.dodge'), stats.dodge, 88, '#00c853')}
+        {this.buildRow(t('Stat.armor'), stats.armor, 25, '#d50000')}
+        {this.buildRow(t('Stat.critDmg'), stats.critDmg, 40, '#ff6d00')}
+        {this.buildRow(t('Stat.hit'), stats.hit, 90, '#ffd600')}
+        {this.buildRow(t('Stat.grow'), grow, 320, '#2962ff')}
       </div>
     );
   }

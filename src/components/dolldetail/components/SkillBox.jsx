@@ -76,10 +76,10 @@ class SkillBox extends React.Component {
       desc,
     } = skill;
 
-    const selector = <SmallSelector label={t('Level')} values={lvValues} selected={skillLevel} onChange={this.onChange} />;
+    const selector = <SmallSelector label={t('Stat.level')} values={lvValues} selected={skillLevel} onChange={this.onChange} />;
 
     return (
-      <InfoBox name={t('Skill')} selector={selector}>
+      <InfoBox name={t('Skill.Skill')} selector={selector}>
         <Grid className={classes.container} container>
           <Grid item xs={4}>
             <div className={classes.iconWrapper}>
@@ -90,7 +90,7 @@ class SkillBox extends React.Component {
             <Typography variant="display1">{t(name)}</Typography>
           </Grid>
           <Grid className={classes.alignBottom} item xs={4}>
-            {this.renderProperty(t('Initial cooldown'), `${initialCooldown / 30}${t('s')}`)}
+            {this.renderProperty(t('Skill.Initial Cooldown'), `${initialCooldown / 30}${t('Skill.sec')}`)}
             {String(t(detail)).split(',').map((item) => {
               const splits = item.split(':');
               const label = splits[0].trim();

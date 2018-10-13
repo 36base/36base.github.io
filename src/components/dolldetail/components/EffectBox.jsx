@@ -59,21 +59,13 @@ const effectGridList = [
   [9, { left: '66.66%', top: 0 }],
 ];
 const targetMap = new Map([
-  ['all', '모든 인형'],
+  ['all', 'all'],
   ['hg', 'hg'],
   ['smg', 'smg'],
   ['rifle', 'rf'],
   ['ar', 'ar'],
   ['mg', 'mg'],
   ['sg', 'sg'],
-]);
-const typeMap = new Map([
-  ['pow', 'Damage'],
-  ['hit', 'Accuracy'],
-  ['dodge', 'Evasion'],
-  ['rate', 'Rate of Fire'],
-  ['criticalPercent', 'Crit Rate'],
-  ['cooldown', 'cool down'],
 ]);
 
 const rateOptions = [
@@ -138,14 +130,13 @@ class EffectBox extends React.Component {
     });
     const target = targetMap.get(effectType);
     const effects = Object.keys(gridEffect).map((key) => {
-      const type = typeMap.get(key);
       const value = gridEffect[key];
 
-      return `${t(type)} ${t('up')} ${hasLevel ? value * rate : value}%`;
+      return `${t(`Stat.${key}`)} ${t('PageMessage.Doll.up')} ${hasLevel ? value * rate : value}%`;
     }).join(', ');
 
     return (
-      <InfoBox name={t('Tiles')} selector={this.renderSelector()}>
+      <InfoBox name={t('PageMessage.Doll.Tiles')} selector={this.renderSelector()}>
         <Grid className={classes.container} container>
           <Grid item xs={4}>
             <div className={classes.wrapper}>
@@ -154,11 +145,9 @@ class EffectBox extends React.Component {
           </Grid>
           <Grid className={classes.explain} item xs>
             <Typography>
-              {'버프칸의'}
-              {' '}
-              <span className={classes.yellow}>{t(target)}</span>
-              {'에게'}
-              {' '}
+              {`${t('PageMessage.Doll.affects')} `}
+              <span className={classes.yellow}>{t(`PageMessage.Doll.Type.${target}`)}</span>
+              {`${t('PageMessage.Doll.to')} `}
               {effects}
             </Typography>
           </Grid>
