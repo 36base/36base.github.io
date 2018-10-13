@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
 import { compose } from 'redux';
 import { translate } from 'react-i18next';
+import { Link } from 'react-router-dom';
+import {
+  Grid, Paper, Typography, Button,
+  Dialog, DialogTitle, DialogActions, DialogContent,
+} from '@material-ui/core/';
 import { withStyles } from '@material-ui/core/styles';
-import Select from '@material-ui/core/Select';
-import InputLabel from '@material-ui/core/InputLabel';
-import FormControl from '@material-ui/core/FormControl';
 
+import HorizonLine from '../../../components/common/HorizonLine';
+import InfoBox from '../../../components/common/InfoBox';
+
+import StatusInfoBox from '../../../components/equip/EquipModal/StatusInfoBox';
+
+import DollRepository from '../../../repositories/DollRepository';
 import { getEquipIconUrl } from '../../../utils/url';
 
 import styles from './styles';
@@ -22,30 +30,27 @@ class EquipModal extends Component {
   constructor(props) {
     super(props);
 
-    const { equip } = props;
+    const { info } = props;
 
     this.state = {
-      level: equip.maxLevel,
+      level: info.maxLevel || 0,
     };
   }
 
-  handleLvChange = (event) => {
-    const { equip } = this.props;
+  handleLevelChange = (level) => {
+    const { info } = this.props;
 
-    let newLevel = (event.target.value !== '') ? Number(event.target.value) : 1;
-
-    newLevel = (newLevel > equip.maxLevel) ? equip.maxLevel : newLevel;
-    newLevel = (newLevel < 0) ? 0 : newLevel;
-
-    equip.level = newLevel;
-    this.setState({ level: newLevel });
+    info.level = level;
+    this.setState({ level });
   }
 
   render() {
     const {
       t,
       classes,
-      equip,
+      info,
+      open,
+      handleClose,
     } = this.props;
     const {
       codename,
@@ -57,69 +62,89 @@ class EquipModal extends Component {
       maxLevel,
       buildTime,
       introduction,
-    } = equip;
+      fitGuns,
+    } = info;
+
+    if (!open) return (<div />);
+
     const { level } = this.state;
 
     return (
-      <div>
-        <FormControl className={classes.popup}>
-          <img style={{ width: '100%' }} alt={name} src={getEquipIconUrl(codename)} />
-          <h2 style={{ textAlign: 'center', color }}>{t(name)}</h2>
-          <h3 style={{ textAlign: 'center', color: 'white' }}>{t(`PageMessage.Equip.Category.${category}`)}</h3>
-          <h3 style={{ textAlign: 'center', color: 'white' }}>{t(`PageMessage.Equip.Type.${type}`)}</h3>
-          <div style={{ textAlign: 'center', color: 'white' }}>{t(introduction)}</div>
-          <br />
-          <div className={classes.levelForm}>
-            <InputLabel htmlFor="level" style={{ color: 'gray' }}>
-              {t('Stats.Level')}
-            </InputLabel>
-            <Select
-              native
-              className={classes.levelSelect}
-              value={level}
-              onChange={this.handleLvChange}
-              inputProps={{
-                id: 'level',
-                name: 'level',
-              }}
-            >
-              {maxLevel === 0
-                ? <option className={classes.statOption} value={0}>-</option>
-                : Array(maxLevel).fill().map((_, i) => (
-                  <option key={i} className={classes.statOption} value={i + 1}>{i + 1}</option>
-                ))
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        scroll="paper"
+      >
+        <DialogContent>
+          <Grid container align="center" justify="center">
+            <Grid item xs={12} md={12}>
+              <img alt={name} src={getEquipIconUrl(codename)} />
+              <h2 style={{ textAlign: 'center', color }}>{t(name)}</h2>
+              <h3>{`${t(`PageMessage.Equip.Category.${category}`)} / ${t(`PageMessage.Equip.Type.${type}`)}`}</h3>
+            </Grid>
+            <Grid item xs={12} md={12} align="left">
+              <Grid className={classes.boxWrapper} item xs={12}>
+                <InfoBox name={t('PageMessage.Introduce')}>
+                  <Grid key="row" className={classes.introduction} container spacing={8}>
+                    <Grid item><Typography>{t(introduction)}</Typography></Grid>
+                  </Grid>
+                  <HorizonLine key="hr" />
+                </InfoBox>
+              </Grid>
+              <Grid className={classes.boxWrapper} item xs={12}>
+                <StatusInfoBox
+                  handler={this.handleLevelChange}
+                  stats={stats}
+                  level={level}
+                  maxLevel={maxLevel}
+                />
+              </Grid>
+              { fitGuns ? (
+                <Grid className={classes.boxWrapper} item xs={12}>
+                  <InfoBox name={t('PageMessage.Equip.Fit Guns')}>
+                    <Grid key="row" className={classes.introduction} container spacing={8}>
+                      <Grid item>
+                        <Typography>
+                          {fitGuns.map((dollId) => {
+                            const { name: dollName } = DollRepository.getNewById(dollId);
+
+                            return (
+                              <Link style={{ textDecoration: 'none' }} to={`/doll/${dollId}`}>
+                                <Button
+                                  key={dollId}
+                                  className={classes.button}
+                                  variant="raised"
+                                  color="default"
+                                >
+                                  {`${t(dollName)} ${dollId > 20000 ? t('PageMessage.Doll.Mod') : ''} `}
+                                </Button>
+                              </Link>
+                            );
+                          })}
+                        </Typography>
+                      </Grid>
+                    </Grid>
+                    <HorizonLine key="hr" />
+                  </InfoBox>
+                </Grid>) : (<div />)
                 }
-            </Select>
-          </div>
-          <table className={classes.statTable}>
-            <tbody>
-              {Object.keys(stats).map(key => (
-                <tr key={key}>
-                  <td className={classes.statName}>
-                    {t(`Stat.${key}`)}
-                  </td>
-                  <td className={classes.statNum}>
-                    {stats[key].min === stats[key].max
-                      ? `${stats[key].min}`
-                      : `${stats[key].min} ~ ${stats[key].max}`}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          <h3 className={classes.craftTime}>
-            {
-                buildTime === 0
-                  ? (
-                    <span style={{ color: 'red' }}>
-                      {t('Info.Non-Craftable')}
-                    </span>
-                  )
-                  : `${t('Info.Production Time')} - ${buildTime2Str(buildTime)}`
-              }
-          </h3>
-        </FormControl>
-      </div>
+              <Grid className={classes.boxWrapper} item xs={12} align="center">
+                <Typography variant="display1">
+                  {buildTime === 0
+                    ? t('Info.Non-Craftable')
+                    : `${t('Info.Production Time')} - ${buildTime2Str(buildTime)}`
+                  }
+                </Typography>
+              </Grid>
+            </Grid>
+          </Grid>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose} color="primary">
+            {t('PageMessage.Close')}
+          </Button>
+        </DialogActions>
+      </Dialog>
     );
   }
 }

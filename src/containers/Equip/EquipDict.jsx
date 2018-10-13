@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { withStyles } from '@material-ui/core/styles';
-import { Modal } from '@material-ui/core';
+import { Dialog } from '@material-ui/core';
 
 import EquipRepository from '../../repositories/EquipRepository';
 
@@ -89,18 +89,11 @@ class EquipDict extends Component {
             onClick={(equipId) => { this.handleOpen(equipId); }}
           />
         )}
-        <Modal
+        <EquipModal
           open={open}
-          onClose={this.handleClose}
-        >
-          {open
-            ? (
-              <EquipModal
-                equip={EquipRepository.getNewById(selectedEquipId)}
-              />
-            ) : <div />
-          }
-        </Modal>
+          handleClose={this.handleClose}
+          info={EquipRepository.getNewById(selectedEquipId)}
+        />
       </div>
     );
   }

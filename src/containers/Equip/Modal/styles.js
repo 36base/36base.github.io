@@ -1,48 +1,26 @@
-const styles = {
+const styles = theme => ({
   popup: {
-    left: '50%',
-    top: '50%',
-    transform: 'translate(-50%, -50%)',
-    position: 'absolute',
-    width: 300,
-    border: 0,
-    boxShadow: '',
-    backgroundColor: 'rgba(0, 0, 0, 0.7)',
   },
-  popup_focused: {
-    border: 0,
+  container: {
+    padding: '20px',
   },
-  levelForm: {
-    width: '100%',
-    backgroundColor: 'rgba(90, 90, 90, 0.8)',
+  boxWrapper: {
+    minWidth: 200,
+    marginBottom: 36,
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: '90%',
+      margin: '0 auto',
+      marginBottom: 36,
+    },
   },
-  levelSelect: {
-    color: 'rgba(255, 255, 255, 0.8)',
+  introduction: {
+    padding: '10px',
   },
-  statTable: {
-    width: '100%',
-    borderCollapse: 'collapse',
-    color: 'white',
-    textAlign: 'center',
+  button: {
+    fontSize: '0.9em',
+    padding: '5px',
+    margin: '5px',
   },
-  statName: {
-
-  },
-  statCustom: {
-    width: '150px',
-    margin: 0,
-    padding: 0,
-    color: 'white',
-    backgroundColor: 'rgba(90, 90, 90, 0.8)',
-  },
-  statOption: {
-    color: 'white',
-    backgroundColor: 'rgba(90, 90, 90, 0.8)',
-  },
-  craftTime: {
-    textAlign: 'center',
-    color: 'white',
-  },
-};
+});
 
 export default styles;
