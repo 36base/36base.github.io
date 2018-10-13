@@ -60,7 +60,7 @@ class FairyDetail extends React.Component {
         <div>Undefined</div>
       );
     }
-    nonCraftableText = t('Non-craftable');
+    nonCraftableText = t('Info.Non-Craftable');
     return (
       <Grid className={classes.root}>
         <div className={classes.titleWrapper}>

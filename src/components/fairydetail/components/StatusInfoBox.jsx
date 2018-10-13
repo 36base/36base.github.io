@@ -31,7 +31,15 @@ class StatusInfoBox extends React.Component {
     return [
       <div key="row" className={classes.infoRow}>
         <div className={classes.rowTitle}>{label}</div>
-        <div className={classes.rowTitle}>{Math.round(value)}</div>
+        <div
+          className={classes.rowTitle}
+          style={{
+            textAlign: 'right',
+            paddingRight: '20px',
+          }}
+        >
+          {`${Number(value).toFixed(1)}%`}
+        </div>
         <div className={classes.graph} style={statusBackground} />
       </div>,
     ];

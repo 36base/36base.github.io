@@ -32,7 +32,7 @@
     "criticalPercent": "치명타 확률",
     "criticalHarmRate": "치명 데미지",
     "armorPiercing": "관통",
-    "rarity": "개발수치",
+    "rarity": "등급",
     "grow": "성장"
   },
   "Skill": {
