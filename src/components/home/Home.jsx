@@ -30,7 +30,7 @@ class Home extends React.Component {
             <a id="banner-link-twitter" href="https://twitter.com/gf_36base" target="_blank" rel="noopener noreferrer"><img alt="트위터" src={gfTwitter} /></a>
             <a id="gf-sim-mobile" href="https://play.google.com/store/apps/details?id=com.Cosmos.GfTileSim&hl=ko" target="_blank" rel="noopener noreferrer"><img alt="제대편성 시뮬레이터 모바일" src={gfSimMobile} /></a>
             <a id="gf-sim-pc" href="https://girlsfrontline.kr/db/jdsimulator" target="_blank" rel="noopener noreferrer"><img alt="제대편성 시뮬레이터 pc" src={gfSimPc} /></a>
-            <a href="https://app.box.com/s/ksvd0luvs9f8i21b7185585oze6nss0t" target="_blank" rel="noopener noreferrer"><img alt="소녀 픽셀던젼" src={gfPixel} /></a>
+            <a href="http://gall.dcinside.com/mgallery/board/view/?id=gfl2&no=410693" target="_blank" rel="noopener noreferrer"><img alt="소녀 픽셀던젼" src={gfPixel} /></a>
             <a href="https://play.google.com/store/apps/details?id=com.gfl.dic" target="_blank" rel="noopener noreferrer"><img alt="소전사전" src={gfDict} /></a>
             <a href="https://docs.google.com/spreadsheets/d/1IxJxfpBHboVRJe92_GPC6iUZCq1M2NJkbtKo6SP-3SM/pubhtml" target="_blank" rel="noopener noreferrer"><img alt="소전시트" src={gfSheet} /></a>
             <a href="http://pf.kakao.com/_MaxmXC" target="_blank" rel="noopener noreferrer"><img alt="36베이스 플러스친구" src={gfKakao} /></a>
@@ -51,7 +51,7 @@ class Home extends React.Component {
             <a id="banner-link-twitter" href="https://twitter.com/gf_36base" target="_blank" rel="noopener noreferrer"><img alt="트위터" src={gfTwitter} /></a>
             <a id="gf-sim-mobile" href="https://play.google.com/store/apps/details?id=com.Cosmos.GfTileSim&hl=ko" target="_blank" rel="noopener noreferrer"><img alt="제대편성 시뮬레이터 모바일" src={gfSimMobile} /></a>
             <a id="gf-sim-pc" href="https://girlsfrontline.kr/db/jdsimulator" target="_blank" rel="noopener noreferrer"><img alt="제대편성 시뮬레이터 pc" src={gfSimPc} /></a>
-            <a href="https://app.box.com/s/ksvd0luvs9f8i21b7185585oze6nss0t" target="_blank" rel="noopener noreferrer"><img alt="소녀 픽셀던젼" src={gfPixel} /></a>
+            <a href="http://gall.dcinside.com/mgallery/board/view/?id=gfl2&no=410693" target="_blank" rel="noopener noreferrer"><img alt="소녀 픽셀던젼" src={gfPixel} /></a>
             <a href="https://play.google.com/store/apps/details?id=com.gfl.dic" target="_blank" rel="noopener noreferrer"><img alt="소전사전" src={gfDict} /></a>
             <a href="https://docs.google.com/spreadsheets/d/1IxJxfpBHboVRJe92_GPC6iUZCq1M2NJkbtKo6SP-3SM/pubhtml" target="_blank" rel="noopener noreferrer"><img alt="소전시트" src={gfSheet} /></a>
             <a href="http://pf.kakao.com/_MaxmXC" target="_blank" rel="noopener noreferrer"><img alt="36베이스 플러스친구" src={gfKakao} /></a>
