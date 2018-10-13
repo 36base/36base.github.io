@@ -31,8 +31,9 @@ const ScriptBox = ({
   }
 
   const keyFormatMessage = (key) => {
-    const label = Number(key.charAt(key.length - 1)) ? 'DIALOGUE' : key;
-    return `${t(`PageMessage.Doll.Script.${label}`)}${label === 'DIALOGUE' ? key.charAt(key.length - 1) : ''}`;
+    const label = Number(key.charAt(key.length - 1)) ? key.slice(0, key.length - 1) : key;
+    const number = Number(key.charAt(key.length - 1)) ? key.charAt(key.length - 1) : '';
+    return `${t(`PageMessage.Doll.Script.${label}`)}${number}`;
   };
 
   const buildRow = (key, value) => {

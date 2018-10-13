@@ -199,7 +199,7 @@ class DollDetail extends Component {
                   selected={skinNo}
                   skins={images.map((item) => {
                     const name = t(item.name);
-                    return { id: item.id, name: (name.indexOf('-') !== -1) ? name.substr(name.indexOf('-') + 1) : name };
+                    return { id: item.id, name: (name.lastIndexOf('-') !== -1) ? name.substr(name.lastIndexOf('-') + 1) : name };
                   })}
                   onChange={this.handleSkinChange}
                 />

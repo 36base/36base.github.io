@@ -101,7 +101,12 @@
         "ALLHALLOWS": "할로윈",
         "DIALOGUEWEDDING": "서약 대화",
         "CHRISTMAS": "성탄절",
-        "GAIN": "획득"
+        "GAIN": "획득",
+        "SKILL": "스킬",
+        "FIX": "수복",
+        "RETREAT": "퇴각",
+        "BREAK": "중상",
+        "HELLO": "로그인"
       }
     },
     "Equip": {

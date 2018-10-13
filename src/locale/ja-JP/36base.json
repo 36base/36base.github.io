@@ -100,7 +100,12 @@
         "ALLHALLOWS": "Halloween",
         "DIALOGUEWEDDING": "Wedding Dialogue",
         "CHRISTMAS": "Christmas",
-        "GAIN": "Gain"
+        "GAIN": "Gain",
+        "SKILL": "Skill",
+        "FIX": "Fix",
+        "RETREAT": "Retreat",
+        "BREAK": "Break",
+        "HELLO": "Login"
       }
     },
     "Equip": {
