@@ -19,7 +19,7 @@ addTableRow('sprite', '', false, false, (t, sprite) => (
 ));
 addTableRow('name', 'Name', false, false, (t, value) => t(value));
 addTableRow('company', 'Company', false, false, (t, value) => value);
-addTableRow('category', 'Category', false, false, (t, value) => value);
+addTableRow('category', 'Category', false, false, (t, value) => t(value));
 addTableRow('rank', 'Rank', false, false, (t, value) => value);
 addTableRow('buildTime', 'Production Time', false, false, (t, value) => new Date(value * 1000).toISOString().substr(14, 5));
 addTableRow('pow', 'Damage', false, false, (t, value) => ((value !== null) ? value.max : ''));

@@ -33,8 +33,9 @@ class EquipModal extends Component {
 
   componentWillReceiveProps(newProps) {
     const { info } = newProps;
-
-    this.setState({ level: info.maxLevel });
+    if (info) {
+      this.setState({ level: info.maxLevel });
+    }
   }
 
   handleLevelChange = (level) => {
