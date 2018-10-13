@@ -25,6 +25,11 @@ const buildData = equip => Object.assign(
 
 const getAll = () => equips.map(equip => buildData(new Equip(equip.toJSON())));
 
-const getNewById = id => buildData(new Equip(equips.find(equip => equip.id === id).toJSON()));
+const getNewById = (id) => {
+  const equip = equips.find(item => item.id === id);
+  if (!equip) { return null; }
+
+  return buildData(new Equip(equip.toJSON()));
+};
 
 export default { getAll, getNewById };

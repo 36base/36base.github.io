@@ -24,6 +24,11 @@ const buildData = (doll) => {
 // const dollMap = new Map(dollList.map(e => [e.id, e]));
 
 const getAll = () => dolls.map(doll => buildData(new Doll(doll.toJSON())));
-const getNewById = id => buildData(new Doll(dolls.find(equip => equip.id === id).toJSON()));
+const getNewById = (id) => {
+  const doll = dolls.find(item => item.id === id);
+  if (!doll) { return null; }
+
+  return buildData(new Doll(doll.toJSON()));
+};
 
 export default { getAll, getNewById };

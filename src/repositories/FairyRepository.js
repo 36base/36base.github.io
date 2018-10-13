@@ -15,6 +15,11 @@ const buildData = fairy => Object.assign(
 
 const getAll = () => fairies.map(fairy => buildData(new Fairy(fairy.toJSON())));
 
-const getNewById = id => buildData(new Fairy(fairies.find(fairy => fairy.id === id).toJSON()));
+const getNewById = (id) => {
+  const fairy = fairies.find(item => item.id === id);
+  if (!fairy) { return null; }
+
+  return buildData(new Fairy(fairy.toJSON()));
+};
 
 export default { getAll, getNewById };

@@ -3,8 +3,8 @@ import { compose } from 'redux';
 import { translate } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import {
-  Grid, Paper, Typography, Button,
-  Dialog, DialogTitle, DialogActions, DialogContent,
+  Grid, Typography, Button,
+  Dialog, DialogActions, DialogContent,
 } from '@material-ui/core/';
 import { withStyles } from '@material-ui/core/styles';
 
@@ -27,14 +27,14 @@ function buildTime2Str(time) {
 }
 
 class EquipModal extends Component {
-  constructor(props) {
-    super(props);
+  state = {
+    level: 0,
+  };
 
-    const { info } = props;
+  componentWillReceiveProps(newProps) {
+    const { info } = newProps;
 
-    this.state = {
-      level: info.maxLevel || 0,
-    };
+    this.setState({ level: info.maxLevel });
   }
 
   handleLevelChange = (level) => {
@@ -52,6 +52,9 @@ class EquipModal extends Component {
       open,
       handleClose,
     } = this.props;
+
+    if (!open || !info) return (<div />);
+
     const {
       codename,
       name,
@@ -64,8 +67,6 @@ class EquipModal extends Component {
       introduction,
       fitGuns,
     } = info;
-
-    if (!open) return (<div />);
 
     const { level } = this.state;
 
