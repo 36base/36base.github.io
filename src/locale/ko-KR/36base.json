@@ -70,8 +70,10 @@
     "Status": "스테이터스",
     "Type": "종류",
     "Introduce": "소개",
+    "Close": "닫기",
     "Doll": {
       "doll": "인형",
+      "Mod": "개조",
       "Effect": "진형버프",
       "Default": "기본",
       "Damaged": "중상보기",
@@ -104,6 +106,7 @@
     },
     "Equip": {
       "equip": "장비",
+      "Fit Guns": "착용 가능 인형",
       "Category": {
         "accessory": "부속",
         "ammo": "탄약",

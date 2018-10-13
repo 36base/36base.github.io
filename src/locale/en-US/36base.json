@@ -69,8 +69,10 @@
     "Status": "Status",
     "Type": "Type",
     "Introduce": "Introduce",
+    "Close": "Close",
     "Doll": {
       "doll": "Doll",
+      "Mod": "Mod",
       "Effect": "Effect",
       "Default": "Default",
       "Damaged": "Damaged",
@@ -103,6 +105,7 @@
     },
     "Equip": {
       "equip": "Equip",
+      "Fit Guns": "Fit Guns",
       "Category": {
         "accessory": "Accessory",
         "ammo": "Ammo",
