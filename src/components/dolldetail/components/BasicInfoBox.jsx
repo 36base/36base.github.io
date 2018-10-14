@@ -28,7 +28,7 @@ const BasicInfoBox = ({
 
   return (
     <InfoBox name={t('PageMessage.Basic Information')}>
-      {buildRow(t('Info.Type'), armType)}
+      {buildRow(t('Info.Type'), t(`PageMessage.Doll.Type.${armType}`))}
       {buildRow(t('Info.Illust'), illust)}
       {buildRow(t('Info.Character Voice'), voice)}
     </InfoBox>

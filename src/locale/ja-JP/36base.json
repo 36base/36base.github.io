@@ -53,13 +53,16 @@
     "Drop": "ドロップ"
   },
   "SD Motion": {
-    "Idle": "待機",
-    "Move": "移動",
-    "Attack": "攻擊",
-    "Skill": "スキル",
-    "Reload": "リロード",
-    "Dead": "死亡",
-    "Victory": "勝利"
+    "wait": "Idle",
+    "move": "Move",
+    "attack": "Attack",
+    "s": "Skill",
+    "reload": "Reload",
+    "die": "Die",
+    "victory": "Victory",
+    "lying": "Lying",
+    "pick": "Pick",
+    "sit": "Sit"
   },
   "PageMessage": {
     "No Data": "No Data",
@@ -95,8 +98,11 @@
       },
       "Script": {
         "Introduce": "Introduce",
-        "DIALOGUE": "Dialogue",
+        "DIALOGUE1": "Dialogue1",
+        "DIALOGUE2": "Dialogue2",
+        "DIALOGUE3": "Dialogue3",
         "SOULCONTRACT": "Soul Contract",
+        "VALENTINE": "Valentine",
         "ALLHALLOWS": "Halloween",
         "DIALOGUEWEDDING": "Wedding Dialogue",
         "CHRISTMAS": "Christmas",
@@ -105,7 +111,12 @@
         "FIX": "Fix",
         "RETREAT": "Retreat",
         "BREAK": "Break",
-        "HELLO": "Login"
+        "HELLO": "Login",
+        "MOOD1": "Laugh",
+        "MOOD2": "Surprise",
+        "AGREE": "Agree",
+        "ACCEPT": "Accept",
+        "LOWMOOD": "Low Mood"
       }
     },
     "Equip": {

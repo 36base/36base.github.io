@@ -4,7 +4,7 @@ import SkeletonBinary from './SkeletonBinary';
 import getDollSpine from './getDollSpine';
 
 import { getSpineResourceUrl } from '../url';
-import httpRequest from '../httpRequest';
+import { request, isRequestSuccess } from '../httpRequest';
 
 const loader = new PIXI.loaders.Loader();
 const cache = {};
@@ -50,13 +50,12 @@ async function loadSpine(dollId, skinCode, isStaying = false) {
 
     if (isStaying) {
       // 숙소 SD 데이터중 숙소버전 atlas 와 png 가 따로 없고 전투용과 공유하는 경우가 있기에, 해당 경우 처리 (파일 존재 여부 확인)
-      const { status: atlasStatus } = await httpRequest('GET', getSpineResourceUrl(dollCode, true, skinCode, 'atlas'));
-      const { status: pngStatus } = await httpRequest('GET', getSpineResourceUrl(dollCode, true, skinCode, 'png'));
-      const { status: skelStatus } = await httpRequest('GET', getSpineResourceUrl(dollCode, true, skinCode, 'skel'));
+      const response = { atlas: null, png: null, skel: null };
+      response.atlas = await request('GET', getSpineResourceUrl(dollCode, true, skinCode, 'atlas'));
+      response.png = await request('GET', getSpineResourceUrl(dollCode, true, skinCode, 'png'));
+      response.skel = await request('GET', getSpineResourceUrl(dollCode, true, skinCode, 'skel'));
 
-      const isSuccess = statusCode => (parseInt(statusCode / 100, 10) === 2);
-
-      if (!(isSuccess(atlasStatus) && isSuccess(pngStatus) && isSuccess(skelStatus))) {
+      if (!isRequestSuccess(response)) {
         resourceUrl.atlas = getSpineResourceUrl(dollCode, false, skinCode, 'atlas');
         resourceUrl.png = getSpineResourceUrl(dollCode, false, skinCode, 'png');
       }

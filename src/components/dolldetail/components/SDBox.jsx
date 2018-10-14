@@ -30,8 +30,6 @@ const style = theme => ({
   },
 });
 
-let animationMap = {};
-
 const VIEW_ID = 'dolldetail-sd-view';
 
 class SDBox extends React.Component {
@@ -99,14 +97,17 @@ class SDBox extends React.Component {
   }
 
   setSpine = (skeleton) => {
-    const { width, height } = this.props;
+    const { t, width, height } = this.props;
     const { stage, renderer } = this.state;
 
     const player = new spine.Spine(skeleton);
     const spineAnimations = player.spineData.animations.map(e => e.name);
-    const animations = Object.keys(animationMap)
-      .filter(key => spineAnimations.indexOf(key) >= 0)
-      .map(key => ({ value: key, name: animationMap[key] }));
+    const animations = spineAnimations.reduce((sum, e) => {
+      if (e !== 'victoryloop') {
+        sum.push({ value: e, name: t(`SD Motion.${e}`) });
+      }
+      return sum;
+    }, []);
     const scale = 1;
 
     player.position.set(width * 1.5, height - ((player.height * scale) / 5));
@@ -126,7 +127,7 @@ class SDBox extends React.Component {
       hasVictoryLoop: spineAnimations.indexOf('victoryloop') >= 0,
     });
 
-    window.requestAnimationFrame(t => this.tick(t));
+    window.requestAnimationFrame(e => this.tick(e));
     stage.addChild(player);
     renderer.render(stage);
   }
@@ -192,16 +193,6 @@ class SDBox extends React.Component {
       toggleStayingHandler,
     } = this.props;
     const { animations, animationName } = this.state;
-
-    animationMap = {
-      wait: t('SD Motion.Idle'),
-      move: t('SD Motion.Move'),
-      attack: t('SD Motion.Attack'),
-      s: t('SD Motion.Skill'),
-      reload: t('Reload'),
-      die: t('SD Motion.Dead'),
-      victory: t('SD Motion.Victory'),
-    };
 
     let selector = null;
     if (animations.length > 0) {

@@ -3,7 +3,11 @@ import https from 'https';
 import DollRepository from '../../repositories/DollRepository';
 import { getSpineResourceUrl } from '../url';
 
-const isSuccess = statusCode => (parseInt(statusCode / 100, 10) === 2);
+const isSuccess = (statusCode) => {
+  const statusCodeHead = parseInt(statusCode / 100, 10);
+
+  return (statusCodeHead === 2 || statusCodeHead === 3);
+};
 
 test('Doll Spine Request Test', (done) => {
   const httpRequestIsFailed = url => new Promise((resolve, reject) => {

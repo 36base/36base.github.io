@@ -102,7 +102,6 @@ class StatusInfoBox extends React.Component {
         <HorizonLine key="hr" />,
       ];
     };
-    // TODO: Rate of Fire에서 글자수 때문에 그래프스타일이 깨지는 문제발생 (2018-0729)
     const selectors = (
       <div className={classes.selectors}>
         <div className={classes.selectorLabel}>
