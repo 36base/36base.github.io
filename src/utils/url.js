@@ -1,21 +1,13 @@
 import { getResourceHost } from './host';
-import dollExceptionCodename from './exceptiondata/dollCodename';
-import dollExceptionSpineCodename from './exceptiondata/dollSpineCodename';
 
-const makeUrl = str => encodeURI(`${getResourceHost()}${str}`);
+const makeUrl = str => encodeURI(`${getResourceHost()}${str}`).toLowerCase();
 
 export const getDollResourceUrl = (codename, type, { skin = null } = {}) => {
-  let resourceCodename = codename;
-
-  if (dollExceptionCodename[codename]) {
-    resourceCodename = dollExceptionCodename[codename];
-  }
-
   const modExp = /Mod$/gi;
-  const mod = modExp.test(resourceCodename);
+  const mod = modExp.test(codename);
   let resourceName = mod && skin
-    ? `pic_${resourceCodename.replace(modExp, '')}`
-    : `pic_${resourceCodename}`;
+    ? `pic_${codename.replace(modExp, '')}`
+    : `pic_${codename}`;
   resourceName += skin ? `_${skin}` : '';
   switch (type) {
     case 'normal':
@@ -34,7 +26,7 @@ export const getDollResourceUrl = (codename, type, { skin = null } = {}) => {
   return makeUrl(`pic/${resourceName}.png`);
 };
 
-export const getDollTypeIconUrl = (type, rank) => makeUrl(`typeicons/gun/${type.toUpperCase()}${rank}.png`);
+export const getDollTypeIconUrl = (type, rank) => makeUrl(`typeicons/gun/${type}${rank}.png`);
 
 export const getFairyResourceUrl = codename => makeUrl(`fairy/${codename}.png`);
 
@@ -46,28 +38,7 @@ export const getEquipIconUrl = codename => makeUrl(`icon/equip/${codename}.png`)
 
 // ext is 'png' or 'skel' or 'atlas'
 export const getSpineResourceUrl = (codename, isStaying, skinId, ext) => {
-  let resourceCodename = codename;
+  const resourceName = skinId ? `${codename}_${skinId}` : codename;
 
-  if (dollExceptionSpineCodename[codename]) {
-    const matchData = dollExceptionSpineCodename[codename];
-
-    if (matchData[skinId]) {
-      if (matchData[skinId].bypass !== undefined) {
-        return getSpineResourceUrl(codename, isStaying, matchData[skinId].bypass, ext);
-      }
-
-      const type = isStaying ? 'stay' : 'battle';
-      if (matchData[skinId][ext] && matchData[skinId][ext][type]) {
-        resourceCodename = matchData[skinId][ext][type];
-      } else {
-        resourceCodename = matchData[skinId].codename || codename;
-      }
-    } else {
-      resourceCodename = matchData.codename || codename;
-    }
-  }
-
-  const resourceName = skinId ? `${resourceCodename}_${skinId}` : resourceCodename;
-
-  return makeUrl(`spine/${resourceName.toLowerCase()}/${isStaying ? 'R' : ''}${resourceName}.${ext}`);
+  return makeUrl(`spine/${resourceName}/${isStaying ? 'R' : ''}${resourceName}.${ext}`);
 };
