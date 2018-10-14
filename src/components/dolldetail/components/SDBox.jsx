@@ -117,9 +117,9 @@ class SDBox extends React.Component {
       if (e === 'victoryloop') { return sum; }
 
       if (ANIMATION_SORT_ORDER.includes(e)) {
-        sum.general.push({ value: e, name: t(`SD Motion.${e}`) });
+        sum.general.push({ value: e, name: t(`PageMessage.Doll.SD Motion.${e}`) });
       } else {
-        sum.special.push({ value: e, name: t(`SD Motion.${e}`) });
+        sum.special.push({ value: e, name: t(`PageMessage.Doll.SD Motion.${e}`) });
       }
       return sum;
     }, { general: [], special: [] });

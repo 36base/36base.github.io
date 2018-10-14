@@ -10,8 +10,8 @@ import InfoBox from '../../common/InfoBox';
 
 const style = theme => ({
   container: {
-    paddingTop: theme.spacing.unit * 0.75,
-    paddingBottom: theme.spacing.unit * 0.75,
+    paddingTop: theme.spacing.unit * 1,
+    paddingBottom: theme.spacing.unit * 1,
     paddingLeft: theme.spacing.unit * 2,
   },
 });
@@ -35,7 +35,7 @@ const ScriptBox = ({
     return [
       <Grid key="row" className={classes.container} container spacing={8}>
         <Grid item xs><Typography>{t(`PageMessage.Doll.Script.${key}`)}</Typography></Grid>
-        <Grid item xs={8}><Typography dangerouslySetInnerHTML={{ __html: str }} /></Grid>
+        <Grid item xs={10}><Typography dangerouslySetInnerHTML={{ __html: str }} /></Grid>
       </Grid>,
       <HorizonLine key="hr" />,
     ];
