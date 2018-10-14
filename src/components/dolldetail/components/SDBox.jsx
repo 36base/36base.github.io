@@ -39,6 +39,7 @@ const ANIMATION_SORT_ORDER = [
   'sit',
   'lying',
   'attack',
+  'attack2',
   'die',
   'victory',
 ];
@@ -114,7 +115,7 @@ class SDBox extends React.Component {
     const player = new spine.Spine(skeleton);
     const spineAnimations = player.spineData.animations.map(e => e.name);
     const organizedAnimations = spineAnimations.reduce((sum, e) => {
-      if (e === 'victoryloop') { return sum; }
+      if (e === 'victoryloop' || e === 'animation') { return sum; }
 
       if (ANIMATION_SORT_ORDER.includes(e)) {
         sum.general.push({ value: e, name: t(`PageMessage.Doll.SD Motion.${e}`) });

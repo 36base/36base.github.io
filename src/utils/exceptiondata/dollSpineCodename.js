@@ -11,6 +11,9 @@
 // },
 
 export default {
+  AK74U: { // 95
+    codename: 'AK74u',
+  },
   '88type': { // 95
     1809: {
       bypass: 0,
@@ -29,8 +32,20 @@ export default {
       codename: 'UMP9',
     },
   },
+  Mk48: { // 121
+    codename: 'MK48',
+  },
   SuperSASS: { // 124
     codename: 'SuperSass',
+  },
+  EVO3: { // 131
+    0: {
+      png: { stay: 'evo3' },
+      skel: { stay: 'evo3' },
+    },
+  },
+  Saiga12: { // 160
+    codename: 'SAIGA12',
   },
   PzB39: { // 180
     codename: 'PZB39',
