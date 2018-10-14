@@ -63,7 +63,10 @@
     "victory": "승리",
     "lying": "취침",
     "pick": "선택",
-    "sit": "앉기"
+    "sit": "앉기",
+    "snipe": "저격",
+    "59_rock_roll": "Rock & Roll",
+    "3306_swim": "수영"
   },
   "PageMessage": {
     "No Data": "데이터 없음",

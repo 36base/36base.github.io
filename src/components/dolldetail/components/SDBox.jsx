@@ -32,6 +32,17 @@ const style = theme => ({
 
 const VIEW_ID = 'dolldetail-sd-view';
 
+const ANIMATION_SORT_ORDER = [
+  'wait',
+  'move',
+  'pick',
+  'sit',
+  'lying',
+  'attack',
+  'die',
+  'victory',
+];
+
 class SDBox extends React.Component {
   constructor(props) {
     super(props);
@@ -102,15 +113,24 @@ class SDBox extends React.Component {
 
     const player = new spine.Spine(skeleton);
     const spineAnimations = player.spineData.animations.map(e => e.name);
-    const animations = spineAnimations.reduce((sum, e) => {
-      if (e !== 'victoryloop') {
-        sum.push({ value: e, name: t(`SD Motion.${e}`) });
+    const organizedAnimations = spineAnimations.reduce((sum, e) => {
+      if (e === 'victoryloop') { return sum; }
+
+      if (ANIMATION_SORT_ORDER.includes(e)) {
+        sum.general.push({ value: e, name: t(`SD Motion.${e}`) });
+      } else {
+        sum.special.push({ value: e, name: t(`SD Motion.${e}`) });
       }
       return sum;
-    }, []);
+    }, { general: [], special: [] });
+    organizedAnimations.general.sort((a, b) => (
+      (ANIMATION_SORT_ORDER.findIndex(e => e === a.value))
+      > (ANIMATION_SORT_ORDER.findIndex(e => e === b.value))
+    ));
+    const animations = [...(organizedAnimations.general), ...(organizedAnimations.special)];
     const scale = 1;
 
-    player.position.set(width * 1.5, height - ((player.height * scale) / 5));
+    player.position.set(width * 1.5, height - ((player.height * scale) / 2));
     player.scale.set(scale);
     player.animation_num = 0;
     player.state.setAnimationByName(0, animations[0].value, true);

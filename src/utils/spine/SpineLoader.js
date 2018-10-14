@@ -55,7 +55,10 @@ async function loadSpine(dollId, skinCode, isStaying = false) {
       response.png = await request('GET', getSpineResourceUrl(dollCode, true, skinCode, 'png'));
       response.skel = await request('GET', getSpineResourceUrl(dollCode, true, skinCode, 'skel'));
 
-      if (!isRequestSuccess(response)) {
+      if (!(isRequestSuccess(response.atlas)
+        && isRequestSuccess(response.png)
+        && isRequestSuccess(response.skel)
+      )) {
         resourceUrl.atlas = getSpineResourceUrl(dollCode, false, skinCode, 'atlas');
         resourceUrl.png = getSpineResourceUrl(dollCode, false, skinCode, 'png');
       }
