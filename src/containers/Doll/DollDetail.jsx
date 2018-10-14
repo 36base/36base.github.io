@@ -3,6 +3,7 @@ import { compose } from 'redux';
 import { translate } from 'react-i18next';
 import { Grid } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
+import gfextradata from 'girlsfrontline-extra-data';
 
 import HorizonLine from '../../components/common/HorizonLine';
 import Background from '../../components/dolldetail/components/Background';
@@ -147,7 +148,7 @@ class DollDetail extends Component {
   }
 
   render() {
-    const { classes, t } = this.props;
+    const { classes, t, i18n } = this.props;
     const {
       info,
       images,
@@ -159,9 +160,9 @@ class DollDetail extends Component {
       isSdStaying,
     } = this.state;
 
-    const extra = t(info.extra).split(',');
-
     if (info === undefined || images === undefined) return (<div />);
+
+    const extra = t(info.extra).split(',');
 
     let color = '#505694';
 
@@ -172,17 +173,16 @@ class DollDetail extends Component {
       case 5: color = (info.rank.name === 'Extra') ? '#505694' : '#a97744'; break;
       default: color = '#505694';
     }
-    // <Grid className={classes.boxWrapper} item xs={12}>
-    //   <BasicInfoBox
-    //     armType={info.type.name}
-    //     illust={info.illust}
-    //     voice={info.voice}
-    //   />
-    // </Grid>
 
-    // <Grid className={classes.boxWrapper} item xs={12}>
-    //   <SDBox width={250} height={250} skeleton={skeleton} />
-    // </Grid>
+    const { script: DollScript } = gfextradata({ locale: i18n.language });
+
+    let script = DollScript[info.codename];
+
+    if (parseInt(skinCode / 100, 10) === 9) { // 아동절 스킨 대사
+      script = DollScript[`${info.codename}_0`];
+    }
+    console.log(script);
+
     return (
       <div className={classes.wrapper}>
         <Background color={color} />
@@ -277,10 +277,10 @@ class DollDetail extends Component {
             />
           </Grid>
           <Grid className={classes.boxWrapper} item xs={12}>
-            <IntroduceBox {...{ id: info.id, skinCode }} />
+            <IntroduceBox script={script} />
           </Grid>
           <Grid className={classes.boxWrapper} item xs={12}>
-            <ScriptBox {...{ id: info.id, skinCode }} />
+            <ScriptBox script={script} />
           </Grid>
         </div>
       </div>

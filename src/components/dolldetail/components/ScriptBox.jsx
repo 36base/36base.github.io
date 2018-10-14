@@ -17,21 +17,11 @@ const style = theme => ({
 });
 
 const ScriptBox = ({
-  t, id, skinCode, classes,
+  t, classes, script,
 }) => {
-  const { characterScript } = gfextradata({ locale: 'ko' });
-
-  let script = { };
-  if (characterScript[id]) {
-    script = characterScript[id].default;
-
-    if (characterScript[id][skinCode]) {
-      script = characterScript[id][skinCode];
-    }
-  }
-
   const buildRow = (key, value) => {
-    const str = value.replace(/<>/gi, '<br>');
+    const line = (value || ['']).join(', ');
+    const str = line.replace(/<>/gi, '<br>');
     return [
       <Grid key="row" className={classes.container} container spacing={8}>
         <Grid item xs><Typography>{t(`PageMessage.Doll.Script.${key}`)}</Typography></Grid>
@@ -43,14 +33,13 @@ const ScriptBox = ({
 
   return (
     <InfoBox name={t('PageMessage.Doll.CharacterScript')}>
-      {characterScript[id]
-        ? Object.keys(script).map(iter => (iter === 'Introduce' ? (<div />) : buildRow(iter, script[iter])))
+      {script
+        ? Object.keys(script).map(iter => (iter === 'introduce' ? (<div />) : buildRow(iter, script[iter])))
         : [
           <Grid key="row" className={classes.container} container spacing={8}>
             <Grid item xs>
               <Typography>
-                [Error]
-                {' '}
+                {'[Error] '}
                 {t('PageMessage.No Data')}
               </Typography>
 
