@@ -3,7 +3,6 @@ import { compose } from 'redux';
 import { translate } from 'react-i18next';
 import { Grid, Typography } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
-import gfextradata from 'girlsfrontline-extra-data';
 
 import HorizonLine from '../../common/HorizonLine';
 import InfoBox from '../../common/InfoBox';

@@ -178,10 +178,10 @@ class DollDetail extends Component {
 
     let script = DollScript[info.codename];
 
-    if (parseInt(skinCode / 100, 10) === 9) { // 아동절 스킨 대사
+    const skinCodeHead = parseInt(skinCode / 100, 10);
+    if (skinCodeHead === 9 || skinCodeHead === 22) { // 아동절 스킨 대사
       script = DollScript[`${info.codename}_0`];
     }
-    console.log(script);
 
     return (
       <div className={classes.wrapper}>
