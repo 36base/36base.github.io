@@ -57,7 +57,7 @@
     "file-loader": "1.1.5",
     "fs-extra": "3.0.1",
     "girlsfrontline-core": "^2.1.6-beta10",
-    "girlsfrontline-extra-data": "^1.2.1",
+    "girlsfrontline-extra-data": "^1.2.2",
     "html-webpack-plugin": "2.29.0",
     "i18next": "^11.9.0",
     "i18next-browser-languagedetector": "^2.2.3",

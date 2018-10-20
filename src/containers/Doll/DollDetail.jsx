@@ -174,14 +174,9 @@ class DollDetail extends Component {
       default: color = '#505694';
     }
 
-    const { script: DollScript } = gfextradata({ locale: i18n.language });
+    const { getScript } = gfextradata({ locale: i18n.language });
 
-    let script = DollScript[info.codename];
-
-    const skinCodeHead = parseInt(skinCode / 100, 10);
-    if (skinCodeHead === 9 || skinCodeHead === 22) { // 아동절 스킨 대사
-      script = DollScript[`${info.codename}_0`];
-    }
+    const script = getScript(info.codename, skinCode);
 
     return (
       <div className={classes.wrapper}>
