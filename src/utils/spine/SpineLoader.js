@@ -32,38 +32,39 @@ function hit(dollCode, skinCode, type) {
   return (skinCode in (cache[dollCode][type]));
 }
 
-async function loadSpine(dollId, skinCode, isStaying = false) {
+async function loadSpine(dollId, skinCode, type) {
   const dollSpine = getDollSpine(dollId);
 
   const dollCode = dollSpine.code;
-  const type = isStaying ? 'stay' : 'battle';
 
   if (!hit(dollCode, skinCode, type)) {
     const exts = dollSpine.names[skinCode];
     const getName = ext => [dollCode, type, skinCode, ext].join('-');
 
     const resourceUrl = {
-      atlas: getSpineResourceUrl(dollCode, isStaying, skinCode, 'atlas'),
-      png: getSpineResourceUrl(dollCode, isStaying, skinCode, 'png'),
-      skel: getSpineResourceUrl(dollCode, isStaying, skinCode, 'skel'),
+      atlas: getSpineResourceUrl(dollCode, type, skinCode, 'atlas'),
+      png: getSpineResourceUrl(dollCode, type, skinCode, 'png'),
+      skel: getSpineResourceUrl(dollCode, type, skinCode, 'skel'),
     };
 
-    if (isStaying) {
+    if (type !== 'battle') {
+      // 전투: 'battle', 숙소: 'stay'
       // 숙소 SD 데이터중 숙소버전 atlas 와 png 가 따로 없고 전투용과 공유하는 경우가 있기에, 해당 경우 처리 (파일 존재 여부 확인)
       const response = { atlas: null, png: null, skel: null };
-      response.atlas = await request('GET', getSpineResourceUrl(dollCode, true, skinCode, 'atlas'));
-      response.png = await request('GET', getSpineResourceUrl(dollCode, true, skinCode, 'png'));
-      response.skel = await request('GET', getSpineResourceUrl(dollCode, true, skinCode, 'skel'));
+      response.atlas = await request('GET', getSpineResourceUrl(dollCode, 'stay', skinCode, 'atlas'));
+      response.png = await request('GET', getSpineResourceUrl(dollCode, 'stay', skinCode, 'png'));
+      response.skel = await request('GET', getSpineResourceUrl(dollCode, 'stay', skinCode, 'skel'));
 
       if (!(isRequestSuccess(response.atlas)
         && isRequestSuccess(response.png)
         && isRequestSuccess(response.skel)
       )) {
-        resourceUrl.atlas = getSpineResourceUrl(dollCode, false, skinCode, 'atlas');
-        resourceUrl.png = getSpineResourceUrl(dollCode, false, skinCode, 'png');
+        resourceUrl.atlas = getSpineResourceUrl(dollCode, 'battle', skinCode, 'atlas');
+        resourceUrl.png = getSpineResourceUrl(dollCode, 'battle', skinCode, 'png');
       }
     }
 
+    loader.reset();
     exts.forEach((ext) => {
       loader.add(
         getName(ext),
@@ -97,9 +98,4 @@ async function loadSpine(dollId, skinCode, isStaying = false) {
   return cache[dollCode][type][skinCode];
 }
 
-async function loadDefaultSpine(dollId) {
-  const skeleton = await loadSpine(dollId, 0);
-  return skeleton;
-}
-
-export default { loadSpine, loadDefaultSpine };
+export default { loadSpine };

@@ -21,21 +21,21 @@ const ScriptBox = ({
   const buildRow = (key, value) => {
     const line = (value || ['']).join(', ');
     const str = line.replace(/<>/gi, '<br>');
-    return [
-      <Grid key="row" className={classes.container} container spacing={8}>
+    return (
+      <Grid key={key} className={classes.container} container spacing={8}>
         <Grid item xs><Typography>{t(`PageMessage.Doll.Script.${key}`)}</Typography></Grid>
         <Grid item xs={10}><Typography dangerouslySetInnerHTML={{ __html: str }} /></Grid>
-      </Grid>,
-      <HorizonLine key="hr" />,
-    ];
+        <Grid item xs={12}><HorizonLine /></Grid>
+      </Grid>
+    );
   };
 
   return (
     <InfoBox name={t('PageMessage.Doll.CharacterScript')}>
       {script
-        ? Object.keys(script).map(iter => (iter === 'introduce' ? (<div />) : buildRow(iter, script[iter])))
-        : [
-          <Grid key="row" className={classes.container} container spacing={8}>
+        ? Object.keys(script).map(iter => (iter === 'introduce' ? (<div key="introduce" />) : buildRow(iter, script[iter])))
+        : (
+          <Grid key="error" className={classes.container} container spacing={8}>
             <Grid item xs>
               <Typography>
                 {'[Error] '}
@@ -43,9 +43,9 @@ const ScriptBox = ({
               </Typography>
 
             </Grid>
-          </Grid>,
-          <HorizonLine key="hr" />,
-        ]
+            <Grid item xs={12}><HorizonLine /></Grid>
+          </Grid>
+        )
       }
     </InfoBox>
   );

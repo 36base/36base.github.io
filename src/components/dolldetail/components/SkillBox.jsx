@@ -51,7 +51,7 @@ class SkillBox extends React.Component {
     const { classes } = this.props;
 
     return (
-      <Typography align="right" variant="body1">
+      <Typography align="right" variant="body1" key={label}>
         {`${label} `}
         <span className={classes.yellow}>
           {value}
@@ -87,7 +87,7 @@ class SkillBox extends React.Component {
             </div>
           </Grid>
           <Grid className={classes.alignMiddle} item xs={4}>
-            <Typography variant="display1">{t(name)}</Typography>
+            <Typography variant="display1" style={{ wordBreak: 'keep-all' }}>{t(name)}</Typography>
           </Grid>
           <Grid className={classes.alignBottom} item xs={4}>
             {this.renderProperty(t('Skill.Initial Cooldown'), `${initialCooldown / 30}${t('Skill.sec')}`)}

@@ -33,13 +33,13 @@ class SkinTabbar extends React.Component {
       onChange,
     } = this.props;
 
-    return skins.map((skin, i) => (
+    return skins.map(skin => (
       <Button
         key={skin.id}
         className={classes.button}
         variant="raised"
-        color={selected === i ? 'primary' : 'default'}
-        onClick={() => onChange(i)}
+        color={selected === skin.id ? 'primary' : 'default'}
+        onClick={() => onChange(skin.id)}
       >
         {skin.name}
       </Button>

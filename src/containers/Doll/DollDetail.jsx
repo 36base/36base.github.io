@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { compose } from 'redux';
 import { translate } from 'react-i18next';
 import { Grid } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 import gfextradata from 'girlsfrontline-extra-data';
 
@@ -24,113 +25,107 @@ import ScriptBox from '../../components/dolldetail/components/ScriptBox';
 
 import DollRepository from '../../repositories/DollRepository';
 import SpineLoader from '../../utils/spine/SpineLoader';
-
-import getDollSpine from '../../utils/spine/getDollSpine';
-
 import { getDollResourceUrl } from '../../utils/url';
 
 import styles from './DollDetailStyles';
 
 class DollDetail extends Component {
   state = {
-    info: undefined,
-    images: undefined,
-    // skeleton: undefined,
+    info: null,
+    skeleton: undefined,
     hasMod: false,
-    isSdStaying: false,
-    skinCode: 0,
-    skinNo: 0,
-    skinType: 'normal',
+    selected: {
+      skinCode: 0,
+      skinType: 'normal',
+      sdType: 'battle',
+    },
   };
 
   componentWillMount() {
     const { match } = this.props;
     const dollId = Number(match.params.id);
 
-    this.setState({ info: DollRepository.getNewById(dollId) }, () => {
-      const { info } = this.state;
-      const {
-        id,
-        codename,
-        skins,
-      } = info;
-
-      const spine = getDollSpine(id);
-      const spineNames = spine ? Object.keys(spine.names) : Array(skins.length + 1);
-      const base = {
-        id: 0,
-        name: 'PageMessage.Doll.Default',
-        spineCode: spineNames[0],
-        normal: getDollResourceUrl(codename, 'normal'),
-        damaged: getDollResourceUrl(codename, 'damaged'),
-      };
-
-      const images = [
-        base,
-        ...((info.id < 20000) ? (skins.map((e, i) => ({
-          id: e.id,
-          name: e.name,
-          spineCode: spineNames[i + 1],
-          normal: getDollResourceUrl(codename, 'normal', { skin: e.id }),
-          damaged: getDollResourceUrl(codename, 'damaged', { skin: e.id }),
-        }))) : []),
-      ];
-      this.setState({ images });
-    });
-    /*
-    if (id < 20000) {
-      DollRepository.fetchById(id + 20000)
-        .then((info) => {
-          if (info) this.setState({ hasMod: true });
-        });
-    }
-    */
-    SpineLoader.loadDefaultSpine(dollId)
-      .then(skeleton => this.setState({ skeleton }));
+    this.load(dollId);
   }
 
   componentDidMount() {
     window.scrollTo(0, 0);
   }
 
-  handleSkinChange = (no) => {
+  componentWillReceiveProps(nextProps) {
+    const { match } = nextProps;
+    const dollId = Number(match.params.id);
+
+    this.load(dollId);
+  }
+
+  load = (dollId) => {
+    const info = DollRepository.getNewById(dollId);
+
+    if (info) {
+      this.setState({
+        info,
+        hasMod: (dollId < 20000 && DollRepository.getNewById(dollId + 20000)),
+      });
+
+      const { selected: { sdType } } = this.state;
+
+      SpineLoader.loadSpine(
+        dollId,
+        0,
+        sdType,
+      ).then(skeleton => this.setState({ skeleton }));
+    }
+  }
+
+  handleSkinChange = (newSelectedSkinCode) => {
     const {
       info: { id },
-      images,
-      isSdStaying,
+      selected: { sdType },
     } = this.state;
 
     SpineLoader.loadSpine(
-      (id > 20000 && no !== 0) ? id - 20000 : id,
-      images[no].id,
-      isSdStaying,
+      id,
+      newSelectedSkinCode,
+      sdType,
     ).then(skeleton => this.setState({ skeleton }));
 
-    this.setState({
-      skinNo: no,
-      skinCode: images[no].id,
-    });
+    this.setState(prevState => ({
+      selected: {
+        ...prevState.selected,
+        skinCode: newSelectedSkinCode,
+      },
+    }));
   }
 
   toggleSkinType = () => {
     this.setState(prevState => ({
-      skinType: prevState.skinType === 'normal' ? 'damaged' : 'normal',
+      selected: {
+        ...prevState.selected,
+        skinType: prevState.selected.skinType === 'normal' ? 'damaged' : 'normal',
+      },
     }));
   }
 
-  toggleSdStaying = () => {
-    this.setState(prevState => ({ isSdStaying: !(prevState.isSdStaying) }), () => {
+  toggleSdType = () => {
+    this.setState(prevState => ({
+      selected: {
+        ...prevState.selected,
+        sdType: prevState.selected.sdType === 'battle' ? 'stay' : 'battle',
+      },
+    }), () => {
       const {
         info: { id },
-        images,
-        skinNo,
-        isSdStaying,
+        selected: {
+          skinCode,
+          sdType,
+        },
       } = this.state;
 
       SpineLoader.loadSpine(
-        (id > 20000 && skinNo !== 0) ? id - 20000 : id,
-        images[skinNo].id,
-        isSdStaying,
+        (id > 20000 && skinCode !== 0) ? id - 20000 : id,
+        skinCode,
+        sdType,
       ).then(skeleton => this.setState({ skeleton }));
     });
   }
@@ -151,16 +146,15 @@ class DollDetail extends Component {
     const { classes, t, i18n } = this.props;
     const {
       info,
-      images,
       skeleton,
-      skinNo,
-      skinCode,
-      skinType,
       hasMod,
-      isSdStaying,
+      selected: {
+        skinCode,
+        skinType,
+      },
     } = this.state;
 
-    if (info === undefined || images === undefined) return (<div />);
+    if (!info) return (<div />);
 
     const extra = t(info.extra).split(',');
 
@@ -184,17 +178,21 @@ class DollDetail extends Component {
         <div className={classes.header}>
           <Grid container>
             <Caption name={t(info.name)} />
-            <NumberBox id={info.id < 20000 ? info.id : info.id - 20000} />
+            <NumberBox id={info.id % 1000} />
             <Grid container className={classes.titleLine}>
               <HorizonLine height={3} />
             </Grid>
             <Grid container>
               <Grid item xs={8} md={10}>
                 <SkinTabbar
-                  selected={skinNo}
-                  skins={images.map((item) => {
-                    const name = t(item.name);
-                    return { id: item.id, name: (name.lastIndexOf('-') !== -1) ? name.substr(name.lastIndexOf('-') + 1) : name };
+                  selected={skinCode}
+                  skins={[{ id: 0, name: 'PageMessage.Doll.Default' }, ...info.skins].map((e) => {
+                    const name = t(e.name);
+
+                    return {
+                      id: e.id,
+                      name: (name.lastIndexOf('-') !== -1) ? name.substr(name.lastIndexOf('-') + 1) : name,
+                    };
                   })}
                   onChange={this.handleSkinChange}
                 />
@@ -205,7 +203,7 @@ class DollDetail extends Component {
         </div>
         <div className={classes.img}>
           <TypeSwitchBox on={skinType === 'damaged'} toggle={this.toggleSkinType} />
-          <Illust src={images[skinNo][skinType]} />
+          <Illust src={getDollResourceUrl(info.codename, skinType, { skin: skinCode })} />
         </div>
         <div className={classes.info}>
           <Grid className={classes.boxWrapper} item xs={12}>
@@ -223,26 +221,21 @@ class DollDetail extends Component {
             />
           </Grid>
           {hasMod && (
-          <Grid className={classes.boxWrapper} item xs={12}>
-            <a href={info.id + 20000} className={classes.button}>
-              {t('PageMessage.Doll.MOD Ver Link')}
-            </a>
-          </Grid>
+            <Grid className={classes.boxWrapper} item xs={12}>
+              <Link className={classes.button} to={`${info.id + 20000}`}>{t('PageMessage.Doll.MOD Ver Link')}</Link>
+            </Grid>
           )}
           {info.id > 20000 && (
-          <Grid className={classes.boxWrapper} item xs={12}>
-            <a href={info.id - 20000} className={classes.button}>
-              {t('PageMessage.Doll.NON-MOD Ver Link')}
-            </a>
-          </Grid>
+            <Grid className={classes.boxWrapper} item xs={12}>
+              <Link className={classes.button} to={`${info.id - 20000}`}>{t('PageMessage.Doll.NON-MOD Ver Link')}</Link>
+            </Grid>
           )}
           <Grid className={classes.boxWrapper} item xs={12}>
             <SDBox
               width={250}
               height={350}
               skeleton={skeleton}
-              toggleStayingHandler={this.toggleSdStaying}
-              isStaying={isSdStaying}
+              toggleStayingHandler={this.toggleSdType}
             />
           </Grid>
           <Grid className={classes.boxWrapper} item xs={12}>

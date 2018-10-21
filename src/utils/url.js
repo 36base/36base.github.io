@@ -37,8 +37,8 @@ export const getSkillIconUrl = codename => makeUrl(`icon/skillicon/${codename}.p
 export const getEquipIconUrl = codename => makeUrl(`icon/equip/${codename}.png`);
 
 // ext is 'png' or 'skel' or 'atlas'
-export const getSpineResourceUrl = (codename, isStaying, skinId, ext) => {
-  const resourceName = skinId ? `${codename}_${skinId}` : codename;
+export const getSpineResourceUrl = (codename, type, skin, ext) => {
+  const resourceName = skin ? `${codename}_${skin}` : codename;
 
-  return makeUrl(`spine/${resourceName}/${isStaying ? 'R' : ''}${resourceName}.${ext}`);
+  return makeUrl(`spine/${resourceName}/${type === 'stay' ? 'R' : ''}${resourceName}.${ext}`);
 };
