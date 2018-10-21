@@ -32,6 +32,8 @@ const style = theme => ({
 
 const VIEW_ID = 'dolldetail-sd-view';
 
+let prevTime = 0;
+
 const ANIMATION_SORT_ORDER = [
   'wait',
   'move',
@@ -49,7 +51,7 @@ class SDBox extends React.Component {
     super(props);
 
     this.state = {
-      time: 0,
+      ticker: new PIXI.ticker.Ticker(),
       isUpdate: true,
       animations: [],
       animationName: '',
@@ -58,6 +60,10 @@ class SDBox extends React.Component {
       renderer: PIXI.autoDetectRenderer(props.width * 3, props.height, { transparent: true }),
       hasVictoryLoop: true,
     };
+
+    const { ticker } = this.state;
+    ticker.autoStart = false;
+    ticker.stop();
   }
 
   componentDidMount() {
@@ -94,6 +100,10 @@ class SDBox extends React.Component {
     );
   }
 
+  componentWillUnmount() {
+    this.clear();
+  }
+
   setAnimation = (name) => {
     const { player } = this.state;
     if (player) {
@@ -110,9 +120,10 @@ class SDBox extends React.Component {
 
   setSpine = (skeleton) => {
     const { t, width, height } = this.props;
-    const { stage, renderer } = this.state;
+    const { ticker, stage, renderer } = this.state;
 
     const player = new spine.Spine(skeleton);
+
     const spineAnimations = player.spineData.animations.map(e => e.name);
     const organizedAnimations = spineAnimations.reduce((sum, e) => {
       if (e === 'victoryloop' || e === 'animation') { return sum; }
@@ -129,6 +140,7 @@ class SDBox extends React.Component {
       > (ANIMATION_SORT_ORDER.findIndex(e => e === b.value))
     ));
     const animations = [...(organizedAnimations.general), ...(organizedAnimations.special)];
+
     const scale = 1;
 
     player.position.set(width * 1.5, height - ((player.height * scale) / 2));
@@ -148,14 +160,15 @@ class SDBox extends React.Component {
       hasVictoryLoop: spineAnimations.indexOf('victoryloop') >= 0,
     });
 
-    window.requestAnimationFrame(e => this.tick(e));
     stage.addChild(player);
+    ticker.add(this.tick);
     renderer.render(stage);
+
+    ticker.start();
   }
 
-  tick = (time) => {
+  tick = () => {
     const {
-      time: stateTime,
       isUpdate,
       animationName,
       hasVictoryLoop,
@@ -163,11 +176,13 @@ class SDBox extends React.Component {
       stage,
     } = this.state;
 
-    window.requestAnimationFrame(t => this.tick(t));
-    const d = (time - stateTime) / 1000;
-    this.setState({ time });
-
     const { player } = this.state;
+
+    const time = Date.now();
+
+    const d = (time - prevTime) / 1000;
+    prevTime = time;
+
 
     if (isUpdate && player) {
       const track = player.state.tracks[0];
@@ -181,13 +196,14 @@ class SDBox extends React.Component {
             if (hasVictoryLoop) {
               player.state.clearTrack();
               player.state.setAnimationByName(0, 'victoryloop', true);
-              player.update(0);
+              player.update(d);
             } else {
               player.update(d);
             }
             break;
           default:
             player.update(d);
+            break;
         }
       } else {
         player.update(d);
@@ -198,7 +214,9 @@ class SDBox extends React.Component {
   }
 
   clear = () => {
-    const { stage } = this.state;
+    const { stage, ticker } = this.state;
+
+    ticker.stop();
     stage.removeChildren();
     this.setState({
       player: null,
