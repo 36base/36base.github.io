@@ -82,13 +82,17 @@ class DollDict extends React.Component {
   }
 }
 
-const stateMapper = state => ({
-  dolls: state.dollDict.dolls,
-});
+const mapStateToProps = (state) => {
+  const { dolls } = state.dollDict;
+
+  return {
+    dolls: Object.keys(dolls).map(e => dolls[e]),
+  };
+};
 
 export default compose(
   translate(),
-  connect(stateMapper),
+  connect(mapStateToProps),
   withRouter,
   withStyles(style),
 )(DollDict);

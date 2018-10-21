@@ -1,10 +1,10 @@
 import { dolls } from 'girlsfrontline-core';
 import Doll from 'girlsfrontline-core/lib/doll';
 
-// import gfextradata from 'girlsfrontline-extra-data';
+import gfextradata from 'girlsfrontline-extra-data';
 import dollRank from './data/dollRank.json';
 
-// const { dollNickname } = gfextradata({ locale: 'ko' });
+const { alias: { doll: dollAlias } } = gfextradata({ locale: 'ko' });
 
 const buildData = (doll) => {
   const { id, skins } = doll;
@@ -16,16 +16,25 @@ const buildData = (doll) => {
     {
       skins: skins.filter(skin => parseInt(skin.id / 1000, 10) !== 5), // 5000 번대 스킨 쓸모없는 것 같음
       rank: dollRank[rank],
+      alias: dollAlias[doll.id] || [],
     },
   );
 };
 
-// const dollList = dolls.map(doll => buildData(doll));
-// const dollMap = new Map(dollList.map(e => [e.id, e]));
+const dollMap = new Map(dolls.map(e => [e.id, e]));
 
-const getAll = () => dolls.map(doll => buildData(new Doll(doll.toJSON())));
+const getAll = () => {
+  const dollDict = {};
+
+  dollMap.forEach((e, id) => {
+    dollDict[id] = buildData(new Doll(e.toJSON()));
+  });
+
+  return dollDict;
+};
+
 const getNewById = (id) => {
-  const doll = dolls.find(item => item.id === id);
+  const doll = dollMap.get(id);
   if (!doll) { return null; }
 
   return buildData(new Doll(doll.toJSON()));

@@ -77,8 +77,9 @@ FairyDict.propTypes = {
 
 const mapStateToProps = (state) => {
   const { fairies, viewType, fairyTable } = state.fairyDict;
+
   return {
-    fairies,
+    fairies: Object.keys(fairies).map(e => fairies[e]),
     viewType,
     fairyTable,
   };

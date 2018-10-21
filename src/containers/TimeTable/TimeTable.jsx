@@ -211,11 +211,19 @@ class TimeTable extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  dolls: state.dollDict.dolls,
-  equips: state.equipDict.equips,
-  fairies: state.fairyDict.fairies,
-});
+const mapStateToProps = (state) => {
+  const {
+    dollDict: { dolls },
+    equipDict: { equips },
+    fairyDict: { fairies },
+  } = state;
+
+  return {
+    dolls: Object.keys(dolls).map(e => dolls[e]),
+    equips: Object.keys(equips).map(e => equips[e]),
+    fairies: Object.keys(fairies).map(e => fairies[e]),
+  };
+};
 
 export default compose(
   translate(),

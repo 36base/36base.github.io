@@ -98,9 +98,14 @@ class EquipDict extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  equips: state.equipDict.equips,
-});
+
+const mapStateToProps = (state) => {
+  const { equips } = state.equipDict;
+
+  return {
+    equips: Object.keys(equips).map(e => equips[e]),
+  };
+};
 
 export default compose(
   withStyles(styles),

@@ -1,6 +1,9 @@
 
 import { equips } from 'girlsfrontline-core';
 import Equip from 'girlsfrontline-core/lib/equip';
+import gfextradata from 'girlsfrontline-extra-data';
+
+const { alias: { equip: equipAlias } } = gfextradata({ locale: 'ko' });
 
 const getColor = (rank) => {
   let color;
@@ -20,13 +23,24 @@ const buildData = equip => Object.assign(
   {
     buildTime: ((equip.fitGuns || equip.company === '16Lab') ? 0 : equip.buildTime),
     color: getColor(equip.rank),
+    alias: equipAlias[equip.id] || [],
   },
 );
 
-const getAll = () => equips.map(equip => buildData(new Equip(equip.toJSON())));
+const equipMap = new Map(equips.map(e => [e.id, e]));
+
+const getAll = () => {
+  const equipDict = {};
+
+  equipMap.forEach((e, id) => {
+    equipDict[id] = buildData(new Equip(e.toJSON()));
+  });
+
+  return equipDict;
+};
 
 const getNewById = (id) => {
-  const equip = equips.find(item => item.id === id);
+  const equip = equipMap.get(id);
   if (!equip) { return null; }
 
   return buildData(new Equip(equip.toJSON()));
