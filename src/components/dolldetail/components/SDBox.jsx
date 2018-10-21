@@ -29,18 +29,20 @@ const style = theme => ({
   },
 });
 
-const ANIMATION_SORT_ORDER = [
-  'wait',
-  'move',
-  'pick',
-  'sit',
-  'lying',
-  'attack',
-  'attack2',
-  's',
-  'die',
-  'victory',
-];
+const sortOrder = (val) => {
+  const idx = [
+    'wait',
+    'move',
+    'pick',
+    'sit',
+    'lying',
+    'attack',
+    'attack2',
+    'die',
+    'victory',
+  ].indexOf(val);
+  return idx === -1 ? 99 : idx;
+};
 
 class SDBox extends Component {
   state = {
@@ -75,10 +77,7 @@ class SDBox extends Component {
     const animations = skeleton.animations
       .map(anim => anim.name)
       .filter(anim => anim !== 'victoryloop')
-      .sort((a, b) => (
-        ANIMATION_SORT_ORDER.findIndex(e => e === a)
-        - ANIMATION_SORT_ORDER.findIndex(e => e === b)
-      ))
+      .sort((a, b) => sortOrder(a) - sortOrder(b))
       .map(anim => ({ value: anim, name: t(`PageMessage.Doll.SD Motion.${anim}`) }));
     let selector = null;
     if (animations.length > 0) {
