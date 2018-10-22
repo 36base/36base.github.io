@@ -7,7 +7,9 @@ import { Grid } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 
 import DollCard from '../../components/Doll/DollCard';
-// import SearchBar from './components/SearchBar';
+import SearchBar from '../../components/SearchBar';
+
+import Predicate from '../../repositories/data/predicate';
 
 const style = theme => ({
   wrapper: {
@@ -56,17 +58,93 @@ const style = theme => ({
 
 // eslint-disable-next-line react/prefer-stateless-function
 class DollDict extends React.Component {
-  render() {
-    const { t, classes, dolls } = this.props;
+  state = {
+    filter: {
+      rank: [],
+      type: [],
+      name: [],
+    },
+  };
 
-    // <Grid item xs={12}>
-    //   <SearchBar />
-    // </Grid>
+  addFilter = type => (newData) => {
+    this.setState(prevState => ({
+      ...prevState,
+      filter: {
+        ...prevState.filter,
+        [type]: [...prevState.filter[type], newData],
+      },
+    }));
+  }
+
+  removeFilter = type => (target) => {
+    this.setState(prevState => ({
+      ...prevState,
+      filter: {
+        ...prevState.filter,
+        [type]: prevState.filter[type].filter(e => (
+          (typeof target === 'string') ? (e.indexOf(target) !== 0) : (e !== target)
+        )),
+      },
+    }));
+  }
+
+  render() {
+    const {
+      t,
+      classes,
+      dolls,
+    } = this.props;
+    const { filter } = this.state;
+
+    const searchData = {
+      rank: {
+        type: 'checkbox',
+        label: t('Stat.rarity'),
+        data: [
+          { value: '2', label: `2${t('PageMessage.Star')}` },
+          { value: '3', label: `3${t('PageMessage.Star')}` },
+          { value: '4', label: `4${t('PageMessage.Star')}` },
+          { value: '5', label: `5${t('PageMessage.Star')}` },
+          { value: '1', label: 'Extra' },
+        ],
+        action: {
+          add: this.addFilter('rank'),
+          remove: this.removeFilter('rank'),
+        },
+      },
+      type: {
+        type: 'checkbox',
+        label: t('PageMessage.Type'),
+        data: [
+          { value: 'hg', label: t('PageMessage.Doll.Type.hg') },
+          { value: 'smg', label: t('PageMessage.Doll.Type.smg') },
+          { value: 'ar', label: t('PageMessage.Doll.Type.ar') },
+          { value: 'rf', label: t('PageMessage.Doll.Type.rf') },
+          { value: 'mg', label: t('PageMessage.Doll.Type.mg') },
+          { value: 'sg', label: t('PageMessage.Doll.Type.sg') },
+        ],
+        action: {
+          add: this.addFilter('type'),
+          remove: this.removeFilter('type'),
+        },
+      },
+      name: {
+        type: 'input',
+        label: t('PageMessage.Name, Alias'),
+        action: {
+          add: this.addFilter('name'),
+          remove: this.removeFilter('name'),
+        },
+      },
+    };
 
     return (
       <Grid className={classes.wrapper} container>
+        <Grid item xs={12}>
+          <SearchBar data={searchData} />
+        </Grid>
         <Grid className={classes.cardWrapper}>
-          {dolls.map(doll => (
+          {dolls.filter(doll => Predicate.dollPredicate(t, filter)(doll)).map(doll => (
             <DollCard
               key={doll.id}
               id={doll.id}

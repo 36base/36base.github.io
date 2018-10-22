@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
+import { translate } from 'react-i18next';
+import { Grid } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 
 import EquipRepository from '../../repositories/EquipRepository';
@@ -10,7 +12,9 @@ import EquipTable from './EquipTable';
 import EquipGrid from './EquipGrid';
 import EquipModal from './Modal/EquipModal';
 
-// import * as dictActions from '../../store/modules/fairyDict';
+import SearchBar from '../../components/SearchBar';
+
+import Predicate from '../../repositories/data/predicate';
 
 const styles = {
   wrapper: {
@@ -34,6 +38,11 @@ class EquipDict extends Component {
       viewType: 'module',
       open: selectedEquipId !== null,
       selectedEquipId,
+      filter: {
+        rank: [],
+        type: [],
+        name: [],
+      },
     };
   }
 
@@ -68,23 +77,78 @@ class EquipDict extends Component {
     sort(orderBy);
   }
 
+  addFilter = type => (newData) => {
+    this.setState(prevState => ({
+      ...prevState,
+      filter: {
+        ...prevState.filter,
+        [type]: [...prevState.filter[type], newData],
+      },
+    }));
+  }
+
+  removeFilter = type => (target) => {
+    this.setState(prevState => ({
+      ...prevState,
+      filter: {
+        ...prevState.filter,
+        [type]: prevState.filter[type].filter(e => (
+          (typeof target === 'string') ? (e.indexOf(target) !== 0) : (e !== target)
+        )),
+      },
+    }));
+  }
+
   render() {
-    const { classes, equips } = this.props;
-    const { viewType, open, selectedEquipId } = this.state;
+    const { t, classes, equips } = this.props;
+    const {
+      viewType,
+      open,
+      selectedEquipId,
+      filter,
+    } = this.state;
+
+    const searchData = {
+      rank: {
+        type: 'checkbox',
+        label: t('Stat.rarity'),
+        data: [
+          { value: '2', label: `2${t('PageMessage.Star')}` },
+          { value: '3', label: `3${t('PageMessage.Star')}` },
+          { value: '4', label: `4${t('PageMessage.Star')}` },
+          { value: '5', label: `5${t('PageMessage.Star')}` },
+        ],
+        action: {
+          add: this.addFilter('rank'),
+          remove: this.removeFilter('rank'),
+        },
+      },
+      name: {
+        type: 'input',
+        label: t('PageMessage.Name, Alias'),
+        action: {
+          add: this.addFilter('name'),
+          remove: this.removeFilter('name'),
+        },
+      },
+    };
 
     return (
       <div>
+        <Grid item xs={12}>
+          <SearchBar data={searchData} />
+        </Grid>
         <ViewTypePanel viewType={viewType} onChangeView={this.handleChangeViewType} />
         {viewType === 'headline' && (
           <EquipTable
-            equips={equips}
+            equips={equips.filter(equip => Predicate.equipPredicate(t, filter)(equip))}
             onClick={(equipId) => { this.handleOpen(equipId); }}
           />
         )}
         {viewType === 'module' && (
           <EquipGrid
             className={classes.wrapper}
-            equips={equips}
+            equips={equips.filter(equip => Predicate.equipPredicate(t, filter)(equip))}
             onClick={(equipId) => { this.handleOpen(equipId); }}
           />
         )}
@@ -108,6 +172,7 @@ const mapStateToProps = (state) => {
 };
 
 export default compose(
+  translate(),
   withStyles(styles),
   connect(mapStateToProps, {}),
 )(EquipDict);

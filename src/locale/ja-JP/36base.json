@@ -30,6 +30,7 @@
     "bullet": "Bullet",
     "criticalPercent": "クリティカル確率",
     "criticalHarmRate": "クリティカルダメージ",
+    "cooldown": "CT",
     "armorPiercing": "Armor Pen.",
     "rarity": "開発数値",
     "grow": "成長"
@@ -61,6 +62,8 @@
     "Type": "Type",
     "Introduce": "Introduce",
     "Close": "Close",
+    "Name, Alias": "Name, Alias",
+    "Star": "Star",
     "Doll": {
       "doll": "人形",
       "Mod": "Mod",

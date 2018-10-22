@@ -50,10 +50,9 @@ class Menu extends React.Component {
         {opened && (
           <Collapse className={classes.collapse} key={`${id}_collapse`} in={opened} timeout="auto">
             <List component="div" disablePadding>
-              {
-              Object.keys(children)
-                .map(childKey => this.renderCollapse(childKey, children[childKey]))
-            }
+              {Object.keys(children).map(childKey => (
+                this.renderCollapse(childKey, children[childKey])
+              ))}
             </List>
           </Collapse>)}
       </Fragment>

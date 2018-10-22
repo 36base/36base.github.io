@@ -31,6 +31,7 @@
     "bullet": "장탄수",
     "criticalPercent": "치명타 확률",
     "criticalHarmRate": "치명 데미지",
+    "cooldown": "쿨다운",
     "armorPiercing": "관통",
     "rarity": "등급",
     "grow": "성장"
@@ -62,6 +63,8 @@
     "Type": "종류",
     "Introduce": "소개",
     "Close": "닫기",
+    "Name, Alias": "이름, 별명",
+    "Star": "성",
     "Doll": {
       "doll": "인형",
       "Mod": "개조",

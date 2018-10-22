@@ -30,6 +30,7 @@
     "bullet": "Bullet",
     "criticalPercent": "Crit. Per",
     "criticalHarmRate": "Crit. Dmg",
+    "cooldown": "Cooldown",
     "armorPiercing": "Armor Pen.",
     "rarity": "Rarity",
     "grow": "Grow"
@@ -61,6 +62,8 @@
     "Type": "Type",
     "Introduce": "Introduce",
     "Close": "Close",
+    "Name, Alias": "Name, Alias",
+    "Star": "Star",
     "Doll": {
       "doll": "Doll",
       "Mod": "Mod",
