@@ -1,10 +1,8 @@
 import * as PIXI from 'pixi.js';
 import spine from 'pixi-spine';
 import SkeletonBinary from './SkeletonBinary';
-import getDollSpine from './getDollSpine';
 
 import { getSpineResourceUrl } from '../url';
-import { request, isRequestSuccess } from '../httpRequest';
 
 const loader = new PIXI.loaders.Loader();
 const cache = {};
@@ -21,81 +19,61 @@ function getSkelJson(skelData) {
   return bin.json;
 }
 
-function hit(dollCode, skinCode, type) {
-  if (!(dollCode in cache)) {
-    cache[dollCode] = {
-      battle: { },
-      stay: { },
-    };
-  }
+export async function loadSpine(name, { atlas, png, skel }) {
+  const resourceUrl = { atlas, png, skel };
 
-  return (skinCode in (cache[dollCode][type]));
-}
+  const getName = ext => [name, ext].join('-');
 
-async function loadSpine(dollId, skinCode, type) {
-  const dollSpine = getDollSpine(dollId);
+  loader.reset();
+  Object.entries(resourceUrl).forEach(([ext, url]) => {
+    loader.add(
+      getName(ext),
+      url,
+      xhrTypeMap[ext],
+    );
+  });
 
-  const dollCode = dollSpine.code;
-
-  if (!hit(dollCode, skinCode, type)) {
-    const exts = dollSpine.names[skinCode];
-    const getName = ext => [dollCode, type, skinCode, ext].join('-');
-
-    const resourceUrl = {
-      atlas: getSpineResourceUrl(dollCode, type, skinCode, 'atlas'),
-      png: getSpineResourceUrl(dollCode, type, skinCode, 'png'),
-      skel: getSpineResourceUrl(dollCode, type, skinCode, 'skel'),
-    };
-
-    if (type !== 'battle') {
-      // 전투: 'battle', 숙소: 'stay'
-      // 숙소 SD 데이터중 숙소버전 atlas 와 png 가 따로 없고 전투용과 공유하는 경우가 있기에, 해당 경우 처리 (파일 존재 여부 확인)
-      const response = { atlas: null, png: null, skel: null };
-      response.atlas = await request('GET', getSpineResourceUrl(dollCode, 'stay', skinCode, 'atlas'));
-      response.png = await request('GET', getSpineResourceUrl(dollCode, 'stay', skinCode, 'png'));
-      response.skel = await request('GET', getSpineResourceUrl(dollCode, 'stay', skinCode, 'skel'));
-
-      if (!(isRequestSuccess(response.atlas)
-        && isRequestSuccess(response.png)
-        && isRequestSuccess(response.skel)
-      )) {
-        resourceUrl.atlas = getSpineResourceUrl(dollCode, 'battle', skinCode, 'atlas');
-        resourceUrl.png = getSpineResourceUrl(dollCode, 'battle', skinCode, 'png');
-      }
+  const resources = await new Promise(resolve => loader.load((_, res) => resolve(res)));
+  Object.values(resources).forEach((resource) => {
+    const { error } = resource;
+    if (error) {
+      throw new Error(error.message);
     }
+  });
 
-    loader.reset();
-    exts.forEach((ext) => {
-      loader.add(
-        getName(ext),
-        resourceUrl[ext],
-        xhrTypeMap[ext],
-      );
-    });
+  const rawSkel = getSkelJson(resources[getName('skel')].data);
+  const rawAtlas = resources[getName('atlas')].data;
+  const rawPng = resources[getName('png')].data;
 
-    const resource = await new Promise(resolve => loader.load((_, res) => resolve(res)));
+  const spineAtlas = new spine.SpineRuntime.Atlas(rawAtlas, (line, callback) => {
+    callback(new PIXI.BaseTexture(rawPng));
+  });
+  const spineAtlasParser = new spine.SpineRuntime.AtlasAttachmentParser(spineAtlas);
+  const spineJsonParser = new spine.SpineRuntime.SkeletonJsonParser(spineAtlasParser);
 
-    exts.forEach((ext) => {
-      const { error } = resource[getName(ext)];
-      if (error) {
-        throw error.message;
-      }
-    });
-
-    const rawSkel = getSkelJson(resource[getName('skel')].data);
-    const rawAtlas = resource[getName('atlas')].data;
-    const rawPng = resource[getName('png')].data;
-
-    const spineAtlas = new spine.SpineRuntime.Atlas(rawAtlas, (line, callback) => {
-      callback(new PIXI.BaseTexture(rawPng));
-    });
-    const spineAtlasParser = new spine.SpineRuntime.AtlasAttachmentParser(spineAtlas);
-    const spineJsonParser = new spine.SpineRuntime.SkeletonJsonParser(spineAtlasParser);
-
-    cache[dollCode][type][skinCode] = spineJsonParser.readSkeletonData(rawSkel);
-  }
-
-  return cache[dollCode][type][skinCode];
+  return spineJsonParser.readSkeletonData(rawSkel);
 }
 
-export default { loadSpine };
+export async function loadDollSpine(codename, skinId, type) {
+  const spineName = `${codename}-${type}`;
+  if (cache[spineName]) {
+    return cache[spineName];
+  }
+
+  const resourceUrl = {};
+  ['atlas', 'png', 'skel'].forEach((ext) => {
+    resourceUrl[ext] = getSpineResourceUrl(codename, type, skinId, ext);
+  });
+
+  let spineData = null;
+  try {
+    spineData = await loadSpine(spineName, resourceUrl);
+  } catch (error) {
+    resourceUrl.atlas = getSpineResourceUrl(codename, 'battle', skinId, 'atlas');
+    resourceUrl.png = getSpineResourceUrl(codename, 'battle', skinId, 'png');
+    spineData = await loadSpine(spineName, resourceUrl);
+  }
+
+  cache[spineName] = spineData;
+  return spineData;
+}

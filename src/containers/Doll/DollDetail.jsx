@@ -24,7 +24,7 @@ import IntroduceBox from '../../components/dolldetail/components/IntroduceBox';
 import ScriptBox from '../../components/dolldetail/components/ScriptBox';
 
 import DollRepository from '../../repositories/DollRepository';
-import SpineLoader from '../../utils/spine/SpineLoader';
+import { loadDollSpine } from '../../utils/spine/SpineLoader';
 import { getDollResourceUrl } from '../../utils/url';
 
 import styles from './DollDetailStyles';
@@ -70,8 +70,8 @@ class DollDetail extends Component {
 
       const { selected: { sdType } } = this.state;
 
-      SpineLoader.loadSpine(
-        dollId,
+      loadDollSpine(
+        info.codename,
         0,
         sdType,
       ).then(skeleton => this.setState({ skeleton }));
@@ -80,12 +80,12 @@ class DollDetail extends Component {
 
   handleSkinChange = (newSelectedSkinCode) => {
     const {
-      info: { id },
+      info: { codename },
       selected: { sdType },
     } = this.state;
 
-    SpineLoader.loadSpine(
-      id,
+    loadDollSpine(
+      codename,
       newSelectedSkinCode,
       sdType,
     ).then(skeleton => this.setState({ skeleton }));
@@ -115,15 +115,15 @@ class DollDetail extends Component {
       },
     }), () => {
       const {
-        info: { id },
+        info: { codename },
         selected: {
           skinCode,
           sdType,
         },
       } = this.state;
 
-      SpineLoader.loadSpine(
-        (id > 20000 && skinCode !== 0) ? id - 20000 : id,
+      loadDollSpine(
+        codename,
         skinCode,
         sdType,
       ).then(skeleton => this.setState({ skeleton }));
