@@ -233,7 +233,7 @@ class DollDetail extends Component {
           <Grid className={classes.boxWrapper} item xs={12}>
             <SDBox
               width={500}
-              height={350}
+              height={400}
               skeleton={skeleton}
               toggleStayingHandler={this.toggleSdType}
             />

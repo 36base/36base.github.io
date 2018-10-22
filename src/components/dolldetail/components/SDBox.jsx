@@ -17,16 +17,6 @@ const style = theme => ({
     display: 'flex',
     justifyContent: 'flex-end',
   },
-  sdView: {
-    position: 'absolute',
-    width: '300%',
-    height: '100%',
-    left: '-100%',
-    zIndex: '1000',
-  },
-  listWrapper: {
-    flexGrow: 1,
-  },
 });
 
 const sortOrder = (val) => {
@@ -107,7 +97,7 @@ class SDBox extends Component {
             height={height}
             spineData={skeleton}
             animation={currentAnimation}
-            options={{ x: width / 2, y: height / 2 }}
+            options={{ x: width / 2, y: (height / 3) * 2 }}
           />
         </div>
       </InfoBox>
