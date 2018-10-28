@@ -55,7 +55,7 @@ export async function loadSpine(name, { atlas, png, skel }) {
 }
 
 export async function loadDollSpine(codename, skinId, type) {
-  const spineName = `${codename}-${type}`;
+  const spineName = `${codename}-${skinId}-${type}`;
   if (cache[spineName]) {
     return cache[spineName];
   }
