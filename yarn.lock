@@ -4571,9 +4571,9 @@ getpass@^0.1.1:
   dependencies:
     assert-plus "^1.0.0"
 
-girlsfrontline-core@^2.1.9-beta13:
-  version "2.1.9-beta13"
-  resolved "https://registry.yarnpkg.com/girlsfrontline-core/-/girlsfrontline-core-2.1.9-beta13.tgz#01430937b5c5ba1b5fdb885dcb446b2814adfda1"
+girlsfrontline-core@^2.1.10-beta14:
+  version "2.1.10-beta14"
+  resolved "https://registry.yarnpkg.com/girlsfrontline-core/-/girlsfrontline-core-2.1.10-beta14.tgz#ae498a247caed79fd536fbaea6830a498cdba76e"
 
 girlsfrontline-extra-data@^1.2.3:
   version "1.2.3"
