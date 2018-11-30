@@ -27,7 +27,7 @@ class Home extends React.Component {
           <div className="wrapper-banner-link">
             <a href="http://gall.dcinside.com/mgallery/board/lists/?id=gfl2" target="_blank" rel="noopener noreferrer"><img alt="DCinside 소녀전선 2 갤러리" src={gfGf2} /></a>
             <a href="http://gall.dcinside.com/mgallery/board/lists/?id=micateam" target="_blank" rel="noopener noreferrer"><img alt="DCinside MICATEAM 갤러리" src={gfMicateam} /></a>
-            <a id="banner-link-twitter" href="https://twitter.com/gf_36base" target="_blank" rel="noopener noreferrer"><img alt="트위터" src={gfTwitter} /></a>
+            <a id="banner-link-twitter" href="https://twitter.com/gf36base" target="_blank" rel="noopener noreferrer"><img alt="트위터" src={gfTwitter} /></a>
             <a id="gf-sim-mobile" href="https://play.google.com/store/apps/details?id=com.Cosmos.GfTileSim&hl=ko" target="_blank" rel="noopener noreferrer"><img alt="제대편성 시뮬레이터 모바일" src={gfSimMobile} /></a>
             <a id="gf-sim-pc" href="https://girlsfrontline.kr/db/jdsimulator" target="_blank" rel="noopener noreferrer"><img alt="제대편성 시뮬레이터 pc" src={gfSimPc} /></a>
             <a href="http://gall.dcinside.com/mgallery/board/view/?id=gfl2&no=410693" target="_blank" rel="noopener noreferrer"><img alt="소녀 픽셀던젼" src={gfPixel} /></a>
@@ -40,7 +40,7 @@ class Home extends React.Component {
         return (
           <div className="wrapper-banner-link">
             <a href="https://twitter.com/GirlsFrontline" target="_blank" rel="noopener noreferrer"><img alt="ドルプロ公式 Twitter" src={gfTwitterJapan} /></a>
-            <a href="https://twitter.com/gf_36base" target="_blank" rel="noopener noreferrer"><img alt="36ベース Twitter" src={gf36baseTwitterJapan} /></a>
+            <a href="https://twitter.com/gf36base" target="_blank" rel="noopener noreferrer"><img alt="36ベース Twitter" src={gf36baseTwitterJapan} /></a>
           </div>
         );
       default:
@@ -48,7 +48,7 @@ class Home extends React.Component {
           <div className="wrapper-banner-link">
             <a href="http://gall.dcinside.com/mgallery/board/lists/?id=gfl2" target="_blank" rel="noopener noreferrer"><img alt="DCinside 소녀전선 2 갤러리" src={gfGf2} /></a>
             <a href="http://gall.dcinside.com/mgallery/board/lists/?id=micateam" target="_blank" rel="noopener noreferrer"><img alt="DCinside MICATEAM 갤러리" src={gfMicateam} /></a>
-            <a id="banner-link-twitter" href="https://twitter.com/gf_36base" target="_blank" rel="noopener noreferrer"><img alt="트위터" src={gfTwitter} /></a>
+            <a id="banner-link-twitter" href="https://twitter.com/gf36base" target="_blank" rel="noopener noreferrer"><img alt="트위터" src={gfTwitter} /></a>
             <a id="gf-sim-mobile" href="https://play.google.com/store/apps/details?id=com.Cosmos.GfTileSim&hl=ko" target="_blank" rel="noopener noreferrer"><img alt="제대편성 시뮬레이터 모바일" src={gfSimMobile} /></a>
             <a id="gf-sim-pc" href="https://girlsfrontline.kr/db/jdsimulator" target="_blank" rel="noopener noreferrer"><img alt="제대편성 시뮬레이터 pc" src={gfSimPc} /></a>
             <a href="http://gall.dcinside.com/mgallery/board/view/?id=gfl2&no=410693" target="_blank" rel="noopener noreferrer"><img alt="소녀 픽셀던젼" src={gfPixel} /></a>
@@ -75,7 +75,7 @@ class Home extends React.Component {
           <Timeline
             dataSource={{
               sourceType: 'profile',
-              screenName: 'gf_36base',
+              screenName: 'gf36base',
             }}
             options={{
               height: '45vh',
