@@ -4571,10 +4571,10 @@ getpass@^0.1.1:
   dependencies:
     assert-plus "^1.0.0"
 
-girlsfrontline-core@^2.1.14:
-  version "2.1.14"
-  resolved "https://registry.yarnpkg.com/girlsfrontline-core/-/girlsfrontline-core-2.1.14.tgz#8a1ebd3a90fe1630e5db5713a8079049c357f634"
-  integrity sha512-IOuecUGqIiBIWqgYiSkGLmx9VIzMiC4R430cuJKtA5YX0EPj8Av9/gdKN/cDwfE/Vut9YVPdjMGcEPAOFfTxog==
+girlsfrontline-core@^2.1.15:
+  version "2.1.15"
+  resolved "https://registry.yarnpkg.com/girlsfrontline-core/-/girlsfrontline-core-2.1.15.tgz#3ca478e3eeae232bc1143691886a7f3ff8653df5"
+  integrity sha512-K5uq5kSjglGIXDgZOKX4uI6ZrM57JCzbkYmUb8PET0WA5nfVOpR3O6RcCyuARTmipQSX1qVlA1nBmokmYw3NEg==
 
 girlsfrontline-extra-data@^1.2.3:
   version "1.2.3"
