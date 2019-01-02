@@ -4575,9 +4575,9 @@ girlsfrontline-core@^2.1.15:
   version "2.1.15"
   resolved "https://registry.yarnpkg.com/girlsfrontline-core/-/girlsfrontline-core-2.1.15.tgz#3ca478e3eeae232bc1143691886a7f3ff8653df5"
 
-girlsfrontline-extra-data@^1.2.4:
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/girlsfrontline-extra-data/-/girlsfrontline-extra-data-1.2.4.tgz#2c72d53ab2776213e9112e3c060e8ac2fc5a5fe0"
+girlsfrontline-extra-data@^1.2.5:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/girlsfrontline-extra-data/-/girlsfrontline-extra-data-1.2.5.tgz#4134d85a10b9d3f30a00dbc090136781a1cbb73d"
 
 glamor@^2.20.40:
   version "2.20.40"
