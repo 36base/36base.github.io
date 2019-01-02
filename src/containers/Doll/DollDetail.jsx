@@ -4,7 +4,7 @@ import { translate } from 'react-i18next';
 import { Grid } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
-import gfextradata from 'girlsfrontline-extra-data';
+// import gfextradata from 'girlsfrontline-extra-data';
 
 import HorizonLine from '../../components/common/HorizonLine';
 import Background from '../../components/dolldetail/components/Background';
@@ -168,9 +168,10 @@ class DollDetail extends Component {
       default: color = '#505694';
     }
 
-    const { getScript } = gfextradata({ locale: i18n.language });
+    // const { getScript } = gfextradata({ locale: i18n.language });
 
-    const script = getScript(info.codename, skinCode);
+    // const script = getScript(info.codename, skinCode);
+    const script = { undefined: ['undefined'] };
 
     return (
       <div className={classes.wrapper}>
