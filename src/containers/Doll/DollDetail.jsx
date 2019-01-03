@@ -170,8 +170,7 @@ class DollDetail extends Component {
 
     const { getScript } = gfextradata({ locale: i18n.language });
 
-    const script = getScript(info.codename, skinCode);
-    // const script = { undefined: ['undefined'] };
+    const script = getScript ? getScript(info.codename, skinCode) : { error: ['girlsfrontline-extra-data 모듈에서 문제가 발생했습니다. 관리자에게 문의해주세요.'] };
 
     return (
       <div className={classes.wrapper}>
