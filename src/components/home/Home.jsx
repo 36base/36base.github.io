@@ -18,6 +18,7 @@ import gfTwitterJapan from './components/resources/gfTwitterJapan.png';
 import gf36baseTwitterJapan from './components/resources/twitterJapan.png';
 import gfKakao from './components/resources/gfkakao.png';
 import mainBanner from './components/resources/36main_Terrain.png';
+import gfBakery from './components/resources/gfbakery.png';
 
 class Home extends React.Component {
   renderBanner = (language) => {
@@ -34,6 +35,7 @@ class Home extends React.Component {
             <a href="https://play.google.com/store/apps/details?id=com.gfl.dic" target="_blank" rel="noopener noreferrer"><img alt="소전사전" src={gfDict} /></a>
             <a href="https://docs.google.com/spreadsheets/d/1IxJxfpBHboVRJe92_GPC6iUZCq1M2NJkbtKo6SP-3SM/pubhtml" target="_blank" rel="noopener noreferrer"><img alt="소전시트" src={gfSheet} /></a>
             <a href="http://pf.kakao.com/_MaxmXC" target="_blank" rel="noopener noreferrer"><img alt="36베이스 플러스친구" src={gfKakao} /></a>
+            <a href="https://girlsfrontline.kr/db/bakerygirl " target="_blank" rel="noopener noreferrer"><img alt="빵집소녀" src={gfBakery} /></a>
           </div>
         );
       case 'ja-JP':
@@ -55,6 +57,7 @@ class Home extends React.Component {
             <a href="https://play.google.com/store/apps/details?id=com.gfl.dic" target="_blank" rel="noopener noreferrer"><img alt="소전사전" src={gfDict} /></a>
             <a href="https://docs.google.com/spreadsheets/d/1IxJxfpBHboVRJe92_GPC6iUZCq1M2NJkbtKo6SP-3SM/pubhtml" target="_blank" rel="noopener noreferrer"><img alt="소전시트" src={gfSheet} /></a>
             <a href="http://pf.kakao.com/_MaxmXC" target="_blank" rel="noopener noreferrer"><img alt="36베이스 플러스친구" src={gfKakao} /></a>
+            <a href="https://girlsfrontline.kr/db/bakerygirl " target="_blank" rel="noopener noreferrer"><img alt="빵집소녀" src={gfBakery} /></a>
           </div>
         );
     }
