@@ -70,9 +70,6 @@ class Home extends React.Component {
         <div className="banner-main">
           <img alt="36베이스 메인배너" src={mainBanner} />
         </div>
-        <div className="wrapper-checklist">
-          <CheckList className="checklist" />
-        </div>
         { this.renderBanner(i18n.language) }
         <div className="wrapper-content-twitter">
           <Timeline
