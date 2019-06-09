@@ -57,11 +57,15 @@ body{
 }
 
 .wrapper-banner-link {
-  grid-column-start: 5;
+  grid-column-start: 1;
   grid-column-end: 9;
   grid-row-start: 5;
   grid-row-end:12;
   padding-right: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .wrapper-banner-link > a > img{
@@ -341,6 +345,7 @@ and (max-device-width: 480px) {
     grid-row-start: 2;
     grid-row-end: auto;
     padding: 0;
+    display: block;
   }
 
   .wrapper-banner-link > a > img {
