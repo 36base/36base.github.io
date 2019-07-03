@@ -21,6 +21,7 @@ import EquipDict from './containers/Equip/EquipDict';
 import FairyDict from './containers/Fairy/FairyDict';
 import FairyDetail from './containers/Fairy/FairyDetail';
 
+import Guide from './components/guide/Guide';
 import Page404 from './components/Page404';
 
 import { resize } from './store/modules/common';
@@ -76,6 +77,7 @@ class App extends React.Component {
               <Route path="/gfdict" component={GfDict} />
               <Route path="/about" component={About} />
 
+              <Route path="/guide" component={Guide} />
               <Route component={Page404} />
             </Switch>
           </div>

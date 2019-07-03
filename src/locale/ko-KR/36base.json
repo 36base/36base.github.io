@@ -14,7 +14,9 @@
     "Logistic Support": "군수지원 계산기",
     "Music Player": "음악(OST) 플레이어",
     "Gf Dict": "소전사전 공략",
-    "About / Contact": "About / Contact"
+    "About / Contact": "About / Contact",
+    "Story": "스토리",
+    "Guide": "소녀전선 유저 가이드북"
   },
   "Stat": {
     "level": "레벨",
@@ -34,7 +36,8 @@
     "cooldown": "쿨다운",
     "armorPiercing": "관통",
     "rarity": "등급",
-    "grow": "성장"
+    "grow": "성장",
+    "Guide": "소녀전선 유저 가이드북"
   },
   "Skill": {
     "Skill": "스킬",

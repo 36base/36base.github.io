@@ -34,6 +34,7 @@ const initialState = {
           to: '/gfdict',
           fitLanguage: ['ko-KR'],
         },
+        guide: { name: 'Guide', icon: 'fa-book', to: '/guide' },
       },
     },
   ],
