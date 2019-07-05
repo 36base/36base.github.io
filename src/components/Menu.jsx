@@ -33,7 +33,7 @@ class Menu extends React.Component {
     if (openMobile) {
       propToggleMobile();
     }
-  }
+  };
 
   renderMenuItem = ({
     id, icon, name, opened, children,

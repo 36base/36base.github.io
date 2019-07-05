@@ -1,0 +1,23 @@
+import guide00 from './guide00.png';
+import guide01 from './guide01.png';
+import guide02_1 from './guide02-1.png';
+import guide02_2 from './guide02-2.png';
+import guide03 from './guide03.png';
+import guide04_1 from './guide04-1.png';
+import guide04_2 from './guide04-2.png';
+import guide05_1 from './guide05-1.png';
+import guide05_2 from './guide05-2.png';
+import guide06_1 from './guide06-1.png';
+import guide06_2 from './guide06-2.png';
+
+export const g00 = guide00;
+export const g01 = guide01;
+export const g02_1 = guide02_1;
+export const g02_2 = guide02_2;
+export const g03 = guide03;
+export const g04_1 = guide04_1;
+export const g04_2 = guide04_2;
+export const g05_1 = guide05_1;
+export const g05_2 = guide05_2;
+export const g06_1 = guide06_1;
+export const g06_2 = guide06_2;
