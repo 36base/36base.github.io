@@ -179,6 +179,10 @@
       "Target Level": "目標レベル",
       "Require Amount": "必要な作戦報告書",
       "Amount": "個"
+    },
+    "Guide": {
+      "GF Guide": "ドールズフロントラインユーザーガイドブック",
+      "GF Guide Url": "Jpn /ドールズフロントラインユーザーガイドブック"
     }
   }
 }

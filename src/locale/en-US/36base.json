@@ -179,6 +179,10 @@
       "Target Level": "Target Level",
       "Require Amount": "Require amount",
       "Amount": "amount"
+    },
+    "Guide": {
+      "GF Guide": "GF Guide",
+      "GF Guide Url": "Eng/GF Guide"
     }
   }
 }
