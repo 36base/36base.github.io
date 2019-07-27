@@ -4,8 +4,6 @@ import { Grid, Button, Paper } from '@material-ui/core/';
 import { withStyles } from '@material-ui/core/styles';
 import { translate } from 'react-i18next';
 
-import * as Assets from './assets';
-
 const style = theme => ({
   wrapper: {
     marginTop: '1em',
