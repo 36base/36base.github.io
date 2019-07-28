@@ -1,7 +1,8 @@
 import React from 'react';
+import { compose } from 'redux';
 import { Grid, Button, Paper } from '@material-ui/core/';
 import { withStyles } from '@material-ui/core/styles';
-import * as Assets from './assets';
+import { translate } from 'react-i18next';
 
 const style = theme => ({
   wrapper: {
@@ -59,16 +60,18 @@ const datas = [
   '작전임무',
   '인형 육성',
   '장비, 요정, 중장비제대',
+  '군수지원 및 기타 정보',
 ];
 
 const imageDatas = [
-  [Assets.g00],
-  [Assets.g01],
-  [Assets.g02_1, Assets.g02_2],
-  [Assets.g03],
-  [Assets.g04_1, Assets.g04_2],
-  [Assets.g05_1, Assets.g05_2],
-  [Assets.g06_1, Assets.g06_2],
+  [3],
+  [4],
+  [5, 6],
+  [7],
+  [8, 9],
+  [10, 11],
+  [12, 13],
+  [14],
 ];
 
 class Guide extends React.Component {
@@ -82,7 +85,7 @@ class Guide extends React.Component {
   }
 
   render() {
-    const { classes } = this.props;
+    const { classes, t } = this.props;
     const { selected, selectedIndex } = this.state;
 
     return (
@@ -113,7 +116,7 @@ class Guide extends React.Component {
                   <div className={classes.imageWrapper}>
                     {
                       imageDatas[selectedIndex].map(item => (
-                        <img className={classes.image} src={item} alt={selected} />
+                        <img className={classes.image} src={encodeURI(`https://girlsfrontline.kr/data/UserGuide/${t('PageMessage.Guide.GF Guide Url')}${item}.png`)} alt={selected} />
                       ))
                     }
                   </div>
@@ -127,4 +130,7 @@ class Guide extends React.Component {
   }
 }
 
-export default withStyles(style)(Guide);
+export default compose(
+  translate(),
+  withStyles(style),
+)(Guide);

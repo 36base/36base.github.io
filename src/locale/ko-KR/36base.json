@@ -188,6 +188,10 @@
       "Target Level": "목표 레벨",
       "Require Amount": "필요한 작전보고서",
       "Amount": "개"
+    },
+    "Guide": {
+      "GF Guide": "소녀전선 유저 가이드북 요약본",
+      "GF Guide Url": "Kor/소녀전선 유저 가이드북 요약본"
     }
   }
 }
