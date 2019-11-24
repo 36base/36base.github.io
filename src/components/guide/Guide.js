@@ -60,6 +60,7 @@ const datas = [
   '작전임무',
   '인형 육성',
   '장비, 요정, 중장비제대',
+  '숙소 및 탐색 시스템',
   '군수지원 및 기타 정보',
 ];
 
@@ -72,6 +73,7 @@ const imageDatas = [
   [10, 11],
   [12, 13],
   [14],
+  [15],
 ];
 
 class Guide extends React.Component {
