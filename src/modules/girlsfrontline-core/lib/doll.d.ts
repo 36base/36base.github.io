@@ -1,0 +1,38 @@
+import { IDoll, IEffect, IMindupdate, IObtain, ISkill, ISkin, IStats } from './interface';
+export default class Doll {
+    readonly stats: IStats;
+    readonly effect: IEffect;
+    readonly skill1: ISkill;
+    readonly skill2: ISkill | null;
+    level: number;
+    favor: number;
+    dummyLink: number;
+    skillLevel: number;
+    skillLevel2: number;
+    static isMod(id: number): boolean;
+    readonly id: number;
+    readonly rank: number;
+    readonly type: string;
+    readonly buildTime: number;
+    readonly grow: number;
+    readonly codename: string;
+    readonly mindupdate: IMindupdate[];
+    readonly equip1: string[];
+    readonly equip2: string[];
+    readonly equip3: string[];
+    readonly name: string;
+    readonly extra: string;
+    readonly obtain: IObtain[];
+    readonly skins: ISkin[];
+    private readonly _stats;
+    private readonly _effect;
+    private readonly _skill1;
+    private readonly _skill2?;
+    private _level;
+    private _favor;
+    private _dummyLink;
+    private _skillLevel;
+    private _skillLevel2;
+    constructor(dollJson: IDoll);
+    toJSON(): IDoll;
+}

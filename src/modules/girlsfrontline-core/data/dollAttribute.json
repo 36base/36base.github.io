@@ -1,0 +1,51 @@
+{
+  "hg": {
+    "hp": 0.6,
+    "pow": 0.6,
+    "rate": 0.8,
+    "speed": 1.5,
+    "hit": 1.2,
+    "dodge": 1.8
+  }, 
+  "smg": {
+    "hp": 1.6,
+    "pow": 0.6,
+    "rate": 1.2,
+    "speed": 1.2,
+    "hit": 0.3,
+    "dodge": 1.6
+  },
+  "rf": {
+    "hp": 0.8,
+    "pow": 2.4,
+    "rate": 0.5,
+    "speed": 0.7,
+    "hit": 1.6,
+    "dodge": 0.8
+  },
+  "ar": {
+    "hp": 1,
+    "pow": 1,
+    "rate": 1,
+    "speed": 1,
+    "hit": 1,
+    "dodge": 1
+  },
+  "mg": {
+    "hp": 1.5,
+    "pow": 1.8,
+    "rate": 1.6,
+    "speed": 0.4,
+    "hit": 0.6,
+    "dodge": 0.6
+  },
+  "sg": {
+    "hp": 2.0,
+    "pow": 0.7,
+    "rate": 0.4,
+    "speed": 0.6,
+    "hit": 0.3,
+    "dodge": 0.3,
+    "armor": 1
+  }
+}

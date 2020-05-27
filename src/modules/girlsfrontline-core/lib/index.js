@@ -1,0 +1,31 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result["default"] = mod;
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var doll_json_1 = __importDefault(require("../data/doll.json"));
+var equip_json_1 = __importDefault(require("../data/equip.json"));
+var fairy_json_1 = __importDefault(require("../data/fairy.json"));
+var api = __importStar(require("./api"));
+exports.api = api;
+var doll_1 = __importDefault(require("./doll"));
+var equip_1 = __importDefault(require("./equip"));
+var fairy_1 = __importDefault(require("./fairy"));
+var dollData = doll_json_1.default;
+var equipData = equip_json_1.default;
+var fairyData = fairy_json_1.default;
+var dolls = dollData.map(function (data) { return new doll_1.default(data); });
+exports.dolls = dolls;
+var equips = equipData.map(function (data) { return new equip_1.default(data); });
+exports.equips = equips;
+var fairies = fairyData.map(function (data) { return new fairy_1.default(data); });
+exports.fairies = fairies;
+var gfcore = { dolls: dolls, equips: equips, fairies: fairies, api: api };
+exports.default = gfcore;
