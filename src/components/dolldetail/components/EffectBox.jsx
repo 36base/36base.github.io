@@ -105,6 +105,16 @@ class EffectBox extends React.Component {
     );
   }
 
+
+  makeTargetText = (effectType) => {
+    const { t } = this.props;
+    if (typeof effectType === 'string') {
+      return t(`PageMessage.Doll.Type.${effectType}`);
+    }
+    const typeText = effectType.map(type => t(`PageMessage.Doll.Type.${type}`)).join(', ');
+    return typeText;
+  }
+
   render() {
     const {
       t,
@@ -128,7 +138,8 @@ class EffectBox extends React.Component {
         <div key={e[0]} className={[classes.grid, type].join(' ')} style={e[1]} />
       );
     });
-    const target = targetMap.get(effectType);
+    const targetText = this.makeTargetText(effectType);
+
     const effects = Object.keys(gridEffect).map((key) => {
       const value = gridEffect[key];
 
@@ -146,7 +157,7 @@ class EffectBox extends React.Component {
           <Grid className={classes.explain} item xs>
             <Typography>
               {`${t('PageMessage.Doll.affects')} `}
-              <span className={classes.yellow}>{t(`PageMessage.Doll.Type.${target}`)}</span>
+              <span className={classes.yellow}>{targetText}</span>
               {`${t('PageMessage.Doll.to')} `}
               {effects}
             </Typography>
