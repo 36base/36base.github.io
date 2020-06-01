@@ -7,6 +7,10 @@ const style = theme => ({
     display: 'flex',
     flexWrap: 'wrap',
     zIndex: 210,
+    [theme.breakpoints.up('md')]: {
+      maxWidth: '70vh',
+      paddingLeft: '100px',
+    },
   },
   mixin: {
     display: 'inline-block',
@@ -52,7 +56,6 @@ class SkinTabbar extends React.Component {
 
     return (
       <Grid className={classes.container} item xs={10}>
-        <span className={classes.mixin} />
         {buttons}
       </Grid>
     );
