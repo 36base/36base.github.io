@@ -17,14 +17,19 @@ import About from './components/about/About';
 import TimeTable from './containers/TimeTable/TimeTable';
 import DollDict from './containers/Doll/DollDict';
 import DollDetail from './containers/Doll/DollDetail';
-import { default as TestDollDict } from './containers/TestDoll/DollDict';
-import { default as TestDollDetail } from './containers/TestDoll/DollDetail';
 import EquipDict from './containers/Equip/EquipDict';
 import FairyDict from './containers/Fairy/FairyDict';
 import FairyDetail from './containers/Fairy/FairyDetail';
 
 import Guide from './components/guide/Guide';
 import Page404 from './components/Page404';
+
+import { default as TestDollDict } from './containers/TestDoll/DollDict';
+import { default as TestDollDetail } from './containers/TestDoll/DollDetail';
+import { default as TestEquipDict} from './containers/TestEquip/EquipDict';
+import { default as TestFairyDict} from './containers/TestFairy/FairyDict';
+import { default as TestFairyDetail} from './containers/TestFairy/FairyDetail';
+
 
 import { resize } from './store/modules/common';
 import './App.css';
@@ -68,8 +73,6 @@ class App extends React.Component {
               <Route exact path="/" component={Home} />
               <Route exact path="/doll" component={DollDict} />
               <Route path="/doll/:id" component={DollDetail} />
-              <Route exact path="/test/doll" component={TestDollDict} />
-              <Route path="/test/doll/:id" component={TestDollDetail} />
               <Route path="/equip/:id?" component={EquipDict} />
               <Route exact path="/fairy" component={FairyDict} />
               <Route path="/fairy/:id" component={FairyDetail} />
@@ -80,8 +83,14 @@ class App extends React.Component {
               <Route path="/musicplayer" component={MusicPlayer} />
               <Route path="/gfdict" component={GfDict} />
               <Route path="/about" component={About} />
-
               <Route path="/guide" component={Guide} />
+
+              <Route exact path="/test/doll" component={TestDollDict} />
+              <Route path="/test/doll/:id" component={TestDollDetail} />
+              <Route path="/test/equip/:id?" component={TestEquipDict} />
+              <Route exact path="/test/fairy" component={TestFairyDict} />
+              <Route path="/test/fairy/:id" component={TestFairyDetail} />
+
               <Route component={Page404} />
             </Switch>
           </div>
