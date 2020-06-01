@@ -1,7 +1,7 @@
 import gfextradata from 'girlsfrontline-extra-data';
 
-import { dolls } from '../modules/girlsfrontline-core/lib';
-import Doll from '../modules/girlsfrontline-core/lib/doll';
+import { dolls } from 'girlsfrontline-core-test/lib';
+import Doll from 'girlsfrontline-core-test/lib/doll';
 import dollRank from './data/dollRank.json';
 
 const { alias: { doll: dollAlias } } = gfextradata({ locale: 'ko' });

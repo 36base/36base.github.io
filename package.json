@@ -57,6 +57,7 @@
     "file-loader": "1.1.5",
     "fs-extra": "3.0.1",
     "girlsfrontline-core": "^2.1.16",
+    "girlsfrontline-core-test": "npm:girlsfrontline-core@^2.2.0",
     "girlsfrontline-extra-data": "^1.2.5",
     "html-webpack-plugin": "2.29.0",
     "i18next": "^11.9.0",
