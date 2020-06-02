@@ -4728,14 +4728,15 @@ getpass@^0.1.1:
   dependencies:
     assert-plus "^1.0.0"
 
-girlsfrontline-core@^2.1.16:
-  version "2.1.16"
-  resolved "https://registry.yarnpkg.com/girlsfrontline-core/-/girlsfrontline-core-2.1.16.tgz#8b83b3160c55761980a7bddf659eca37fc2ba3f0"
-  integrity sha512-BKNi5fQlDljfyH+f6573IYhRwDzFoFwjOfmunK5Jdj/DD9dJXeTVHdRNf1a8uwHiqwNH2/wYLtj2xcWl7bUtYw==
+girlsfrontline-core@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/girlsfrontline-core/-/girlsfrontline-core-2.2.1.tgz#df3827781b859ef69f92ffefff2a13c7ed1a01c3"
+  integrity sha512-y3HScwhOuGHZ+wl+UugBA933NoU/nhPCFsxGMvSKdWvquCLLA6j8iX3yvP1K/TjfsR/dBXkjUnFWpj3n0sw18g==
 
-girlsfrontline-extra-data@^1.2.5:
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/girlsfrontline-extra-data/-/girlsfrontline-extra-data-1.2.5.tgz#4134d85a10b9d3f30a00dbc090136781a1cbb73d"
+girlsfrontline-resource-extra@^1.6.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/girlsfrontline-resource-extra/-/girlsfrontline-resource-extra-1.3.0.tgz#776d4220e2d073b63fe96210ef95eb071b736f1d"
+  integrity sha512-oWS1h9NK8j0deqJFcQEFGrCp+ot6bEqsTsveZfAF7pIGH2nf3DA3II9zHVT1QDTDh/1lVkerNXDJvxWrjQ7ovg==
 
 glamor@^2.20.40:
   version "2.20.40"
