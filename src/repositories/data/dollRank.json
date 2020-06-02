@@ -1,6 +1,6 @@
 {
   "1": {
-    "id": 1,
+    "id": 7,
     "name": "Extra",
     "nickNames": ["특전", "엑스트라"],
     "starCnt": 5,
@@ -33,5 +33,12 @@
     "nickNames": ["5성"],
     "starCnt": 5,
     "color": "#D5A3FD"
+  },
+  "6": {
+    "id": 6	,
+    "name": "Supreme",
+    "nickNames": ["6성"],
+    "starCnt": 6,
+    "color": "#FC4F00"
   }
 }
