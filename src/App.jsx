@@ -17,8 +17,6 @@ import About from './components/about/About';
 import TimeTable from './containers/TimeTable/TimeTable';
 import DollDict from './containers/Doll/DollDict';
 import DollDetail from './containers/Doll/DollDetail';
-import { default as TestDollDict } from './containers/TestDoll/DollDict';
-import { default as TestDollDetail } from './containers/TestDoll/DollDetail';
 import EquipDict from './containers/Equip/EquipDict';
 import FairyDict from './containers/Fairy/FairyDict';
 import FairyDetail from './containers/Fairy/FairyDetail';
@@ -68,8 +66,6 @@ class App extends React.Component {
               <Route exact path="/" component={Home} />
               <Route exact path="/doll" component={DollDict} />
               <Route path="/doll/:id" component={DollDetail} />
-              <Route exact path="/test/doll" component={TestDollDict} />
-              <Route path="/test/doll/:id" component={TestDollDetail} />
               <Route path="/equip/:id?" component={EquipDict} />
               <Route exact path="/fairy" component={FairyDict} />
               <Route path="/fairy/:id" component={FairyDetail} />
@@ -80,7 +76,6 @@ class App extends React.Component {
               <Route path="/musicplayer" component={MusicPlayer} />
               <Route path="/gfdict" component={GfDict} />
               <Route path="/about" component={About} />
-
               <Route path="/guide" component={Guide} />
               <Route component={Page404} />
             </Switch>
