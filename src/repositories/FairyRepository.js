@@ -1,6 +1,6 @@
 import { fairies } from 'girlsfrontline-core';
 import Fairy from 'girlsfrontline-core/lib/fairy';
-import gfextradata from 'girlsfrontline-extra-data';
+import gfextradata from 'girlsfrontline-resource-extra';
 
 const { alias: { fairy: fairyAlias } } = gfextradata({ locale: 'ko' });
 

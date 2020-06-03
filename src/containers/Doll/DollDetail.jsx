@@ -4,7 +4,7 @@ import { translate } from 'react-i18next';
 import { Grid } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
-import gfextradata from 'girlsfrontline-extra-data';
+import gfextradata from 'girlsfrontline-resource-extra';
 
 import HorizonLine from '../../components/common/HorizonLine';
 import Background from '../../components/dolldetail/components/Background';

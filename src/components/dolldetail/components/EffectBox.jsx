@@ -62,7 +62,7 @@ const targetMap = new Map([
   ['all', 'all'],
   ['hg', 'hg'],
   ['smg', 'smg'],
-  ['rifle', 'rf'],
+  ['rf', 'rf'],
   ['ar', 'ar'],
   ['mg', 'mg'],
   ['sg', 'sg'],
@@ -104,8 +104,7 @@ class EffectBox extends React.Component {
       />
     );
   }
-
-
+  //checked
   makeTargetText = (effectType) => {
     const { t } = this.props;
     if (typeof effectType === 'string') {
@@ -115,6 +114,7 @@ class EffectBox extends React.Component {
     return typeText;
   }
 
+  //checked
   render() {
     const {
       t,
@@ -138,8 +138,19 @@ class EffectBox extends React.Component {
         <div key={e[0]} className={[classes.grid, type].join(' ')} style={e[1]} />
       );
     });
-    const targetText = this.makeTargetText(effectType);
 
+    /*var target;
+
+    if(Array.isArray(effectType)){
+      target =new Array();
+      effectType.forEach(function(_type){
+        target.push(targetMap.get(_type));
+      });
+    }else{
+      target = targetMap.get(effectType);
+    }*/
+    //const target = targetMap.get(effectType);
+      const targetText = this.makeTargetText(effectType);
     const effects = Object.keys(gridEffect).map((key) => {
       const value = gridEffect[key];
 

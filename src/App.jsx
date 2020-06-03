@@ -26,9 +26,9 @@ import Page404 from './components/Page404';
 
 import { default as TestDollDict } from './containers/TestDoll/DollDict';
 import { default as TestDollDetail } from './containers/TestDoll/DollDetail';
-import { default as TestEquipDict} from './containers/TestEquip/EquipDict';
-import { default as TestFairyDict} from './containers/TestFairy/FairyDict';
-import { default as TestFairyDetail} from './containers/TestFairy/FairyDetail';
+import { default as TestEquipDict } from './containers/TestEquip/EquipDict';
+import { default as TestFairyDict } from './containers/TestFairy/FairyDict';
+import { default as TestFairyDetail } from './containers/TestFairy/FairyDetail';
 
 
 import { resize } from './store/modules/common';

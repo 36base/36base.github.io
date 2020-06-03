@@ -1,7 +1,7 @@
 
 import { equips } from 'girlsfrontline-core';
 import Equip from 'girlsfrontline-core/lib/equip';
-import gfextradata from 'girlsfrontline-extra-data';
+import gfextradata from 'girlsfrontline-resource-extra';
 
 const { alias: { equip: equipAlias } } = gfextradata({ locale: 'ko' });
 
