@@ -97,8 +97,10 @@
         "attack": "공격",
         "attack2": "공격2",
         "s": "스킬",
+        "s1": "스킬1",
         "s2": "스킬2",
         "skill": "스킬",
+        "skill1": "스킬1",
         "skill2": "스킬2",
         "reload": "재장전",
         "die": "사망",
@@ -117,7 +119,10 @@
         "sp_ative4": "특수4",
         "sp_ativeR": "특수R",
         "59_rock_roll": "Rock & Roll",
-        "3306_swim": "수영"
+        "3306_swim": "수영",
+        "landing": "착지",
+        "spattack1": "특수공격1",
+        "spattack2": "특수공격2"
       },
       "Script": {
         "introduce": "소개",
@@ -143,7 +148,21 @@
         "mood2": "놀람",
         "agree": "동의",
         "accept": "수락",
-        "lowmood": "한탄"
+        "lowmood": "한탄",
+        "attack": "공격",
+        "phrase": "말버릇",
+        "loading": "로딩",
+        "feed": "강화",
+        "goattack": "출격",
+        "blackaction": "자율작전",
+        "operationbegin": "지원 출발",
+        "defense": "방어",
+        "win": "승리",
+        "combine": "편제확대",
+        "buildover": "제조완료",
+        "formation": "제대편성",
+        "meet": "적 조우",
+        "tip": "조언"
       }
     },
     "Equip": {

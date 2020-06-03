@@ -12,6 +12,7 @@ import profileChocosable from './profile/chocosable.png';
 import profileKrepe from './profile/krepe.jpg';
 import profileDigetArk from './profile/diget_ark.png';
 import profileSume from './profile/sume.png';
+import profileGuideung from './profile/Guideung.jpg';
 
 import defaultProfile from './profile/icons-male-user.png';
 
@@ -111,5 +112,11 @@ export default [
     profile: profileSume,
     role: '디자이너',
     impression: '소전사전 개발자',
+  },
+  {
+    name: '귀등',
+    profile: profileGuideung,
+    role: '리소스 추출, 프론트',
+    impression: '마님~ 오늘은 버그 7개를 고쳐왔슴돠',
   },
 ];
