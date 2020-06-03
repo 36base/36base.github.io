@@ -21,7 +21,7 @@ export default [
     name: 'Dynamic',
     profile: profileDynamic,
     role: '대빵, 프로젝트 총괄, 데이터 작성',
-    impression: '고3인데 내가 뭔짓을 한거지',
+    impression: '2년만에 살려냈습니다',
   },
   {
     name: 'Cosmos0',
