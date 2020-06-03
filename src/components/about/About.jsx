@@ -117,6 +117,17 @@ class About extends React.Component {
               &copy; 2018 Digital Sky Entertainment Limited. All rights reserved.
             </div>
           </Card>
+          <p className="floatLeft">
+             <center>
+              <a href=" https://girlsfrontline.kr/privacy.html">
+                개인정보 취급방침
+              </a>
+              <a> | </a>
+              <a href="  https://girlsfrontline.kr/cookie-policy.html">
+                쿠키정책 
+              </a>
+            </center>
+          </p>
         </div>
       </div>
     );
