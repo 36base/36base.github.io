@@ -164,7 +164,8 @@ class DollDetail extends Component {
       case 2: color = '#787878'; break;
       case 3: color = '#2e5770'; break;
       case 4: color = '#7e8644'; break;
-      case 5: color = (info.rank.name === 'Extra') ? '#505694' : '#a97744'; break;
+      case 5: color = (info.rank.name === 'Extra') ? '#D5A3FD' : '#a97744'; break;
+      case 6: color = '#FC4F00'; break;
       default: color = '#505694';
     }
 
