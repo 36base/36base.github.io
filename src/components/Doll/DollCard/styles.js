@@ -79,7 +79,9 @@ const style = theme => ({
   rare: { background: 'linear-gradient(135deg, #5DD9C3, #5DD9C3 85%, transparent 85%)' },
   epochal: { background: 'linear-gradient(135deg, #D6E35A, #D6E35A 85%, transparent 85%)' },
   legendary: { background: 'linear-gradient(135deg, #FDA809, #FDA809 85%, transparent 85%)' },
+  supreme: { background: 'linear-gradient(135deg, #FC4F00, #FC4F00 85%, transparent 85%)' },
   extra: { background: 'linear-gradient(135deg, #D5A3FD, #D5A3FD 85%, transparent 85%)' },
+
   star: {
     display: 'inline-block',
     width: 15,

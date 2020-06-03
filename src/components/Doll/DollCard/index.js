@@ -35,7 +35,7 @@ class DollCard extends React.Component {
         >
           {name}
         </Typography>
-        <img className={classes.typeIcon} src={getDollTypeIconUrl(type, rank.starCnt)} alt="" />
+        <img className={classes.typeIcon} src={getDollTypeIconUrl(type, rank.id)} alt="" />
         <div className={classes.no}>{id % 1000}</div>
       </Card>
     );
