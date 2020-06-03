@@ -24,13 +24,6 @@ import FairyDetail from './containers/Fairy/FairyDetail';
 import Guide from './components/guide/Guide';
 import Page404 from './components/Page404';
 
-import { default as TestDollDict } from './containers/TestDoll/DollDict';
-import { default as TestDollDetail } from './containers/TestDoll/DollDetail';
-import { default as TestEquipDict } from './containers/TestEquip/EquipDict';
-import { default as TestFairyDict } from './containers/TestFairy/FairyDict';
-import { default as TestFairyDetail } from './containers/TestFairy/FairyDetail';
-
-
 import { resize } from './store/modules/common';
 import './App.css';
 
@@ -84,13 +77,6 @@ class App extends React.Component {
               <Route path="/gfdict" component={GfDict} />
               <Route path="/about" component={About} />
               <Route path="/guide" component={Guide} />
-
-              <Route exact path="/test/doll" component={TestDollDict} />
-              <Route path="/test/doll/:id" component={TestDollDetail} />
-              <Route path="/test/equip/:id?" component={TestEquipDict} />
-              <Route exact path="/test/fairy" component={TestFairyDict} />
-              <Route path="/test/fairy/:id" component={TestFairyDetail} />
-
               <Route component={Page404} />
             </Switch>
           </div>
