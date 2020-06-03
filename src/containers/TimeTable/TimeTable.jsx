@@ -122,7 +122,7 @@ class TimeTable extends React.Component {
     return (
       <Link className={classes.link} to={`/doll/${data.id}`}>
         <span className={classes.typeIconWrapper}>
-          <ImageBox src={getDollTypeIconUrl(data.type, data.rank.starCnt)} />
+          <ImageBox src={getDollTypeIconUrl(data.type, data.rank.id)} />
         </span>
         <Star className={classes.star} count={data.rank.starCnt} />
         <div className={`${classes.name} ${classes[data.rank.name.toLowerCase()]}`}>
