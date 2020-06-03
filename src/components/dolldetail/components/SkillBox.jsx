@@ -39,6 +39,16 @@ const style = theme => ({
 
 const lvValues = Array(10).fill().map((_, i) => ({ value: i + 1, name: i + 1 }));
 
+function getInitialColldown(initialCooldown) {
+  const FRAME_RATE = 30;
+  const colldown = Number(initialCooldown) / FRAME_RATE;
+  if (Number.isInteger(colldown)) {
+    return colldown;
+  }
+
+  return colldown.toFixed(2);
+}
+
 class SkillBox extends React.Component {
   handleChange = (event) => {
     const { value } = event.target;
@@ -90,7 +100,7 @@ class SkillBox extends React.Component {
             <Typography variant="display1" style={{ wordBreak: 'keep-all' }}>{t(name)}</Typography>
           </Grid>
           <Grid className={classes.alignBottom} item xs={4}>
-            {this.renderProperty(t('Skill.Initial Cooldown'), `${initialCooldown / 30}${t('Skill.sec')}`)}
+            {this.renderProperty(t('Skill.Initial Cooldown'), `${getInitialColldown(initialCooldown)}${t('Skill.sec')}`)}
             {String(t(detail)).split(',').map((item) => {
               const splits = item.split(':');
               const label = splits[0].trim();
