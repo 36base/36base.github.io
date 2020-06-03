@@ -4,7 +4,7 @@ import profileNostalgia from './profile/nostalgia.png';
 import profileBlume from './profile/blume.png';
 import profilePrometa from './profile/prometa.jpg';
 import profileNinomiya from './profile/ninomiya.png';
-import profileMagicWorld from './profile/magic_world.png';
+import profileMagicWorld from './profile/magic_world.gif';
 import profileCZ from './profile/cz.png';
 import profileBC from './profile/cirnov.png';
 import profileBarney from './profile/barney.png';
