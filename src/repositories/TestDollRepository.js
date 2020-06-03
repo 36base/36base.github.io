@@ -1,5 +1,3 @@
-import gfextradata from 'girlsfrontline-extra-data';
-
 import { dolls } from '../modules/girlsfrontline-core/lib';
 import Doll from '../modules/girlsfrontline-core/lib/doll';
 import dollRank from './data/dollRank.json';

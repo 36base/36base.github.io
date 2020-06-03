@@ -35,18 +35,10 @@
     "color": "#D5A3FD"
   },
   "6": {
-<<<<<<< HEAD
-    "id": 6,
-    "name": "Legendary",
-    "nickNames": ["6성"],
-    "starCnt": 6,
-    "color": "#D5A3FD"
-=======
     "id": 6	,
     "name": "Supreme",
     "nickNames": ["6성"],
     "starCnt": 6,
     "color": "#FC4F00"
->>>>>>> develop_Guideung
   }
 }
