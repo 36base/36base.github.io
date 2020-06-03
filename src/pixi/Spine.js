@@ -14,7 +14,11 @@ const Spine = CustomPIXIComponent({
       if (spineData !== oldProps.spineData) {
         instance.removeChildren(0, instance.children.length);
         player = new spine.Spine(spineData);
-        player.state.setAnimationByName(0, animation, true);
+        try {
+          player.state.setAnimationByName(0, animation, true);
+        } catch {
+          player.state.setAnimationByName(0, 'wait', true);
+        }
         instance.addChild(player);
       } else {
         player = instance.getChildAt(0);
