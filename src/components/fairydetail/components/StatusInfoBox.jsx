@@ -97,7 +97,7 @@ class StatusInfoBox extends React.Component {
         {this.buildRow(t('Stat.pow'), stats.pow, 55, '#00b8d4')}
         {this.buildRow(t('Stat.dodge'), stats.dodge, 88, '#00c853')}
         {this.buildRow(t('Stat.armor'), stats.armor, 25, '#d50000')}
-        {this.buildRow(t('Stat.critDmg'), stats.critDmg, 40, '#ff6d00')}
+        {this.buildRow(t('Stat.criticalHarmRate'), stats.criticalHarmRate, 40, '#ff6d00')}
         {this.buildRow(t('Stat.hit'), stats.hit, 90, '#ffd600')}
         {this.buildRow(t('Stat.grow'), grow, 320, '#2962ff')}
       </div>
