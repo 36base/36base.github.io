@@ -108,7 +108,7 @@ class Guide extends React.Component {
                       color={item === selected ? 'primary' : 'default'}
                       onClick={() => this.onChange(item, index)}
                     >
-                      {item}
+                      {t(`PageMessage.Guide.${item}`)}
                     </Button>
                   ))}
                 </div>

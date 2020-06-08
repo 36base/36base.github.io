@@ -182,7 +182,16 @@
     },
     "Guide": {
       "GF Guide": "GF Guide",
-      "GF Guide Url": "Eng/GF Guide"
+      "GF Guide Url": "Eng/GF Guide",
+      "소개": "Introduction",
+      "초보 추천 인형": "Recommended",
+      "제대 편성": "Building Echelons",
+      "전술인형": "T-Dolls",
+      "작전임무": "Combat Missions",
+      "인형 육성": "Leveling",
+      "장비, 요정, 중장비제대": "Equip, Fairy",
+      "숙소 및 탐색 시스템": "Dorm",
+      "군수지원 및 기타 정보": "Logistics"
     }
   }
 }
