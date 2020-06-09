@@ -59,24 +59,14 @@ const datas = [
   '전술인형',
   '작전임무',
   '인형 육성',
-  '장비, 요정, 중장비제대',
+  '장비, 요정',
+  '중장비 제대',
   '숙소 및 탐색 시스템',
+  '통합회수',
   '군수지원 및 기타 정보',
 ];
 
 const imageDatas = [
-  [3],
-  [4],
-  [5, 6],
-  [7],
-  [8, 9],
-  [10, 11],
-  [12, 13],
-  [14],
-  [15],
-];
-
-const KrImageDatas = [
   [1],
   [2],
   [3, 4],
@@ -84,7 +74,9 @@ const KrImageDatas = [
   [8, 9],
   [10, 11],
   [12, 13],
+  [16],
   [14],
+  [15],
   [17],
 ];
 
@@ -129,7 +121,7 @@ class Guide extends React.Component {
                 {selected !== null ? (
                   <div className={classes.imageWrapper}>
                     {
-                      KrImageDatas[selectedIndex].map(item => (
+                      imageDatas[selectedIndex].map(item => (
                         <img className={classes.image} src={encodeURI(`https://girlsfrontline.kr/data/UserGuide/${t('PageMessage.Guide.GF Guide Url')}${item}.png`)} alt={selected} />
                       ))
                     }

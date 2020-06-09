@@ -189,8 +189,10 @@
       "전술인형": "T-Dolls",
       "작전임무": "Combat Missions",
       "인형 육성": "Leveling",
-      "장비, 요정, 중장비제대": "Equip, Fairy",
+      "장비, 요정": "Equip, Fairy",
+      "중장비 제대": "HOC",
       "숙소 및 탐색 시스템": "Dorm",
+      "통합회수": "Protocol Assimilation",
       "군수지원 및 기타 정보": "Logistics"
     }
   }
