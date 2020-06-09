@@ -76,6 +76,18 @@ const imageDatas = [
   [15],
 ];
 
+const KrImageDatas = [
+  [1],
+  [2],
+  [3, 4],
+  [5],
+  [8, 9],
+  [10, 11],
+  [12, 13],
+  [14],
+  [17],
+];
+
 class Guide extends React.Component {
   state = {
     selected: null || datas[0],
@@ -117,7 +129,7 @@ class Guide extends React.Component {
                 {selected !== null ? (
                   <div className={classes.imageWrapper}>
                     {
-                      imageDatas[selectedIndex].map(item => (
+                      KrImageDatas[selectedIndex].map(item => (
                         <img className={classes.image} src={encodeURI(`https://girlsfrontline.kr/data/UserGuide/${t('PageMessage.Guide.GF Guide Url')}${item}.png`)} alt={selected} />
                       ))
                     }
