@@ -8,7 +8,7 @@ function buildTime2Str(time) {
 
 const dollPredicate = (t, filter) => (doll) => {
   if (filter.rank.length > 0) {
-    if (!filter.rank.includes(String(doll.rank.starCnt))) { return false; }
+    if (!filter.rank.includes(String(doll.rank.id))) { return false; }
   }
 
   if (filter.type.length > 0) {
