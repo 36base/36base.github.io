@@ -19,7 +19,7 @@ const dollPredicate = (t, filter) => (doll) => {
     return filter.name.reduce((result, query) => {
       if (result) { return result; }
 
-      if (t(doll.name).indexOf(query) !== -1) { return true; }
+      if (t(doll.name).toLowerCase().indexOf(query.toLowerCase()) !== -1) { return true; }
 
       if (buildTime2Str(doll.buildTime).indexOf(query) !== -1) { return true; }
 
