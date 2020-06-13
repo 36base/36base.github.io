@@ -105,6 +105,7 @@ class DollDict extends React.Component {
           { value: '3', label: `3${t('PageMessage.Star')}` },
           { value: '4', label: `4${t('PageMessage.Star')}` },
           { value: '5', label: `5${t('PageMessage.Star')}` },
+          { value: '6', label: `6${t('PageMessage.Star')}` },
           { value: '7', label: 'Extra' },
         ],
         action: {
