@@ -21,7 +21,9 @@ const Illust = (props) => {
 
   return (
     <div className={classes.container}>
-      <Square><ImageBox src={src} /></Square>
+      <a  href={src}target="_blank">
+        <Square><ImageBox src={src} /></Square>
+      </a>
     </div>
   );
 };

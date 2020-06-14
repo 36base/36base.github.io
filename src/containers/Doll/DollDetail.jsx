@@ -175,7 +175,7 @@ class DollDetail extends Component {
 
     return (
       <div className={classes.wrapper}>
-        <Background color={color} />
+          <Background color={color} />
         <div className={classes.header}>
           <Grid container>
             <Caption name={t(info.name)} />
@@ -204,7 +204,7 @@ class DollDetail extends Component {
         </div>
         <div className={classes.img}>
           <TypeSwitchBox on={skinType === 'damaged'} toggle={this.toggleSkinType} />
-          <Illust src={getDollResourceUrl(info.codename, skinType, { skin: skinCode })} />
+          <Illust src={getDollResourceUrl(info.codename, skinType, { skin: skinCode })}/>
         </div>
         <div className={classes.info}>
           <Grid className={classes.boxWrapper} item xs={12}>
