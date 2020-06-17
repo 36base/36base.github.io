@@ -122,7 +122,9 @@ class Guide extends React.Component {
                   <div className={classes.imageWrapper}>
                     {
                       imageDatas[selectedIndex].map(item => (
-                        <img className={classes.image} src={encodeURI(`https://girlsfrontline.kr/data/UserGuide/${t('PageMessage.Guide.GF Guide Url')}${item}.png`)} alt={selected} />
+                        <a href={encodeURI(`https://girlsfrontline.kr/data/UserGuide/${t('PageMessage.Guide.GF Guide Url')}${item}.png`)}target="_blank">
+		    <img className={classes.image} src={encodeURI(`https://girlsfrontline.kr/data/UserGuide/${t('PageMessage.Guide.GF Guide Url')}${item}.png`)} alt={selected} />
+		  </a>
                       ))
                     }
                   </div>
