@@ -27,7 +27,8 @@ const initialState = {
         calculator: { name: 'Disc Calculator', icon: 'fa-calculator', to: '/calculator' },
         sdsim: { name: 'SD Simulator', icon: 'fa-industry', to: '/sdsim' },
         logisticsupport: { name: 'Logistic Support', icon: 'fa-industry', to: '/logisticsupport' },
-        musicplayer: { name: 'Music Player', icon: 'fa-music', to: '/musicplayer' }
+        musicplayer: { name: 'Music Player', icon: 'fa-music', to: '/musicplayer' },
+        gfdict: { name: 'Gf Dict', icon: 'fa-book', to: '/gfdict', fitLanguage: ['ko-KR']}
       },
     },
   ],
