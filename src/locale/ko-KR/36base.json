@@ -183,14 +183,14 @@
         "shotgunShell": "산탄",
         "hvAmmo": "고속탄",
         "hpAmmo": "특수탄",
-        "spClip": "특수탄",
         "chip": "칩셋",
         "exoSkeleton": "외골격",
         "armorPlate": "방탄판",
         "ammunitionBox": "탄약통",
         "cloak": "슈트",
         "spPart": "특수",
-        "medal": "특수"
+        "medal": "특수",
+        "spClip": "특수"
       }
     },
     "Fairy": {

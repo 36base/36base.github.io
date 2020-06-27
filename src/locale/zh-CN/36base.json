@@ -155,13 +155,13 @@
         "shotgunShell": "SG Shell",
         "hvAmmo": "HV Ammo",
         "hpAmmo": "HP Ammo",
-        "spClip": "HP Ammo",
         "chip": "Chip",
         "exoSkeleton": "Exo Skeleton",
         "armorPlate": "Armor Plate",
         "ammunitionBox": "Ammunition Box",
         "cloak": "Cloak",
         "spPart": "Special Part",
+        "spClip": "Special Part",
         "medal": "Medal"
       }
     },
