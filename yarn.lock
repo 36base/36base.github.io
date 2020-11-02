@@ -4728,15 +4728,15 @@ getpass@^0.1.1:
   dependencies:
     assert-plus "^1.0.0"
 
-girlsfrontline-core@^2.2.3:
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/girlsfrontline-core/-/girlsfrontline-core-2.2.3.tgz#0ef6cf0162fe3c9edf13616d7d6b1c193b26da36"
-  integrity sha512-mJofPx2h4CS/Y3pWhpW1mNz0zXy8UK35Yd1nYWAmBIbRfvDxbRaNNNDe54Zghd7X1nNnupoPfYGTQxbs9zPcZg==
+girlsfrontline-core@^2.3.6:
+  version "2.3.6"
+  resolved "https://registry.yarnpkg.com/girlsfrontline-core/-/girlsfrontline-core-2.3.6.tgz#b2ce97f343930a293f376c28399446d8d01a5a46"
+  integrity sha512-6Ys1qhdc4dN5vRg59tE/y6XvqhQy4ZxGvozG8yNZLPd76rngYYXtyEi5IjWOgIJTllcCnOfx74BV1egJdlC64Q==
 
-girlsfrontline-resource-extra@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/girlsfrontline-resource-extra/-/girlsfrontline-resource-extra-1.3.0.tgz#776d4220e2d073b63fe96210ef95eb071b736f1d"
-  integrity sha512-oWS1h9NK8j0deqJFcQEFGrCp+ot6bEqsTsveZfAF7pIGH2nf3DA3II9zHVT1QDTDh/1lVkerNXDJvxWrjQ7ovg==
+girlsfrontline-resource-extra@^1.3.5:
+  version "1.3.5"
+  resolved "https://registry.yarnpkg.com/girlsfrontline-resource-extra/-/girlsfrontline-resource-extra-1.3.5.tgz#7fc2d78d55367c47e980d00e7aa8f2af406fce3e"
+  integrity sha512-Vfm9tiiA03blon7DQAKAZ27nnDAYfZ2sjKyZh69mKqEHCoeHSUBut3/K7MbSpW46T0L9+8BuZxTdqA5W3NtI5w==
 
 glamor@^2.20.40:
   version "2.20.40"
@@ -8602,6 +8602,11 @@ react-redux@^5.0.7:
     lodash-es "^4.17.5"
     loose-envify "^1.1.0"
     prop-types "^15.6.0"
+
+react-request-fullscreen@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/react-request-fullscreen/-/react-request-fullscreen-1.1.2.tgz#c9e1a510ea143e4964d61fb0806bb40e41f73c18"
+  integrity sha512-WsQ/htbZag9qNfWPb2fEm0if+oUsRK3rTKKJ007n64Mk0PY82gAbLwVKZ+7OmzkHm6f/PSkxf8pdYlzBUmXR/Q==
 
 react-router-dom@^4.3.1:
   version "4.3.1"
