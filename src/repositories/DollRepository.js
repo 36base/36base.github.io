@@ -14,7 +14,7 @@ const buildData = (doll) => {
   return Object.assign(
     doll,
     {
-      skins: skins.filter(skin => parseInt(skin.id / 1000, 10) !== 5), // 5000 번대 스킨 쓸모없는 것 같음
+      skins,
       rank: dollRank[rank],
       alias: dollAlias[doll.id] || [],
     },
