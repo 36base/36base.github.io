@@ -64,7 +64,7 @@
     "i18next-xhr-backend": "^1.5.1",
     "jest": "^23.6.0",
     "object-assign": "4.1.1",
-    "pixi-spine": "1.0.10",
+    "pixi-spine": "1.6.2",
     "pixi.js": "4.8.8",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.8",
